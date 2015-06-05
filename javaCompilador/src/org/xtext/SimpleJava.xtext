@@ -1,0 +1,9 @@
+grammar org.xtext.SimpleJava with org.eclipse.xtext.common.Terminals
+
+generate simpleJava "http://www.xtext.org/SimpleJava"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

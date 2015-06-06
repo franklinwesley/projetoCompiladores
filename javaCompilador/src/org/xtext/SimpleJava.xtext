@@ -7,3 +7,57 @@ Model:
 	
 Greeting:
 	'Hello' name=ID '!';
+	
+	
+terminal IDENTIFIER: 
+      ('a'..'z'|'_'|'$') ('a'..'z'|'_'|'$'|'0'..'9'|'unicode character over 00C0')+;
+terminal MODIFIER:
+      "public" 
+      | "private" 
+      | "protected" 
+      | "static" 
+      | "final" 
+      | "native" 
+      | "synchronized" 
+      | "abstract" 
+      | "threadsafe" 
+      | "transient"; 
+terminal INTEGER_LITERAL:
+      "1".."9" ("0".."9")? ("l")? 
+      | ("0".."7")? ("l")?
+      | ( "0" "x" ("0".."9""a".."f")+ ) ("l")?;
+
+package_name:
+      IDENTIFIER package_name_aux;
+package_name_aux:
+	("." IDENTIFIER package_name_aux)?;
+class_name:
+      IDENTIFIER 
+      | ( package_name "." IDENTIFIER );
+import_statement:
+      "import" ( ( package_name "." "*" ";" ) 
+      | ( class_name | interface_name ) ) ";";
+interface_name:
+      IDENTIFIER 
+      | ( package_name "." IDENTIFIER );
+package_statement:
+      "package" package_name ";";
+type_specifier:
+      "boolean" 
+      | "byte" 
+      | "char" 
+      | "short" 
+      | "int" 
+      | "float" 
+      | "long" 
+      | "double" 
+      | class_name 
+      | interface_name;
+type: 
+      type_specifier ("[" "]")?; 
+parameter: 
+      type IDENTIFIER ("[" "]")?; 
+parameter_list:
+      parameter ("," parameter)?; 
+doc_comment:
+	  "/**" "... text ..." "*/"; 

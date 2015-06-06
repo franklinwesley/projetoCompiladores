@@ -7,10 +7,118 @@ Model:
 	
 Greeting:
 	'Hello' name=ID '!';
-	
-	
-terminal IDENTIFIER: 
-      ('a'..'z'|'_'|'$') ('a'..'z'|'_'|'$'|'0'..'9'|'unicode character over 00C0')+;
+  
+  
+package_name:
+      IDENTIFIER package_name_aux;
+package_name_aux:
+	("." IDENTIFIER package_name_aux)?;
+class_interface_name:
+      IDENTIFIER 
+      | ( package_name "." IDENTIFIER );
+package_statement:
+      "package" package_name ";";
+import_statement:
+      "import" ( ( package_name "." "*" ";" ) 
+      | (class_interface_name) ) ";";
+type_specifier:
+      "boolean" 
+      | "byte" 
+      | "char" 
+      | "short" 
+      | "int" 
+      | "float" 
+      | "long" 
+      | "double" 
+      | class_interface_name;
+type: 
+      type_specifier ("[" "]")?; 
+parameter: 
+      type IDENTIFIER ("[" "]")?; 
+parameter_list:
+      parameter ("," parameter)?;
+doc_comment:
+	  "/**" "... text ..." "*/"; 
+class_declaration: 
+      (MODIFIER)? "class" IDENTIFIER ("extends" class_interface_name)? ("implements" class_interface_name ("," class_interface_name)?)? "{" (field_declaration)? "}";
+field_declaration: 
+      ( (doc_comment)? ( method_declaration | constructor_declaration | variable_declaration ) ) 
+      | static_initializer 
+      | ";" ;
+static_initializer: "static" statement_block;
+modifier_aux: (MODIFIER)? ; 
+constructor_declaration: 
+      modifier_aux IDENTIFIER "(" (parameter_list)? ")" statement_block ;
+method_variable_declaration: (MODIFIER)? type IDENTIFIER (method_declaration|variable_declaration);
+method_declaration:
+      "(" (parameter_list)? ")" ("[" "]")? (statement_block | ";" );
+statement_block: "{" (statement)? "}";
+statement: 
+      variable_declaration 
+      | expression ";" 
+      | statement_block 
+//      | if_statement 
+//      | do_statement
+//      | while_statement 
+//      | for_statement 
+//      | try_statement
+//      | switch_statement 
+//      | "synchronized" "(" expression ")" statement 
+      | "return" (expression)? ";" 
+      | "throw" expression ";" 
+      | IDENTIFIER ":" statement 
+      | "break" (IDENTIFIER)? ";"
+      | "continue" (IDENTIFIER)? ";" 
+      | ";";
+variable_declaration: 
+      (("[" "]")? ("=" variable_initializer)) ("," (IDENTIFIER ("[" "]")? ("=" variable_initializer)?))? ";";
+variable_initializer: 
+      expression 
+      | ( "{" (variable_initializer ("," variable_initializer)? (",")?)? "}" );
+numeric_expression:( ( "-" | "++" | "--" ) expression ) 
+      | ( expression ( "++" | "--" ) ) 
+      | ( expression ( "+" | "+=" | "-" | "-=" | "*" | "*=" | "/" | "/=" | "%" | "%=" ) expression ); 
+expression: 
+      numeric_expression expression_aux
+//      | testing_expression expression_aux
+//      | logical_expression expression_aux
+//      | string_expression expression_aux
+//      | bit_expression expression_aux
+//      | casting_expression expression_aux
+//      | creating_expression expression_aux
+      | literal_expression expression_aux 
+      | "null" expression_aux
+      | "super" expression_aux
+      | "this" expression_aux
+      | IDENTIFIER expression_aux
+      | "(" expression ")"  expression_aux
+      | "[" expression "]" expression_aux
+      | "." expression expression_aux
+      | "," expression expression_aux
+      | "instanceof" (class_interface_name) expression_aux;
+interface_declaration: modifier_aux "interface" IDENTIFIER ("extends" class_interface_name ("," class_interface_name)?)? "{" (field_declaration)? "}";
+arglist: expression ("," expression)?; 
+expression_aux: ("(" (arglist)? ")" expression_aux)?;
+literal_expression: 
+      INTEGER_LITERAL
+      | FLOAT_LITERAL 
+      | STRING 
+      | CHARACTER;
+
+
+terminal STRING: "''" (CHARACTER)? "''"; 
+terminal CHARACTER: "based on the unicode character set";//TODO ajeitar 
+terminal FLOAT_LITERAL: 
+      ( DECIMAL_DIGITS "." (DECIMAL_DIGITS)? (EXPONENT_PART)? (FLOAT_TYPE_SUFFIX)? ) 
+      | ( "." DECIMAL_DIGITS (EXPONENT_PART)? (FLOAT_TYPE_SUFFIX)? ) 
+      | ( DECIMAL_DIGITS (EXPONENT_PART)? (DECIMAL_DIGITS)? ); 
+terminal DECIMAL_DIGITS: "0".."9" ("0".."9")?; 
+terminal EXPONENT_PART: "e" ("+" | "-")? DECIMAL_DIGITS;
+terminal FLOAT_TYPE_SUFFIX: "f" | "d";  
+terminal INTEGER_LITERAL:
+      "1".."9" ("0".."9")? ("l")? 
+      | ("0".."7")? ("l")?
+      | ( "0" "x" ("0".."9""a".."f")+ ) ("l")?;	
 terminal MODIFIER:
       "public" 
       | "private" 
@@ -22,42 +130,6 @@ terminal MODIFIER:
       | "abstract" 
       | "threadsafe" 
       | "transient"; 
-terminal INTEGER_LITERAL:
-      "1".."9" ("0".."9")? ("l")? 
-      | ("0".."7")? ("l")?
-      | ( "0" "x" ("0".."9""a".."f")+ ) ("l")?;
-
-package_name:
-      IDENTIFIER package_name_aux;
-package_name_aux:
-	("." IDENTIFIER package_name_aux)?;
-class_name:
-      IDENTIFIER 
-      | ( package_name "." IDENTIFIER );
-import_statement:
-      "import" ( ( package_name "." "*" ";" ) 
-      | ( class_name | interface_name ) ) ";";
-interface_name:
-      IDENTIFIER 
-      | ( package_name "." IDENTIFIER );
-package_statement:
-      "package" package_name ";";
-type_specifier:
-      "boolean" 
-      | "byte" 
-      | "char" 
-      | "short" 
-      | "int" 
-      | "float" 
-      | "long" 
-      | "double" 
-      | class_name 
-      | interface_name;
-type: 
-      type_specifier ("[" "]")?; 
-parameter: 
-      type IDENTIFIER ("[" "]")?; 
-parameter_list:
-      parameter ("," parameter)?; 
-doc_comment:
-	  "/**" "... text ..." "*/"; 
+terminal IDENTIFIER: 
+      ('a'..'z'|'_'|'$')('a'..'z'|'_'|'$'|"0".."9"|'unicode character over 00C0')+;//TODO ajeitar
+ 

@@ -8,10 +8,7 @@
   <genPackages prefix="SimpleJava" basePackage="org.xtext" disposableProviderFactory="true"
       fileExtensions="java" ecorePackage="SimpleJava.ecore#/">
     <genClasses ecoreClass="SimpleJava.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//Model/greetings"/>
-    </genClasses>
-    <genClasses ecoreClass="SimpleJava.ecore#//Greeting">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//Greeting/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//Model/comp"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

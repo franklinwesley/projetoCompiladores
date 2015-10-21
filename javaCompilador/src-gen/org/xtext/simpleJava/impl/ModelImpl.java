@@ -4,19 +4,14 @@ package org.xtext.simpleJava.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
-import org.xtext.simpleJava.Greeting;
 import org.xtext.simpleJava.Model;
 import org.xtext.simpleJava.SimpleJavaPackage;
 
@@ -27,7 +22,7 @@ import org.xtext.simpleJava.SimpleJavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.simpleJava.impl.ModelImpl#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.ModelImpl#getComp <em>Comp</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,14 +31,14 @@ import org.xtext.simpleJava.SimpleJavaPackage;
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-   * The cached value of the '{@link #getGreetings() <em>Greetings</em>}' containment reference list.
+   * The cached value of the '{@link #getComp() <em>Comp</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGreetings()
+   * @see #getComp()
    * @generated
    * @ordered
    */
-  protected EList<Greeting> greetings;
+  protected EList<String> comp;
 
   /**
    * <!-- begin-user-doc -->
@@ -71,29 +66,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Greeting> getGreetings()
+  public EList<String> getComp()
   {
-    if (greetings == null)
+    if (comp == null)
     {
-      greetings = new EObjectContainmentEList<Greeting>(Greeting.class, this, SimpleJavaPackage.MODEL__GREETINGS);
+      comp = new EDataTypeEList<String>(String.class, this, SimpleJavaPackage.MODEL__COMP);
     }
-    return greetings;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case SimpleJavaPackage.MODEL__GREETINGS:
-        return ((InternalEList<?>)getGreetings()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    return comp;
   }
 
   /**
@@ -106,8 +85,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.MODEL__GREETINGS:
-        return getGreetings();
+      case SimpleJavaPackage.MODEL__COMP:
+        return getComp();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -123,9 +102,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.MODEL__GREETINGS:
-        getGreetings().clear();
-        getGreetings().addAll((Collection<? extends Greeting>)newValue);
+      case SimpleJavaPackage.MODEL__COMP:
+        getComp().clear();
+        getComp().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -141,8 +120,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.MODEL__GREETINGS:
-        getGreetings().clear();
+      case SimpleJavaPackage.MODEL__COMP:
+        getComp().clear();
         return;
     }
     super.eUnset(featureID);
@@ -158,10 +137,27 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.MODEL__GREETINGS:
-        return greetings != null && !greetings.isEmpty();
+      case SimpleJavaPackage.MODEL__COMP:
+        return comp != null && !comp.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (comp: ");
+    result.append(comp);
+    result.append(')');
+    return result.toString();
   }
 
 } //ModelImpl

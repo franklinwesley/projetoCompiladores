@@ -3,6 +3,15 @@
  */
 package org.xtext.validation
 
+import org.eclipse.xtext.validation.Check
+import org.xtext.simpleJava.compilation_unit
+import org.xtext.simpleJava.type_declaration
+import org.eclipse.emf.common.util.EList
+import java.util.List
+import java.util.ArrayList
+import org.xtext.simpleJava.while_statement
+import org.xtext.simpleJava.logical_expression
+
 //import org.eclipse.xtext.validation.Check
 
 /**
@@ -11,6 +20,10 @@ package org.xtext.validation
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
 class SimpleJavaValidator extends AbstractSimpleJavaValidator {
+
+	//TODO ve se eh necessario mesmo um map
+	private final List<Tipo> tipos = new ArrayList<Tipo>();
+	private final List<Variavel> variaveis = new ArrayList<Variavel>();
 
 //  public static val INVALID_NAME = 'invalidName'
 //
@@ -22,4 +35,60 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 //					INVALID_NAME)
 //		}
 //	}
+
+	@Check
+	def runChecks (compilation_unit comp) {
+		checkTypeDeclaration(comp.declaracao);
+//		checkVariableDeclaration(comp, comp.declaracao);
+//		checkVariableInitializer(comp, comp.declaracao);
+		checkWhile(comp.declaracao.get(0).declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.corpoWhile);
+	}
+	
+	def checkWhile(while_statement statement) {
+		var logico = statement.expressaoWhile.tipoLogical;
+		if (logico == null) {
+			//erro expressao invalida
+		}
+	}
+	
+	
+//	def checkVariableInitializer(compilation_unit unit, EList<type_declaration> list) {
+//		var variable_declaration = list.get(0).declaracaoClasse.corpoClasse.declaracaoVariavel.declaracaoVariaveis.get(0);
+//		var variavel = new Variavel(variable_declaration.nomeVariavel, list.get(0).declaracaoClasse.corpoClasse.declaracaoVariavel.tipo);
+//		if (variaveis.containsValue(variavel)) {
+//			//error ja tem a variavel
+//		} else {
+//			variaveis.put(unit,variavel);
+//			//checkar o tipo se esta certo
+//		}
+//	}
+	
+//	def checkVariableDeclaration(compilation_unit unit, EList<type_declaration> list) {
+//		var type_declaration = list.get(0);
+//		if (!tipos.contains(type_declaration.declaracaoClasse.corpoClasse.declaracaoVariavel.tipo)) {
+//			//error tipo naum existe
+//		} else {
+//			var variable_declaration = type_declaration.declaracaoClasse.corpoClasse.declaracaoVariavel.declaracaoVariaveis.get(0);
+//			//add variavel
+//		}
+//	}
+	
+	def checkTypeDeclaration(EList<type_declaration> list) {
+		var type_declaration = list.get(0);
+		if (type_declaration.declaracaoClasse != null) {
+			//salvar o tipo
+			addType(type_declaration.declaracaoClasse.nomeClasse);
+		} else {
+			//salva o tipo
+			addType(type_declaration.declaracaoInterface.nomeInterface);
+		}
+	}
+	
+	def addType(String tipo) {
+		//adicionar na tabela de simbolos caso naum exista
+		var t = new Tipo (tipo);
+		if (!tipos.contains(t)) {
+			tipos.add(t);
+		}
+	}
 }

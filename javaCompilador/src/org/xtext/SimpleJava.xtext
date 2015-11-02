@@ -5,129 +5,128 @@ generate simpleJava "http://www.xtext.org/SimpleJava"
 Model:
 	comp+=compilation_unit;
 
-compilation_unit: (package_statement)? (import_statement)* (type_declaration)*;
-package_statement: "package" name ";";
-import_statement: "import" name (".*;" | ";");
-type_declaration: (doc_comment)?  ( class_declaration  | interface_declaration );
+compilation_unit: (pacote=package_statement)? (importes+=import_statement)* (declaracao+=type_declaration)*;
+package_statement: "package" noomePacote=name ";";
+import_statement: "import" nomeImporte=name (".*;" | ";");
+type_declaration: (doc_comment)?  ( declaracaoClasse=class_declaration  | declaracaoInterface=interface_declaration );
 doc_comment: "/**" "... text ..." "*/"; //TODO acho q text deve ser um texto mesmo
-class_declaration: (MODIFIER)* "class" IDENTIFIER ("extends" name)? ("implements" name ("," name)*)? "{" (field_declaration | class_declaration)* "}";
-interface_declaration: (MODIFIER)* "interface" IDENTIFIER ("extends" name ("," name)*)? "{" (field_declaration)* "}";
+class_declaration: (modificadores+=MODIFIER)* "class" nomeClasse=IDENTIFIER ("extends" superclasse=name)? ("implements" implementosClasse+=name ("," implementosClasse+=name)*)? "{" (corpoClasse=field_declaration | declaracaoClasse=class_declaration)* "}";
+interface_declaration: (modificadores+=MODIFIER)* "interface" nomeInterface=IDENTIFIER ("extends" superinterfaces+=name ("," superinterfaces+=name)*)? "{" (corpoInterface=field_declaration)* "}";
 field_declaration: 
-      ( (doc_comment)* ( method_declaration | constructor_declaration | variable_declaration ) ) 
-      | static_initializer 
+      ( (doc_comment)* ( declaracaoMetodo=method_declaration | declaracaoConstrutor=constructor_declaration | declaracaoVariavel=variable_declaration ) ) 
+      | estatico=static_initializer 
       | ";" ;
-method_declaration: "(" (parameter_list)? ")" ("[" "]")* (statement_block | ";" );
+method_declaration: (modificadorMetodo=MODIFIER)* tipoRetorno=type nomeMetodo=IDENTIFIER "(" (parametrosMetodo=parameter_list)? ")" ("[" "]")* (blocoMetodo=statement_block | ";" );
 parameter: 
-      type IDENTIFIER ("[" "]")*; 
+      tipoParametro=type nomeParametro=IDENTIFIER ("[" "]")*; 
 parameter_list:
-      parameter ("," parameter)*;
-statement_block: "{" (statement)* "}";
+      parametros+=parameter ("," parametros+=parameter)*;    
+statement_block: "{" (corpo=statement)* "}";
 statement: 
-      ->variable_declaration 
-      | ->expression ";" 
-      | statement_block 
-      | if_statement 
-      | do_statement
-      | while_statement 
-      | for_statement 
-      | try_statement
-      | switch_statement 
-      | "synchronized" "(" expression ")" statement 
-      | "return" (expression)? ";" 
-      | "throw" expression ";" 
-      | IDENTIFIER ":" statement 
-      | "break" (IDENTIFIER)? ";"
-      | "continue" (IDENTIFIER)? ";" 
+      ->declaracaoVariavel=variable_declaration 
+      | ->expressao=expression ";" 
+      | bloco=statement_block 
+      | corpoIf=if_statement 
+      | corpoDoWhile=do_statement
+      | corpoWhile=while_statement 
+      | corpoFor=for_statement 
+      | corpoTryCatch=try_statement
+      | corpoSwitchCase=switch_statement 
+      | "synchronized" "(" expressaoSynchronized=expression ")" corpoSynchronize=statement 
+      | "return" (return=expression)? ";" 
+      | "throw" exececao=expression ";" 
+      | IDENTIFIER ":" statement //TODO naum sei o q eh
+      | "break" (break=IDENTIFIER)? ";"
+      | "continue" (continue=IDENTIFIER)? ";" 
       | ";";
-variable_declaration: (MODIFIER)* (type | "void")? variable_declarator ("," variable_declarator)* (";"| statement_block); 
-variable_declarator: "(" (arglist)? ")"
-	  | IDENTIFIER  ("["  "]")*  ( "=" variable_initializer)?;
+variable_declaration: (modificador=MODIFIER)* (tipo=type | "void")? declaracaoVariaveis+=variable_declarator ("," declaracaoVariaveis+=variable_declarator)* (";"| blocoVariavel=statement_block); 
+variable_declarator: "(" (arglist)? ")" //TODO naum sei o q eh
+	  | nomeVariavel=IDENTIFIER  ("["  "]")*  ( "=" valorVariavel=variable_initializer)?;
 variable_initializer:
-	  expression 
-      | ( "{" (variable_initializer ("," variable_initializer)* (",")?)? "}" );
-if_statement: "if" "(" expression ")" statement =>("else" statement)?;
-do_statement: "do" statement "while" "(" expression ")" ";";  
-while_statement: "while" "(" expression ")" statement;
-for_statement: "for" "(" ( =>variable_declaration | ( expression ";" ) | ";" ) (expression)? ";" (expression)? ")" statement;
-try_statement: "try" statement_block => ("catch" "(" parameter ")" statement_block)* =>("finally" statement_block)?;
-switch_statement:"switch" "(" expression ")" "{" (( "case" expression ":" ) | ( "default" ":" ) | statement)* "}";
-constructor_declaration: (MODIFIER)* (type | "void")? IDENTIFIER "(" (parameter_list)? ")" statement_block ;
-static_initializer: "static" statement_block;
+	  expressaoVariavel=expression 
+      | ( "{" (valorVariaveis+=variable_initializer ("," valorVariaveis+=variable_initializer)* (",")?)? "}" );
+if_statement: "if" "(" espressaoIf=expression ")" blcoIf=statement =>("else" blocoElse=statement)?;
+do_statement: "do" blocoDo=statement "while" "(" expressaoWhile=expression ")" ";";  
+while_statement: "while" "(" expressaoWhile=expression ")" blocoWhile=statement;
+for_statement: "for" "(" ( =>declaracaoVariavel=variable_declaration | ( expressaoDeclaracao=expression ";" ) | ";" ) (expressaoFor=expression)? ";" (expressaoIncremento=expression)? ")" blocoFor=statement;
+try_statement: "try" blocoTry=statement_block => ("catch" "(" parametroCatch=parameter ")" blocoCatch=statement_block)* =>("finally" blocoFinally=statement_block)?;
+switch_statement:"switch" "(" expressaoSwitch=expression ")" "{" (( "case" expressaoCases+=expression ":" ) | ( "default" ":" ) | blocoSwitch=statement)* "}";
+constructor_declaration: (modificador=MODIFIER)* (tipo=type | "void")? nomeContrutor=IDENTIFIER "(" (parametrosContrutor=parameter_list)? ")" blocoConstrutor=statement_block ;
+static_initializer: "static" blocoEstatico=statement_block;
+
+creating_expression: 
+      "new" ((novoObjeto=name parametros=creating_aux) | (tipoObjeto=type_specifier ->(parametros=aux)? ("[" "]")*) | ("(" expressaoNew=expression ")")) (novo=new)*;
 
 
-exp_aux: ->expression ")"
-	| type ")" expression;
+exp_aux: ->expressao=expression ")"
+	| type ")" expressao=expression;
 expression: 
- 
-      (logical_expression
-      | numeric_expression 
-      | bit_expression 
-      |  creating_expression 
+      (tipoLogical=logical_expression
+      | tipoNumeric=numeric_expression 
+      | tipoBit=bit_expression 
+      | new=creating_expression 
       | literal_expression 
       | "null" 
       | "super" 
       | "this" 
       | IDENTIFIER 
-      | "(" exp_aux)  expression_aux; 
+      | "(" exp_aux)  expressoes=expression_aux; 
 expression_aux: (((("(" (arglist)? ")") | aux | ("." expression) | ("," expression) | ("instanceof" ->name))
 	  | ->mais_aux expression
 	  | ( "++" | "--")
 	  | ( ->mais_aux | "-" | "-=" | "*" | "*=" | "/" | "/=" | "%" | "%=" ) expression
 	  | (("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | ("ampersand" "ampersand") | "||=" | => "%" | "%=" ) expression
-	  	| "?" expression ":" expression
+	  	| "?" expression ":" expressao=expression
 	  	| ( ">" | "<" | ">=" | "<=" | "==" | "!=" ) expression
 	  	| ( ">>=" | "<<" | ">>" | ">>>" ) expression)
-	  )  expression_aux)?;
-
-
+	  )  expressoes=expression_aux)?;
 mais_aux:  "+" |  "+=";
-creating_expression: 
-      "new" ((name creating_aux) | (type_specifier ->(aux)? ("[" "]")*) | ("(" expression ")")) (new)*;
 new : "{" constructor_declaration "}";      
-creating_aux: ->"(" (arglist)? ")" 
+creating_aux: ->"(" (argumentos=arglist)? ")" 
 	  | ->(aux)? ("[" "]")* ;
-aux: ("[" expression "]");
-arglist: expression ("," expression)*
-	  | '"' STRING '"'
-	  | type IDENTIFIER ("," type IDENTIFIER)*;
-logical_expression: 
-      "!" expression 
-      | "true" 
-      | "false"; 
-bit_expression: "~" expression;
-
-numeric_expression:
-      ( ( "-" |  "++" | "--" ) expression );       
-name: IDENTIFIER package_name_aux;
-package_name_aux:
-	("." IDENTIFIER package_name_aux)*; 
-type_specifier:
-      "boolean" 
-      | "byte" 
-      | "char" 
-      | "short" 
-      | "int" 
-      | "float" 
-      | "long" 
-      | "double";
-type: 
-      (type_specifier | name) ("[" "]")*; 
+aux: ("[" espressao=expression "]");	   
 literal_expression:
 	  ->DECIMAL_DIGITS 
       | INTEGER_LITERAL
       | FLOAT_LITERAL 
       | STRING;
+      
+      
+logical_expression: 
+      operador="!" expressao=expression 
+      | operador="true" 
+      | operador="false";
+bit_expression: operador="~" expressao=expression;
+numeric_expression:
+      ( operador=( "-" |  "++" | "--" ) expressao=expression );   
+arglist: expressoesArgumentos+=expression ("," expressoesArgumentos+=expression)*
+	  | '"' STRING '"'
+	  | tipoParametro+=type nomeParametro+=IDENTIFIER ("," tipoParametro+=type nomeParametro+=IDENTIFIER)*;          
+name: nome=IDENTIFIER pacote=package_name_aux;
+package_name_aux:
+	("." nomePacote=IDENTIFIER pacote=package_name_aux)*;	 
+type_specifier:
+      nomeTipo="boolean" 
+      | nomeTipo="byte" 
+      | nomeTipo="char" 
+      | nomeTipo="short" 
+      | nomeTipo="int" 
+      | nomeTipo="float" 
+      | nomeTipo="long" 
+      | nomeTipo="double";
+type: 
+      tipo=(type_specifier | name) ("[" "]")*;
 MODIFIER:
-      "public" 
-      | "private" 
-      | "protected" 
-      | "static" 
-      | "final" 
-      | "native" 
-      | "synchronized" 
-      | "abstract" 
-      | "threadsafe" 
-      | "transient";
+      modificador="public" 
+      | modificador="private" 
+      | modificador="protected" 
+      | modificador="static" 
+      | modificador="final" 
+      | modificador="native" 
+      | modificador="synchronized" 
+      | modificador="abstract" 
+      | modificador="threadsafe" 
+      | modificador="transient";
 
 
 terminal FLOAT_LITERAL: (('0'..'9')+ '.' ('0'..'9')+) (('e' | 'E') ('+' | '-')? ('0'..'9')+)?;

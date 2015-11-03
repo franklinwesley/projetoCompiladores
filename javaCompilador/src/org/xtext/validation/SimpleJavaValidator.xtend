@@ -62,7 +62,18 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		checkVariableUsed(comp.declaracao);
 		checkMetodDeclaration(comp.declaracao);
 		checkMetodoUsed(comp.declaracao);
-//		checkExpression();
+		checkType(comp.declaracao);
+	}
+	
+	def checkType(EList<type_declaration> list) {
+		for (type_declaration td: list) {
+			//TODO naum sei se eh um type declaration ou algo abaixo dele
+			checkTipo(td);
+		}
+	}
+	
+	def checkTipo(type_declaration declaration) {
+		//check hierarquia de tipo
 	}
 	
 	def checkMetodoUsed(EList<type_declaration> list) {
@@ -77,7 +88,10 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			if (metodos.containsKey(declaration.blocoMetodo.corpo.expressao.identificador)) {
 				var m = metodos.get(declaration.blocoMetodo.corpo.expressao.identificador);
 				if (verificaParametros(m, declaration.blocoMetodo.corpo.expressao.expressoes.parametros)) {
-					//check tipo retorno
+					//TODO 	check tipo retorno
+					if (true) {
+						//erro tipo retorno errado
+					}
 				} else {
 					//erro parametros errados
 				}
@@ -114,6 +128,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	def checkDeclaracaoMetodo(method_declaration declaration) {
 		var tipo = new Tipo(String.valueOf(declaration.tipoRetorno.tipo));
 		var parametros = getparametros(declaration.parametrosMetodo);
+		//TODO verificar se o coropo do metodo tem o tipo q ele diz ter
 		var metodo =new Metodo(declaration.nomeMetodo, tipo, parametros);
 		metodos.put(declaration.nomeMetodo, metodo);
 	}

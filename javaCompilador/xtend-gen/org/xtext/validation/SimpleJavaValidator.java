@@ -73,6 +73,18 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
     this.checkMetodDeclaration(_declaracao_8);
     EList<type_declaration> _declaracao_9 = comp.getDeclaracao();
     this.checkMetodoUsed(_declaracao_9);
+    EList<type_declaration> _declaracao_10 = comp.getDeclaracao();
+    this.checkType(_declaracao_10);
+  }
+  
+  public void checkType(final EList<type_declaration> list) {
+    for (final type_declaration td : list) {
+      this.checkTipo(td);
+    }
+  }
+  
+  public Object checkTipo(final type_declaration declaration) {
+    return null;
   }
   
   public void checkMetodoUsed(final EList<type_declaration> list) {
@@ -126,7 +138,11 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
           arglist _parametros_1 = _expressoes_1.getParametros();
           boolean _verificaParametros = this.verificaParametros(m, _parametros_1);
           if (_verificaParametros) {
-            _xifexpression_2 = null;
+            Object _xifexpression_3 = null;
+            if (true) {
+              _xifexpression_3 = null;
+            }
+            _xifexpression_2 = _xifexpression_3;
           } else {
             _xifexpression_2 = null;
           }

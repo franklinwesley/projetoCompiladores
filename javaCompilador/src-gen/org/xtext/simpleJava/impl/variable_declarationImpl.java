@@ -33,7 +33,7 @@ import org.xtext.simpleJava.variable_declarator;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.simpleJava.impl.variable_declarationImpl#getModificador <em>Modificador</em>}</li>
- *   <li>{@link org.xtext.simpleJava.impl.variable_declarationImpl#getTipo <em>Tipo</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.variable_declarationImpl#getTipoVariavel <em>Tipo Variavel</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.variable_declarationImpl#getDeclaracaoVariaveis <em>Declaracao Variaveis</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.variable_declarationImpl#getBlocoVariavel <em>Bloco Variavel</em>}</li>
  * </ul>
@@ -54,14 +54,14 @@ public class variable_declarationImpl extends MinimalEObjectImpl.Container imple
   protected MODIFIER modificador;
 
   /**
-   * The cached value of the '{@link #getTipo() <em>Tipo</em>}' containment reference.
+   * The cached value of the '{@link #getTipoVariavel() <em>Tipo Variavel</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTipo()
+   * @see #getTipoVariavel()
    * @generated
    * @ordered
    */
-  protected type tipo;
+  protected type tipoVariavel;
 
   /**
    * The cached value of the '{@link #getDeclaracaoVariaveis() <em>Declaracao Variaveis</em>}' containment reference list.
@@ -157,9 +157,9 @@ public class variable_declarationImpl extends MinimalEObjectImpl.Container imple
    * <!-- end-user-doc -->
    * @generated
    */
-  public type getTipo()
+  public type getTipoVariavel()
   {
-    return tipo;
+    return tipoVariavel;
   }
 
   /**
@@ -167,13 +167,13 @@ public class variable_declarationImpl extends MinimalEObjectImpl.Container imple
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTipo(type newTipo, NotificationChain msgs)
+  public NotificationChain basicSetTipoVariavel(type newTipoVariavel, NotificationChain msgs)
   {
-    type oldTipo = tipo;
-    tipo = newTipo;
+    type oldTipoVariavel = tipoVariavel;
+    tipoVariavel = newTipoVariavel;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.VARIABLE_DECLARATION__TIPO, oldTipo, newTipo);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.VARIABLE_DECLARATION__TIPO_VARIAVEL, oldTipoVariavel, newTipoVariavel);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -184,20 +184,20 @@ public class variable_declarationImpl extends MinimalEObjectImpl.Container imple
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTipo(type newTipo)
+  public void setTipoVariavel(type newTipoVariavel)
   {
-    if (newTipo != tipo)
+    if (newTipoVariavel != tipoVariavel)
     {
       NotificationChain msgs = null;
-      if (tipo != null)
-        msgs = ((InternalEObject)tipo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.VARIABLE_DECLARATION__TIPO, null, msgs);
-      if (newTipo != null)
-        msgs = ((InternalEObject)newTipo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.VARIABLE_DECLARATION__TIPO, null, msgs);
-      msgs = basicSetTipo(newTipo, msgs);
+      if (tipoVariavel != null)
+        msgs = ((InternalEObject)tipoVariavel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.VARIABLE_DECLARATION__TIPO_VARIAVEL, null, msgs);
+      if (newTipoVariavel != null)
+        msgs = ((InternalEObject)newTipoVariavel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.VARIABLE_DECLARATION__TIPO_VARIAVEL, null, msgs);
+      msgs = basicSetTipoVariavel(newTipoVariavel, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.VARIABLE_DECLARATION__TIPO, newTipo, newTipo));
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.VARIABLE_DECLARATION__TIPO_VARIAVEL, newTipoVariavel, newTipoVariavel));
   }
 
   /**
@@ -274,8 +274,8 @@ public class variable_declarationImpl extends MinimalEObjectImpl.Container imple
     {
       case SimpleJavaPackage.VARIABLE_DECLARATION__MODIFICADOR:
         return basicSetModificador(null, msgs);
-      case SimpleJavaPackage.VARIABLE_DECLARATION__TIPO:
-        return basicSetTipo(null, msgs);
+      case SimpleJavaPackage.VARIABLE_DECLARATION__TIPO_VARIAVEL:
+        return basicSetTipoVariavel(null, msgs);
       case SimpleJavaPackage.VARIABLE_DECLARATION__DECLARACAO_VARIAVEIS:
         return ((InternalEList<?>)getDeclaracaoVariaveis()).basicRemove(otherEnd, msgs);
       case SimpleJavaPackage.VARIABLE_DECLARATION__BLOCO_VARIAVEL:
@@ -296,8 +296,8 @@ public class variable_declarationImpl extends MinimalEObjectImpl.Container imple
     {
       case SimpleJavaPackage.VARIABLE_DECLARATION__MODIFICADOR:
         return getModificador();
-      case SimpleJavaPackage.VARIABLE_DECLARATION__TIPO:
-        return getTipo();
+      case SimpleJavaPackage.VARIABLE_DECLARATION__TIPO_VARIAVEL:
+        return getTipoVariavel();
       case SimpleJavaPackage.VARIABLE_DECLARATION__DECLARACAO_VARIAVEIS:
         return getDeclaracaoVariaveis();
       case SimpleJavaPackage.VARIABLE_DECLARATION__BLOCO_VARIAVEL:
@@ -320,8 +320,8 @@ public class variable_declarationImpl extends MinimalEObjectImpl.Container imple
       case SimpleJavaPackage.VARIABLE_DECLARATION__MODIFICADOR:
         setModificador((MODIFIER)newValue);
         return;
-      case SimpleJavaPackage.VARIABLE_DECLARATION__TIPO:
-        setTipo((type)newValue);
+      case SimpleJavaPackage.VARIABLE_DECLARATION__TIPO_VARIAVEL:
+        setTipoVariavel((type)newValue);
         return;
       case SimpleJavaPackage.VARIABLE_DECLARATION__DECLARACAO_VARIAVEIS:
         getDeclaracaoVariaveis().clear();
@@ -347,8 +347,8 @@ public class variable_declarationImpl extends MinimalEObjectImpl.Container imple
       case SimpleJavaPackage.VARIABLE_DECLARATION__MODIFICADOR:
         setModificador((MODIFIER)null);
         return;
-      case SimpleJavaPackage.VARIABLE_DECLARATION__TIPO:
-        setTipo((type)null);
+      case SimpleJavaPackage.VARIABLE_DECLARATION__TIPO_VARIAVEL:
+        setTipoVariavel((type)null);
         return;
       case SimpleJavaPackage.VARIABLE_DECLARATION__DECLARACAO_VARIAVEIS:
         getDeclaracaoVariaveis().clear();
@@ -372,8 +372,8 @@ public class variable_declarationImpl extends MinimalEObjectImpl.Container imple
     {
       case SimpleJavaPackage.VARIABLE_DECLARATION__MODIFICADOR:
         return modificador != null;
-      case SimpleJavaPackage.VARIABLE_DECLARATION__TIPO:
-        return tipo != null;
+      case SimpleJavaPackage.VARIABLE_DECLARATION__TIPO_VARIAVEL:
+        return tipoVariavel != null;
       case SimpleJavaPackage.VARIABLE_DECLARATION__DECLARACAO_VARIAVEIS:
         return declaracaoVariaveis != null && !declaracaoVariaveis.isEmpty();
       case SimpleJavaPackage.VARIABLE_DECLARATION__BLOCO_VARIAVEL:

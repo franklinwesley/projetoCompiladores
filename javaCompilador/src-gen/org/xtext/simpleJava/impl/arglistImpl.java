@@ -31,6 +31,9 @@ import org.xtext.simpleJava.type;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.simpleJava.impl.arglistImpl#getOpedador <em>Opedador</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.arglistImpl#getExp <em>Exp</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.arglistImpl#getOperador <em>Operador</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.arglistImpl#getExpressoes <em>Expressoes</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.arglistImpl#getExpressoesArgumentos <em>Expressoes Argumentos</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.arglistImpl#getTipoParametro <em>Tipo Parametro</em>}</li>
@@ -42,6 +45,56 @@ import org.xtext.simpleJava.type;
  */
 public class arglistImpl extends variable_declaratorImpl implements arglist
 {
+  /**
+   * The default value of the '{@link #getOpedador() <em>Opedador</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOpedador()
+   * @generated
+   * @ordered
+   */
+  protected static final String OPEDADOR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getOpedador() <em>Opedador</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOpedador()
+   * @generated
+   * @ordered
+   */
+  protected String opedador = OPEDADOR_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExp()
+   * @generated
+   * @ordered
+   */
+  protected expression exp;
+
+  /**
+   * The default value of the '{@link #getOperador() <em>Operador</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOperador()
+   * @generated
+   * @ordered
+   */
+  protected static final String OPERADOR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getOperador() <em>Operador</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOperador()
+   * @generated
+   * @ordered
+   */
+  protected String operador = OPERADOR_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getExpressoes() <em>Expressoes</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -101,6 +154,100 @@ public class arglistImpl extends variable_declaratorImpl implements arglist
   protected EClass eStaticClass()
   {
     return SimpleJavaPackage.Literals.ARGLIST;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getOpedador()
+  {
+    return opedador;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOpedador(String newOpedador)
+  {
+    String oldOpedador = opedador;
+    opedador = newOpedador;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.ARGLIST__OPEDADOR, oldOpedador, opedador));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public expression getExp()
+  {
+    return exp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetExp(expression newExp, NotificationChain msgs)
+  {
+    expression oldExp = exp;
+    exp = newExp;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.ARGLIST__EXP, oldExp, newExp);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExp(expression newExp)
+  {
+    if (newExp != exp)
+    {
+      NotificationChain msgs = null;
+      if (exp != null)
+        msgs = ((InternalEObject)exp).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.ARGLIST__EXP, null, msgs);
+      if (newExp != null)
+        msgs = ((InternalEObject)newExp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.ARGLIST__EXP, null, msgs);
+      msgs = basicSetExp(newExp, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.ARGLIST__EXP, newExp, newExp));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getOperador()
+  {
+    return operador;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOperador(String newOperador)
+  {
+    String oldOperador = operador;
+    operador = newOperador;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.ARGLIST__OPERADOR, oldOperador, operador));
   }
 
   /**
@@ -203,6 +350,8 @@ public class arglistImpl extends variable_declaratorImpl implements arglist
   {
     switch (featureID)
     {
+      case SimpleJavaPackage.ARGLIST__EXP:
+        return basicSetExp(null, msgs);
       case SimpleJavaPackage.ARGLIST__EXPRESSOES:
         return basicSetExpressoes(null, msgs);
       case SimpleJavaPackage.ARGLIST__EXPRESSOES_ARGUMENTOS:
@@ -223,6 +372,12 @@ public class arglistImpl extends variable_declaratorImpl implements arglist
   {
     switch (featureID)
     {
+      case SimpleJavaPackage.ARGLIST__OPEDADOR:
+        return getOpedador();
+      case SimpleJavaPackage.ARGLIST__EXP:
+        return getExp();
+      case SimpleJavaPackage.ARGLIST__OPERADOR:
+        return getOperador();
       case SimpleJavaPackage.ARGLIST__EXPRESSOES:
         return getExpressoes();
       case SimpleJavaPackage.ARGLIST__EXPRESSOES_ARGUMENTOS:
@@ -246,6 +401,15 @@ public class arglistImpl extends variable_declaratorImpl implements arglist
   {
     switch (featureID)
     {
+      case SimpleJavaPackage.ARGLIST__OPEDADOR:
+        setOpedador((String)newValue);
+        return;
+      case SimpleJavaPackage.ARGLIST__EXP:
+        setExp((expression)newValue);
+        return;
+      case SimpleJavaPackage.ARGLIST__OPERADOR:
+        setOperador((String)newValue);
+        return;
       case SimpleJavaPackage.ARGLIST__EXPRESSOES:
         setExpressoes((expression_aux)newValue);
         return;
@@ -275,6 +439,15 @@ public class arglistImpl extends variable_declaratorImpl implements arglist
   {
     switch (featureID)
     {
+      case SimpleJavaPackage.ARGLIST__OPEDADOR:
+        setOpedador(OPEDADOR_EDEFAULT);
+        return;
+      case SimpleJavaPackage.ARGLIST__EXP:
+        setExp((expression)null);
+        return;
+      case SimpleJavaPackage.ARGLIST__OPERADOR:
+        setOperador(OPERADOR_EDEFAULT);
+        return;
       case SimpleJavaPackage.ARGLIST__EXPRESSOES:
         setExpressoes((expression_aux)null);
         return;
@@ -301,6 +474,12 @@ public class arglistImpl extends variable_declaratorImpl implements arglist
   {
     switch (featureID)
     {
+      case SimpleJavaPackage.ARGLIST__OPEDADOR:
+        return OPEDADOR_EDEFAULT == null ? opedador != null : !OPEDADOR_EDEFAULT.equals(opedador);
+      case SimpleJavaPackage.ARGLIST__EXP:
+        return exp != null;
+      case SimpleJavaPackage.ARGLIST__OPERADOR:
+        return OPERADOR_EDEFAULT == null ? operador != null : !OPERADOR_EDEFAULT.equals(operador);
       case SimpleJavaPackage.ARGLIST__EXPRESSOES:
         return expressoes != null;
       case SimpleJavaPackage.ARGLIST__EXPRESSOES_ARGUMENTOS:
@@ -325,6 +504,9 @@ public class arglistImpl extends variable_declaratorImpl implements arglist
     {
       switch (derivedFeatureID)
       {
+        case SimpleJavaPackage.ARGLIST__OPEDADOR: return SimpleJavaPackage.EXPRESSION_AUX__OPEDADOR;
+        case SimpleJavaPackage.ARGLIST__EXP: return SimpleJavaPackage.EXPRESSION_AUX__EXP;
+        case SimpleJavaPackage.ARGLIST__OPERADOR: return SimpleJavaPackage.EXPRESSION_AUX__OPERADOR;
         case SimpleJavaPackage.ARGLIST__EXPRESSOES: return SimpleJavaPackage.EXPRESSION_AUX__EXPRESSOES;
         default: return -1;
       }
@@ -344,6 +526,9 @@ public class arglistImpl extends variable_declaratorImpl implements arglist
     {
       switch (baseFeatureID)
       {
+        case SimpleJavaPackage.EXPRESSION_AUX__OPEDADOR: return SimpleJavaPackage.ARGLIST__OPEDADOR;
+        case SimpleJavaPackage.EXPRESSION_AUX__EXP: return SimpleJavaPackage.ARGLIST__EXP;
+        case SimpleJavaPackage.EXPRESSION_AUX__OPERADOR: return SimpleJavaPackage.ARGLIST__OPERADOR;
         case SimpleJavaPackage.EXPRESSION_AUX__EXPRESSOES: return SimpleJavaPackage.ARGLIST__EXPRESSOES;
         default: return -1;
       }
@@ -362,7 +547,11 @@ public class arglistImpl extends variable_declaratorImpl implements arglist
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (nomeParametro: ");
+    result.append(" (opedador: ");
+    result.append(opedador);
+    result.append(", operador: ");
+    result.append(operador);
+    result.append(", nomeParametro: ");
     result.append(nomeParametro);
     result.append(')');
     return result.toString();

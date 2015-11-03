@@ -272,6 +272,14 @@ public class SimpleJavaSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SimpleJavaPackage.MAIS_AUX:
+      {
+        mais_aux mais_aux = (mais_aux)theEObject;
+        T result = casemais_aux(mais_aux);
+        if (result == null) result = caseexpression_aux(mais_aux);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SimpleJavaPackage.NEW:
       {
         new new_ = (new)theEObject;
@@ -292,6 +300,13 @@ public class SimpleJavaSwitch<T> extends Switch<T>
         T result = caseaux(aux);
         if (result == null) result = caseexpression_aux(aux);
         if (result == null) result = casecreating_aux(aux);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SimpleJavaPackage.LITERAL_EXPRESSION:
+      {
+        literal_expression literal_expression = (literal_expression)theEObject;
+        T result = caseliteral_expression(literal_expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -817,6 +832,22 @@ public class SimpleJavaSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>mais aux</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>mais aux</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casemais_aux(mais_aux object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>new</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -860,6 +891,22 @@ public class SimpleJavaSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseaux(aux object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>literal expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>literal expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseliteral_expression(literal_expression object)
   {
     return null;
   }

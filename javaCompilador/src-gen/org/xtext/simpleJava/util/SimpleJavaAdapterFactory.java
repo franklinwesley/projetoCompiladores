@@ -215,6 +215,11 @@ public class SimpleJavaAdapterFactory extends AdapterFactoryImpl
         return createexpression_auxAdapter();
       }
       @Override
+      public Adapter casemais_aux(mais_aux object)
+      {
+        return createmais_auxAdapter();
+      }
+      @Override
       public Adapter casenew(new object)
       {
         return createnewAdapter();
@@ -228,6 +233,11 @@ public class SimpleJavaAdapterFactory extends AdapterFactoryImpl
       public Adapter caseaux(aux object)
       {
         return createauxAdapter();
+      }
+      @Override
+      public Adapter caseliteral_expression(literal_expression object)
+      {
+        return createliteral_expressionAdapter();
       }
       @Override
       public Adapter caselogical_expression(logical_expression object)
@@ -717,6 +727,21 @@ public class SimpleJavaAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.simpleJava.mais_aux <em>mais aux</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.simpleJava.mais_aux
+   * @generated
+   */
+  public Adapter createmais_auxAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.simpleJava.new <em>new</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -757,6 +782,21 @@ public class SimpleJavaAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createauxAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.simpleJava.literal_expression <em>literal expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.simpleJava.literal_expression
+   * @generated
+   */
+  public Adapter createliteral_expressionAdapter()
   {
     return null;
   }

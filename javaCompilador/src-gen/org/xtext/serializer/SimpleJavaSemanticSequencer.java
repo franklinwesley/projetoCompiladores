@@ -37,7 +37,9 @@ import org.xtext.simpleJava.for_statement;
 import org.xtext.simpleJava.if_statement;
 import org.xtext.simpleJava.import_statement;
 import org.xtext.simpleJava.interface_declaration;
+import org.xtext.simpleJava.literal_expression;
 import org.xtext.simpleJava.logical_expression;
+import org.xtext.simpleJava.mais_aux;
 import org.xtext.simpleJava.method_declaration;
 import org.xtext.simpleJava.name;
 import org.xtext.simpleJava.numeric_expression;
@@ -158,9 +160,22 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case SimpleJavaPackage.INTERFACE_DECLARATION:
 				sequence_interface_declaration(context, (interface_declaration) semanticObject); 
 				return; 
+			case SimpleJavaPackage.LITERAL_EXPRESSION:
+				sequence_literal_expression(context, (literal_expression) semanticObject); 
+				return; 
 			case SimpleJavaPackage.LOGICAL_EXPRESSION:
 				sequence_logical_expression(context, (logical_expression) semanticObject); 
 				return; 
+			case SimpleJavaPackage.MAIS_AUX:
+				if(context == grammarAccess.getExpression_auxRule()) {
+					sequence_expression_aux_mais_aux(context, (mais_aux) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getMais_auxRule()) {
+					sequence_mais_aux(context, (mais_aux) semanticObject); 
+					return; 
+				}
+				else break;
 			case SimpleJavaPackage.METHOD_DECLARATION:
 				sequence_method_declaration(context, (method_declaration) semanticObject); 
 				return; 
@@ -463,9 +478,49 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     expressoes=expression_aux?
+	 *     (
+	 *         (
+	 *             opedador='++' | 
+	 *             opedador='--' | 
+	 *             (
+	 *                 (
+	 *                     opedador='-' | 
+	 *                     opedador='-=' | 
+	 *                     opedador='*' | 
+	 *                     opedador='*=' | 
+	 *                     opedador='/' | 
+	 *                     opedador='/=' | 
+	 *                     opedador='%' | 
+	 *                     opedador='%='
+	 *                 ) 
+	 *                 exp=expression
+	 *             ) | 
+	 *             (
+	 *                 (
+	 *                     opedador='>' | 
+	 *                     opedador='<' | 
+	 *                     opedador='>=' | 
+	 *                     opedador='<=' | 
+	 *                     opedador='==' | 
+	 *                     opedador='!='
+	 *                 ) 
+	 *                 exp=expression
+	 *             ) | 
+	 *             ((operador='>>=' | operador='<<' | operador='>>' | operador='>>>') exp=expression)
+	 *         )? 
+	 *         expressoes=expression_aux
+	 *     )?
 	 */
 	protected void sequence_expression_aux(EObject context, expression_aux semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((opedador='+' | opedador='+=') exp=expression expressoes=expression_aux)
+	 */
+	protected void sequence_expression_aux_mais_aux(EObject context, mais_aux semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -475,27 +530,14 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     (nome=IDENTIFIER pacote=package_name_aux expressoes=expression_aux)
 	 */
 	protected void sequence_expression_aux_name(EObject context, name semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, SimpleJavaPackage.Literals.EXPRESSION_AUX__EXPRESSOES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SimpleJavaPackage.Literals.EXPRESSION_AUX__EXPRESSOES));
-			if(transientValues.isValueTransient(semanticObject, SimpleJavaPackage.Literals.NAME__NOME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SimpleJavaPackage.Literals.NAME__NOME));
-			if(transientValues.isValueTransient(semanticObject, SimpleJavaPackage.Literals.NAME__PACOTE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SimpleJavaPackage.Literals.NAME__PACOTE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getNameAccess().getNomeIDENTIFIERTerminalRuleCall_0_0(), semanticObject.getNome());
-		feeder.accept(grammarAccess.getNameAccess().getPacotePackage_name_auxParserRuleCall_1_0(), semanticObject.getPacote());
-		feeder.accept(grammarAccess.getExpression_auxAccess().getExpressoesExpression_auxParserRuleCall_1_0(), semanticObject.getExpressoes());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
 	 *     (
-	 *         (tipoLogical=logical_expression | tipoNumeric=numeric_expression | tipoBit=bit_expression | new=creating_expression)? 
+	 *         (tipoLogical=logical_expression | tipoNumeric=numeric_expression | tipoBit=bit_expression | new=creating_expression | literal=literal_expression)? 
 	 *         expressoes=expression_aux
 	 *     )
 	 */
@@ -507,7 +549,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * Constraint:
 	 *     (
-	 *         (tipoLogical=logical_expression | tipoNumeric=numeric_expression | tipoBit=bit_expression | new=creating_expression)? 
+	 *         (tipoLogical=logical_expression | tipoNumeric=numeric_expression | tipoBit=bit_expression | new=creating_expression | literal=literal_expression)? 
 	 *         expressoes=expression_aux 
 	 *         expressoes=expression_aux
 	 *     )
@@ -581,9 +623,27 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
+	 *     (decimal=DECIMAL_DIGITS | inteiro=INTEGER_LITERAL | float=FLOAT_LITERAL | string=STRING)
+	 */
+	protected void sequence_literal_expression(EObject context, literal_expression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     ((operador='!' expressao=expression) | operador='true' | operador='false')
 	 */
 	protected void sequence_logical_expression(EObject context, logical_expression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (opedador='+' | opedador='+=')
+	 */
+	protected void sequence_mais_aux(EObject context, mais_aux semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -757,14 +817,14 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * Constraint:
 	 *     (
-	 *         nomeTipo='boolean' | 
-	 *         nomeTipo='byte' | 
-	 *         nomeTipo='char' | 
-	 *         nomeTipo='short' | 
-	 *         nomeTipo='int' | 
-	 *         nomeTipo='float' | 
-	 *         nomeTipo='long' | 
-	 *         nomeTipo='double'
+	 *         nome='boolean' | 
+	 *         nome='byte' | 
+	 *         nome='char' | 
+	 *         nome='short' | 
+	 *         nome='int' | 
+	 *         nome='float' | 
+	 *         nome='long' | 
+	 *         nome='double'
 	 *     )
 	 */
 	protected void sequence_type_specifier(EObject context, type_specifier semanticObject) {
@@ -785,7 +845,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 * Constraint:
 	 *     (
 	 *         modificador=MODIFIER* 
-	 *         tipo=type? 
+	 *         tipoVariavel=type? 
 	 *         declaracaoVariaveis+=variable_declarator 
 	 *         declaracaoVariaveis+=variable_declarator* 
 	 *         blocoVariavel=statement_block?

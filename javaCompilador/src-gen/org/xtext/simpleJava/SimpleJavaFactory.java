@@ -275,6 +275,15 @@ public interface SimpleJavaFactory extends EFactory
   expression_aux createexpression_aux();
 
   /**
+   * Returns a new object of class '<em>mais aux</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>mais aux</em>'.
+   * @generated
+   */
+  mais_aux createmais_aux();
+
+  /**
    * Returns a new object of class '<em>new</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -300,6 +309,15 @@ public interface SimpleJavaFactory extends EFactory
    * @generated
    */
   aux createaux();
+
+  /**
+   * Returns a new object of class '<em>literal expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>literal expression</em>'.
+   * @generated
+   */
+  literal_expression createliteral_expression();
 
   /**
    * Returns a new object of class '<em>logical expression</em>'.

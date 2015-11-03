@@ -15,6 +15,7 @@ package org.xtext.simpleJava;
  *   <li>{@link org.xtext.simpleJava.expression#getTipoNumeric <em>Tipo Numeric</em>}</li>
  *   <li>{@link org.xtext.simpleJava.expression#getTipoBit <em>Tipo Bit</em>}</li>
  *   <li>{@link org.xtext.simpleJava.expression#getNew <em>New</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.expression#getLiteral <em>Literal</em>}</li>
  *   <li>{@link org.xtext.simpleJava.expression#getExpressao <em>Expressao</em>}</li>
  * </ul>
  * </p>
@@ -128,6 +129,32 @@ public interface expression extends expression_aux
    * @generated
    */
   void setNew(creating_expression value);
+
+  /**
+   * Returns the value of the '<em><b>Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Literal</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Literal</em>' containment reference.
+   * @see #setLiteral(literal_expression)
+   * @see org.xtext.simpleJava.SimpleJavaPackage#getexpression_Literal()
+   * @model containment="true"
+   * @generated
+   */
+  literal_expression getLiteral();
+
+  /**
+   * Sets the value of the '{@link org.xtext.simpleJava.expression#getLiteral <em>Literal</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Literal</em>' containment reference.
+   * @see #getLiteral()
+   * @generated
+   */
+  void setLiteral(literal_expression value);
 
   /**
    * Returns the value of the '<em><b>Expressao</b></em>' containment reference.

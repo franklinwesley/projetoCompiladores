@@ -2055,11 +2055,11 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                 {
                 int LA18_2 = input.LA(2);
 
-                if ( (LA18_2==28) ) {
-                    alt18=2;
-                }
-                else if ( (LA18_2==RULE_IDENTIFIER||LA18_2==31||LA18_2==35||LA18_2==41||LA18_2==54||(LA18_2>=96 && LA18_2<=111)) ) {
+                if ( (LA18_2==RULE_IDENTIFIER||LA18_2==31||LA18_2==35||LA18_2==41||LA18_2==54||(LA18_2>=96 && LA18_2<=111)) ) {
                     alt18=1;
+                }
+                else if ( (LA18_2==28) ) {
+                    alt18=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -4194,7 +4194,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevariable_declaration"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1523:1: rulevariable_declaration returns [EObject current=null] : ( ( (lv_modificador_0_0= ruleMODIFIER ) )* ( ( (lv_tipo_1_0= ruletype ) ) | otherlv_2= 'void' )? ( (lv_declaracaoVariaveis_3_0= rulevariable_declarator ) ) (otherlv_4= ',' ( (lv_declaracaoVariaveis_5_0= rulevariable_declarator ) ) )* (otherlv_6= ';' | ( (lv_blocoVariavel_7_0= rulestatement_block ) ) ) ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1523:1: rulevariable_declaration returns [EObject current=null] : ( ( (lv_modificador_0_0= ruleMODIFIER ) )* ( ( (lv_tipoVariavel_1_0= ruletype ) ) | otherlv_2= 'void' )? ( (lv_declaracaoVariaveis_3_0= rulevariable_declarator ) ) (otherlv_4= ',' ( (lv_declaracaoVariaveis_5_0= rulevariable_declarator ) ) )* (otherlv_6= ';' | ( (lv_blocoVariavel_7_0= rulestatement_block ) ) ) ) ;
     public final EObject rulevariable_declaration() throws RecognitionException {
         EObject current = null;
 
@@ -4203,7 +4203,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
         Token otherlv_6=null;
         EObject lv_modificador_0_0 = null;
 
-        EObject lv_tipo_1_0 = null;
+        EObject lv_tipoVariavel_1_0 = null;
 
         EObject lv_declaracaoVariaveis_3_0 = null;
 
@@ -4215,11 +4215,11 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1526:28: ( ( ( (lv_modificador_0_0= ruleMODIFIER ) )* ( ( (lv_tipo_1_0= ruletype ) ) | otherlv_2= 'void' )? ( (lv_declaracaoVariaveis_3_0= rulevariable_declarator ) ) (otherlv_4= ',' ( (lv_declaracaoVariaveis_5_0= rulevariable_declarator ) ) )* (otherlv_6= ';' | ( (lv_blocoVariavel_7_0= rulestatement_block ) ) ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1527:1: ( ( (lv_modificador_0_0= ruleMODIFIER ) )* ( ( (lv_tipo_1_0= ruletype ) ) | otherlv_2= 'void' )? ( (lv_declaracaoVariaveis_3_0= rulevariable_declarator ) ) (otherlv_4= ',' ( (lv_declaracaoVariaveis_5_0= rulevariable_declarator ) ) )* (otherlv_6= ';' | ( (lv_blocoVariavel_7_0= rulestatement_block ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1526:28: ( ( ( (lv_modificador_0_0= ruleMODIFIER ) )* ( ( (lv_tipoVariavel_1_0= ruletype ) ) | otherlv_2= 'void' )? ( (lv_declaracaoVariaveis_3_0= rulevariable_declarator ) ) (otherlv_4= ',' ( (lv_declaracaoVariaveis_5_0= rulevariable_declarator ) ) )* (otherlv_6= ';' | ( (lv_blocoVariavel_7_0= rulestatement_block ) ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1527:1: ( ( (lv_modificador_0_0= ruleMODIFIER ) )* ( ( (lv_tipoVariavel_1_0= ruletype ) ) | otherlv_2= 'void' )? ( (lv_declaracaoVariaveis_3_0= rulevariable_declarator ) ) (otherlv_4= ',' ( (lv_declaracaoVariaveis_5_0= rulevariable_declarator ) ) )* (otherlv_6= ';' | ( (lv_blocoVariavel_7_0= rulestatement_block ) ) ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1527:1: ( ( (lv_modificador_0_0= ruleMODIFIER ) )* ( ( (lv_tipo_1_0= ruletype ) ) | otherlv_2= 'void' )? ( (lv_declaracaoVariaveis_3_0= rulevariable_declarator ) ) (otherlv_4= ',' ( (lv_declaracaoVariaveis_5_0= rulevariable_declarator ) ) )* (otherlv_6= ';' | ( (lv_blocoVariavel_7_0= rulestatement_block ) ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1527:2: ( (lv_modificador_0_0= ruleMODIFIER ) )* ( ( (lv_tipo_1_0= ruletype ) ) | otherlv_2= 'void' )? ( (lv_declaracaoVariaveis_3_0= rulevariable_declarator ) ) (otherlv_4= ',' ( (lv_declaracaoVariaveis_5_0= rulevariable_declarator ) ) )* (otherlv_6= ';' | ( (lv_blocoVariavel_7_0= rulestatement_block ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1527:1: ( ( (lv_modificador_0_0= ruleMODIFIER ) )* ( ( (lv_tipoVariavel_1_0= ruletype ) ) | otherlv_2= 'void' )? ( (lv_declaracaoVariaveis_3_0= rulevariable_declarator ) ) (otherlv_4= ',' ( (lv_declaracaoVariaveis_5_0= rulevariable_declarator ) ) )* (otherlv_6= ';' | ( (lv_blocoVariavel_7_0= rulestatement_block ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1527:2: ( (lv_modificador_0_0= ruleMODIFIER ) )* ( ( (lv_tipoVariavel_1_0= ruletype ) ) | otherlv_2= 'void' )? ( (lv_declaracaoVariaveis_3_0= rulevariable_declarator ) ) (otherlv_4= ',' ( (lv_declaracaoVariaveis_5_0= rulevariable_declarator ) ) )* (otherlv_6= ';' | ( (lv_blocoVariavel_7_0= rulestatement_block ) ) )
             {
             // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1527:2: ( (lv_modificador_0_0= ruleMODIFIER ) )*
             loop30:
@@ -4274,26 +4274,26 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1545:3: ( ( (lv_tipo_1_0= ruletype ) ) | otherlv_2= 'void' )?
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1545:3: ( ( (lv_tipoVariavel_1_0= ruletype ) ) | otherlv_2= 'void' )?
             int alt31=3;
             alt31 = dfa31.predict(input);
             switch (alt31) {
                 case 1 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1545:4: ( (lv_tipo_1_0= ruletype ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1545:4: ( (lv_tipoVariavel_1_0= ruletype ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1545:4: ( (lv_tipo_1_0= ruletype ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1546:1: (lv_tipo_1_0= ruletype )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1545:4: ( (lv_tipoVariavel_1_0= ruletype ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1546:1: (lv_tipoVariavel_1_0= ruletype )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1546:1: (lv_tipo_1_0= ruletype )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1547:3: lv_tipo_1_0= ruletype
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1546:1: (lv_tipoVariavel_1_0= ruletype )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:1547:3: lv_tipoVariavel_1_0= ruletype
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getVariable_declarationAccess().getTipoTypeParserRuleCall_1_0_0()); 
+                      	        newCompositeNode(grammarAccess.getVariable_declarationAccess().getTipoVariavelTypeParserRuleCall_1_0_0()); 
                       	    
                     }
                     pushFollow(FOLLOW_ruletype_in_rulevariable_declaration3180);
-                    lv_tipo_1_0=ruletype();
+                    lv_tipoVariavel_1_0=ruletype();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -4304,8 +4304,8 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       	        }
                              		set(
                              			current, 
-                             			"tipo",
-                              		lv_tipo_1_0, 
+                             			"tipoVariavel",
+                              		lv_tipoVariavel_1_0, 
                               		"type");
                       	        afterParserOrEnumRuleCall();
                       	    
@@ -7962,7 +7962,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleexpression"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2864:1: ruleexpression returns [EObject current=null] : ( ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ruleliteral_expression | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) ) ( (lv_expressoes_11_0= ruleexpression_aux ) ) ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2864:1: ruleexpression returns [EObject current=null] : ( ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ( (lv_literal_4_0= ruleliteral_expression ) ) | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) ) ( (lv_expressoes_11_0= ruleexpression_aux ) ) ) ;
     public final EObject ruleexpression() throws RecognitionException {
         EObject current = null;
 
@@ -7979,6 +7979,8 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
         EObject lv_new_3_0 = null;
 
+        EObject lv_literal_4_0 = null;
+
         EObject this_exp_aux_10 = null;
 
         EObject lv_expressoes_11_0 = null;
@@ -7987,13 +7989,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2867:28: ( ( ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ruleliteral_expression | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) ) ( (lv_expressoes_11_0= ruleexpression_aux ) ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2868:1: ( ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ruleliteral_expression | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) ) ( (lv_expressoes_11_0= ruleexpression_aux ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2867:28: ( ( ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ( (lv_literal_4_0= ruleliteral_expression ) ) | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) ) ( (lv_expressoes_11_0= ruleexpression_aux ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2868:1: ( ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ( (lv_literal_4_0= ruleliteral_expression ) ) | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) ) ( (lv_expressoes_11_0= ruleexpression_aux ) ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2868:1: ( ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ruleliteral_expression | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) ) ( (lv_expressoes_11_0= ruleexpression_aux ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2868:2: ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ruleliteral_expression | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) ) ( (lv_expressoes_11_0= ruleexpression_aux ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2868:1: ( ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ( (lv_literal_4_0= ruleliteral_expression ) ) | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) ) ( (lv_expressoes_11_0= ruleexpression_aux ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2868:2: ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ( (lv_literal_4_0= ruleliteral_expression ) ) | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) ) ( (lv_expressoes_11_0= ruleexpression_aux ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2868:2: ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ruleliteral_expression | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2868:2: ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ( (lv_literal_4_0= ruleliteral_expression ) ) | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) )
             int alt57=10;
             alt57 = dfa57.predict(input);
             switch (alt57) {
@@ -8162,35 +8164,50 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2945:2: ruleliteral_expression
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2944:6: ( (lv_literal_4_0= ruleliteral_expression ) )
+                    {
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2944:6: ( (lv_literal_4_0= ruleliteral_expression ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2945:1: (lv_literal_4_0= ruleliteral_expression )
+                    {
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2945:1: (lv_literal_4_0= ruleliteral_expression )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2946:3: lv_literal_4_0= ruleliteral_expression
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	  /* */ 
-                      	
+                      	        newCompositeNode(grammarAccess.getExpressionAccess().getLiteralLiteral_expressionParserRuleCall_0_4_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getExpressionAccess().getLiteral_expressionParserRuleCall_0_4()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleliteral_expression_in_ruleexpression6154);
-                    ruleliteral_expression();
+                    pushFollow(FOLLOW_ruleliteral_expression_in_ruleexpression6156);
+                    lv_literal_4_0=ruleliteral_expression();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getExpressionRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"literal",
+                              		lv_literal_4_0, 
+                              		"literal_expression");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
                 case 6 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2956:7: otherlv_5= 'null'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2963:7: otherlv_5= 'null'
                     {
-                    otherlv_5=(Token)match(input,56,FOLLOW_56_in_ruleexpression6171); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,56,FOLLOW_56_in_ruleexpression6174); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getExpressionAccess().getNullKeyword_0_5());
@@ -8200,9 +8217,9 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2961:7: otherlv_6= 'super'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2968:7: otherlv_6= 'super'
                     {
-                    otherlv_6=(Token)match(input,57,FOLLOW_57_in_ruleexpression6189); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,57,FOLLOW_57_in_ruleexpression6192); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getExpressionAccess().getSuperKeyword_0_6());
@@ -8212,9 +8229,9 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2966:7: otherlv_7= 'this'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2973:7: otherlv_7= 'this'
                     {
-                    otherlv_7=(Token)match(input,58,FOLLOW_58_in_ruleexpression6207); if (state.failed) return current;
+                    otherlv_7=(Token)match(input,58,FOLLOW_58_in_ruleexpression6210); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_7, grammarAccess.getExpressionAccess().getThisKeyword_0_7());
@@ -8224,9 +8241,9 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2971:6: this_IDENTIFIER_8= RULE_IDENTIFIER
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2978:6: this_IDENTIFIER_8= RULE_IDENTIFIER
                     {
-                    this_IDENTIFIER_8=(Token)match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_ruleexpression6224); if (state.failed) return current;
+                    this_IDENTIFIER_8=(Token)match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_ruleexpression6227); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
                           newLeafNode(this_IDENTIFIER_8, grammarAccess.getExpressionAccess().getIDENTIFIERTerminalRuleCall_0_8()); 
@@ -8236,12 +8253,12 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2976:6: (otherlv_9= '(' this_exp_aux_10= ruleexp_aux )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2983:6: (otherlv_9= '(' this_exp_aux_10= ruleexp_aux )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2976:6: (otherlv_9= '(' this_exp_aux_10= ruleexp_aux )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2976:8: otherlv_9= '(' this_exp_aux_10= ruleexp_aux
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2983:6: (otherlv_9= '(' this_exp_aux_10= ruleexp_aux )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2983:8: otherlv_9= '(' this_exp_aux_10= ruleexp_aux
                     {
-                    otherlv_9=(Token)match(input,31,FOLLOW_31_in_ruleexpression6242); if (state.failed) return current;
+                    otherlv_9=(Token)match(input,31,FOLLOW_31_in_ruleexpression6245); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_9, grammarAccess.getExpressionAccess().getLeftParenthesisKeyword_0_9_0());
@@ -8257,7 +8274,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getExpressionAccess().getExp_auxParserRuleCall_0_9_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleexp_aux_in_ruleexpression6267);
+                    pushFollow(FOLLOW_ruleexp_aux_in_ruleexpression6270);
                     this_exp_aux_10=ruleexp_aux();
 
                     state._fsp--;
@@ -8277,18 +8294,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2992:3: ( (lv_expressoes_11_0= ruleexpression_aux ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2993:1: (lv_expressoes_11_0= ruleexpression_aux )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2999:3: ( (lv_expressoes_11_0= ruleexpression_aux ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3000:1: (lv_expressoes_11_0= ruleexpression_aux )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2993:1: (lv_expressoes_11_0= ruleexpression_aux )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:2994:3: lv_expressoes_11_0= ruleexpression_aux
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3000:1: (lv_expressoes_11_0= ruleexpression_aux )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3001:3: lv_expressoes_11_0= ruleexpression_aux
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getExpressionAccess().getExpressoesExpression_auxParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleexpression_aux_in_ruleexpression6289);
+            pushFollow(FOLLOW_ruleexpression_aux_in_ruleexpression6292);
             lv_expressoes_11_0=ruleexpression_aux();
 
             state._fsp--;
@@ -8335,7 +8352,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleexpression_aux"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3018:1: entryRuleexpression_aux returns [EObject current=null] : iv_ruleexpression_aux= ruleexpression_aux EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3025:1: entryRuleexpression_aux returns [EObject current=null] : iv_ruleexpression_aux= ruleexpression_aux EOF ;
     public final EObject entryRuleexpression_aux() throws RecognitionException {
         EObject current = null;
 
@@ -8343,13 +8360,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3019:2: (iv_ruleexpression_aux= ruleexpression_aux EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3020:2: iv_ruleexpression_aux= ruleexpression_aux EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3026:2: (iv_ruleexpression_aux= ruleexpression_aux EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3027:2: iv_ruleexpression_aux= ruleexpression_aux EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExpression_auxRule()); 
             }
-            pushFollow(FOLLOW_ruleexpression_aux_in_entryRuleexpression_aux6325);
+            pushFollow(FOLLOW_ruleexpression_aux_in_entryRuleexpression_aux6328);
             iv_ruleexpression_aux=ruleexpression_aux();
 
             state._fsp--;
@@ -8357,7 +8374,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleexpression_aux; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleexpression_aux6335); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleexpression_aux6338); if (state.failed) return current;
 
             }
 
@@ -8375,7 +8392,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleexpression_aux"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3027:1: ruleexpression_aux returns [EObject current=null] : ( ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) | (otherlv_12= '++' | otherlv_13= '--' ) | ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) | ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) ) ) ( (lv_expressoes_52_0= ruleexpression_aux ) ) )? ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3034:1: ruleexpression_aux returns [EObject current=null] : ( ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) | ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) ) | ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) | ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) ) ) ( (lv_expressoes_43_0= ruleexpression_aux ) ) )? ;
     public final EObject ruleexpression_aux() throws RecognitionException {
         EObject current = null;
 
@@ -8384,16 +8401,17 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         Token otherlv_6=null;
         Token otherlv_8=null;
-        Token otherlv_12=null;
-        Token otherlv_13=null;
-        Token otherlv_15=null;
-        Token otherlv_16=null;
-        Token otherlv_17=null;
-        Token otherlv_18=null;
-        Token otherlv_19=null;
-        Token otherlv_20=null;
-        Token otherlv_21=null;
-        Token otherlv_22=null;
+        Token lv_opedador_12_1=null;
+        Token lv_opedador_12_2=null;
+        Token lv_opedador_14_0=null;
+        Token lv_opedador_15_0=null;
+        Token lv_opedador_16_0=null;
+        Token lv_opedador_17_0=null;
+        Token lv_opedador_18_0=null;
+        Token lv_opedador_19_0=null;
+        Token lv_opedador_20_0=null;
+        Token lv_opedador_21_0=null;
+        Token otherlv_23=null;
         Token otherlv_24=null;
         Token otherlv_25=null;
         Token otherlv_26=null;
@@ -8404,19 +8422,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
         Token otherlv_31=null;
         Token otherlv_32=null;
         Token otherlv_33=null;
-        Token otherlv_34=null;
-        Token otherlv_36=null;
-        Token otherlv_38=null;
-        Token otherlv_40=null;
-        Token otherlv_41=null;
-        Token otherlv_42=null;
-        Token otherlv_43=null;
-        Token otherlv_44=null;
-        Token otherlv_45=null;
-        Token otherlv_47=null;
-        Token otherlv_48=null;
-        Token otherlv_49=null;
-        Token otherlv_50=null;
+        Token otherlv_35=null;
+        Token otherlv_37=null;
+        Token lv_opedador_39_1=null;
+        Token lv_opedador_39_2=null;
+        Token lv_opedador_39_3=null;
+        Token lv_opedador_39_4=null;
+        Token lv_opedador_39_5=null;
+        Token lv_opedador_39_6=null;
+        Token lv_operador_41_1=null;
+        Token lv_operador_41_2=null;
+        Token lv_operador_41_3=null;
+        Token lv_operador_41_4=null;
         EObject this_arglist_1 = null;
 
         EObject this_aux_3 = null;
@@ -8427,44 +8444,48 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
         EObject this_name_9 = null;
 
-        EObject this_expression_11 = null;
+        EObject this_mais_aux_10 = null;
 
-        EObject this_expression_23 = null;
+        EObject lv_exp_11_0 = null;
 
-        EObject this_expression_35 = null;
+        EObject this_mais_aux_13 = null;
 
-        EObject this_expression_37 = null;
+        EObject lv_exp_22_0 = null;
 
-        EObject lv_expressao_39_0 = null;
+        EObject this_expression_34 = null;
 
-        EObject this_expression_46 = null;
+        EObject this_expression_36 = null;
 
-        EObject this_expression_51 = null;
+        EObject lv_expressao_38_0 = null;
 
-        EObject lv_expressoes_52_0 = null;
+        EObject lv_exp_40_0 = null;
+
+        EObject lv_exp_42_0 = null;
+
+        EObject lv_expressoes_43_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3030:28: ( ( ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) | (otherlv_12= '++' | otherlv_13= '--' ) | ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) | ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) ) ) ( (lv_expressoes_52_0= ruleexpression_aux ) ) )? )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:1: ( ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) | (otherlv_12= '++' | otherlv_13= '--' ) | ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) | ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) ) ) ( (lv_expressoes_52_0= ruleexpression_aux ) ) )?
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3037:28: ( ( ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) | ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) ) | ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) | ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) ) ) ( (lv_expressoes_43_0= ruleexpression_aux ) ) )? )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:1: ( ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) | ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) ) | ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) | ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) ) ) ( (lv_expressoes_43_0= ruleexpression_aux ) ) )?
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:1: ( ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) | (otherlv_12= '++' | otherlv_13= '--' ) | ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) | ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) ) ) ( (lv_expressoes_52_0= ruleexpression_aux ) ) )?
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:1: ( ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) | ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) ) | ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) | ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) ) ) ( (lv_expressoes_43_0= ruleexpression_aux ) ) )?
             int alt67=2;
             alt67 = dfa67.predict(input);
             switch (alt67) {
                 case 1 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:2: ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) | (otherlv_12= '++' | otherlv_13= '--' ) | ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) | ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) ) ) ( (lv_expressoes_52_0= ruleexpression_aux ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:2: ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) | ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) ) | ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) | ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) ) ) ( (lv_expressoes_43_0= ruleexpression_aux ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:2: ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) | (otherlv_12= '++' | otherlv_13= '--' ) | ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) | ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:2: ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) | ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) ) | ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) | ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) ) )
                     int alt66=5;
                     alt66 = dfa66.predict(input);
                     switch (alt66) {
                         case 1 :
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:3: ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:3: ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) )
                             {
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:3: ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:3: ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) )
                             int alt59=5;
                             switch ( input.LA(1) ) {
                             case 31:
@@ -8502,18 +8523,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                             switch (alt59) {
                                 case 1 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:4: (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:4: (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' )
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:4: (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' )
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:6: otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')'
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:4: (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:6: otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')'
                                     {
-                                    otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleexpression_aux6375); if (state.failed) return current;
+                                    otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleexpression_aux6378); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_0, grammarAccess.getExpression_auxAccess().getLeftParenthesisKeyword_0_0_0_0());
                                           
                                     }
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3035:1: (this_arglist_1= rulearglist )?
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3042:1: (this_arglist_1= rulearglist )?
                                     int alt58=2;
                                     int LA58_0 = input.LA(1);
 
@@ -8522,7 +8543,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                     }
                                     switch (alt58) {
                                         case 1 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3036:2: this_arglist_1= rulearglist
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3043:2: this_arglist_1= rulearglist
                                             {
                                             if ( state.backtracking==0 ) {
                                                
@@ -8534,7 +8555,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                                       newCompositeNode(grammarAccess.getExpression_auxAccess().getArglistParserRuleCall_0_0_0_1()); 
                                                   
                                             }
-                                            pushFollow(FOLLOW_rulearglist_in_ruleexpression_aux6401);
+                                            pushFollow(FOLLOW_rulearglist_in_ruleexpression_aux6404);
                                             this_arglist_1=rulearglist();
 
                                             state._fsp--;
@@ -8551,7 +8572,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                                     }
 
-                                    otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleexpression_aux6414); if (state.failed) return current;
+                                    otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleexpression_aux6417); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_2, grammarAccess.getExpression_auxAccess().getRightParenthesisKeyword_0_0_0_2());
@@ -8564,7 +8585,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                     }
                                     break;
                                 case 2 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3053:2: this_aux_3= ruleaux
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3060:2: this_aux_3= ruleaux
                                     {
                                     if ( state.backtracking==0 ) {
                                        
@@ -8576,7 +8597,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                               newCompositeNode(grammarAccess.getExpression_auxAccess().getAuxParserRuleCall_0_0_1()); 
                                           
                                     }
-                                    pushFollow(FOLLOW_ruleaux_in_ruleexpression_aux6446);
+                                    pushFollow(FOLLOW_ruleaux_in_ruleexpression_aux6449);
                                     this_aux_3=ruleaux();
 
                                     state._fsp--;
@@ -8591,12 +8612,12 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                     }
                                     break;
                                 case 3 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3065:6: (otherlv_4= '.' this_expression_5= ruleexpression )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3072:6: (otherlv_4= '.' this_expression_5= ruleexpression )
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3065:6: (otherlv_4= '.' this_expression_5= ruleexpression )
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3065:8: otherlv_4= '.' this_expression_5= ruleexpression
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3072:6: (otherlv_4= '.' this_expression_5= ruleexpression )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3072:8: otherlv_4= '.' this_expression_5= ruleexpression
                                     {
-                                    otherlv_4=(Token)match(input,59,FOLLOW_59_in_ruleexpression_aux6464); if (state.failed) return current;
+                                    otherlv_4=(Token)match(input,59,FOLLOW_59_in_ruleexpression_aux6467); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_4, grammarAccess.getExpression_auxAccess().getFullStopKeyword_0_0_2_0());
@@ -8612,7 +8633,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                               newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressionParserRuleCall_0_0_2_1()); 
                                           
                                     }
-                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux6489);
+                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux6492);
                                     this_expression_5=ruleexpression();
 
                                     state._fsp--;
@@ -8630,12 +8651,12 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                     }
                                     break;
                                 case 4 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3082:6: (otherlv_6= ',' this_expression_7= ruleexpression )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3089:6: (otherlv_6= ',' this_expression_7= ruleexpression )
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3082:6: (otherlv_6= ',' this_expression_7= ruleexpression )
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3082:8: otherlv_6= ',' this_expression_7= ruleexpression
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3089:6: (otherlv_6= ',' this_expression_7= ruleexpression )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3089:8: otherlv_6= ',' this_expression_7= ruleexpression
                                     {
-                                    otherlv_6=(Token)match(input,27,FOLLOW_27_in_ruleexpression_aux6508); if (state.failed) return current;
+                                    otherlv_6=(Token)match(input,27,FOLLOW_27_in_ruleexpression_aux6511); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_6, grammarAccess.getExpression_auxAccess().getCommaKeyword_0_0_3_0());
@@ -8651,7 +8672,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                               newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressionParserRuleCall_0_0_3_1()); 
                                           
                                     }
-                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux6533);
+                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux6536);
                                     this_expression_7=ruleexpression();
 
                                     state._fsp--;
@@ -8669,19 +8690,19 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                     }
                                     break;
                                 case 5 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3099:6: (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3106:6: (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) )
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3099:6: (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) )
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3099:8: otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3106:6: (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3106:8: otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename )
                                     {
-                                    otherlv_8=(Token)match(input,60,FOLLOW_60_in_ruleexpression_aux6552); if (state.failed) return current;
+                                    otherlv_8=(Token)match(input,60,FOLLOW_60_in_ruleexpression_aux6555); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_8, grammarAccess.getExpression_auxAccess().getInstanceofKeyword_0_0_4_0());
                                           
                                     }
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3103:1: ( ( RULE_IDENTIFIER )=>this_name_9= rulename )
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3103:2: ( RULE_IDENTIFIER )=>this_name_9= rulename
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3110:1: ( ( RULE_IDENTIFIER )=>this_name_9= rulename )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3110:2: ( RULE_IDENTIFIER )=>this_name_9= rulename
                                     {
                                     if ( state.backtracking==0 ) {
                                        
@@ -8693,7 +8714,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                               newCompositeNode(grammarAccess.getExpression_auxAccess().getNameParserRuleCall_0_0_4_1()); 
                                           
                                     }
-                                    pushFollow(FOLLOW_rulename_in_ruleexpression_aux6583);
+                                    pushFollow(FOLLOW_rulename_in_ruleexpression_aux6586);
                                     this_name_9=rulename();
 
                                     state._fsp--;
@@ -8720,13 +8741,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:6: ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:6: ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) )
                             {
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:6: ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression )
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:7: ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:6: ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:7: ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) )
                             {
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:7: ( ( '+' | '+=' )=> rulemais_aux )
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:8: ( '+' | '+=' )=> rulemais_aux
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:7: ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:8: ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -8738,40 +8759,55 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                       newCompositeNode(grammarAccess.getExpression_auxAccess().getMais_auxParserRuleCall_0_1_0()); 
                                   
                             }
-                            pushFollow(FOLLOW_rulemais_aux_in_ruleexpression_aux6626);
-                            rulemais_aux();
+                            pushFollow(FOLLOW_rulemais_aux_in_ruleexpression_aux6635);
+                            this_mais_aux_10=rulemais_aux();
 
                             state._fsp--;
                             if (state.failed) return current;
                             if ( state.backtracking==0 ) {
                                
+                                      current = this_mais_aux_10; 
                                       afterParserOrEnumRuleCall();
                                   
                             }
 
                             }
 
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3137:2: ( (lv_exp_11_0= ruleexpression ) )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3138:1: (lv_exp_11_0= ruleexpression )
+                            {
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3138:1: (lv_exp_11_0= ruleexpression )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3139:3: lv_exp_11_0= ruleexpression
+                            {
                             if ( state.backtracking==0 ) {
                                
-                              	  /* */ 
-                              	
+                              	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_1_1_0()); 
+                              	    
                             }
-                            if ( state.backtracking==0 ) {
-                               
-                                      newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressionParserRuleCall_0_1_1()); 
-                                  
-                            }
-                            pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux6651);
-                            this_expression_11=ruleexpression();
+                            pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux6656);
+                            lv_exp_11_0=ruleexpression();
 
                             state._fsp--;
                             if (state.failed) return current;
                             if ( state.backtracking==0 ) {
-                               
-                                      current = this_expression_11; 
-                                      afterParserOrEnumRuleCall();
-                                  
+
+                              	        if (current==null) {
+                              	            current = createModelElementForParent(grammarAccess.getExpression_auxRule());
+                              	        }
+                                     		set(
+                                     			current, 
+                                     			"exp",
+                                      		lv_exp_11_0, 
+                                      		"expression");
+                              	        afterParserOrEnumRuleCall();
+                              	    
                             }
+
+                            }
+
+
+                            }
+
 
                             }
 
@@ -8779,9 +8815,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 3 :
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3142:6: (otherlv_12= '++' | otherlv_13= '--' )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3156:6: ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) )
                             {
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3142:6: (otherlv_12= '++' | otherlv_13= '--' )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3156:6: ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3157:1: ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) )
+                            {
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3157:1: ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3158:1: (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' )
+                            {
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3158:1: (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' )
                             int alt60=2;
                             int LA60_0 = input.LA(1);
 
@@ -8800,29 +8842,51 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                             }
                             switch (alt60) {
                                 case 1 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3142:8: otherlv_12= '++'
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3159:3: lv_opedador_12_1= '++'
                                     {
-                                    otherlv_12=(Token)match(input,61,FOLLOW_61_in_ruleexpression_aux6670); if (state.failed) return current;
+                                    lv_opedador_12_1=(Token)match(input,61,FOLLOW_61_in_ruleexpression_aux6683); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
-                                          	newLeafNode(otherlv_12, grammarAccess.getExpression_auxAccess().getPlusSignPlusSignKeyword_0_2_0());
+                                              newLeafNode(lv_opedador_12_1, grammarAccess.getExpression_auxAccess().getOpedadorPlusSignPlusSignKeyword_0_2_0_0());
                                           
+                                    }
+                                    if ( state.backtracking==0 ) {
+
+                                      	        if (current==null) {
+                                      	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                      	        }
+                                             		setWithLastConsumed(current, "opedador", lv_opedador_12_1, null);
+                                      	    
                                     }
 
                                     }
                                     break;
                                 case 2 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3147:7: otherlv_13= '--'
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3171:8: lv_opedador_12_2= '--'
                                     {
-                                    otherlv_13=(Token)match(input,62,FOLLOW_62_in_ruleexpression_aux6688); if (state.failed) return current;
+                                    lv_opedador_12_2=(Token)match(input,62,FOLLOW_62_in_ruleexpression_aux6712); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
-                                          	newLeafNode(otherlv_13, grammarAccess.getExpression_auxAccess().getHyphenMinusHyphenMinusKeyword_0_2_1());
+                                              newLeafNode(lv_opedador_12_2, grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusHyphenMinusKeyword_0_2_0_1());
                                           
+                                    }
+                                    if ( state.backtracking==0 ) {
+
+                                      	        if (current==null) {
+                                      	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                      	        }
+                                             		setWithLastConsumed(current, "opedador", lv_opedador_12_2, null);
+                                      	    
                                     }
 
                                     }
                                     break;
+
+                            }
+
+
+                            }
+
 
                             }
 
@@ -8830,20 +8894,20 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 4 :
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:6: ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:6: ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) )
                             {
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:6: ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression )
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:7: ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:6: ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:7: ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) )
                             {
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:7: ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:7: ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) )
                             int alt61=9;
                             alt61 = dfa61.predict(input);
                             switch (alt61) {
                                 case 1 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:8: ( ( '+' | '+=' )=> rulemais_aux )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:8: ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux )
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:8: ( ( '+' | '+=' )=> rulemais_aux )
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:9: ( '+' | '+=' )=> rulemais_aux
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:8: ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:9: ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux
                                     {
                                     if ( state.backtracking==0 ) {
                                        
@@ -8855,13 +8919,14 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                               newCompositeNode(grammarAccess.getExpression_auxAccess().getMais_auxParserRuleCall_0_3_0_0()); 
                                           
                                     }
-                                    pushFollow(FOLLOW_rulemais_aux_in_ruleexpression_aux6731);
-                                    rulemais_aux();
+                                    pushFollow(FOLLOW_rulemais_aux_in_ruleexpression_aux6776);
+                                    this_mais_aux_13=rulemais_aux();
 
                                     state._fsp--;
                                     if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
                                        
+                                              current = this_mais_aux_13; 
                                               afterParserOrEnumRuleCall();
                                           
                                     }
@@ -8872,125 +8937,299 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                     }
                                     break;
                                 case 2 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3166:7: otherlv_15= '-'
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3202:6: ( (lv_opedador_14_0= '-' ) )
                                     {
-                                    otherlv_15=(Token)match(input,63,FOLLOW_63_in_ruleexpression_aux6749); if (state.failed) return current;
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3202:6: ( (lv_opedador_14_0= '-' ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3203:1: (lv_opedador_14_0= '-' )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3203:1: (lv_opedador_14_0= '-' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3204:3: lv_opedador_14_0= '-'
+                                    {
+                                    lv_opedador_14_0=(Token)match(input,63,FOLLOW_63_in_ruleexpression_aux6800); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
-                                          	newLeafNode(otherlv_15, grammarAccess.getExpression_auxAccess().getHyphenMinusKeyword_0_3_0_1());
+                                              newLeafNode(lv_opedador_14_0, grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusKeyword_0_3_0_1_0());
                                           
                                     }
+                                    if ( state.backtracking==0 ) {
+
+                                      	        if (current==null) {
+                                      	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                      	        }
+                                             		setWithLastConsumed(current, "opedador", lv_opedador_14_0, "-");
+                                      	    
+                                    }
+
+                                    }
+
+
+                                    }
+
 
                                     }
                                     break;
                                 case 3 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3171:7: otherlv_16= '-='
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:6: ( (lv_opedador_15_0= '-=' ) )
                                     {
-                                    otherlv_16=(Token)match(input,64,FOLLOW_64_in_ruleexpression_aux6767); if (state.failed) return current;
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:6: ( (lv_opedador_15_0= '-=' ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3219:1: (lv_opedador_15_0= '-=' )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3219:1: (lv_opedador_15_0= '-=' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3220:3: lv_opedador_15_0= '-='
+                                    {
+                                    lv_opedador_15_0=(Token)match(input,64,FOLLOW_64_in_ruleexpression_aux6837); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
-                                          	newLeafNode(otherlv_16, grammarAccess.getExpression_auxAccess().getHyphenMinusEqualsSignKeyword_0_3_0_2());
+                                              newLeafNode(lv_opedador_15_0, grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusEqualsSignKeyword_0_3_0_2_0());
                                           
                                     }
+                                    if ( state.backtracking==0 ) {
+
+                                      	        if (current==null) {
+                                      	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                      	        }
+                                             		setWithLastConsumed(current, "opedador", lv_opedador_15_0, "-=");
+                                      	    
+                                    }
+
+                                    }
+
+
+                                    }
+
 
                                     }
                                     break;
                                 case 4 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3176:7: otherlv_17= '*'
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3234:6: ( (lv_opedador_16_0= '*' ) )
                                     {
-                                    otherlv_17=(Token)match(input,65,FOLLOW_65_in_ruleexpression_aux6785); if (state.failed) return current;
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3234:6: ( (lv_opedador_16_0= '*' ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3235:1: (lv_opedador_16_0= '*' )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3235:1: (lv_opedador_16_0= '*' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3236:3: lv_opedador_16_0= '*'
+                                    {
+                                    lv_opedador_16_0=(Token)match(input,65,FOLLOW_65_in_ruleexpression_aux6874); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
-                                          	newLeafNode(otherlv_17, grammarAccess.getExpression_auxAccess().getAsteriskKeyword_0_3_0_3());
+                                              newLeafNode(lv_opedador_16_0, grammarAccess.getExpression_auxAccess().getOpedadorAsteriskKeyword_0_3_0_3_0());
                                           
                                     }
+                                    if ( state.backtracking==0 ) {
+
+                                      	        if (current==null) {
+                                      	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                      	        }
+                                             		setWithLastConsumed(current, "opedador", lv_opedador_16_0, "*");
+                                      	    
+                                    }
+
+                                    }
+
+
+                                    }
+
 
                                     }
                                     break;
                                 case 5 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3181:7: otherlv_18= '*='
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3250:6: ( (lv_opedador_17_0= '*=' ) )
                                     {
-                                    otherlv_18=(Token)match(input,66,FOLLOW_66_in_ruleexpression_aux6803); if (state.failed) return current;
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3250:6: ( (lv_opedador_17_0= '*=' ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3251:1: (lv_opedador_17_0= '*=' )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3251:1: (lv_opedador_17_0= '*=' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3252:3: lv_opedador_17_0= '*='
+                                    {
+                                    lv_opedador_17_0=(Token)match(input,66,FOLLOW_66_in_ruleexpression_aux6911); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
-                                          	newLeafNode(otherlv_18, grammarAccess.getExpression_auxAccess().getAsteriskEqualsSignKeyword_0_3_0_4());
+                                              newLeafNode(lv_opedador_17_0, grammarAccess.getExpression_auxAccess().getOpedadorAsteriskEqualsSignKeyword_0_3_0_4_0());
                                           
                                     }
+                                    if ( state.backtracking==0 ) {
+
+                                      	        if (current==null) {
+                                      	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                      	        }
+                                             		setWithLastConsumed(current, "opedador", lv_opedador_17_0, "*=");
+                                      	    
+                                    }
+
+                                    }
+
+
+                                    }
+
 
                                     }
                                     break;
                                 case 6 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3186:7: otherlv_19= '/'
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3266:6: ( (lv_opedador_18_0= '/' ) )
                                     {
-                                    otherlv_19=(Token)match(input,67,FOLLOW_67_in_ruleexpression_aux6821); if (state.failed) return current;
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3266:6: ( (lv_opedador_18_0= '/' ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3267:1: (lv_opedador_18_0= '/' )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3267:1: (lv_opedador_18_0= '/' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3268:3: lv_opedador_18_0= '/'
+                                    {
+                                    lv_opedador_18_0=(Token)match(input,67,FOLLOW_67_in_ruleexpression_aux6948); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
-                                          	newLeafNode(otherlv_19, grammarAccess.getExpression_auxAccess().getSolidusKeyword_0_3_0_5());
+                                              newLeafNode(lv_opedador_18_0, grammarAccess.getExpression_auxAccess().getOpedadorSolidusKeyword_0_3_0_5_0());
                                           
                                     }
+                                    if ( state.backtracking==0 ) {
+
+                                      	        if (current==null) {
+                                      	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                      	        }
+                                             		setWithLastConsumed(current, "opedador", lv_opedador_18_0, "/");
+                                      	    
+                                    }
+
+                                    }
+
+
+                                    }
+
 
                                     }
                                     break;
                                 case 7 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3191:7: otherlv_20= '/='
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3282:6: ( (lv_opedador_19_0= '/=' ) )
                                     {
-                                    otherlv_20=(Token)match(input,68,FOLLOW_68_in_ruleexpression_aux6839); if (state.failed) return current;
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3282:6: ( (lv_opedador_19_0= '/=' ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3283:1: (lv_opedador_19_0= '/=' )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3283:1: (lv_opedador_19_0= '/=' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3284:3: lv_opedador_19_0= '/='
+                                    {
+                                    lv_opedador_19_0=(Token)match(input,68,FOLLOW_68_in_ruleexpression_aux6985); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
-                                          	newLeafNode(otherlv_20, grammarAccess.getExpression_auxAccess().getSolidusEqualsSignKeyword_0_3_0_6());
+                                              newLeafNode(lv_opedador_19_0, grammarAccess.getExpression_auxAccess().getOpedadorSolidusEqualsSignKeyword_0_3_0_6_0());
                                           
                                     }
+                                    if ( state.backtracking==0 ) {
+
+                                      	        if (current==null) {
+                                      	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                      	        }
+                                             		setWithLastConsumed(current, "opedador", lv_opedador_19_0, "/=");
+                                      	    
+                                    }
+
+                                    }
+
+
+                                    }
+
 
                                     }
                                     break;
                                 case 8 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3196:7: otherlv_21= '%'
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3298:6: ( (lv_opedador_20_0= '%' ) )
                                     {
-                                    otherlv_21=(Token)match(input,69,FOLLOW_69_in_ruleexpression_aux6857); if (state.failed) return current;
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3298:6: ( (lv_opedador_20_0= '%' ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3299:1: (lv_opedador_20_0= '%' )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3299:1: (lv_opedador_20_0= '%' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3300:3: lv_opedador_20_0= '%'
+                                    {
+                                    lv_opedador_20_0=(Token)match(input,69,FOLLOW_69_in_ruleexpression_aux7022); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
-                                          	newLeafNode(otherlv_21, grammarAccess.getExpression_auxAccess().getPercentSignKeyword_0_3_0_7());
+                                              newLeafNode(lv_opedador_20_0, grammarAccess.getExpression_auxAccess().getOpedadorPercentSignKeyword_0_3_0_7_0());
                                           
                                     }
+                                    if ( state.backtracking==0 ) {
+
+                                      	        if (current==null) {
+                                      	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                      	        }
+                                             		setWithLastConsumed(current, "opedador", lv_opedador_20_0, "%");
+                                      	    
+                                    }
+
+                                    }
+
+
+                                    }
+
 
                                     }
                                     break;
                                 case 9 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3201:7: otherlv_22= '%='
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3314:6: ( (lv_opedador_21_0= '%=' ) )
                                     {
-                                    otherlv_22=(Token)match(input,70,FOLLOW_70_in_ruleexpression_aux6875); if (state.failed) return current;
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3314:6: ( (lv_opedador_21_0= '%=' ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3315:1: (lv_opedador_21_0= '%=' )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3315:1: (lv_opedador_21_0= '%=' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3316:3: lv_opedador_21_0= '%='
+                                    {
+                                    lv_opedador_21_0=(Token)match(input,70,FOLLOW_70_in_ruleexpression_aux7059); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
-                                          	newLeafNode(otherlv_22, grammarAccess.getExpression_auxAccess().getPercentSignEqualsSignKeyword_0_3_0_8());
+                                              newLeafNode(lv_opedador_21_0, grammarAccess.getExpression_auxAccess().getOpedadorPercentSignEqualsSignKeyword_0_3_0_8_0());
                                           
                                     }
+                                    if ( state.backtracking==0 ) {
+
+                                      	        if (current==null) {
+                                      	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                      	        }
+                                             		setWithLastConsumed(current, "opedador", lv_opedador_21_0, "%=");
+                                      	    
+                                    }
+
+                                    }
+
+
+                                    }
+
 
                                     }
                                     break;
 
                             }
 
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3329:3: ( (lv_exp_22_0= ruleexpression ) )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3330:1: (lv_exp_22_0= ruleexpression )
+                            {
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3330:1: (lv_exp_22_0= ruleexpression )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3331:3: lv_exp_22_0= ruleexpression
+                            {
                             if ( state.backtracking==0 ) {
                                
-                              	  /* */ 
-                              	
+                              	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_3_1_0()); 
+                              	    
                             }
-                            if ( state.backtracking==0 ) {
-                               
-                                      newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressionParserRuleCall_0_3_1()); 
-                                  
-                            }
-                            pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux6901);
-                            this_expression_23=ruleexpression();
+                            pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux7094);
+                            lv_exp_22_0=ruleexpression();
 
                             state._fsp--;
                             if (state.failed) return current;
                             if ( state.backtracking==0 ) {
-                               
-                                      current = this_expression_23; 
-                                      afterParserOrEnumRuleCall();
-                                  
+
+                              	        if (current==null) {
+                              	            current = createModelElementForParent(grammarAccess.getExpression_auxRule());
+                              	        }
+                                     		set(
+                                     			current, 
+                                     			"exp",
+                                      		lv_exp_22_0, 
+                                      		"expression");
+                              	        afterParserOrEnumRuleCall();
+                              	    
                             }
+
+                            }
+
+
+                            }
+
 
                             }
 
@@ -8998,9 +9237,9 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 5 :
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:6: ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:6: ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) )
                             {
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:6: ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:6: ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) )
                             int alt65=4;
                             switch ( input.LA(1) ) {
                             case 69:
@@ -9049,103 +9288,103 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                             switch (alt65) {
                                 case 1 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:7: ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:7: ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression )
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:7: ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression )
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:8: (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:7: ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:8: (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:8: (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:8: (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' )
                                     int alt62=10;
                                     alt62 = dfa62.predict(input);
                                     switch (alt62) {
                                         case 1 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:10: otherlv_24= 'ampersand'
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:10: otherlv_23= 'ampersand'
                                             {
-                                            otherlv_24=(Token)match(input,71,FOLLOW_71_in_ruleexpression_aux6922); if (state.failed) return current;
+                                            otherlv_23=(Token)match(input,71,FOLLOW_71_in_ruleexpression_aux7116); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_24, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_0());
+                                                  	newLeafNode(otherlv_23, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_0());
                                                   
                                             }
 
                                             }
                                             break;
                                         case 2 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3223:7: otherlv_25= 'ampersand='
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3353:7: otherlv_24= 'ampersand='
                                             {
-                                            otherlv_25=(Token)match(input,72,FOLLOW_72_in_ruleexpression_aux6940); if (state.failed) return current;
+                                            otherlv_24=(Token)match(input,72,FOLLOW_72_in_ruleexpression_aux7134); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_25, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_1());
+                                                  	newLeafNode(otherlv_24, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_1());
                                                   
                                             }
 
                                             }
                                             break;
                                         case 3 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3228:7: otherlv_26= '|'
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3358:7: otherlv_25= '|'
                                             {
-                                            otherlv_26=(Token)match(input,73,FOLLOW_73_in_ruleexpression_aux6958); if (state.failed) return current;
+                                            otherlv_25=(Token)match(input,73,FOLLOW_73_in_ruleexpression_aux7152); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_26, grammarAccess.getExpression_auxAccess().getVerticalLineKeyword_0_4_0_0_2());
+                                                  	newLeafNode(otherlv_25, grammarAccess.getExpression_auxAccess().getVerticalLineKeyword_0_4_0_0_2());
                                                   
                                             }
 
                                             }
                                             break;
                                         case 4 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3233:7: otherlv_27= '|='
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3363:7: otherlv_26= '|='
                                             {
-                                            otherlv_27=(Token)match(input,74,FOLLOW_74_in_ruleexpression_aux6976); if (state.failed) return current;
+                                            otherlv_26=(Token)match(input,74,FOLLOW_74_in_ruleexpression_aux7170); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_27, grammarAccess.getExpression_auxAccess().getVerticalLineEqualsSignKeyword_0_4_0_0_3());
+                                                  	newLeafNode(otherlv_26, grammarAccess.getExpression_auxAccess().getVerticalLineEqualsSignKeyword_0_4_0_0_3());
                                                   
                                             }
 
                                             }
                                             break;
                                         case 5 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3238:7: otherlv_28= '^'
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3368:7: otherlv_27= '^'
                                             {
-                                            otherlv_28=(Token)match(input,75,FOLLOW_75_in_ruleexpression_aux6994); if (state.failed) return current;
+                                            otherlv_27=(Token)match(input,75,FOLLOW_75_in_ruleexpression_aux7188); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_28, grammarAccess.getExpression_auxAccess().getCircumflexAccentKeyword_0_4_0_0_4());
+                                                  	newLeafNode(otherlv_27, grammarAccess.getExpression_auxAccess().getCircumflexAccentKeyword_0_4_0_0_4());
                                                   
                                             }
 
                                             }
                                             break;
                                         case 6 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3243:7: otherlv_29= '^='
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3373:7: otherlv_28= '^='
                                             {
-                                            otherlv_29=(Token)match(input,76,FOLLOW_76_in_ruleexpression_aux7012); if (state.failed) return current;
+                                            otherlv_28=(Token)match(input,76,FOLLOW_76_in_ruleexpression_aux7206); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_29, grammarAccess.getExpression_auxAccess().getCircumflexAccentEqualsSignKeyword_0_4_0_0_5());
+                                                  	newLeafNode(otherlv_28, grammarAccess.getExpression_auxAccess().getCircumflexAccentEqualsSignKeyword_0_4_0_0_5());
                                                   
                                             }
 
                                             }
                                             break;
                                         case 7 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3248:6: (otherlv_30= 'ampersand' otherlv_31= 'ampersand' )
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3378:6: (otherlv_29= 'ampersand' otherlv_30= 'ampersand' )
                                             {
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3248:6: (otherlv_30= 'ampersand' otherlv_31= 'ampersand' )
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3248:8: otherlv_30= 'ampersand' otherlv_31= 'ampersand'
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3378:6: (otherlv_29= 'ampersand' otherlv_30= 'ampersand' )
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3378:8: otherlv_29= 'ampersand' otherlv_30= 'ampersand'
                                             {
-                                            otherlv_30=(Token)match(input,71,FOLLOW_71_in_ruleexpression_aux7031); if (state.failed) return current;
+                                            otherlv_29=(Token)match(input,71,FOLLOW_71_in_ruleexpression_aux7225); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_30, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_0());
+                                                  	newLeafNode(otherlv_29, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_0());
                                                   
                                             }
-                                            otherlv_31=(Token)match(input,71,FOLLOW_71_in_ruleexpression_aux7043); if (state.failed) return current;
+                                            otherlv_30=(Token)match(input,71,FOLLOW_71_in_ruleexpression_aux7237); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_31, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_1());
+                                                  	newLeafNode(otherlv_30, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_1());
                                                   
                                             }
 
@@ -9155,27 +9394,27 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                             }
                                             break;
                                         case 8 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3257:7: otherlv_32= '||='
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3387:7: otherlv_31= '||='
                                             {
-                                            otherlv_32=(Token)match(input,77,FOLLOW_77_in_ruleexpression_aux7062); if (state.failed) return current;
+                                            otherlv_31=(Token)match(input,77,FOLLOW_77_in_ruleexpression_aux7256); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_32, grammarAccess.getExpression_auxAccess().getVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7());
+                                                  	newLeafNode(otherlv_31, grammarAccess.getExpression_auxAccess().getVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7());
                                                   
                                             }
 
                                             }
                                             break;
                                         case 9 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3262:6: ( ( '%' )=>otherlv_33= '%' )
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3392:6: ( ( '%' )=>otherlv_32= '%' )
                                             {
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3262:6: ( ( '%' )=>otherlv_33= '%' )
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3262:7: ( '%' )=>otherlv_33= '%'
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3392:6: ( ( '%' )=>otherlv_32= '%' )
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3392:7: ( '%' )=>otherlv_32= '%'
                                             {
-                                            otherlv_33=(Token)match(input,69,FOLLOW_69_in_ruleexpression_aux7088); if (state.failed) return current;
+                                            otherlv_32=(Token)match(input,69,FOLLOW_69_in_ruleexpression_aux7282); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_33, grammarAccess.getExpression_auxAccess().getPercentSignKeyword_0_4_0_0_8());
+                                                  	newLeafNode(otherlv_32, grammarAccess.getExpression_auxAccess().getPercentSignKeyword_0_4_0_0_8());
                                                   
                                             }
 
@@ -9185,12 +9424,12 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                             }
                                             break;
                                         case 10 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3268:7: otherlv_34= '%='
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3398:7: otherlv_33= '%='
                                             {
-                                            otherlv_34=(Token)match(input,70,FOLLOW_70_in_ruleexpression_aux7107); if (state.failed) return current;
+                                            otherlv_33=(Token)match(input,70,FOLLOW_70_in_ruleexpression_aux7301); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_34, grammarAccess.getExpression_auxAccess().getPercentSignEqualsSignKeyword_0_4_0_0_9());
+                                                  	newLeafNode(otherlv_33, grammarAccess.getExpression_auxAccess().getPercentSignEqualsSignKeyword_0_4_0_0_9());
                                                   
                                             }
 
@@ -9209,14 +9448,14 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                               newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressionParserRuleCall_0_4_0_1()); 
                                           
                                     }
-                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux7133);
-                                    this_expression_35=ruleexpression();
+                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux7327);
+                                    this_expression_34=ruleexpression();
 
                                     state._fsp--;
                                     if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
                                        
-                                              current = this_expression_35; 
+                                              current = this_expression_34; 
                                               afterParserOrEnumRuleCall();
                                           
                                     }
@@ -9227,15 +9466,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                     }
                                     break;
                                 case 2 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3285:6: (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3415:6: (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) )
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3285:6: (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) )
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3285:8: otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3415:6: (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3415:8: otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) )
                                     {
-                                    otherlv_36=(Token)match(input,78,FOLLOW_78_in_ruleexpression_aux7152); if (state.failed) return current;
+                                    otherlv_35=(Token)match(input,78,FOLLOW_78_in_ruleexpression_aux7346); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
-                                          	newLeafNode(otherlv_36, grammarAccess.getExpression_auxAccess().getQuestionMarkKeyword_0_4_1_0());
+                                          	newLeafNode(otherlv_35, grammarAccess.getExpression_auxAccess().getQuestionMarkKeyword_0_4_1_0());
                                           
                                     }
                                     if ( state.backtracking==0 ) {
@@ -9248,36 +9487,36 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                               newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressionParserRuleCall_0_4_1_1()); 
                                           
                                     }
-                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux7177);
-                                    this_expression_37=ruleexpression();
+                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux7371);
+                                    this_expression_36=ruleexpression();
 
                                     state._fsp--;
                                     if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
                                        
-                                              current = this_expression_37; 
+                                              current = this_expression_36; 
                                               afterParserOrEnumRuleCall();
                                           
                                     }
-                                    otherlv_38=(Token)match(input,38,FOLLOW_38_in_ruleexpression_aux7188); if (state.failed) return current;
+                                    otherlv_37=(Token)match(input,38,FOLLOW_38_in_ruleexpression_aux7382); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
-                                          	newLeafNode(otherlv_38, grammarAccess.getExpression_auxAccess().getColonKeyword_0_4_1_2());
+                                          	newLeafNode(otherlv_37, grammarAccess.getExpression_auxAccess().getColonKeyword_0_4_1_2());
                                           
                                     }
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3305:1: ( (lv_expressao_39_0= ruleexpression ) )
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3306:1: (lv_expressao_39_0= ruleexpression )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3435:1: ( (lv_expressao_38_0= ruleexpression ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3436:1: (lv_expressao_38_0= ruleexpression )
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3306:1: (lv_expressao_39_0= ruleexpression )
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3307:3: lv_expressao_39_0= ruleexpression
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3436:1: (lv_expressao_38_0= ruleexpression )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3437:3: lv_expressao_38_0= ruleexpression
                                     {
                                     if ( state.backtracking==0 ) {
                                        
                                       	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressaoExpressionParserRuleCall_0_4_1_3_0()); 
                                       	    
                                     }
-                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux7209);
-                                    lv_expressao_39_0=ruleexpression();
+                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux7403);
+                                    lv_expressao_38_0=ruleexpression();
 
                                     state._fsp--;
                                     if (state.failed) return current;
@@ -9289,7 +9528,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                              		set(
                                              			current, 
                                              			"expressao",
-                                              		lv_expressao_39_0, 
+                                              		lv_expressao_38_0, 
                                               		"expression");
                                       	        afterParserOrEnumRuleCall();
                                       	    
@@ -9307,12 +9546,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                     }
                                     break;
                                 case 3 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3324:6: ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3454:6: ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) )
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3324:6: ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression )
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3324:7: (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3454:6: ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3454:7: ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) )
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3324:7: (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3454:7: ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3455:1: ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3455:1: ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3456:1: (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3456:1: (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' )
                                     int alt63=6;
                                     switch ( input.LA(1) ) {
                                     case 79:
@@ -9355,73 +9600,121 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                                     switch (alt63) {
                                         case 1 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3324:9: otherlv_40= '>'
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3457:3: lv_opedador_39_1= '>'
                                             {
-                                            otherlv_40=(Token)match(input,79,FOLLOW_79_in_ruleexpression_aux7230); if (state.failed) return current;
+                                            lv_opedador_39_1=(Token)match(input,79,FOLLOW_79_in_ruleexpression_aux7431); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_40, grammarAccess.getExpression_auxAccess().getGreaterThanSignKeyword_0_4_2_0_0());
+                                                      newLeafNode(lv_opedador_39_1, grammarAccess.getExpression_auxAccess().getOpedadorGreaterThanSignKeyword_0_4_2_0_0_0());
                                                   
+                                            }
+                                            if ( state.backtracking==0 ) {
+
+                                              	        if (current==null) {
+                                              	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                              	        }
+                                                     		setWithLastConsumed(current, "opedador", lv_opedador_39_1, null);
+                                              	    
                                             }
 
                                             }
                                             break;
                                         case 2 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3329:7: otherlv_41= '<'
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3469:8: lv_opedador_39_2= '<'
                                             {
-                                            otherlv_41=(Token)match(input,80,FOLLOW_80_in_ruleexpression_aux7248); if (state.failed) return current;
+                                            lv_opedador_39_2=(Token)match(input,80,FOLLOW_80_in_ruleexpression_aux7460); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_41, grammarAccess.getExpression_auxAccess().getLessThanSignKeyword_0_4_2_0_1());
+                                                      newLeafNode(lv_opedador_39_2, grammarAccess.getExpression_auxAccess().getOpedadorLessThanSignKeyword_0_4_2_0_0_1());
                                                   
+                                            }
+                                            if ( state.backtracking==0 ) {
+
+                                              	        if (current==null) {
+                                              	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                              	        }
+                                                     		setWithLastConsumed(current, "opedador", lv_opedador_39_2, null);
+                                              	    
                                             }
 
                                             }
                                             break;
                                         case 3 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3334:7: otherlv_42= '>='
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3481:8: lv_opedador_39_3= '>='
                                             {
-                                            otherlv_42=(Token)match(input,81,FOLLOW_81_in_ruleexpression_aux7266); if (state.failed) return current;
+                                            lv_opedador_39_3=(Token)match(input,81,FOLLOW_81_in_ruleexpression_aux7489); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_42, grammarAccess.getExpression_auxAccess().getGreaterThanSignEqualsSignKeyword_0_4_2_0_2());
+                                                      newLeafNode(lv_opedador_39_3, grammarAccess.getExpression_auxAccess().getOpedadorGreaterThanSignEqualsSignKeyword_0_4_2_0_0_2());
                                                   
+                                            }
+                                            if ( state.backtracking==0 ) {
+
+                                              	        if (current==null) {
+                                              	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                              	        }
+                                                     		setWithLastConsumed(current, "opedador", lv_opedador_39_3, null);
+                                              	    
                                             }
 
                                             }
                                             break;
                                         case 4 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3339:7: otherlv_43= '<='
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3493:8: lv_opedador_39_4= '<='
                                             {
-                                            otherlv_43=(Token)match(input,82,FOLLOW_82_in_ruleexpression_aux7284); if (state.failed) return current;
+                                            lv_opedador_39_4=(Token)match(input,82,FOLLOW_82_in_ruleexpression_aux7518); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_43, grammarAccess.getExpression_auxAccess().getLessThanSignEqualsSignKeyword_0_4_2_0_3());
+                                                      newLeafNode(lv_opedador_39_4, grammarAccess.getExpression_auxAccess().getOpedadorLessThanSignEqualsSignKeyword_0_4_2_0_0_3());
                                                   
+                                            }
+                                            if ( state.backtracking==0 ) {
+
+                                              	        if (current==null) {
+                                              	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                              	        }
+                                                     		setWithLastConsumed(current, "opedador", lv_opedador_39_4, null);
+                                              	    
                                             }
 
                                             }
                                             break;
                                         case 5 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3344:7: otherlv_44= '=='
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3505:8: lv_opedador_39_5= '=='
                                             {
-                                            otherlv_44=(Token)match(input,83,FOLLOW_83_in_ruleexpression_aux7302); if (state.failed) return current;
+                                            lv_opedador_39_5=(Token)match(input,83,FOLLOW_83_in_ruleexpression_aux7547); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_44, grammarAccess.getExpression_auxAccess().getEqualsSignEqualsSignKeyword_0_4_2_0_4());
+                                                      newLeafNode(lv_opedador_39_5, grammarAccess.getExpression_auxAccess().getOpedadorEqualsSignEqualsSignKeyword_0_4_2_0_0_4());
                                                   
+                                            }
+                                            if ( state.backtracking==0 ) {
+
+                                              	        if (current==null) {
+                                              	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                              	        }
+                                                     		setWithLastConsumed(current, "opedador", lv_opedador_39_5, null);
+                                              	    
                                             }
 
                                             }
                                             break;
                                         case 6 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3349:7: otherlv_45= '!='
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3517:8: lv_opedador_39_6= '!='
                                             {
-                                            otherlv_45=(Token)match(input,84,FOLLOW_84_in_ruleexpression_aux7320); if (state.failed) return current;
+                                            lv_opedador_39_6=(Token)match(input,84,FOLLOW_84_in_ruleexpression_aux7576); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_45, grammarAccess.getExpression_auxAccess().getExclamationMarkEqualsSignKeyword_0_4_2_0_5());
+                                                      newLeafNode(lv_opedador_39_6, grammarAccess.getExpression_auxAccess().getOpedadorExclamationMarkEqualsSignKeyword_0_4_2_0_0_5());
                                                   
+                                            }
+                                            if ( state.backtracking==0 ) {
+
+                                              	        if (current==null) {
+                                              	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                              	        }
+                                                     		setWithLastConsumed(current, "opedador", lv_opedador_39_6, null);
+                                              	    
                                             }
 
                                             }
@@ -9429,27 +9722,47 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                                     }
 
+
+                                    }
+
+
+                                    }
+
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3532:2: ( (lv_exp_40_0= ruleexpression ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3533:1: (lv_exp_40_0= ruleexpression )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3533:1: (lv_exp_40_0= ruleexpression )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3534:3: lv_exp_40_0= ruleexpression
+                                    {
                                     if ( state.backtracking==0 ) {
                                        
-                                      	  /* */ 
-                                      	
+                                      	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_4_2_1_0()); 
+                                      	    
                                     }
-                                    if ( state.backtracking==0 ) {
-                                       
-                                              newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressionParserRuleCall_0_4_2_1()); 
-                                          
-                                    }
-                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux7346);
-                                    this_expression_46=ruleexpression();
+                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux7613);
+                                    lv_exp_40_0=ruleexpression();
 
                                     state._fsp--;
                                     if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
-                                       
-                                              current = this_expression_46; 
-                                              afterParserOrEnumRuleCall();
-                                          
+
+                                      	        if (current==null) {
+                                      	            current = createModelElementForParent(grammarAccess.getExpression_auxRule());
+                                      	        }
+                                             		set(
+                                             			current, 
+                                             			"exp",
+                                              		lv_exp_40_0, 
+                                              		"expression");
+                                      	        afterParserOrEnumRuleCall();
+                                      	    
                                     }
+
+                                    }
+
+
+                                    }
+
 
                                     }
 
@@ -9457,12 +9770,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                     }
                                     break;
                                 case 4 :
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3366:6: ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3551:6: ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) )
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3366:6: ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression )
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3366:7: (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3551:6: ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3551:7: ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) )
                                     {
-                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3366:7: (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3551:7: ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3552:1: ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3552:1: ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3553:1: (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3553:1: (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' )
                                     int alt64=4;
                                     switch ( input.LA(1) ) {
                                     case 85:
@@ -9495,49 +9814,81 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                                     switch (alt64) {
                                         case 1 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3366:9: otherlv_47= '>>='
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3554:3: lv_operador_41_1= '>>='
                                             {
-                                            otherlv_47=(Token)match(input,85,FOLLOW_85_in_ruleexpression_aux7366); if (state.failed) return current;
+                                            lv_operador_41_1=(Token)match(input,85,FOLLOW_85_in_ruleexpression_aux7641); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_47, grammarAccess.getExpression_auxAccess().getGreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0());
+                                                      newLeafNode(lv_operador_41_1, grammarAccess.getExpression_auxAccess().getOperadorGreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0_0());
                                                   
+                                            }
+                                            if ( state.backtracking==0 ) {
+
+                                              	        if (current==null) {
+                                              	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                              	        }
+                                                     		setWithLastConsumed(current, "operador", lv_operador_41_1, null);
+                                              	    
                                             }
 
                                             }
                                             break;
                                         case 2 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3371:7: otherlv_48= '<<'
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3566:8: lv_operador_41_2= '<<'
                                             {
-                                            otherlv_48=(Token)match(input,86,FOLLOW_86_in_ruleexpression_aux7384); if (state.failed) return current;
+                                            lv_operador_41_2=(Token)match(input,86,FOLLOW_86_in_ruleexpression_aux7670); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_48, grammarAccess.getExpression_auxAccess().getLessThanSignLessThanSignKeyword_0_4_3_0_1());
+                                                      newLeafNode(lv_operador_41_2, grammarAccess.getExpression_auxAccess().getOperadorLessThanSignLessThanSignKeyword_0_4_3_0_0_1());
                                                   
+                                            }
+                                            if ( state.backtracking==0 ) {
+
+                                              	        if (current==null) {
+                                              	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                              	        }
+                                                     		setWithLastConsumed(current, "operador", lv_operador_41_2, null);
+                                              	    
                                             }
 
                                             }
                                             break;
                                         case 3 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3376:7: otherlv_49= '>>'
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3578:8: lv_operador_41_3= '>>'
                                             {
-                                            otherlv_49=(Token)match(input,87,FOLLOW_87_in_ruleexpression_aux7402); if (state.failed) return current;
+                                            lv_operador_41_3=(Token)match(input,87,FOLLOW_87_in_ruleexpression_aux7699); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_49, grammarAccess.getExpression_auxAccess().getGreaterThanSignGreaterThanSignKeyword_0_4_3_0_2());
+                                                      newLeafNode(lv_operador_41_3, grammarAccess.getExpression_auxAccess().getOperadorGreaterThanSignGreaterThanSignKeyword_0_4_3_0_0_2());
                                                   
+                                            }
+                                            if ( state.backtracking==0 ) {
+
+                                              	        if (current==null) {
+                                              	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                              	        }
+                                                     		setWithLastConsumed(current, "operador", lv_operador_41_3, null);
+                                              	    
                                             }
 
                                             }
                                             break;
                                         case 4 :
-                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3381:7: otherlv_50= '>>>'
+                                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3590:8: lv_operador_41_4= '>>>'
                                             {
-                                            otherlv_50=(Token)match(input,88,FOLLOW_88_in_ruleexpression_aux7420); if (state.failed) return current;
+                                            lv_operador_41_4=(Token)match(input,88,FOLLOW_88_in_ruleexpression_aux7728); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
-                                                  	newLeafNode(otherlv_50, grammarAccess.getExpression_auxAccess().getGreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_3());
+                                                      newLeafNode(lv_operador_41_4, grammarAccess.getExpression_auxAccess().getOperadorGreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_0_3());
                                                   
+                                            }
+                                            if ( state.backtracking==0 ) {
+
+                                              	        if (current==null) {
+                                              	            current = createModelElement(grammarAccess.getExpression_auxRule());
+                                              	        }
+                                                     		setWithLastConsumed(current, "operador", lv_operador_41_4, null);
+                                              	    
                                             }
 
                                             }
@@ -9545,27 +9896,47 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                                     }
 
+
+                                    }
+
+
+                                    }
+
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3605:2: ( (lv_exp_42_0= ruleexpression ) )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3606:1: (lv_exp_42_0= ruleexpression )
+                                    {
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3606:1: (lv_exp_42_0= ruleexpression )
+                                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3607:3: lv_exp_42_0= ruleexpression
+                                    {
                                     if ( state.backtracking==0 ) {
                                        
-                                      	  /* */ 
-                                      	
+                                      	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_4_3_1_0()); 
+                                      	    
                                     }
-                                    if ( state.backtracking==0 ) {
-                                       
-                                              newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressionParserRuleCall_0_4_3_1()); 
-                                          
-                                    }
-                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux7446);
-                                    this_expression_51=ruleexpression();
+                                    pushFollow(FOLLOW_ruleexpression_in_ruleexpression_aux7765);
+                                    lv_exp_42_0=ruleexpression();
 
                                     state._fsp--;
                                     if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
-                                       
-                                              current = this_expression_51; 
-                                              afterParserOrEnumRuleCall();
-                                          
+
+                                      	        if (current==null) {
+                                      	            current = createModelElementForParent(grammarAccess.getExpression_auxRule());
+                                      	        }
+                                             		set(
+                                             			current, 
+                                             			"exp",
+                                              		lv_exp_42_0, 
+                                              		"expression");
+                                      	        afterParserOrEnumRuleCall();
+                                      	    
                                     }
+
+                                    }
+
+
+                                    }
+
 
                                     }
 
@@ -9581,19 +9952,19 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3397:4: ( (lv_expressoes_52_0= ruleexpression_aux ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3398:1: (lv_expressoes_52_0= ruleexpression_aux )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3623:5: ( (lv_expressoes_43_0= ruleexpression_aux ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3624:1: (lv_expressoes_43_0= ruleexpression_aux )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3398:1: (lv_expressoes_52_0= ruleexpression_aux )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3399:3: lv_expressoes_52_0= ruleexpression_aux
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3624:1: (lv_expressoes_43_0= ruleexpression_aux )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3625:3: lv_expressoes_43_0= ruleexpression_aux
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressoesExpression_auxParserRuleCall_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleexpression_aux_in_ruleexpression_aux7469);
-                    lv_expressoes_52_0=ruleexpression_aux();
+                    pushFollow(FOLLOW_ruleexpression_aux_in_ruleexpression_aux7789);
+                    lv_expressoes_43_0=ruleexpression_aux();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -9605,7 +9976,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                              		set(
                              			current, 
                              			"expressoes",
-                              		lv_expressoes_52_0, 
+                              		lv_expressoes_43_0, 
                               		"expression_aux");
                       	        afterParserOrEnumRuleCall();
                       	    
@@ -9642,29 +10013,29 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulemais_aux"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3423:1: entryRulemais_aux returns [String current=null] : iv_rulemais_aux= rulemais_aux EOF ;
-    public final String entryRulemais_aux() throws RecognitionException {
-        String current = null;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3649:1: entryRulemais_aux returns [EObject current=null] : iv_rulemais_aux= rulemais_aux EOF ;
+    public final EObject entryRulemais_aux() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_rulemais_aux = null;
+        EObject iv_rulemais_aux = null;
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3424:2: (iv_rulemais_aux= rulemais_aux EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3425:2: iv_rulemais_aux= rulemais_aux EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3650:2: (iv_rulemais_aux= rulemais_aux EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3651:2: iv_rulemais_aux= rulemais_aux EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMais_auxRule()); 
             }
-            pushFollow(FOLLOW_rulemais_aux_in_entryRulemais_aux7507);
+            pushFollow(FOLLOW_rulemais_aux_in_entryRulemais_aux7826);
             iv_rulemais_aux=rulemais_aux();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_rulemais_aux.getText(); 
+               current =iv_rulemais_aux; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulemais_aux7518); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulemais_aux7836); if (state.failed) return current;
 
             }
 
@@ -9682,19 +10053,20 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulemais_aux"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3432:1: rulemais_aux returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '+' | kw= '+=' ) ;
-    public final AntlrDatatypeRuleToken rulemais_aux() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3658:1: rulemais_aux returns [EObject current=null] : ( ( (lv_opedador_0_0= '+' ) ) | ( (lv_opedador_1_0= '+=' ) ) ) ;
+    public final EObject rulemais_aux() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
+        Token lv_opedador_0_0=null;
+        Token lv_opedador_1_0=null;
 
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3435:28: ( (kw= '+' | kw= '+=' ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3436:1: (kw= '+' | kw= '+=' )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3661:28: ( ( ( (lv_opedador_0_0= '+' ) ) | ( (lv_opedador_1_0= '+=' ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3662:1: ( ( (lv_opedador_0_0= '+' ) ) | ( (lv_opedador_1_0= '+=' ) ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3436:1: (kw= '+' | kw= '+=' )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3662:1: ( ( (lv_opedador_0_0= '+' ) ) | ( (lv_opedador_1_0= '+=' ) ) )
             int alt68=2;
             int LA68_0 = input.LA(1);
 
@@ -9713,28 +10085,66 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             }
             switch (alt68) {
                 case 1 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3437:2: kw= '+'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3662:2: ( (lv_opedador_0_0= '+' ) )
                     {
-                    kw=(Token)match(input,89,FOLLOW_89_in_rulemais_aux7556); if (state.failed) return current;
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3662:2: ( (lv_opedador_0_0= '+' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3663:1: (lv_opedador_0_0= '+' )
+                    {
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3663:1: (lv_opedador_0_0= '+' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3664:3: lv_opedador_0_0= '+'
+                    {
+                    lv_opedador_0_0=(Token)match(input,89,FOLLOW_89_in_rulemais_aux7879); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getMais_auxAccess().getPlusSignKeyword_0()); 
+                              newLeafNode(lv_opedador_0_0, grammarAccess.getMais_auxAccess().getOpedadorPlusSignKeyword_0_0());
                           
                     }
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getMais_auxRule());
+                      	        }
+                             		setWithLastConsumed(current, "opedador", lv_opedador_0_0, "+");
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
                 case 2 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3444:2: kw= '+='
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3678:6: ( (lv_opedador_1_0= '+=' ) )
                     {
-                    kw=(Token)match(input,90,FOLLOW_90_in_rulemais_aux7575); if (state.failed) return current;
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3678:6: ( (lv_opedador_1_0= '+=' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3679:1: (lv_opedador_1_0= '+=' )
+                    {
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3679:1: (lv_opedador_1_0= '+=' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3680:3: lv_opedador_1_0= '+='
+                    {
+                    lv_opedador_1_0=(Token)match(input,90,FOLLOW_90_in_rulemais_aux7916); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getMais_auxAccess().getPlusSignEqualsSignKeyword_1()); 
+                              newLeafNode(lv_opedador_1_0, grammarAccess.getMais_auxAccess().getOpedadorPlusSignEqualsSignKeyword_1_0());
                           
                     }
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getMais_auxRule());
+                      	        }
+                             		setWithLastConsumed(current, "opedador", lv_opedador_1_0, "+=");
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
@@ -9761,7 +10171,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulenew"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3457:1: entryRulenew returns [EObject current=null] : iv_rulenew= rulenew EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3701:1: entryRulenew returns [EObject current=null] : iv_rulenew= rulenew EOF ;
     public final EObject entryRulenew() throws RecognitionException {
         EObject current = null;
 
@@ -9769,13 +10179,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3458:2: (iv_rulenew= rulenew EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3459:2: iv_rulenew= rulenew EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3702:2: (iv_rulenew= rulenew EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3703:2: iv_rulenew= rulenew EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNewRule()); 
             }
-            pushFollow(FOLLOW_rulenew_in_entryRulenew7615);
+            pushFollow(FOLLOW_rulenew_in_entryRulenew7965);
             iv_rulenew=rulenew();
 
             state._fsp--;
@@ -9783,7 +10193,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulenew; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulenew7625); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulenew7975); if (state.failed) return current;
 
             }
 
@@ -9801,7 +10211,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulenew"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3466:1: rulenew returns [EObject current=null] : (otherlv_0= '{' this_constructor_declaration_1= ruleconstructor_declaration otherlv_2= '}' ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3710:1: rulenew returns [EObject current=null] : (otherlv_0= '{' this_constructor_declaration_1= ruleconstructor_declaration otherlv_2= '}' ) ;
     public final EObject rulenew() throws RecognitionException {
         EObject current = null;
 
@@ -9813,13 +10223,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3469:28: ( (otherlv_0= '{' this_constructor_declaration_1= ruleconstructor_declaration otherlv_2= '}' ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3470:1: (otherlv_0= '{' this_constructor_declaration_1= ruleconstructor_declaration otherlv_2= '}' )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3713:28: ( (otherlv_0= '{' this_constructor_declaration_1= ruleconstructor_declaration otherlv_2= '}' ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3714:1: (otherlv_0= '{' this_constructor_declaration_1= ruleconstructor_declaration otherlv_2= '}' )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3470:1: (otherlv_0= '{' this_constructor_declaration_1= ruleconstructor_declaration otherlv_2= '}' )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3470:3: otherlv_0= '{' this_constructor_declaration_1= ruleconstructor_declaration otherlv_2= '}'
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3714:1: (otherlv_0= '{' this_constructor_declaration_1= ruleconstructor_declaration otherlv_2= '}' )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3714:3: otherlv_0= '{' this_constructor_declaration_1= ruleconstructor_declaration otherlv_2= '}'
             {
-            otherlv_0=(Token)match(input,28,FOLLOW_28_in_rulenew7662); if (state.failed) return current;
+            otherlv_0=(Token)match(input,28,FOLLOW_28_in_rulenew8012); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getNewAccess().getLeftCurlyBracketKeyword_0());
@@ -9835,7 +10245,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getNewAccess().getConstructor_declarationParserRuleCall_1()); 
                   
             }
-            pushFollow(FOLLOW_ruleconstructor_declaration_in_rulenew7687);
+            pushFollow(FOLLOW_ruleconstructor_declaration_in_rulenew8037);
             this_constructor_declaration_1=ruleconstructor_declaration();
 
             state._fsp--;
@@ -9846,7 +10256,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            otherlv_2=(Token)match(input,29,FOLLOW_29_in_rulenew7698); if (state.failed) return current;
+            otherlv_2=(Token)match(input,29,FOLLOW_29_in_rulenew8048); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getNewAccess().getRightCurlyBracketKeyword_2());
@@ -9875,7 +10285,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulecreating_aux"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3498:1: entryRulecreating_aux returns [EObject current=null] : iv_rulecreating_aux= rulecreating_aux EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3742:1: entryRulecreating_aux returns [EObject current=null] : iv_rulecreating_aux= rulecreating_aux EOF ;
     public final EObject entryRulecreating_aux() throws RecognitionException {
         EObject current = null;
 
@@ -9883,13 +10293,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3499:2: (iv_rulecreating_aux= rulecreating_aux EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3500:2: iv_rulecreating_aux= rulecreating_aux EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3743:2: (iv_rulecreating_aux= rulecreating_aux EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3744:2: iv_rulecreating_aux= rulecreating_aux EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCreating_auxRule()); 
             }
-            pushFollow(FOLLOW_rulecreating_aux_in_entryRulecreating_aux7734);
+            pushFollow(FOLLOW_rulecreating_aux_in_entryRulecreating_aux8084);
             iv_rulecreating_aux=rulecreating_aux();
 
             state._fsp--;
@@ -9897,7 +10307,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulecreating_aux; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulecreating_aux7744); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulecreating_aux8094); if (state.failed) return current;
 
             }
 
@@ -9915,7 +10325,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulecreating_aux"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3507:1: rulecreating_aux returns [EObject current=null] : ( ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' ) | ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* ) ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3751:1: rulecreating_aux returns [EObject current=null] : ( ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' ) | ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* ) ) ;
     public final EObject rulecreating_aux() throws RecognitionException {
         EObject current = null;
 
@@ -9931,23 +10341,23 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3510:28: ( ( ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' ) | ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:1: ( ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' ) | ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3754:28: ( ( ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' ) | ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:1: ( ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' ) | ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:1: ( ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' ) | ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:1: ( ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' ) | ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* ) )
             int alt72=2;
             alt72 = dfa72.predict(input);
             switch (alt72) {
                 case 1 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:2: ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:2: ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:2: ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:3: ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:2: ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:3: ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')'
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:3: ( ( '(' )=>otherlv_0= '(' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:4: ( '(' )=>otherlv_0= '('
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:3: ( ( '(' )=>otherlv_0= '(' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:4: ( '(' )=>otherlv_0= '('
                     {
-                    otherlv_0=(Token)match(input,31,FOLLOW_31_in_rulecreating_aux7790); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,31,FOLLOW_31_in_rulecreating_aux8140); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_0, grammarAccess.getCreating_auxAccess().getLeftParenthesisKeyword_0_0());
@@ -9956,7 +10366,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3516:2: ( (lv_argumentos_1_0= rulearglist ) )?
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3760:2: ( (lv_argumentos_1_0= rulearglist ) )?
                     int alt69=2;
                     int LA69_0 = input.LA(1);
 
@@ -9965,17 +10375,17 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt69) {
                         case 1 :
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3517:1: (lv_argumentos_1_0= rulearglist )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3761:1: (lv_argumentos_1_0= rulearglist )
                             {
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3517:1: (lv_argumentos_1_0= rulearglist )
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3518:3: lv_argumentos_1_0= rulearglist
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3761:1: (lv_argumentos_1_0= rulearglist )
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3762:3: lv_argumentos_1_0= rulearglist
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getCreating_auxAccess().getArgumentosArglistParserRuleCall_0_1_0()); 
                               	    
                             }
-                            pushFollow(FOLLOW_rulearglist_in_rulecreating_aux7812);
+                            pushFollow(FOLLOW_rulearglist_in_rulecreating_aux8162);
                             lv_argumentos_1_0=rulearglist();
 
                             state._fsp--;
@@ -10002,7 +10412,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,32,FOLLOW_32_in_rulecreating_aux7825); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,32,FOLLOW_32_in_rulecreating_aux8175); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getCreating_auxAccess().getRightParenthesisKeyword_0_2());
@@ -10015,17 +10425,17 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3539:6: ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3783:6: ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3539:6: ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3539:7: ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )*
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3783:6: ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3783:7: ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )*
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3539:7: ( ( '[' )=>this_aux_3= ruleaux )?
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3783:7: ( ( '[' )=>this_aux_3= ruleaux )?
                     int alt70=2;
                     alt70 = dfa70.predict(input);
                     switch (alt70) {
                         case 1 :
-                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3539:8: ( '[' )=>this_aux_3= ruleaux
+                            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3783:8: ( '[' )=>this_aux_3= ruleaux
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -10037,7 +10447,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                       newCompositeNode(grammarAccess.getCreating_auxAccess().getAuxParserRuleCall_1_0_0()); 
                                   
                             }
-                            pushFollow(FOLLOW_ruleaux_in_rulecreating_aux7866);
+                            pushFollow(FOLLOW_ruleaux_in_rulecreating_aux8216);
                             this_aux_3=ruleaux();
 
                             state._fsp--;
@@ -10054,7 +10464,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3552:3: (otherlv_4= '[' otherlv_5= ']' )*
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3796:3: (otherlv_4= '[' otherlv_5= ']' )*
                     loop71:
                     do {
                         int alt71=2;
@@ -10073,15 +10483,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                         switch (alt71) {
                     	case 1 :
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3552:5: otherlv_4= '[' otherlv_5= ']'
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3796:5: otherlv_4= '[' otherlv_5= ']'
                     	    {
-                    	    otherlv_4=(Token)match(input,33,FOLLOW_33_in_rulecreating_aux7880); if (state.failed) return current;
+                    	    otherlv_4=(Token)match(input,33,FOLLOW_33_in_rulecreating_aux8230); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_4, grammarAccess.getCreating_auxAccess().getLeftSquareBracketKeyword_1_1_0());
                     	          
                     	    }
-                    	    otherlv_5=(Token)match(input,34,FOLLOW_34_in_rulecreating_aux7892); if (state.failed) return current;
+                    	    otherlv_5=(Token)match(input,34,FOLLOW_34_in_rulecreating_aux8242); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_5, grammarAccess.getCreating_auxAccess().getRightSquareBracketKeyword_1_1_1());
@@ -10125,7 +10535,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleaux"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3568:1: entryRuleaux returns [EObject current=null] : iv_ruleaux= ruleaux EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3812:1: entryRuleaux returns [EObject current=null] : iv_ruleaux= ruleaux EOF ;
     public final EObject entryRuleaux() throws RecognitionException {
         EObject current = null;
 
@@ -10133,13 +10543,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3569:2: (iv_ruleaux= ruleaux EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3570:2: iv_ruleaux= ruleaux EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3813:2: (iv_ruleaux= ruleaux EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3814:2: iv_ruleaux= ruleaux EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAuxRule()); 
             }
-            pushFollow(FOLLOW_ruleaux_in_entryRuleaux7931);
+            pushFollow(FOLLOW_ruleaux_in_entryRuleaux8281);
             iv_ruleaux=ruleaux();
 
             state._fsp--;
@@ -10147,7 +10557,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleaux; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleaux7941); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleaux8291); if (state.failed) return current;
 
             }
 
@@ -10165,7 +10575,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleaux"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3577:1: ruleaux returns [EObject current=null] : (otherlv_0= '[' ( (lv_espressao_1_0= ruleexpression ) ) otherlv_2= ']' ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3821:1: ruleaux returns [EObject current=null] : (otherlv_0= '[' ( (lv_espressao_1_0= ruleexpression ) ) otherlv_2= ']' ) ;
     public final EObject ruleaux() throws RecognitionException {
         EObject current = null;
 
@@ -10177,30 +10587,30 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3580:28: ( (otherlv_0= '[' ( (lv_espressao_1_0= ruleexpression ) ) otherlv_2= ']' ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3581:1: (otherlv_0= '[' ( (lv_espressao_1_0= ruleexpression ) ) otherlv_2= ']' )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3824:28: ( (otherlv_0= '[' ( (lv_espressao_1_0= ruleexpression ) ) otherlv_2= ']' ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3825:1: (otherlv_0= '[' ( (lv_espressao_1_0= ruleexpression ) ) otherlv_2= ']' )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3581:1: (otherlv_0= '[' ( (lv_espressao_1_0= ruleexpression ) ) otherlv_2= ']' )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3581:3: otherlv_0= '[' ( (lv_espressao_1_0= ruleexpression ) ) otherlv_2= ']'
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3825:1: (otherlv_0= '[' ( (lv_espressao_1_0= ruleexpression ) ) otherlv_2= ']' )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3825:3: otherlv_0= '[' ( (lv_espressao_1_0= ruleexpression ) ) otherlv_2= ']'
             {
-            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleaux7978); if (state.failed) return current;
+            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleaux8328); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getAuxAccess().getLeftSquareBracketKeyword_0());
                   
             }
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3585:1: ( (lv_espressao_1_0= ruleexpression ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3586:1: (lv_espressao_1_0= ruleexpression )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3829:1: ( (lv_espressao_1_0= ruleexpression ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3830:1: (lv_espressao_1_0= ruleexpression )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3586:1: (lv_espressao_1_0= ruleexpression )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3587:3: lv_espressao_1_0= ruleexpression
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3830:1: (lv_espressao_1_0= ruleexpression )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3831:3: lv_espressao_1_0= ruleexpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getAuxAccess().getEspressaoExpressionParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleexpression_in_ruleaux7999);
+            pushFollow(FOLLOW_ruleexpression_in_ruleaux8349);
             lv_espressao_1_0=ruleexpression();
 
             state._fsp--;
@@ -10224,7 +10634,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,34,FOLLOW_34_in_ruleaux8011); if (state.failed) return current;
+            otherlv_2=(Token)match(input,34,FOLLOW_34_in_ruleaux8361); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getAuxAccess().getRightSquareBracketKeyword_2());
@@ -10253,29 +10663,29 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleliteral_expression"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3615:1: entryRuleliteral_expression returns [String current=null] : iv_ruleliteral_expression= ruleliteral_expression EOF ;
-    public final String entryRuleliteral_expression() throws RecognitionException {
-        String current = null;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3859:1: entryRuleliteral_expression returns [EObject current=null] : iv_ruleliteral_expression= ruleliteral_expression EOF ;
+    public final EObject entryRuleliteral_expression() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleliteral_expression = null;
+        EObject iv_ruleliteral_expression = null;
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3616:2: (iv_ruleliteral_expression= ruleliteral_expression EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3617:2: iv_ruleliteral_expression= ruleliteral_expression EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3860:2: (iv_ruleliteral_expression= ruleliteral_expression EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3861:2: iv_ruleliteral_expression= ruleliteral_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLiteral_expressionRule()); 
             }
-            pushFollow(FOLLOW_ruleliteral_expression_in_entryRuleliteral_expression8048);
+            pushFollow(FOLLOW_ruleliteral_expression_in_entryRuleliteral_expression8397);
             iv_ruleliteral_expression=ruleliteral_expression();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleliteral_expression.getText(); 
+               current =iv_ruleliteral_expression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleliteral_expression8059); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleliteral_expression8407); if (state.failed) return current;
 
             }
 
@@ -10293,22 +10703,22 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleliteral_expression"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3624:1: ruleliteral_expression returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( ( RULE_DECIMAL_DIGITS )=>this_DECIMAL_DIGITS_0= RULE_DECIMAL_DIGITS ) | this_INTEGER_LITERAL_1= RULE_INTEGER_LITERAL | this_FLOAT_LITERAL_2= RULE_FLOAT_LITERAL | this_STRING_3= RULE_STRING ) ;
-    public final AntlrDatatypeRuleToken ruleliteral_expression() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3868:1: ruleliteral_expression returns [EObject current=null] : ( ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) ) | ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) ) | ( (lv_float_2_0= RULE_FLOAT_LITERAL ) ) | ( (lv_string_3_0= RULE_STRING ) ) ) ;
+    public final EObject ruleliteral_expression() throws RecognitionException {
+        EObject current = null;
 
-        Token this_DECIMAL_DIGITS_0=null;
-        Token this_INTEGER_LITERAL_1=null;
-        Token this_FLOAT_LITERAL_2=null;
-        Token this_STRING_3=null;
+        Token lv_decimal_0_0=null;
+        Token lv_inteiro_1_0=null;
+        Token lv_float_2_0=null;
+        Token lv_string_3_0=null;
 
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3627:28: ( ( ( ( RULE_DECIMAL_DIGITS )=>this_DECIMAL_DIGITS_0= RULE_DECIMAL_DIGITS ) | this_INTEGER_LITERAL_1= RULE_INTEGER_LITERAL | this_FLOAT_LITERAL_2= RULE_FLOAT_LITERAL | this_STRING_3= RULE_STRING ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3628:1: ( ( ( RULE_DECIMAL_DIGITS )=>this_DECIMAL_DIGITS_0= RULE_DECIMAL_DIGITS ) | this_INTEGER_LITERAL_1= RULE_INTEGER_LITERAL | this_FLOAT_LITERAL_2= RULE_FLOAT_LITERAL | this_STRING_3= RULE_STRING )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3871:28: ( ( ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) ) | ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) ) | ( (lv_float_2_0= RULE_FLOAT_LITERAL ) ) | ( (lv_string_3_0= RULE_STRING ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3872:1: ( ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) ) | ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) ) | ( (lv_float_2_0= RULE_FLOAT_LITERAL ) ) | ( (lv_string_3_0= RULE_STRING ) ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3628:1: ( ( ( RULE_DECIMAL_DIGITS )=>this_DECIMAL_DIGITS_0= RULE_DECIMAL_DIGITS ) | this_INTEGER_LITERAL_1= RULE_INTEGER_LITERAL | this_FLOAT_LITERAL_2= RULE_FLOAT_LITERAL | this_STRING_3= RULE_STRING )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3872:1: ( ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) ) | ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) ) | ( (lv_float_2_0= RULE_FLOAT_LITERAL ) ) | ( (lv_string_3_0= RULE_STRING ) ) )
             int alt73=4;
             switch ( input.LA(1) ) {
             case RULE_DECIMAL_DIGITS:
@@ -10341,22 +10751,35 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             switch (alt73) {
                 case 1 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3628:2: ( ( RULE_DECIMAL_DIGITS )=>this_DECIMAL_DIGITS_0= RULE_DECIMAL_DIGITS )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3872:2: ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3628:2: ( ( RULE_DECIMAL_DIGITS )=>this_DECIMAL_DIGITS_0= RULE_DECIMAL_DIGITS )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3628:3: ( RULE_DECIMAL_DIGITS )=>this_DECIMAL_DIGITS_0= RULE_DECIMAL_DIGITS
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3872:2: ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3872:3: ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS )
                     {
-                    this_DECIMAL_DIGITS_0=(Token)match(input,RULE_DECIMAL_DIGITS,FOLLOW_RULE_DECIMAL_DIGITS_in_ruleliteral_expression8105); if (state.failed) return current;
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3873:1: (lv_decimal_0_0= RULE_DECIMAL_DIGITS )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3874:3: lv_decimal_0_0= RULE_DECIMAL_DIGITS
+                    {
+                    lv_decimal_0_0=(Token)match(input,RULE_DECIMAL_DIGITS,FOLLOW_RULE_DECIMAL_DIGITS_in_ruleliteral_expression8454); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_DECIMAL_DIGITS_0);
-                          
+                      			newLeafNode(lv_decimal_0_0, grammarAccess.getLiteral_expressionAccess().getDecimalDECIMAL_DIGITSTerminalRuleCall_0_0()); 
+                      		
                     }
                     if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_DECIMAL_DIGITS_0, grammarAccess.getLiteral_expressionAccess().getDECIMAL_DIGITSTerminalRuleCall_0()); 
-                          
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getLiteral_expressionRule());
+                      	        }
+                             		setWithLastConsumed(
+                             			current, 
+                             			"decimal",
+                              		lv_decimal_0_0, 
+                              		"DECIMAL_DIGITS");
+                      	    
                     }
+
+                    }
+
 
                     }
 
@@ -10364,53 +10787,110 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3636:10: this_INTEGER_LITERAL_1= RULE_INTEGER_LITERAL
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3891:6: ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) )
                     {
-                    this_INTEGER_LITERAL_1=(Token)match(input,RULE_INTEGER_LITERAL,FOLLOW_RULE_INTEGER_LITERAL_in_ruleliteral_expression8132); if (state.failed) return current;
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3891:6: ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3892:1: (lv_inteiro_1_0= RULE_INTEGER_LITERAL )
+                    {
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3892:1: (lv_inteiro_1_0= RULE_INTEGER_LITERAL )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3893:3: lv_inteiro_1_0= RULE_INTEGER_LITERAL
+                    {
+                    lv_inteiro_1_0=(Token)match(input,RULE_INTEGER_LITERAL,FOLLOW_RULE_INTEGER_LITERAL_in_ruleliteral_expression8482); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_INTEGER_LITERAL_1);
-                          
+                      			newLeafNode(lv_inteiro_1_0, grammarAccess.getLiteral_expressionAccess().getInteiroINTEGER_LITERALTerminalRuleCall_1_0()); 
+                      		
                     }
                     if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_INTEGER_LITERAL_1, grammarAccess.getLiteral_expressionAccess().getINTEGER_LITERALTerminalRuleCall_1()); 
-                          
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getLiteral_expressionRule());
+                      	        }
+                             		setWithLastConsumed(
+                             			current, 
+                             			"inteiro",
+                              		lv_inteiro_1_0, 
+                              		"INTEGER_LITERAL");
+                      	    
                     }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
                 case 3 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3644:10: this_FLOAT_LITERAL_2= RULE_FLOAT_LITERAL
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3910:6: ( (lv_float_2_0= RULE_FLOAT_LITERAL ) )
                     {
-                    this_FLOAT_LITERAL_2=(Token)match(input,RULE_FLOAT_LITERAL,FOLLOW_RULE_FLOAT_LITERAL_in_ruleliteral_expression8158); if (state.failed) return current;
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3910:6: ( (lv_float_2_0= RULE_FLOAT_LITERAL ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3911:1: (lv_float_2_0= RULE_FLOAT_LITERAL )
+                    {
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3911:1: (lv_float_2_0= RULE_FLOAT_LITERAL )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3912:3: lv_float_2_0= RULE_FLOAT_LITERAL
+                    {
+                    lv_float_2_0=(Token)match(input,RULE_FLOAT_LITERAL,FOLLOW_RULE_FLOAT_LITERAL_in_ruleliteral_expression8510); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_FLOAT_LITERAL_2);
-                          
+                      			newLeafNode(lv_float_2_0, grammarAccess.getLiteral_expressionAccess().getFloatFLOAT_LITERALTerminalRuleCall_2_0()); 
+                      		
                     }
                     if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_FLOAT_LITERAL_2, grammarAccess.getLiteral_expressionAccess().getFLOAT_LITERALTerminalRuleCall_2()); 
-                          
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getLiteral_expressionRule());
+                      	        }
+                             		setWithLastConsumed(
+                             			current, 
+                             			"float",
+                              		lv_float_2_0, 
+                              		"FLOAT_LITERAL");
+                      	    
                     }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
                 case 4 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3652:10: this_STRING_3= RULE_STRING
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3929:6: ( (lv_string_3_0= RULE_STRING ) )
                     {
-                    this_STRING_3=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleliteral_expression8184); if (state.failed) return current;
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3929:6: ( (lv_string_3_0= RULE_STRING ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3930:1: (lv_string_3_0= RULE_STRING )
+                    {
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3930:1: (lv_string_3_0= RULE_STRING )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3931:3: lv_string_3_0= RULE_STRING
+                    {
+                    lv_string_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleliteral_expression8538); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_STRING_3);
-                          
+                      			newLeafNode(lv_string_3_0, grammarAccess.getLiteral_expressionAccess().getStringSTRINGTerminalRuleCall_3_0()); 
+                      		
                     }
                     if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_STRING_3, grammarAccess.getLiteral_expressionAccess().getSTRINGTerminalRuleCall_3()); 
-                          
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getLiteral_expressionRule());
+                      	        }
+                             		setWithLastConsumed(
+                             			current, 
+                             			"string",
+                              		lv_string_3_0, 
+                              		"STRING");
+                      	    
                     }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
@@ -10437,7 +10917,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulelogical_expression"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3667:1: entryRulelogical_expression returns [EObject current=null] : iv_rulelogical_expression= rulelogical_expression EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3955:1: entryRulelogical_expression returns [EObject current=null] : iv_rulelogical_expression= rulelogical_expression EOF ;
     public final EObject entryRulelogical_expression() throws RecognitionException {
         EObject current = null;
 
@@ -10445,13 +10925,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3668:2: (iv_rulelogical_expression= rulelogical_expression EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3669:2: iv_rulelogical_expression= rulelogical_expression EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3956:2: (iv_rulelogical_expression= rulelogical_expression EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3957:2: iv_rulelogical_expression= rulelogical_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLogical_expressionRule()); 
             }
-            pushFollow(FOLLOW_rulelogical_expression_in_entryRulelogical_expression8229);
+            pushFollow(FOLLOW_rulelogical_expression_in_entryRulelogical_expression8579);
             iv_rulelogical_expression=rulelogical_expression();
 
             state._fsp--;
@@ -10459,7 +10939,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulelogical_expression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulelogical_expression8239); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulelogical_expression8589); if (state.failed) return current;
 
             }
 
@@ -10477,7 +10957,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulelogical_expression"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3676:1: rulelogical_expression returns [EObject current=null] : ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3964:1: rulelogical_expression returns [EObject current=null] : ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) ) ;
     public final EObject rulelogical_expression() throws RecognitionException {
         EObject current = null;
 
@@ -10490,10 +10970,10 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3679:28: ( ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3680:1: ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3967:28: ( ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3968:1: ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3680:1: ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3968:1: ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) )
             int alt74=3;
             switch ( input.LA(1) ) {
             case 91:
@@ -10521,18 +11001,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             switch (alt74) {
                 case 1 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3680:2: ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3968:2: ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3680:2: ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3680:3: ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3968:2: ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3968:3: ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3680:3: ( (lv_operador_0_0= '!' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3681:1: (lv_operador_0_0= '!' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3968:3: ( (lv_operador_0_0= '!' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3969:1: (lv_operador_0_0= '!' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3681:1: (lv_operador_0_0= '!' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3682:3: lv_operador_0_0= '!'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3969:1: (lv_operador_0_0= '!' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3970:3: lv_operador_0_0= '!'
                     {
-                    lv_operador_0_0=(Token)match(input,91,FOLLOW_91_in_rulelogical_expression8283); if (state.failed) return current;
+                    lv_operador_0_0=(Token)match(input,91,FOLLOW_91_in_rulelogical_expression8633); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_operador_0_0, grammarAccess.getLogical_expressionAccess().getOperadorExclamationMarkKeyword_0_0_0());
@@ -10552,18 +11032,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3695:2: ( (lv_expressao_1_0= ruleexpression ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3696:1: (lv_expressao_1_0= ruleexpression )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3983:2: ( (lv_expressao_1_0= ruleexpression ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3984:1: (lv_expressao_1_0= ruleexpression )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3696:1: (lv_expressao_1_0= ruleexpression )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3697:3: lv_expressao_1_0= ruleexpression
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3984:1: (lv_expressao_1_0= ruleexpression )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3985:3: lv_expressao_1_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getLogical_expressionAccess().getExpressaoExpressionParserRuleCall_0_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleexpression_in_rulelogical_expression8317);
+                    pushFollow(FOLLOW_ruleexpression_in_rulelogical_expression8667);
                     lv_expressao_1_0=ruleexpression();
 
                     state._fsp--;
@@ -10594,15 +11074,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3714:6: ( (lv_operador_2_0= 'true' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4002:6: ( (lv_operador_2_0= 'true' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3714:6: ( (lv_operador_2_0= 'true' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3715:1: (lv_operador_2_0= 'true' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4002:6: ( (lv_operador_2_0= 'true' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4003:1: (lv_operador_2_0= 'true' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3715:1: (lv_operador_2_0= 'true' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3716:3: lv_operador_2_0= 'true'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4003:1: (lv_operador_2_0= 'true' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4004:3: lv_operador_2_0= 'true'
                     {
-                    lv_operador_2_0=(Token)match(input,92,FOLLOW_92_in_rulelogical_expression8342); if (state.failed) return current;
+                    lv_operador_2_0=(Token)match(input,92,FOLLOW_92_in_rulelogical_expression8692); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_operador_2_0, grammarAccess.getLogical_expressionAccess().getOperadorTrueKeyword_1_0());
@@ -10626,15 +11106,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3730:6: ( (lv_operador_3_0= 'false' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4018:6: ( (lv_operador_3_0= 'false' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3730:6: ( (lv_operador_3_0= 'false' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3731:1: (lv_operador_3_0= 'false' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4018:6: ( (lv_operador_3_0= 'false' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4019:1: (lv_operador_3_0= 'false' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3731:1: (lv_operador_3_0= 'false' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3732:3: lv_operador_3_0= 'false'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4019:1: (lv_operador_3_0= 'false' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4020:3: lv_operador_3_0= 'false'
                     {
-                    lv_operador_3_0=(Token)match(input,93,FOLLOW_93_in_rulelogical_expression8379); if (state.failed) return current;
+                    lv_operador_3_0=(Token)match(input,93,FOLLOW_93_in_rulelogical_expression8729); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_operador_3_0, grammarAccess.getLogical_expressionAccess().getOperadorFalseKeyword_2_0());
@@ -10680,7 +11160,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulebit_expression"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3753:1: entryRulebit_expression returns [EObject current=null] : iv_rulebit_expression= rulebit_expression EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4041:1: entryRulebit_expression returns [EObject current=null] : iv_rulebit_expression= rulebit_expression EOF ;
     public final EObject entryRulebit_expression() throws RecognitionException {
         EObject current = null;
 
@@ -10688,13 +11168,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3754:2: (iv_rulebit_expression= rulebit_expression EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:2: iv_rulebit_expression= rulebit_expression EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4042:2: (iv_rulebit_expression= rulebit_expression EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4043:2: iv_rulebit_expression= rulebit_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBit_expressionRule()); 
             }
-            pushFollow(FOLLOW_rulebit_expression_in_entryRulebit_expression8428);
+            pushFollow(FOLLOW_rulebit_expression_in_entryRulebit_expression8778);
             iv_rulebit_expression=rulebit_expression();
 
             state._fsp--;
@@ -10702,7 +11182,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulebit_expression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulebit_expression8438); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulebit_expression8788); if (state.failed) return current;
 
             }
 
@@ -10720,7 +11200,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulebit_expression"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3762:1: rulebit_expression returns [EObject current=null] : ( ( (lv_operador_0_0= '~' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4050:1: rulebit_expression returns [EObject current=null] : ( ( (lv_operador_0_0= '~' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) ;
     public final EObject rulebit_expression() throws RecognitionException {
         EObject current = null;
 
@@ -10731,19 +11211,19 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3765:28: ( ( ( (lv_operador_0_0= '~' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3766:1: ( ( (lv_operador_0_0= '~' ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4053:28: ( ( ( (lv_operador_0_0= '~' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4054:1: ( ( (lv_operador_0_0= '~' ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3766:1: ( ( (lv_operador_0_0= '~' ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3766:2: ( (lv_operador_0_0= '~' ) ) ( (lv_expressao_1_0= ruleexpression ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4054:1: ( ( (lv_operador_0_0= '~' ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4054:2: ( (lv_operador_0_0= '~' ) ) ( (lv_expressao_1_0= ruleexpression ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3766:2: ( (lv_operador_0_0= '~' ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3767:1: (lv_operador_0_0= '~' )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4054:2: ( (lv_operador_0_0= '~' ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4055:1: (lv_operador_0_0= '~' )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3767:1: (lv_operador_0_0= '~' )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3768:3: lv_operador_0_0= '~'
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4055:1: (lv_operador_0_0= '~' )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4056:3: lv_operador_0_0= '~'
             {
-            lv_operador_0_0=(Token)match(input,94,FOLLOW_94_in_rulebit_expression8481); if (state.failed) return current;
+            lv_operador_0_0=(Token)match(input,94,FOLLOW_94_in_rulebit_expression8831); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       newLeafNode(lv_operador_0_0, grammarAccess.getBit_expressionAccess().getOperadorTildeKeyword_0_0());
@@ -10763,18 +11243,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3781:2: ( (lv_expressao_1_0= ruleexpression ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3782:1: (lv_expressao_1_0= ruleexpression )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4069:2: ( (lv_expressao_1_0= ruleexpression ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4070:1: (lv_expressao_1_0= ruleexpression )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3782:1: (lv_expressao_1_0= ruleexpression )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3783:3: lv_expressao_1_0= ruleexpression
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4070:1: (lv_expressao_1_0= ruleexpression )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4071:3: lv_expressao_1_0= ruleexpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getBit_expressionAccess().getExpressaoExpressionParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleexpression_in_rulebit_expression8515);
+            pushFollow(FOLLOW_ruleexpression_in_rulebit_expression8865);
             lv_expressao_1_0=ruleexpression();
 
             state._fsp--;
@@ -10821,7 +11301,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulenumeric_expression"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3807:1: entryRulenumeric_expression returns [EObject current=null] : iv_rulenumeric_expression= rulenumeric_expression EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4095:1: entryRulenumeric_expression returns [EObject current=null] : iv_rulenumeric_expression= rulenumeric_expression EOF ;
     public final EObject entryRulenumeric_expression() throws RecognitionException {
         EObject current = null;
 
@@ -10829,13 +11309,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3808:2: (iv_rulenumeric_expression= rulenumeric_expression EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3809:2: iv_rulenumeric_expression= rulenumeric_expression EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4096:2: (iv_rulenumeric_expression= rulenumeric_expression EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4097:2: iv_rulenumeric_expression= rulenumeric_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNumeric_expressionRule()); 
             }
-            pushFollow(FOLLOW_rulenumeric_expression_in_entryRulenumeric_expression8551);
+            pushFollow(FOLLOW_rulenumeric_expression_in_entryRulenumeric_expression8901);
             iv_rulenumeric_expression=rulenumeric_expression();
 
             state._fsp--;
@@ -10843,7 +11323,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulenumeric_expression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulenumeric_expression8561); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulenumeric_expression8911); if (state.failed) return current;
 
             }
 
@@ -10861,7 +11341,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulenumeric_expression"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3816:1: rulenumeric_expression returns [EObject current=null] : ( ( ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4104:1: rulenumeric_expression returns [EObject current=null] : ( ( ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) ;
     public final EObject rulenumeric_expression() throws RecognitionException {
         EObject current = null;
 
@@ -10874,19 +11354,19 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3819:28: ( ( ( ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3820:1: ( ( ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4107:28: ( ( ( ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4108:1: ( ( ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3820:1: ( ( ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3820:2: ( ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) ) ) ( (lv_expressao_1_0= ruleexpression ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4108:1: ( ( ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4108:2: ( ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) ) ) ( (lv_expressao_1_0= ruleexpression ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3820:2: ( ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3821:1: ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4108:2: ( ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4109:1: ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3821:1: ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3822:1: (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4109:1: ( (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4110:1: (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3822:1: (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4110:1: (lv_operador_0_1= '-' | lv_operador_0_2= '++' | lv_operador_0_3= '--' )
             int alt75=3;
             switch ( input.LA(1) ) {
             case 63:
@@ -10914,9 +11394,9 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             switch (alt75) {
                 case 1 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3823:3: lv_operador_0_1= '-'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4111:3: lv_operador_0_1= '-'
                     {
-                    lv_operador_0_1=(Token)match(input,63,FOLLOW_63_in_rulenumeric_expression8606); if (state.failed) return current;
+                    lv_operador_0_1=(Token)match(input,63,FOLLOW_63_in_rulenumeric_expression8956); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_operador_0_1, grammarAccess.getNumeric_expressionAccess().getOperadorHyphenMinusKeyword_0_0_0());
@@ -10934,9 +11414,9 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3835:8: lv_operador_0_2= '++'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4123:8: lv_operador_0_2= '++'
                     {
-                    lv_operador_0_2=(Token)match(input,61,FOLLOW_61_in_rulenumeric_expression8635); if (state.failed) return current;
+                    lv_operador_0_2=(Token)match(input,61,FOLLOW_61_in_rulenumeric_expression8985); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_operador_0_2, grammarAccess.getNumeric_expressionAccess().getOperadorPlusSignPlusSignKeyword_0_0_1());
@@ -10954,9 +11434,9 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3847:8: lv_operador_0_3= '--'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4135:8: lv_operador_0_3= '--'
                     {
-                    lv_operador_0_3=(Token)match(input,62,FOLLOW_62_in_rulenumeric_expression8664); if (state.failed) return current;
+                    lv_operador_0_3=(Token)match(input,62,FOLLOW_62_in_rulenumeric_expression9014); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_operador_0_3, grammarAccess.getNumeric_expressionAccess().getOperadorHyphenMinusHyphenMinusKeyword_0_0_2());
@@ -10982,18 +11462,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3862:2: ( (lv_expressao_1_0= ruleexpression ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3863:1: (lv_expressao_1_0= ruleexpression )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4150:2: ( (lv_expressao_1_0= ruleexpression ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4151:1: (lv_expressao_1_0= ruleexpression )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3863:1: (lv_expressao_1_0= ruleexpression )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3864:3: lv_expressao_1_0= ruleexpression
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4151:1: (lv_expressao_1_0= ruleexpression )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4152:3: lv_expressao_1_0= ruleexpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getNumeric_expressionAccess().getExpressaoExpressionParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleexpression_in_rulenumeric_expression8701);
+            pushFollow(FOLLOW_ruleexpression_in_rulenumeric_expression9051);
             lv_expressao_1_0=ruleexpression();
 
             state._fsp--;
@@ -11040,7 +11520,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulearglist"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3888:1: entryRulearglist returns [EObject current=null] : iv_rulearglist= rulearglist EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4176:1: entryRulearglist returns [EObject current=null] : iv_rulearglist= rulearglist EOF ;
     public final EObject entryRulearglist() throws RecognitionException {
         EObject current = null;
 
@@ -11048,13 +11528,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3889:2: (iv_rulearglist= rulearglist EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3890:2: iv_rulearglist= rulearglist EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4177:2: (iv_rulearglist= rulearglist EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4178:2: iv_rulearglist= rulearglist EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getArglistRule()); 
             }
-            pushFollow(FOLLOW_rulearglist_in_entryRulearglist8737);
+            pushFollow(FOLLOW_rulearglist_in_entryRulearglist9087);
             iv_rulearglist=rulearglist();
 
             state._fsp--;
@@ -11062,7 +11542,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulearglist; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulearglist8747); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulearglist9097); if (state.failed) return current;
 
             }
 
@@ -11080,7 +11560,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulearglist"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3897:1: rulearglist returns [EObject current=null] : ( ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* ) | (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' ) | ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* ) ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4185:1: rulearglist returns [EObject current=null] : ( ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* ) | (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' ) | ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* ) ) ;
     public final EObject rulearglist() throws RecognitionException {
         EObject current = null;
 
@@ -11103,31 +11583,31 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3900:28: ( ( ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* ) | (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' ) | ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3901:1: ( ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* ) | (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' ) | ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4188:28: ( ( ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* ) | (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' ) | ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4189:1: ( ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* ) | (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' ) | ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3901:1: ( ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* ) | (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' ) | ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4189:1: ( ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* ) | (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' ) | ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* ) )
             int alt78=3;
             alt78 = dfa78.predict(input);
             switch (alt78) {
                 case 1 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3901:2: ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4189:2: ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3901:2: ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3901:3: ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )*
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4189:2: ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4189:3: ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )*
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3901:3: ( (lv_expressoesArgumentos_0_0= ruleexpression ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3902:1: (lv_expressoesArgumentos_0_0= ruleexpression )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4189:3: ( (lv_expressoesArgumentos_0_0= ruleexpression ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4190:1: (lv_expressoesArgumentos_0_0= ruleexpression )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3902:1: (lv_expressoesArgumentos_0_0= ruleexpression )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3903:3: lv_expressoesArgumentos_0_0= ruleexpression
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4190:1: (lv_expressoesArgumentos_0_0= ruleexpression )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4191:3: lv_expressoesArgumentos_0_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getArglistAccess().getExpressoesArgumentosExpressionParserRuleCall_0_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleexpression_in_rulearglist8794);
+                    pushFollow(FOLLOW_ruleexpression_in_rulearglist9144);
                     lv_expressoesArgumentos_0_0=ruleexpression();
 
                     state._fsp--;
@@ -11151,7 +11631,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3919:2: (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )*
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4207:2: (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )*
                     loop76:
                     do {
                         int alt76=2;
@@ -11164,26 +11644,26 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                         switch (alt76) {
                     	case 1 :
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3919:4: otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) )
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4207:4: otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) )
                     	    {
-                    	    otherlv_1=(Token)match(input,27,FOLLOW_27_in_rulearglist8807); if (state.failed) return current;
+                    	    otherlv_1=(Token)match(input,27,FOLLOW_27_in_rulearglist9157); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_1, grammarAccess.getArglistAccess().getCommaKeyword_0_1_0());
                     	          
                     	    }
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3923:1: ( (lv_expressoesArgumentos_2_0= ruleexpression ) )
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3924:1: (lv_expressoesArgumentos_2_0= ruleexpression )
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4211:1: ( (lv_expressoesArgumentos_2_0= ruleexpression ) )
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4212:1: (lv_expressoesArgumentos_2_0= ruleexpression )
                     	    {
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3924:1: (lv_expressoesArgumentos_2_0= ruleexpression )
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3925:3: lv_expressoesArgumentos_2_0= ruleexpression
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4212:1: (lv_expressoesArgumentos_2_0= ruleexpression )
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4213:3: lv_expressoesArgumentos_2_0= ruleexpression
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getArglistAccess().getExpressoesArgumentosExpressionParserRuleCall_0_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleexpression_in_rulearglist8828);
+                    	    pushFollow(FOLLOW_ruleexpression_in_rulearglist9178);
                     	    lv_expressoesArgumentos_2_0=ruleexpression();
 
                     	    state._fsp--;
@@ -11223,24 +11703,24 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3942:6: (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4230:6: (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3942:6: (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3942:8: otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4230:6: (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4230:8: otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"'
                     {
-                    otherlv_3=(Token)match(input,95,FOLLOW_95_in_rulearglist8850); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,95,FOLLOW_95_in_rulearglist9200); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getArglistAccess().getQuotationMarkKeyword_1_0());
                           
                     }
-                    this_STRING_4=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulearglist8861); if (state.failed) return current;
+                    this_STRING_4=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulearglist9211); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
                           newLeafNode(this_STRING_4, grammarAccess.getArglistAccess().getSTRINGTerminalRuleCall_1_1()); 
                           
                     }
-                    otherlv_5=(Token)match(input,95,FOLLOW_95_in_rulearglist8872); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,95,FOLLOW_95_in_rulearglist9222); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getArglistAccess().getQuotationMarkKeyword_1_2());
@@ -11253,23 +11733,23 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3955:6: ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4243:6: ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3955:6: ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3955:7: ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )*
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4243:6: ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4243:7: ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )*
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3955:7: ( (lv_tipoParametro_6_0= ruletype ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3956:1: (lv_tipoParametro_6_0= ruletype )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4243:7: ( (lv_tipoParametro_6_0= ruletype ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4244:1: (lv_tipoParametro_6_0= ruletype )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3956:1: (lv_tipoParametro_6_0= ruletype )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3957:3: lv_tipoParametro_6_0= ruletype
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4244:1: (lv_tipoParametro_6_0= ruletype )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4245:3: lv_tipoParametro_6_0= ruletype
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getArglistAccess().getTipoParametroTypeParserRuleCall_2_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruletype_in_rulearglist8901);
+                    pushFollow(FOLLOW_ruletype_in_rulearglist9251);
                     lv_tipoParametro_6_0=ruletype();
 
                     state._fsp--;
@@ -11293,13 +11773,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3973:2: ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3974:1: (lv_nomeParametro_7_0= RULE_IDENTIFIER )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4261:2: ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4262:1: (lv_nomeParametro_7_0= RULE_IDENTIFIER )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3974:1: (lv_nomeParametro_7_0= RULE_IDENTIFIER )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3975:3: lv_nomeParametro_7_0= RULE_IDENTIFIER
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4262:1: (lv_nomeParametro_7_0= RULE_IDENTIFIER )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4263:3: lv_nomeParametro_7_0= RULE_IDENTIFIER
                     {
-                    lv_nomeParametro_7_0=(Token)match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rulearglist8918); if (state.failed) return current;
+                    lv_nomeParametro_7_0=(Token)match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rulearglist9268); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_nomeParametro_7_0, grammarAccess.getArglistAccess().getNomeParametroIDENTIFIERTerminalRuleCall_2_1_0()); 
@@ -11323,7 +11803,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3991:2: (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )*
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4279:2: (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )*
                     loop77:
                     do {
                         int alt77=2;
@@ -11336,26 +11816,26 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                         switch (alt77) {
                     	case 1 :
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3991:4: otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) )
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4279:4: otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) )
                     	    {
-                    	    otherlv_8=(Token)match(input,27,FOLLOW_27_in_rulearglist8936); if (state.failed) return current;
+                    	    otherlv_8=(Token)match(input,27,FOLLOW_27_in_rulearglist9286); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_8, grammarAccess.getArglistAccess().getCommaKeyword_2_2_0());
                     	          
                     	    }
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3995:1: ( (lv_tipoParametro_9_0= ruletype ) )
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3996:1: (lv_tipoParametro_9_0= ruletype )
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4283:1: ( (lv_tipoParametro_9_0= ruletype ) )
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4284:1: (lv_tipoParametro_9_0= ruletype )
                     	    {
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3996:1: (lv_tipoParametro_9_0= ruletype )
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3997:3: lv_tipoParametro_9_0= ruletype
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4284:1: (lv_tipoParametro_9_0= ruletype )
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4285:3: lv_tipoParametro_9_0= ruletype
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getArglistAccess().getTipoParametroTypeParserRuleCall_2_2_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruletype_in_rulearglist8957);
+                    	    pushFollow(FOLLOW_ruletype_in_rulearglist9307);
                     	    lv_tipoParametro_9_0=ruletype();
 
                     	    state._fsp--;
@@ -11379,13 +11859,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4013:2: ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) )
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4014:1: (lv_nomeParametro_10_0= RULE_IDENTIFIER )
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4301:2: ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) )
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4302:1: (lv_nomeParametro_10_0= RULE_IDENTIFIER )
                     	    {
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4014:1: (lv_nomeParametro_10_0= RULE_IDENTIFIER )
-                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4015:3: lv_nomeParametro_10_0= RULE_IDENTIFIER
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4302:1: (lv_nomeParametro_10_0= RULE_IDENTIFIER )
+                    	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4303:3: lv_nomeParametro_10_0= RULE_IDENTIFIER
                     	    {
-                    	    lv_nomeParametro_10_0=(Token)match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rulearglist8974); if (state.failed) return current;
+                    	    lv_nomeParametro_10_0=(Token)match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rulearglist9324); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	      			newLeafNode(lv_nomeParametro_10_0, grammarAccess.getArglistAccess().getNomeParametroIDENTIFIERTerminalRuleCall_2_2_2_0()); 
@@ -11447,7 +11927,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulename"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4039:1: entryRulename returns [EObject current=null] : iv_rulename= rulename EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4327:1: entryRulename returns [EObject current=null] : iv_rulename= rulename EOF ;
     public final EObject entryRulename() throws RecognitionException {
         EObject current = null;
 
@@ -11455,13 +11935,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4040:2: (iv_rulename= rulename EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4041:2: iv_rulename= rulename EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4328:2: (iv_rulename= rulename EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4329:2: iv_rulename= rulename EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNameRule()); 
             }
-            pushFollow(FOLLOW_rulename_in_entryRulename9018);
+            pushFollow(FOLLOW_rulename_in_entryRulename9368);
             iv_rulename=rulename();
 
             state._fsp--;
@@ -11469,7 +11949,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulename; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulename9028); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulename9378); if (state.failed) return current;
 
             }
 
@@ -11487,7 +11967,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulename"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4048:1: rulename returns [EObject current=null] : ( ( (lv_nome_0_0= RULE_IDENTIFIER ) ) ( (lv_pacote_1_0= rulepackage_name_aux ) ) ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4336:1: rulename returns [EObject current=null] : ( ( (lv_nome_0_0= RULE_IDENTIFIER ) ) ( (lv_pacote_1_0= rulepackage_name_aux ) ) ) ;
     public final EObject rulename() throws RecognitionException {
         EObject current = null;
 
@@ -11498,19 +11978,19 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4051:28: ( ( ( (lv_nome_0_0= RULE_IDENTIFIER ) ) ( (lv_pacote_1_0= rulepackage_name_aux ) ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4052:1: ( ( (lv_nome_0_0= RULE_IDENTIFIER ) ) ( (lv_pacote_1_0= rulepackage_name_aux ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4339:28: ( ( ( (lv_nome_0_0= RULE_IDENTIFIER ) ) ( (lv_pacote_1_0= rulepackage_name_aux ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4340:1: ( ( (lv_nome_0_0= RULE_IDENTIFIER ) ) ( (lv_pacote_1_0= rulepackage_name_aux ) ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4052:1: ( ( (lv_nome_0_0= RULE_IDENTIFIER ) ) ( (lv_pacote_1_0= rulepackage_name_aux ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4052:2: ( (lv_nome_0_0= RULE_IDENTIFIER ) ) ( (lv_pacote_1_0= rulepackage_name_aux ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4340:1: ( ( (lv_nome_0_0= RULE_IDENTIFIER ) ) ( (lv_pacote_1_0= rulepackage_name_aux ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4340:2: ( (lv_nome_0_0= RULE_IDENTIFIER ) ) ( (lv_pacote_1_0= rulepackage_name_aux ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4052:2: ( (lv_nome_0_0= RULE_IDENTIFIER ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4053:1: (lv_nome_0_0= RULE_IDENTIFIER )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4340:2: ( (lv_nome_0_0= RULE_IDENTIFIER ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4341:1: (lv_nome_0_0= RULE_IDENTIFIER )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4053:1: (lv_nome_0_0= RULE_IDENTIFIER )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4054:3: lv_nome_0_0= RULE_IDENTIFIER
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4341:1: (lv_nome_0_0= RULE_IDENTIFIER )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4342:3: lv_nome_0_0= RULE_IDENTIFIER
             {
-            lv_nome_0_0=(Token)match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rulename9070); if (state.failed) return current;
+            lv_nome_0_0=(Token)match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rulename9420); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_nome_0_0, grammarAccess.getNameAccess().getNomeIDENTIFIERTerminalRuleCall_0_0()); 
@@ -11534,18 +12014,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4070:2: ( (lv_pacote_1_0= rulepackage_name_aux ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4071:1: (lv_pacote_1_0= rulepackage_name_aux )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4358:2: ( (lv_pacote_1_0= rulepackage_name_aux ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4359:1: (lv_pacote_1_0= rulepackage_name_aux )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4071:1: (lv_pacote_1_0= rulepackage_name_aux )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4072:3: lv_pacote_1_0= rulepackage_name_aux
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4359:1: (lv_pacote_1_0= rulepackage_name_aux )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4360:3: lv_pacote_1_0= rulepackage_name_aux
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getNameAccess().getPacotePackage_name_auxParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_rulepackage_name_aux_in_rulename9096);
+            pushFollow(FOLLOW_rulepackage_name_aux_in_rulename9446);
             lv_pacote_1_0=rulepackage_name_aux();
 
             state._fsp--;
@@ -11592,7 +12072,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulepackage_name_aux"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4096:1: entryRulepackage_name_aux returns [EObject current=null] : iv_rulepackage_name_aux= rulepackage_name_aux EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4384:1: entryRulepackage_name_aux returns [EObject current=null] : iv_rulepackage_name_aux= rulepackage_name_aux EOF ;
     public final EObject entryRulepackage_name_aux() throws RecognitionException {
         EObject current = null;
 
@@ -11600,13 +12080,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4097:2: (iv_rulepackage_name_aux= rulepackage_name_aux EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4098:2: iv_rulepackage_name_aux= rulepackage_name_aux EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4385:2: (iv_rulepackage_name_aux= rulepackage_name_aux EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4386:2: iv_rulepackage_name_aux= rulepackage_name_aux EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPackage_name_auxRule()); 
             }
-            pushFollow(FOLLOW_rulepackage_name_aux_in_entryRulepackage_name_aux9132);
+            pushFollow(FOLLOW_rulepackage_name_aux_in_entryRulepackage_name_aux9482);
             iv_rulepackage_name_aux=rulepackage_name_aux();
 
             state._fsp--;
@@ -11614,7 +12094,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulepackage_name_aux; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulepackage_name_aux9142); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulepackage_name_aux9492); if (state.failed) return current;
 
             }
 
@@ -11632,7 +12112,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulepackage_name_aux"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4105:1: rulepackage_name_aux returns [EObject current=null] : (otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) ) )* ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4393:1: rulepackage_name_aux returns [EObject current=null] : (otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) ) )* ;
     public final EObject rulepackage_name_aux() throws RecognitionException {
         EObject current = null;
 
@@ -11644,10 +12124,10 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4108:28: ( (otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) ) )* )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4109:1: (otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) ) )*
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4396:28: ( (otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) ) )* )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4397:1: (otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) ) )*
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4109:1: (otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) ) )*
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4397:1: (otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) ) )*
             loop79:
             do {
                 int alt79=2;
@@ -11666,21 +12146,21 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                 switch (alt79) {
             	case 1 :
-            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4109:3: otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) )
+            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4397:3: otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) )
             	    {
-            	    otherlv_0=(Token)match(input,59,FOLLOW_59_in_rulepackage_name_aux9179); if (state.failed) return current;
+            	    otherlv_0=(Token)match(input,59,FOLLOW_59_in_rulepackage_name_aux9529); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_0, grammarAccess.getPackage_name_auxAccess().getFullStopKeyword_0());
             	          
             	    }
-            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4113:1: ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) )
-            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4114:1: (lv_nomePacote_1_0= RULE_IDENTIFIER )
+            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4401:1: ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) )
+            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4402:1: (lv_nomePacote_1_0= RULE_IDENTIFIER )
             	    {
-            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4114:1: (lv_nomePacote_1_0= RULE_IDENTIFIER )
-            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4115:3: lv_nomePacote_1_0= RULE_IDENTIFIER
+            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4402:1: (lv_nomePacote_1_0= RULE_IDENTIFIER )
+            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4403:3: lv_nomePacote_1_0= RULE_IDENTIFIER
             	    {
-            	    lv_nomePacote_1_0=(Token)match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rulepackage_name_aux9196); if (state.failed) return current;
+            	    lv_nomePacote_1_0=(Token)match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rulepackage_name_aux9546); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      			newLeafNode(lv_nomePacote_1_0, grammarAccess.getPackage_name_auxAccess().getNomePacoteIDENTIFIERTerminalRuleCall_1_0()); 
@@ -11704,18 +12184,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4131:2: ( (lv_pacote_2_0= rulepackage_name_aux ) )
-            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4132:1: (lv_pacote_2_0= rulepackage_name_aux )
+            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4419:2: ( (lv_pacote_2_0= rulepackage_name_aux ) )
+            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4420:1: (lv_pacote_2_0= rulepackage_name_aux )
             	    {
-            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4132:1: (lv_pacote_2_0= rulepackage_name_aux )
-            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4133:3: lv_pacote_2_0= rulepackage_name_aux
+            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4420:1: (lv_pacote_2_0= rulepackage_name_aux )
+            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4421:3: lv_pacote_2_0= rulepackage_name_aux
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getPackage_name_auxAccess().getPacotePackage_name_auxParserRuleCall_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_rulepackage_name_aux_in_rulepackage_name_aux9222);
+            	    pushFollow(FOLLOW_rulepackage_name_aux_in_rulepackage_name_aux9572);
             	    lv_pacote_2_0=rulepackage_name_aux();
 
             	    state._fsp--;
@@ -11768,7 +12248,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuletype_specifier"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4157:1: entryRuletype_specifier returns [EObject current=null] : iv_ruletype_specifier= ruletype_specifier EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4445:1: entryRuletype_specifier returns [EObject current=null] : iv_ruletype_specifier= ruletype_specifier EOF ;
     public final EObject entryRuletype_specifier() throws RecognitionException {
         EObject current = null;
 
@@ -11776,13 +12256,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4158:2: (iv_ruletype_specifier= ruletype_specifier EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4159:2: iv_ruletype_specifier= ruletype_specifier EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4446:2: (iv_ruletype_specifier= ruletype_specifier EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4447:2: iv_ruletype_specifier= ruletype_specifier EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getType_specifierRule()); 
             }
-            pushFollow(FOLLOW_ruletype_specifier_in_entryRuletype_specifier9259);
+            pushFollow(FOLLOW_ruletype_specifier_in_entryRuletype_specifier9609);
             iv_ruletype_specifier=ruletype_specifier();
 
             state._fsp--;
@@ -11790,7 +12270,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruletype_specifier; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuletype_specifier9269); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuletype_specifier9619); if (state.failed) return current;
 
             }
 
@@ -11808,26 +12288,26 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruletype_specifier"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4166:1: ruletype_specifier returns [EObject current=null] : ( ( (lv_nomeTipo_0_0= 'boolean' ) ) | ( (lv_nomeTipo_1_0= 'byte' ) ) | ( (lv_nomeTipo_2_0= 'char' ) ) | ( (lv_nomeTipo_3_0= 'short' ) ) | ( (lv_nomeTipo_4_0= 'int' ) ) | ( (lv_nomeTipo_5_0= 'float' ) ) | ( (lv_nomeTipo_6_0= 'long' ) ) | ( (lv_nomeTipo_7_0= 'double' ) ) ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4454:1: ruletype_specifier returns [EObject current=null] : ( ( (lv_nome_0_0= 'boolean' ) ) | ( (lv_nome_1_0= 'byte' ) ) | ( (lv_nome_2_0= 'char' ) ) | ( (lv_nome_3_0= 'short' ) ) | ( (lv_nome_4_0= 'int' ) ) | ( (lv_nome_5_0= 'float' ) ) | ( (lv_nome_6_0= 'long' ) ) | ( (lv_nome_7_0= 'double' ) ) ) ;
     public final EObject ruletype_specifier() throws RecognitionException {
         EObject current = null;
 
-        Token lv_nomeTipo_0_0=null;
-        Token lv_nomeTipo_1_0=null;
-        Token lv_nomeTipo_2_0=null;
-        Token lv_nomeTipo_3_0=null;
-        Token lv_nomeTipo_4_0=null;
-        Token lv_nomeTipo_5_0=null;
-        Token lv_nomeTipo_6_0=null;
-        Token lv_nomeTipo_7_0=null;
+        Token lv_nome_0_0=null;
+        Token lv_nome_1_0=null;
+        Token lv_nome_2_0=null;
+        Token lv_nome_3_0=null;
+        Token lv_nome_4_0=null;
+        Token lv_nome_5_0=null;
+        Token lv_nome_6_0=null;
+        Token lv_nome_7_0=null;
 
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4169:28: ( ( ( (lv_nomeTipo_0_0= 'boolean' ) ) | ( (lv_nomeTipo_1_0= 'byte' ) ) | ( (lv_nomeTipo_2_0= 'char' ) ) | ( (lv_nomeTipo_3_0= 'short' ) ) | ( (lv_nomeTipo_4_0= 'int' ) ) | ( (lv_nomeTipo_5_0= 'float' ) ) | ( (lv_nomeTipo_6_0= 'long' ) ) | ( (lv_nomeTipo_7_0= 'double' ) ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4170:1: ( ( (lv_nomeTipo_0_0= 'boolean' ) ) | ( (lv_nomeTipo_1_0= 'byte' ) ) | ( (lv_nomeTipo_2_0= 'char' ) ) | ( (lv_nomeTipo_3_0= 'short' ) ) | ( (lv_nomeTipo_4_0= 'int' ) ) | ( (lv_nomeTipo_5_0= 'float' ) ) | ( (lv_nomeTipo_6_0= 'long' ) ) | ( (lv_nomeTipo_7_0= 'double' ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4457:28: ( ( ( (lv_nome_0_0= 'boolean' ) ) | ( (lv_nome_1_0= 'byte' ) ) | ( (lv_nome_2_0= 'char' ) ) | ( (lv_nome_3_0= 'short' ) ) | ( (lv_nome_4_0= 'int' ) ) | ( (lv_nome_5_0= 'float' ) ) | ( (lv_nome_6_0= 'long' ) ) | ( (lv_nome_7_0= 'double' ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4458:1: ( ( (lv_nome_0_0= 'boolean' ) ) | ( (lv_nome_1_0= 'byte' ) ) | ( (lv_nome_2_0= 'char' ) ) | ( (lv_nome_3_0= 'short' ) ) | ( (lv_nome_4_0= 'int' ) ) | ( (lv_nome_5_0= 'float' ) ) | ( (lv_nome_6_0= 'long' ) ) | ( (lv_nome_7_0= 'double' ) ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4170:1: ( ( (lv_nomeTipo_0_0= 'boolean' ) ) | ( (lv_nomeTipo_1_0= 'byte' ) ) | ( (lv_nomeTipo_2_0= 'char' ) ) | ( (lv_nomeTipo_3_0= 'short' ) ) | ( (lv_nomeTipo_4_0= 'int' ) ) | ( (lv_nomeTipo_5_0= 'float' ) ) | ( (lv_nomeTipo_6_0= 'long' ) ) | ( (lv_nomeTipo_7_0= 'double' ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4458:1: ( ( (lv_nome_0_0= 'boolean' ) ) | ( (lv_nome_1_0= 'byte' ) ) | ( (lv_nome_2_0= 'char' ) ) | ( (lv_nome_3_0= 'short' ) ) | ( (lv_nome_4_0= 'int' ) ) | ( (lv_nome_5_0= 'float' ) ) | ( (lv_nome_6_0= 'long' ) ) | ( (lv_nome_7_0= 'double' ) ) )
             int alt80=8;
             switch ( input.LA(1) ) {
             case 96:
@@ -11880,18 +12360,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             switch (alt80) {
                 case 1 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4170:2: ( (lv_nomeTipo_0_0= 'boolean' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4458:2: ( (lv_nome_0_0= 'boolean' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4170:2: ( (lv_nomeTipo_0_0= 'boolean' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4171:1: (lv_nomeTipo_0_0= 'boolean' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4458:2: ( (lv_nome_0_0= 'boolean' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4459:1: (lv_nome_0_0= 'boolean' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4171:1: (lv_nomeTipo_0_0= 'boolean' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4172:3: lv_nomeTipo_0_0= 'boolean'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4459:1: (lv_nome_0_0= 'boolean' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4460:3: lv_nome_0_0= 'boolean'
                     {
-                    lv_nomeTipo_0_0=(Token)match(input,96,FOLLOW_96_in_ruletype_specifier9312); if (state.failed) return current;
+                    lv_nome_0_0=(Token)match(input,96,FOLLOW_96_in_ruletype_specifier9662); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              newLeafNode(lv_nomeTipo_0_0, grammarAccess.getType_specifierAccess().getNomeTipoBooleanKeyword_0_0());
+                              newLeafNode(lv_nome_0_0, grammarAccess.getType_specifierAccess().getNomeBooleanKeyword_0_0());
                           
                     }
                     if ( state.backtracking==0 ) {
@@ -11899,7 +12379,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       	        if (current==null) {
                       	            current = createModelElement(grammarAccess.getType_specifierRule());
                       	        }
-                             		setWithLastConsumed(current, "nomeTipo", lv_nomeTipo_0_0, "boolean");
+                             		setWithLastConsumed(current, "nome", lv_nome_0_0, "boolean");
                       	    
                     }
 
@@ -11912,18 +12392,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4186:6: ( (lv_nomeTipo_1_0= 'byte' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4474:6: ( (lv_nome_1_0= 'byte' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4186:6: ( (lv_nomeTipo_1_0= 'byte' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4187:1: (lv_nomeTipo_1_0= 'byte' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4474:6: ( (lv_nome_1_0= 'byte' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4475:1: (lv_nome_1_0= 'byte' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4187:1: (lv_nomeTipo_1_0= 'byte' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4188:3: lv_nomeTipo_1_0= 'byte'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4475:1: (lv_nome_1_0= 'byte' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4476:3: lv_nome_1_0= 'byte'
                     {
-                    lv_nomeTipo_1_0=(Token)match(input,97,FOLLOW_97_in_ruletype_specifier9349); if (state.failed) return current;
+                    lv_nome_1_0=(Token)match(input,97,FOLLOW_97_in_ruletype_specifier9699); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              newLeafNode(lv_nomeTipo_1_0, grammarAccess.getType_specifierAccess().getNomeTipoByteKeyword_1_0());
+                              newLeafNode(lv_nome_1_0, grammarAccess.getType_specifierAccess().getNomeByteKeyword_1_0());
                           
                     }
                     if ( state.backtracking==0 ) {
@@ -11931,7 +12411,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       	        if (current==null) {
                       	            current = createModelElement(grammarAccess.getType_specifierRule());
                       	        }
-                             		setWithLastConsumed(current, "nomeTipo", lv_nomeTipo_1_0, "byte");
+                             		setWithLastConsumed(current, "nome", lv_nome_1_0, "byte");
                       	    
                     }
 
@@ -11944,18 +12424,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4202:6: ( (lv_nomeTipo_2_0= 'char' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4490:6: ( (lv_nome_2_0= 'char' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4202:6: ( (lv_nomeTipo_2_0= 'char' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4203:1: (lv_nomeTipo_2_0= 'char' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4490:6: ( (lv_nome_2_0= 'char' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4491:1: (lv_nome_2_0= 'char' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4203:1: (lv_nomeTipo_2_0= 'char' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4204:3: lv_nomeTipo_2_0= 'char'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4491:1: (lv_nome_2_0= 'char' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4492:3: lv_nome_2_0= 'char'
                     {
-                    lv_nomeTipo_2_0=(Token)match(input,98,FOLLOW_98_in_ruletype_specifier9386); if (state.failed) return current;
+                    lv_nome_2_0=(Token)match(input,98,FOLLOW_98_in_ruletype_specifier9736); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              newLeafNode(lv_nomeTipo_2_0, grammarAccess.getType_specifierAccess().getNomeTipoCharKeyword_2_0());
+                              newLeafNode(lv_nome_2_0, grammarAccess.getType_specifierAccess().getNomeCharKeyword_2_0());
                           
                     }
                     if ( state.backtracking==0 ) {
@@ -11963,7 +12443,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       	        if (current==null) {
                       	            current = createModelElement(grammarAccess.getType_specifierRule());
                       	        }
-                             		setWithLastConsumed(current, "nomeTipo", lv_nomeTipo_2_0, "char");
+                             		setWithLastConsumed(current, "nome", lv_nome_2_0, "char");
                       	    
                     }
 
@@ -11976,18 +12456,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4218:6: ( (lv_nomeTipo_3_0= 'short' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4506:6: ( (lv_nome_3_0= 'short' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4218:6: ( (lv_nomeTipo_3_0= 'short' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4219:1: (lv_nomeTipo_3_0= 'short' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4506:6: ( (lv_nome_3_0= 'short' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4507:1: (lv_nome_3_0= 'short' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4219:1: (lv_nomeTipo_3_0= 'short' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4220:3: lv_nomeTipo_3_0= 'short'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4507:1: (lv_nome_3_0= 'short' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4508:3: lv_nome_3_0= 'short'
                     {
-                    lv_nomeTipo_3_0=(Token)match(input,99,FOLLOW_99_in_ruletype_specifier9423); if (state.failed) return current;
+                    lv_nome_3_0=(Token)match(input,99,FOLLOW_99_in_ruletype_specifier9773); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              newLeafNode(lv_nomeTipo_3_0, grammarAccess.getType_specifierAccess().getNomeTipoShortKeyword_3_0());
+                              newLeafNode(lv_nome_3_0, grammarAccess.getType_specifierAccess().getNomeShortKeyword_3_0());
                           
                     }
                     if ( state.backtracking==0 ) {
@@ -11995,7 +12475,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       	        if (current==null) {
                       	            current = createModelElement(grammarAccess.getType_specifierRule());
                       	        }
-                             		setWithLastConsumed(current, "nomeTipo", lv_nomeTipo_3_0, "short");
+                             		setWithLastConsumed(current, "nome", lv_nome_3_0, "short");
                       	    
                     }
 
@@ -12008,18 +12488,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4234:6: ( (lv_nomeTipo_4_0= 'int' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4522:6: ( (lv_nome_4_0= 'int' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4234:6: ( (lv_nomeTipo_4_0= 'int' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4235:1: (lv_nomeTipo_4_0= 'int' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4522:6: ( (lv_nome_4_0= 'int' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4523:1: (lv_nome_4_0= 'int' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4235:1: (lv_nomeTipo_4_0= 'int' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4236:3: lv_nomeTipo_4_0= 'int'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4523:1: (lv_nome_4_0= 'int' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4524:3: lv_nome_4_0= 'int'
                     {
-                    lv_nomeTipo_4_0=(Token)match(input,100,FOLLOW_100_in_ruletype_specifier9460); if (state.failed) return current;
+                    lv_nome_4_0=(Token)match(input,100,FOLLOW_100_in_ruletype_specifier9810); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              newLeafNode(lv_nomeTipo_4_0, grammarAccess.getType_specifierAccess().getNomeTipoIntKeyword_4_0());
+                              newLeafNode(lv_nome_4_0, grammarAccess.getType_specifierAccess().getNomeIntKeyword_4_0());
                           
                     }
                     if ( state.backtracking==0 ) {
@@ -12027,7 +12507,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       	        if (current==null) {
                       	            current = createModelElement(grammarAccess.getType_specifierRule());
                       	        }
-                             		setWithLastConsumed(current, "nomeTipo", lv_nomeTipo_4_0, "int");
+                             		setWithLastConsumed(current, "nome", lv_nome_4_0, "int");
                       	    
                     }
 
@@ -12040,18 +12520,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4250:6: ( (lv_nomeTipo_5_0= 'float' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4538:6: ( (lv_nome_5_0= 'float' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4250:6: ( (lv_nomeTipo_5_0= 'float' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4251:1: (lv_nomeTipo_5_0= 'float' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4538:6: ( (lv_nome_5_0= 'float' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4539:1: (lv_nome_5_0= 'float' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4251:1: (lv_nomeTipo_5_0= 'float' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4252:3: lv_nomeTipo_5_0= 'float'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4539:1: (lv_nome_5_0= 'float' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4540:3: lv_nome_5_0= 'float'
                     {
-                    lv_nomeTipo_5_0=(Token)match(input,101,FOLLOW_101_in_ruletype_specifier9497); if (state.failed) return current;
+                    lv_nome_5_0=(Token)match(input,101,FOLLOW_101_in_ruletype_specifier9847); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              newLeafNode(lv_nomeTipo_5_0, grammarAccess.getType_specifierAccess().getNomeTipoFloatKeyword_5_0());
+                              newLeafNode(lv_nome_5_0, grammarAccess.getType_specifierAccess().getNomeFloatKeyword_5_0());
                           
                     }
                     if ( state.backtracking==0 ) {
@@ -12059,7 +12539,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       	        if (current==null) {
                       	            current = createModelElement(grammarAccess.getType_specifierRule());
                       	        }
-                             		setWithLastConsumed(current, "nomeTipo", lv_nomeTipo_5_0, "float");
+                             		setWithLastConsumed(current, "nome", lv_nome_5_0, "float");
                       	    
                     }
 
@@ -12072,18 +12552,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4266:6: ( (lv_nomeTipo_6_0= 'long' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4554:6: ( (lv_nome_6_0= 'long' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4266:6: ( (lv_nomeTipo_6_0= 'long' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4267:1: (lv_nomeTipo_6_0= 'long' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4554:6: ( (lv_nome_6_0= 'long' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4555:1: (lv_nome_6_0= 'long' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4267:1: (lv_nomeTipo_6_0= 'long' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4268:3: lv_nomeTipo_6_0= 'long'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4555:1: (lv_nome_6_0= 'long' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4556:3: lv_nome_6_0= 'long'
                     {
-                    lv_nomeTipo_6_0=(Token)match(input,102,FOLLOW_102_in_ruletype_specifier9534); if (state.failed) return current;
+                    lv_nome_6_0=(Token)match(input,102,FOLLOW_102_in_ruletype_specifier9884); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              newLeafNode(lv_nomeTipo_6_0, grammarAccess.getType_specifierAccess().getNomeTipoLongKeyword_6_0());
+                              newLeafNode(lv_nome_6_0, grammarAccess.getType_specifierAccess().getNomeLongKeyword_6_0());
                           
                     }
                     if ( state.backtracking==0 ) {
@@ -12091,7 +12571,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       	        if (current==null) {
                       	            current = createModelElement(grammarAccess.getType_specifierRule());
                       	        }
-                             		setWithLastConsumed(current, "nomeTipo", lv_nomeTipo_6_0, "long");
+                             		setWithLastConsumed(current, "nome", lv_nome_6_0, "long");
                       	    
                     }
 
@@ -12104,18 +12584,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4282:6: ( (lv_nomeTipo_7_0= 'double' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4570:6: ( (lv_nome_7_0= 'double' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4282:6: ( (lv_nomeTipo_7_0= 'double' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4283:1: (lv_nomeTipo_7_0= 'double' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4570:6: ( (lv_nome_7_0= 'double' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4571:1: (lv_nome_7_0= 'double' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4283:1: (lv_nomeTipo_7_0= 'double' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4284:3: lv_nomeTipo_7_0= 'double'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4571:1: (lv_nome_7_0= 'double' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4572:3: lv_nome_7_0= 'double'
                     {
-                    lv_nomeTipo_7_0=(Token)match(input,103,FOLLOW_103_in_ruletype_specifier9571); if (state.failed) return current;
+                    lv_nome_7_0=(Token)match(input,103,FOLLOW_103_in_ruletype_specifier9921); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              newLeafNode(lv_nomeTipo_7_0, grammarAccess.getType_specifierAccess().getNomeTipoDoubleKeyword_7_0());
+                              newLeafNode(lv_nome_7_0, grammarAccess.getType_specifierAccess().getNomeDoubleKeyword_7_0());
                           
                     }
                     if ( state.backtracking==0 ) {
@@ -12123,7 +12603,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       	        if (current==null) {
                       	            current = createModelElement(grammarAccess.getType_specifierRule());
                       	        }
-                             		setWithLastConsumed(current, "nomeTipo", lv_nomeTipo_7_0, "double");
+                             		setWithLastConsumed(current, "nome", lv_nome_7_0, "double");
                       	    
                     }
 
@@ -12158,7 +12638,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuletype"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4305:1: entryRuletype returns [EObject current=null] : iv_ruletype= ruletype EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4593:1: entryRuletype returns [EObject current=null] : iv_ruletype= ruletype EOF ;
     public final EObject entryRuletype() throws RecognitionException {
         EObject current = null;
 
@@ -12166,13 +12646,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4306:2: (iv_ruletype= ruletype EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4307:2: iv_ruletype= ruletype EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4594:2: (iv_ruletype= ruletype EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4595:2: iv_ruletype= ruletype EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTypeRule()); 
             }
-            pushFollow(FOLLOW_ruletype_in_entryRuletype9620);
+            pushFollow(FOLLOW_ruletype_in_entryRuletype9970);
             iv_ruletype=ruletype();
 
             state._fsp--;
@@ -12180,7 +12660,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruletype; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuletype9630); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuletype9980); if (state.failed) return current;
 
             }
 
@@ -12198,33 +12678,27 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruletype"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4314:1: ruletype returns [EObject current=null] : ( ( ( (lv_tipo_0_1= ruletype_specifier | lv_tipo_0_2= rulename ) ) ) (otherlv_1= '[' otherlv_2= ']' )* ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4602:1: ruletype returns [EObject current=null] : ( ( ( (lv_tipo_0_0= ruletype_specifier ) ) | ( (lv_tipo_1_0= rulename ) ) ) (otherlv_2= '[' otherlv_3= ']' )* ) ;
     public final EObject ruletype() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
         Token otherlv_2=null;
-        EObject lv_tipo_0_1 = null;
+        Token otherlv_3=null;
+        EObject lv_tipo_0_0 = null;
 
-        EObject lv_tipo_0_2 = null;
+        EObject lv_tipo_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4317:28: ( ( ( ( (lv_tipo_0_1= ruletype_specifier | lv_tipo_0_2= rulename ) ) ) (otherlv_1= '[' otherlv_2= ']' )* ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4318:1: ( ( ( (lv_tipo_0_1= ruletype_specifier | lv_tipo_0_2= rulename ) ) ) (otherlv_1= '[' otherlv_2= ']' )* )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4605:28: ( ( ( ( (lv_tipo_0_0= ruletype_specifier ) ) | ( (lv_tipo_1_0= rulename ) ) ) (otherlv_2= '[' otherlv_3= ']' )* ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4606:1: ( ( ( (lv_tipo_0_0= ruletype_specifier ) ) | ( (lv_tipo_1_0= rulename ) ) ) (otherlv_2= '[' otherlv_3= ']' )* )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4318:1: ( ( ( (lv_tipo_0_1= ruletype_specifier | lv_tipo_0_2= rulename ) ) ) (otherlv_1= '[' otherlv_2= ']' )* )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4318:2: ( ( (lv_tipo_0_1= ruletype_specifier | lv_tipo_0_2= rulename ) ) ) (otherlv_1= '[' otherlv_2= ']' )*
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4606:1: ( ( ( (lv_tipo_0_0= ruletype_specifier ) ) | ( (lv_tipo_1_0= rulename ) ) ) (otherlv_2= '[' otherlv_3= ']' )* )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4606:2: ( ( (lv_tipo_0_0= ruletype_specifier ) ) | ( (lv_tipo_1_0= rulename ) ) ) (otherlv_2= '[' otherlv_3= ']' )*
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4318:2: ( ( (lv_tipo_0_1= ruletype_specifier | lv_tipo_0_2= rulename ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4319:1: ( (lv_tipo_0_1= ruletype_specifier | lv_tipo_0_2= rulename ) )
-            {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4319:1: ( (lv_tipo_0_1= ruletype_specifier | lv_tipo_0_2= rulename ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4320:1: (lv_tipo_0_1= ruletype_specifier | lv_tipo_0_2= rulename )
-            {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4320:1: (lv_tipo_0_1= ruletype_specifier | lv_tipo_0_2= rulename )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4606:2: ( ( (lv_tipo_0_0= ruletype_specifier ) ) | ( (lv_tipo_1_0= rulename ) ) )
             int alt81=2;
             int LA81_0 = input.LA(1);
 
@@ -12243,15 +12717,21 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             }
             switch (alt81) {
                 case 1 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4321:3: lv_tipo_0_1= ruletype_specifier
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4606:3: ( (lv_tipo_0_0= ruletype_specifier ) )
+                    {
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4606:3: ( (lv_tipo_0_0= ruletype_specifier ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4607:1: (lv_tipo_0_0= ruletype_specifier )
+                    {
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4607:1: (lv_tipo_0_0= ruletype_specifier )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4608:3: lv_tipo_0_0= ruletype_specifier
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getTypeAccess().getTipoType_specifierParserRuleCall_0_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruletype_specifier_in_ruletype9678);
-                    lv_tipo_0_1=ruletype_specifier();
+                    pushFollow(FOLLOW_ruletype_specifier_in_ruletype10027);
+                    lv_tipo_0_0=ruletype_specifier();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -12263,24 +12743,36 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                              		set(
                              			current, 
                              			"tipo",
-                              		lv_tipo_0_1, 
+                              		lv_tipo_0_0, 
                               		"type_specifier");
                       	        afterParserOrEnumRuleCall();
                       	    
                     }
 
                     }
+
+
+                    }
+
+
+                    }
                     break;
                 case 2 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4336:8: lv_tipo_0_2= rulename
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4625:6: ( (lv_tipo_1_0= rulename ) )
+                    {
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4625:6: ( (lv_tipo_1_0= rulename ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4626:1: (lv_tipo_1_0= rulename )
+                    {
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4626:1: (lv_tipo_1_0= rulename )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4627:3: lv_tipo_1_0= rulename
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getTypeAccess().getTipoNameParserRuleCall_0_0_1()); 
+                      	        newCompositeNode(grammarAccess.getTypeAccess().getTipoNameParserRuleCall_0_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_rulename_in_ruletype9697);
-                    lv_tipo_0_2=rulename();
+                    pushFollow(FOLLOW_rulename_in_ruletype10054);
+                    lv_tipo_1_0=rulename();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -12292,24 +12784,24 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                              		set(
                              			current, 
                              			"tipo",
-                              		lv_tipo_0_2, 
+                              		lv_tipo_1_0, 
                               		"name");
                       	        afterParserOrEnumRuleCall();
                       	    
                     }
 
                     }
+
+
+                    }
+
+
+                    }
                     break;
 
             }
 
-
-            }
-
-
-            }
-
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4354:2: (otherlv_1= '[' otherlv_2= ']' )*
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4643:3: (otherlv_2= '[' otherlv_3= ']' )*
             loop82:
             do {
                 int alt82=2;
@@ -12322,18 +12814,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                 switch (alt82) {
             	case 1 :
-            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4354:4: otherlv_1= '[' otherlv_2= ']'
+            	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4643:5: otherlv_2= '[' otherlv_3= ']'
             	    {
-            	    otherlv_1=(Token)match(input,33,FOLLOW_33_in_ruletype9713); if (state.failed) return current;
+            	    otherlv_2=(Token)match(input,33,FOLLOW_33_in_ruletype10068); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	          	newLeafNode(otherlv_1, grammarAccess.getTypeAccess().getLeftSquareBracketKeyword_1_0());
+            	          	newLeafNode(otherlv_2, grammarAccess.getTypeAccess().getLeftSquareBracketKeyword_1_0());
             	          
             	    }
-            	    otherlv_2=(Token)match(input,34,FOLLOW_34_in_ruletype9725); if (state.failed) return current;
+            	    otherlv_3=(Token)match(input,34,FOLLOW_34_in_ruletype10080); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	          	newLeafNode(otherlv_2, grammarAccess.getTypeAccess().getRightSquareBracketKeyword_1_1());
+            	          	newLeafNode(otherlv_3, grammarAccess.getTypeAccess().getRightSquareBracketKeyword_1_1());
             	          
             	    }
 
@@ -12368,7 +12860,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMODIFIER"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4370:1: entryRuleMODIFIER returns [EObject current=null] : iv_ruleMODIFIER= ruleMODIFIER EOF ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4659:1: entryRuleMODIFIER returns [EObject current=null] : iv_ruleMODIFIER= ruleMODIFIER EOF ;
     public final EObject entryRuleMODIFIER() throws RecognitionException {
         EObject current = null;
 
@@ -12376,13 +12868,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4371:2: (iv_ruleMODIFIER= ruleMODIFIER EOF )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4372:2: iv_ruleMODIFIER= ruleMODIFIER EOF
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4660:2: (iv_ruleMODIFIER= ruleMODIFIER EOF )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4661:2: iv_ruleMODIFIER= ruleMODIFIER EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMODIFIERRule()); 
             }
-            pushFollow(FOLLOW_ruleMODIFIER_in_entryRuleMODIFIER9763);
+            pushFollow(FOLLOW_ruleMODIFIER_in_entryRuleMODIFIER10118);
             iv_ruleMODIFIER=ruleMODIFIER();
 
             state._fsp--;
@@ -12390,7 +12882,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleMODIFIER; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMODIFIER9773); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMODIFIER10128); if (state.failed) return current;
 
             }
 
@@ -12408,7 +12900,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMODIFIER"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4379:1: ruleMODIFIER returns [EObject current=null] : ( ( (lv_modificador_0_0= 'public' ) ) | ( (lv_modificador_1_0= 'private' ) ) | ( (lv_modificador_2_0= 'protected' ) ) | ( (lv_modificador_3_0= 'static' ) ) | ( (lv_modificador_4_0= 'final' ) ) | ( (lv_modificador_5_0= 'native' ) ) | ( (lv_modificador_6_0= 'synchronized' ) ) | ( (lv_modificador_7_0= 'abstract' ) ) | ( (lv_modificador_8_0= 'threadsafe' ) ) | ( (lv_modificador_9_0= 'transient' ) ) ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4668:1: ruleMODIFIER returns [EObject current=null] : ( ( (lv_modificador_0_0= 'public' ) ) | ( (lv_modificador_1_0= 'private' ) ) | ( (lv_modificador_2_0= 'protected' ) ) | ( (lv_modificador_3_0= 'static' ) ) | ( (lv_modificador_4_0= 'final' ) ) | ( (lv_modificador_5_0= 'native' ) ) | ( (lv_modificador_6_0= 'synchronized' ) ) | ( (lv_modificador_7_0= 'abstract' ) ) | ( (lv_modificador_8_0= 'threadsafe' ) ) | ( (lv_modificador_9_0= 'transient' ) ) ) ;
     public final EObject ruleMODIFIER() throws RecognitionException {
         EObject current = null;
 
@@ -12426,10 +12918,10 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4382:28: ( ( ( (lv_modificador_0_0= 'public' ) ) | ( (lv_modificador_1_0= 'private' ) ) | ( (lv_modificador_2_0= 'protected' ) ) | ( (lv_modificador_3_0= 'static' ) ) | ( (lv_modificador_4_0= 'final' ) ) | ( (lv_modificador_5_0= 'native' ) ) | ( (lv_modificador_6_0= 'synchronized' ) ) | ( (lv_modificador_7_0= 'abstract' ) ) | ( (lv_modificador_8_0= 'threadsafe' ) ) | ( (lv_modificador_9_0= 'transient' ) ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4383:1: ( ( (lv_modificador_0_0= 'public' ) ) | ( (lv_modificador_1_0= 'private' ) ) | ( (lv_modificador_2_0= 'protected' ) ) | ( (lv_modificador_3_0= 'static' ) ) | ( (lv_modificador_4_0= 'final' ) ) | ( (lv_modificador_5_0= 'native' ) ) | ( (lv_modificador_6_0= 'synchronized' ) ) | ( (lv_modificador_7_0= 'abstract' ) ) | ( (lv_modificador_8_0= 'threadsafe' ) ) | ( (lv_modificador_9_0= 'transient' ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4671:28: ( ( ( (lv_modificador_0_0= 'public' ) ) | ( (lv_modificador_1_0= 'private' ) ) | ( (lv_modificador_2_0= 'protected' ) ) | ( (lv_modificador_3_0= 'static' ) ) | ( (lv_modificador_4_0= 'final' ) ) | ( (lv_modificador_5_0= 'native' ) ) | ( (lv_modificador_6_0= 'synchronized' ) ) | ( (lv_modificador_7_0= 'abstract' ) ) | ( (lv_modificador_8_0= 'threadsafe' ) ) | ( (lv_modificador_9_0= 'transient' ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4672:1: ( ( (lv_modificador_0_0= 'public' ) ) | ( (lv_modificador_1_0= 'private' ) ) | ( (lv_modificador_2_0= 'protected' ) ) | ( (lv_modificador_3_0= 'static' ) ) | ( (lv_modificador_4_0= 'final' ) ) | ( (lv_modificador_5_0= 'native' ) ) | ( (lv_modificador_6_0= 'synchronized' ) ) | ( (lv_modificador_7_0= 'abstract' ) ) | ( (lv_modificador_8_0= 'threadsafe' ) ) | ( (lv_modificador_9_0= 'transient' ) ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4383:1: ( ( (lv_modificador_0_0= 'public' ) ) | ( (lv_modificador_1_0= 'private' ) ) | ( (lv_modificador_2_0= 'protected' ) ) | ( (lv_modificador_3_0= 'static' ) ) | ( (lv_modificador_4_0= 'final' ) ) | ( (lv_modificador_5_0= 'native' ) ) | ( (lv_modificador_6_0= 'synchronized' ) ) | ( (lv_modificador_7_0= 'abstract' ) ) | ( (lv_modificador_8_0= 'threadsafe' ) ) | ( (lv_modificador_9_0= 'transient' ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4672:1: ( ( (lv_modificador_0_0= 'public' ) ) | ( (lv_modificador_1_0= 'private' ) ) | ( (lv_modificador_2_0= 'protected' ) ) | ( (lv_modificador_3_0= 'static' ) ) | ( (lv_modificador_4_0= 'final' ) ) | ( (lv_modificador_5_0= 'native' ) ) | ( (lv_modificador_6_0= 'synchronized' ) ) | ( (lv_modificador_7_0= 'abstract' ) ) | ( (lv_modificador_8_0= 'threadsafe' ) ) | ( (lv_modificador_9_0= 'transient' ) ) )
             int alt83=10;
             switch ( input.LA(1) ) {
             case 104:
@@ -12492,15 +12984,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             switch (alt83) {
                 case 1 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4383:2: ( (lv_modificador_0_0= 'public' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4672:2: ( (lv_modificador_0_0= 'public' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4383:2: ( (lv_modificador_0_0= 'public' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4384:1: (lv_modificador_0_0= 'public' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4672:2: ( (lv_modificador_0_0= 'public' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4673:1: (lv_modificador_0_0= 'public' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4384:1: (lv_modificador_0_0= 'public' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4385:3: lv_modificador_0_0= 'public'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4673:1: (lv_modificador_0_0= 'public' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4674:3: lv_modificador_0_0= 'public'
                     {
-                    lv_modificador_0_0=(Token)match(input,104,FOLLOW_104_in_ruleMODIFIER9816); if (state.failed) return current;
+                    lv_modificador_0_0=(Token)match(input,104,FOLLOW_104_in_ruleMODIFIER10171); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_modificador_0_0, grammarAccess.getMODIFIERAccess().getModificadorPublicKeyword_0_0());
@@ -12524,15 +13016,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4399:6: ( (lv_modificador_1_0= 'private' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4688:6: ( (lv_modificador_1_0= 'private' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4399:6: ( (lv_modificador_1_0= 'private' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4400:1: (lv_modificador_1_0= 'private' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4688:6: ( (lv_modificador_1_0= 'private' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4689:1: (lv_modificador_1_0= 'private' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4400:1: (lv_modificador_1_0= 'private' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4401:3: lv_modificador_1_0= 'private'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4689:1: (lv_modificador_1_0= 'private' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4690:3: lv_modificador_1_0= 'private'
                     {
-                    lv_modificador_1_0=(Token)match(input,105,FOLLOW_105_in_ruleMODIFIER9853); if (state.failed) return current;
+                    lv_modificador_1_0=(Token)match(input,105,FOLLOW_105_in_ruleMODIFIER10208); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_modificador_1_0, grammarAccess.getMODIFIERAccess().getModificadorPrivateKeyword_1_0());
@@ -12556,15 +13048,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4415:6: ( (lv_modificador_2_0= 'protected' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4704:6: ( (lv_modificador_2_0= 'protected' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4415:6: ( (lv_modificador_2_0= 'protected' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4416:1: (lv_modificador_2_0= 'protected' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4704:6: ( (lv_modificador_2_0= 'protected' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4705:1: (lv_modificador_2_0= 'protected' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4416:1: (lv_modificador_2_0= 'protected' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4417:3: lv_modificador_2_0= 'protected'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4705:1: (lv_modificador_2_0= 'protected' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4706:3: lv_modificador_2_0= 'protected'
                     {
-                    lv_modificador_2_0=(Token)match(input,106,FOLLOW_106_in_ruleMODIFIER9890); if (state.failed) return current;
+                    lv_modificador_2_0=(Token)match(input,106,FOLLOW_106_in_ruleMODIFIER10245); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_modificador_2_0, grammarAccess.getMODIFIERAccess().getModificadorProtectedKeyword_2_0());
@@ -12588,15 +13080,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4431:6: ( (lv_modificador_3_0= 'static' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4720:6: ( (lv_modificador_3_0= 'static' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4431:6: ( (lv_modificador_3_0= 'static' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4432:1: (lv_modificador_3_0= 'static' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4720:6: ( (lv_modificador_3_0= 'static' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4721:1: (lv_modificador_3_0= 'static' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4432:1: (lv_modificador_3_0= 'static' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4433:3: lv_modificador_3_0= 'static'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4721:1: (lv_modificador_3_0= 'static' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4722:3: lv_modificador_3_0= 'static'
                     {
-                    lv_modificador_3_0=(Token)match(input,54,FOLLOW_54_in_ruleMODIFIER9927); if (state.failed) return current;
+                    lv_modificador_3_0=(Token)match(input,54,FOLLOW_54_in_ruleMODIFIER10282); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_modificador_3_0, grammarAccess.getMODIFIERAccess().getModificadorStaticKeyword_3_0());
@@ -12620,15 +13112,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4447:6: ( (lv_modificador_4_0= 'final' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4736:6: ( (lv_modificador_4_0= 'final' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4447:6: ( (lv_modificador_4_0= 'final' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4448:1: (lv_modificador_4_0= 'final' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4736:6: ( (lv_modificador_4_0= 'final' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4737:1: (lv_modificador_4_0= 'final' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4448:1: (lv_modificador_4_0= 'final' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4449:3: lv_modificador_4_0= 'final'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4737:1: (lv_modificador_4_0= 'final' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4738:3: lv_modificador_4_0= 'final'
                     {
-                    lv_modificador_4_0=(Token)match(input,107,FOLLOW_107_in_ruleMODIFIER9964); if (state.failed) return current;
+                    lv_modificador_4_0=(Token)match(input,107,FOLLOW_107_in_ruleMODIFIER10319); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_modificador_4_0, grammarAccess.getMODIFIERAccess().getModificadorFinalKeyword_4_0());
@@ -12652,15 +13144,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4463:6: ( (lv_modificador_5_0= 'native' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4752:6: ( (lv_modificador_5_0= 'native' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4463:6: ( (lv_modificador_5_0= 'native' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4464:1: (lv_modificador_5_0= 'native' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4752:6: ( (lv_modificador_5_0= 'native' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4753:1: (lv_modificador_5_0= 'native' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4464:1: (lv_modificador_5_0= 'native' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4465:3: lv_modificador_5_0= 'native'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4753:1: (lv_modificador_5_0= 'native' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4754:3: lv_modificador_5_0= 'native'
                     {
-                    lv_modificador_5_0=(Token)match(input,108,FOLLOW_108_in_ruleMODIFIER10001); if (state.failed) return current;
+                    lv_modificador_5_0=(Token)match(input,108,FOLLOW_108_in_ruleMODIFIER10356); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_modificador_5_0, grammarAccess.getMODIFIERAccess().getModificadorNativeKeyword_5_0());
@@ -12684,15 +13176,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4479:6: ( (lv_modificador_6_0= 'synchronized' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4768:6: ( (lv_modificador_6_0= 'synchronized' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4479:6: ( (lv_modificador_6_0= 'synchronized' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4480:1: (lv_modificador_6_0= 'synchronized' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4768:6: ( (lv_modificador_6_0= 'synchronized' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4769:1: (lv_modificador_6_0= 'synchronized' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4480:1: (lv_modificador_6_0= 'synchronized' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4481:3: lv_modificador_6_0= 'synchronized'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4769:1: (lv_modificador_6_0= 'synchronized' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4770:3: lv_modificador_6_0= 'synchronized'
                     {
-                    lv_modificador_6_0=(Token)match(input,35,FOLLOW_35_in_ruleMODIFIER10038); if (state.failed) return current;
+                    lv_modificador_6_0=(Token)match(input,35,FOLLOW_35_in_ruleMODIFIER10393); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_modificador_6_0, grammarAccess.getMODIFIERAccess().getModificadorSynchronizedKeyword_6_0());
@@ -12716,15 +13208,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4495:6: ( (lv_modificador_7_0= 'abstract' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4784:6: ( (lv_modificador_7_0= 'abstract' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4495:6: ( (lv_modificador_7_0= 'abstract' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4496:1: (lv_modificador_7_0= 'abstract' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4784:6: ( (lv_modificador_7_0= 'abstract' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4785:1: (lv_modificador_7_0= 'abstract' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4496:1: (lv_modificador_7_0= 'abstract' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4497:3: lv_modificador_7_0= 'abstract'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4785:1: (lv_modificador_7_0= 'abstract' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4786:3: lv_modificador_7_0= 'abstract'
                     {
-                    lv_modificador_7_0=(Token)match(input,109,FOLLOW_109_in_ruleMODIFIER10075); if (state.failed) return current;
+                    lv_modificador_7_0=(Token)match(input,109,FOLLOW_109_in_ruleMODIFIER10430); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_modificador_7_0, grammarAccess.getMODIFIERAccess().getModificadorAbstractKeyword_7_0());
@@ -12748,15 +13240,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4511:6: ( (lv_modificador_8_0= 'threadsafe' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4800:6: ( (lv_modificador_8_0= 'threadsafe' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4511:6: ( (lv_modificador_8_0= 'threadsafe' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4512:1: (lv_modificador_8_0= 'threadsafe' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4800:6: ( (lv_modificador_8_0= 'threadsafe' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4801:1: (lv_modificador_8_0= 'threadsafe' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4512:1: (lv_modificador_8_0= 'threadsafe' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4513:3: lv_modificador_8_0= 'threadsafe'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4801:1: (lv_modificador_8_0= 'threadsafe' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4802:3: lv_modificador_8_0= 'threadsafe'
                     {
-                    lv_modificador_8_0=(Token)match(input,110,FOLLOW_110_in_ruleMODIFIER10112); if (state.failed) return current;
+                    lv_modificador_8_0=(Token)match(input,110,FOLLOW_110_in_ruleMODIFIER10467); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_modificador_8_0, grammarAccess.getMODIFIERAccess().getModificadorThreadsafeKeyword_8_0());
@@ -12780,15 +13272,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4527:6: ( (lv_modificador_9_0= 'transient' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4816:6: ( (lv_modificador_9_0= 'transient' ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4527:6: ( (lv_modificador_9_0= 'transient' ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4528:1: (lv_modificador_9_0= 'transient' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4816:6: ( (lv_modificador_9_0= 'transient' ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4817:1: (lv_modificador_9_0= 'transient' )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4528:1: (lv_modificador_9_0= 'transient' )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4529:3: lv_modificador_9_0= 'transient'
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4817:1: (lv_modificador_9_0= 'transient' )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4818:3: lv_modificador_9_0= 'transient'
                     {
-                    lv_modificador_9_0=(Token)match(input,111,FOLLOW_111_in_ruleMODIFIER10149); if (state.failed) return current;
+                    lv_modificador_9_0=(Token)match(input,111,FOLLOW_111_in_ruleMODIFIER10504); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_modificador_9_0, grammarAccess.getMODIFIERAccess().getModificadorTransientKeyword_9_0());
@@ -13363,31 +13855,50 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred143_InternalSimpleJava
     public final void synpred143_InternalSimpleJava_fragment() throws RecognitionException {   
-        EObject this_expression_11 = null;
+        EObject this_mais_aux_10 = null;
+
+        EObject lv_exp_11_0 = null;
 
 
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:6: ( ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:6: ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:6: ( ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:6: ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) )
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:6: ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:7: ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:6: ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:7: ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) )
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:7: ( ( '+' | '+=' )=> rulemais_aux )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:8: ( '+' | '+=' )=> rulemais_aux
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:7: ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:8: ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux
         {
-        pushFollow(FOLLOW_rulemais_aux_in_synpred143_InternalSimpleJava6626);
-        rulemais_aux();
+        pushFollow(FOLLOW_rulemais_aux_in_synpred143_InternalSimpleJava6635);
+        this_mais_aux_10=rulemais_aux();
 
         state._fsp--;
         if (state.failed) return ;
 
         }
 
-        pushFollow(FOLLOW_ruleexpression_in_synpred143_InternalSimpleJava6651);
-        this_expression_11=ruleexpression();
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3137:2: ( (lv_exp_11_0= ruleexpression ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3138:1: (lv_exp_11_0= ruleexpression )
+        {
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3138:1: (lv_exp_11_0= ruleexpression )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3139:3: lv_exp_11_0= ruleexpression
+        {
+        if ( state.backtracking==0 ) {
+           
+          	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_1_1_0()); 
+          	    
+        }
+        pushFollow(FOLLOW_ruleexpression_in_synpred143_InternalSimpleJava6656);
+        lv_exp_11_0=ruleexpression();
 
         state._fsp--;
         if (state.failed) return ;
+
+        }
+
+
+        }
+
 
         }
 
@@ -13398,35 +13909,37 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred156_InternalSimpleJava
     public final void synpred156_InternalSimpleJava_fragment() throws RecognitionException {   
-        Token otherlv_15=null;
-        Token otherlv_16=null;
-        Token otherlv_17=null;
-        Token otherlv_18=null;
-        Token otherlv_19=null;
-        Token otherlv_20=null;
-        Token otherlv_21=null;
-        Token otherlv_22=null;
-        EObject this_expression_23 = null;
+        Token lv_opedador_14_0=null;
+        Token lv_opedador_15_0=null;
+        Token lv_opedador_16_0=null;
+        Token lv_opedador_17_0=null;
+        Token lv_opedador_18_0=null;
+        Token lv_opedador_19_0=null;
+        Token lv_opedador_20_0=null;
+        Token lv_opedador_21_0=null;
+        EObject this_mais_aux_13 = null;
+
+        EObject lv_exp_22_0 = null;
 
 
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:6: ( ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:6: ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:6: ( ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:6: ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) )
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:6: ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:7: ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:6: ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:7: ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) )
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:7: ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:7: ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) )
         int alt100=9;
         alt100 = dfa100.predict(input);
         switch (alt100) {
             case 1 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:8: ( ( '+' | '+=' )=> rulemais_aux )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:8: ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux )
                 {
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:8: ( ( '+' | '+=' )=> rulemais_aux )
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:9: ( '+' | '+=' )=> rulemais_aux
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:8: ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:9: ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux
                 {
-                pushFollow(FOLLOW_rulemais_aux_in_synpred156_InternalSimpleJava6731);
-                rulemais_aux();
+                pushFollow(FOLLOW_rulemais_aux_in_synpred156_InternalSimpleJava6776);
+                this_mais_aux_13=rulemais_aux();
 
                 state._fsp--;
                 if (state.failed) return ;
@@ -13437,69 +13950,182 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                 }
                 break;
             case 2 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3166:7: otherlv_15= '-'
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3202:6: ( (lv_opedador_14_0= '-' ) )
                 {
-                otherlv_15=(Token)match(input,63,FOLLOW_63_in_synpred156_InternalSimpleJava6749); if (state.failed) return ;
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3202:6: ( (lv_opedador_14_0= '-' ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3203:1: (lv_opedador_14_0= '-' )
+                {
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3203:1: (lv_opedador_14_0= '-' )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3204:3: lv_opedador_14_0= '-'
+                {
+                lv_opedador_14_0=(Token)match(input,63,FOLLOW_63_in_synpred156_InternalSimpleJava6800); if (state.failed) return ;
+
+                }
+
+
+                }
+
 
                 }
                 break;
             case 3 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3171:7: otherlv_16= '-='
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:6: ( (lv_opedador_15_0= '-=' ) )
                 {
-                otherlv_16=(Token)match(input,64,FOLLOW_64_in_synpred156_InternalSimpleJava6767); if (state.failed) return ;
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:6: ( (lv_opedador_15_0= '-=' ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3219:1: (lv_opedador_15_0= '-=' )
+                {
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3219:1: (lv_opedador_15_0= '-=' )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3220:3: lv_opedador_15_0= '-='
+                {
+                lv_opedador_15_0=(Token)match(input,64,FOLLOW_64_in_synpred156_InternalSimpleJava6837); if (state.failed) return ;
+
+                }
+
+
+                }
+
 
                 }
                 break;
             case 4 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3176:7: otherlv_17= '*'
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3234:6: ( (lv_opedador_16_0= '*' ) )
                 {
-                otherlv_17=(Token)match(input,65,FOLLOW_65_in_synpred156_InternalSimpleJava6785); if (state.failed) return ;
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3234:6: ( (lv_opedador_16_0= '*' ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3235:1: (lv_opedador_16_0= '*' )
+                {
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3235:1: (lv_opedador_16_0= '*' )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3236:3: lv_opedador_16_0= '*'
+                {
+                lv_opedador_16_0=(Token)match(input,65,FOLLOW_65_in_synpred156_InternalSimpleJava6874); if (state.failed) return ;
+
+                }
+
+
+                }
+
 
                 }
                 break;
             case 5 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3181:7: otherlv_18= '*='
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3250:6: ( (lv_opedador_17_0= '*=' ) )
                 {
-                otherlv_18=(Token)match(input,66,FOLLOW_66_in_synpred156_InternalSimpleJava6803); if (state.failed) return ;
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3250:6: ( (lv_opedador_17_0= '*=' ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3251:1: (lv_opedador_17_0= '*=' )
+                {
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3251:1: (lv_opedador_17_0= '*=' )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3252:3: lv_opedador_17_0= '*='
+                {
+                lv_opedador_17_0=(Token)match(input,66,FOLLOW_66_in_synpred156_InternalSimpleJava6911); if (state.failed) return ;
+
+                }
+
+
+                }
+
 
                 }
                 break;
             case 6 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3186:7: otherlv_19= '/'
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3266:6: ( (lv_opedador_18_0= '/' ) )
                 {
-                otherlv_19=(Token)match(input,67,FOLLOW_67_in_synpred156_InternalSimpleJava6821); if (state.failed) return ;
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3266:6: ( (lv_opedador_18_0= '/' ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3267:1: (lv_opedador_18_0= '/' )
+                {
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3267:1: (lv_opedador_18_0= '/' )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3268:3: lv_opedador_18_0= '/'
+                {
+                lv_opedador_18_0=(Token)match(input,67,FOLLOW_67_in_synpred156_InternalSimpleJava6948); if (state.failed) return ;
+
+                }
+
+
+                }
+
 
                 }
                 break;
             case 7 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3191:7: otherlv_20= '/='
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3282:6: ( (lv_opedador_19_0= '/=' ) )
                 {
-                otherlv_20=(Token)match(input,68,FOLLOW_68_in_synpred156_InternalSimpleJava6839); if (state.failed) return ;
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3282:6: ( (lv_opedador_19_0= '/=' ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3283:1: (lv_opedador_19_0= '/=' )
+                {
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3283:1: (lv_opedador_19_0= '/=' )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3284:3: lv_opedador_19_0= '/='
+                {
+                lv_opedador_19_0=(Token)match(input,68,FOLLOW_68_in_synpred156_InternalSimpleJava6985); if (state.failed) return ;
+
+                }
+
+
+                }
+
 
                 }
                 break;
             case 8 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3196:7: otherlv_21= '%'
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3298:6: ( (lv_opedador_20_0= '%' ) )
                 {
-                otherlv_21=(Token)match(input,69,FOLLOW_69_in_synpred156_InternalSimpleJava6857); if (state.failed) return ;
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3298:6: ( (lv_opedador_20_0= '%' ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3299:1: (lv_opedador_20_0= '%' )
+                {
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3299:1: (lv_opedador_20_0= '%' )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3300:3: lv_opedador_20_0= '%'
+                {
+                lv_opedador_20_0=(Token)match(input,69,FOLLOW_69_in_synpred156_InternalSimpleJava7022); if (state.failed) return ;
+
+                }
+
+
+                }
+
 
                 }
                 break;
             case 9 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3201:7: otherlv_22= '%='
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3314:6: ( (lv_opedador_21_0= '%=' ) )
                 {
-                otherlv_22=(Token)match(input,70,FOLLOW_70_in_synpred156_InternalSimpleJava6875); if (state.failed) return ;
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3314:6: ( (lv_opedador_21_0= '%=' ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3315:1: (lv_opedador_21_0= '%=' )
+                {
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3315:1: (lv_opedador_21_0= '%=' )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3316:3: lv_opedador_21_0= '%='
+                {
+                lv_opedador_21_0=(Token)match(input,70,FOLLOW_70_in_synpred156_InternalSimpleJava7059); if (state.failed) return ;
+
+                }
+
+
+                }
+
 
                 }
                 break;
 
         }
 
-        pushFollow(FOLLOW_ruleexpression_in_synpred156_InternalSimpleJava6901);
-        this_expression_23=ruleexpression();
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3329:3: ( (lv_exp_22_0= ruleexpression ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3330:1: (lv_exp_22_0= ruleexpression )
+        {
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3330:1: (lv_exp_22_0= ruleexpression )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3331:3: lv_exp_22_0= ruleexpression
+        {
+        if ( state.backtracking==0 ) {
+           
+          	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_3_1_0()); 
+          	    
+        }
+        pushFollow(FOLLOW_ruleexpression_in_synpred156_InternalSimpleJava7094);
+        lv_exp_22_0=ruleexpression();
 
         state._fsp--;
         if (state.failed) return ;
+
+        }
+
+
+        }
+
 
         }
 
@@ -13515,16 +14141,17 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         Token otherlv_6=null;
         Token otherlv_8=null;
-        Token otherlv_12=null;
-        Token otherlv_13=null;
-        Token otherlv_15=null;
-        Token otherlv_16=null;
-        Token otherlv_17=null;
-        Token otherlv_18=null;
-        Token otherlv_19=null;
-        Token otherlv_20=null;
-        Token otherlv_21=null;
-        Token otherlv_22=null;
+        Token lv_opedador_12_1=null;
+        Token lv_opedador_12_2=null;
+        Token lv_opedador_14_0=null;
+        Token lv_opedador_15_0=null;
+        Token lv_opedador_16_0=null;
+        Token lv_opedador_17_0=null;
+        Token lv_opedador_18_0=null;
+        Token lv_opedador_19_0=null;
+        Token lv_opedador_20_0=null;
+        Token lv_opedador_21_0=null;
+        Token otherlv_23=null;
         Token otherlv_24=null;
         Token otherlv_25=null;
         Token otherlv_26=null;
@@ -13535,19 +14162,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
         Token otherlv_31=null;
         Token otherlv_32=null;
         Token otherlv_33=null;
-        Token otherlv_34=null;
-        Token otherlv_36=null;
-        Token otherlv_38=null;
-        Token otherlv_40=null;
-        Token otherlv_41=null;
-        Token otherlv_42=null;
-        Token otherlv_43=null;
-        Token otherlv_44=null;
-        Token otherlv_45=null;
-        Token otherlv_47=null;
-        Token otherlv_48=null;
-        Token otherlv_49=null;
-        Token otherlv_50=null;
+        Token otherlv_35=null;
+        Token otherlv_37=null;
+        Token lv_opedador_39_1=null;
+        Token lv_opedador_39_2=null;
+        Token lv_opedador_39_3=null;
+        Token lv_opedador_39_4=null;
+        Token lv_opedador_39_5=null;
+        Token lv_opedador_39_6=null;
+        Token lv_operador_41_1=null;
+        Token lv_operador_41_2=null;
+        Token lv_operador_41_3=null;
+        Token lv_operador_41_4=null;
         EObject this_arglist_1 = null;
 
         EObject this_aux_3 = null;
@@ -13558,34 +14184,38 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
         EObject this_name_9 = null;
 
-        EObject this_expression_11 = null;
+        EObject this_mais_aux_10 = null;
 
-        EObject this_expression_23 = null;
+        EObject lv_exp_11_0 = null;
 
-        EObject this_expression_35 = null;
+        EObject this_mais_aux_13 = null;
 
-        EObject this_expression_37 = null;
+        EObject lv_exp_22_0 = null;
 
-        EObject lv_expressao_39_0 = null;
+        EObject this_expression_34 = null;
 
-        EObject this_expression_46 = null;
+        EObject this_expression_36 = null;
 
-        EObject this_expression_51 = null;
+        EObject lv_expressao_38_0 = null;
 
-        EObject lv_expressoes_52_0 = null;
+        EObject lv_exp_40_0 = null;
+
+        EObject lv_exp_42_0 = null;
+
+        EObject lv_expressoes_43_0 = null;
 
 
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:2: ( ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) | (otherlv_12= '++' | otherlv_13= '--' ) | ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) | ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) ) ) ( (lv_expressoes_52_0= ruleexpression_aux ) ) )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:2: ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) | (otherlv_12= '++' | otherlv_13= '--' ) | ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) | ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) ) ) ( (lv_expressoes_52_0= ruleexpression_aux ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:2: ( ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) | ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) ) | ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) | ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) ) ) ( (lv_expressoes_43_0= ruleexpression_aux ) ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:2: ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) | ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) ) | ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) | ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) ) ) ( (lv_expressoes_43_0= ruleexpression_aux ) )
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:2: ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) | (otherlv_12= '++' | otherlv_13= '--' ) | ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) | ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:2: ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) | ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) ) | ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) | ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) ) )
         int alt111=5;
         alt111 = dfa111.predict(input);
         switch (alt111) {
             case 1 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:3: ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:3: ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) )
                 {
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:3: ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:3: ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) )
                 int alt104=5;
                 switch ( input.LA(1) ) {
                 case 31:
@@ -13623,13 +14253,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                 switch (alt104) {
                     case 1 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:4: (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:4: (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' )
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:4: (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' )
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3031:6: otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')'
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:4: (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3038:6: otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')'
                         {
-                        otherlv_0=(Token)match(input,31,FOLLOW_31_in_synpred178_InternalSimpleJava6375); if (state.failed) return ;
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3035:1: (this_arglist_1= rulearglist )?
+                        otherlv_0=(Token)match(input,31,FOLLOW_31_in_synpred178_InternalSimpleJava6378); if (state.failed) return ;
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3042:1: (this_arglist_1= rulearglist )?
                         int alt103=2;
                         int LA103_0 = input.LA(1);
 
@@ -13638,9 +14268,9 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         }
                         switch (alt103) {
                             case 1 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3036:2: this_arglist_1= rulearglist
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3043:2: this_arglist_1= rulearglist
                                 {
-                                pushFollow(FOLLOW_rulearglist_in_synpred178_InternalSimpleJava6401);
+                                pushFollow(FOLLOW_rulearglist_in_synpred178_InternalSimpleJava6404);
                                 this_arglist_1=rulearglist();
 
                                 state._fsp--;
@@ -13651,7 +14281,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                         }
 
-                        otherlv_2=(Token)match(input,32,FOLLOW_32_in_synpred178_InternalSimpleJava6414); if (state.failed) return ;
+                        otherlv_2=(Token)match(input,32,FOLLOW_32_in_synpred178_InternalSimpleJava6417); if (state.failed) return ;
 
                         }
 
@@ -13659,9 +14289,9 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         }
                         break;
                     case 2 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3053:2: this_aux_3= ruleaux
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3060:2: this_aux_3= ruleaux
                         {
-                        pushFollow(FOLLOW_ruleaux_in_synpred178_InternalSimpleJava6446);
+                        pushFollow(FOLLOW_ruleaux_in_synpred178_InternalSimpleJava6449);
                         this_aux_3=ruleaux();
 
                         state._fsp--;
@@ -13670,13 +14300,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         }
                         break;
                     case 3 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3065:6: (otherlv_4= '.' this_expression_5= ruleexpression )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3072:6: (otherlv_4= '.' this_expression_5= ruleexpression )
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3065:6: (otherlv_4= '.' this_expression_5= ruleexpression )
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3065:8: otherlv_4= '.' this_expression_5= ruleexpression
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3072:6: (otherlv_4= '.' this_expression_5= ruleexpression )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3072:8: otherlv_4= '.' this_expression_5= ruleexpression
                         {
-                        otherlv_4=(Token)match(input,59,FOLLOW_59_in_synpred178_InternalSimpleJava6464); if (state.failed) return ;
-                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6489);
+                        otherlv_4=(Token)match(input,59,FOLLOW_59_in_synpred178_InternalSimpleJava6467); if (state.failed) return ;
+                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6492);
                         this_expression_5=ruleexpression();
 
                         state._fsp--;
@@ -13688,13 +14318,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         }
                         break;
                     case 4 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3082:6: (otherlv_6= ',' this_expression_7= ruleexpression )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3089:6: (otherlv_6= ',' this_expression_7= ruleexpression )
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3082:6: (otherlv_6= ',' this_expression_7= ruleexpression )
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3082:8: otherlv_6= ',' this_expression_7= ruleexpression
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3089:6: (otherlv_6= ',' this_expression_7= ruleexpression )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3089:8: otherlv_6= ',' this_expression_7= ruleexpression
                         {
-                        otherlv_6=(Token)match(input,27,FOLLOW_27_in_synpred178_InternalSimpleJava6508); if (state.failed) return ;
-                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6533);
+                        otherlv_6=(Token)match(input,27,FOLLOW_27_in_synpred178_InternalSimpleJava6511); if (state.failed) return ;
+                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6536);
                         this_expression_7=ruleexpression();
 
                         state._fsp--;
@@ -13706,16 +14336,16 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         }
                         break;
                     case 5 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3099:6: (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3106:6: (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) )
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3099:6: (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) )
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3099:8: otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3106:6: (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3106:8: otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename )
                         {
-                        otherlv_8=(Token)match(input,60,FOLLOW_60_in_synpred178_InternalSimpleJava6552); if (state.failed) return ;
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3103:1: ( ( RULE_IDENTIFIER )=>this_name_9= rulename )
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3103:2: ( RULE_IDENTIFIER )=>this_name_9= rulename
+                        otherlv_8=(Token)match(input,60,FOLLOW_60_in_synpred178_InternalSimpleJava6555); if (state.failed) return ;
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3110:1: ( ( RULE_IDENTIFIER )=>this_name_9= rulename )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3110:2: ( RULE_IDENTIFIER )=>this_name_9= rulename
                         {
-                        pushFollow(FOLLOW_rulename_in_synpred178_InternalSimpleJava6583);
+                        pushFollow(FOLLOW_rulename_in_synpred178_InternalSimpleJava6586);
                         this_name_9=rulename();
 
                         state._fsp--;
@@ -13736,27 +14366,44 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                 }
                 break;
             case 2 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:6: ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:6: ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) )
                 {
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:6: ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression )
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:7: ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:6: ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:7: ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) )
                 {
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:7: ( ( '+' | '+=' )=> rulemais_aux )
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3116:8: ( '+' | '+=' )=> rulemais_aux
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:7: ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3123:8: ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux
                 {
-                pushFollow(FOLLOW_rulemais_aux_in_synpred178_InternalSimpleJava6626);
-                rulemais_aux();
+                pushFollow(FOLLOW_rulemais_aux_in_synpred178_InternalSimpleJava6635);
+                this_mais_aux_10=rulemais_aux();
 
                 state._fsp--;
                 if (state.failed) return ;
 
                 }
 
-                pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6651);
-                this_expression_11=ruleexpression();
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3137:2: ( (lv_exp_11_0= ruleexpression ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3138:1: (lv_exp_11_0= ruleexpression )
+                {
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3138:1: (lv_exp_11_0= ruleexpression )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3139:3: lv_exp_11_0= ruleexpression
+                {
+                if ( state.backtracking==0 ) {
+                   
+                  	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_1_1_0()); 
+                  	    
+                }
+                pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6656);
+                lv_exp_11_0=ruleexpression();
 
                 state._fsp--;
                 if (state.failed) return ;
+
+                }
+
+
+                }
+
 
                 }
 
@@ -13764,9 +14411,15 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                 }
                 break;
             case 3 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3142:6: (otherlv_12= '++' | otherlv_13= '--' )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3156:6: ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) )
                 {
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3142:6: (otherlv_12= '++' | otherlv_13= '--' )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3156:6: ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3157:1: ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) )
+                {
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3157:1: ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3158:1: (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' )
+                {
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3158:1: (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' )
                 int alt105=2;
                 int LA105_0 = input.LA(1);
 
@@ -13785,19 +14438,25 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                 }
                 switch (alt105) {
                     case 1 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3142:8: otherlv_12= '++'
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3159:3: lv_opedador_12_1= '++'
                         {
-                        otherlv_12=(Token)match(input,61,FOLLOW_61_in_synpred178_InternalSimpleJava6670); if (state.failed) return ;
+                        lv_opedador_12_1=(Token)match(input,61,FOLLOW_61_in_synpred178_InternalSimpleJava6683); if (state.failed) return ;
 
                         }
                         break;
                     case 2 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3147:7: otherlv_13= '--'
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3171:8: lv_opedador_12_2= '--'
                         {
-                        otherlv_13=(Token)match(input,62,FOLLOW_62_in_synpred178_InternalSimpleJava6688); if (state.failed) return ;
+                        lv_opedador_12_2=(Token)match(input,62,FOLLOW_62_in_synpred178_InternalSimpleJava6712); if (state.failed) return ;
 
                         }
                         break;
+
+                }
+
+
+                }
+
 
                 }
 
@@ -13805,23 +14464,23 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                 }
                 break;
             case 4 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:6: ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:6: ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) )
                 {
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:6: ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression )
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:7: ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:6: ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:7: ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) )
                 {
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:7: ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:7: ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) )
                 int alt106=9;
                 alt106 = dfa106.predict(input);
                 switch (alt106) {
                     case 1 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:8: ( ( '+' | '+=' )=> rulemais_aux )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:8: ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux )
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:8: ( ( '+' | '+=' )=> rulemais_aux )
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3152:9: ( '+' | '+=' )=> rulemais_aux
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:8: ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3187:9: ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux
                         {
-                        pushFollow(FOLLOW_rulemais_aux_in_synpred178_InternalSimpleJava6731);
-                        rulemais_aux();
+                        pushFollow(FOLLOW_rulemais_aux_in_synpred178_InternalSimpleJava6776);
+                        this_mais_aux_13=rulemais_aux();
 
                         state._fsp--;
                         if (state.failed) return ;
@@ -13832,66 +14491,173 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         }
                         break;
                     case 2 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3166:7: otherlv_15= '-'
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3202:6: ( (lv_opedador_14_0= '-' ) )
                         {
-                        otherlv_15=(Token)match(input,63,FOLLOW_63_in_synpred178_InternalSimpleJava6749); if (state.failed) return ;
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3202:6: ( (lv_opedador_14_0= '-' ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3203:1: (lv_opedador_14_0= '-' )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3203:1: (lv_opedador_14_0= '-' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3204:3: lv_opedador_14_0= '-'
+                        {
+                        lv_opedador_14_0=(Token)match(input,63,FOLLOW_63_in_synpred178_InternalSimpleJava6800); if (state.failed) return ;
+
+                        }
+
+
+                        }
+
 
                         }
                         break;
                     case 3 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3171:7: otherlv_16= '-='
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:6: ( (lv_opedador_15_0= '-=' ) )
                         {
-                        otherlv_16=(Token)match(input,64,FOLLOW_64_in_synpred178_InternalSimpleJava6767); if (state.failed) return ;
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:6: ( (lv_opedador_15_0= '-=' ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3219:1: (lv_opedador_15_0= '-=' )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3219:1: (lv_opedador_15_0= '-=' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3220:3: lv_opedador_15_0= '-='
+                        {
+                        lv_opedador_15_0=(Token)match(input,64,FOLLOW_64_in_synpred178_InternalSimpleJava6837); if (state.failed) return ;
+
+                        }
+
+
+                        }
+
 
                         }
                         break;
                     case 4 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3176:7: otherlv_17= '*'
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3234:6: ( (lv_opedador_16_0= '*' ) )
                         {
-                        otherlv_17=(Token)match(input,65,FOLLOW_65_in_synpred178_InternalSimpleJava6785); if (state.failed) return ;
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3234:6: ( (lv_opedador_16_0= '*' ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3235:1: (lv_opedador_16_0= '*' )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3235:1: (lv_opedador_16_0= '*' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3236:3: lv_opedador_16_0= '*'
+                        {
+                        lv_opedador_16_0=(Token)match(input,65,FOLLOW_65_in_synpred178_InternalSimpleJava6874); if (state.failed) return ;
+
+                        }
+
+
+                        }
+
 
                         }
                         break;
                     case 5 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3181:7: otherlv_18= '*='
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3250:6: ( (lv_opedador_17_0= '*=' ) )
                         {
-                        otherlv_18=(Token)match(input,66,FOLLOW_66_in_synpred178_InternalSimpleJava6803); if (state.failed) return ;
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3250:6: ( (lv_opedador_17_0= '*=' ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3251:1: (lv_opedador_17_0= '*=' )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3251:1: (lv_opedador_17_0= '*=' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3252:3: lv_opedador_17_0= '*='
+                        {
+                        lv_opedador_17_0=(Token)match(input,66,FOLLOW_66_in_synpred178_InternalSimpleJava6911); if (state.failed) return ;
+
+                        }
+
+
+                        }
+
 
                         }
                         break;
                     case 6 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3186:7: otherlv_19= '/'
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3266:6: ( (lv_opedador_18_0= '/' ) )
                         {
-                        otherlv_19=(Token)match(input,67,FOLLOW_67_in_synpred178_InternalSimpleJava6821); if (state.failed) return ;
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3266:6: ( (lv_opedador_18_0= '/' ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3267:1: (lv_opedador_18_0= '/' )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3267:1: (lv_opedador_18_0= '/' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3268:3: lv_opedador_18_0= '/'
+                        {
+                        lv_opedador_18_0=(Token)match(input,67,FOLLOW_67_in_synpred178_InternalSimpleJava6948); if (state.failed) return ;
+
+                        }
+
+
+                        }
+
 
                         }
                         break;
                     case 7 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3191:7: otherlv_20= '/='
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3282:6: ( (lv_opedador_19_0= '/=' ) )
                         {
-                        otherlv_20=(Token)match(input,68,FOLLOW_68_in_synpred178_InternalSimpleJava6839); if (state.failed) return ;
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3282:6: ( (lv_opedador_19_0= '/=' ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3283:1: (lv_opedador_19_0= '/=' )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3283:1: (lv_opedador_19_0= '/=' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3284:3: lv_opedador_19_0= '/='
+                        {
+                        lv_opedador_19_0=(Token)match(input,68,FOLLOW_68_in_synpred178_InternalSimpleJava6985); if (state.failed) return ;
+
+                        }
+
+
+                        }
+
 
                         }
                         break;
                     case 8 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3196:7: otherlv_21= '%'
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3298:6: ( (lv_opedador_20_0= '%' ) )
                         {
-                        otherlv_21=(Token)match(input,69,FOLLOW_69_in_synpred178_InternalSimpleJava6857); if (state.failed) return ;
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3298:6: ( (lv_opedador_20_0= '%' ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3299:1: (lv_opedador_20_0= '%' )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3299:1: (lv_opedador_20_0= '%' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3300:3: lv_opedador_20_0= '%'
+                        {
+                        lv_opedador_20_0=(Token)match(input,69,FOLLOW_69_in_synpred178_InternalSimpleJava7022); if (state.failed) return ;
+
+                        }
+
+
+                        }
+
 
                         }
                         break;
                     case 9 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3201:7: otherlv_22= '%='
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3314:6: ( (lv_opedador_21_0= '%=' ) )
                         {
-                        otherlv_22=(Token)match(input,70,FOLLOW_70_in_synpred178_InternalSimpleJava6875); if (state.failed) return ;
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3314:6: ( (lv_opedador_21_0= '%=' ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3315:1: (lv_opedador_21_0= '%=' )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3315:1: (lv_opedador_21_0= '%=' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3316:3: lv_opedador_21_0= '%='
+                        {
+                        lv_opedador_21_0=(Token)match(input,70,FOLLOW_70_in_synpred178_InternalSimpleJava7059); if (state.failed) return ;
+
+                        }
+
+
+                        }
+
 
                         }
                         break;
 
                 }
 
-                pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6901);
-                this_expression_23=ruleexpression();
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3329:3: ( (lv_exp_22_0= ruleexpression ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3330:1: (lv_exp_22_0= ruleexpression )
+                {
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3330:1: (lv_exp_22_0= ruleexpression )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3331:3: lv_exp_22_0= ruleexpression
+                {
+                if ( state.backtracking==0 ) {
+                   
+                  	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_3_1_0()); 
+                  	    
+                }
+                pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7094);
+                lv_exp_22_0=ruleexpression();
 
                 state._fsp--;
                 if (state.failed) return ;
@@ -13900,11 +14666,17 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
                 }
+
+
+                }
+
+
+                }
                 break;
             case 5 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:6: ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:6: ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) )
                 {
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:6: ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:6: ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) )
                 int alt110=4;
                 switch ( input.LA(1) ) {
                 case 69:
@@ -13953,65 +14725,65 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                 switch (alt110) {
                     case 1 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:7: ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:7: ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression )
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:7: ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression )
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:8: (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:7: ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:8: (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:8: (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:8: (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' )
                         int alt107=10;
                         alt107 = dfa107.predict(input);
                         switch (alt107) {
                             case 1 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3218:10: otherlv_24= 'ampersand'
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3348:10: otherlv_23= 'ampersand'
                                 {
-                                otherlv_24=(Token)match(input,71,FOLLOW_71_in_synpred178_InternalSimpleJava6922); if (state.failed) return ;
+                                otherlv_23=(Token)match(input,71,FOLLOW_71_in_synpred178_InternalSimpleJava7116); if (state.failed) return ;
 
                                 }
                                 break;
                             case 2 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3223:7: otherlv_25= 'ampersand='
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3353:7: otherlv_24= 'ampersand='
                                 {
-                                otherlv_25=(Token)match(input,72,FOLLOW_72_in_synpred178_InternalSimpleJava6940); if (state.failed) return ;
+                                otherlv_24=(Token)match(input,72,FOLLOW_72_in_synpred178_InternalSimpleJava7134); if (state.failed) return ;
 
                                 }
                                 break;
                             case 3 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3228:7: otherlv_26= '|'
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3358:7: otherlv_25= '|'
                                 {
-                                otherlv_26=(Token)match(input,73,FOLLOW_73_in_synpred178_InternalSimpleJava6958); if (state.failed) return ;
+                                otherlv_25=(Token)match(input,73,FOLLOW_73_in_synpred178_InternalSimpleJava7152); if (state.failed) return ;
 
                                 }
                                 break;
                             case 4 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3233:7: otherlv_27= '|='
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3363:7: otherlv_26= '|='
                                 {
-                                otherlv_27=(Token)match(input,74,FOLLOW_74_in_synpred178_InternalSimpleJava6976); if (state.failed) return ;
+                                otherlv_26=(Token)match(input,74,FOLLOW_74_in_synpred178_InternalSimpleJava7170); if (state.failed) return ;
 
                                 }
                                 break;
                             case 5 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3238:7: otherlv_28= '^'
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3368:7: otherlv_27= '^'
                                 {
-                                otherlv_28=(Token)match(input,75,FOLLOW_75_in_synpred178_InternalSimpleJava6994); if (state.failed) return ;
+                                otherlv_27=(Token)match(input,75,FOLLOW_75_in_synpred178_InternalSimpleJava7188); if (state.failed) return ;
 
                                 }
                                 break;
                             case 6 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3243:7: otherlv_29= '^='
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3373:7: otherlv_28= '^='
                                 {
-                                otherlv_29=(Token)match(input,76,FOLLOW_76_in_synpred178_InternalSimpleJava7012); if (state.failed) return ;
+                                otherlv_28=(Token)match(input,76,FOLLOW_76_in_synpred178_InternalSimpleJava7206); if (state.failed) return ;
 
                                 }
                                 break;
                             case 7 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3248:6: (otherlv_30= 'ampersand' otherlv_31= 'ampersand' )
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3378:6: (otherlv_29= 'ampersand' otherlv_30= 'ampersand' )
                                 {
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3248:6: (otherlv_30= 'ampersand' otherlv_31= 'ampersand' )
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3248:8: otherlv_30= 'ampersand' otherlv_31= 'ampersand'
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3378:6: (otherlv_29= 'ampersand' otherlv_30= 'ampersand' )
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3378:8: otherlv_29= 'ampersand' otherlv_30= 'ampersand'
                                 {
-                                otherlv_30=(Token)match(input,71,FOLLOW_71_in_synpred178_InternalSimpleJava7031); if (state.failed) return ;
-                                otherlv_31=(Token)match(input,71,FOLLOW_71_in_synpred178_InternalSimpleJava7043); if (state.failed) return ;
+                                otherlv_29=(Token)match(input,71,FOLLOW_71_in_synpred178_InternalSimpleJava7225); if (state.failed) return ;
+                                otherlv_30=(Token)match(input,71,FOLLOW_71_in_synpred178_InternalSimpleJava7237); if (state.failed) return ;
 
                                 }
 
@@ -14019,19 +14791,19 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                 }
                                 break;
                             case 8 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3257:7: otherlv_32= '||='
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3387:7: otherlv_31= '||='
                                 {
-                                otherlv_32=(Token)match(input,77,FOLLOW_77_in_synpred178_InternalSimpleJava7062); if (state.failed) return ;
+                                otherlv_31=(Token)match(input,77,FOLLOW_77_in_synpred178_InternalSimpleJava7256); if (state.failed) return ;
 
                                 }
                                 break;
                             case 9 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3262:6: ( ( '%' )=>otherlv_33= '%' )
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3392:6: ( ( '%' )=>otherlv_32= '%' )
                                 {
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3262:6: ( ( '%' )=>otherlv_33= '%' )
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3262:7: ( '%' )=>otherlv_33= '%'
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3392:6: ( ( '%' )=>otherlv_32= '%' )
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3392:7: ( '%' )=>otherlv_32= '%'
                                 {
-                                otherlv_33=(Token)match(input,69,FOLLOW_69_in_synpred178_InternalSimpleJava7088); if (state.failed) return ;
+                                otherlv_32=(Token)match(input,69,FOLLOW_69_in_synpred178_InternalSimpleJava7282); if (state.failed) return ;
 
                                 }
 
@@ -14039,17 +14811,17 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                                 }
                                 break;
                             case 10 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3268:7: otherlv_34= '%='
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3398:7: otherlv_33= '%='
                                 {
-                                otherlv_34=(Token)match(input,70,FOLLOW_70_in_synpred178_InternalSimpleJava7107); if (state.failed) return ;
+                                otherlv_33=(Token)match(input,70,FOLLOW_70_in_synpred178_InternalSimpleJava7301); if (state.failed) return ;
 
                                 }
                                 break;
 
                         }
 
-                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7133);
-                        this_expression_35=ruleexpression();
+                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7327);
+                        this_expression_34=ruleexpression();
 
                         state._fsp--;
                         if (state.failed) return ;
@@ -14060,31 +14832,31 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         }
                         break;
                     case 2 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3285:6: (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3415:6: (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) )
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3285:6: (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) )
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3285:8: otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3415:6: (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3415:8: otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) )
                         {
-                        otherlv_36=(Token)match(input,78,FOLLOW_78_in_synpred178_InternalSimpleJava7152); if (state.failed) return ;
-                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7177);
-                        this_expression_37=ruleexpression();
+                        otherlv_35=(Token)match(input,78,FOLLOW_78_in_synpred178_InternalSimpleJava7346); if (state.failed) return ;
+                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7371);
+                        this_expression_36=ruleexpression();
 
                         state._fsp--;
                         if (state.failed) return ;
-                        otherlv_38=(Token)match(input,38,FOLLOW_38_in_synpred178_InternalSimpleJava7188); if (state.failed) return ;
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3305:1: ( (lv_expressao_39_0= ruleexpression ) )
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3306:1: (lv_expressao_39_0= ruleexpression )
+                        otherlv_37=(Token)match(input,38,FOLLOW_38_in_synpred178_InternalSimpleJava7382); if (state.failed) return ;
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3435:1: ( (lv_expressao_38_0= ruleexpression ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3436:1: (lv_expressao_38_0= ruleexpression )
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3306:1: (lv_expressao_39_0= ruleexpression )
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3307:3: lv_expressao_39_0= ruleexpression
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3436:1: (lv_expressao_38_0= ruleexpression )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3437:3: lv_expressao_38_0= ruleexpression
                         {
                         if ( state.backtracking==0 ) {
                            
                           	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressaoExpressionParserRuleCall_0_4_1_3_0()); 
                           	    
                         }
-                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7209);
-                        lv_expressao_39_0=ruleexpression();
+                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7403);
+                        lv_expressao_38_0=ruleexpression();
 
                         state._fsp--;
                         if (state.failed) return ;
@@ -14101,12 +14873,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         }
                         break;
                     case 3 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3324:6: ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3454:6: ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) )
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3324:6: ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression )
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3324:7: (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3454:6: ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3454:7: ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) )
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3324:7: (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3454:7: ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3455:1: ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3455:1: ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3456:1: (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3456:1: (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' )
                         int alt108=6;
                         switch ( input.LA(1) ) {
                         case 79:
@@ -14149,52 +14927,69 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                         switch (alt108) {
                             case 1 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3324:9: otherlv_40= '>'
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3457:3: lv_opedador_39_1= '>'
                                 {
-                                otherlv_40=(Token)match(input,79,FOLLOW_79_in_synpred178_InternalSimpleJava7230); if (state.failed) return ;
+                                lv_opedador_39_1=(Token)match(input,79,FOLLOW_79_in_synpred178_InternalSimpleJava7431); if (state.failed) return ;
 
                                 }
                                 break;
                             case 2 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3329:7: otherlv_41= '<'
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3469:8: lv_opedador_39_2= '<'
                                 {
-                                otherlv_41=(Token)match(input,80,FOLLOW_80_in_synpred178_InternalSimpleJava7248); if (state.failed) return ;
+                                lv_opedador_39_2=(Token)match(input,80,FOLLOW_80_in_synpred178_InternalSimpleJava7460); if (state.failed) return ;
 
                                 }
                                 break;
                             case 3 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3334:7: otherlv_42= '>='
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3481:8: lv_opedador_39_3= '>='
                                 {
-                                otherlv_42=(Token)match(input,81,FOLLOW_81_in_synpred178_InternalSimpleJava7266); if (state.failed) return ;
+                                lv_opedador_39_3=(Token)match(input,81,FOLLOW_81_in_synpred178_InternalSimpleJava7489); if (state.failed) return ;
 
                                 }
                                 break;
                             case 4 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3339:7: otherlv_43= '<='
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3493:8: lv_opedador_39_4= '<='
                                 {
-                                otherlv_43=(Token)match(input,82,FOLLOW_82_in_synpred178_InternalSimpleJava7284); if (state.failed) return ;
+                                lv_opedador_39_4=(Token)match(input,82,FOLLOW_82_in_synpred178_InternalSimpleJava7518); if (state.failed) return ;
 
                                 }
                                 break;
                             case 5 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3344:7: otherlv_44= '=='
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3505:8: lv_opedador_39_5= '=='
                                 {
-                                otherlv_44=(Token)match(input,83,FOLLOW_83_in_synpred178_InternalSimpleJava7302); if (state.failed) return ;
+                                lv_opedador_39_5=(Token)match(input,83,FOLLOW_83_in_synpred178_InternalSimpleJava7547); if (state.failed) return ;
 
                                 }
                                 break;
                             case 6 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3349:7: otherlv_45= '!='
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3517:8: lv_opedador_39_6= '!='
                                 {
-                                otherlv_45=(Token)match(input,84,FOLLOW_84_in_synpred178_InternalSimpleJava7320); if (state.failed) return ;
+                                lv_opedador_39_6=(Token)match(input,84,FOLLOW_84_in_synpred178_InternalSimpleJava7576); if (state.failed) return ;
 
                                 }
                                 break;
 
                         }
 
-                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7346);
-                        this_expression_46=ruleexpression();
+
+                        }
+
+
+                        }
+
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3532:2: ( (lv_exp_40_0= ruleexpression ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3533:1: (lv_exp_40_0= ruleexpression )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3533:1: (lv_exp_40_0= ruleexpression )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3534:3: lv_exp_40_0= ruleexpression
+                        {
+                        if ( state.backtracking==0 ) {
+                           
+                          	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_4_2_1_0()); 
+                          	    
+                        }
+                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7613);
+                        lv_exp_40_0=ruleexpression();
 
                         state._fsp--;
                         if (state.failed) return ;
@@ -14203,14 +14998,26 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
                         }
+
+
+                        }
+
+
+                        }
                         break;
                     case 4 :
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3366:6: ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3551:6: ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) )
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3366:6: ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression )
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3366:7: (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3551:6: ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3551:7: ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) )
                         {
-                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3366:7: (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3551:7: ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3552:1: ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3552:1: ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3553:1: (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3553:1: (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' )
                         int alt109=4;
                         switch ( input.LA(1) ) {
                         case 85:
@@ -14243,41 +15050,64 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                         switch (alt109) {
                             case 1 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3366:9: otherlv_47= '>>='
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3554:3: lv_operador_41_1= '>>='
                                 {
-                                otherlv_47=(Token)match(input,85,FOLLOW_85_in_synpred178_InternalSimpleJava7366); if (state.failed) return ;
+                                lv_operador_41_1=(Token)match(input,85,FOLLOW_85_in_synpred178_InternalSimpleJava7641); if (state.failed) return ;
 
                                 }
                                 break;
                             case 2 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3371:7: otherlv_48= '<<'
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3566:8: lv_operador_41_2= '<<'
                                 {
-                                otherlv_48=(Token)match(input,86,FOLLOW_86_in_synpred178_InternalSimpleJava7384); if (state.failed) return ;
+                                lv_operador_41_2=(Token)match(input,86,FOLLOW_86_in_synpred178_InternalSimpleJava7670); if (state.failed) return ;
 
                                 }
                                 break;
                             case 3 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3376:7: otherlv_49= '>>'
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3578:8: lv_operador_41_3= '>>'
                                 {
-                                otherlv_49=(Token)match(input,87,FOLLOW_87_in_synpred178_InternalSimpleJava7402); if (state.failed) return ;
+                                lv_operador_41_3=(Token)match(input,87,FOLLOW_87_in_synpred178_InternalSimpleJava7699); if (state.failed) return ;
 
                                 }
                                 break;
                             case 4 :
-                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3381:7: otherlv_50= '>>>'
+                                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3590:8: lv_operador_41_4= '>>>'
                                 {
-                                otherlv_50=(Token)match(input,88,FOLLOW_88_in_synpred178_InternalSimpleJava7420); if (state.failed) return ;
+                                lv_operador_41_4=(Token)match(input,88,FOLLOW_88_in_synpred178_InternalSimpleJava7728); if (state.failed) return ;
 
                                 }
                                 break;
 
                         }
 
-                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7446);
-                        this_expression_51=ruleexpression();
+
+                        }
+
+
+                        }
+
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3605:2: ( (lv_exp_42_0= ruleexpression ) )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3606:1: (lv_exp_42_0= ruleexpression )
+                        {
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3606:1: (lv_exp_42_0= ruleexpression )
+                        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3607:3: lv_exp_42_0= ruleexpression
+                        {
+                        if ( state.backtracking==0 ) {
+                           
+                          	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_4_3_1_0()); 
+                          	    
+                        }
+                        pushFollow(FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7765);
+                        lv_exp_42_0=ruleexpression();
 
                         state._fsp--;
                         if (state.failed) return ;
+
+                        }
+
+
+                        }
+
 
                         }
 
@@ -14293,19 +15123,19 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
         }
 
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3397:4: ( (lv_expressoes_52_0= ruleexpression_aux ) )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3398:1: (lv_expressoes_52_0= ruleexpression_aux )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3623:5: ( (lv_expressoes_43_0= ruleexpression_aux ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3624:1: (lv_expressoes_43_0= ruleexpression_aux )
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3398:1: (lv_expressoes_52_0= ruleexpression_aux )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3399:3: lv_expressoes_52_0= ruleexpression_aux
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3624:1: (lv_expressoes_43_0= ruleexpression_aux )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3625:3: lv_expressoes_43_0= ruleexpression_aux
         {
         if ( state.backtracking==0 ) {
            
           	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressoesExpression_auxParserRuleCall_1_0()); 
           	    
         }
-        pushFollow(FOLLOW_ruleexpression_aux_in_synpred178_InternalSimpleJava7469);
-        lv_expressoes_52_0=ruleexpression_aux();
+        pushFollow(FOLLOW_ruleexpression_aux_in_synpred178_InternalSimpleJava7789);
+        lv_expressoes_43_0=ruleexpression_aux();
 
         state._fsp--;
         if (state.failed) return ;
@@ -14327,20 +15157,20 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
         EObject lv_argumentos_1_0 = null;
 
 
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:2: ( ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' ) )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:2: ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:2: ( ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:2: ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' )
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:2: ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:3: ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')'
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:2: ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:3: ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')'
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:3: ( ( '(' )=>otherlv_0= '(' )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3511:4: ( '(' )=>otherlv_0= '('
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:3: ( ( '(' )=>otherlv_0= '(' )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3755:4: ( '(' )=>otherlv_0= '('
         {
-        otherlv_0=(Token)match(input,31,FOLLOW_31_in_synpred182_InternalSimpleJava7790); if (state.failed) return ;
+        otherlv_0=(Token)match(input,31,FOLLOW_31_in_synpred182_InternalSimpleJava8140); if (state.failed) return ;
 
         }
 
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3516:2: ( (lv_argumentos_1_0= rulearglist ) )?
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3760:2: ( (lv_argumentos_1_0= rulearglist ) )?
         int alt112=2;
         int LA112_0 = input.LA(1);
 
@@ -14349,17 +15179,17 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
         }
         switch (alt112) {
             case 1 :
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3517:1: (lv_argumentos_1_0= rulearglist )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3761:1: (lv_argumentos_1_0= rulearglist )
                 {
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3517:1: (lv_argumentos_1_0= rulearglist )
-                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3518:3: lv_argumentos_1_0= rulearglist
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3761:1: (lv_argumentos_1_0= rulearglist )
+                // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3762:3: lv_argumentos_1_0= rulearglist
                 {
                 if ( state.backtracking==0 ) {
                    
                   	        newCompositeNode(grammarAccess.getCreating_auxAccess().getArgumentosArglistParserRuleCall_0_1_0()); 
                   	    
                 }
-                pushFollow(FOLLOW_rulearglist_in_synpred182_InternalSimpleJava7812);
+                pushFollow(FOLLOW_rulearglist_in_synpred182_InternalSimpleJava8162);
                 lv_argumentos_1_0=rulearglist();
 
                 state._fsp--;
@@ -14373,7 +15203,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
         }
 
-        otherlv_2=(Token)match(input,32,FOLLOW_32_in_synpred182_InternalSimpleJava7825); if (state.failed) return ;
+        otherlv_2=(Token)match(input,32,FOLLOW_32_in_synpred182_InternalSimpleJava8175); if (state.failed) return ;
 
         }
 
@@ -14384,10 +15214,10 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred183_InternalSimpleJava
     public final void synpred183_InternalSimpleJava_fragment() throws RecognitionException {   
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3539:8: ( '[' )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3539:10: '['
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3783:8: ( '[' )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3783:10: '['
         {
-        match(input,33,FOLLOW_33_in_synpred183_InternalSimpleJava7845); if (state.failed) return ;
+        match(input,33,FOLLOW_33_in_synpred183_InternalSimpleJava8195); if (state.failed) return ;
 
         }
     }
@@ -14401,24 +15231,24 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
         EObject lv_expressoesArgumentos_2_0 = null;
 
 
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3901:2: ( ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* ) )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3901:2: ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4189:2: ( ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4189:2: ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* )
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3901:2: ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3901:3: ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )*
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4189:2: ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4189:3: ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )*
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3901:3: ( (lv_expressoesArgumentos_0_0= ruleexpression ) )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3902:1: (lv_expressoesArgumentos_0_0= ruleexpression )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4189:3: ( (lv_expressoesArgumentos_0_0= ruleexpression ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4190:1: (lv_expressoesArgumentos_0_0= ruleexpression )
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3902:1: (lv_expressoesArgumentos_0_0= ruleexpression )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3903:3: lv_expressoesArgumentos_0_0= ruleexpression
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4190:1: (lv_expressoesArgumentos_0_0= ruleexpression )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4191:3: lv_expressoesArgumentos_0_0= ruleexpression
         {
         if ( state.backtracking==0 ) {
            
           	        newCompositeNode(grammarAccess.getArglistAccess().getExpressoesArgumentosExpressionParserRuleCall_0_0_0()); 
           	    
         }
-        pushFollow(FOLLOW_ruleexpression_in_synpred194_InternalSimpleJava8794);
+        pushFollow(FOLLOW_ruleexpression_in_synpred194_InternalSimpleJava9144);
         lv_expressoesArgumentos_0_0=ruleexpression();
 
         state._fsp--;
@@ -14429,7 +15259,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
         }
 
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3919:2: (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )*
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4207:2: (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )*
         loop113:
         do {
             int alt113=2;
@@ -14442,21 +15272,21 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             switch (alt113) {
         	case 1 :
-        	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3919:4: otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) )
+        	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4207:4: otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) )
         	    {
-        	    otherlv_1=(Token)match(input,27,FOLLOW_27_in_synpred194_InternalSimpleJava8807); if (state.failed) return ;
-        	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3923:1: ( (lv_expressoesArgumentos_2_0= ruleexpression ) )
-        	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3924:1: (lv_expressoesArgumentos_2_0= ruleexpression )
+        	    otherlv_1=(Token)match(input,27,FOLLOW_27_in_synpred194_InternalSimpleJava9157); if (state.failed) return ;
+        	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4211:1: ( (lv_expressoesArgumentos_2_0= ruleexpression ) )
+        	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4212:1: (lv_expressoesArgumentos_2_0= ruleexpression )
         	    {
-        	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3924:1: (lv_expressoesArgumentos_2_0= ruleexpression )
-        	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:3925:3: lv_expressoesArgumentos_2_0= ruleexpression
+        	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4212:1: (lv_expressoesArgumentos_2_0= ruleexpression )
+        	    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4213:3: lv_expressoesArgumentos_2_0= ruleexpression
         	    {
         	    if ( state.backtracking==0 ) {
         	       
         	      	        newCompositeNode(grammarAccess.getArglistAccess().getExpressoesArgumentosExpressionParserRuleCall_0_1_1_0()); 
         	      	    
         	    }
-        	    pushFollow(FOLLOW_ruleexpression_in_synpred194_InternalSimpleJava8828);
+        	    pushFollow(FOLLOW_ruleexpression_in_synpred194_InternalSimpleJava9178);
         	    lv_expressoesArgumentos_2_0=ruleexpression();
 
         	    state._fsp--;
@@ -14491,35 +15321,35 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
         EObject lv_pacote_2_0 = null;
 
 
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4109:3: (otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) ) )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4109:3: otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4397:3: (otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4397:3: otherlv_0= '.' ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) ) ( (lv_pacote_2_0= rulepackage_name_aux ) )
         {
-        otherlv_0=(Token)match(input,59,FOLLOW_59_in_synpred197_InternalSimpleJava9179); if (state.failed) return ;
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4113:1: ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4114:1: (lv_nomePacote_1_0= RULE_IDENTIFIER )
+        otherlv_0=(Token)match(input,59,FOLLOW_59_in_synpred197_InternalSimpleJava9529); if (state.failed) return ;
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4401:1: ( (lv_nomePacote_1_0= RULE_IDENTIFIER ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4402:1: (lv_nomePacote_1_0= RULE_IDENTIFIER )
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4114:1: (lv_nomePacote_1_0= RULE_IDENTIFIER )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4115:3: lv_nomePacote_1_0= RULE_IDENTIFIER
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4402:1: (lv_nomePacote_1_0= RULE_IDENTIFIER )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4403:3: lv_nomePacote_1_0= RULE_IDENTIFIER
         {
-        lv_nomePacote_1_0=(Token)match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_synpred197_InternalSimpleJava9196); if (state.failed) return ;
+        lv_nomePacote_1_0=(Token)match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_synpred197_InternalSimpleJava9546); if (state.failed) return ;
 
         }
 
 
         }
 
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4131:2: ( (lv_pacote_2_0= rulepackage_name_aux ) )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4132:1: (lv_pacote_2_0= rulepackage_name_aux )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4419:2: ( (lv_pacote_2_0= rulepackage_name_aux ) )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4420:1: (lv_pacote_2_0= rulepackage_name_aux )
         {
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4132:1: (lv_pacote_2_0= rulepackage_name_aux )
-        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4133:3: lv_pacote_2_0= rulepackage_name_aux
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4420:1: (lv_pacote_2_0= rulepackage_name_aux )
+        // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4421:3: lv_pacote_2_0= rulepackage_name_aux
         {
         if ( state.backtracking==0 ) {
            
           	        newCompositeNode(grammarAccess.getPackage_name_auxAccess().getPacotePackage_name_auxParserRuleCall_2_0()); 
           	    
         }
-        pushFollow(FOLLOW_rulepackage_name_aux_in_synpred197_InternalSimpleJava9222);
+        pushFollow(FOLLOW_rulepackage_name_aux_in_synpred197_InternalSimpleJava9572);
         lv_pacote_2_0=rulepackage_name_aux();
 
         state._fsp--;
@@ -15608,7 +16438,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA31_transition;
         }
         public String getDescription() {
-            return "1545:3: ( ( (lv_tipo_1_0= ruletype ) ) | otherlv_2= 'void' )?";
+            return "1545:3: ( ( (lv_tipoVariavel_1_0= ruletype ) ) | otherlv_2= 'void' )?";
         }
     }
     static final String DFA43_eotS =
@@ -16130,7 +16960,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA57_transition;
         }
         public String getDescription() {
-            return "2868:2: ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ruleliteral_expression | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) )";
+            return "2868:2: ( ( (lv_tipoLogical_0_0= rulelogical_expression ) ) | ( (lv_tipoNumeric_1_0= rulenumeric_expression ) ) | ( (lv_tipoBit_2_0= rulebit_expression ) ) | ( (lv_new_3_0= rulecreating_expression ) ) | ( (lv_literal_4_0= ruleliteral_expression ) ) | otherlv_5= 'null' | otherlv_6= 'super' | otherlv_7= 'this' | this_IDENTIFIER_8= RULE_IDENTIFIER | (otherlv_9= '(' this_exp_aux_10= ruleexp_aux ) )";
         }
     }
     static final String DFA67_eotS =
@@ -16144,7 +16974,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
     static final String DFA67_acceptS =
         "\44\uffff\1\2\1\1";
     static final String DFA67_specialS =
-        "\1\uffff\1\30\1\20\1\21\1\4\1\12\1\26\1\22\1\14\1\34\1\42\1\25\1\15\1\2\1\31\1\37\1\35\1\10\1\27\1\17\1\33\1\3\1\5\1\40\1\36\1\7\1\23\1\0\1\32\1\24\1\13\1\41\1\6\1\11\1\16\1\1\2\uffff}>";
+        "\1\uffff\1\35\1\41\1\25\1\0\1\34\1\20\1\7\1\16\1\12\1\10\1\22\1\32\1\24\1\11\1\26\1\3\1\42\1\4\1\5\1\40\1\31\1\1\1\13\1\23\1\14\1\33\1\6\1\37\1\2\1\27\1\17\1\36\1\15\1\21\1\30\2\uffff}>";
     static final String[] DFA67_transitionS = {
             "\1\44\10\uffff\1\4\2\44\1\uffff\1\1\1\44\1\2\1\44\3\uffff\1\44\24\uffff\1\3\1\5\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\35\1\36\1\37\1\40\1\41\1\42\1\43\1\6\1\7",
             "\1\uffff",
@@ -16216,73 +17046,13 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA67_transition;
         }
         public String getDescription() {
-            return "3031:1: ( ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) | (otherlv_12= '++' | otherlv_13= '--' ) | ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) | ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) ) ) ( (lv_expressoes_52_0= ruleexpression_aux ) ) )?";
+            return "3038:1: ( ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) | ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) ) | ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) | ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) ) ) ( (lv_expressoes_43_0= ruleexpression_aux ) ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA67_27 = input.LA(1);
-
-                         
-                        int index67_27 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_27);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA67_35 = input.LA(1);
-
-                         
-                        int index67_35 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_35);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA67_13 = input.LA(1);
-
-                         
-                        int index67_13 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_13);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 3 : 
-                        int LA67_21 = input.LA(1);
-
-                         
-                        int index67_21 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_21);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
                         int LA67_4 = input.LA(1);
 
                          
@@ -16297,7 +17067,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         input.seek(index67_4);
                         if ( s>=0 ) return s;
                         break;
-                    case 5 : 
+                    case 1 : 
                         int LA67_22 = input.LA(1);
 
                          
@@ -16312,217 +17082,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         input.seek(index67_22);
                         if ( s>=0 ) return s;
                         break;
-                    case 6 : 
-                        int LA67_32 = input.LA(1);
-
-                         
-                        int index67_32 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_32);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 7 : 
-                        int LA67_25 = input.LA(1);
-
-                         
-                        int index67_25 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_25);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 8 : 
-                        int LA67_17 = input.LA(1);
-
-                         
-                        int index67_17 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_17);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 9 : 
-                        int LA67_33 = input.LA(1);
-
-                         
-                        int index67_33 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_33);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 10 : 
-                        int LA67_5 = input.LA(1);
-
-                         
-                        int index67_5 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_5);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 11 : 
-                        int LA67_30 = input.LA(1);
-
-                         
-                        int index67_30 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_30);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 12 : 
-                        int LA67_8 = input.LA(1);
-
-                         
-                        int index67_8 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_8);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 13 : 
-                        int LA67_12 = input.LA(1);
-
-                         
-                        int index67_12 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_12);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 14 : 
-                        int LA67_34 = input.LA(1);
-
-                         
-                        int index67_34 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_34);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 15 : 
-                        int LA67_19 = input.LA(1);
-
-                         
-                        int index67_19 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_19);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 16 : 
-                        int LA67_2 = input.LA(1);
-
-                         
-                        int index67_2 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_2);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 17 : 
-                        int LA67_3 = input.LA(1);
-
-                         
-                        int index67_3 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_3);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 18 : 
-                        int LA67_7 = input.LA(1);
-
-                         
-                        int index67_7 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_7);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 19 : 
-                        int LA67_26 = input.LA(1);
-
-                         
-                        int index67_26 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_26);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 20 : 
+                    case 2 : 
                         int LA67_29 = input.LA(1);
 
                          
@@ -16537,127 +17097,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         input.seek(index67_29);
                         if ( s>=0 ) return s;
                         break;
-                    case 21 : 
-                        int LA67_11 = input.LA(1);
-
-                         
-                        int index67_11 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_11);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 22 : 
-                        int LA67_6 = input.LA(1);
-
-                         
-                        int index67_6 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_6);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 23 : 
-                        int LA67_18 = input.LA(1);
-
-                         
-                        int index67_18 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_18);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 24 : 
-                        int LA67_1 = input.LA(1);
-
-                         
-                        int index67_1 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_1);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 25 : 
-                        int LA67_14 = input.LA(1);
-
-                         
-                        int index67_14 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_14);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 26 : 
-                        int LA67_28 = input.LA(1);
-
-                         
-                        int index67_28 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_28);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 27 : 
-                        int LA67_20 = input.LA(1);
-
-                         
-                        int index67_20 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_20);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 28 : 
-                        int LA67_9 = input.LA(1);
-
-                         
-                        int index67_9 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
-
-                        else if ( (true) ) {s = 36;}
-
-                         
-                        input.seek(index67_9);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 29 : 
+                    case 3 : 
                         int LA67_16 = input.LA(1);
 
                          
@@ -16672,11 +17112,11 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         input.seek(index67_16);
                         if ( s>=0 ) return s;
                         break;
-                    case 30 : 
-                        int LA67_24 = input.LA(1);
+                    case 4 : 
+                        int LA67_18 = input.LA(1);
 
                          
-                        int index67_24 = input.index();
+                        int index67_18 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
@@ -16684,14 +17124,14 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         else if ( (true) ) {s = 36;}
 
                          
-                        input.seek(index67_24);
+                        input.seek(index67_18);
                         if ( s>=0 ) return s;
                         break;
-                    case 31 : 
-                        int LA67_15 = input.LA(1);
+                    case 5 : 
+                        int LA67_19 = input.LA(1);
 
                          
-                        int index67_15 = input.index();
+                        int index67_19 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
@@ -16699,10 +17139,85 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         else if ( (true) ) {s = 36;}
 
                          
-                        input.seek(index67_15);
+                        input.seek(index67_19);
                         if ( s>=0 ) return s;
                         break;
-                    case 32 : 
+                    case 6 : 
+                        int LA67_27 = input.LA(1);
+
+                         
+                        int index67_27 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_27);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 7 : 
+                        int LA67_7 = input.LA(1);
+
+                         
+                        int index67_7 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_7);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 8 : 
+                        int LA67_10 = input.LA(1);
+
+                         
+                        int index67_10 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_10);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 9 : 
+                        int LA67_14 = input.LA(1);
+
+                         
+                        int index67_14 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_14);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 10 : 
+                        int LA67_9 = input.LA(1);
+
+                         
+                        int index67_9 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_9);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 11 : 
                         int LA67_23 = input.LA(1);
 
                          
@@ -16717,7 +17232,52 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         input.seek(index67_23);
                         if ( s>=0 ) return s;
                         break;
-                    case 33 : 
+                    case 12 : 
+                        int LA67_25 = input.LA(1);
+
+                         
+                        int index67_25 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_25);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 13 : 
+                        int LA67_33 = input.LA(1);
+
+                         
+                        int index67_33 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_33);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 14 : 
+                        int LA67_8 = input.LA(1);
+
+                         
+                        int index67_8 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_8);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 15 : 
                         int LA67_31 = input.LA(1);
 
                          
@@ -16732,11 +17292,11 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         input.seek(index67_31);
                         if ( s>=0 ) return s;
                         break;
-                    case 34 : 
-                        int LA67_10 = input.LA(1);
+                    case 16 : 
+                        int LA67_6 = input.LA(1);
 
                          
-                        int index67_10 = input.index();
+                        int index67_6 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
@@ -16744,7 +17304,277 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                         else if ( (true) ) {s = 36;}
 
                          
-                        input.seek(index67_10);
+                        input.seek(index67_6);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 17 : 
+                        int LA67_34 = input.LA(1);
+
+                         
+                        int index67_34 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_34);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 18 : 
+                        int LA67_11 = input.LA(1);
+
+                         
+                        int index67_11 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_11);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 19 : 
+                        int LA67_24 = input.LA(1);
+
+                         
+                        int index67_24 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_24);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 20 : 
+                        int LA67_13 = input.LA(1);
+
+                         
+                        int index67_13 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_13);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 21 : 
+                        int LA67_3 = input.LA(1);
+
+                         
+                        int index67_3 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_3);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 22 : 
+                        int LA67_15 = input.LA(1);
+
+                         
+                        int index67_15 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_15);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 23 : 
+                        int LA67_30 = input.LA(1);
+
+                         
+                        int index67_30 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_30);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 24 : 
+                        int LA67_35 = input.LA(1);
+
+                         
+                        int index67_35 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_35);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 25 : 
+                        int LA67_21 = input.LA(1);
+
+                         
+                        int index67_21 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_21);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 26 : 
+                        int LA67_12 = input.LA(1);
+
+                         
+                        int index67_12 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_12);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 27 : 
+                        int LA67_26 = input.LA(1);
+
+                         
+                        int index67_26 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_26);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 28 : 
+                        int LA67_5 = input.LA(1);
+
+                         
+                        int index67_5 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_5);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 29 : 
+                        int LA67_1 = input.LA(1);
+
+                         
+                        int index67_1 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_1);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 30 : 
+                        int LA67_32 = input.LA(1);
+
+                         
+                        int index67_32 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_32);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 31 : 
+                        int LA67_28 = input.LA(1);
+
+                         
+                        int index67_28 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_28);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 32 : 
+                        int LA67_20 = input.LA(1);
+
+                         
+                        int index67_20 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_20);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 33 : 
+                        int LA67_2 = input.LA(1);
+
+                         
+                        int index67_2 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_2);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 34 : 
+                        int LA67_17 = input.LA(1);
+
+                         
+                        int index67_17 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred178_InternalSimpleJava()) ) {s = 37;}
+
+                        else if ( (true) ) {s = 36;}
+
+                         
+                        input.seek(index67_17);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -16837,7 +17667,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA66_transition;
         }
         public String getDescription() {
-            return "3031:2: ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) | (otherlv_12= '++' | otherlv_13= '--' ) | ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) | ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) ) )";
+            return "3038:2: ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) | ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) ) | ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) | ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) ) )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -16966,7 +17796,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA61_transition;
         }
         public String getDescription() {
-            return "3152:7: ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' )";
+            return "3187:7: ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) )";
         }
     }
     static final String DFA62_eotS =
@@ -17026,7 +17856,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA62_transition;
         }
         public String getDescription() {
-            return "3218:8: (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' )";
+            return "3348:8: (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' )";
         }
     }
     static final String DFA72_eotS =
@@ -17118,7 +17948,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA72_transition;
         }
         public String getDescription() {
-            return "3511:1: ( ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' ) | ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* ) )";
+            return "3755:1: ( ( ( ( '(' )=>otherlv_0= '(' ) ( (lv_argumentos_1_0= rulearglist ) )? otherlv_2= ')' ) | ( ( ( '[' )=>this_aux_3= ruleaux )? (otherlv_4= '[' otherlv_5= ']' )* ) )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -17236,7 +18066,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA70_transition;
         }
         public String getDescription() {
-            return "3539:7: ( ( '[' )=>this_aux_3= ruleaux )?";
+            return "3783:7: ( ( '[' )=>this_aux_3= ruleaux )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -17337,7 +18167,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA78_transition;
         }
         public String getDescription() {
-            return "3901:1: ( ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* ) | (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' ) | ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* ) )";
+            return "4189:1: ( ( ( (lv_expressoesArgumentos_0_0= ruleexpression ) ) (otherlv_1= ',' ( (lv_expressoesArgumentos_2_0= ruleexpression ) ) )* ) | (otherlv_3= '\"' this_STRING_4= RULE_STRING otherlv_5= '\"' ) | ( ( (lv_tipoParametro_6_0= ruletype ) ) ( (lv_nomeParametro_7_0= RULE_IDENTIFIER ) ) (otherlv_8= ',' ( (lv_tipoParametro_9_0= ruletype ) ) ( (lv_nomeParametro_10_0= RULE_IDENTIFIER ) ) )* ) )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -17421,7 +18251,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA100_transition;
         }
         public String getDescription() {
-            return "3152:7: ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' )";
+            return "3187:7: ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) )";
         }
     }
     static final String DFA111_eotS =
@@ -17506,7 +18336,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA111_transition;
         }
         public String getDescription() {
-            return "3031:2: ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=> rulemais_aux ) this_expression_11= ruleexpression ) | (otherlv_12= '++' | otherlv_13= '--' ) | ( ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' ) this_expression_23= ruleexpression ) | ( ( (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' ) this_expression_35= ruleexpression ) | (otherlv_36= '?' this_expression_37= ruleexpression otherlv_38= ':' ( (lv_expressao_39_0= ruleexpression ) ) ) | ( (otherlv_40= '>' | otherlv_41= '<' | otherlv_42= '>=' | otherlv_43= '<=' | otherlv_44= '==' | otherlv_45= '!=' ) this_expression_46= ruleexpression ) | ( (otherlv_47= '>>=' | otherlv_48= '<<' | otherlv_49= '>>' | otherlv_50= '>>>' ) this_expression_51= ruleexpression ) ) )";
+            return "3038:2: ( ( (otherlv_0= '(' (this_arglist_1= rulearglist )? otherlv_2= ')' ) | this_aux_3= ruleaux | (otherlv_4= '.' this_expression_5= ruleexpression ) | (otherlv_6= ',' this_expression_7= ruleexpression ) | (otherlv_8= 'instanceof' ( ( RULE_IDENTIFIER )=>this_name_9= rulename ) ) ) | ( ( ( '+' | '+=' )=>this_mais_aux_10= rulemais_aux ) ( (lv_exp_11_0= ruleexpression ) ) ) | ( ( (lv_opedador_12_1= '++' | lv_opedador_12_2= '--' ) ) ) | ( ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) ) ( (lv_exp_22_0= ruleexpression ) ) ) | ( ( (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' ) this_expression_34= ruleexpression ) | (otherlv_35= '?' this_expression_36= ruleexpression otherlv_37= ':' ( (lv_expressao_38_0= ruleexpression ) ) ) | ( ( ( (lv_opedador_39_1= '>' | lv_opedador_39_2= '<' | lv_opedador_39_3= '>=' | lv_opedador_39_4= '<=' | lv_opedador_39_5= '==' | lv_opedador_39_6= '!=' ) ) ) ( (lv_exp_40_0= ruleexpression ) ) ) | ( ( ( (lv_operador_41_1= '>>=' | lv_operador_41_2= '<<' | lv_operador_41_3= '>>' | lv_operador_41_4= '>>>' ) ) ) ( (lv_exp_42_0= ruleexpression ) ) ) ) )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -17635,7 +18465,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA106_transition;
         }
         public String getDescription() {
-            return "3152:7: ( ( ( '+' | '+=' )=> rulemais_aux ) | otherlv_15= '-' | otherlv_16= '-=' | otherlv_17= '*' | otherlv_18= '*=' | otherlv_19= '/' | otherlv_20= '/=' | otherlv_21= '%' | otherlv_22= '%=' )";
+            return "3187:7: ( ( ( '+' | '+=' )=>this_mais_aux_13= rulemais_aux ) | ( (lv_opedador_14_0= '-' ) ) | ( (lv_opedador_15_0= '-=' ) ) | ( (lv_opedador_16_0= '*' ) ) | ( (lv_opedador_17_0= '*=' ) ) | ( (lv_opedador_18_0= '/' ) ) | ( (lv_opedador_19_0= '/=' ) ) | ( (lv_opedador_20_0= '%' ) ) | ( (lv_opedador_21_0= '%=' ) ) )";
         }
     }
     static final String DFA107_eotS =
@@ -17695,7 +18525,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
             this.transition = DFA107_transition;
         }
         public String getDescription() {
-            return "3218:8: (otherlv_24= 'ampersand' | otherlv_25= 'ampersand=' | otherlv_26= '|' | otherlv_27= '|=' | otherlv_28= '^' | otherlv_29= '^=' | (otherlv_30= 'ampersand' otherlv_31= 'ampersand' ) | otherlv_32= '||=' | ( ( '%' )=>otherlv_33= '%' ) | otherlv_34= '%=' )";
+            return "3348:8: (otherlv_23= 'ampersand' | otherlv_24= 'ampersand=' | otherlv_25= '|' | otherlv_26= '|=' | otherlv_27= '^' | otherlv_28= '^=' | (otherlv_29= 'ampersand' otherlv_30= 'ampersand' ) | otherlv_31= '||=' | ( ( '%' )=>otherlv_32= '%' ) | otherlv_33= '%=' )";
         }
     }
  
@@ -17957,163 +18787,163 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_rulenumeric_expression_in_ruleexpression6075 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
     public static final BitSet FOLLOW_rulebit_expression_in_ruleexpression6102 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
     public static final BitSet FOLLOW_rulecreating_expression_in_ruleexpression6129 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_ruleliteral_expression_in_ruleexpression6154 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_56_in_ruleexpression6171 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_57_in_ruleexpression6189 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_58_in_ruleexpression6207 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_ruleexpression6224 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_31_in_ruleexpression6242 = new BitSet(new long[]{0xE7C00008800001F0L,0x0000FFFF78000000L});
-    public static final BitSet FOLLOW_ruleexp_aux_in_ruleexpression6267 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_ruleexpression_aux_in_ruleexpression6289 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_aux_in_entryRuleexpression_aux6325 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleexpression_aux6335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleexpression_aux6375 = new BitSet(new long[]{0xE7C00009800001F0L,0x0000FFFFF8000000L});
-    public static final BitSet FOLLOW_rulearglist_in_ruleexpression_aux6401 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleexpression_aux6414 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_ruleaux_in_ruleexpression_aux6446 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_59_in_ruleexpression_aux6464 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux6489 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_27_in_ruleexpression_aux6508 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux6533 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_60_in_ruleexpression_aux6552 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rulename_in_ruleexpression_aux6583 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_rulemais_aux_in_ruleexpression_aux6626 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux6651 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_61_in_ruleexpression_aux6670 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_62_in_ruleexpression_aux6688 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_rulemais_aux_in_ruleexpression_aux6731 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_63_in_ruleexpression_aux6749 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_64_in_ruleexpression_aux6767 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_65_in_ruleexpression_aux6785 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_66_in_ruleexpression_aux6803 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_67_in_ruleexpression_aux6821 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_68_in_ruleexpression_aux6839 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_69_in_ruleexpression_aux6857 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_70_in_ruleexpression_aux6875 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux6901 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_71_in_ruleexpression_aux6922 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_72_in_ruleexpression_aux6940 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_73_in_ruleexpression_aux6958 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_74_in_ruleexpression_aux6976 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_75_in_ruleexpression_aux6994 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_76_in_ruleexpression_aux7012 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_71_in_ruleexpression_aux7031 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_71_in_ruleexpression_aux7043 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_77_in_ruleexpression_aux7062 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_69_in_ruleexpression_aux7088 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_70_in_ruleexpression_aux7107 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux7133 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_78_in_ruleexpression_aux7152 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux7177 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_ruleexpression_aux7188 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux7209 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_79_in_ruleexpression_aux7230 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_80_in_ruleexpression_aux7248 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_81_in_ruleexpression_aux7266 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_82_in_ruleexpression_aux7284 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_83_in_ruleexpression_aux7302 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_84_in_ruleexpression_aux7320 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux7346 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_85_in_ruleexpression_aux7366 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_86_in_ruleexpression_aux7384 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_87_in_ruleexpression_aux7402 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_88_in_ruleexpression_aux7420 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux7446 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_ruleexpression_aux_in_ruleexpression_aux7469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulemais_aux_in_entryRulemais_aux7507 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulemais_aux7518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_89_in_rulemais_aux7556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_rulemais_aux7575 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenew_in_entryRulenew7615 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulenew7625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rulenew7662 = new BitSet(new long[]{0x0040020800000010L,0x0000FFFF00000000L});
-    public static final BitSet FOLLOW_ruleconstructor_declaration_in_rulenew7687 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_rulenew7698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulecreating_aux_in_entryRulecreating_aux7734 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulecreating_aux7744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rulecreating_aux7790 = new BitSet(new long[]{0xE7C00009800001F0L,0x0000FFFFF8000000L});
-    public static final BitSet FOLLOW_rulearglist_in_rulecreating_aux7812 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_rulecreating_aux7825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleaux_in_rulecreating_aux7866 = new BitSet(new long[]{0x0000000200000002L});
-    public static final BitSet FOLLOW_33_in_rulecreating_aux7880 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_rulecreating_aux7892 = new BitSet(new long[]{0x0000000200000002L});
-    public static final BitSet FOLLOW_ruleaux_in_entryRuleaux7931 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleaux7941 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleaux7978 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_ruleaux7999 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleaux8011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleliteral_expression_in_entryRuleliteral_expression8048 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleliteral_expression8059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DECIMAL_DIGITS_in_ruleliteral_expression8105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INTEGER_LITERAL_in_ruleliteral_expression8132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_LITERAL_in_ruleliteral_expression8158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleliteral_expression8184 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulelogical_expression_in_entryRulelogical_expression8229 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulelogical_expression8239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_91_in_rulelogical_expression8283 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_rulelogical_expression8317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_92_in_rulelogical_expression8342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_93_in_rulelogical_expression8379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulebit_expression_in_entryRulebit_expression8428 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulebit_expression8438 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_94_in_rulebit_expression8481 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_rulebit_expression8515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenumeric_expression_in_entryRulenumeric_expression8551 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulenumeric_expression8561 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_rulenumeric_expression8606 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_61_in_rulenumeric_expression8635 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_62_in_rulenumeric_expression8664 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_rulenumeric_expression8701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulearglist_in_entryRulearglist8737 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulearglist8747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rulearglist8794 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_27_in_rulearglist8807 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_rulearglist8828 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_95_in_rulearglist8850 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulearglist8861 = new BitSet(new long[]{0x0000000000000000L,0x0000000080000000L});
-    public static final BitSet FOLLOW_95_in_rulearglist8872 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletype_in_rulearglist8901 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rulearglist8918 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_27_in_rulearglist8936 = new BitSet(new long[]{0x0040000800000010L,0x0000FFFF00000000L});
-    public static final BitSet FOLLOW_ruletype_in_rulearglist8957 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rulearglist8974 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rulename_in_entryRulename9018 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulename9028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rulename9070 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_rulepackage_name_aux_in_rulename9096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepackage_name_aux_in_entryRulepackage_name_aux9132 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulepackage_name_aux9142 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rulepackage_name_aux9179 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rulepackage_name_aux9196 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_rulepackage_name_aux_in_rulepackage_name_aux9222 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_ruletype_specifier_in_entryRuletype_specifier9259 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuletype_specifier9269 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_96_in_ruletype_specifier9312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_97_in_ruletype_specifier9349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_98_in_ruletype_specifier9386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_99_in_ruletype_specifier9423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_100_in_ruletype_specifier9460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_101_in_ruletype_specifier9497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_102_in_ruletype_specifier9534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_103_in_ruletype_specifier9571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletype_in_entryRuletype9620 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuletype9630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletype_specifier_in_ruletype9678 = new BitSet(new long[]{0x0000000200000002L});
-    public static final BitSet FOLLOW_rulename_in_ruletype9697 = new BitSet(new long[]{0x0000000200000002L});
-    public static final BitSet FOLLOW_33_in_ruletype9713 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruletype9725 = new BitSet(new long[]{0x0000000200000002L});
-    public static final BitSet FOLLOW_ruleMODIFIER_in_entryRuleMODIFIER9763 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMODIFIER9773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_104_in_ruleMODIFIER9816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_105_in_ruleMODIFIER9853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_106_in_ruleMODIFIER9890 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_ruleMODIFIER9927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_107_in_ruleMODIFIER9964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_108_in_ruleMODIFIER10001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleMODIFIER10038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_109_in_ruleMODIFIER10075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_110_in_ruleMODIFIER10112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_111_in_ruleMODIFIER10149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleliteral_expression_in_ruleexpression6156 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_56_in_ruleexpression6174 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_57_in_ruleexpression6192 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_58_in_ruleexpression6210 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_ruleexpression6227 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_31_in_ruleexpression6245 = new BitSet(new long[]{0xE7C00008800001F0L,0x0000FFFF78000000L});
+    public static final BitSet FOLLOW_ruleexp_aux_in_ruleexpression6270 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_ruleexpression_aux_in_ruleexpression6292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_aux_in_entryRuleexpression_aux6328 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleexpression_aux6338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleexpression_aux6378 = new BitSet(new long[]{0xE7C00009800001F0L,0x0000FFFFF8000000L});
+    public static final BitSet FOLLOW_rulearglist_in_ruleexpression_aux6404 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleexpression_aux6417 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_ruleaux_in_ruleexpression_aux6449 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_59_in_ruleexpression_aux6467 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux6492 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_27_in_ruleexpression_aux6511 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux6536 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_60_in_ruleexpression_aux6555 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulename_in_ruleexpression_aux6586 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_rulemais_aux_in_ruleexpression_aux6635 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux6656 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_61_in_ruleexpression_aux6683 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_62_in_ruleexpression_aux6712 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_rulemais_aux_in_ruleexpression_aux6776 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_63_in_ruleexpression_aux6800 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_64_in_ruleexpression_aux6837 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_65_in_ruleexpression_aux6874 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_66_in_ruleexpression_aux6911 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_67_in_ruleexpression_aux6948 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_68_in_ruleexpression_aux6985 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_69_in_ruleexpression_aux7022 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_70_in_ruleexpression_aux7059 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux7094 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_71_in_ruleexpression_aux7116 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_72_in_ruleexpression_aux7134 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_73_in_ruleexpression_aux7152 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_74_in_ruleexpression_aux7170 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_75_in_ruleexpression_aux7188 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_76_in_ruleexpression_aux7206 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_71_in_ruleexpression_aux7225 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_71_in_ruleexpression_aux7237 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_77_in_ruleexpression_aux7256 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_69_in_ruleexpression_aux7282 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_70_in_ruleexpression_aux7301 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux7327 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_78_in_ruleexpression_aux7346 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux7371 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_ruleexpression_aux7382 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux7403 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_79_in_ruleexpression_aux7431 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_80_in_ruleexpression_aux7460 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_81_in_ruleexpression_aux7489 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_82_in_ruleexpression_aux7518 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_83_in_ruleexpression_aux7547 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_84_in_ruleexpression_aux7576 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux7613 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_85_in_ruleexpression_aux7641 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_86_in_ruleexpression_aux7670 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_87_in_ruleexpression_aux7699 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_88_in_ruleexpression_aux7728 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_ruleexpression_aux7765 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_ruleexpression_aux_in_ruleexpression_aux7789 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulemais_aux_in_entryRulemais_aux7826 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulemais_aux7836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_89_in_rulemais_aux7879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_rulemais_aux7916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenew_in_entryRulenew7965 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulenew7975 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rulenew8012 = new BitSet(new long[]{0x0040020800000010L,0x0000FFFF00000000L});
+    public static final BitSet FOLLOW_ruleconstructor_declaration_in_rulenew8037 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_rulenew8048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulecreating_aux_in_entryRulecreating_aux8084 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulecreating_aux8094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rulecreating_aux8140 = new BitSet(new long[]{0xE7C00009800001F0L,0x0000FFFFF8000000L});
+    public static final BitSet FOLLOW_rulearglist_in_rulecreating_aux8162 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_rulecreating_aux8175 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleaux_in_rulecreating_aux8216 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_33_in_rulecreating_aux8230 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_rulecreating_aux8242 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_ruleaux_in_entryRuleaux8281 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleaux8291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleaux8328 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_ruleaux8349 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_ruleaux8361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleliteral_expression_in_entryRuleliteral_expression8397 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleliteral_expression8407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DECIMAL_DIGITS_in_ruleliteral_expression8454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INTEGER_LITERAL_in_ruleliteral_expression8482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_LITERAL_in_ruleliteral_expression8510 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleliteral_expression8538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulelogical_expression_in_entryRulelogical_expression8579 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulelogical_expression8589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_91_in_rulelogical_expression8633 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_rulelogical_expression8667 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_92_in_rulelogical_expression8692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_93_in_rulelogical_expression8729 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulebit_expression_in_entryRulebit_expression8778 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulebit_expression8788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_rulebit_expression8831 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_rulebit_expression8865 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenumeric_expression_in_entryRulenumeric_expression8901 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulenumeric_expression8911 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_rulenumeric_expression8956 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_61_in_rulenumeric_expression8985 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_62_in_rulenumeric_expression9014 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_rulenumeric_expression9051 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulearglist_in_entryRulearglist9087 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulearglist9097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rulearglist9144 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_27_in_rulearglist9157 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_rulearglist9178 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_95_in_rulearglist9200 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rulearglist9211 = new BitSet(new long[]{0x0000000000000000L,0x0000000080000000L});
+    public static final BitSet FOLLOW_95_in_rulearglist9222 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletype_in_rulearglist9251 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rulearglist9268 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_27_in_rulearglist9286 = new BitSet(new long[]{0x0040000800000010L,0x0000FFFF00000000L});
+    public static final BitSet FOLLOW_ruletype_in_rulearglist9307 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rulearglist9324 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rulename_in_entryRulename9368 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulename9378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rulename9420 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_rulepackage_name_aux_in_rulename9446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepackage_name_aux_in_entryRulepackage_name_aux9482 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulepackage_name_aux9492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_rulepackage_name_aux9529 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rulepackage_name_aux9546 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_rulepackage_name_aux_in_rulepackage_name_aux9572 = new BitSet(new long[]{0x0800000000000002L});
+    public static final BitSet FOLLOW_ruletype_specifier_in_entryRuletype_specifier9609 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuletype_specifier9619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_96_in_ruletype_specifier9662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_97_in_ruletype_specifier9699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_98_in_ruletype_specifier9736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_99_in_ruletype_specifier9773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_100_in_ruletype_specifier9810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_101_in_ruletype_specifier9847 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_102_in_ruletype_specifier9884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_103_in_ruletype_specifier9921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletype_in_entryRuletype9970 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuletype9980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletype_specifier_in_ruletype10027 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_rulename_in_ruletype10054 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_33_in_ruletype10068 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_ruletype10080 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_ruleMODIFIER_in_entryRuleMODIFIER10118 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMODIFIER10128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_104_in_ruleMODIFIER10171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_105_in_ruleMODIFIER10208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_106_in_ruleMODIFIER10245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_ruleMODIFIER10282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_107_in_ruleMODIFIER10319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_108_in_ruleMODIFIER10356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleMODIFIER10393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_109_in_ruleMODIFIER10430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_110_in_ruleMODIFIER10467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_111_in_ruleMODIFIER10504 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulemethod_declaration_in_synpred18_InternalSimpleJava1452 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleconstructor_declaration_in_synpred19_InternalSimpleJava1479 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulevariable_declaration_in_synpred39_InternalSimpleJava2351 = new BitSet(new long[]{0x0000000000000002L});
@@ -18143,80 +18973,80 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_rulenew_in_synpred106_InternalSimpleJava5674 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleexpression_in_synpred124_InternalSimpleJava5877 = new BitSet(new long[]{0x0000000100000000L});
     public static final BitSet FOLLOW_32_in_synpred124_InternalSimpleJava5889 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulemais_aux_in_synpred143_InternalSimpleJava6626 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred143_InternalSimpleJava6651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulemais_aux_in_synpred156_InternalSimpleJava6731 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_63_in_synpred156_InternalSimpleJava6749 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_64_in_synpred156_InternalSimpleJava6767 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_65_in_synpred156_InternalSimpleJava6785 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_66_in_synpred156_InternalSimpleJava6803 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_67_in_synpred156_InternalSimpleJava6821 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_68_in_synpred156_InternalSimpleJava6839 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_69_in_synpred156_InternalSimpleJava6857 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_70_in_synpred156_InternalSimpleJava6875 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred156_InternalSimpleJava6901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_synpred178_InternalSimpleJava6375 = new BitSet(new long[]{0xE7C00009800001F0L,0x0000FFFFF8000000L});
-    public static final BitSet FOLLOW_rulearglist_in_synpred178_InternalSimpleJava6401 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_synpred178_InternalSimpleJava6414 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_ruleaux_in_synpred178_InternalSimpleJava6446 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_59_in_synpred178_InternalSimpleJava6464 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6489 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_27_in_synpred178_InternalSimpleJava6508 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6533 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_60_in_synpred178_InternalSimpleJava6552 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rulename_in_synpred178_InternalSimpleJava6583 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_rulemais_aux_in_synpred178_InternalSimpleJava6626 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6651 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_61_in_synpred178_InternalSimpleJava6670 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_62_in_synpred178_InternalSimpleJava6688 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_rulemais_aux_in_synpred178_InternalSimpleJava6731 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_63_in_synpred178_InternalSimpleJava6749 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_64_in_synpred178_InternalSimpleJava6767 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_65_in_synpred178_InternalSimpleJava6785 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_66_in_synpred178_InternalSimpleJava6803 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_67_in_synpred178_InternalSimpleJava6821 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_68_in_synpred178_InternalSimpleJava6839 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_69_in_synpred178_InternalSimpleJava6857 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_70_in_synpred178_InternalSimpleJava6875 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6901 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_71_in_synpred178_InternalSimpleJava6922 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_72_in_synpred178_InternalSimpleJava6940 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_73_in_synpred178_InternalSimpleJava6958 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_74_in_synpred178_InternalSimpleJava6976 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_75_in_synpred178_InternalSimpleJava6994 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_76_in_synpred178_InternalSimpleJava7012 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_71_in_synpred178_InternalSimpleJava7031 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_71_in_synpred178_InternalSimpleJava7043 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_77_in_synpred178_InternalSimpleJava7062 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_69_in_synpred178_InternalSimpleJava7088 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_70_in_synpred178_InternalSimpleJava7107 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7133 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_78_in_synpred178_InternalSimpleJava7152 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7177 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_synpred178_InternalSimpleJava7188 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7209 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_79_in_synpred178_InternalSimpleJava7230 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_80_in_synpred178_InternalSimpleJava7248 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_81_in_synpred178_InternalSimpleJava7266 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_82_in_synpred178_InternalSimpleJava7284 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_83_in_synpred178_InternalSimpleJava7302 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_84_in_synpred178_InternalSimpleJava7320 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7346 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_85_in_synpred178_InternalSimpleJava7366 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_86_in_synpred178_InternalSimpleJava7384 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_87_in_synpred178_InternalSimpleJava7402 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_88_in_synpred178_InternalSimpleJava7420 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7446 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
-    public static final BitSet FOLLOW_ruleexpression_aux_in_synpred178_InternalSimpleJava7469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_synpred182_InternalSimpleJava7790 = new BitSet(new long[]{0xE7C00009800001F0L,0x0000FFFFF8000000L});
-    public static final BitSet FOLLOW_rulearglist_in_synpred182_InternalSimpleJava7812 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_synpred182_InternalSimpleJava7825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_synpred183_InternalSimpleJava7845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred194_InternalSimpleJava8794 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_27_in_synpred194_InternalSimpleJava8807 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleexpression_in_synpred194_InternalSimpleJava8828 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_59_in_synpred197_InternalSimpleJava9179 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_synpred197_InternalSimpleJava9196 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_rulepackage_name_aux_in_synpred197_InternalSimpleJava9222 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulemais_aux_in_synpred143_InternalSimpleJava6635 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred143_InternalSimpleJava6656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulemais_aux_in_synpred156_InternalSimpleJava6776 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_63_in_synpred156_InternalSimpleJava6800 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_64_in_synpred156_InternalSimpleJava6837 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_65_in_synpred156_InternalSimpleJava6874 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_66_in_synpred156_InternalSimpleJava6911 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_67_in_synpred156_InternalSimpleJava6948 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_68_in_synpred156_InternalSimpleJava6985 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_69_in_synpred156_InternalSimpleJava7022 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_70_in_synpred156_InternalSimpleJava7059 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred156_InternalSimpleJava7094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_synpred178_InternalSimpleJava6378 = new BitSet(new long[]{0xE7C00009800001F0L,0x0000FFFFF8000000L});
+    public static final BitSet FOLLOW_rulearglist_in_synpred178_InternalSimpleJava6404 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_synpred178_InternalSimpleJava6417 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_ruleaux_in_synpred178_InternalSimpleJava6449 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_59_in_synpred178_InternalSimpleJava6467 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6492 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_27_in_synpred178_InternalSimpleJava6511 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6536 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_60_in_synpred178_InternalSimpleJava6555 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulename_in_synpred178_InternalSimpleJava6586 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_rulemais_aux_in_synpred178_InternalSimpleJava6635 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava6656 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_61_in_synpred178_InternalSimpleJava6683 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_62_in_synpred178_InternalSimpleJava6712 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_rulemais_aux_in_synpred178_InternalSimpleJava6776 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_63_in_synpred178_InternalSimpleJava6800 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_64_in_synpred178_InternalSimpleJava6837 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_65_in_synpred178_InternalSimpleJava6874 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_66_in_synpred178_InternalSimpleJava6911 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_67_in_synpred178_InternalSimpleJava6948 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_68_in_synpred178_InternalSimpleJava6985 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_69_in_synpred178_InternalSimpleJava7022 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_70_in_synpred178_InternalSimpleJava7059 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7094 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_71_in_synpred178_InternalSimpleJava7116 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_72_in_synpred178_InternalSimpleJava7134 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_73_in_synpred178_InternalSimpleJava7152 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_74_in_synpred178_InternalSimpleJava7170 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_75_in_synpred178_InternalSimpleJava7188 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_76_in_synpred178_InternalSimpleJava7206 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_71_in_synpred178_InternalSimpleJava7225 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_71_in_synpred178_InternalSimpleJava7237 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_77_in_synpred178_InternalSimpleJava7256 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_69_in_synpred178_InternalSimpleJava7282 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_70_in_synpred178_InternalSimpleJava7301 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7327 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_78_in_synpred178_InternalSimpleJava7346 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7371 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_synpred178_InternalSimpleJava7382 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7403 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_79_in_synpred178_InternalSimpleJava7431 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_80_in_synpred178_InternalSimpleJava7460 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_81_in_synpred178_InternalSimpleJava7489 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_82_in_synpred178_InternalSimpleJava7518 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_83_in_synpred178_InternalSimpleJava7547 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_84_in_synpred178_InternalSimpleJava7576 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7613 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_85_in_synpred178_InternalSimpleJava7641 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_86_in_synpred178_InternalSimpleJava7670 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_87_in_synpred178_InternalSimpleJava7699 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_88_in_synpred178_InternalSimpleJava7728 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred178_InternalSimpleJava7765 = new BitSet(new long[]{0xF800000288000000L,0x0000000007FFFFFFL});
+    public static final BitSet FOLLOW_ruleexpression_aux_in_synpred178_InternalSimpleJava7789 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_synpred182_InternalSimpleJava8140 = new BitSet(new long[]{0xE7C00009800001F0L,0x0000FFFFF8000000L});
+    public static final BitSet FOLLOW_rulearglist_in_synpred182_InternalSimpleJava8162 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_synpred182_InternalSimpleJava8175 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_synpred183_InternalSimpleJava8195 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred194_InternalSimpleJava9144 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_27_in_synpred194_InternalSimpleJava9157 = new BitSet(new long[]{0xE7800000800001F0L,0x0000000078000000L});
+    public static final BitSet FOLLOW_ruleexpression_in_synpred194_InternalSimpleJava9178 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_59_in_synpred197_InternalSimpleJava9529 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_synpred197_InternalSimpleJava9546 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_rulepackage_name_aux_in_synpred197_InternalSimpleJava9572 = new BitSet(new long[]{0x0000000000000002L});
 
 }

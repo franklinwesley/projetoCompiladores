@@ -10,7 +10,8 @@ import org.eclipse.emf.common.util.EList
 import java.util.List
 import java.util.ArrayList
 import org.xtext.simpleJava.while_statement
-import org.xtext.simpleJava.logical_expression
+import org.xtext.simpleJava.variable_declaration
+import org.xtext.simpleJava.variable_declarator
 
 //import org.eclipse.xtext.validation.Check
 
@@ -38,16 +39,58 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 
 	@Check
 	def runChecks (compilation_unit comp) {
+		//ver esse get(0) para ser get(i)
 		checkTypeDeclaration(comp.declaracao);
-//		checkVariableDeclaration(comp, comp.declaracao);
+		checkVariableDeclaration(comp.declaracao);
 //		checkVariableInitializer(comp, comp.declaracao);
-		checkWhile(comp.declaracao.get(0).declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.corpoWhile);
+		checkInterativeWhile(comp.declaracao);
+//		checkExpression();
 	}
+	
+	def checkInterativeWhile(EList<type_declaration> list) {
+		for (type_declaration declaracoes : list) {
+			checkWhile(declaracoes.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.corpoWhile);	
+		} 
+	}
+	
+	def checkVariableDeclaration(EList<type_declaration> list) {
+		for (type_declaration declaracoes : list) {
+			checkDeclaracaoVariavel(declaracoes.declaracaoClasse.corpoClasse.declaracaoVariavel);
+			checkDeclaracaoVariavel(declaracoes.declaracaoInterface.corpoInterface.declaracaoVariavel);	
+		}
+	}
+	
+	def checkDeclaracaoVariavel(variable_declaration declaration) {
+		//TODO ver se esse new tipo pega
+		var tipo = new Tipo(String.valueOf(declaration.tipoVariavel.tipo));
+		if (!tipos.contains(tipo)) {
+			//error tipo naum existe
+		} else {
+			//add variavel
+			var vars = declaration.declaracaoVariaveis;
+			for (variable_declarator variable: vars) {	
+				var variavel = new Variavel(variable.nomeVariavel, tipo);
+				if (!variaveis.contains(variavel)) {
+					variaveis.add(variavel);
+				} else {
+					//erro variavel ja existe
+				}
+			}
+		}
+	}
+	
 	
 	def checkWhile(while_statement statement) {
 		var logico = statement.expressaoWhile.tipoLogical;
-		if (logico == null) {
+		var operador = statement.expressaoWhile.expressoes.opedador
+		if (logico == null && operador != ">" && operador != "<" && operador != ">=" 
+			&& operador != "<=" && operador != "==" && operador != "!=" && operador != ">>=" && operador != "<<" 
+			&& operador != ">>" && operador != ">>>") {
 			//erro expressao invalida
+		} else {
+			if (statement.blocoWhile.bloco.corpo.corpoWhile != null) {
+				checkWhile(statement.blocoWhile.bloco.corpo.corpoWhile);
+			}
 		}
 	}
 	
@@ -60,16 +103,6 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 //		} else {
 //			variaveis.put(unit,variavel);
 //			//checkar o tipo se esta certo
-//		}
-//	}
-	
-//	def checkVariableDeclaration(compilation_unit unit, EList<type_declaration> list) {
-//		var type_declaration = list.get(0);
-//		if (!tipos.contains(type_declaration.declaracaoClasse.corpoClasse.declaracaoVariavel.tipo)) {
-//			//error tipo naum existe
-//		} else {
-//			var variable_declaration = type_declaration.declaracaoClasse.corpoClasse.declaracaoVariavel.declaracaoVariaveis.get(0);
-//			//add variavel
 //		}
 //	}
 	

@@ -14,6 +14,7 @@ import org.xtext.simpleJava.SimpleJavaPackage;
 import org.xtext.simpleJava.bit_expression;
 import org.xtext.simpleJava.creating_expression;
 import org.xtext.simpleJava.expression;
+import org.xtext.simpleJava.literal_expression;
 import org.xtext.simpleJava.logical_expression;
 import org.xtext.simpleJava.numeric_expression;
 
@@ -28,6 +29,7 @@ import org.xtext.simpleJava.numeric_expression;
  *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getTipoNumeric <em>Tipo Numeric</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getTipoBit <em>Tipo Bit</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getNew <em>New</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getLiteral <em>Literal</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getExpressao <em>Expressao</em>}</li>
  * </ul>
  * </p>
@@ -75,6 +77,16 @@ public class expressionImpl extends expression_auxImpl implements expression
    * @ordered
    */
   protected creating_expression new_;
+
+  /**
+   * The cached value of the '{@link #getLiteral() <em>Literal</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLiteral()
+   * @generated
+   * @ordered
+   */
+  protected literal_expression literal;
 
   /**
    * The cached value of the '{@link #getExpressao() <em>Expressao</em>}' containment reference.
@@ -304,6 +316,54 @@ public class expressionImpl extends expression_auxImpl implements expression
    * <!-- end-user-doc -->
    * @generated
    */
+  public literal_expression getLiteral()
+  {
+    return literal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLiteral(literal_expression newLiteral, NotificationChain msgs)
+  {
+    literal_expression oldLiteral = literal;
+    literal = newLiteral;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__LITERAL, oldLiteral, newLiteral);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLiteral(literal_expression newLiteral)
+  {
+    if (newLiteral != literal)
+    {
+      NotificationChain msgs = null;
+      if (literal != null)
+        msgs = ((InternalEObject)literal).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__LITERAL, null, msgs);
+      if (newLiteral != null)
+        msgs = ((InternalEObject)newLiteral).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__LITERAL, null, msgs);
+      msgs = basicSetLiteral(newLiteral, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__LITERAL, newLiteral, newLiteral));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public expression getExpressao()
   {
     return expressao;
@@ -365,6 +425,8 @@ public class expressionImpl extends expression_auxImpl implements expression
         return basicSetTipoBit(null, msgs);
       case SimpleJavaPackage.EXPRESSION__NEW:
         return basicSetNew(null, msgs);
+      case SimpleJavaPackage.EXPRESSION__LITERAL:
+        return basicSetLiteral(null, msgs);
       case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
         return basicSetExpressao(null, msgs);
     }
@@ -389,6 +451,8 @@ public class expressionImpl extends expression_auxImpl implements expression
         return getTipoBit();
       case SimpleJavaPackage.EXPRESSION__NEW:
         return getNew();
+      case SimpleJavaPackage.EXPRESSION__LITERAL:
+        return getLiteral();
       case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
         return getExpressao();
     }
@@ -416,6 +480,9 @@ public class expressionImpl extends expression_auxImpl implements expression
         return;
       case SimpleJavaPackage.EXPRESSION__NEW:
         setNew((creating_expression)newValue);
+        return;
+      case SimpleJavaPackage.EXPRESSION__LITERAL:
+        setLiteral((literal_expression)newValue);
         return;
       case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
         setExpressao((expression)newValue);
@@ -446,6 +513,9 @@ public class expressionImpl extends expression_auxImpl implements expression
       case SimpleJavaPackage.EXPRESSION__NEW:
         setNew((creating_expression)null);
         return;
+      case SimpleJavaPackage.EXPRESSION__LITERAL:
+        setLiteral((literal_expression)null);
+        return;
       case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
         setExpressao((expression)null);
         return;
@@ -471,6 +541,8 @@ public class expressionImpl extends expression_auxImpl implements expression
         return tipoBit != null;
       case SimpleJavaPackage.EXPRESSION__NEW:
         return new_ != null;
+      case SimpleJavaPackage.EXPRESSION__LITERAL:
+        return literal != null;
       case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
         return expressao != null;
     }

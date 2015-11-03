@@ -26,9 +26,8 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_creating_aux___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q_or___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a;
 	protected AbstractElementAlias match_creating_aux___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a;
 	protected AbstractElementAlias match_creating_expression___LeftSquareBracketKeyword_1_1_2_0_RightSquareBracketKeyword_1_1_2_1__a;
-	protected AbstractElementAlias match_expression_IDENTIFIERTerminalRuleCall_0_8_or_Literal_expressionParserRuleCall_0_4_or_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7;
-	protected AbstractElementAlias match_expression_aux_HyphenMinusHyphenMinusKeyword_0_2_1_or_PlusSignPlusSignKeyword_0_2_0;
-	protected AbstractElementAlias match_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_AsteriskEqualsSignKeyword_0_3_0_4_or_AsteriskKeyword_0_3_0_3_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_EqualsSignEqualsSignKeyword_0_4_2_0_4_or_ExclamationMarkEqualsSignKeyword_0_4_2_0_5_or_FullStopKeyword_0_0_2_0_or_GreaterThanSignEqualsSignKeyword_0_4_2_0_2_or_GreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0_or_GreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_3_or_GreaterThanSignGreaterThanSignKeyword_0_4_3_0_2_or_GreaterThanSignKeyword_0_4_2_0_0_or_HyphenMinusEqualsSignKeyword_0_3_0_2_or_HyphenMinusKeyword_0_3_0_1_or_LessThanSignEqualsSignKeyword_0_4_2_0_3_or_LessThanSignKeyword_0_4_2_0_1_or_LessThanSignLessThanSignKeyword_0_4_3_0_1_or_Mais_auxParserRuleCall_0_1_0_or_Mais_auxParserRuleCall_0_3_0_0_or_PercentSignEqualsSignKeyword_0_3_0_8_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_3_0_7_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_SolidusEqualsSignKeyword_0_3_0_6_or_SolidusKeyword_0_3_0_5_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__;
+	protected AbstractElementAlias match_expression_IDENTIFIERTerminalRuleCall_0_8_or_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7;
+	protected AbstractElementAlias match_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_FullStopKeyword_0_0_2_0_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__;
 	protected AbstractElementAlias match_field_declaration_Doc_commentParserRuleCall_0_0_a;
 	protected AbstractElementAlias match_import_statement_FullStopAsteriskSemicolonKeyword_2_0_or_SemicolonKeyword_2_1;
 	protected AbstractElementAlias match_method_declaration___LeftSquareBracketKeyword_6_0_RightSquareBracketKeyword_6_1__a;
@@ -49,9 +48,8 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_creating_aux___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q_or___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a = new AlternativeAlias(false, false, new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getLeftParenthesisKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getRightParenthesisKeyword_0_2())), new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getLeftSquareBracketKeyword_1_1_0()), new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getRightSquareBracketKeyword_1_1_1())));
 		match_creating_aux___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getLeftSquareBracketKeyword_1_1_0()), new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getRightSquareBracketKeyword_1_1_1()));
 		match_creating_expression___LeftSquareBracketKeyword_1_1_2_0_RightSquareBracketKeyword_1_1_2_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getCreating_expressionAccess().getLeftSquareBracketKeyword_1_1_2_0()), new TokenAlias(false, false, grammarAccess.getCreating_expressionAccess().getRightSquareBracketKeyword_1_1_2_1()));
-		match_expression_IDENTIFIERTerminalRuleCall_0_8_or_Literal_expressionParserRuleCall_0_4_or_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getIDENTIFIERTerminalRuleCall_0_8()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getLiteral_expressionParserRuleCall_0_4()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getNullKeyword_0_5()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getSuperKeyword_0_6()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getThisKeyword_0_7()));
-		match_expression_aux_HyphenMinusHyphenMinusKeyword_0_2_1_or_PlusSignPlusSignKeyword_0_2_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getHyphenMinusHyphenMinusKeyword_0_2_1()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getPlusSignPlusSignKeyword_0_2_0()));
-		match_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_AsteriskEqualsSignKeyword_0_3_0_4_or_AsteriskKeyword_0_3_0_3_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_EqualsSignEqualsSignKeyword_0_4_2_0_4_or_ExclamationMarkEqualsSignKeyword_0_4_2_0_5_or_FullStopKeyword_0_0_2_0_or_GreaterThanSignEqualsSignKeyword_0_4_2_0_2_or_GreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0_or_GreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_3_or_GreaterThanSignGreaterThanSignKeyword_0_4_3_0_2_or_GreaterThanSignKeyword_0_4_2_0_0_or_HyphenMinusEqualsSignKeyword_0_3_0_2_or_HyphenMinusKeyword_0_3_0_1_or_LessThanSignEqualsSignKeyword_0_4_2_0_3_or_LessThanSignKeyword_0_4_2_0_1_or_LessThanSignLessThanSignKeyword_0_4_3_0_1_or_Mais_auxParserRuleCall_0_1_0_or_Mais_auxParserRuleCall_0_3_0_0_or_PercentSignEqualsSignKeyword_0_3_0_8_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_3_0_7_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_SolidusEqualsSignKeyword_0_3_0_6_or_SolidusKeyword_0_3_0_5_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__ = new AlternativeAlias(false, false, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_1()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAsteriskEqualsSignKeyword_0_3_0_4()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAsteriskKeyword_0_3_0_3()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getCircumflexAccentEqualsSignKeyword_0_4_0_0_5()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getCircumflexAccentKeyword_0_4_0_0_4()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getCommaKeyword_0_0_3_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getEqualsSignEqualsSignKeyword_0_4_2_0_4()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getExclamationMarkEqualsSignKeyword_0_4_2_0_5()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getFullStopKeyword_0_0_2_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getGreaterThanSignEqualsSignKeyword_0_4_2_0_2()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getGreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getGreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_3()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getGreaterThanSignGreaterThanSignKeyword_0_4_3_0_2()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getGreaterThanSignKeyword_0_4_2_0_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getHyphenMinusEqualsSignKeyword_0_3_0_2()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getHyphenMinusKeyword_0_3_0_1()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getLessThanSignEqualsSignKeyword_0_4_2_0_3()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getLessThanSignKeyword_0_4_2_0_1()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getLessThanSignLessThanSignKeyword_0_4_3_0_1()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getMais_auxParserRuleCall_0_1_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getMais_auxParserRuleCall_0_3_0_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getPercentSignEqualsSignKeyword_0_3_0_8()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getPercentSignEqualsSignKeyword_0_4_0_0_9()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getPercentSignKeyword_0_3_0_7()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getPercentSignKeyword_0_4_0_0_8()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getQuestionMarkKeyword_0_4_1_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getSolidusEqualsSignKeyword_0_3_0_6()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getSolidusKeyword_0_3_0_5()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getVerticalLineEqualsSignKeyword_0_4_0_0_3()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getVerticalLineKeyword_0_4_0_0_2()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_1())));
+		match_expression_IDENTIFIERTerminalRuleCall_0_8_or_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getIDENTIFIERTerminalRuleCall_0_8()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getNullKeyword_0_5()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getSuperKeyword_0_6()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getThisKeyword_0_7()));
+		match_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_FullStopKeyword_0_0_2_0_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__ = new AlternativeAlias(false, false, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_1()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getCircumflexAccentEqualsSignKeyword_0_4_0_0_5()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getCircumflexAccentKeyword_0_4_0_0_4()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getCommaKeyword_0_0_3_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getFullStopKeyword_0_0_2_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getPercentSignEqualsSignKeyword_0_4_0_0_9()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getPercentSignKeyword_0_4_0_0_8()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getQuestionMarkKeyword_0_4_1_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getVerticalLineEqualsSignKeyword_0_4_0_0_3()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getVerticalLineKeyword_0_4_0_0_2()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_1())));
 		match_field_declaration_Doc_commentParserRuleCall_0_0_a = new TokenAlias(true, true, grammarAccess.getField_declarationAccess().getDoc_commentParserRuleCall_0_0());
 		match_import_statement_FullStopAsteriskSemicolonKeyword_2_0_or_SemicolonKeyword_2_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getImport_statementAccess().getFullStopAsteriskSemicolonKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getImport_statementAccess().getSemicolonKeyword_2_1()));
 		match_method_declaration___LeftSquareBracketKeyword_6_0_RightSquareBracketKeyword_6_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getMethod_declarationAccess().getLeftSquareBracketKeyword_6_0()), new TokenAlias(false, false, grammarAccess.getMethod_declarationAccess().getRightSquareBracketKeyword_6_1()));
@@ -74,10 +72,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getSTRINGToken(semanticObject, ruleCall, node);
 		else if(ruleCall.getRule() == grammarAccess.getDoc_commentRule())
 			return getdoc_commentToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getLiteral_expressionRule())
-			return getliteral_expressionToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getMais_auxRule())
-			return getmais_auxToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -111,28 +105,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 		return "/**... text ...*/";
 	}
 	
-	/**
-	 * literal_expression:
-	 * 	  ->DECIMAL_DIGITS 
-	 *       | INTEGER_LITERAL
-	 *       | FLOAT_LITERAL 
-	 *       | STRING;
-	 */
-	protected String getliteral_expressionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "";
-	}
-	
-	/**
-	 * mais_aux:  "+" |  "+=";
-	 */
-	protected String getmais_auxToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "+";
-	}
-	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		if (transition.getAmbiguousSyntaxes().isEmpty()) return;
@@ -147,12 +119,10 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_creating_aux___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_creating_expression___LeftSquareBracketKeyword_1_1_2_0_RightSquareBracketKeyword_1_1_2_1__a.equals(syntax))
 				emit_creating_expression___LeftSquareBracketKeyword_1_1_2_0_RightSquareBracketKeyword_1_1_2_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_expression_IDENTIFIERTerminalRuleCall_0_8_or_Literal_expressionParserRuleCall_0_4_or_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7.equals(syntax))
-				emit_expression_IDENTIFIERTerminalRuleCall_0_8_or_Literal_expressionParserRuleCall_0_4_or_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_expression_aux_HyphenMinusHyphenMinusKeyword_0_2_1_or_PlusSignPlusSignKeyword_0_2_0.equals(syntax))
-				emit_expression_aux_HyphenMinusHyphenMinusKeyword_0_2_1_or_PlusSignPlusSignKeyword_0_2_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_AsteriskEqualsSignKeyword_0_3_0_4_or_AsteriskKeyword_0_3_0_3_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_EqualsSignEqualsSignKeyword_0_4_2_0_4_or_ExclamationMarkEqualsSignKeyword_0_4_2_0_5_or_FullStopKeyword_0_0_2_0_or_GreaterThanSignEqualsSignKeyword_0_4_2_0_2_or_GreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0_or_GreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_3_or_GreaterThanSignGreaterThanSignKeyword_0_4_3_0_2_or_GreaterThanSignKeyword_0_4_2_0_0_or_HyphenMinusEqualsSignKeyword_0_3_0_2_or_HyphenMinusKeyword_0_3_0_1_or_LessThanSignEqualsSignKeyword_0_4_2_0_3_or_LessThanSignKeyword_0_4_2_0_1_or_LessThanSignLessThanSignKeyword_0_4_3_0_1_or_Mais_auxParserRuleCall_0_1_0_or_Mais_auxParserRuleCall_0_3_0_0_or_PercentSignEqualsSignKeyword_0_3_0_8_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_3_0_7_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_SolidusEqualsSignKeyword_0_3_0_6_or_SolidusKeyword_0_3_0_5_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__.equals(syntax))
-				emit_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_AsteriskEqualsSignKeyword_0_3_0_4_or_AsteriskKeyword_0_3_0_3_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_EqualsSignEqualsSignKeyword_0_4_2_0_4_or_ExclamationMarkEqualsSignKeyword_0_4_2_0_5_or_FullStopKeyword_0_0_2_0_or_GreaterThanSignEqualsSignKeyword_0_4_2_0_2_or_GreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0_or_GreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_3_or_GreaterThanSignGreaterThanSignKeyword_0_4_3_0_2_or_GreaterThanSignKeyword_0_4_2_0_0_or_HyphenMinusEqualsSignKeyword_0_3_0_2_or_HyphenMinusKeyword_0_3_0_1_or_LessThanSignEqualsSignKeyword_0_4_2_0_3_or_LessThanSignKeyword_0_4_2_0_1_or_LessThanSignLessThanSignKeyword_0_4_3_0_1_or_Mais_auxParserRuleCall_0_1_0_or_Mais_auxParserRuleCall_0_3_0_0_or_PercentSignEqualsSignKeyword_0_3_0_8_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_3_0_7_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_SolidusEqualsSignKeyword_0_3_0_6_or_SolidusKeyword_0_3_0_5_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_expression_IDENTIFIERTerminalRuleCall_0_8_or_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7.equals(syntax))
+				emit_expression_IDENTIFIERTerminalRuleCall_0_8_or_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_FullStopKeyword_0_0_2_0_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__.equals(syntax))
+				emit_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_FullStopKeyword_0_0_2_0_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_field_declaration_Doc_commentParserRuleCall_0_0_a.equals(syntax))
 				emit_field_declaration_Doc_commentParserRuleCall_0_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_import_statement_FullStopAsteriskSemicolonKeyword_2_0_or_SemicolonKeyword_2_1.equals(syntax))
@@ -232,65 +202,13 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     literal_expression | 'null' | 'super' | 'this' | IDENTIFIER
+	 *     'null' | 'super' | 'this' | IDENTIFIER
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (
-	 *         (rule start) 
-	 *         (
-	 *             ('ampersand' 'ampersand') | 
-	 *             (
-	 *                 '.' | 
-	 *                 ',' | 
-	 *                 mais_aux | 
-	 *                 mais_aux | 
-	 *                 '-' | 
-	 *                 '-=' | 
-	 *                 '*' | 
-	 *                 '*=' | 
-	 *                 '/' | 
-	 *                 '/=' | 
-	 *                 '%' | 
-	 *                 '%=' | 
-	 *                 'ampersand' | 
-	 *                 'ampersand=' | 
-	 *                 '|' | 
-	 *                 '|=' | 
-	 *                 '^' | 
-	 *                 '^=' | 
-	 *                 '||=' | 
-	 *                 '%' | 
-	 *                 '%=' | 
-	 *                 '?' | 
-	 *                 '>' | 
-	 *                 '<' | 
-	 *                 '>=' | 
-	 *                 '<=' | 
-	 *                 '==' | 
-	 *                 '!=' | 
-	 *                 '>>=' | 
-	 *                 '<<' | 
-	 *                 '>>' | 
-	 *                 '>>>'
-	 *             )
-	 *         ) 
-	 *         (ambiguity) 
-	 *         expressoes=expression_aux
-	 *     )
+	 *     (rule start) (('ampersand' 'ampersand') | ('.' | ',' | 'ampersand' | 'ampersand=' | '|' | '|=' | '^' | '^=' | '||=' | '%' | '%=' | '?')) (ambiguity) expressoes=expression_aux
 	 *     (rule start) (ambiguity) expressoes=expression_aux
 	 */
-	protected void emit_expression_IDENTIFIERTerminalRuleCall_0_8_or_Literal_expressionParserRuleCall_0_4_or_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '++' | '--'
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) expressoes=expression_aux
-	 */
-	protected void emit_expression_aux_HyphenMinusHyphenMinusKeyword_0_2_1_or_PlusSignPlusSignKeyword_0_2_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_expression_IDENTIFIERTerminalRuleCall_0_8_or_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -301,16 +219,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *         (
 	  *             '.' | 
 	  *             ',' | 
-	  *             mais_aux | 
-	  *             mais_aux | 
-	  *             '-' | 
-	  *             '-=' | 
-	  *             '*' | 
-	  *             '*=' | 
-	  *             '/' | 
-	  *             '/=' | 
-	  *             '%' | 
-	  *             '%=' | 
 	  *             'ampersand' | 
 	  *             'ampersand=' | 
 	  *             '|' | 
@@ -320,17 +228,7 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *             '||=' | 
 	  *             '%' | 
 	  *             '%=' | 
-	  *             '?' | 
-	  *             '>' | 
-	  *             '<' | 
-	  *             '>=' | 
-	  *             '<=' | 
-	  *             '==' | 
-	  *             '!=' | 
-	  *             '>>=' | 
-	  *             '<<' | 
-	  *             '>>' | 
-	  *             '>>>'
+	  *             '?'
 	  *         )
 	  *     )
 	 *
@@ -338,13 +236,14 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) '(' expressao=expression
 	 *     (rule start) (ambiguity) '(' tipo=name
 	 *     (rule start) (ambiguity) '(' tipo=type_specifier
-	 *     (rule start) (ambiguity) (literal_expression | 'null' | 'super' | 'this' | IDENTIFIER) expressoes=expression_aux
+	 *     (rule start) (ambiguity) ('null' | 'super' | 'this' | IDENTIFIER) expressoes=expression_aux
+	 *     (rule start) (ambiguity) literal=literal_expression
 	 *     (rule start) (ambiguity) new=creating_expression
 	 *     (rule start) (ambiguity) tipoBit=bit_expression
 	 *     (rule start) (ambiguity) tipoLogical=logical_expression
 	 *     (rule start) (ambiguity) tipoNumeric=numeric_expression
 	 */
-	protected void emit_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_AsteriskEqualsSignKeyword_0_3_0_4_or_AsteriskKeyword_0_3_0_3_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_EqualsSignEqualsSignKeyword_0_4_2_0_4_or_ExclamationMarkEqualsSignKeyword_0_4_2_0_5_or_FullStopKeyword_0_0_2_0_or_GreaterThanSignEqualsSignKeyword_0_4_2_0_2_or_GreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0_or_GreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_3_or_GreaterThanSignGreaterThanSignKeyword_0_4_3_0_2_or_GreaterThanSignKeyword_0_4_2_0_0_or_HyphenMinusEqualsSignKeyword_0_3_0_2_or_HyphenMinusKeyword_0_3_0_1_or_LessThanSignEqualsSignKeyword_0_4_2_0_3_or_LessThanSignKeyword_0_4_2_0_1_or_LessThanSignLessThanSignKeyword_0_4_3_0_1_or_Mais_auxParserRuleCall_0_1_0_or_Mais_auxParserRuleCall_0_3_0_0_or_PercentSignEqualsSignKeyword_0_3_0_8_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_3_0_7_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_SolidusEqualsSignKeyword_0_3_0_6_or_SolidusKeyword_0_3_0_5_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_FullStopKeyword_0_0_2_0_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

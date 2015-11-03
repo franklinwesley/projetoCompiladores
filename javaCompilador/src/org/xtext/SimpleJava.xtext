@@ -39,7 +39,7 @@ statement:
       | "break" (break=IDENTIFIER)? ";"
       | "continue" (continue=IDENTIFIER)? ";" 
       | ";";
-variable_declaration: (modificador=MODIFIER)* (tipo=type | "void")? declaracaoVariaveis+=variable_declarator ("," declaracaoVariaveis+=variable_declarator)* (";"| blocoVariavel=statement_block); 
+variable_declaration: (modificador=MODIFIER)* (tipoVariavel=type | "void")? declaracaoVariaveis+=variable_declarator ("," declaracaoVariaveis+=variable_declarator)* (";"| blocoVariavel=statement_block); 
 variable_declarator: "(" (arglist)? ")" //TODO naum sei o q eh
 	  | nomeVariavel=IDENTIFIER  ("["  "]")*  ( "=" valorVariavel=variable_initializer)?;
 variable_initializer:
@@ -65,33 +65,33 @@ expression:
       | tipoNumeric=numeric_expression 
       | tipoBit=bit_expression 
       | new=creating_expression 
-      | literal_expression 
+      | literal=literal_expression 
       | "null" 
       | "super" 
       | "this" 
       | IDENTIFIER 
       | "(" exp_aux)  expressoes=expression_aux; 
 expression_aux: (((("(" (arglist)? ")") | aux | ("." expression) | ("," expression) | ("instanceof" ->name))
-	  | ->mais_aux expression
-	  | ( "++" | "--")
-	  | ( ->mais_aux | "-" | "-=" | "*" | "*=" | "/" | "/=" | "%" | "%=" ) expression
+	  | ->mais_aux exp=expression
+	  | opedador=( "++" | "--")
+	  | ( ->mais_aux | opedador="-" | opedador="-=" | opedador="*" | opedador="*=" | opedador="/" | opedador="/=" | opedador="%" | opedador="%=" ) exp=expression
 	  | (("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | ("ampersand" "ampersand") | "||=" | => "%" | "%=" ) expression
 	  	| "?" expression ":" expressao=expression
-	  	| ( ">" | "<" | ">=" | "<=" | "==" | "!=" ) expression
-	  	| ( ">>=" | "<<" | ">>" | ">>>" ) expression)
+	  	| opedador=( ">" | "<" | ">=" | "<=" | "==" | "!=" ) exp=expression
+	  	| operador=( ">>=" | "<<" | ">>" | ">>>" ) exp=expression)
 	  )  expressoes=expression_aux)?;
-mais_aux:  "+" |  "+=";
+mais_aux:  opedador="+" |  opedador="+=";
 new : "{" constructor_declaration "}";      
 creating_aux: ->"(" (argumentos=arglist)? ")" 
 	  | ->(aux)? ("[" "]")* ;
-aux: ("[" espressao=expression "]");	   
+aux: ("[" espressao=expression "]");
+
+	   
 literal_expression:
-	  ->DECIMAL_DIGITS 
-      | INTEGER_LITERAL
-      | FLOAT_LITERAL 
-      | STRING;
-      
-      
+	  ->decimal=DECIMAL_DIGITS 
+      | inteiro=INTEGER_LITERAL
+      | float=FLOAT_LITERAL 
+      | string=STRING;
 logical_expression: 
       operador="!" expressao=expression 
       | operador="true" 
@@ -106,16 +106,16 @@ name: nome=IDENTIFIER pacote=package_name_aux;
 package_name_aux:
 	("." nomePacote=IDENTIFIER pacote=package_name_aux)*;	 
 type_specifier:
-      nomeTipo="boolean" 
-      | nomeTipo="byte" 
-      | nomeTipo="char" 
-      | nomeTipo="short" 
-      | nomeTipo="int" 
-      | nomeTipo="float" 
-      | nomeTipo="long" 
-      | nomeTipo="double";
+      nome="boolean" 
+      | nome="byte" 
+      | nome="char" 
+      | nome="short" 
+      | nome="int" 
+      | nome="float" 
+      | nome="long" 
+      | nome="double";
 type: 
-      tipo=(type_specifier | name) ("[" "]")*;
+      (tipo=type_specifier | tipo=name) ("[" "]")*;
 MODIFIER:
       modificador="public" 
       | modificador="private" 

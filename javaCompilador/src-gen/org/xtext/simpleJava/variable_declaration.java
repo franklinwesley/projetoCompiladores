@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.simpleJava.variable_declaration#getModificador <em>Modificador</em>}</li>
- *   <li>{@link org.xtext.simpleJava.variable_declaration#getTipo <em>Tipo</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.variable_declaration#getTipoVariavel <em>Tipo Variavel</em>}</li>
  *   <li>{@link org.xtext.simpleJava.variable_declaration#getDeclaracaoVariaveis <em>Declaracao Variaveis</em>}</li>
  *   <li>{@link org.xtext.simpleJava.variable_declaration#getBlocoVariavel <em>Bloco Variavel</em>}</li>
  * </ul>
@@ -54,30 +54,30 @@ public interface variable_declaration extends EObject
   void setModificador(MODIFIER value);
 
   /**
-   * Returns the value of the '<em><b>Tipo</b></em>' containment reference.
+   * Returns the value of the '<em><b>Tipo Variavel</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Tipo</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Tipo Variavel</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Tipo</em>' containment reference.
-   * @see #setTipo(type)
-   * @see org.xtext.simpleJava.SimpleJavaPackage#getvariable_declaration_Tipo()
+   * @return the value of the '<em>Tipo Variavel</em>' containment reference.
+   * @see #setTipoVariavel(type)
+   * @see org.xtext.simpleJava.SimpleJavaPackage#getvariable_declaration_TipoVariavel()
    * @model containment="true"
    * @generated
    */
-  type getTipo();
+  type getTipoVariavel();
 
   /**
-   * Sets the value of the '{@link org.xtext.simpleJava.variable_declaration#getTipo <em>Tipo</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.simpleJava.variable_declaration#getTipoVariavel <em>Tipo Variavel</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tipo</em>' containment reference.
-   * @see #getTipo()
+   * @param value the new value of the '<em>Tipo Variavel</em>' containment reference.
+   * @see #getTipoVariavel()
    * @generated
    */
-  void setTipo(type value);
+  void setTipoVariavel(type value);
 
   /**
    * Returns the value of the '<em><b>Declaracao Variaveis</b></em>' containment reference list.

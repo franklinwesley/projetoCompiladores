@@ -92,9 +92,11 @@ public class SimpleJavaFactoryImpl extends EFactoryImpl implements SimpleJavaFac
       case SimpleJavaPackage.EXP_AUX: return createexp_aux();
       case SimpleJavaPackage.EXPRESSION: return createexpression();
       case SimpleJavaPackage.EXPRESSION_AUX: return createexpression_aux();
+      case SimpleJavaPackage.MAIS_AUX: return createmais_aux();
       case SimpleJavaPackage.NEW: return createnew();
       case SimpleJavaPackage.CREATING_AUX: return createcreating_aux();
       case SimpleJavaPackage.AUX: return createaux();
+      case SimpleJavaPackage.LITERAL_EXPRESSION: return createliteral_expression();
       case SimpleJavaPackage.LOGICAL_EXPRESSION: return createlogical_expression();
       case SimpleJavaPackage.BIT_EXPRESSION: return createbit_expression();
       case SimpleJavaPackage.NUMERIC_EXPRESSION: return createnumeric_expression();
@@ -422,6 +424,17 @@ public class SimpleJavaFactoryImpl extends EFactoryImpl implements SimpleJavaFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public mais_aux createmais_aux()
+  {
+    mais_auxImpl mais_aux = new mais_auxImpl();
+    return mais_aux;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public new createnew()
   {
     newImpl new_ = new newImpl();
@@ -448,6 +461,17 @@ public class SimpleJavaFactoryImpl extends EFactoryImpl implements SimpleJavaFac
   {
     auxImpl aux = new auxImpl();
     return aux;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public literal_expression createliteral_expression()
+  {
+    literal_expressionImpl literal_expression = new literal_expressionImpl();
+    return literal_expression;
   }
 
   /**

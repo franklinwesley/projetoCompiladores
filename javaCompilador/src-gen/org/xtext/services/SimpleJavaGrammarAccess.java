@@ -879,8 +879,8 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cModificadorAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cModificadorMODIFIERParserRuleCall_0_0 = (RuleCall)cModificadorAssignment_0.eContents().get(0);
 		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final Assignment cTipoAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
-		private final RuleCall cTipoTypeParserRuleCall_1_0_0 = (RuleCall)cTipoAssignment_1_0.eContents().get(0);
+		private final Assignment cTipoVariavelAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final RuleCall cTipoVariavelTypeParserRuleCall_1_0_0 = (RuleCall)cTipoVariavelAssignment_1_0.eContents().get(0);
 		private final Keyword cVoidKeyword_1_1 = (Keyword)cAlternatives_1.eContents().get(1);
 		private final Assignment cDeclaracaoVariaveisAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cDeclaracaoVariaveisVariable_declaratorParserRuleCall_2_0 = (RuleCall)cDeclaracaoVariaveisAssignment_2.eContents().get(0);
@@ -894,11 +894,11 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBlocoVariavelStatement_blockParserRuleCall_4_1_0 = (RuleCall)cBlocoVariavelAssignment_4_1.eContents().get(0);
 		
 		//variable_declaration:
-		//	modificador=MODIFIER* (tipo=type | "void")? declaracaoVariaveis+=variable_declarator (","
+		//	modificador=MODIFIER* (tipoVariavel=type | "void")? declaracaoVariaveis+=variable_declarator (","
 		//	declaracaoVariaveis+=variable_declarator)* (";" | blocoVariavel=statement_block);
 		@Override public ParserRule getRule() { return rule; }
 
-		//modificador=MODIFIER* (tipo=type | "void")? declaracaoVariaveis+=variable_declarator (","
+		//modificador=MODIFIER* (tipoVariavel=type | "void")? declaracaoVariaveis+=variable_declarator (","
 		//declaracaoVariaveis+=variable_declarator)* (";" | blocoVariavel=statement_block)
 		public Group getGroup() { return cGroup; }
 
@@ -908,14 +908,14 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//MODIFIER
 		public RuleCall getModificadorMODIFIERParserRuleCall_0_0() { return cModificadorMODIFIERParserRuleCall_0_0; }
 
-		//(tipo=type | "void")?
+		//(tipoVariavel=type | "void")?
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
-		//tipo=type
-		public Assignment getTipoAssignment_1_0() { return cTipoAssignment_1_0; }
+		//tipoVariavel=type
+		public Assignment getTipoVariavelAssignment_1_0() { return cTipoVariavelAssignment_1_0; }
 
 		//type
-		public RuleCall getTipoTypeParserRuleCall_1_0_0() { return cTipoTypeParserRuleCall_1_0_0; }
+		public RuleCall getTipoVariavelTypeParserRuleCall_1_0_0() { return cTipoVariavelTypeParserRuleCall_1_0_0; }
 
 		//"void"
 		public Keyword getVoidKeyword_1_1() { return cVoidKeyword_1_1; }
@@ -1752,7 +1752,8 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTipoBitBit_expressionParserRuleCall_0_2_0 = (RuleCall)cTipoBitAssignment_0_2.eContents().get(0);
 		private final Assignment cNewAssignment_0_3 = (Assignment)cAlternatives_0.eContents().get(3);
 		private final RuleCall cNewCreating_expressionParserRuleCall_0_3_0 = (RuleCall)cNewAssignment_0_3.eContents().get(0);
-		private final RuleCall cLiteral_expressionParserRuleCall_0_4 = (RuleCall)cAlternatives_0.eContents().get(4);
+		private final Assignment cLiteralAssignment_0_4 = (Assignment)cAlternatives_0.eContents().get(4);
+		private final RuleCall cLiteralLiteral_expressionParserRuleCall_0_4_0 = (RuleCall)cLiteralAssignment_0_4.eContents().get(0);
 		private final Keyword cNullKeyword_0_5 = (Keyword)cAlternatives_0.eContents().get(5);
 		private final Keyword cSuperKeyword_0_6 = (Keyword)cAlternatives_0.eContents().get(6);
 		private final Keyword cThisKeyword_0_7 = (Keyword)cAlternatives_0.eContents().get(7);
@@ -1765,15 +1766,15 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//expression:
 		//	(tipoLogical=logical_expression | tipoNumeric=numeric_expression | tipoBit=bit_expression | new=creating_expression |
-		//	literal_expression | "null" | "super" | "this" | IDENTIFIER | "(" exp_aux) expressoes=expression_aux;
+		//	literal=literal_expression | "null" | "super" | "this" | IDENTIFIER | "(" exp_aux) expressoes=expression_aux;
 		@Override public ParserRule getRule() { return rule; }
 
 		//(tipoLogical=logical_expression | tipoNumeric=numeric_expression | tipoBit=bit_expression | new=creating_expression |
-		//literal_expression | "null" | "super" | "this" | IDENTIFIER | "(" exp_aux) expressoes=expression_aux
+		//literal=literal_expression | "null" | "super" | "this" | IDENTIFIER | "(" exp_aux) expressoes=expression_aux
 		public Group getGroup() { return cGroup; }
 
 		//tipoLogical=logical_expression | tipoNumeric=numeric_expression | tipoBit=bit_expression | new=creating_expression |
-		//literal_expression | "null" | "super" | "this" | IDENTIFIER | "(" exp_aux
+		//literal=literal_expression | "null" | "super" | "this" | IDENTIFIER | "(" exp_aux
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//tipoLogical=logical_expression
@@ -1800,8 +1801,11 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//creating_expression
 		public RuleCall getNewCreating_expressionParserRuleCall_0_3_0() { return cNewCreating_expressionParserRuleCall_0_3_0; }
 
+		//literal=literal_expression
+		public Assignment getLiteralAssignment_0_4() { return cLiteralAssignment_0_4; }
+
 		//literal_expression
-		public RuleCall getLiteral_expressionParserRuleCall_0_4() { return cLiteral_expressionParserRuleCall_0_4; }
+		public RuleCall getLiteralLiteral_expressionParserRuleCall_0_4_0() { return cLiteralLiteral_expressionParserRuleCall_0_4_0; }
 
 		//"null"
 		public Keyword getNullKeyword_0_5() { return cNullKeyword_0_5; }
@@ -1852,22 +1856,33 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameParserRuleCall_0_0_4_1 = (RuleCall)cGroup_0_0_4.eContents().get(1);
 		private final Group cGroup_0_1 = (Group)cAlternatives_0.eContents().get(1);
 		private final RuleCall cMais_auxParserRuleCall_0_1_0 = (RuleCall)cGroup_0_1.eContents().get(0);
-		private final RuleCall cExpressionParserRuleCall_0_1_1 = (RuleCall)cGroup_0_1.eContents().get(1);
-		private final Alternatives cAlternatives_0_2 = (Alternatives)cAlternatives_0.eContents().get(2);
-		private final Keyword cPlusSignPlusSignKeyword_0_2_0 = (Keyword)cAlternatives_0_2.eContents().get(0);
-		private final Keyword cHyphenMinusHyphenMinusKeyword_0_2_1 = (Keyword)cAlternatives_0_2.eContents().get(1);
+		private final Assignment cExpAssignment_0_1_1 = (Assignment)cGroup_0_1.eContents().get(1);
+		private final RuleCall cExpExpressionParserRuleCall_0_1_1_0 = (RuleCall)cExpAssignment_0_1_1.eContents().get(0);
+		private final Assignment cOpedadorAssignment_0_2 = (Assignment)cAlternatives_0.eContents().get(2);
+		private final Alternatives cOpedadorAlternatives_0_2_0 = (Alternatives)cOpedadorAssignment_0_2.eContents().get(0);
+		private final Keyword cOpedadorPlusSignPlusSignKeyword_0_2_0_0 = (Keyword)cOpedadorAlternatives_0_2_0.eContents().get(0);
+		private final Keyword cOpedadorHyphenMinusHyphenMinusKeyword_0_2_0_1 = (Keyword)cOpedadorAlternatives_0_2_0.eContents().get(1);
 		private final Group cGroup_0_3 = (Group)cAlternatives_0.eContents().get(3);
 		private final Alternatives cAlternatives_0_3_0 = (Alternatives)cGroup_0_3.eContents().get(0);
 		private final RuleCall cMais_auxParserRuleCall_0_3_0_0 = (RuleCall)cAlternatives_0_3_0.eContents().get(0);
-		private final Keyword cHyphenMinusKeyword_0_3_0_1 = (Keyword)cAlternatives_0_3_0.eContents().get(1);
-		private final Keyword cHyphenMinusEqualsSignKeyword_0_3_0_2 = (Keyword)cAlternatives_0_3_0.eContents().get(2);
-		private final Keyword cAsteriskKeyword_0_3_0_3 = (Keyword)cAlternatives_0_3_0.eContents().get(3);
-		private final Keyword cAsteriskEqualsSignKeyword_0_3_0_4 = (Keyword)cAlternatives_0_3_0.eContents().get(4);
-		private final Keyword cSolidusKeyword_0_3_0_5 = (Keyword)cAlternatives_0_3_0.eContents().get(5);
-		private final Keyword cSolidusEqualsSignKeyword_0_3_0_6 = (Keyword)cAlternatives_0_3_0.eContents().get(6);
-		private final Keyword cPercentSignKeyword_0_3_0_7 = (Keyword)cAlternatives_0_3_0.eContents().get(7);
-		private final Keyword cPercentSignEqualsSignKeyword_0_3_0_8 = (Keyword)cAlternatives_0_3_0.eContents().get(8);
-		private final RuleCall cExpressionParserRuleCall_0_3_1 = (RuleCall)cGroup_0_3.eContents().get(1);
+		private final Assignment cOpedadorAssignment_0_3_0_1 = (Assignment)cAlternatives_0_3_0.eContents().get(1);
+		private final Keyword cOpedadorHyphenMinusKeyword_0_3_0_1_0 = (Keyword)cOpedadorAssignment_0_3_0_1.eContents().get(0);
+		private final Assignment cOpedadorAssignment_0_3_0_2 = (Assignment)cAlternatives_0_3_0.eContents().get(2);
+		private final Keyword cOpedadorHyphenMinusEqualsSignKeyword_0_3_0_2_0 = (Keyword)cOpedadorAssignment_0_3_0_2.eContents().get(0);
+		private final Assignment cOpedadorAssignment_0_3_0_3 = (Assignment)cAlternatives_0_3_0.eContents().get(3);
+		private final Keyword cOpedadorAsteriskKeyword_0_3_0_3_0 = (Keyword)cOpedadorAssignment_0_3_0_3.eContents().get(0);
+		private final Assignment cOpedadorAssignment_0_3_0_4 = (Assignment)cAlternatives_0_3_0.eContents().get(4);
+		private final Keyword cOpedadorAsteriskEqualsSignKeyword_0_3_0_4_0 = (Keyword)cOpedadorAssignment_0_3_0_4.eContents().get(0);
+		private final Assignment cOpedadorAssignment_0_3_0_5 = (Assignment)cAlternatives_0_3_0.eContents().get(5);
+		private final Keyword cOpedadorSolidusKeyword_0_3_0_5_0 = (Keyword)cOpedadorAssignment_0_3_0_5.eContents().get(0);
+		private final Assignment cOpedadorAssignment_0_3_0_6 = (Assignment)cAlternatives_0_3_0.eContents().get(6);
+		private final Keyword cOpedadorSolidusEqualsSignKeyword_0_3_0_6_0 = (Keyword)cOpedadorAssignment_0_3_0_6.eContents().get(0);
+		private final Assignment cOpedadorAssignment_0_3_0_7 = (Assignment)cAlternatives_0_3_0.eContents().get(7);
+		private final Keyword cOpedadorPercentSignKeyword_0_3_0_7_0 = (Keyword)cOpedadorAssignment_0_3_0_7.eContents().get(0);
+		private final Assignment cOpedadorAssignment_0_3_0_8 = (Assignment)cAlternatives_0_3_0.eContents().get(8);
+		private final Keyword cOpedadorPercentSignEqualsSignKeyword_0_3_0_8_0 = (Keyword)cOpedadorAssignment_0_3_0_8.eContents().get(0);
+		private final Assignment cExpAssignment_0_3_1 = (Assignment)cGroup_0_3.eContents().get(1);
+		private final RuleCall cExpExpressionParserRuleCall_0_3_1_0 = (RuleCall)cExpAssignment_0_3_1.eContents().get(0);
 		private final Alternatives cAlternatives_0_4 = (Alternatives)cAlternatives_0.eContents().get(4);
 		private final Group cGroup_0_4_0 = (Group)cAlternatives_0_4.eContents().get(0);
 		private final Alternatives cAlternatives_0_4_0_0 = (Alternatives)cGroup_0_4_0.eContents().get(0);
@@ -1891,43 +1906,50 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cExpressaoAssignment_0_4_1_3 = (Assignment)cGroup_0_4_1.eContents().get(3);
 		private final RuleCall cExpressaoExpressionParserRuleCall_0_4_1_3_0 = (RuleCall)cExpressaoAssignment_0_4_1_3.eContents().get(0);
 		private final Group cGroup_0_4_2 = (Group)cAlternatives_0_4.eContents().get(2);
-		private final Alternatives cAlternatives_0_4_2_0 = (Alternatives)cGroup_0_4_2.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_0_4_2_0_0 = (Keyword)cAlternatives_0_4_2_0.eContents().get(0);
-		private final Keyword cLessThanSignKeyword_0_4_2_0_1 = (Keyword)cAlternatives_0_4_2_0.eContents().get(1);
-		private final Keyword cGreaterThanSignEqualsSignKeyword_0_4_2_0_2 = (Keyword)cAlternatives_0_4_2_0.eContents().get(2);
-		private final Keyword cLessThanSignEqualsSignKeyword_0_4_2_0_3 = (Keyword)cAlternatives_0_4_2_0.eContents().get(3);
-		private final Keyword cEqualsSignEqualsSignKeyword_0_4_2_0_4 = (Keyword)cAlternatives_0_4_2_0.eContents().get(4);
-		private final Keyword cExclamationMarkEqualsSignKeyword_0_4_2_0_5 = (Keyword)cAlternatives_0_4_2_0.eContents().get(5);
-		private final RuleCall cExpressionParserRuleCall_0_4_2_1 = (RuleCall)cGroup_0_4_2.eContents().get(1);
+		private final Assignment cOpedadorAssignment_0_4_2_0 = (Assignment)cGroup_0_4_2.eContents().get(0);
+		private final Alternatives cOpedadorAlternatives_0_4_2_0_0 = (Alternatives)cOpedadorAssignment_0_4_2_0.eContents().get(0);
+		private final Keyword cOpedadorGreaterThanSignKeyword_0_4_2_0_0_0 = (Keyword)cOpedadorAlternatives_0_4_2_0_0.eContents().get(0);
+		private final Keyword cOpedadorLessThanSignKeyword_0_4_2_0_0_1 = (Keyword)cOpedadorAlternatives_0_4_2_0_0.eContents().get(1);
+		private final Keyword cOpedadorGreaterThanSignEqualsSignKeyword_0_4_2_0_0_2 = (Keyword)cOpedadorAlternatives_0_4_2_0_0.eContents().get(2);
+		private final Keyword cOpedadorLessThanSignEqualsSignKeyword_0_4_2_0_0_3 = (Keyword)cOpedadorAlternatives_0_4_2_0_0.eContents().get(3);
+		private final Keyword cOpedadorEqualsSignEqualsSignKeyword_0_4_2_0_0_4 = (Keyword)cOpedadorAlternatives_0_4_2_0_0.eContents().get(4);
+		private final Keyword cOpedadorExclamationMarkEqualsSignKeyword_0_4_2_0_0_5 = (Keyword)cOpedadorAlternatives_0_4_2_0_0.eContents().get(5);
+		private final Assignment cExpAssignment_0_4_2_1 = (Assignment)cGroup_0_4_2.eContents().get(1);
+		private final RuleCall cExpExpressionParserRuleCall_0_4_2_1_0 = (RuleCall)cExpAssignment_0_4_2_1.eContents().get(0);
 		private final Group cGroup_0_4_3 = (Group)cAlternatives_0_4.eContents().get(3);
-		private final Alternatives cAlternatives_0_4_3_0 = (Alternatives)cGroup_0_4_3.eContents().get(0);
-		private final Keyword cGreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0 = (Keyword)cAlternatives_0_4_3_0.eContents().get(0);
-		private final Keyword cLessThanSignLessThanSignKeyword_0_4_3_0_1 = (Keyword)cAlternatives_0_4_3_0.eContents().get(1);
-		private final Keyword cGreaterThanSignGreaterThanSignKeyword_0_4_3_0_2 = (Keyword)cAlternatives_0_4_3_0.eContents().get(2);
-		private final Keyword cGreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_3 = (Keyword)cAlternatives_0_4_3_0.eContents().get(3);
-		private final RuleCall cExpressionParserRuleCall_0_4_3_1 = (RuleCall)cGroup_0_4_3.eContents().get(1);
+		private final Assignment cOperadorAssignment_0_4_3_0 = (Assignment)cGroup_0_4_3.eContents().get(0);
+		private final Alternatives cOperadorAlternatives_0_4_3_0_0 = (Alternatives)cOperadorAssignment_0_4_3_0.eContents().get(0);
+		private final Keyword cOperadorGreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0_0 = (Keyword)cOperadorAlternatives_0_4_3_0_0.eContents().get(0);
+		private final Keyword cOperadorLessThanSignLessThanSignKeyword_0_4_3_0_0_1 = (Keyword)cOperadorAlternatives_0_4_3_0_0.eContents().get(1);
+		private final Keyword cOperadorGreaterThanSignGreaterThanSignKeyword_0_4_3_0_0_2 = (Keyword)cOperadorAlternatives_0_4_3_0_0.eContents().get(2);
+		private final Keyword cOperadorGreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_0_3 = (Keyword)cOperadorAlternatives_0_4_3_0_0.eContents().get(3);
+		private final Assignment cExpAssignment_0_4_3_1 = (Assignment)cGroup_0_4_3.eContents().get(1);
+		private final RuleCall cExpExpressionParserRuleCall_0_4_3_1_0 = (RuleCall)cExpAssignment_0_4_3_1.eContents().get(0);
 		private final Assignment cExpressoesAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cExpressoesExpression_auxParserRuleCall_1_0 = (RuleCall)cExpressoesAssignment_1.eContents().get(0);
 		
 		//expression_aux:
-		//	((("(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name) | mais_aux expression | ("++" |
-		//	"--") | (mais_aux | "-" | "-=" | "*" | "*=" | "/" | "/=" | "%" | "%=") expression | (("ampersand" | "ampersand=" | "|"
-		//	| "|=" | "^" | "^=" | "ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":"
-		//	expressao=expression | (">" | "<" | ">=" | "<=" | "==" | "!=") expression | (">>=" | "<<" | ">>" | ">>>") expression))
-		//	expressoes=expression_aux)?;
+		//	((("(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name) | mais_aux exp=expression |
+		//	opedador=("++" | "--") | (mais_aux | opedador="-" | opedador="-=" | opedador="*" | opedador="*=" | opedador="/" |
+		//	opedador="/=" | opedador="%" | opedador="%=") exp=expression | (("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^="
+		//	| "ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":" expressao=expression |
+		//	opedador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>" | ">>>")
+		//	exp=expression)) expressoes=expression_aux)?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//((("(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name) | mais_aux expression | ("++" |
-		//"--") | (mais_aux | "-" | "-=" | "*" | "*=" | "/" | "/=" | "%" | "%=") expression | (("ampersand" | "ampersand=" | "|"
-		//| "|=" | "^" | "^=" | "ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":"
-		//expressao=expression | (">" | "<" | ">=" | "<=" | "==" | "!=") expression | (">>=" | "<<" | ">>" | ">>>") expression))
+		//((("(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name) | mais_aux exp=expression |
+		//opedador=("++" | "--") | (mais_aux | opedador="-" | opedador="-=" | opedador="*" | opedador="*=" | opedador="/" |
+		//opedador="/=" | opedador="%" | opedador="%=") exp=expression | (("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" |
+		//"ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":" expressao=expression | opedador=(">" |
+		//"<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>" | ">>>") exp=expression))
 		//expressoes=expression_aux)?
 		public Group getGroup() { return cGroup; }
 
-		//("(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name) | mais_aux expression | ("++" | "--")
-		//| (mais_aux | "-" | "-=" | "*" | "*=" | "/" | "/=" | "%" | "%=") expression | (("ampersand" | "ampersand=" | "|" | "|="
-		//| "^" | "^=" | "ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":" expressao=expression |
-		//(">" | "<" | ">=" | "<=" | "==" | "!=") expression | (">>=" | "<<" | ">>" | ">>>") expression)
+		//("(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name) | mais_aux exp=expression |
+		//opedador=("++" | "--") | (mais_aux | opedador="-" | opedador="-=" | opedador="*" | opedador="*=" | opedador="/" |
+		//opedador="/=" | opedador="%" | opedador="%=") exp=expression | (("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" |
+		//"ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":" expressao=expression | opedador=(">" |
+		//"<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>" | ">>>") exp=expression)
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//"(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name
@@ -1975,63 +1997,98 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//-> name
 		public RuleCall getNameParserRuleCall_0_0_4_1() { return cNameParserRuleCall_0_0_4_1; }
 
-		//-> mais_aux expression
+		//-> mais_aux exp=expression
 		public Group getGroup_0_1() { return cGroup_0_1; }
 
 		//-> mais_aux
 		public RuleCall getMais_auxParserRuleCall_0_1_0() { return cMais_auxParserRuleCall_0_1_0; }
 
+		//exp=expression
+		public Assignment getExpAssignment_0_1_1() { return cExpAssignment_0_1_1; }
+
 		//expression
-		public RuleCall getExpressionParserRuleCall_0_1_1() { return cExpressionParserRuleCall_0_1_1; }
+		public RuleCall getExpExpressionParserRuleCall_0_1_1_0() { return cExpExpressionParserRuleCall_0_1_1_0; }
+
+		//opedador=("++" | "--")
+		public Assignment getOpedadorAssignment_0_2() { return cOpedadorAssignment_0_2; }
 
 		//"++" | "--"
-		public Alternatives getAlternatives_0_2() { return cAlternatives_0_2; }
+		public Alternatives getOpedadorAlternatives_0_2_0() { return cOpedadorAlternatives_0_2_0; }
 
 		//"++"
-		public Keyword getPlusSignPlusSignKeyword_0_2_0() { return cPlusSignPlusSignKeyword_0_2_0; }
+		public Keyword getOpedadorPlusSignPlusSignKeyword_0_2_0_0() { return cOpedadorPlusSignPlusSignKeyword_0_2_0_0; }
 
 		//"--"
-		public Keyword getHyphenMinusHyphenMinusKeyword_0_2_1() { return cHyphenMinusHyphenMinusKeyword_0_2_1; }
+		public Keyword getOpedadorHyphenMinusHyphenMinusKeyword_0_2_0_1() { return cOpedadorHyphenMinusHyphenMinusKeyword_0_2_0_1; }
 
-		//(-> mais_aux | "-" | "-=" | "*" | "*=" | "/" | "/=" | "%" | "%=") expression
+		//(-> mais_aux | opedador="-" | opedador="-=" | opedador="*" | opedador="*=" | opedador="/" | opedador="/=" | opedador="%"
+		//| opedador="%=") exp=expression
 		public Group getGroup_0_3() { return cGroup_0_3; }
 
-		//-> mais_aux | "-" | "-=" | "*" | "*=" | "/" | "/=" | "%" | "%="
+		//-> mais_aux | opedador="-" | opedador="-=" | opedador="*" | opedador="*=" | opedador="/" | opedador="/=" | opedador="%"
+		//| opedador="%="
 		public Alternatives getAlternatives_0_3_0() { return cAlternatives_0_3_0; }
 
 		//-> mais_aux
 		public RuleCall getMais_auxParserRuleCall_0_3_0_0() { return cMais_auxParserRuleCall_0_3_0_0; }
 
+		//opedador="-"
+		public Assignment getOpedadorAssignment_0_3_0_1() { return cOpedadorAssignment_0_3_0_1; }
+
 		//"-"
-		public Keyword getHyphenMinusKeyword_0_3_0_1() { return cHyphenMinusKeyword_0_3_0_1; }
+		public Keyword getOpedadorHyphenMinusKeyword_0_3_0_1_0() { return cOpedadorHyphenMinusKeyword_0_3_0_1_0; }
+
+		//opedador="-="
+		public Assignment getOpedadorAssignment_0_3_0_2() { return cOpedadorAssignment_0_3_0_2; }
 
 		//"-="
-		public Keyword getHyphenMinusEqualsSignKeyword_0_3_0_2() { return cHyphenMinusEqualsSignKeyword_0_3_0_2; }
+		public Keyword getOpedadorHyphenMinusEqualsSignKeyword_0_3_0_2_0() { return cOpedadorHyphenMinusEqualsSignKeyword_0_3_0_2_0; }
+
+		//opedador="*"
+		public Assignment getOpedadorAssignment_0_3_0_3() { return cOpedadorAssignment_0_3_0_3; }
 
 		//"*"
-		public Keyword getAsteriskKeyword_0_3_0_3() { return cAsteriskKeyword_0_3_0_3; }
+		public Keyword getOpedadorAsteriskKeyword_0_3_0_3_0() { return cOpedadorAsteriskKeyword_0_3_0_3_0; }
+
+		//opedador="*="
+		public Assignment getOpedadorAssignment_0_3_0_4() { return cOpedadorAssignment_0_3_0_4; }
 
 		//"*="
-		public Keyword getAsteriskEqualsSignKeyword_0_3_0_4() { return cAsteriskEqualsSignKeyword_0_3_0_4; }
+		public Keyword getOpedadorAsteriskEqualsSignKeyword_0_3_0_4_0() { return cOpedadorAsteriskEqualsSignKeyword_0_3_0_4_0; }
+
+		//opedador="/"
+		public Assignment getOpedadorAssignment_0_3_0_5() { return cOpedadorAssignment_0_3_0_5; }
 
 		//"/"
-		public Keyword getSolidusKeyword_0_3_0_5() { return cSolidusKeyword_0_3_0_5; }
+		public Keyword getOpedadorSolidusKeyword_0_3_0_5_0() { return cOpedadorSolidusKeyword_0_3_0_5_0; }
+
+		//opedador="/="
+		public Assignment getOpedadorAssignment_0_3_0_6() { return cOpedadorAssignment_0_3_0_6; }
 
 		//"/="
-		public Keyword getSolidusEqualsSignKeyword_0_3_0_6() { return cSolidusEqualsSignKeyword_0_3_0_6; }
+		public Keyword getOpedadorSolidusEqualsSignKeyword_0_3_0_6_0() { return cOpedadorSolidusEqualsSignKeyword_0_3_0_6_0; }
+
+		//opedador="%"
+		public Assignment getOpedadorAssignment_0_3_0_7() { return cOpedadorAssignment_0_3_0_7; }
 
 		//"%"
-		public Keyword getPercentSignKeyword_0_3_0_7() { return cPercentSignKeyword_0_3_0_7; }
+		public Keyword getOpedadorPercentSignKeyword_0_3_0_7_0() { return cOpedadorPercentSignKeyword_0_3_0_7_0; }
+
+		//opedador="%="
+		public Assignment getOpedadorAssignment_0_3_0_8() { return cOpedadorAssignment_0_3_0_8; }
 
 		//"%="
-		public Keyword getPercentSignEqualsSignKeyword_0_3_0_8() { return cPercentSignEqualsSignKeyword_0_3_0_8; }
+		public Keyword getOpedadorPercentSignEqualsSignKeyword_0_3_0_8_0() { return cOpedadorPercentSignEqualsSignKeyword_0_3_0_8_0; }
+
+		//exp=expression
+		public Assignment getExpAssignment_0_3_1() { return cExpAssignment_0_3_1; }
 
 		//expression
-		public RuleCall getExpressionParserRuleCall_0_3_1() { return cExpressionParserRuleCall_0_3_1; }
+		public RuleCall getExpExpressionParserRuleCall_0_3_1_0() { return cExpExpressionParserRuleCall_0_3_1_0; }
 
 		//("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand" "ampersand" | "||=" | => "%" | "%=") expression |
-		//"?" expression ":" expressao=expression | (">" | "<" | ">=" | "<=" | "==" | "!=") expression | (">>=" | "<<" | ">>" |
-		//">>>") expression
+		//"?" expression ":" expressao=expression | opedador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression |
+		//operador=(">>=" | "<<" | ">>" | ">>>") exp=expression
 		public Alternatives getAlternatives_0_4() { return cAlternatives_0_4; }
 
 		//("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand" "ampersand" | "||=" | => "%" | "%=") expression
@@ -2097,53 +2154,65 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//expression
 		public RuleCall getExpressaoExpressionParserRuleCall_0_4_1_3_0() { return cExpressaoExpressionParserRuleCall_0_4_1_3_0; }
 
-		//(">" | "<" | ">=" | "<=" | "==" | "!=") expression
+		//opedador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression
 		public Group getGroup_0_4_2() { return cGroup_0_4_2; }
 
+		//opedador=(">" | "<" | ">=" | "<=" | "==" | "!=")
+		public Assignment getOpedadorAssignment_0_4_2_0() { return cOpedadorAssignment_0_4_2_0; }
+
 		//">" | "<" | ">=" | "<=" | "==" | "!="
-		public Alternatives getAlternatives_0_4_2_0() { return cAlternatives_0_4_2_0; }
+		public Alternatives getOpedadorAlternatives_0_4_2_0_0() { return cOpedadorAlternatives_0_4_2_0_0; }
 
 		//">"
-		public Keyword getGreaterThanSignKeyword_0_4_2_0_0() { return cGreaterThanSignKeyword_0_4_2_0_0; }
+		public Keyword getOpedadorGreaterThanSignKeyword_0_4_2_0_0_0() { return cOpedadorGreaterThanSignKeyword_0_4_2_0_0_0; }
 
 		//"<"
-		public Keyword getLessThanSignKeyword_0_4_2_0_1() { return cLessThanSignKeyword_0_4_2_0_1; }
+		public Keyword getOpedadorLessThanSignKeyword_0_4_2_0_0_1() { return cOpedadorLessThanSignKeyword_0_4_2_0_0_1; }
 
 		//">="
-		public Keyword getGreaterThanSignEqualsSignKeyword_0_4_2_0_2() { return cGreaterThanSignEqualsSignKeyword_0_4_2_0_2; }
+		public Keyword getOpedadorGreaterThanSignEqualsSignKeyword_0_4_2_0_0_2() { return cOpedadorGreaterThanSignEqualsSignKeyword_0_4_2_0_0_2; }
 
 		//"<="
-		public Keyword getLessThanSignEqualsSignKeyword_0_4_2_0_3() { return cLessThanSignEqualsSignKeyword_0_4_2_0_3; }
+		public Keyword getOpedadorLessThanSignEqualsSignKeyword_0_4_2_0_0_3() { return cOpedadorLessThanSignEqualsSignKeyword_0_4_2_0_0_3; }
 
 		//"=="
-		public Keyword getEqualsSignEqualsSignKeyword_0_4_2_0_4() { return cEqualsSignEqualsSignKeyword_0_4_2_0_4; }
+		public Keyword getOpedadorEqualsSignEqualsSignKeyword_0_4_2_0_0_4() { return cOpedadorEqualsSignEqualsSignKeyword_0_4_2_0_0_4; }
 
 		//"!="
-		public Keyword getExclamationMarkEqualsSignKeyword_0_4_2_0_5() { return cExclamationMarkEqualsSignKeyword_0_4_2_0_5; }
+		public Keyword getOpedadorExclamationMarkEqualsSignKeyword_0_4_2_0_0_5() { return cOpedadorExclamationMarkEqualsSignKeyword_0_4_2_0_0_5; }
+
+		//exp=expression
+		public Assignment getExpAssignment_0_4_2_1() { return cExpAssignment_0_4_2_1; }
 
 		//expression
-		public RuleCall getExpressionParserRuleCall_0_4_2_1() { return cExpressionParserRuleCall_0_4_2_1; }
+		public RuleCall getExpExpressionParserRuleCall_0_4_2_1_0() { return cExpExpressionParserRuleCall_0_4_2_1_0; }
 
-		//(">>=" | "<<" | ">>" | ">>>") expression
+		//operador=(">>=" | "<<" | ">>" | ">>>") exp=expression
 		public Group getGroup_0_4_3() { return cGroup_0_4_3; }
 
+		//operador=(">>=" | "<<" | ">>" | ">>>")
+		public Assignment getOperadorAssignment_0_4_3_0() { return cOperadorAssignment_0_4_3_0; }
+
 		//">>=" | "<<" | ">>" | ">>>"
-		public Alternatives getAlternatives_0_4_3_0() { return cAlternatives_0_4_3_0; }
+		public Alternatives getOperadorAlternatives_0_4_3_0_0() { return cOperadorAlternatives_0_4_3_0_0; }
 
 		//">>="
-		public Keyword getGreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0() { return cGreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0; }
+		public Keyword getOperadorGreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0_0() { return cOperadorGreaterThanSignGreaterThanSignEqualsSignKeyword_0_4_3_0_0_0; }
 
 		//"<<"
-		public Keyword getLessThanSignLessThanSignKeyword_0_4_3_0_1() { return cLessThanSignLessThanSignKeyword_0_4_3_0_1; }
+		public Keyword getOperadorLessThanSignLessThanSignKeyword_0_4_3_0_0_1() { return cOperadorLessThanSignLessThanSignKeyword_0_4_3_0_0_1; }
 
 		//">>"
-		public Keyword getGreaterThanSignGreaterThanSignKeyword_0_4_3_0_2() { return cGreaterThanSignGreaterThanSignKeyword_0_4_3_0_2; }
+		public Keyword getOperadorGreaterThanSignGreaterThanSignKeyword_0_4_3_0_0_2() { return cOperadorGreaterThanSignGreaterThanSignKeyword_0_4_3_0_0_2; }
 
 		//">>>"
-		public Keyword getGreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_3() { return cGreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_3; }
+		public Keyword getOperadorGreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_0_3() { return cOperadorGreaterThanSignGreaterThanSignGreaterThanSignKeyword_0_4_3_0_0_3; }
+
+		//exp=expression
+		public Assignment getExpAssignment_0_4_3_1() { return cExpAssignment_0_4_3_1; }
 
 		//expression
-		public RuleCall getExpressionParserRuleCall_0_4_3_1() { return cExpressionParserRuleCall_0_4_3_1; }
+		public RuleCall getExpExpressionParserRuleCall_0_4_3_1_0() { return cExpExpressionParserRuleCall_0_4_3_1_0; }
 
 		//expressoes=expression_aux
 		public Assignment getExpressoesAssignment_1() { return cExpressoesAssignment_1; }
@@ -2155,21 +2224,29 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	public class Mais_auxElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "mais_aux");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Keyword cPlusSignKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
-		private final Keyword cPlusSignEqualsSignKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Assignment cOpedadorAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final Keyword cOpedadorPlusSignKeyword_0_0 = (Keyword)cOpedadorAssignment_0.eContents().get(0);
+		private final Assignment cOpedadorAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final Keyword cOpedadorPlusSignEqualsSignKeyword_1_0 = (Keyword)cOpedadorAssignment_1.eContents().get(0);
 		
 		//mais_aux:
-		//	"+" | "+=";
+		//	opedador="+" | opedador="+=";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"+" | "+="
+		//opedador="+" | opedador="+="
 		public Alternatives getAlternatives() { return cAlternatives; }
 
+		//opedador="+"
+		public Assignment getOpedadorAssignment_0() { return cOpedadorAssignment_0; }
+
 		//"+"
-		public Keyword getPlusSignKeyword_0() { return cPlusSignKeyword_0; }
+		public Keyword getOpedadorPlusSignKeyword_0_0() { return cOpedadorPlusSignKeyword_0_0; }
+
+		//opedador="+="
+		public Assignment getOpedadorAssignment_1() { return cOpedadorAssignment_1; }
 
 		//"+="
-		public Keyword getPlusSignEqualsSignKeyword_1() { return cPlusSignEqualsSignKeyword_1; }
+		public Keyword getOpedadorPlusSignEqualsSignKeyword_1_0() { return cOpedadorPlusSignEqualsSignKeyword_1_0; }
 	}
 
 	public class NewElements extends AbstractParserRuleElementFinder {
@@ -2283,29 +2360,45 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	public class Literal_expressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "literal_expression");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cDECIMAL_DIGITSTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cINTEGER_LITERALTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cFLOAT_LITERALTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cSTRINGTerminalRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final Assignment cDecimalAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final RuleCall cDecimalDECIMAL_DIGITSTerminalRuleCall_0_0 = (RuleCall)cDecimalAssignment_0.eContents().get(0);
+		private final Assignment cInteiroAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cInteiroINTEGER_LITERALTerminalRuleCall_1_0 = (RuleCall)cInteiroAssignment_1.eContents().get(0);
+		private final Assignment cFloatAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final RuleCall cFloatFLOAT_LITERALTerminalRuleCall_2_0 = (RuleCall)cFloatAssignment_2.eContents().get(0);
+		private final Assignment cStringAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
+		private final RuleCall cStringSTRINGTerminalRuleCall_3_0 = (RuleCall)cStringAssignment_3.eContents().get(0);
 		
 		//literal_expression:
-		//	DECIMAL_DIGITS | INTEGER_LITERAL | FLOAT_LITERAL | STRING;
+		//	-> decimal=DECIMAL_DIGITS | inteiro=INTEGER_LITERAL | float=FLOAT_LITERAL | string=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//-> DECIMAL_DIGITS | INTEGER_LITERAL | FLOAT_LITERAL | STRING
+		//-> decimal=DECIMAL_DIGITS | inteiro=INTEGER_LITERAL | float=FLOAT_LITERAL | string=STRING
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//-> DECIMAL_DIGITS
-		public RuleCall getDECIMAL_DIGITSTerminalRuleCall_0() { return cDECIMAL_DIGITSTerminalRuleCall_0; }
+		//-> decimal=DECIMAL_DIGITS
+		public Assignment getDecimalAssignment_0() { return cDecimalAssignment_0; }
+
+		//DECIMAL_DIGITS
+		public RuleCall getDecimalDECIMAL_DIGITSTerminalRuleCall_0_0() { return cDecimalDECIMAL_DIGITSTerminalRuleCall_0_0; }
+
+		//inteiro=INTEGER_LITERAL
+		public Assignment getInteiroAssignment_1() { return cInteiroAssignment_1; }
 
 		//INTEGER_LITERAL
-		public RuleCall getINTEGER_LITERALTerminalRuleCall_1() { return cINTEGER_LITERALTerminalRuleCall_1; }
+		public RuleCall getInteiroINTEGER_LITERALTerminalRuleCall_1_0() { return cInteiroINTEGER_LITERALTerminalRuleCall_1_0; }
+
+		//float=FLOAT_LITERAL
+		public Assignment getFloatAssignment_2() { return cFloatAssignment_2; }
 
 		//FLOAT_LITERAL
-		public RuleCall getFLOAT_LITERALTerminalRuleCall_2() { return cFLOAT_LITERALTerminalRuleCall_2; }
+		public RuleCall getFloatFLOAT_LITERALTerminalRuleCall_2_0() { return cFloatFLOAT_LITERALTerminalRuleCall_2_0; }
+
+		//string=STRING
+		public Assignment getStringAssignment_3() { return cStringAssignment_3; }
 
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_3() { return cSTRINGTerminalRuleCall_3; }
+		public RuleCall getStringSTRINGTerminalRuleCall_3_0() { return cStringSTRINGTerminalRuleCall_3_0; }
 	}
 
 	public class Logical_expressionElements extends AbstractParserRuleElementFinder {
@@ -2589,110 +2682,112 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	public class Type_specifierElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "type_specifier");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cNomeTipoAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final Keyword cNomeTipoBooleanKeyword_0_0 = (Keyword)cNomeTipoAssignment_0.eContents().get(0);
-		private final Assignment cNomeTipoAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final Keyword cNomeTipoByteKeyword_1_0 = (Keyword)cNomeTipoAssignment_1.eContents().get(0);
-		private final Assignment cNomeTipoAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final Keyword cNomeTipoCharKeyword_2_0 = (Keyword)cNomeTipoAssignment_2.eContents().get(0);
-		private final Assignment cNomeTipoAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
-		private final Keyword cNomeTipoShortKeyword_3_0 = (Keyword)cNomeTipoAssignment_3.eContents().get(0);
-		private final Assignment cNomeTipoAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
-		private final Keyword cNomeTipoIntKeyword_4_0 = (Keyword)cNomeTipoAssignment_4.eContents().get(0);
-		private final Assignment cNomeTipoAssignment_5 = (Assignment)cAlternatives.eContents().get(5);
-		private final Keyword cNomeTipoFloatKeyword_5_0 = (Keyword)cNomeTipoAssignment_5.eContents().get(0);
-		private final Assignment cNomeTipoAssignment_6 = (Assignment)cAlternatives.eContents().get(6);
-		private final Keyword cNomeTipoLongKeyword_6_0 = (Keyword)cNomeTipoAssignment_6.eContents().get(0);
-		private final Assignment cNomeTipoAssignment_7 = (Assignment)cAlternatives.eContents().get(7);
-		private final Keyword cNomeTipoDoubleKeyword_7_0 = (Keyword)cNomeTipoAssignment_7.eContents().get(0);
+		private final Assignment cNomeAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final Keyword cNomeBooleanKeyword_0_0 = (Keyword)cNomeAssignment_0.eContents().get(0);
+		private final Assignment cNomeAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final Keyword cNomeByteKeyword_1_0 = (Keyword)cNomeAssignment_1.eContents().get(0);
+		private final Assignment cNomeAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final Keyword cNomeCharKeyword_2_0 = (Keyword)cNomeAssignment_2.eContents().get(0);
+		private final Assignment cNomeAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
+		private final Keyword cNomeShortKeyword_3_0 = (Keyword)cNomeAssignment_3.eContents().get(0);
+		private final Assignment cNomeAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
+		private final Keyword cNomeIntKeyword_4_0 = (Keyword)cNomeAssignment_4.eContents().get(0);
+		private final Assignment cNomeAssignment_5 = (Assignment)cAlternatives.eContents().get(5);
+		private final Keyword cNomeFloatKeyword_5_0 = (Keyword)cNomeAssignment_5.eContents().get(0);
+		private final Assignment cNomeAssignment_6 = (Assignment)cAlternatives.eContents().get(6);
+		private final Keyword cNomeLongKeyword_6_0 = (Keyword)cNomeAssignment_6.eContents().get(0);
+		private final Assignment cNomeAssignment_7 = (Assignment)cAlternatives.eContents().get(7);
+		private final Keyword cNomeDoubleKeyword_7_0 = (Keyword)cNomeAssignment_7.eContents().get(0);
 		
 		//type_specifier:
-		//	nomeTipo="boolean" | nomeTipo="byte" | nomeTipo="char" | nomeTipo="short" | nomeTipo="int" | nomeTipo="float" |
-		//	nomeTipo="long" | nomeTipo="double";
+		//	nome="boolean" | nome="byte" | nome="char" | nome="short" | nome="int" | nome="float" | nome="long" | nome="double";
 		@Override public ParserRule getRule() { return rule; }
 
-		//nomeTipo="boolean" | nomeTipo="byte" | nomeTipo="char" | nomeTipo="short" | nomeTipo="int" | nomeTipo="float" |
-		//nomeTipo="long" | nomeTipo="double"
+		//nome="boolean" | nome="byte" | nome="char" | nome="short" | nome="int" | nome="float" | nome="long" | nome="double"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//nomeTipo="boolean"
-		public Assignment getNomeTipoAssignment_0() { return cNomeTipoAssignment_0; }
+		//nome="boolean"
+		public Assignment getNomeAssignment_0() { return cNomeAssignment_0; }
 
 		//"boolean"
-		public Keyword getNomeTipoBooleanKeyword_0_0() { return cNomeTipoBooleanKeyword_0_0; }
+		public Keyword getNomeBooleanKeyword_0_0() { return cNomeBooleanKeyword_0_0; }
 
-		//nomeTipo="byte"
-		public Assignment getNomeTipoAssignment_1() { return cNomeTipoAssignment_1; }
+		//nome="byte"
+		public Assignment getNomeAssignment_1() { return cNomeAssignment_1; }
 
 		//"byte"
-		public Keyword getNomeTipoByteKeyword_1_0() { return cNomeTipoByteKeyword_1_0; }
+		public Keyword getNomeByteKeyword_1_0() { return cNomeByteKeyword_1_0; }
 
-		//nomeTipo="char"
-		public Assignment getNomeTipoAssignment_2() { return cNomeTipoAssignment_2; }
+		//nome="char"
+		public Assignment getNomeAssignment_2() { return cNomeAssignment_2; }
 
 		//"char"
-		public Keyword getNomeTipoCharKeyword_2_0() { return cNomeTipoCharKeyword_2_0; }
+		public Keyword getNomeCharKeyword_2_0() { return cNomeCharKeyword_2_0; }
 
-		//nomeTipo="short"
-		public Assignment getNomeTipoAssignment_3() { return cNomeTipoAssignment_3; }
+		//nome="short"
+		public Assignment getNomeAssignment_3() { return cNomeAssignment_3; }
 
 		//"short"
-		public Keyword getNomeTipoShortKeyword_3_0() { return cNomeTipoShortKeyword_3_0; }
+		public Keyword getNomeShortKeyword_3_0() { return cNomeShortKeyword_3_0; }
 
-		//nomeTipo="int"
-		public Assignment getNomeTipoAssignment_4() { return cNomeTipoAssignment_4; }
+		//nome="int"
+		public Assignment getNomeAssignment_4() { return cNomeAssignment_4; }
 
 		//"int"
-		public Keyword getNomeTipoIntKeyword_4_0() { return cNomeTipoIntKeyword_4_0; }
+		public Keyword getNomeIntKeyword_4_0() { return cNomeIntKeyword_4_0; }
 
-		//nomeTipo="float"
-		public Assignment getNomeTipoAssignment_5() { return cNomeTipoAssignment_5; }
+		//nome="float"
+		public Assignment getNomeAssignment_5() { return cNomeAssignment_5; }
 
 		//"float"
-		public Keyword getNomeTipoFloatKeyword_5_0() { return cNomeTipoFloatKeyword_5_0; }
+		public Keyword getNomeFloatKeyword_5_0() { return cNomeFloatKeyword_5_0; }
 
-		//nomeTipo="long"
-		public Assignment getNomeTipoAssignment_6() { return cNomeTipoAssignment_6; }
+		//nome="long"
+		public Assignment getNomeAssignment_6() { return cNomeAssignment_6; }
 
 		//"long"
-		public Keyword getNomeTipoLongKeyword_6_0() { return cNomeTipoLongKeyword_6_0; }
+		public Keyword getNomeLongKeyword_6_0() { return cNomeLongKeyword_6_0; }
 
-		//nomeTipo="double"
-		public Assignment getNomeTipoAssignment_7() { return cNomeTipoAssignment_7; }
+		//nome="double"
+		public Assignment getNomeAssignment_7() { return cNomeAssignment_7; }
 
 		//"double"
-		public Keyword getNomeTipoDoubleKeyword_7_0() { return cNomeTipoDoubleKeyword_7_0; }
+		public Keyword getNomeDoubleKeyword_7_0() { return cNomeDoubleKeyword_7_0; }
 	}
 
 	public class TypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "type");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cTipoAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Alternatives cTipoAlternatives_0_0 = (Alternatives)cTipoAssignment_0.eContents().get(0);
-		private final RuleCall cTipoType_specifierParserRuleCall_0_0_0 = (RuleCall)cTipoAlternatives_0_0.eContents().get(0);
-		private final RuleCall cTipoNameParserRuleCall_0_0_1 = (RuleCall)cTipoAlternatives_0_0.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final Assignment cTipoAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
+		private final RuleCall cTipoType_specifierParserRuleCall_0_0_0 = (RuleCall)cTipoAssignment_0_0.eContents().get(0);
+		private final Assignment cTipoAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
+		private final RuleCall cTipoNameParserRuleCall_0_1_0 = (RuleCall)cTipoAssignment_0_1.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cLeftSquareBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		
 		//type:
-		//	tipo=(type_specifier | name) ("[" "]")*;
+		//	(tipo=type_specifier | tipo=name) ("[" "]")*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//tipo=(type_specifier | name) ("[" "]")*
+		//(tipo=type_specifier | tipo=name) ("[" "]")*
 		public Group getGroup() { return cGroup; }
 
-		//tipo=(type_specifier | name)
-		public Assignment getTipoAssignment_0() { return cTipoAssignment_0; }
+		//tipo=type_specifier | tipo=name
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
-		//type_specifier | name
-		public Alternatives getTipoAlternatives_0_0() { return cTipoAlternatives_0_0; }
+		//tipo=type_specifier
+		public Assignment getTipoAssignment_0_0() { return cTipoAssignment_0_0; }
 
 		//type_specifier
 		public RuleCall getTipoType_specifierParserRuleCall_0_0_0() { return cTipoType_specifierParserRuleCall_0_0_0; }
 
+		//tipo=name
+		public Assignment getTipoAssignment_0_1() { return cTipoAssignment_0_1; }
+
 		//name
-		public RuleCall getTipoNameParserRuleCall_0_0_1() { return cTipoNameParserRuleCall_0_0_1; }
+		public RuleCall getTipoNameParserRuleCall_0_1_0() { return cTipoNameParserRuleCall_0_1_0; }
 
 		//("[" "]")*
 		public Group getGroup_1() { return cGroup_1; }
@@ -3089,7 +3184,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//variable_declaration:
-	//	modificador=MODIFIER* (tipo=type | "void")? declaracaoVariaveis+=variable_declarator (","
+	//	modificador=MODIFIER* (tipoVariavel=type | "void")? declaracaoVariaveis+=variable_declarator (","
 	//	declaracaoVariaveis+=variable_declarator)* (";" | blocoVariavel=statement_block);
 	public Variable_declarationElements getVariable_declarationAccess() {
 		return pVariable_declaration;
@@ -3228,7 +3323,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 
 	//expression:
 	//	(tipoLogical=logical_expression | tipoNumeric=numeric_expression | tipoBit=bit_expression | new=creating_expression |
-	//	literal_expression | "null" | "super" | "this" | IDENTIFIER | "(" exp_aux) expressoes=expression_aux;
+	//	literal=literal_expression | "null" | "super" | "this" | IDENTIFIER | "(" exp_aux) expressoes=expression_aux;
 	public ExpressionElements getExpressionAccess() {
 		return pExpression;
 	}
@@ -3238,11 +3333,12 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//expression_aux:
-	//	((("(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name) | mais_aux expression | ("++" |
-	//	"--") | (mais_aux | "-" | "-=" | "*" | "*=" | "/" | "/=" | "%" | "%=") expression | (("ampersand" | "ampersand=" | "|"
-	//	| "|=" | "^" | "^=" | "ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":"
-	//	expressao=expression | (">" | "<" | ">=" | "<=" | "==" | "!=") expression | (">>=" | "<<" | ">>" | ">>>") expression))
-	//	expressoes=expression_aux)?;
+	//	((("(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name) | mais_aux exp=expression |
+	//	opedador=("++" | "--") | (mais_aux | opedador="-" | opedador="-=" | opedador="*" | opedador="*=" | opedador="/" |
+	//	opedador="/=" | opedador="%" | opedador="%=") exp=expression | (("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^="
+	//	| "ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":" expressao=expression |
+	//	opedador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>" | ">>>")
+	//	exp=expression)) expressoes=expression_aux)?;
 	public Expression_auxElements getExpression_auxAccess() {
 		return pExpression_aux;
 	}
@@ -3252,7 +3348,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//mais_aux:
-	//	"+" | "+=";
+	//	opedador="+" | opedador="+=";
 	public Mais_auxElements getMais_auxAccess() {
 		return pMais_aux;
 	}
@@ -3292,7 +3388,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//literal_expression:
-	//	DECIMAL_DIGITS | INTEGER_LITERAL | FLOAT_LITERAL | STRING;
+	//	-> decimal=DECIMAL_DIGITS | inteiro=INTEGER_LITERAL | float=FLOAT_LITERAL | string=STRING;
 	public Literal_expressionElements getLiteral_expressionAccess() {
 		return pLiteral_expression;
 	}
@@ -3363,8 +3459,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//type_specifier:
-	//	nomeTipo="boolean" | nomeTipo="byte" | nomeTipo="char" | nomeTipo="short" | nomeTipo="int" | nomeTipo="float" |
-	//	nomeTipo="long" | nomeTipo="double";
+	//	nome="boolean" | nome="byte" | nome="char" | nome="short" | nome="int" | nome="float" | nome="long" | nome="double";
 	public Type_specifierElements getType_specifierAccess() {
 		return pType_specifier;
 	}
@@ -3374,7 +3469,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//type:
-	//	tipo=(type_specifier | name) ("[" "]")*;
+	//	(tipo=type_specifier | tipo=name) ("[" "]")*;
 	public TypeElements getTypeAccess() {
 		return pType;
 	}

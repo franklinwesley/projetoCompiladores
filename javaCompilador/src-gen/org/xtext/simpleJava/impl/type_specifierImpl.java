@@ -19,7 +19,7 @@ import org.xtext.simpleJava.type_specifier;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.simpleJava.impl.type_specifierImpl#getNomeTipo <em>Nome Tipo</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.type_specifierImpl#getNome <em>Nome</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,24 +28,24 @@ import org.xtext.simpleJava.type_specifier;
 public class type_specifierImpl extends MinimalEObjectImpl.Container implements type_specifier
 {
   /**
-   * The default value of the '{@link #getNomeTipo() <em>Nome Tipo</em>}' attribute.
+   * The default value of the '{@link #getNome() <em>Nome</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNomeTipo()
+   * @see #getNome()
    * @generated
    * @ordered
    */
-  protected static final String NOME_TIPO_EDEFAULT = null;
+  protected static final String NOME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNomeTipo() <em>Nome Tipo</em>}' attribute.
+   * The cached value of the '{@link #getNome() <em>Nome</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNomeTipo()
+   * @see #getNome()
    * @generated
    * @ordered
    */
-  protected String nomeTipo = NOME_TIPO_EDEFAULT;
+  protected String nome = NOME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +73,9 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getNomeTipo()
+  public String getNome()
   {
-    return nomeTipo;
+    return nome;
   }
 
   /**
@@ -83,12 +83,12 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNomeTipo(String newNomeTipo)
+  public void setNome(String newNome)
   {
-    String oldNomeTipo = nomeTipo;
-    nomeTipo = newNomeTipo;
+    String oldNome = nome;
+    nome = newNome;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.TYPE_SPECIFIER__NOME_TIPO, oldNomeTipo, nomeTipo));
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.TYPE_SPECIFIER__NOME, oldNome, nome));
   }
 
   /**
@@ -101,8 +101,8 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.TYPE_SPECIFIER__NOME_TIPO:
-        return getNomeTipo();
+      case SimpleJavaPackage.TYPE_SPECIFIER__NOME:
+        return getNome();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +117,8 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.TYPE_SPECIFIER__NOME_TIPO:
-        setNomeTipo((String)newValue);
+      case SimpleJavaPackage.TYPE_SPECIFIER__NOME:
+        setNome((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +134,8 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.TYPE_SPECIFIER__NOME_TIPO:
-        setNomeTipo(NOME_TIPO_EDEFAULT);
+      case SimpleJavaPackage.TYPE_SPECIFIER__NOME:
+        setNome(NOME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +151,8 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.TYPE_SPECIFIER__NOME_TIPO:
-        return NOME_TIPO_EDEFAULT == null ? nomeTipo != null : !NOME_TIPO_EDEFAULT.equals(nomeTipo);
+      case SimpleJavaPackage.TYPE_SPECIFIER__NOME:
+        return NOME_EDEFAULT == null ? nome != null : !NOME_EDEFAULT.equals(nome);
     }
     return super.eIsSet(featureID);
   }
@@ -168,8 +168,8 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (nomeTipo: ");
-    result.append(nomeTipo);
+    result.append(" (nome: ");
+    result.append(nome);
     result.append(')');
     return result.toString();
   }

@@ -737,13 +737,13 @@ public interface SimpleJavaPackage extends EPackage
   int VARIABLE_DECLARATION__MODIFICADOR = 0;
 
   /**
-   * The feature id for the '<em><b>Tipo</b></em>' containment reference.
+   * The feature id for the '<em><b>Tipo Variavel</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VARIABLE_DECLARATION__TIPO = 1;
+  int VARIABLE_DECLARATION__TIPO_VARIAVEL = 1;
 
   /**
    * The feature id for the '<em><b>Declaracao Variaveis</b></em>' containment reference list.
@@ -1139,7 +1139,7 @@ public interface SimpleJavaPackage extends EPackage
    * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getnew()
    * @generated
    */
-  int NEW = 28;
+  int NEW = 29;
 
   /**
    * The number of structural features of the '<em>new</em>' class.
@@ -1317,13 +1317,40 @@ public interface SimpleJavaPackage extends EPackage
   int EXPRESSION_AUX = 27;
 
   /**
+   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_AUX__OPEDADOR = 0;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_AUX__EXP = 1;
+
+  /**
+   * The feature id for the '<em><b>Operador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_AUX__OPERADOR = 2;
+
+  /**
    * The feature id for the '<em><b>Expressoes</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION_AUX__EXPRESSOES = 0;
+  int EXPRESSION_AUX__EXPRESSOES = 3;
 
   /**
    * The number of structural features of the '<em>expression aux</em>' class.
@@ -1332,7 +1359,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION_AUX_FEATURE_COUNT = 1;
+  int EXPRESSION_AUX_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.simpleJava.impl.expressionImpl <em>expression</em>}' class.
@@ -1343,6 +1370,33 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    */
   int EXPRESSION = 26;
+
+  /**
+   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__OPEDADOR = EXPRESSION_AUX__OPEDADOR;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__EXP = EXPRESSION_AUX__EXP;
+
+  /**
+   * The feature id for the '<em><b>Operador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__OPERADOR = EXPRESSION_AUX__OPERADOR;
 
   /**
    * The feature id for the '<em><b>Expressoes</b></em>' containment reference.
@@ -1390,13 +1444,22 @@ public interface SimpleJavaPackage extends EPackage
   int EXPRESSION__NEW = EXPRESSION_AUX_FEATURE_COUNT + 3;
 
   /**
+   * The feature id for the '<em><b>Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__LITERAL = EXPRESSION_AUX_FEATURE_COUNT + 4;
+
+  /**
    * The feature id for the '<em><b>Expressao</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION__EXPRESSAO = EXPRESSION_AUX_FEATURE_COUNT + 4;
+  int EXPRESSION__EXPRESSAO = EXPRESSION_AUX_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>expression</em>' class.
@@ -1405,7 +1468,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION_FEATURE_COUNT = EXPRESSION_AUX_FEATURE_COUNT + 5;
+  int EXPRESSION_FEATURE_COUNT = EXPRESSION_AUX_FEATURE_COUNT + 6;
 
   /**
    * The meta object id for the '{@link org.xtext.simpleJava.impl.exp_auxImpl <em>exp aux</em>}' class.
@@ -1416,6 +1479,33 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    */
   int EXP_AUX = 25;
+
+  /**
+   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_AUX__OPEDADOR = EXPRESSION__OPEDADOR;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_AUX__EXP = EXPRESSION__EXP;
+
+  /**
+   * The feature id for the '<em><b>Operador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_AUX__OPERADOR = EXPRESSION__OPERADOR;
 
   /**
    * The feature id for the '<em><b>Expressoes</b></em>' containment reference.
@@ -1463,6 +1553,15 @@ public interface SimpleJavaPackage extends EPackage
   int EXP_AUX__NEW = EXPRESSION__NEW;
 
   /**
+   * The feature id for the '<em><b>Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_AUX__LITERAL = EXPRESSION__LITERAL;
+
+  /**
    * The feature id for the '<em><b>Expressao</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1481,6 +1580,61 @@ public interface SimpleJavaPackage extends EPackage
   int EXP_AUX_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link org.xtext.simpleJava.impl.mais_auxImpl <em>mais aux</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.simpleJava.impl.mais_auxImpl
+   * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getmais_aux()
+   * @generated
+   */
+  int MAIS_AUX = 28;
+
+  /**
+   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIS_AUX__OPEDADOR = EXPRESSION_AUX__OPEDADOR;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIS_AUX__EXP = EXPRESSION_AUX__EXP;
+
+  /**
+   * The feature id for the '<em><b>Operador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIS_AUX__OPERADOR = EXPRESSION_AUX__OPERADOR;
+
+  /**
+   * The feature id for the '<em><b>Expressoes</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIS_AUX__EXPRESSOES = EXPRESSION_AUX__EXPRESSOES;
+
+  /**
+   * The number of structural features of the '<em>mais aux</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIS_AUX_FEATURE_COUNT = EXPRESSION_AUX_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link org.xtext.simpleJava.impl.creating_auxImpl <em>creating aux</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1488,7 +1642,7 @@ public interface SimpleJavaPackage extends EPackage
    * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getcreating_aux()
    * @generated
    */
-  int CREATING_AUX = 29;
+  int CREATING_AUX = 30;
 
   /**
    * The feature id for the '<em><b>Argumentos</b></em>' containment reference.
@@ -1516,7 +1670,34 @@ public interface SimpleJavaPackage extends EPackage
    * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getaux()
    * @generated
    */
-  int AUX = 30;
+  int AUX = 31;
+
+  /**
+   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUX__OPEDADOR = EXPRESSION_AUX__OPEDADOR;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUX__EXP = EXPRESSION_AUX__EXP;
+
+  /**
+   * The feature id for the '<em><b>Operador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUX__OPERADOR = EXPRESSION_AUX__OPERADOR;
 
   /**
    * The feature id for the '<em><b>Expressoes</b></em>' containment reference.
@@ -1555,6 +1736,61 @@ public interface SimpleJavaPackage extends EPackage
   int AUX_FEATURE_COUNT = EXPRESSION_AUX_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.simpleJava.impl.literal_expressionImpl <em>literal expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.simpleJava.impl.literal_expressionImpl
+   * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getliteral_expression()
+   * @generated
+   */
+  int LITERAL_EXPRESSION = 32;
+
+  /**
+   * The feature id for the '<em><b>Decimal</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_EXPRESSION__DECIMAL = 0;
+
+  /**
+   * The feature id for the '<em><b>Inteiro</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_EXPRESSION__INTEIRO = 1;
+
+  /**
+   * The feature id for the '<em><b>Float</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_EXPRESSION__FLOAT = 2;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_EXPRESSION__STRING = 3;
+
+  /**
+   * The number of structural features of the '<em>literal expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_EXPRESSION_FEATURE_COUNT = 4;
+
+  /**
    * The meta object id for the '{@link org.xtext.simpleJava.impl.logical_expressionImpl <em>logical expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1562,7 +1798,7 @@ public interface SimpleJavaPackage extends EPackage
    * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getlogical_expression()
    * @generated
    */
-  int LOGICAL_EXPRESSION = 31;
+  int LOGICAL_EXPRESSION = 33;
 
   /**
    * The feature id for the '<em><b>Operador</b></em>' attribute.
@@ -1599,7 +1835,7 @@ public interface SimpleJavaPackage extends EPackage
    * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getbit_expression()
    * @generated
    */
-  int BIT_EXPRESSION = 32;
+  int BIT_EXPRESSION = 34;
 
   /**
    * The feature id for the '<em><b>Operador</b></em>' attribute.
@@ -1636,7 +1872,7 @@ public interface SimpleJavaPackage extends EPackage
    * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getnumeric_expression()
    * @generated
    */
-  int NUMERIC_EXPRESSION = 33;
+  int NUMERIC_EXPRESSION = 35;
 
   /**
    * The feature id for the '<em><b>Operador</b></em>' attribute.
@@ -1673,7 +1909,7 @@ public interface SimpleJavaPackage extends EPackage
    * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getarglist()
    * @generated
    */
-  int ARGLIST = 34;
+  int ARGLIST = 36;
 
   /**
    * The feature id for the '<em><b>Nome Variavel</b></em>' attribute.
@@ -1694,13 +1930,40 @@ public interface SimpleJavaPackage extends EPackage
   int ARGLIST__VALOR_VARIAVEL = VARIABLE_DECLARATOR__VALOR_VARIAVEL;
 
   /**
+   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGLIST__OPEDADOR = VARIABLE_DECLARATOR_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGLIST__EXP = VARIABLE_DECLARATOR_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Operador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGLIST__OPERADOR = VARIABLE_DECLARATOR_FEATURE_COUNT + 2;
+
+  /**
    * The feature id for the '<em><b>Expressoes</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARGLIST__EXPRESSOES = VARIABLE_DECLARATOR_FEATURE_COUNT + 0;
+  int ARGLIST__EXPRESSOES = VARIABLE_DECLARATOR_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Expressoes Argumentos</b></em>' containment reference list.
@@ -1709,7 +1972,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGLIST__EXPRESSOES_ARGUMENTOS = VARIABLE_DECLARATOR_FEATURE_COUNT + 1;
+  int ARGLIST__EXPRESSOES_ARGUMENTOS = VARIABLE_DECLARATOR_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Tipo Parametro</b></em>' containment reference list.
@@ -1718,7 +1981,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGLIST__TIPO_PARAMETRO = VARIABLE_DECLARATOR_FEATURE_COUNT + 2;
+  int ARGLIST__TIPO_PARAMETRO = VARIABLE_DECLARATOR_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Nome Parametro</b></em>' attribute list.
@@ -1727,7 +1990,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGLIST__NOME_PARAMETRO = VARIABLE_DECLARATOR_FEATURE_COUNT + 3;
+  int ARGLIST__NOME_PARAMETRO = VARIABLE_DECLARATOR_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>arglist</em>' class.
@@ -1736,7 +1999,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGLIST_FEATURE_COUNT = VARIABLE_DECLARATOR_FEATURE_COUNT + 4;
+  int ARGLIST_FEATURE_COUNT = VARIABLE_DECLARATOR_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link org.xtext.simpleJava.impl.nameImpl <em>name</em>}' class.
@@ -1746,7 +2009,34 @@ public interface SimpleJavaPackage extends EPackage
    * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getname()
    * @generated
    */
-  int NAME = 35;
+  int NAME = 37;
+
+  /**
+   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAME__OPEDADOR = EXPRESSION_AUX__OPEDADOR;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAME__EXP = EXPRESSION_AUX__EXP;
+
+  /**
+   * The feature id for the '<em><b>Operador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAME__OPERADOR = EXPRESSION_AUX__OPERADOR;
 
   /**
    * The feature id for the '<em><b>Expressoes</b></em>' containment reference.
@@ -1792,7 +2082,7 @@ public interface SimpleJavaPackage extends EPackage
    * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getpackage_name_aux()
    * @generated
    */
-  int PACKAGE_NAME_AUX = 36;
+  int PACKAGE_NAME_AUX = 38;
 
   /**
    * The feature id for the '<em><b>Nome Pacote</b></em>' attribute.
@@ -1829,16 +2119,16 @@ public interface SimpleJavaPackage extends EPackage
    * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#gettype_specifier()
    * @generated
    */
-  int TYPE_SPECIFIER = 37;
+  int TYPE_SPECIFIER = 39;
 
   /**
-   * The feature id for the '<em><b>Nome Tipo</b></em>' attribute.
+   * The feature id for the '<em><b>Nome</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TYPE_SPECIFIER__NOME_TIPO = 0;
+  int TYPE_SPECIFIER__NOME = 0;
 
   /**
    * The number of structural features of the '<em>type specifier</em>' class.
@@ -1857,7 +2147,34 @@ public interface SimpleJavaPackage extends EPackage
    * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#gettype()
    * @generated
    */
-  int TYPE = 38;
+  int TYPE = 40;
+
+  /**
+   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE__OPEDADOR = EXP_AUX__OPEDADOR;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE__EXP = EXP_AUX__EXP;
+
+  /**
+   * The feature id for the '<em><b>Operador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE__OPERADOR = EXP_AUX__OPERADOR;
 
   /**
    * The feature id for the '<em><b>Expressoes</b></em>' containment reference.
@@ -1905,6 +2222,15 @@ public interface SimpleJavaPackage extends EPackage
   int TYPE__NEW = EXP_AUX__NEW;
 
   /**
+   * The feature id for the '<em><b>Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE__LITERAL = EXP_AUX__LITERAL;
+
+  /**
    * The feature id for the '<em><b>Expressao</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1939,7 +2265,7 @@ public interface SimpleJavaPackage extends EPackage
    * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getMODIFIER()
    * @generated
    */
-  int MODIFIER = 39;
+  int MODIFIER = 41;
 
   /**
    * The feature id for the '<em><b>Modificador</b></em>' attribute.
@@ -2618,15 +2944,15 @@ public interface SimpleJavaPackage extends EPackage
   EReference getvariable_declaration_Modificador();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.variable_declaration#getTipo <em>Tipo</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.variable_declaration#getTipoVariavel <em>Tipo Variavel</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tipo</em>'.
-   * @see org.xtext.simpleJava.variable_declaration#getTipo()
+   * @return the meta object for the containment reference '<em>Tipo Variavel</em>'.
+   * @see org.xtext.simpleJava.variable_declaration#getTipoVariavel()
    * @see #getvariable_declaration()
    * @generated
    */
-  EReference getvariable_declaration_Tipo();
+  EReference getvariable_declaration_TipoVariavel();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.simpleJava.variable_declaration#getDeclaracaoVariaveis <em>Declaracao Variaveis</em>}'.
@@ -3199,6 +3525,17 @@ public interface SimpleJavaPackage extends EPackage
   EReference getexpression_New();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.expression#getLiteral <em>Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Literal</em>'.
+   * @see org.xtext.simpleJava.expression#getLiteral()
+   * @see #getexpression()
+   * @generated
+   */
+  EReference getexpression_Literal();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.expression#getExpressao <em>Expressao</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3220,6 +3557,39 @@ public interface SimpleJavaPackage extends EPackage
   EClass getexpression_aux();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.expression_aux#getOpedador <em>Opedador</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Opedador</em>'.
+   * @see org.xtext.simpleJava.expression_aux#getOpedador()
+   * @see #getexpression_aux()
+   * @generated
+   */
+  EAttribute getexpression_aux_Opedador();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.expression_aux#getExp <em>Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp</em>'.
+   * @see org.xtext.simpleJava.expression_aux#getExp()
+   * @see #getexpression_aux()
+   * @generated
+   */
+  EReference getexpression_aux_Exp();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.expression_aux#getOperador <em>Operador</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Operador</em>'.
+   * @see org.xtext.simpleJava.expression_aux#getOperador()
+   * @see #getexpression_aux()
+   * @generated
+   */
+  EAttribute getexpression_aux_Operador();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.expression_aux#getExpressoes <em>Expressoes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3229,6 +3599,16 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    */
   EReference getexpression_aux_Expressoes();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.simpleJava.mais_aux <em>mais aux</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>mais aux</em>'.
+   * @see org.xtext.simpleJava.mais_aux
+   * @generated
+   */
+  EClass getmais_aux();
 
   /**
    * Returns the meta object for class '{@link org.xtext.simpleJava.new <em>new</em>}'.
@@ -3281,6 +3661,60 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    */
   EReference getaux_Espressao();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.simpleJava.literal_expression <em>literal expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>literal expression</em>'.
+   * @see org.xtext.simpleJava.literal_expression
+   * @generated
+   */
+  EClass getliteral_expression();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.literal_expression#getDecimal <em>Decimal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Decimal</em>'.
+   * @see org.xtext.simpleJava.literal_expression#getDecimal()
+   * @see #getliteral_expression()
+   * @generated
+   */
+  EAttribute getliteral_expression_Decimal();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.literal_expression#getInteiro <em>Inteiro</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Inteiro</em>'.
+   * @see org.xtext.simpleJava.literal_expression#getInteiro()
+   * @see #getliteral_expression()
+   * @generated
+   */
+  EAttribute getliteral_expression_Inteiro();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.literal_expression#getFloat <em>Float</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Float</em>'.
+   * @see org.xtext.simpleJava.literal_expression#getFloat()
+   * @see #getliteral_expression()
+   * @generated
+   */
+  EAttribute getliteral_expression_Float();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.literal_expression#getString <em>String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>String</em>'.
+   * @see org.xtext.simpleJava.literal_expression#getString()
+   * @see #getliteral_expression()
+   * @generated
+   */
+  EAttribute getliteral_expression_String();
 
   /**
    * Returns the meta object for class '{@link org.xtext.simpleJava.logical_expression <em>logical expression</em>}'.
@@ -3496,15 +3930,15 @@ public interface SimpleJavaPackage extends EPackage
   EClass gettype_specifier();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.type_specifier#getNomeTipo <em>Nome Tipo</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.type_specifier#getNome <em>Nome</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Nome Tipo</em>'.
-   * @see org.xtext.simpleJava.type_specifier#getNomeTipo()
+   * @return the meta object for the attribute '<em>Nome</em>'.
+   * @see org.xtext.simpleJava.type_specifier#getNome()
    * @see #gettype_specifier()
    * @generated
    */
-  EAttribute gettype_specifier_NomeTipo();
+  EAttribute gettype_specifier_Nome();
 
   /**
    * Returns the meta object for class '{@link org.xtext.simpleJava.type <em>type</em>}'.
@@ -4088,12 +4522,12 @@ public interface SimpleJavaPackage extends EPackage
     EReference VARIABLE_DECLARATION__MODIFICADOR = eINSTANCE.getvariable_declaration_Modificador();
 
     /**
-     * The meta object literal for the '<em><b>Tipo</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Tipo Variavel</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference VARIABLE_DECLARATION__TIPO = eINSTANCE.getvariable_declaration_Tipo();
+    EReference VARIABLE_DECLARATION__TIPO_VARIAVEL = eINSTANCE.getvariable_declaration_TipoVariavel();
 
     /**
      * The meta object literal for the '<em><b>Declaracao Variaveis</b></em>' containment reference list feature.
@@ -4546,6 +4980,14 @@ public interface SimpleJavaPackage extends EPackage
     EReference EXPRESSION__NEW = eINSTANCE.getexpression_New();
 
     /**
+     * The meta object literal for the '<em><b>Literal</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__LITERAL = eINSTANCE.getexpression_Literal();
+
+    /**
      * The meta object literal for the '<em><b>Expressao</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4564,12 +5006,46 @@ public interface SimpleJavaPackage extends EPackage
     EClass EXPRESSION_AUX = eINSTANCE.getexpression_aux();
 
     /**
+     * The meta object literal for the '<em><b>Opedador</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXPRESSION_AUX__OPEDADOR = eINSTANCE.getexpression_aux_Opedador();
+
+    /**
+     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION_AUX__EXP = eINSTANCE.getexpression_aux_Exp();
+
+    /**
+     * The meta object literal for the '<em><b>Operador</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXPRESSION_AUX__OPERADOR = eINSTANCE.getexpression_aux_Operador();
+
+    /**
      * The meta object literal for the '<em><b>Expressoes</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference EXPRESSION_AUX__EXPRESSOES = eINSTANCE.getexpression_aux_Expressoes();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.simpleJava.impl.mais_auxImpl <em>mais aux</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.simpleJava.impl.mais_auxImpl
+     * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getmais_aux()
+     * @generated
+     */
+    EClass MAIS_AUX = eINSTANCE.getmais_aux();
 
     /**
      * The meta object literal for the '{@link org.xtext.simpleJava.impl.newImpl <em>new</em>}' class.
@@ -4616,6 +5092,48 @@ public interface SimpleJavaPackage extends EPackage
      * @generated
      */
     EReference AUX__ESPRESSAO = eINSTANCE.getaux_Espressao();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.simpleJava.impl.literal_expressionImpl <em>literal expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.simpleJava.impl.literal_expressionImpl
+     * @see org.xtext.simpleJava.impl.SimpleJavaPackageImpl#getliteral_expression()
+     * @generated
+     */
+    EClass LITERAL_EXPRESSION = eINSTANCE.getliteral_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Decimal</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LITERAL_EXPRESSION__DECIMAL = eINSTANCE.getliteral_expression_Decimal();
+
+    /**
+     * The meta object literal for the '<em><b>Inteiro</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LITERAL_EXPRESSION__INTEIRO = eINSTANCE.getliteral_expression_Inteiro();
+
+    /**
+     * The meta object literal for the '<em><b>Float</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LITERAL_EXPRESSION__FLOAT = eINSTANCE.getliteral_expression_Float();
+
+    /**
+     * The meta object literal for the '<em><b>String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LITERAL_EXPRESSION__STRING = eINSTANCE.getliteral_expression_String();
 
     /**
      * The meta object literal for the '{@link org.xtext.simpleJava.impl.logical_expressionImpl <em>logical expression</em>}' class.
@@ -4792,12 +5310,12 @@ public interface SimpleJavaPackage extends EPackage
     EClass TYPE_SPECIFIER = eINSTANCE.gettype_specifier();
 
     /**
-     * The meta object literal for the '<em><b>Nome Tipo</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Nome</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TYPE_SPECIFIER__NOME_TIPO = eINSTANCE.gettype_specifier_NomeTipo();
+    EAttribute TYPE_SPECIFIER__NOME = eINSTANCE.gettype_specifier_Nome();
 
     /**
      * The meta object literal for the '{@link org.xtext.simpleJava.impl.typeImpl <em>type</em>}' class.

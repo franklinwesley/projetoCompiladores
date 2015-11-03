@@ -226,9 +226,11 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="expression_aux">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="op" eType="#//mais_aux"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" eType="#//arglist"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="#//expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="op" eType="#//mais_aux"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expressoes" eType="#//expression_aux"
@@ -267,7 +269,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="expressao" eType="#//expression"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="arglist" eSuperTypes="#//variable_declarator #//expression_aux">
+  <eClassifiers xsi:type="ecore:EClass" name="arglist" eSuperTypes="#//variable_declarator">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expressoesArgumentos" upperBound="-1"
         eType="#//expression" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipoParametro" upperBound="-1"

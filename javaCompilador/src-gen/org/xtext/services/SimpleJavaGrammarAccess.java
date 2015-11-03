@@ -1848,12 +1848,14 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives_0_0 = (Alternatives)cAlternatives_0.eContents().get(0);
 		private final Group cGroup_0_0_0 = (Group)cAlternatives_0_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_0_0_0_0 = (Keyword)cGroup_0_0_0.eContents().get(0);
-		private final RuleCall cArglistParserRuleCall_0_0_0_1 = (RuleCall)cGroup_0_0_0.eContents().get(1);
+		private final Assignment cParametrosAssignment_0_0_0_1 = (Assignment)cGroup_0_0_0.eContents().get(1);
+		private final RuleCall cParametrosArglistParserRuleCall_0_0_0_1_0 = (RuleCall)cParametrosAssignment_0_0_0_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_0_0_0_2 = (Keyword)cGroup_0_0_0.eContents().get(2);
 		private final RuleCall cAuxParserRuleCall_0_0_1 = (RuleCall)cAlternatives_0_0.eContents().get(1);
 		private final Group cGroup_0_0_2 = (Group)cAlternatives_0_0.eContents().get(2);
 		private final Keyword cFullStopKeyword_0_0_2_0 = (Keyword)cGroup_0_0_2.eContents().get(0);
-		private final RuleCall cExpressionParserRuleCall_0_0_2_1 = (RuleCall)cGroup_0_0_2.eContents().get(1);
+		private final Assignment cExpAssignment_0_0_2_1 = (Assignment)cGroup_0_0_2.eContents().get(1);
+		private final RuleCall cExpExpressionParserRuleCall_0_0_2_1_0 = (RuleCall)cExpAssignment_0_0_2_1.eContents().get(0);
 		private final Group cGroup_0_0_3 = (Group)cAlternatives_0_0.eContents().get(3);
 		private final Keyword cCommaKeyword_0_0_3_0 = (Keyword)cGroup_0_0_3.eContents().get(0);
 		private final RuleCall cExpressionParserRuleCall_0_0_3_1 = (RuleCall)cGroup_0_0_3.eContents().get(1);
@@ -1937,40 +1939,44 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cExpressoesExpression_auxParserRuleCall_1_0 = (RuleCall)cExpressoesAssignment_1.eContents().get(0);
 		
 		//expression_aux:
-		//	((("(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name) | -> op=mais_aux exp=expression |
-		//	operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*=" | operador="/"
-		//	| operador="/=" | operador="%" | operador="%=") exp=expression | (("ampersand" | "ampersand=" | "|" | "|=" | "^" |
-		//	"^=" | "ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":" expressao=expression |
-		//	operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>" | ">>>")
-		//	exp=expression)) expressoes=expression_aux)?;
+		//	((("(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name) | -> op=mais_aux
+		//	exp=expression | operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" |
+		//	operador="*=" | operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (("ampersand" |
+		//	"ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression
+		//	":" expressao=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" |
+		//	">>" | ">>>") exp=expression)) expressoes=expression_aux)?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//((("(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name) | -> op=mais_aux exp=expression |
-		//operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*=" | operador="/" |
-		//operador="/=" | operador="%" | operador="%=") exp=expression | (("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" |
-		//"ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":" expressao=expression | operador=(">" |
-		//"<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>" | ">>>") exp=expression))
-		//expressoes=expression_aux)?
+		//((("(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name) | -> op=mais_aux
+		//exp=expression | operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*="
+		//| operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (("ampersand" | "ampersand=" | "|" |
+		//"|=" | "^" | "^=" | "ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":"
+		//expressao=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>"
+		//| ">>>") exp=expression)) expressoes=expression_aux)?
 		public Group getGroup() { return cGroup; }
 
-		//("(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name) | -> op=mais_aux exp=expression |
-		//operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*=" | operador="/" |
-		//operador="/=" | operador="%" | operador="%=") exp=expression | (("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" |
-		//"ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":" expressao=expression | operador=(">" |
-		//"<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>" | ">>>") exp=expression)
+		//("(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name) | -> op=mais_aux
+		//exp=expression | operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*="
+		//| operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (("ampersand" | "ampersand=" | "|" |
+		//"|=" | "^" | "^=" | "ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":"
+		//expressao=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>"
+		//| ">>>") exp=expression)
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
-		//"(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name
+		//"(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name
 		public Alternatives getAlternatives_0_0() { return cAlternatives_0_0; }
 
-		//"(" arglist? ")"
+		//"(" parametros=arglist? ")"
 		public Group getGroup_0_0_0() { return cGroup_0_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_0_0_0_0() { return cLeftParenthesisKeyword_0_0_0_0; }
 
-		//arglist?
-		public RuleCall getArglistParserRuleCall_0_0_0_1() { return cArglistParserRuleCall_0_0_0_1; }
+		//parametros=arglist?
+		public Assignment getParametrosAssignment_0_0_0_1() { return cParametrosAssignment_0_0_0_1; }
+
+		//arglist
+		public RuleCall getParametrosArglistParserRuleCall_0_0_0_1_0() { return cParametrosArglistParserRuleCall_0_0_0_1_0; }
 
 		//")"
 		public Keyword getRightParenthesisKeyword_0_0_0_2() { return cRightParenthesisKeyword_0_0_0_2; }
@@ -1978,14 +1984,17 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//aux
 		public RuleCall getAuxParserRuleCall_0_0_1() { return cAuxParserRuleCall_0_0_1; }
 
-		//"." expression
+		//"." exp=expression
 		public Group getGroup_0_0_2() { return cGroup_0_0_2; }
 
 		//"."
 		public Keyword getFullStopKeyword_0_0_2_0() { return cFullStopKeyword_0_0_2_0; }
 
+		//exp=expression
+		public Assignment getExpAssignment_0_0_2_1() { return cExpAssignment_0_0_2_1; }
+
 		//expression
-		public RuleCall getExpressionParserRuleCall_0_0_2_1() { return cExpressionParserRuleCall_0_0_2_1; }
+		public RuleCall getExpExpressionParserRuleCall_0_0_2_1_0() { return cExpExpressionParserRuleCall_0_0_2_1_0; }
 
 		//"," expression
 		public Group getGroup_0_0_3() { return cGroup_0_0_3; }
@@ -3348,12 +3357,12 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//expression_aux:
-	//	((("(" arglist? ")" | aux | "." expression | "," expression | "instanceof" -> name) | -> op=mais_aux exp=expression |
-	//	operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*=" | operador="/"
-	//	| operador="/=" | operador="%" | operador="%=") exp=expression | (("ampersand" | "ampersand=" | "|" | "|=" | "^" |
-	//	"^=" | "ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression ":" expressao=expression |
-	//	operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>" | ">>>")
-	//	exp=expression)) expressoes=expression_aux)?;
+	//	((("(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name) | -> op=mais_aux
+	//	exp=expression | operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" |
+	//	operador="*=" | operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (("ampersand" |
+	//	"ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand" "ampersand" | "||=" | => "%" | "%=") expression | "?" expression
+	//	":" expressao=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" |
+	//	">>" | ">>>") exp=expression)) expressoes=expression_aux)?;
 	public Expression_auxElements getExpression_auxAccess() {
 		return pExpression_aux;
 	}

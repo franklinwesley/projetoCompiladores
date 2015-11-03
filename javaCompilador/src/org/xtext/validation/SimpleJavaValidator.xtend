@@ -19,6 +19,7 @@ import java.util.HashMap
 import org.xtext.simpleJava.method_declaration
 import org.xtext.simpleJava.parameter_list
 import org.xtext.simpleJava.parameter
+import org.xtext.simpleJava.arglist
 
 //import org.eclipse.xtext.validation.Check
 
@@ -71,7 +72,37 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	}
 	
 	def checkUsoMetodo(method_declaration declaration) {
-		//check
+		if (declaration.blocoMetodo.corpo.expressao.identificador != null &&
+			declaration.blocoMetodo.corpo.expressao.expressoes.parametros != null) {
+			if (metodos.containsKey(declaration.blocoMetodo.corpo.expressao.identificador)) {
+				var m = metodos.get(declaration.blocoMetodo.corpo.expressao.identificador);
+				if (verificaParametros(m, declaration.blocoMetodo.corpo.expressao.expressoes.parametros)) {
+					//check tipo retorno
+				} else {
+					//erro parametros errados
+				}
+			} else {
+				// erro metodo inexistente
+			}
+		}
+	}
+	
+	def Map<String,Tipo> getparametros(arglist list) {
+		var p = new HashMap<String,Tipo>();
+		var i = 0
+		while (i < list.tipoParametro.length){
+			p.put(list.nomeParametro.get(i), new Tipo (String.valueOf(list.tipoParametro.get(i))));
+			i++;
+		}
+		return p;
+	}
+	
+	def boolean verificaParametros(Metodo metodo, arglist arglist) {
+		if (metodo.parametros.equals(getparametros(arglist))) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	def checkMetodDeclaration(EList<type_declaration> list) {
@@ -82,12 +113,12 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	
 	def checkDeclaracaoMetodo(method_declaration declaration) {
 		var tipo = new Tipo(String.valueOf(declaration.tipoRetorno.tipo));
-		var parametros = getparamtros(declaration.parametrosMetodo);
+		var parametros = getparametros(declaration.parametrosMetodo);
 		var metodo =new Metodo(declaration.nomeMetodo, tipo, parametros);
 		metodos.put(declaration.nomeMetodo, metodo);
 	}
 	
-	def Map<String,Tipo> getparamtros(parameter_list list) {
+	def Map<String,Tipo> getparametros(parameter_list list) {
 		var p = new HashMap<String,Tipo>();
 		for (parameter parametro: list.parametros) {
 			p.put(parametro.nomeParametro, new Tipo (String.valueOf(parametro.tipoParametro.tipo)));

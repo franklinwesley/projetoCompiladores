@@ -263,6 +263,8 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpressionAccess().getLiteralAssignment_0_4(), "rule__Expression__LiteralAssignment_0_4");
 					put(grammarAccess.getExpressionAccess().getIdentificadorAssignment_0_8(), "rule__Expression__IdentificadorAssignment_0_8");
 					put(grammarAccess.getExpressionAccess().getExpressoesAssignment_1(), "rule__Expression__ExpressoesAssignment_1");
+					put(grammarAccess.getExpression_auxAccess().getParametrosAssignment_0_0_0_1(), "rule__Expression_aux__ParametrosAssignment_0_0_0_1");
+					put(grammarAccess.getExpression_auxAccess().getExpAssignment_0_0_2_1(), "rule__Expression_aux__ExpAssignment_0_0_2_1");
 					put(grammarAccess.getExpression_auxAccess().getOpAssignment_0_1_0(), "rule__Expression_aux__OpAssignment_0_1_0");
 					put(grammarAccess.getExpression_auxAccess().getExpAssignment_0_1_1(), "rule__Expression_aux__ExpAssignment_0_1_1");
 					put(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_2(), "rule__Expression_aux__OperadorAssignment_0_2");

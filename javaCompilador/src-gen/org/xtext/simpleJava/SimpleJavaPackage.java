@@ -1317,13 +1317,13 @@ public interface SimpleJavaPackage extends EPackage
   int EXPRESSION_AUX = 27;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * The feature id for the '<em><b>Parametros</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION_AUX__OP = 0;
+  int EXPRESSION_AUX__PARAMETROS = 0;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -1335,13 +1335,22 @@ public interface SimpleJavaPackage extends EPackage
   int EXPRESSION_AUX__EXP = 1;
 
   /**
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_AUX__OP = 2;
+
+  /**
    * The feature id for the '<em><b>Operador</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION_AUX__OPERADOR = 2;
+  int EXPRESSION_AUX__OPERADOR = 3;
 
   /**
    * The feature id for the '<em><b>Expressoes</b></em>' containment reference.
@@ -1350,7 +1359,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION_AUX__EXPRESSOES = 3;
+  int EXPRESSION_AUX__EXPRESSOES = 4;
 
   /**
    * The number of structural features of the '<em>expression aux</em>' class.
@@ -1359,7 +1368,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION_AUX_FEATURE_COUNT = 4;
+  int EXPRESSION_AUX_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link org.xtext.simpleJava.impl.expressionImpl <em>expression</em>}' class.
@@ -1372,13 +1381,13 @@ public interface SimpleJavaPackage extends EPackage
   int EXPRESSION = 26;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * The feature id for the '<em><b>Parametros</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION__OP = EXPRESSION_AUX__OP;
+  int EXPRESSION__PARAMETROS = EXPRESSION_AUX__PARAMETROS;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -1388,6 +1397,15 @@ public interface SimpleJavaPackage extends EPackage
    * @ordered
    */
   int EXPRESSION__EXP = EXPRESSION_AUX__EXP;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__OP = EXPRESSION_AUX__OP;
 
   /**
    * The feature id for the '<em><b>Operador</b></em>' attribute.
@@ -1490,13 +1508,13 @@ public interface SimpleJavaPackage extends EPackage
   int EXP_AUX = 25;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * The feature id for the '<em><b>Parametros</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP_AUX__OP = EXPRESSION__OP;
+  int EXP_AUX__PARAMETROS = EXPRESSION__PARAMETROS;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -1506,6 +1524,15 @@ public interface SimpleJavaPackage extends EPackage
    * @ordered
    */
   int EXP_AUX__EXP = EXPRESSION__EXP;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_AUX__OP = EXPRESSION__OP;
 
   /**
    * The feature id for the '<em><b>Operador</b></em>' attribute.
@@ -1664,13 +1691,13 @@ public interface SimpleJavaPackage extends EPackage
   int AUX = 31;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * The feature id for the '<em><b>Parametros</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int AUX__OP = EXPRESSION_AUX__OP;
+  int AUX__PARAMETROS = EXPRESSION_AUX__PARAMETROS;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -1680,6 +1707,15 @@ public interface SimpleJavaPackage extends EPackage
    * @ordered
    */
   int AUX__EXP = EXPRESSION_AUX__EXP;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUX__OP = EXPRESSION_AUX__OP;
 
   /**
    * The feature id for the '<em><b>Operador</b></em>' attribute.
@@ -1921,49 +1957,13 @@ public interface SimpleJavaPackage extends EPackage
   int ARGLIST__VALOR_VARIAVEL = VARIABLE_DECLARATOR__VALOR_VARIAVEL;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ARGLIST__OP = VARIABLE_DECLARATOR_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ARGLIST__EXP = VARIABLE_DECLARATOR_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Operador</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ARGLIST__OPERADOR = VARIABLE_DECLARATOR_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Expressoes</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ARGLIST__EXPRESSOES = VARIABLE_DECLARATOR_FEATURE_COUNT + 3;
-
-  /**
    * The feature id for the '<em><b>Expressoes Argumentos</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARGLIST__EXPRESSOES_ARGUMENTOS = VARIABLE_DECLARATOR_FEATURE_COUNT + 4;
+  int ARGLIST__EXPRESSOES_ARGUMENTOS = VARIABLE_DECLARATOR_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Tipo Parametro</b></em>' containment reference list.
@@ -1972,7 +1972,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGLIST__TIPO_PARAMETRO = VARIABLE_DECLARATOR_FEATURE_COUNT + 5;
+  int ARGLIST__TIPO_PARAMETRO = VARIABLE_DECLARATOR_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Nome Parametro</b></em>' attribute list.
@@ -1981,7 +1981,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGLIST__NOME_PARAMETRO = VARIABLE_DECLARATOR_FEATURE_COUNT + 6;
+  int ARGLIST__NOME_PARAMETRO = VARIABLE_DECLARATOR_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>arglist</em>' class.
@@ -1990,7 +1990,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARGLIST_FEATURE_COUNT = VARIABLE_DECLARATOR_FEATURE_COUNT + 7;
+  int ARGLIST_FEATURE_COUNT = VARIABLE_DECLARATOR_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.simpleJava.impl.nameImpl <em>name</em>}' class.
@@ -2003,13 +2003,13 @@ public interface SimpleJavaPackage extends EPackage
   int NAME = 37;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * The feature id for the '<em><b>Parametros</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NAME__OP = EXPRESSION_AUX__OP;
+  int NAME__PARAMETROS = EXPRESSION_AUX__PARAMETROS;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -2019,6 +2019,15 @@ public interface SimpleJavaPackage extends EPackage
    * @ordered
    */
   int NAME__EXP = EXPRESSION_AUX__EXP;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAME__OP = EXPRESSION_AUX__OP;
 
   /**
    * The feature id for the '<em><b>Operador</b></em>' attribute.
@@ -2141,13 +2150,13 @@ public interface SimpleJavaPackage extends EPackage
   int TYPE = 40;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * The feature id for the '<em><b>Parametros</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TYPE__OP = EXP_AUX__OP;
+  int TYPE__PARAMETROS = EXP_AUX__PARAMETROS;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -2157,6 +2166,15 @@ public interface SimpleJavaPackage extends EPackage
    * @ordered
    */
   int TYPE__EXP = EXP_AUX__EXP;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE__OP = EXP_AUX__OP;
 
   /**
    * The feature id for the '<em><b>Operador</b></em>' attribute.
@@ -3568,15 +3586,15 @@ public interface SimpleJavaPackage extends EPackage
   EClass getexpression_aux();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.expression_aux#getOp <em>Op</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.expression_aux#getParametros <em>Parametros</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Op</em>'.
-   * @see org.xtext.simpleJava.expression_aux#getOp()
+   * @return the meta object for the containment reference '<em>Parametros</em>'.
+   * @see org.xtext.simpleJava.expression_aux#getParametros()
    * @see #getexpression_aux()
    * @generated
    */
-  EReference getexpression_aux_Op();
+  EReference getexpression_aux_Parametros();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.expression_aux#getExp <em>Exp</em>}'.
@@ -3588,6 +3606,17 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    */
   EReference getexpression_aux_Exp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.expression_aux#getOp <em>Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Op</em>'.
+   * @see org.xtext.simpleJava.expression_aux#getOp()
+   * @see #getexpression_aux()
+   * @generated
+   */
+  EReference getexpression_aux_Op();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.simpleJava.expression_aux#getOperador <em>Operador</em>}'.
@@ -5036,12 +5065,12 @@ public interface SimpleJavaPackage extends EPackage
     EClass EXPRESSION_AUX = eINSTANCE.getexpression_aux();
 
     /**
-     * The meta object literal for the '<em><b>Op</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Parametros</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference EXPRESSION_AUX__OP = eINSTANCE.getexpression_aux_Op();
+    EReference EXPRESSION_AUX__PARAMETROS = eINSTANCE.getexpression_aux_Parametros();
 
     /**
      * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
@@ -5050,6 +5079,14 @@ public interface SimpleJavaPackage extends EPackage
      * @generated
      */
     EReference EXPRESSION_AUX__EXP = eINSTANCE.getexpression_aux_Exp();
+
+    /**
+     * The meta object literal for the '<em><b>Op</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION_AUX__OP = eINSTANCE.getexpression_aux_Op();
 
     /**
      * The meta object literal for the '<em><b>Operador</b></em>' attribute feature.

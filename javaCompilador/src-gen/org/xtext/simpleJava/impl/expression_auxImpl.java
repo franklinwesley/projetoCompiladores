@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.simpleJava.SimpleJavaPackage;
+import org.xtext.simpleJava.arglist;
 import org.xtext.simpleJava.expression;
 import org.xtext.simpleJava.expression_aux;
 import org.xtext.simpleJava.mais_aux;
@@ -23,8 +24,9 @@ import org.xtext.simpleJava.mais_aux;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.simpleJava.impl.expression_auxImpl#getOp <em>Op</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.expression_auxImpl#getParametros <em>Parametros</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expression_auxImpl#getExp <em>Exp</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.expression_auxImpl#getOp <em>Op</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expression_auxImpl#getOperador <em>Operador</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expression_auxImpl#getExpressoes <em>Expressoes</em>}</li>
  * </ul>
@@ -35,14 +37,14 @@ import org.xtext.simpleJava.mais_aux;
 public class expression_auxImpl extends MinimalEObjectImpl.Container implements expression_aux
 {
   /**
-   * The cached value of the '{@link #getOp() <em>Op</em>}' containment reference.
+   * The cached value of the '{@link #getParametros() <em>Parametros</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOp()
+   * @see #getParametros()
    * @generated
    * @ordered
    */
-  protected mais_aux op;
+  protected arglist parametros;
 
   /**
    * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference.
@@ -53,6 +55,16 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
    * @ordered
    */
   protected expression exp;
+
+  /**
+   * The cached value of the '{@link #getOp() <em>Op</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOp()
+   * @generated
+   * @ordered
+   */
+  protected mais_aux op;
 
   /**
    * The default value of the '{@link #getOperador() <em>Operador</em>}' attribute.
@@ -110,9 +122,9 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public mais_aux getOp()
+  public arglist getParametros()
   {
-    return op;
+    return parametros;
   }
 
   /**
@@ -120,13 +132,13 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetOp(mais_aux newOp, NotificationChain msgs)
+  public NotificationChain basicSetParametros(arglist newParametros, NotificationChain msgs)
   {
-    mais_aux oldOp = op;
-    op = newOp;
+    arglist oldParametros = parametros;
+    parametros = newParametros;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION_AUX__OP, oldOp, newOp);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION_AUX__PARAMETROS, oldParametros, newParametros);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -137,20 +149,20 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOp(mais_aux newOp)
+  public void setParametros(arglist newParametros)
   {
-    if (newOp != op)
+    if (newParametros != parametros)
     {
       NotificationChain msgs = null;
-      if (op != null)
-        msgs = ((InternalEObject)op).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION_AUX__OP, null, msgs);
-      if (newOp != null)
-        msgs = ((InternalEObject)newOp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION_AUX__OP, null, msgs);
-      msgs = basicSetOp(newOp, msgs);
+      if (parametros != null)
+        msgs = ((InternalEObject)parametros).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION_AUX__PARAMETROS, null, msgs);
+      if (newParametros != null)
+        msgs = ((InternalEObject)newParametros).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION_AUX__PARAMETROS, null, msgs);
+      msgs = basicSetParametros(newParametros, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION_AUX__OP, newOp, newOp));
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION_AUX__PARAMETROS, newParametros, newParametros));
   }
 
   /**
@@ -199,6 +211,54 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION_AUX__EXP, newExp, newExp));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public mais_aux getOp()
+  {
+    return op;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetOp(mais_aux newOp, NotificationChain msgs)
+  {
+    mais_aux oldOp = op;
+    op = newOp;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION_AUX__OP, oldOp, newOp);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOp(mais_aux newOp)
+  {
+    if (newOp != op)
+    {
+      NotificationChain msgs = null;
+      if (op != null)
+        msgs = ((InternalEObject)op).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION_AUX__OP, null, msgs);
+      if (newOp != null)
+        msgs = ((InternalEObject)newOp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION_AUX__OP, null, msgs);
+      msgs = basicSetOp(newOp, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION_AUX__OP, newOp, newOp));
   }
 
   /**
@@ -282,10 +342,12 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION_AUX__OP:
-        return basicSetOp(null, msgs);
+      case SimpleJavaPackage.EXPRESSION_AUX__PARAMETROS:
+        return basicSetParametros(null, msgs);
       case SimpleJavaPackage.EXPRESSION_AUX__EXP:
         return basicSetExp(null, msgs);
+      case SimpleJavaPackage.EXPRESSION_AUX__OP:
+        return basicSetOp(null, msgs);
       case SimpleJavaPackage.EXPRESSION_AUX__EXPRESSOES:
         return basicSetExpressoes(null, msgs);
     }
@@ -302,10 +364,12 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION_AUX__OP:
-        return getOp();
+      case SimpleJavaPackage.EXPRESSION_AUX__PARAMETROS:
+        return getParametros();
       case SimpleJavaPackage.EXPRESSION_AUX__EXP:
         return getExp();
+      case SimpleJavaPackage.EXPRESSION_AUX__OP:
+        return getOp();
       case SimpleJavaPackage.EXPRESSION_AUX__OPERADOR:
         return getOperador();
       case SimpleJavaPackage.EXPRESSION_AUX__EXPRESSOES:
@@ -324,11 +388,14 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION_AUX__OP:
-        setOp((mais_aux)newValue);
+      case SimpleJavaPackage.EXPRESSION_AUX__PARAMETROS:
+        setParametros((arglist)newValue);
         return;
       case SimpleJavaPackage.EXPRESSION_AUX__EXP:
         setExp((expression)newValue);
+        return;
+      case SimpleJavaPackage.EXPRESSION_AUX__OP:
+        setOp((mais_aux)newValue);
         return;
       case SimpleJavaPackage.EXPRESSION_AUX__OPERADOR:
         setOperador((String)newValue);
@@ -350,11 +417,14 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION_AUX__OP:
-        setOp((mais_aux)null);
+      case SimpleJavaPackage.EXPRESSION_AUX__PARAMETROS:
+        setParametros((arglist)null);
         return;
       case SimpleJavaPackage.EXPRESSION_AUX__EXP:
         setExp((expression)null);
+        return;
+      case SimpleJavaPackage.EXPRESSION_AUX__OP:
+        setOp((mais_aux)null);
         return;
       case SimpleJavaPackage.EXPRESSION_AUX__OPERADOR:
         setOperador(OPERADOR_EDEFAULT);
@@ -376,10 +446,12 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION_AUX__OP:
-        return op != null;
+      case SimpleJavaPackage.EXPRESSION_AUX__PARAMETROS:
+        return parametros != null;
       case SimpleJavaPackage.EXPRESSION_AUX__EXP:
         return exp != null;
+      case SimpleJavaPackage.EXPRESSION_AUX__OP:
+        return op != null;
       case SimpleJavaPackage.EXPRESSION_AUX__OPERADOR:
         return OPERADOR_EDEFAULT == null ? operador != null : !OPERADOR_EDEFAULT.equals(operador);
       case SimpleJavaPackage.EXPRESSION_AUX__EXPRESSOES:

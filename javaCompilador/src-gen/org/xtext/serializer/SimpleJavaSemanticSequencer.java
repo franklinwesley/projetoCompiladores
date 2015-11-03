@@ -76,16 +76,8 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 				sequence_Model(context, (Model) semanticObject); 
 				return; 
 			case SimpleJavaPackage.ARGLIST:
-				if(context == grammarAccess.getArglistRule() ||
-				   context == grammarAccess.getVariable_declaratorRule()) {
-					sequence_arglist(context, (arglist) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getExpression_auxRule()) {
-					sequence_arglist_expression_aux(context, (arglist) semanticObject); 
-					return; 
-				}
-				else break;
+				sequence_arglist(context, (arglist) semanticObject); 
+				return; 
 			case SimpleJavaPackage.AUX:
 				if(context == grammarAccess.getAuxRule() ||
 				   context == grammarAccess.getCreating_auxRule()) {
@@ -295,21 +287,6 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         (
-	 *             (expressoesArgumentos+=expression expressoesArgumentos+=expression*) | 
-	 *             (tipoParametro+=type nomeParametro+=IDENTIFIER (tipoParametro+=type nomeParametro+=IDENTIFIER)*)
-	 *         ) 
-	 *         expressoes=expression_aux
-	 *     )
-	 */
-	protected void sequence_arglist_expression_aux(EObject context, arglist semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     espressao=expression
 	 */
 	protected void sequence_aux(EObject context, aux semanticObject) {
@@ -473,6 +450,8 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 * Constraint:
 	 *     (
 	 *         (
+	 *             parametros=arglist? | 
+	 *             exp=expression | 
 	 *             (op=mais_aux exp=expression) | 
 	 *             operador='++' | 
 	 *             operador='--' | 
@@ -502,7 +481,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *                 exp=expression
 	 *             ) | 
 	 *             ((operador='>>=' | operador='<<' | operador='>>' | operador='>>>') exp=expression)
-	 *         )? 
+	 *         ) 
 	 *         expressoes=expression_aux
 	 *     )?
 	 */

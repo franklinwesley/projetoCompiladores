@@ -3054,17 +3054,23 @@ ruleexpression_aux returns [EObject current=null]
     	newLeafNode(otherlv_0, grammarAccess.getExpression_auxAccess().getLeftParenthesisKeyword_0_0_0_0());
     }
 (
-	{ 
-	  /* */ 
-	}
-    { 
-        newCompositeNode(grammarAccess.getExpression_auxAccess().getArglistParserRuleCall_0_0_0_1()); 
-    }
-    this_arglist_1=rulearglist
-    { 
-        $current = $this_arglist_1.current; 
-        afterParserOrEnumRuleCall();
-    }
+(
+		{ 
+	        newCompositeNode(grammarAccess.getExpression_auxAccess().getParametrosArglistParserRuleCall_0_0_0_1_0()); 
+	    }
+		lv_parametros_1_0=rulearglist		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getExpression_auxRule());
+	        }
+       		set(
+       			$current, 
+       			"parametros",
+        		lv_parametros_1_0, 
+        		"arglist");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
 )?	otherlv_2=')' 
     {
     	newLeafNode(otherlv_2, grammarAccess.getExpression_auxAccess().getRightParenthesisKeyword_0_0_0_2());
@@ -3087,19 +3093,25 @@ ruleexpression_aux returns [EObject current=null]
     {
     	newLeafNode(otherlv_4, grammarAccess.getExpression_auxAccess().getFullStopKeyword_0_0_2_0());
     }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_0_2_1_0()); 
+	    }
+		lv_exp_5_0=ruleexpression		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getExpression_auxRule());
+	        }
+       		set(
+       			$current, 
+       			"exp",
+        		lv_exp_5_0, 
+        		"expression");
+	        afterParserOrEnumRuleCall();
+	    }
 
-	{ 
-	  /* */ 
-	}
-    { 
-        newCompositeNode(grammarAccess.getExpression_auxAccess().getExpressionParserRuleCall_0_0_2_1()); 
-    }
-    this_expression_5=ruleexpression
-    { 
-        $current = $this_expression_5.current; 
-        afterParserOrEnumRuleCall();
-    }
 )
+))
     |(	otherlv_6=',' 
     {
     	newLeafNode(otherlv_6, grammarAccess.getExpression_auxAccess().getCommaKeyword_0_0_3_0());

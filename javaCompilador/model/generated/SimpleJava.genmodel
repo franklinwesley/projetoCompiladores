@@ -152,8 +152,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//expression/expressao"/>
     </genClasses>
     <genClasses ecoreClass="SimpleJava.ecore#//expression_aux">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//expression_aux/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//expression_aux/parametros"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//expression_aux/exp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//expression_aux/op"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//expression_aux/operador"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//expression_aux/expressoes"/>
     </genClasses>

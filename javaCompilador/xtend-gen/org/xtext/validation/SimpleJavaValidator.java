@@ -11,6 +11,8 @@ import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.validation.Check;
+import org.eclipse.xtext.xbase.lib.Conversions;
+import org.xtext.simpleJava.arglist;
 import org.xtext.simpleJava.class_declaration;
 import org.xtext.simpleJava.compilation_unit;
 import org.xtext.simpleJava.expression;
@@ -83,7 +85,89 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
   }
   
   public Object checkUsoMetodo(final method_declaration declaration) {
-    return null;
+    Object _xifexpression = null;
+    boolean _and = false;
+    statement_block _blocoMetodo = declaration.getBlocoMetodo();
+    statement _corpo = _blocoMetodo.getCorpo();
+    expression _expressao = _corpo.getExpressao();
+    String _identificador = _expressao.getIdentificador();
+    boolean _notEquals = (!Objects.equal(_identificador, null));
+    if (!_notEquals) {
+      _and = false;
+    } else {
+      statement_block _blocoMetodo_1 = declaration.getBlocoMetodo();
+      statement _corpo_1 = _blocoMetodo_1.getCorpo();
+      expression _expressao_1 = _corpo_1.getExpressao();
+      expression_aux _expressoes = _expressao_1.getExpressoes();
+      arglist _parametros = _expressoes.getParametros();
+      boolean _notEquals_1 = (!Objects.equal(_parametros, null));
+      _and = _notEquals_1;
+    }
+    if (_and) {
+      Object _xifexpression_1 = null;
+      statement_block _blocoMetodo_2 = declaration.getBlocoMetodo();
+      statement _corpo_2 = _blocoMetodo_2.getCorpo();
+      expression _expressao_2 = _corpo_2.getExpressao();
+      String _identificador_1 = _expressao_2.getIdentificador();
+      boolean _containsKey = this.metodos.containsKey(_identificador_1);
+      if (_containsKey) {
+        Object _xblockexpression = null;
+        {
+          statement_block _blocoMetodo_3 = declaration.getBlocoMetodo();
+          statement _corpo_3 = _blocoMetodo_3.getCorpo();
+          expression _expressao_3 = _corpo_3.getExpressao();
+          String _identificador_2 = _expressao_3.getIdentificador();
+          Metodo m = this.metodos.get(_identificador_2);
+          Object _xifexpression_2 = null;
+          statement_block _blocoMetodo_4 = declaration.getBlocoMetodo();
+          statement _corpo_4 = _blocoMetodo_4.getCorpo();
+          expression _expressao_4 = _corpo_4.getExpressao();
+          expression_aux _expressoes_1 = _expressao_4.getExpressoes();
+          arglist _parametros_1 = _expressoes_1.getParametros();
+          boolean _verificaParametros = this.verificaParametros(m, _parametros_1);
+          if (_verificaParametros) {
+            _xifexpression_2 = null;
+          } else {
+            _xifexpression_2 = null;
+          }
+          _xblockexpression = _xifexpression_2;
+        }
+        _xifexpression_1 = _xblockexpression;
+      } else {
+        _xifexpression_1 = null;
+      }
+      _xifexpression = _xifexpression_1;
+    }
+    return _xifexpression;
+  }
+  
+  public Map<String, Tipo> getparametros(final arglist list) {
+    HashMap<String, Tipo> p = new HashMap<String, Tipo>();
+    int i = 0;
+    while ((i < ((Object[])Conversions.unwrapArray(list.getTipoParametro(), Object.class)).length)) {
+      {
+        EList<String> _nomeParametro = list.getNomeParametro();
+        String _get = _nomeParametro.get(i);
+        EList<type> _tipoParametro = list.getTipoParametro();
+        type _get_1 = _tipoParametro.get(i);
+        String _valueOf = String.valueOf(_get_1);
+        Tipo _tipo = new Tipo(_valueOf);
+        p.put(_get, _tipo);
+        i++;
+      }
+    }
+    return p;
+  }
+  
+  public boolean verificaParametros(final Metodo metodo, final arglist arglist) {
+    Map<String, Tipo> _parametros = metodo.getParametros();
+    Map<String, Tipo> _parametros_1 = this.getparametros(arglist);
+    boolean _equals = _parametros.equals(_parametros_1);
+    if (_equals) {
+      return true;
+    } else {
+      return false;
+    }
   }
   
   public void checkMetodDeclaration(final EList<type_declaration> list) {
@@ -103,7 +187,7 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
       String _valueOf = String.valueOf(_tipo);
       Tipo tipo = new Tipo(_valueOf);
       parameter_list _parametrosMetodo = declaration.getParametrosMetodo();
-      Map<String, Tipo> parametros = this.getparamtros(_parametrosMetodo);
+      Map<String, Tipo> parametros = this.getparametros(_parametrosMetodo);
       String _nomeMetodo = declaration.getNomeMetodo();
       Metodo metodo = new Metodo(_nomeMetodo, tipo, parametros);
       String _nomeMetodo_1 = declaration.getNomeMetodo();
@@ -112,7 +196,7 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
     return _xblockexpression;
   }
   
-  public Map<String, Tipo> getparamtros(final parameter_list list) {
+  public Map<String, Tipo> getparametros(final parameter_list list) {
     HashMap<String, Tipo> p = new HashMap<String, Tipo>();
     EList<parameter> _parametros = list.getParametros();
     for (final parameter parametro : _parametros) {

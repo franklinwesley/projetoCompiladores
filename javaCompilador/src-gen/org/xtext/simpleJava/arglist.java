@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface arglist extends variable_declarator, expression_aux
+public interface arglist extends variable_declarator
 {
   /**
    * Returns the value of the '<em><b>Expressoes Argumentos</b></em>' containment reference list.

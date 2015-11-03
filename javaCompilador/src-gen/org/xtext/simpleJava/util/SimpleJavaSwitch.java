@@ -335,7 +335,6 @@ public class SimpleJavaSwitch<T> extends Switch<T>
         arglist arglist = (arglist)theEObject;
         T result = casearglist(arglist);
         if (result == null) result = casevariable_declarator(arglist);
-        if (result == null) result = caseexpression_aux(arglist);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

@@ -1613,7 +1613,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getexpression_aux_Op()
+  public EReference getexpression_aux_Parametros()
   {
     return (EReference)expression_auxEClass.getEStructuralFeatures().get(0);
   }
@@ -1633,9 +1633,19 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getexpression_aux_Op()
+  {
+    return (EReference)expression_auxEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getexpression_aux_Operador()
   {
-    return (EAttribute)expression_auxEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)expression_auxEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1645,7 +1655,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    */
   public EReference getexpression_aux_Expressoes()
   {
-    return (EReference)expression_auxEClass.getEStructuralFeatures().get(3);
+    return (EReference)expression_auxEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -2194,8 +2204,9 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     createEReference(expressionEClass, EXPRESSION__EXPRESSAO);
 
     expression_auxEClass = createEClass(EXPRESSION_AUX);
-    createEReference(expression_auxEClass, EXPRESSION_AUX__OP);
+    createEReference(expression_auxEClass, EXPRESSION_AUX__PARAMETROS);
     createEReference(expression_auxEClass, EXPRESSION_AUX__EXP);
+    createEReference(expression_auxEClass, EXPRESSION_AUX__OP);
     createEAttribute(expression_auxEClass, EXPRESSION_AUX__OPERADOR);
     createEReference(expression_auxEClass, EXPRESSION_AUX__EXPRESSOES);
 
@@ -2286,7 +2297,6 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     auxEClass.getESuperTypes().add(this.getexpression_aux());
     auxEClass.getESuperTypes().add(this.getcreating_aux());
     arglistEClass.getESuperTypes().add(this.getvariable_declarator());
-    arglistEClass.getESuperTypes().add(this.getexpression_aux());
     nameEClass.getESuperTypes().add(this.getexpression_aux());
     typeEClass.getESuperTypes().add(this.getexp_aux());
 
@@ -2437,8 +2447,9 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     initEReference(getexpression_Expressao(), this.getexpression(), null, "expressao", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expression_auxEClass, expression_aux.class, "expression_aux", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getexpression_aux_Op(), this.getmais_aux(), null, "op", null, 0, 1, expression_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getexpression_aux_Parametros(), this.getarglist(), null, "parametros", null, 0, 1, expression_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getexpression_aux_Exp(), this.getexpression(), null, "exp", null, 0, 1, expression_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getexpression_aux_Op(), this.getmais_aux(), null, "op", null, 0, 1, expression_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getexpression_aux_Operador(), ecorePackage.getEString(), "operador", null, 0, 1, expression_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getexpression_aux_Expressoes(), this.getexpression_aux(), null, "expressoes", null, 0, 1, expression_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

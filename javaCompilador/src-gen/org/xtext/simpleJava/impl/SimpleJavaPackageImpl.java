@@ -1583,9 +1583,19 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getexpression_Identificador()
+  {
+    return (EAttribute)expressionEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getexpression_Expressao()
   {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(5);
+    return (EReference)expressionEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1603,9 +1613,9 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getexpression_aux_Opedador()
+  public EReference getexpression_aux_Op()
   {
-    return (EAttribute)expression_auxEClass.getEStructuralFeatures().get(0);
+    return (EReference)expression_auxEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1646,6 +1656,16 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
   public EClass getmais_aux()
   {
     return mais_auxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getmais_aux_Operador()
+  {
+    return (EAttribute)mais_auxEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2170,15 +2190,17 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     createEReference(expressionEClass, EXPRESSION__TIPO_BIT);
     createEReference(expressionEClass, EXPRESSION__NEW);
     createEReference(expressionEClass, EXPRESSION__LITERAL);
+    createEAttribute(expressionEClass, EXPRESSION__IDENTIFICADOR);
     createEReference(expressionEClass, EXPRESSION__EXPRESSAO);
 
     expression_auxEClass = createEClass(EXPRESSION_AUX);
-    createEAttribute(expression_auxEClass, EXPRESSION_AUX__OPEDADOR);
+    createEReference(expression_auxEClass, EXPRESSION_AUX__OP);
     createEReference(expression_auxEClass, EXPRESSION_AUX__EXP);
     createEAttribute(expression_auxEClass, EXPRESSION_AUX__OPERADOR);
     createEReference(expression_auxEClass, EXPRESSION_AUX__EXPRESSOES);
 
     mais_auxEClass = createEClass(MAIS_AUX);
+    createEAttribute(mais_auxEClass, MAIS_AUX__OPERADOR);
 
     newEClass = createEClass(NEW);
 
@@ -2261,7 +2283,6 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     constructor_declarationEClass.getESuperTypes().add(this.getnew());
     exp_auxEClass.getESuperTypes().add(this.getexpression());
     expressionEClass.getESuperTypes().add(this.getexpression_aux());
-    mais_auxEClass.getESuperTypes().add(this.getexpression_aux());
     auxEClass.getESuperTypes().add(this.getexpression_aux());
     auxEClass.getESuperTypes().add(this.getcreating_aux());
     arglistEClass.getESuperTypes().add(this.getvariable_declarator());
@@ -2412,15 +2433,17 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     initEReference(getexpression_TipoBit(), this.getbit_expression(), null, "tipoBit", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getexpression_New(), this.getcreating_expression(), null, "new", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getexpression_Literal(), this.getliteral_expression(), null, "literal", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getexpression_Identificador(), ecorePackage.getEString(), "identificador", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getexpression_Expressao(), this.getexpression(), null, "expressao", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expression_auxEClass, expression_aux.class, "expression_aux", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getexpression_aux_Opedador(), ecorePackage.getEString(), "opedador", null, 0, 1, expression_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getexpression_aux_Op(), this.getmais_aux(), null, "op", null, 0, 1, expression_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getexpression_aux_Exp(), this.getexpression(), null, "exp", null, 0, 1, expression_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getexpression_aux_Operador(), ecorePackage.getEString(), "operador", null, 0, 1, expression_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getexpression_aux_Expressoes(), this.getexpression_aux(), null, "expressoes", null, 0, 1, expression_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mais_auxEClass, mais_aux.class, "mais_aux", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getmais_aux_Operador(), ecorePackage.getEString(), "operador", null, 0, 1, mais_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(newEClass, new.class, "new", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.simpleJava.expression_aux#getOpedador <em>Opedador</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.expression_aux#getOp <em>Op</em>}</li>
  *   <li>{@link org.xtext.simpleJava.expression_aux#getExp <em>Exp</em>}</li>
  *   <li>{@link org.xtext.simpleJava.expression_aux#getOperador <em>Operador</em>}</li>
  *   <li>{@link org.xtext.simpleJava.expression_aux#getExpressoes <em>Expressoes</em>}</li>
@@ -26,30 +26,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface expression_aux extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Opedador</b></em>' attribute.
+   * Returns the value of the '<em><b>Op</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Opedador</em>' attribute isn't clear,
+   * If the meaning of the '<em>Op</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Opedador</em>' attribute.
-   * @see #setOpedador(String)
-   * @see org.xtext.simpleJava.SimpleJavaPackage#getexpression_aux_Opedador()
-   * @model
+   * @return the value of the '<em>Op</em>' containment reference.
+   * @see #setOp(mais_aux)
+   * @see org.xtext.simpleJava.SimpleJavaPackage#getexpression_aux_Op()
+   * @model containment="true"
    * @generated
    */
-  String getOpedador();
+  mais_aux getOp();
 
   /**
-   * Sets the value of the '{@link org.xtext.simpleJava.expression_aux#getOpedador <em>Opedador</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.simpleJava.expression_aux#getOp <em>Op</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Opedador</em>' attribute.
-   * @see #getOpedador()
+   * @param value the new value of the '<em>Op</em>' containment reference.
+   * @see #getOp()
    * @generated
    */
-  void setOpedador(String value);
+  void setOp(mais_aux value);
 
   /**
    * Returns the value of the '<em><b>Exp</b></em>' containment reference.

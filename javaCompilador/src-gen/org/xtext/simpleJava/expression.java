@@ -16,6 +16,7 @@ package org.xtext.simpleJava;
  *   <li>{@link org.xtext.simpleJava.expression#getTipoBit <em>Tipo Bit</em>}</li>
  *   <li>{@link org.xtext.simpleJava.expression#getNew <em>New</em>}</li>
  *   <li>{@link org.xtext.simpleJava.expression#getLiteral <em>Literal</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.expression#getIdentificador <em>Identificador</em>}</li>
  *   <li>{@link org.xtext.simpleJava.expression#getExpressao <em>Expressao</em>}</li>
  * </ul>
  * </p>
@@ -155,6 +156,32 @@ public interface expression extends expression_aux
    * @generated
    */
   void setLiteral(literal_expression value);
+
+  /**
+   * Returns the value of the '<em><b>Identificador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Identificador</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Identificador</em>' attribute.
+   * @see #setIdentificador(String)
+   * @see org.xtext.simpleJava.SimpleJavaPackage#getexpression_Identificador()
+   * @model
+   * @generated
+   */
+  String getIdentificador();
+
+  /**
+   * Sets the value of the '{@link org.xtext.simpleJava.expression#getIdentificador <em>Identificador</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Identificador</em>' attribute.
+   * @see #getIdentificador()
+   * @generated
+   */
+  void setIdentificador(String value);
 
   /**
    * Returns the value of the '<em><b>Expressao</b></em>' containment reference.

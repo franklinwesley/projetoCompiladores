@@ -167,15 +167,8 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 				sequence_logical_expression(context, (logical_expression) semanticObject); 
 				return; 
 			case SimpleJavaPackage.MAIS_AUX:
-				if(context == grammarAccess.getExpression_auxRule()) {
-					sequence_expression_aux_mais_aux(context, (mais_aux) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getMais_auxRule()) {
-					sequence_mais_aux(context, (mais_aux) semanticObject); 
-					return; 
-				}
-				else break;
+				sequence_mais_aux(context, (mais_aux) semanticObject); 
+				return; 
 			case SimpleJavaPackage.METHOD_DECLARATION:
 				sequence_method_declaration(context, (method_declaration) semanticObject); 
 				return; 
@@ -480,29 +473,31 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 * Constraint:
 	 *     (
 	 *         (
-	 *             opedador='++' | 
-	 *             opedador='--' | 
+	 *             (op=mais_aux exp=expression) | 
+	 *             operador='++' | 
+	 *             operador='--' | 
 	 *             (
 	 *                 (
-	 *                     opedador='-' | 
-	 *                     opedador='-=' | 
-	 *                     opedador='*' | 
-	 *                     opedador='*=' | 
-	 *                     opedador='/' | 
-	 *                     opedador='/=' | 
-	 *                     opedador='%' | 
-	 *                     opedador='%='
+	 *                     op=mais_aux | 
+	 *                     operador='-' | 
+	 *                     operador='-=' | 
+	 *                     operador='*' | 
+	 *                     operador='*=' | 
+	 *                     operador='/' | 
+	 *                     operador='/=' | 
+	 *                     operador='%' | 
+	 *                     operador='%='
 	 *                 ) 
 	 *                 exp=expression
 	 *             ) | 
 	 *             (
 	 *                 (
-	 *                     opedador='>' | 
-	 *                     opedador='<' | 
-	 *                     opedador='>=' | 
-	 *                     opedador='<=' | 
-	 *                     opedador='==' | 
-	 *                     opedador='!='
+	 *                     operador='>' | 
+	 *                     operador='<' | 
+	 *                     operador='>=' | 
+	 *                     operador='<=' | 
+	 *                     operador='==' | 
+	 *                     operador='!='
 	 *                 ) 
 	 *                 exp=expression
 	 *             ) | 
@@ -512,15 +507,6 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     )?
 	 */
 	protected void sequence_expression_aux(EObject context, expression_aux semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     ((opedador='+' | opedador='+=') exp=expression expressoes=expression_aux)
-	 */
-	protected void sequence_expression_aux_mais_aux(EObject context, mais_aux semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -537,7 +523,14 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * Constraint:
 	 *     (
-	 *         (tipoLogical=logical_expression | tipoNumeric=numeric_expression | tipoBit=bit_expression | new=creating_expression | literal=literal_expression)? 
+	 *         (
+	 *             tipoLogical=logical_expression | 
+	 *             tipoNumeric=numeric_expression | 
+	 *             tipoBit=bit_expression | 
+	 *             new=creating_expression | 
+	 *             literal=literal_expression | 
+	 *             identificador=IDENTIFIER
+	 *         )? 
 	 *         expressoes=expression_aux
 	 *     )
 	 */
@@ -549,7 +542,14 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * Constraint:
 	 *     (
-	 *         (tipoLogical=logical_expression | tipoNumeric=numeric_expression | tipoBit=bit_expression | new=creating_expression | literal=literal_expression)? 
+	 *         (
+	 *             tipoLogical=logical_expression | 
+	 *             tipoNumeric=numeric_expression | 
+	 *             tipoBit=bit_expression | 
+	 *             new=creating_expression | 
+	 *             literal=literal_expression | 
+	 *             identificador=IDENTIFIER
+	 *         )? 
 	 *         expressoes=expression_aux 
 	 *         expressoes=expression_aux
 	 *     )
@@ -641,7 +641,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (opedador='+' | opedador='+=')
+	 *     (operador='+' | operador='+=')
 	 */
 	protected void sequence_mais_aux(EObject context, mais_aux semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

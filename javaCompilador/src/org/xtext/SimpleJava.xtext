@@ -69,18 +69,18 @@ expression:
       | "null" 
       | "super" 
       | "this" 
-      | IDENTIFIER 
+      | identificador=IDENTIFIER 
       | "(" exp_aux)  expressoes=expression_aux; 
-expression_aux: (((("(" (arglist)? ")") | aux | ("." expression) | ("," expression) | ("instanceof" ->name))
-	  | ->mais_aux exp=expression
-	  | opedador=( "++" | "--")
-	  | ( ->mais_aux | opedador="-" | opedador="-=" | opedador="*" | opedador="*=" | opedador="/" | opedador="/=" | opedador="%" | opedador="%=" ) exp=expression
+expression_aux: (((("(" (parametros=arglist)? ")") | aux | ("." exp=expression) | ("," expression) | ("instanceof" ->name))
+	  | ->op=mais_aux exp=expression
+	  | operador=( "++" | "--")
+	  | ( ->op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*=" | operador="/" | operador="/=" | operador="%" | operador="%=" ) exp=expression
 	  | (("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | ("ampersand" "ampersand") | "||=" | => "%" | "%=" ) expression
 	  	| "?" expression ":" expressao=expression
-	  	| opedador=( ">" | "<" | ">=" | "<=" | "==" | "!=" ) exp=expression
+	  	| operador=( ">" | "<" | ">=" | "<=" | "==" | "!=" ) exp=expression
 	  	| operador=( ">>=" | "<<" | ">>" | ">>>" ) exp=expression)
 	  )  expressoes=expression_aux)?;
-mais_aux:  opedador="+" |  opedador="+=";
+mais_aux:  operador="+" |  operador="+=";
 new : "{" constructor_declaration "}";      
 creating_aux: ->"(" (argumentos=arglist)? ")" 
 	  | ->(aux)? ("[" "]")* ;

@@ -5951,13 +5951,13 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Alternatives_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1749:1: rule__Expression__Alternatives_0 : ( ( ( rule__Expression__TipoLogicalAssignment_0_0 ) ) | ( ( rule__Expression__TipoNumericAssignment_0_1 ) ) | ( ( rule__Expression__TipoBitAssignment_0_2 ) ) | ( ( rule__Expression__NewAssignment_0_3 ) ) | ( ( rule__Expression__LiteralAssignment_0_4 ) ) | ( 'null' ) | ( 'super' ) | ( 'this' ) | ( RULE_IDENTIFIER ) | ( ( rule__Expression__Group_0_9__0 ) ) );
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1749:1: rule__Expression__Alternatives_0 : ( ( ( rule__Expression__TipoLogicalAssignment_0_0 ) ) | ( ( rule__Expression__TipoNumericAssignment_0_1 ) ) | ( ( rule__Expression__TipoBitAssignment_0_2 ) ) | ( ( rule__Expression__NewAssignment_0_3 ) ) | ( ( rule__Expression__LiteralAssignment_0_4 ) ) | ( 'null' ) | ( 'super' ) | ( 'this' ) | ( ( rule__Expression__IdentificadorAssignment_0_8 ) ) | ( ( rule__Expression__Group_0_9__0 ) ) );
     public final void rule__Expression__Alternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1753:1: ( ( ( rule__Expression__TipoLogicalAssignment_0_0 ) ) | ( ( rule__Expression__TipoNumericAssignment_0_1 ) ) | ( ( rule__Expression__TipoBitAssignment_0_2 ) ) | ( ( rule__Expression__NewAssignment_0_3 ) ) | ( ( rule__Expression__LiteralAssignment_0_4 ) ) | ( 'null' ) | ( 'super' ) | ( 'this' ) | ( RULE_IDENTIFIER ) | ( ( rule__Expression__Group_0_9__0 ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1753:1: ( ( ( rule__Expression__TipoLogicalAssignment_0_0 ) ) | ( ( rule__Expression__TipoNumericAssignment_0_1 ) ) | ( ( rule__Expression__TipoBitAssignment_0_2 ) ) | ( ( rule__Expression__NewAssignment_0_3 ) ) | ( ( rule__Expression__LiteralAssignment_0_4 ) ) | ( 'null' ) | ( 'super' ) | ( 'this' ) | ( ( rule__Expression__IdentificadorAssignment_0_8 ) ) | ( ( rule__Expression__Group_0_9__0 ) ) )
             int alt19=10;
             switch ( input.LA(1) ) {
             case 92:
@@ -6229,17 +6229,27 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 9 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1808:6: ( RULE_IDENTIFIER )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1808:6: ( ( rule__Expression__IdentificadorAssignment_0_8 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1808:6: ( RULE_IDENTIFIER )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1809:1: RULE_IDENTIFIER
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1808:6: ( ( rule__Expression__IdentificadorAssignment_0_8 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1809:1: ( rule__Expression__IdentificadorAssignment_0_8 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpressionAccess().getIDENTIFIERTerminalRuleCall_0_8()); 
+                       before(grammarAccess.getExpressionAccess().getIdentificadorAssignment_0_8()); 
                     }
-                    match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Expression__Alternatives_03984); if (state.failed) return ;
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1810:1: ( rule__Expression__IdentificadorAssignment_0_8 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1810:2: rule__Expression__IdentificadorAssignment_0_8
+                    {
+                    pushFollow(FOLLOW_rule__Expression__IdentificadorAssignment_0_8_in_rule__Expression__Alternatives_03984);
+                    rule__Expression__IdentificadorAssignment_0_8();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpressionAccess().getIDENTIFIERTerminalRuleCall_0_8()); 
+                       after(grammarAccess.getExpressionAccess().getIdentificadorAssignment_0_8()); 
                     }
 
                     }
@@ -6259,7 +6269,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1816:1: ( rule__Expression__Group_0_9__0 )
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1816:2: rule__Expression__Group_0_9__0
                     {
-                    pushFollow(FOLLOW_rule__Expression__Group_0_9__0_in_rule__Expression__Alternatives_04001);
+                    pushFollow(FOLLOW_rule__Expression__Group_0_9__0_in_rule__Expression__Alternatives_04002);
                     rule__Expression__Group_0_9__0();
 
                     state._fsp--;
@@ -6294,13 +6304,13 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression_aux__Alternatives_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1825:1: rule__Expression_aux__Alternatives_0 : ( ( ( rule__Expression_aux__Alternatives_0_0 ) ) | ( ( rule__Expression_aux__Group_0_1__0 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_2 ) ) | ( ( rule__Expression_aux__Group_0_3__0 ) ) | ( ( rule__Expression_aux__Alternatives_0_4 ) ) );
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1825:1: rule__Expression_aux__Alternatives_0 : ( ( ( rule__Expression_aux__Alternatives_0_0 ) ) | ( ( rule__Expression_aux__Group_0_1__0 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_2 ) ) | ( ( rule__Expression_aux__Group_0_3__0 ) ) | ( ( rule__Expression_aux__Alternatives_0_4 ) ) );
     public final void rule__Expression_aux__Alternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1829:1: ( ( ( rule__Expression_aux__Alternatives_0_0 ) ) | ( ( rule__Expression_aux__Group_0_1__0 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_2 ) ) | ( ( rule__Expression_aux__Group_0_3__0 ) ) | ( ( rule__Expression_aux__Alternatives_0_4 ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1829:1: ( ( ( rule__Expression_aux__Alternatives_0_0 ) ) | ( ( rule__Expression_aux__Group_0_1__0 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_2 ) ) | ( ( rule__Expression_aux__Group_0_3__0 ) ) | ( ( rule__Expression_aux__Alternatives_0_4 ) ) )
             int alt20=5;
             alt20 = dfa20.predict(input);
             switch (alt20) {
@@ -6316,7 +6326,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1832:1: ( rule__Expression_aux__Alternatives_0_0 )
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1832:2: rule__Expression_aux__Alternatives_0_0
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__Alternatives_0_0_in_rule__Expression_aux__Alternatives_04034);
+                    pushFollow(FOLLOW_rule__Expression_aux__Alternatives_0_0_in_rule__Expression_aux__Alternatives_04035);
                     rule__Expression_aux__Alternatives_0_0();
 
                     state._fsp--;
@@ -6345,7 +6355,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1838:1: ( rule__Expression_aux__Group_0_1__0 )
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1838:2: rule__Expression_aux__Group_0_1__0
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__Group_0_1__0_in_rule__Expression_aux__Alternatives_04052);
+                    pushFollow(FOLLOW_rule__Expression_aux__Group_0_1__0_in_rule__Expression_aux__Alternatives_04053);
                     rule__Expression_aux__Group_0_1__0();
 
                     state._fsp--;
@@ -6363,19 +6373,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1842:6: ( ( rule__Expression_aux__OpedadorAssignment_0_2 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1842:6: ( ( rule__Expression_aux__OperadorAssignment_0_2 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1842:6: ( ( rule__Expression_aux__OpedadorAssignment_0_2 ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1843:1: ( rule__Expression_aux__OpedadorAssignment_0_2 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1842:6: ( ( rule__Expression_aux__OperadorAssignment_0_2 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1843:1: ( rule__Expression_aux__OperadorAssignment_0_2 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_2()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_2()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1844:1: ( rule__Expression_aux__OpedadorAssignment_0_2 )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1844:2: rule__Expression_aux__OpedadorAssignment_0_2
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1844:1: ( rule__Expression_aux__OperadorAssignment_0_2 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1844:2: rule__Expression_aux__OperadorAssignment_0_2
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__OpedadorAssignment_0_2_in_rule__Expression_aux__Alternatives_04070);
-                    rule__Expression_aux__OpedadorAssignment_0_2();
+                    pushFollow(FOLLOW_rule__Expression_aux__OperadorAssignment_0_2_in_rule__Expression_aux__Alternatives_04071);
+                    rule__Expression_aux__OperadorAssignment_0_2();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -6383,7 +6393,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_2()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_2()); 
                     }
 
                     }
@@ -6403,7 +6413,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1850:1: ( rule__Expression_aux__Group_0_3__0 )
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1850:2: rule__Expression_aux__Group_0_3__0
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__Group_0_3__0_in_rule__Expression_aux__Alternatives_04088);
+                    pushFollow(FOLLOW_rule__Expression_aux__Group_0_3__0_in_rule__Expression_aux__Alternatives_04089);
                     rule__Expression_aux__Group_0_3__0();
 
                     state._fsp--;
@@ -6432,7 +6442,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1856:1: ( rule__Expression_aux__Alternatives_0_4 )
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1856:2: rule__Expression_aux__Alternatives_0_4
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__Alternatives_0_4_in_rule__Expression_aux__Alternatives_04106);
+                    pushFollow(FOLLOW_rule__Expression_aux__Alternatives_0_4_in_rule__Expression_aux__Alternatives_04107);
                     rule__Expression_aux__Alternatives_0_4();
 
                     state._fsp--;
@@ -6522,7 +6532,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1872:1: ( rule__Expression_aux__Group_0_0_0__0 )
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1872:2: rule__Expression_aux__Group_0_0_0__0
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__Group_0_0_0__0_in_rule__Expression_aux__Alternatives_0_04139);
+                    pushFollow(FOLLOW_rule__Expression_aux__Group_0_0_0__0_in_rule__Expression_aux__Alternatives_0_04140);
                     rule__Expression_aux__Group_0_0_0__0();
 
                     state._fsp--;
@@ -6548,7 +6558,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpression_auxAccess().getAuxParserRuleCall_0_0_1()); 
                     }
-                    pushFollow(FOLLOW_ruleaux_in_rule__Expression_aux__Alternatives_0_04157);
+                    pushFollow(FOLLOW_ruleaux_in_rule__Expression_aux__Alternatives_0_04158);
                     ruleaux();
 
                     state._fsp--;
@@ -6574,7 +6584,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1884:1: ( rule__Expression_aux__Group_0_0_2__0 )
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1884:2: rule__Expression_aux__Group_0_0_2__0
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__Group_0_0_2__0_in_rule__Expression_aux__Alternatives_0_04174);
+                    pushFollow(FOLLOW_rule__Expression_aux__Group_0_0_2__0_in_rule__Expression_aux__Alternatives_0_04175);
                     rule__Expression_aux__Group_0_0_2__0();
 
                     state._fsp--;
@@ -6603,7 +6613,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1890:1: ( rule__Expression_aux__Group_0_0_3__0 )
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1890:2: rule__Expression_aux__Group_0_0_3__0
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__Group_0_0_3__0_in_rule__Expression_aux__Alternatives_0_04192);
+                    pushFollow(FOLLOW_rule__Expression_aux__Group_0_0_3__0_in_rule__Expression_aux__Alternatives_0_04193);
                     rule__Expression_aux__Group_0_0_3__0();
 
                     state._fsp--;
@@ -6632,7 +6642,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1896:1: ( rule__Expression_aux__Group_0_0_4__0 )
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1896:2: rule__Expression_aux__Group_0_0_4__0
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__Group_0_0_4__0_in_rule__Expression_aux__Alternatives_0_04210);
+                    pushFollow(FOLLOW_rule__Expression_aux__Group_0_0_4__0_in_rule__Expression_aux__Alternatives_0_04211);
                     rule__Expression_aux__Group_0_0_4__0();
 
                     state._fsp--;
@@ -6666,9 +6676,9 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Expression_aux__Alternatives_0_0"
 
 
-    // $ANTLR start "rule__Expression_aux__OpedadorAlternatives_0_2_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1905:1: rule__Expression_aux__OpedadorAlternatives_0_2_0 : ( ( '++' ) | ( '--' ) );
-    public final void rule__Expression_aux__OpedadorAlternatives_0_2_0() throws RecognitionException {
+    // $ANTLR start "rule__Expression_aux__OperadorAlternatives_0_2_0"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1905:1: rule__Expression_aux__OperadorAlternatives_0_2_0 : ( ( '++' ) | ( '--' ) );
+    public final void rule__Expression_aux__OperadorAlternatives_0_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -6698,11 +6708,11 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1911:1: '++'
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorPlusSignPlusSignKeyword_0_2_0_0()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorPlusSignPlusSignKeyword_0_2_0_0()); 
                     }
-                    match(input,23,FOLLOW_23_in_rule__Expression_aux__OpedadorAlternatives_0_2_04244); if (state.failed) return ;
+                    match(input,23,FOLLOW_23_in_rule__Expression_aux__OperadorAlternatives_0_2_04245); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorPlusSignPlusSignKeyword_0_2_0_0()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorPlusSignPlusSignKeyword_0_2_0_0()); 
                     }
 
                     }
@@ -6717,11 +6727,11 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1919:1: '--'
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusHyphenMinusKeyword_0_2_0_1()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorHyphenMinusHyphenMinusKeyword_0_2_0_1()); 
                     }
-                    match(input,24,FOLLOW_24_in_rule__Expression_aux__OpedadorAlternatives_0_2_04264); if (state.failed) return ;
+                    match(input,24,FOLLOW_24_in_rule__Expression_aux__OperadorAlternatives_0_2_04265); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusHyphenMinusKeyword_0_2_0_1()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorHyphenMinusHyphenMinusKeyword_0_2_0_1()); 
                     }
 
                     }
@@ -6743,17 +6753,17 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Expression_aux__OpedadorAlternatives_0_2_0"
+    // $ANTLR end "rule__Expression_aux__OperadorAlternatives_0_2_0"
 
 
     // $ANTLR start "rule__Expression_aux__Alternatives_0_3_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1931:1: rule__Expression_aux__Alternatives_0_3_0 : ( ( ( rulemais_aux ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_1 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_2 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_3 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_4 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_5 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_6 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_7 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_8 ) ) );
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1931:1: rule__Expression_aux__Alternatives_0_3_0 : ( ( ( rule__Expression_aux__OpAssignment_0_3_0_0 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_1 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_2 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_3 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_4 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_5 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_6 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_7 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_8 ) ) );
     public final void rule__Expression_aux__Alternatives_0_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1935:1: ( ( ( rulemais_aux ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_1 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_2 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_3 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_4 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_5 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_6 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_7 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_8 ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1935:1: ( ( ( rule__Expression_aux__OpAssignment_0_3_0_0 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_1 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_2 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_3 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_4 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_5 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_6 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_7 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_3_0_8 ) ) )
             int alt23=9;
             switch ( input.LA(1) ) {
             case 90:
@@ -6812,19 +6822,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
             switch (alt23) {
                 case 1 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1936:1: ( ( rulemais_aux ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1936:1: ( ( rule__Expression_aux__OpAssignment_0_3_0_0 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1936:1: ( ( rulemais_aux ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1937:1: ( rulemais_aux )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1936:1: ( ( rule__Expression_aux__OpAssignment_0_3_0_0 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1937:1: ( rule__Expression_aux__OpAssignment_0_3_0_0 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getMais_auxParserRuleCall_0_3_0_0()); 
+                       before(grammarAccess.getExpression_auxAccess().getOpAssignment_0_3_0_0()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1938:1: ( rulemais_aux )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1938:3: rulemais_aux
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1938:1: ( rule__Expression_aux__OpAssignment_0_3_0_0 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1938:2: rule__Expression_aux__OpAssignment_0_3_0_0
                     {
-                    pushFollow(FOLLOW_rulemais_aux_in_rule__Expression_aux__Alternatives_0_3_04299);
-                    rulemais_aux();
+                    pushFollow(FOLLOW_rule__Expression_aux__OpAssignment_0_3_0_0_in_rule__Expression_aux__Alternatives_0_3_04299);
+                    rule__Expression_aux__OpAssignment_0_3_0_0();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -6832,7 +6842,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getMais_auxParserRuleCall_0_3_0_0()); 
+                       after(grammarAccess.getExpression_auxAccess().getOpAssignment_0_3_0_0()); 
                     }
 
                     }
@@ -6841,19 +6851,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1942:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_1 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1942:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_1 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1942:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_1 ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1943:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_1 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1942:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_1 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1943:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_1 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_1()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_1()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1944:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_1 )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1944:2: rule__Expression_aux__OpedadorAssignment_0_3_0_1
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1944:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_1 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1944:2: rule__Expression_aux__OperadorAssignment_0_3_0_1
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_1_in_rule__Expression_aux__Alternatives_0_3_04317);
-                    rule__Expression_aux__OpedadorAssignment_0_3_0_1();
+                    pushFollow(FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_1_in_rule__Expression_aux__Alternatives_0_3_04317);
+                    rule__Expression_aux__OperadorAssignment_0_3_0_1();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -6861,7 +6871,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_1()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_1()); 
                     }
 
                     }
@@ -6870,19 +6880,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1948:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_2 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1948:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_2 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1948:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_2 ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1949:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_2 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1948:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_2 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1949:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_2 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_2()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_2()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1950:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_2 )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1950:2: rule__Expression_aux__OpedadorAssignment_0_3_0_2
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1950:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_2 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1950:2: rule__Expression_aux__OperadorAssignment_0_3_0_2
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_2_in_rule__Expression_aux__Alternatives_0_3_04335);
-                    rule__Expression_aux__OpedadorAssignment_0_3_0_2();
+                    pushFollow(FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_2_in_rule__Expression_aux__Alternatives_0_3_04335);
+                    rule__Expression_aux__OperadorAssignment_0_3_0_2();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -6890,7 +6900,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_2()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_2()); 
                     }
 
                     }
@@ -6899,19 +6909,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1954:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_3 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1954:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_3 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1954:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_3 ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1955:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_3 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1954:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_3 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1955:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_3 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_3()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_3()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1956:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_3 )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1956:2: rule__Expression_aux__OpedadorAssignment_0_3_0_3
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1956:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_3 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1956:2: rule__Expression_aux__OperadorAssignment_0_3_0_3
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_3_in_rule__Expression_aux__Alternatives_0_3_04353);
-                    rule__Expression_aux__OpedadorAssignment_0_3_0_3();
+                    pushFollow(FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_3_in_rule__Expression_aux__Alternatives_0_3_04353);
+                    rule__Expression_aux__OperadorAssignment_0_3_0_3();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -6919,7 +6929,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_3()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_3()); 
                     }
 
                     }
@@ -6928,19 +6938,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 5 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1960:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_4 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1960:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_4 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1960:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_4 ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1961:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_4 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1960:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_4 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1961:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_4 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_4()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_4()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1962:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_4 )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1962:2: rule__Expression_aux__OpedadorAssignment_0_3_0_4
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1962:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_4 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1962:2: rule__Expression_aux__OperadorAssignment_0_3_0_4
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_4_in_rule__Expression_aux__Alternatives_0_3_04371);
-                    rule__Expression_aux__OpedadorAssignment_0_3_0_4();
+                    pushFollow(FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_4_in_rule__Expression_aux__Alternatives_0_3_04371);
+                    rule__Expression_aux__OperadorAssignment_0_3_0_4();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -6948,7 +6958,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_4()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_4()); 
                     }
 
                     }
@@ -6957,19 +6967,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 6 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1966:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_5 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1966:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_5 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1966:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_5 ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1967:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_5 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1966:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_5 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1967:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_5 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_5()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_5()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1968:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_5 )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1968:2: rule__Expression_aux__OpedadorAssignment_0_3_0_5
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1968:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_5 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1968:2: rule__Expression_aux__OperadorAssignment_0_3_0_5
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_5_in_rule__Expression_aux__Alternatives_0_3_04389);
-                    rule__Expression_aux__OpedadorAssignment_0_3_0_5();
+                    pushFollow(FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_5_in_rule__Expression_aux__Alternatives_0_3_04389);
+                    rule__Expression_aux__OperadorAssignment_0_3_0_5();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -6977,7 +6987,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_5()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_5()); 
                     }
 
                     }
@@ -6986,19 +6996,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 7 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1972:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_6 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1972:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_6 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1972:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_6 ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1973:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_6 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1972:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_6 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1973:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_6 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_6()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_6()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1974:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_6 )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1974:2: rule__Expression_aux__OpedadorAssignment_0_3_0_6
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1974:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_6 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1974:2: rule__Expression_aux__OperadorAssignment_0_3_0_6
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_6_in_rule__Expression_aux__Alternatives_0_3_04407);
-                    rule__Expression_aux__OpedadorAssignment_0_3_0_6();
+                    pushFollow(FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_6_in_rule__Expression_aux__Alternatives_0_3_04407);
+                    rule__Expression_aux__OperadorAssignment_0_3_0_6();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -7006,7 +7016,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_6()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_6()); 
                     }
 
                     }
@@ -7015,19 +7025,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 8 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1978:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_7 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1978:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_7 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1978:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_7 ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1979:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_7 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1978:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_7 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1979:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_7 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_7()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_7()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1980:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_7 )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1980:2: rule__Expression_aux__OpedadorAssignment_0_3_0_7
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1980:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_7 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1980:2: rule__Expression_aux__OperadorAssignment_0_3_0_7
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_7_in_rule__Expression_aux__Alternatives_0_3_04425);
-                    rule__Expression_aux__OpedadorAssignment_0_3_0_7();
+                    pushFollow(FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_7_in_rule__Expression_aux__Alternatives_0_3_04425);
+                    rule__Expression_aux__OperadorAssignment_0_3_0_7();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -7035,7 +7045,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_7()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_7()); 
                     }
 
                     }
@@ -7044,19 +7054,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 9 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1984:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_8 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1984:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_8 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1984:6: ( ( rule__Expression_aux__OpedadorAssignment_0_3_0_8 ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1985:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_8 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1984:6: ( ( rule__Expression_aux__OperadorAssignment_0_3_0_8 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1985:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_8 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_8()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_8()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1986:1: ( rule__Expression_aux__OpedadorAssignment_0_3_0_8 )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1986:2: rule__Expression_aux__OpedadorAssignment_0_3_0_8
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1986:1: ( rule__Expression_aux__OperadorAssignment_0_3_0_8 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1986:2: rule__Expression_aux__OperadorAssignment_0_3_0_8
                     {
-                    pushFollow(FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_8_in_rule__Expression_aux__Alternatives_0_3_04443);
-                    rule__Expression_aux__OpedadorAssignment_0_3_0_8();
+                    pushFollow(FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_8_in_rule__Expression_aux__Alternatives_0_3_04443);
+                    rule__Expression_aux__OperadorAssignment_0_3_0_8();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -7064,7 +7074,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_3_0_8()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_8()); 
                     }
 
                     }
@@ -7511,9 +7521,9 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Expression_aux__Alternatives_0_4_0_0"
 
 
-    // $ANTLR start "rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2117:1: rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0 : ( ( '>' ) | ( '<' ) | ( '>=' ) | ( '<=' ) | ( '==' ) | ( '!=' ) );
-    public final void rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0() throws RecognitionException {
+    // $ANTLR start "rule__Expression_aux__OperadorAlternatives_0_4_2_0_0"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2117:1: rule__Expression_aux__OperadorAlternatives_0_4_2_0_0 : ( ( '>' ) | ( '<' ) | ( '>=' ) | ( '<=' ) | ( '==' ) | ( '!=' ) );
+    public final void rule__Expression_aux__OperadorAlternatives_0_4_2_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -7567,11 +7577,11 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2123:1: '>'
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorGreaterThanSignKeyword_0_4_2_0_0_0()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorGreaterThanSignKeyword_0_4_2_0_0_0()); 
                     }
-                    match(input,34,FOLLOW_34_in_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_04779); if (state.failed) return ;
+                    match(input,34,FOLLOW_34_in_rule__Expression_aux__OperadorAlternatives_0_4_2_0_04779); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorGreaterThanSignKeyword_0_4_2_0_0_0()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorGreaterThanSignKeyword_0_4_2_0_0_0()); 
                     }
 
                     }
@@ -7586,11 +7596,11 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2131:1: '<'
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorLessThanSignKeyword_0_4_2_0_0_1()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorLessThanSignKeyword_0_4_2_0_0_1()); 
                     }
-                    match(input,35,FOLLOW_35_in_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_04799); if (state.failed) return ;
+                    match(input,35,FOLLOW_35_in_rule__Expression_aux__OperadorAlternatives_0_4_2_0_04799); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorLessThanSignKeyword_0_4_2_0_0_1()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorLessThanSignKeyword_0_4_2_0_0_1()); 
                     }
 
                     }
@@ -7605,11 +7615,11 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2139:1: '>='
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorGreaterThanSignEqualsSignKeyword_0_4_2_0_0_2()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorGreaterThanSignEqualsSignKeyword_0_4_2_0_0_2()); 
                     }
-                    match(input,36,FOLLOW_36_in_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_04819); if (state.failed) return ;
+                    match(input,36,FOLLOW_36_in_rule__Expression_aux__OperadorAlternatives_0_4_2_0_04819); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorGreaterThanSignEqualsSignKeyword_0_4_2_0_0_2()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorGreaterThanSignEqualsSignKeyword_0_4_2_0_0_2()); 
                     }
 
                     }
@@ -7624,11 +7634,11 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2147:1: '<='
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorLessThanSignEqualsSignKeyword_0_4_2_0_0_3()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorLessThanSignEqualsSignKeyword_0_4_2_0_0_3()); 
                     }
-                    match(input,37,FOLLOW_37_in_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_04839); if (state.failed) return ;
+                    match(input,37,FOLLOW_37_in_rule__Expression_aux__OperadorAlternatives_0_4_2_0_04839); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorLessThanSignEqualsSignKeyword_0_4_2_0_0_3()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorLessThanSignEqualsSignKeyword_0_4_2_0_0_3()); 
                     }
 
                     }
@@ -7643,11 +7653,11 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2155:1: '=='
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorEqualsSignEqualsSignKeyword_0_4_2_0_0_4()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorEqualsSignEqualsSignKeyword_0_4_2_0_0_4()); 
                     }
-                    match(input,38,FOLLOW_38_in_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_04859); if (state.failed) return ;
+                    match(input,38,FOLLOW_38_in_rule__Expression_aux__OperadorAlternatives_0_4_2_0_04859); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorEqualsSignEqualsSignKeyword_0_4_2_0_0_4()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorEqualsSignEqualsSignKeyword_0_4_2_0_0_4()); 
                     }
 
                     }
@@ -7662,11 +7672,11 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2163:1: '!='
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getExpression_auxAccess().getOpedadorExclamationMarkEqualsSignKeyword_0_4_2_0_0_5()); 
+                       before(grammarAccess.getExpression_auxAccess().getOperadorExclamationMarkEqualsSignKeyword_0_4_2_0_0_5()); 
                     }
-                    match(input,39,FOLLOW_39_in_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_04879); if (state.failed) return ;
+                    match(input,39,FOLLOW_39_in_rule__Expression_aux__OperadorAlternatives_0_4_2_0_04879); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getExpression_auxAccess().getOpedadorExclamationMarkEqualsSignKeyword_0_4_2_0_0_5()); 
+                       after(grammarAccess.getExpression_auxAccess().getOperadorExclamationMarkEqualsSignKeyword_0_4_2_0_0_5()); 
                     }
 
                     }
@@ -7688,7 +7698,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0"
+    // $ANTLR end "rule__Expression_aux__OperadorAlternatives_0_4_2_0_0"
 
 
     // $ANTLR start "rule__Expression_aux__OperadorAlternatives_0_4_3_0_0"
@@ -7824,13 +7834,13 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mais_aux__Alternatives"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2217:1: rule__Mais_aux__Alternatives : ( ( ( rule__Mais_aux__OpedadorAssignment_0 ) ) | ( ( rule__Mais_aux__OpedadorAssignment_1 ) ) );
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2217:1: rule__Mais_aux__Alternatives : ( ( ( rule__Mais_aux__OperadorAssignment_0 ) ) | ( ( rule__Mais_aux__OperadorAssignment_1 ) ) );
     public final void rule__Mais_aux__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2221:1: ( ( ( rule__Mais_aux__OpedadorAssignment_0 ) ) | ( ( rule__Mais_aux__OpedadorAssignment_1 ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2221:1: ( ( ( rule__Mais_aux__OperadorAssignment_0 ) ) | ( ( rule__Mais_aux__OperadorAssignment_1 ) ) )
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -7849,19 +7859,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             }
             switch (alt28) {
                 case 1 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2222:1: ( ( rule__Mais_aux__OpedadorAssignment_0 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2222:1: ( ( rule__Mais_aux__OperadorAssignment_0 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2222:1: ( ( rule__Mais_aux__OpedadorAssignment_0 ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2223:1: ( rule__Mais_aux__OpedadorAssignment_0 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2222:1: ( ( rule__Mais_aux__OperadorAssignment_0 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2223:1: ( rule__Mais_aux__OperadorAssignment_0 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getMais_auxAccess().getOpedadorAssignment_0()); 
+                       before(grammarAccess.getMais_auxAccess().getOperadorAssignment_0()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2224:1: ( rule__Mais_aux__OpedadorAssignment_0 )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2224:2: rule__Mais_aux__OpedadorAssignment_0
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2224:1: ( rule__Mais_aux__OperadorAssignment_0 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2224:2: rule__Mais_aux__OperadorAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Mais_aux__OpedadorAssignment_0_in_rule__Mais_aux__Alternatives5008);
-                    rule__Mais_aux__OpedadorAssignment_0();
+                    pushFollow(FOLLOW_rule__Mais_aux__OperadorAssignment_0_in_rule__Mais_aux__Alternatives5008);
+                    rule__Mais_aux__OperadorAssignment_0();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -7869,7 +7879,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getMais_auxAccess().getOpedadorAssignment_0()); 
+                       after(grammarAccess.getMais_auxAccess().getOperadorAssignment_0()); 
                     }
 
                     }
@@ -7878,19 +7888,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2228:6: ( ( rule__Mais_aux__OpedadorAssignment_1 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2228:6: ( ( rule__Mais_aux__OperadorAssignment_1 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2228:6: ( ( rule__Mais_aux__OpedadorAssignment_1 ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2229:1: ( rule__Mais_aux__OpedadorAssignment_1 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2228:6: ( ( rule__Mais_aux__OperadorAssignment_1 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2229:1: ( rule__Mais_aux__OperadorAssignment_1 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getMais_auxAccess().getOpedadorAssignment_1()); 
+                       before(grammarAccess.getMais_auxAccess().getOperadorAssignment_1()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2230:1: ( rule__Mais_aux__OpedadorAssignment_1 )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2230:2: rule__Mais_aux__OpedadorAssignment_1
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2230:1: ( rule__Mais_aux__OperadorAssignment_1 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2230:2: rule__Mais_aux__OperadorAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Mais_aux__OpedadorAssignment_1_in_rule__Mais_aux__Alternatives5026);
-                    rule__Mais_aux__OpedadorAssignment_1();
+                    pushFollow(FOLLOW_rule__Mais_aux__OperadorAssignment_1_in_rule__Mais_aux__Alternatives5026);
+                    rule__Mais_aux__OperadorAssignment_1();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -7898,7 +7908,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getMais_auxAccess().getOpedadorAssignment_1()); 
+                       after(grammarAccess.getMais_auxAccess().getOperadorAssignment_1()); 
                     }
 
                     }
@@ -27475,26 +27485,26 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression_aux__Group_0_1__0__Impl"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9214:1: rule__Expression_aux__Group_0_1__0__Impl : ( ( rulemais_aux ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9214:1: rule__Expression_aux__Group_0_1__0__Impl : ( ( rule__Expression_aux__OpAssignment_0_1_0 ) ) ;
     public final void rule__Expression_aux__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9218:1: ( ( ( rulemais_aux ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9219:1: ( ( rulemais_aux ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9218:1: ( ( ( rule__Expression_aux__OpAssignment_0_1_0 ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9219:1: ( ( rule__Expression_aux__OpAssignment_0_1_0 ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9219:1: ( ( rulemais_aux ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9220:1: ( rulemais_aux )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9219:1: ( ( rule__Expression_aux__OpAssignment_0_1_0 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9220:1: ( rule__Expression_aux__OpAssignment_0_1_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getMais_auxParserRuleCall_0_1_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOpAssignment_0_1_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9221:1: ( rulemais_aux )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9221:3: rulemais_aux
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9221:1: ( rule__Expression_aux__OpAssignment_0_1_0 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9221:2: rule__Expression_aux__OpAssignment_0_1_0
             {
-            pushFollow(FOLLOW_rulemais_aux_in_rule__Expression_aux__Group_0_1__0__Impl18960);
-            rulemais_aux();
+            pushFollow(FOLLOW_rule__Expression_aux__OpAssignment_0_1_0_in_rule__Expression_aux__Group_0_1__0__Impl18959);
+            rule__Expression_aux__OpAssignment_0_1_0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -27502,7 +27512,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getMais_auxParserRuleCall_0_1_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOpAssignment_0_1_0()); 
             }
 
             }
@@ -27535,7 +27545,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9235:1: ( rule__Expression_aux__Group_0_1__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9236:2: rule__Expression_aux__Group_0_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_1__1__Impl_in_rule__Expression_aux__Group_0_1__118990);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_1__1__Impl_in_rule__Expression_aux__Group_0_1__118989);
             rule__Expression_aux__Group_0_1__1__Impl();
 
             state._fsp--;
@@ -27577,7 +27587,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9249:1: ( rule__Expression_aux__ExpAssignment_0_1_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9249:2: rule__Expression_aux__ExpAssignment_0_1_1
             {
-            pushFollow(FOLLOW_rule__Expression_aux__ExpAssignment_0_1_1_in_rule__Expression_aux__Group_0_1__1__Impl19017);
+            pushFollow(FOLLOW_rule__Expression_aux__ExpAssignment_0_1_1_in_rule__Expression_aux__Group_0_1__1__Impl19016);
             rule__Expression_aux__ExpAssignment_0_1_1();
 
             state._fsp--;
@@ -27619,12 +27629,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9267:1: ( rule__Expression_aux__Group_0_3__0__Impl rule__Expression_aux__Group_0_3__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9268:2: rule__Expression_aux__Group_0_3__0__Impl rule__Expression_aux__Group_0_3__1
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_3__0__Impl_in_rule__Expression_aux__Group_0_3__019051);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_3__0__Impl_in_rule__Expression_aux__Group_0_3__019050);
             rule__Expression_aux__Group_0_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_3__1_in_rule__Expression_aux__Group_0_3__019054);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_3__1_in_rule__Expression_aux__Group_0_3__019053);
             rule__Expression_aux__Group_0_3__1();
 
             state._fsp--;
@@ -27666,7 +27676,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9282:1: ( rule__Expression_aux__Alternatives_0_3_0 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9282:2: rule__Expression_aux__Alternatives_0_3_0
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Alternatives_0_3_0_in_rule__Expression_aux__Group_0_3__0__Impl19081);
+            pushFollow(FOLLOW_rule__Expression_aux__Alternatives_0_3_0_in_rule__Expression_aux__Group_0_3__0__Impl19080);
             rule__Expression_aux__Alternatives_0_3_0();
 
             state._fsp--;
@@ -27708,7 +27718,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9296:1: ( rule__Expression_aux__Group_0_3__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9297:2: rule__Expression_aux__Group_0_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_3__1__Impl_in_rule__Expression_aux__Group_0_3__119111);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_3__1__Impl_in_rule__Expression_aux__Group_0_3__119110);
             rule__Expression_aux__Group_0_3__1__Impl();
 
             state._fsp--;
@@ -27750,7 +27760,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9310:1: ( rule__Expression_aux__ExpAssignment_0_3_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9310:2: rule__Expression_aux__ExpAssignment_0_3_1
             {
-            pushFollow(FOLLOW_rule__Expression_aux__ExpAssignment_0_3_1_in_rule__Expression_aux__Group_0_3__1__Impl19138);
+            pushFollow(FOLLOW_rule__Expression_aux__ExpAssignment_0_3_1_in_rule__Expression_aux__Group_0_3__1__Impl19137);
             rule__Expression_aux__ExpAssignment_0_3_1();
 
             state._fsp--;
@@ -27792,12 +27802,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9328:1: ( rule__Expression_aux__Group_0_4_0__0__Impl rule__Expression_aux__Group_0_4_0__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9329:2: rule__Expression_aux__Group_0_4_0__0__Impl rule__Expression_aux__Group_0_4_0__1
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_0__0__Impl_in_rule__Expression_aux__Group_0_4_0__019172);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_0__0__Impl_in_rule__Expression_aux__Group_0_4_0__019171);
             rule__Expression_aux__Group_0_4_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_0__1_in_rule__Expression_aux__Group_0_4_0__019175);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_0__1_in_rule__Expression_aux__Group_0_4_0__019174);
             rule__Expression_aux__Group_0_4_0__1();
 
             state._fsp--;
@@ -27839,7 +27849,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9343:1: ( rule__Expression_aux__Alternatives_0_4_0_0 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9343:2: rule__Expression_aux__Alternatives_0_4_0_0
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Alternatives_0_4_0_0_in_rule__Expression_aux__Group_0_4_0__0__Impl19202);
+            pushFollow(FOLLOW_rule__Expression_aux__Alternatives_0_4_0_0_in_rule__Expression_aux__Group_0_4_0__0__Impl19201);
             rule__Expression_aux__Alternatives_0_4_0_0();
 
             state._fsp--;
@@ -27881,7 +27891,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9357:1: ( rule__Expression_aux__Group_0_4_0__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9358:2: rule__Expression_aux__Group_0_4_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_0__1__Impl_in_rule__Expression_aux__Group_0_4_0__119232);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_0__1__Impl_in_rule__Expression_aux__Group_0_4_0__119231);
             rule__Expression_aux__Group_0_4_0__1__Impl();
 
             state._fsp--;
@@ -27920,7 +27930,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getExpressionParserRuleCall_0_4_0_1()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__Group_0_4_0__1__Impl19259);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__Group_0_4_0__1__Impl19258);
             ruleexpression();
 
             state._fsp--;
@@ -27959,12 +27969,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9389:1: ( rule__Expression_aux__Group_0_4_0_0_6__0__Impl rule__Expression_aux__Group_0_4_0_0_6__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9390:2: rule__Expression_aux__Group_0_4_0_0_6__0__Impl rule__Expression_aux__Group_0_4_0_0_6__1
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_0_0_6__0__Impl_in_rule__Expression_aux__Group_0_4_0_0_6__019292);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_0_0_6__0__Impl_in_rule__Expression_aux__Group_0_4_0_0_6__019291);
             rule__Expression_aux__Group_0_4_0_0_6__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_0_0_6__1_in_rule__Expression_aux__Group_0_4_0_0_6__019295);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_0_0_6__1_in_rule__Expression_aux__Group_0_4_0_0_6__019294);
             rule__Expression_aux__Group_0_4_0_0_6__1();
 
             state._fsp--;
@@ -28003,7 +28013,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_0()); 
             }
-            match(input,25,FOLLOW_25_in_rule__Expression_aux__Group_0_4_0_0_6__0__Impl19323); if (state.failed) return ;
+            match(input,25,FOLLOW_25_in_rule__Expression_aux__Group_0_4_0_0_6__0__Impl19322); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_0()); 
             }
@@ -28038,7 +28048,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9420:1: ( rule__Expression_aux__Group_0_4_0_0_6__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9421:2: rule__Expression_aux__Group_0_4_0_0_6__1__Impl
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_0_0_6__1__Impl_in_rule__Expression_aux__Group_0_4_0_0_6__119354);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_0_0_6__1__Impl_in_rule__Expression_aux__Group_0_4_0_0_6__119353);
             rule__Expression_aux__Group_0_4_0_0_6__1__Impl();
 
             state._fsp--;
@@ -28077,7 +28087,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_1()); 
             }
-            match(input,25,FOLLOW_25_in_rule__Expression_aux__Group_0_4_0_0_6__1__Impl19382); if (state.failed) return ;
+            match(input,25,FOLLOW_25_in_rule__Expression_aux__Group_0_4_0_0_6__1__Impl19381); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_1()); 
             }
@@ -28112,12 +28122,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9454:1: ( rule__Expression_aux__Group_0_4_1__0__Impl rule__Expression_aux__Group_0_4_1__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9455:2: rule__Expression_aux__Group_0_4_1__0__Impl rule__Expression_aux__Group_0_4_1__1
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__0__Impl_in_rule__Expression_aux__Group_0_4_1__019417);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__0__Impl_in_rule__Expression_aux__Group_0_4_1__019416);
             rule__Expression_aux__Group_0_4_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__1_in_rule__Expression_aux__Group_0_4_1__019420);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__1_in_rule__Expression_aux__Group_0_4_1__019419);
             rule__Expression_aux__Group_0_4_1__1();
 
             state._fsp--;
@@ -28156,7 +28166,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getQuestionMarkKeyword_0_4_1_0()); 
             }
-            match(input,83,FOLLOW_83_in_rule__Expression_aux__Group_0_4_1__0__Impl19448); if (state.failed) return ;
+            match(input,83,FOLLOW_83_in_rule__Expression_aux__Group_0_4_1__0__Impl19447); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExpression_auxAccess().getQuestionMarkKeyword_0_4_1_0()); 
             }
@@ -28191,12 +28201,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9485:1: ( rule__Expression_aux__Group_0_4_1__1__Impl rule__Expression_aux__Group_0_4_1__2 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9486:2: rule__Expression_aux__Group_0_4_1__1__Impl rule__Expression_aux__Group_0_4_1__2
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__1__Impl_in_rule__Expression_aux__Group_0_4_1__119479);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__1__Impl_in_rule__Expression_aux__Group_0_4_1__119478);
             rule__Expression_aux__Group_0_4_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__2_in_rule__Expression_aux__Group_0_4_1__119482);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__2_in_rule__Expression_aux__Group_0_4_1__119481);
             rule__Expression_aux__Group_0_4_1__2();
 
             state._fsp--;
@@ -28235,7 +28245,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getExpressionParserRuleCall_0_4_1_1()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__Group_0_4_1__1__Impl19509);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__Group_0_4_1__1__Impl19508);
             ruleexpression();
 
             state._fsp--;
@@ -28274,12 +28284,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9514:1: ( rule__Expression_aux__Group_0_4_1__2__Impl rule__Expression_aux__Group_0_4_1__3 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9515:2: rule__Expression_aux__Group_0_4_1__2__Impl rule__Expression_aux__Group_0_4_1__3
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__2__Impl_in_rule__Expression_aux__Group_0_4_1__219538);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__2__Impl_in_rule__Expression_aux__Group_0_4_1__219537);
             rule__Expression_aux__Group_0_4_1__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__3_in_rule__Expression_aux__Group_0_4_1__219541);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__3_in_rule__Expression_aux__Group_0_4_1__219540);
             rule__Expression_aux__Group_0_4_1__3();
 
             state._fsp--;
@@ -28318,7 +28328,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getColonKeyword_0_4_1_2()); 
             }
-            match(input,64,FOLLOW_64_in_rule__Expression_aux__Group_0_4_1__2__Impl19569); if (state.failed) return ;
+            match(input,64,FOLLOW_64_in_rule__Expression_aux__Group_0_4_1__2__Impl19568); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExpression_auxAccess().getColonKeyword_0_4_1_2()); 
             }
@@ -28353,7 +28363,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9545:1: ( rule__Expression_aux__Group_0_4_1__3__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9546:2: rule__Expression_aux__Group_0_4_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__3__Impl_in_rule__Expression_aux__Group_0_4_1__319600);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_1__3__Impl_in_rule__Expression_aux__Group_0_4_1__319599);
             rule__Expression_aux__Group_0_4_1__3__Impl();
 
             state._fsp--;
@@ -28395,7 +28405,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9559:1: ( rule__Expression_aux__ExpressaoAssignment_0_4_1_3 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9559:2: rule__Expression_aux__ExpressaoAssignment_0_4_1_3
             {
-            pushFollow(FOLLOW_rule__Expression_aux__ExpressaoAssignment_0_4_1_3_in_rule__Expression_aux__Group_0_4_1__3__Impl19627);
+            pushFollow(FOLLOW_rule__Expression_aux__ExpressaoAssignment_0_4_1_3_in_rule__Expression_aux__Group_0_4_1__3__Impl19626);
             rule__Expression_aux__ExpressaoAssignment_0_4_1_3();
 
             state._fsp--;
@@ -28437,12 +28447,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9581:1: ( rule__Expression_aux__Group_0_4_2__0__Impl rule__Expression_aux__Group_0_4_2__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9582:2: rule__Expression_aux__Group_0_4_2__0__Impl rule__Expression_aux__Group_0_4_2__1
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_2__0__Impl_in_rule__Expression_aux__Group_0_4_2__019665);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_2__0__Impl_in_rule__Expression_aux__Group_0_4_2__019664);
             rule__Expression_aux__Group_0_4_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_2__1_in_rule__Expression_aux__Group_0_4_2__019668);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_2__1_in_rule__Expression_aux__Group_0_4_2__019667);
             rule__Expression_aux__Group_0_4_2__1();
 
             state._fsp--;
@@ -28466,26 +28476,26 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression_aux__Group_0_4_2__0__Impl"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9589:1: rule__Expression_aux__Group_0_4_2__0__Impl : ( ( rule__Expression_aux__OpedadorAssignment_0_4_2_0 ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9589:1: rule__Expression_aux__Group_0_4_2__0__Impl : ( ( rule__Expression_aux__OperadorAssignment_0_4_2_0 ) ) ;
     public final void rule__Expression_aux__Group_0_4_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9593:1: ( ( ( rule__Expression_aux__OpedadorAssignment_0_4_2_0 ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9594:1: ( ( rule__Expression_aux__OpedadorAssignment_0_4_2_0 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9593:1: ( ( ( rule__Expression_aux__OperadorAssignment_0_4_2_0 ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9594:1: ( ( rule__Expression_aux__OperadorAssignment_0_4_2_0 ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9594:1: ( ( rule__Expression_aux__OpedadorAssignment_0_4_2_0 ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9595:1: ( rule__Expression_aux__OpedadorAssignment_0_4_2_0 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9594:1: ( ( rule__Expression_aux__OperadorAssignment_0_4_2_0 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9595:1: ( rule__Expression_aux__OperadorAssignment_0_4_2_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_4_2_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_4_2_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9596:1: ( rule__Expression_aux__OpedadorAssignment_0_4_2_0 )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9596:2: rule__Expression_aux__OpedadorAssignment_0_4_2_0
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9596:1: ( rule__Expression_aux__OperadorAssignment_0_4_2_0 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9596:2: rule__Expression_aux__OperadorAssignment_0_4_2_0
             {
-            pushFollow(FOLLOW_rule__Expression_aux__OpedadorAssignment_0_4_2_0_in_rule__Expression_aux__Group_0_4_2__0__Impl19695);
-            rule__Expression_aux__OpedadorAssignment_0_4_2_0();
+            pushFollow(FOLLOW_rule__Expression_aux__OperadorAssignment_0_4_2_0_in_rule__Expression_aux__Group_0_4_2__0__Impl19694);
+            rule__Expression_aux__OperadorAssignment_0_4_2_0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -28493,7 +28503,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorAssignment_0_4_2_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_4_2_0()); 
             }
 
             }
@@ -28526,7 +28536,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9610:1: ( rule__Expression_aux__Group_0_4_2__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9611:2: rule__Expression_aux__Group_0_4_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_2__1__Impl_in_rule__Expression_aux__Group_0_4_2__119725);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_2__1__Impl_in_rule__Expression_aux__Group_0_4_2__119724);
             rule__Expression_aux__Group_0_4_2__1__Impl();
 
             state._fsp--;
@@ -28568,7 +28578,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9624:1: ( rule__Expression_aux__ExpAssignment_0_4_2_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9624:2: rule__Expression_aux__ExpAssignment_0_4_2_1
             {
-            pushFollow(FOLLOW_rule__Expression_aux__ExpAssignment_0_4_2_1_in_rule__Expression_aux__Group_0_4_2__1__Impl19752);
+            pushFollow(FOLLOW_rule__Expression_aux__ExpAssignment_0_4_2_1_in_rule__Expression_aux__Group_0_4_2__1__Impl19751);
             rule__Expression_aux__ExpAssignment_0_4_2_1();
 
             state._fsp--;
@@ -28610,12 +28620,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9642:1: ( rule__Expression_aux__Group_0_4_3__0__Impl rule__Expression_aux__Group_0_4_3__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9643:2: rule__Expression_aux__Group_0_4_3__0__Impl rule__Expression_aux__Group_0_4_3__1
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_3__0__Impl_in_rule__Expression_aux__Group_0_4_3__019786);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_3__0__Impl_in_rule__Expression_aux__Group_0_4_3__019785);
             rule__Expression_aux__Group_0_4_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_3__1_in_rule__Expression_aux__Group_0_4_3__019789);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_3__1_in_rule__Expression_aux__Group_0_4_3__019788);
             rule__Expression_aux__Group_0_4_3__1();
 
             state._fsp--;
@@ -28657,7 +28667,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9657:1: ( rule__Expression_aux__OperadorAssignment_0_4_3_0 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9657:2: rule__Expression_aux__OperadorAssignment_0_4_3_0
             {
-            pushFollow(FOLLOW_rule__Expression_aux__OperadorAssignment_0_4_3_0_in_rule__Expression_aux__Group_0_4_3__0__Impl19816);
+            pushFollow(FOLLOW_rule__Expression_aux__OperadorAssignment_0_4_3_0_in_rule__Expression_aux__Group_0_4_3__0__Impl19815);
             rule__Expression_aux__OperadorAssignment_0_4_3_0();
 
             state._fsp--;
@@ -28699,7 +28709,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9671:1: ( rule__Expression_aux__Group_0_4_3__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9672:2: rule__Expression_aux__Group_0_4_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_3__1__Impl_in_rule__Expression_aux__Group_0_4_3__119846);
+            pushFollow(FOLLOW_rule__Expression_aux__Group_0_4_3__1__Impl_in_rule__Expression_aux__Group_0_4_3__119845);
             rule__Expression_aux__Group_0_4_3__1__Impl();
 
             state._fsp--;
@@ -28741,7 +28751,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9685:1: ( rule__Expression_aux__ExpAssignment_0_4_3_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9685:2: rule__Expression_aux__ExpAssignment_0_4_3_1
             {
-            pushFollow(FOLLOW_rule__Expression_aux__ExpAssignment_0_4_3_1_in_rule__Expression_aux__Group_0_4_3__1__Impl19873);
+            pushFollow(FOLLOW_rule__Expression_aux__ExpAssignment_0_4_3_1_in_rule__Expression_aux__Group_0_4_3__1__Impl19872);
             rule__Expression_aux__ExpAssignment_0_4_3_1();
 
             state._fsp--;
@@ -28783,12 +28793,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9703:1: ( rule__New__Group__0__Impl rule__New__Group__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9704:2: rule__New__Group__0__Impl rule__New__Group__1
             {
-            pushFollow(FOLLOW_rule__New__Group__0__Impl_in_rule__New__Group__019907);
+            pushFollow(FOLLOW_rule__New__Group__0__Impl_in_rule__New__Group__019906);
             rule__New__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__New__Group__1_in_rule__New__Group__019910);
+            pushFollow(FOLLOW_rule__New__Group__1_in_rule__New__Group__019909);
             rule__New__Group__1();
 
             state._fsp--;
@@ -28827,7 +28837,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNewAccess().getLeftCurlyBracketKeyword_0()); 
             }
-            match(input,51,FOLLOW_51_in_rule__New__Group__0__Impl19938); if (state.failed) return ;
+            match(input,51,FOLLOW_51_in_rule__New__Group__0__Impl19937); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNewAccess().getLeftCurlyBracketKeyword_0()); 
             }
@@ -28862,12 +28872,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9734:1: ( rule__New__Group__1__Impl rule__New__Group__2 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9735:2: rule__New__Group__1__Impl rule__New__Group__2
             {
-            pushFollow(FOLLOW_rule__New__Group__1__Impl_in_rule__New__Group__119969);
+            pushFollow(FOLLOW_rule__New__Group__1__Impl_in_rule__New__Group__119968);
             rule__New__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__New__Group__2_in_rule__New__Group__119972);
+            pushFollow(FOLLOW_rule__New__Group__2_in_rule__New__Group__119971);
             rule__New__Group__2();
 
             state._fsp--;
@@ -28906,7 +28916,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNewAccess().getConstructor_declarationParserRuleCall_1()); 
             }
-            pushFollow(FOLLOW_ruleconstructor_declaration_in_rule__New__Group__1__Impl19999);
+            pushFollow(FOLLOW_ruleconstructor_declaration_in_rule__New__Group__1__Impl19998);
             ruleconstructor_declaration();
 
             state._fsp--;
@@ -28945,7 +28955,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9763:1: ( rule__New__Group__2__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9764:2: rule__New__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__New__Group__2__Impl_in_rule__New__Group__220028);
+            pushFollow(FOLLOW_rule__New__Group__2__Impl_in_rule__New__Group__220027);
             rule__New__Group__2__Impl();
 
             state._fsp--;
@@ -28984,7 +28994,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNewAccess().getRightCurlyBracketKeyword_2()); 
             }
-            match(input,52,FOLLOW_52_in_rule__New__Group__2__Impl20056); if (state.failed) return ;
+            match(input,52,FOLLOW_52_in_rule__New__Group__2__Impl20055); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNewAccess().getRightCurlyBracketKeyword_2()); 
             }
@@ -29019,12 +29029,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9799:1: ( rule__Creating_aux__Group_0__0__Impl rule__Creating_aux__Group_0__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9800:2: rule__Creating_aux__Group_0__0__Impl rule__Creating_aux__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Creating_aux__Group_0__0__Impl_in_rule__Creating_aux__Group_0__020093);
+            pushFollow(FOLLOW_rule__Creating_aux__Group_0__0__Impl_in_rule__Creating_aux__Group_0__020092);
             rule__Creating_aux__Group_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Creating_aux__Group_0__1_in_rule__Creating_aux__Group_0__020096);
+            pushFollow(FOLLOW_rule__Creating_aux__Group_0__1_in_rule__Creating_aux__Group_0__020095);
             rule__Creating_aux__Group_0__1();
 
             state._fsp--;
@@ -29066,7 +29076,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9814:1: ( '(' )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9815:2: '('
             {
-            match(input,57,FOLLOW_57_in_rule__Creating_aux__Group_0__0__Impl20125); if (state.failed) return ;
+            match(input,57,FOLLOW_57_in_rule__Creating_aux__Group_0__0__Impl20124); if (state.failed) return ;
 
             }
 
@@ -29104,12 +29114,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9830:1: ( rule__Creating_aux__Group_0__1__Impl rule__Creating_aux__Group_0__2 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9831:2: rule__Creating_aux__Group_0__1__Impl rule__Creating_aux__Group_0__2
             {
-            pushFollow(FOLLOW_rule__Creating_aux__Group_0__1__Impl_in_rule__Creating_aux__Group_0__120157);
+            pushFollow(FOLLOW_rule__Creating_aux__Group_0__1__Impl_in_rule__Creating_aux__Group_0__120156);
             rule__Creating_aux__Group_0__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Creating_aux__Group_0__2_in_rule__Creating_aux__Group_0__120160);
+            pushFollow(FOLLOW_rule__Creating_aux__Group_0__2_in_rule__Creating_aux__Group_0__120159);
             rule__Creating_aux__Group_0__2();
 
             state._fsp--;
@@ -29159,7 +29169,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                 case 1 :
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9845:2: rule__Creating_aux__ArgumentosAssignment_0_1
                     {
-                    pushFollow(FOLLOW_rule__Creating_aux__ArgumentosAssignment_0_1_in_rule__Creating_aux__Group_0__1__Impl20187);
+                    pushFollow(FOLLOW_rule__Creating_aux__ArgumentosAssignment_0_1_in_rule__Creating_aux__Group_0__1__Impl20186);
                     rule__Creating_aux__ArgumentosAssignment_0_1();
 
                     state._fsp--;
@@ -29204,7 +29214,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9859:1: ( rule__Creating_aux__Group_0__2__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9860:2: rule__Creating_aux__Group_0__2__Impl
             {
-            pushFollow(FOLLOW_rule__Creating_aux__Group_0__2__Impl_in_rule__Creating_aux__Group_0__220218);
+            pushFollow(FOLLOW_rule__Creating_aux__Group_0__2__Impl_in_rule__Creating_aux__Group_0__220217);
             rule__Creating_aux__Group_0__2__Impl();
 
             state._fsp--;
@@ -29243,7 +29253,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreating_auxAccess().getRightParenthesisKeyword_0_2()); 
             }
-            match(input,58,FOLLOW_58_in_rule__Creating_aux__Group_0__2__Impl20246); if (state.failed) return ;
+            match(input,58,FOLLOW_58_in_rule__Creating_aux__Group_0__2__Impl20245); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreating_auxAccess().getRightParenthesisKeyword_0_2()); 
             }
@@ -29278,12 +29288,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9895:1: ( rule__Creating_aux__Group_1__0__Impl rule__Creating_aux__Group_1__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9896:2: rule__Creating_aux__Group_1__0__Impl rule__Creating_aux__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Creating_aux__Group_1__0__Impl_in_rule__Creating_aux__Group_1__020283);
+            pushFollow(FOLLOW_rule__Creating_aux__Group_1__0__Impl_in_rule__Creating_aux__Group_1__020282);
             rule__Creating_aux__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Creating_aux__Group_1__1_in_rule__Creating_aux__Group_1__020286);
+            pushFollow(FOLLOW_rule__Creating_aux__Group_1__1_in_rule__Creating_aux__Group_1__020285);
             rule__Creating_aux__Group_1__1();
 
             state._fsp--;
@@ -29329,7 +29339,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                 case 1 :
                     // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9910:2: rule__Creating_aux__Group_1_0__0
                     {
-                    pushFollow(FOLLOW_rule__Creating_aux__Group_1_0__0_in_rule__Creating_aux__Group_1__0__Impl20313);
+                    pushFollow(FOLLOW_rule__Creating_aux__Group_1_0__0_in_rule__Creating_aux__Group_1__0__Impl20312);
                     rule__Creating_aux__Group_1_0__0();
 
                     state._fsp--;
@@ -29374,7 +29384,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9924:1: ( rule__Creating_aux__Group_1__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9925:2: rule__Creating_aux__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Creating_aux__Group_1__1__Impl_in_rule__Creating_aux__Group_1__120344);
+            pushFollow(FOLLOW_rule__Creating_aux__Group_1__1__Impl_in_rule__Creating_aux__Group_1__120343);
             rule__Creating_aux__Group_1__1__Impl();
 
             state._fsp--;
@@ -29434,7 +29444,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             	case 1 :
             	    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9938:2: rule__Creating_aux__Group_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Creating_aux__Group_1_1__0_in_rule__Creating_aux__Group_1__1__Impl20371);
+            	    pushFollow(FOLLOW_rule__Creating_aux__Group_1_1__0_in_rule__Creating_aux__Group_1__1__Impl20370);
             	    rule__Creating_aux__Group_1_1__0();
 
             	    state._fsp--;
@@ -29482,7 +29492,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9956:1: ( rule__Creating_aux__Group_1_0__0__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9957:2: rule__Creating_aux__Group_1_0__0__Impl
             {
-            pushFollow(FOLLOW_rule__Creating_aux__Group_1_0__0__Impl_in_rule__Creating_aux__Group_1_0__020406);
+            pushFollow(FOLLOW_rule__Creating_aux__Group_1_0__0__Impl_in_rule__Creating_aux__Group_1_0__020405);
             rule__Creating_aux__Group_1_0__0__Impl();
 
             state._fsp--;
@@ -29521,7 +29531,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreating_auxAccess().getAuxParserRuleCall_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleaux_in_rule__Creating_aux__Group_1_0__0__Impl20433);
+            pushFollow(FOLLOW_ruleaux_in_rule__Creating_aux__Group_1_0__0__Impl20432);
             ruleaux();
 
             state._fsp--;
@@ -29560,12 +29570,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9986:1: ( rule__Creating_aux__Group_1_1__0__Impl rule__Creating_aux__Group_1_1__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9987:2: rule__Creating_aux__Group_1_1__0__Impl rule__Creating_aux__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__Creating_aux__Group_1_1__0__Impl_in_rule__Creating_aux__Group_1_1__020464);
+            pushFollow(FOLLOW_rule__Creating_aux__Group_1_1__0__Impl_in_rule__Creating_aux__Group_1_1__020463);
             rule__Creating_aux__Group_1_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Creating_aux__Group_1_1__1_in_rule__Creating_aux__Group_1_1__020467);
+            pushFollow(FOLLOW_rule__Creating_aux__Group_1_1__1_in_rule__Creating_aux__Group_1_1__020466);
             rule__Creating_aux__Group_1_1__1();
 
             state._fsp--;
@@ -29604,7 +29614,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreating_auxAccess().getLeftSquareBracketKeyword_1_1_0()); 
             }
-            match(input,59,FOLLOW_59_in_rule__Creating_aux__Group_1_1__0__Impl20495); if (state.failed) return ;
+            match(input,59,FOLLOW_59_in_rule__Creating_aux__Group_1_1__0__Impl20494); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreating_auxAccess().getLeftSquareBracketKeyword_1_1_0()); 
             }
@@ -29639,7 +29649,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10017:1: ( rule__Creating_aux__Group_1_1__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10018:2: rule__Creating_aux__Group_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Creating_aux__Group_1_1__1__Impl_in_rule__Creating_aux__Group_1_1__120526);
+            pushFollow(FOLLOW_rule__Creating_aux__Group_1_1__1__Impl_in_rule__Creating_aux__Group_1_1__120525);
             rule__Creating_aux__Group_1_1__1__Impl();
 
             state._fsp--;
@@ -29678,7 +29688,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreating_auxAccess().getRightSquareBracketKeyword_1_1_1()); 
             }
-            match(input,60,FOLLOW_60_in_rule__Creating_aux__Group_1_1__1__Impl20554); if (state.failed) return ;
+            match(input,60,FOLLOW_60_in_rule__Creating_aux__Group_1_1__1__Impl20553); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreating_auxAccess().getRightSquareBracketKeyword_1_1_1()); 
             }
@@ -29713,12 +29723,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10051:1: ( rule__Aux__Group__0__Impl rule__Aux__Group__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10052:2: rule__Aux__Group__0__Impl rule__Aux__Group__1
             {
-            pushFollow(FOLLOW_rule__Aux__Group__0__Impl_in_rule__Aux__Group__020589);
+            pushFollow(FOLLOW_rule__Aux__Group__0__Impl_in_rule__Aux__Group__020588);
             rule__Aux__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Aux__Group__1_in_rule__Aux__Group__020592);
+            pushFollow(FOLLOW_rule__Aux__Group__1_in_rule__Aux__Group__020591);
             rule__Aux__Group__1();
 
             state._fsp--;
@@ -29757,7 +29767,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAuxAccess().getLeftSquareBracketKeyword_0()); 
             }
-            match(input,59,FOLLOW_59_in_rule__Aux__Group__0__Impl20620); if (state.failed) return ;
+            match(input,59,FOLLOW_59_in_rule__Aux__Group__0__Impl20619); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAuxAccess().getLeftSquareBracketKeyword_0()); 
             }
@@ -29792,12 +29802,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10082:1: ( rule__Aux__Group__1__Impl rule__Aux__Group__2 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10083:2: rule__Aux__Group__1__Impl rule__Aux__Group__2
             {
-            pushFollow(FOLLOW_rule__Aux__Group__1__Impl_in_rule__Aux__Group__120651);
+            pushFollow(FOLLOW_rule__Aux__Group__1__Impl_in_rule__Aux__Group__120650);
             rule__Aux__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Aux__Group__2_in_rule__Aux__Group__120654);
+            pushFollow(FOLLOW_rule__Aux__Group__2_in_rule__Aux__Group__120653);
             rule__Aux__Group__2();
 
             state._fsp--;
@@ -29839,7 +29849,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10097:1: ( rule__Aux__EspressaoAssignment_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10097:2: rule__Aux__EspressaoAssignment_1
             {
-            pushFollow(FOLLOW_rule__Aux__EspressaoAssignment_1_in_rule__Aux__Group__1__Impl20681);
+            pushFollow(FOLLOW_rule__Aux__EspressaoAssignment_1_in_rule__Aux__Group__1__Impl20680);
             rule__Aux__EspressaoAssignment_1();
 
             state._fsp--;
@@ -29881,7 +29891,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10111:1: ( rule__Aux__Group__2__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10112:2: rule__Aux__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Aux__Group__2__Impl_in_rule__Aux__Group__220711);
+            pushFollow(FOLLOW_rule__Aux__Group__2__Impl_in_rule__Aux__Group__220710);
             rule__Aux__Group__2__Impl();
 
             state._fsp--;
@@ -29920,7 +29930,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAuxAccess().getRightSquareBracketKeyword_2()); 
             }
-            match(input,60,FOLLOW_60_in_rule__Aux__Group__2__Impl20739); if (state.failed) return ;
+            match(input,60,FOLLOW_60_in_rule__Aux__Group__2__Impl20738); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAuxAccess().getRightSquareBracketKeyword_2()); 
             }
@@ -29955,12 +29965,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10147:1: ( rule__Logical_expression__Group_0__0__Impl rule__Logical_expression__Group_0__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10148:2: rule__Logical_expression__Group_0__0__Impl rule__Logical_expression__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Logical_expression__Group_0__0__Impl_in_rule__Logical_expression__Group_0__020776);
+            pushFollow(FOLLOW_rule__Logical_expression__Group_0__0__Impl_in_rule__Logical_expression__Group_0__020775);
             rule__Logical_expression__Group_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Logical_expression__Group_0__1_in_rule__Logical_expression__Group_0__020779);
+            pushFollow(FOLLOW_rule__Logical_expression__Group_0__1_in_rule__Logical_expression__Group_0__020778);
             rule__Logical_expression__Group_0__1();
 
             state._fsp--;
@@ -30002,7 +30012,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10162:1: ( rule__Logical_expression__OperadorAssignment_0_0 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10162:2: rule__Logical_expression__OperadorAssignment_0_0
             {
-            pushFollow(FOLLOW_rule__Logical_expression__OperadorAssignment_0_0_in_rule__Logical_expression__Group_0__0__Impl20806);
+            pushFollow(FOLLOW_rule__Logical_expression__OperadorAssignment_0_0_in_rule__Logical_expression__Group_0__0__Impl20805);
             rule__Logical_expression__OperadorAssignment_0_0();
 
             state._fsp--;
@@ -30044,7 +30054,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10176:1: ( rule__Logical_expression__Group_0__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10177:2: rule__Logical_expression__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Logical_expression__Group_0__1__Impl_in_rule__Logical_expression__Group_0__120836);
+            pushFollow(FOLLOW_rule__Logical_expression__Group_0__1__Impl_in_rule__Logical_expression__Group_0__120835);
             rule__Logical_expression__Group_0__1__Impl();
 
             state._fsp--;
@@ -30086,7 +30096,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10190:1: ( rule__Logical_expression__ExpressaoAssignment_0_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10190:2: rule__Logical_expression__ExpressaoAssignment_0_1
             {
-            pushFollow(FOLLOW_rule__Logical_expression__ExpressaoAssignment_0_1_in_rule__Logical_expression__Group_0__1__Impl20863);
+            pushFollow(FOLLOW_rule__Logical_expression__ExpressaoAssignment_0_1_in_rule__Logical_expression__Group_0__1__Impl20862);
             rule__Logical_expression__ExpressaoAssignment_0_1();
 
             state._fsp--;
@@ -30128,12 +30138,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10208:1: ( rule__Bit_expression__Group__0__Impl rule__Bit_expression__Group__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10209:2: rule__Bit_expression__Group__0__Impl rule__Bit_expression__Group__1
             {
-            pushFollow(FOLLOW_rule__Bit_expression__Group__0__Impl_in_rule__Bit_expression__Group__020897);
+            pushFollow(FOLLOW_rule__Bit_expression__Group__0__Impl_in_rule__Bit_expression__Group__020896);
             rule__Bit_expression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Bit_expression__Group__1_in_rule__Bit_expression__Group__020900);
+            pushFollow(FOLLOW_rule__Bit_expression__Group__1_in_rule__Bit_expression__Group__020899);
             rule__Bit_expression__Group__1();
 
             state._fsp--;
@@ -30175,7 +30185,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10223:1: ( rule__Bit_expression__OperadorAssignment_0 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10223:2: rule__Bit_expression__OperadorAssignment_0
             {
-            pushFollow(FOLLOW_rule__Bit_expression__OperadorAssignment_0_in_rule__Bit_expression__Group__0__Impl20927);
+            pushFollow(FOLLOW_rule__Bit_expression__OperadorAssignment_0_in_rule__Bit_expression__Group__0__Impl20926);
             rule__Bit_expression__OperadorAssignment_0();
 
             state._fsp--;
@@ -30217,7 +30227,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10237:1: ( rule__Bit_expression__Group__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10238:2: rule__Bit_expression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Bit_expression__Group__1__Impl_in_rule__Bit_expression__Group__120957);
+            pushFollow(FOLLOW_rule__Bit_expression__Group__1__Impl_in_rule__Bit_expression__Group__120956);
             rule__Bit_expression__Group__1__Impl();
 
             state._fsp--;
@@ -30259,7 +30269,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10251:1: ( rule__Bit_expression__ExpressaoAssignment_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10251:2: rule__Bit_expression__ExpressaoAssignment_1
             {
-            pushFollow(FOLLOW_rule__Bit_expression__ExpressaoAssignment_1_in_rule__Bit_expression__Group__1__Impl20984);
+            pushFollow(FOLLOW_rule__Bit_expression__ExpressaoAssignment_1_in_rule__Bit_expression__Group__1__Impl20983);
             rule__Bit_expression__ExpressaoAssignment_1();
 
             state._fsp--;
@@ -30301,12 +30311,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10269:1: ( rule__Numeric_expression__Group__0__Impl rule__Numeric_expression__Group__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10270:2: rule__Numeric_expression__Group__0__Impl rule__Numeric_expression__Group__1
             {
-            pushFollow(FOLLOW_rule__Numeric_expression__Group__0__Impl_in_rule__Numeric_expression__Group__021018);
+            pushFollow(FOLLOW_rule__Numeric_expression__Group__0__Impl_in_rule__Numeric_expression__Group__021017);
             rule__Numeric_expression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Numeric_expression__Group__1_in_rule__Numeric_expression__Group__021021);
+            pushFollow(FOLLOW_rule__Numeric_expression__Group__1_in_rule__Numeric_expression__Group__021020);
             rule__Numeric_expression__Group__1();
 
             state._fsp--;
@@ -30348,7 +30358,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10284:1: ( rule__Numeric_expression__OperadorAssignment_0 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10284:2: rule__Numeric_expression__OperadorAssignment_0
             {
-            pushFollow(FOLLOW_rule__Numeric_expression__OperadorAssignment_0_in_rule__Numeric_expression__Group__0__Impl21048);
+            pushFollow(FOLLOW_rule__Numeric_expression__OperadorAssignment_0_in_rule__Numeric_expression__Group__0__Impl21047);
             rule__Numeric_expression__OperadorAssignment_0();
 
             state._fsp--;
@@ -30390,7 +30400,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10298:1: ( rule__Numeric_expression__Group__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10299:2: rule__Numeric_expression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Numeric_expression__Group__1__Impl_in_rule__Numeric_expression__Group__121078);
+            pushFollow(FOLLOW_rule__Numeric_expression__Group__1__Impl_in_rule__Numeric_expression__Group__121077);
             rule__Numeric_expression__Group__1__Impl();
 
             state._fsp--;
@@ -30432,7 +30442,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10312:1: ( rule__Numeric_expression__ExpressaoAssignment_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10312:2: rule__Numeric_expression__ExpressaoAssignment_1
             {
-            pushFollow(FOLLOW_rule__Numeric_expression__ExpressaoAssignment_1_in_rule__Numeric_expression__Group__1__Impl21105);
+            pushFollow(FOLLOW_rule__Numeric_expression__ExpressaoAssignment_1_in_rule__Numeric_expression__Group__1__Impl21104);
             rule__Numeric_expression__ExpressaoAssignment_1();
 
             state._fsp--;
@@ -30474,12 +30484,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10330:1: ( rule__Arglist__Group_0__0__Impl rule__Arglist__Group_0__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10331:2: rule__Arglist__Group_0__0__Impl rule__Arglist__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_0__0__Impl_in_rule__Arglist__Group_0__021139);
+            pushFollow(FOLLOW_rule__Arglist__Group_0__0__Impl_in_rule__Arglist__Group_0__021138);
             rule__Arglist__Group_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Arglist__Group_0__1_in_rule__Arglist__Group_0__021142);
+            pushFollow(FOLLOW_rule__Arglist__Group_0__1_in_rule__Arglist__Group_0__021141);
             rule__Arglist__Group_0__1();
 
             state._fsp--;
@@ -30521,7 +30531,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10345:1: ( rule__Arglist__ExpressoesArgumentosAssignment_0_0 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10345:2: rule__Arglist__ExpressoesArgumentosAssignment_0_0
             {
-            pushFollow(FOLLOW_rule__Arglist__ExpressoesArgumentosAssignment_0_0_in_rule__Arglist__Group_0__0__Impl21169);
+            pushFollow(FOLLOW_rule__Arglist__ExpressoesArgumentosAssignment_0_0_in_rule__Arglist__Group_0__0__Impl21168);
             rule__Arglist__ExpressoesArgumentosAssignment_0_0();
 
             state._fsp--;
@@ -30563,7 +30573,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10359:1: ( rule__Arglist__Group_0__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10360:2: rule__Arglist__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_0__1__Impl_in_rule__Arglist__Group_0__121199);
+            pushFollow(FOLLOW_rule__Arglist__Group_0__1__Impl_in_rule__Arglist__Group_0__121198);
             rule__Arglist__Group_0__1__Impl();
 
             state._fsp--;
@@ -30617,7 +30627,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             	case 1 :
             	    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10373:2: rule__Arglist__Group_0_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Arglist__Group_0_1__0_in_rule__Arglist__Group_0__1__Impl21226);
+            	    pushFollow(FOLLOW_rule__Arglist__Group_0_1__0_in_rule__Arglist__Group_0__1__Impl21225);
             	    rule__Arglist__Group_0_1__0();
 
             	    state._fsp--;
@@ -30665,12 +30675,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10391:1: ( rule__Arglist__Group_0_1__0__Impl rule__Arglist__Group_0_1__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10392:2: rule__Arglist__Group_0_1__0__Impl rule__Arglist__Group_0_1__1
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_0_1__0__Impl_in_rule__Arglist__Group_0_1__021261);
+            pushFollow(FOLLOW_rule__Arglist__Group_0_1__0__Impl_in_rule__Arglist__Group_0_1__021260);
             rule__Arglist__Group_0_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Arglist__Group_0_1__1_in_rule__Arglist__Group_0_1__021264);
+            pushFollow(FOLLOW_rule__Arglist__Group_0_1__1_in_rule__Arglist__Group_0_1__021263);
             rule__Arglist__Group_0_1__1();
 
             state._fsp--;
@@ -30709,7 +30719,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArglistAccess().getCommaKeyword_0_1_0()); 
             }
-            match(input,55,FOLLOW_55_in_rule__Arglist__Group_0_1__0__Impl21292); if (state.failed) return ;
+            match(input,55,FOLLOW_55_in_rule__Arglist__Group_0_1__0__Impl21291); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArglistAccess().getCommaKeyword_0_1_0()); 
             }
@@ -30744,7 +30754,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10422:1: ( rule__Arglist__Group_0_1__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10423:2: rule__Arglist__Group_0_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_0_1__1__Impl_in_rule__Arglist__Group_0_1__121323);
+            pushFollow(FOLLOW_rule__Arglist__Group_0_1__1__Impl_in_rule__Arglist__Group_0_1__121322);
             rule__Arglist__Group_0_1__1__Impl();
 
             state._fsp--;
@@ -30786,7 +30796,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10436:1: ( rule__Arglist__ExpressoesArgumentosAssignment_0_1_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10436:2: rule__Arglist__ExpressoesArgumentosAssignment_0_1_1
             {
-            pushFollow(FOLLOW_rule__Arglist__ExpressoesArgumentosAssignment_0_1_1_in_rule__Arglist__Group_0_1__1__Impl21350);
+            pushFollow(FOLLOW_rule__Arglist__ExpressoesArgumentosAssignment_0_1_1_in_rule__Arglist__Group_0_1__1__Impl21349);
             rule__Arglist__ExpressoesArgumentosAssignment_0_1_1();
 
             state._fsp--;
@@ -30828,12 +30838,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10454:1: ( rule__Arglist__Group_1__0__Impl rule__Arglist__Group_1__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10455:2: rule__Arglist__Group_1__0__Impl rule__Arglist__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_1__0__Impl_in_rule__Arglist__Group_1__021384);
+            pushFollow(FOLLOW_rule__Arglist__Group_1__0__Impl_in_rule__Arglist__Group_1__021383);
             rule__Arglist__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Arglist__Group_1__1_in_rule__Arglist__Group_1__021387);
+            pushFollow(FOLLOW_rule__Arglist__Group_1__1_in_rule__Arglist__Group_1__021386);
             rule__Arglist__Group_1__1();
 
             state._fsp--;
@@ -30872,7 +30882,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArglistAccess().getQuotationMarkKeyword_1_0()); 
             }
-            match(input,84,FOLLOW_84_in_rule__Arglist__Group_1__0__Impl21415); if (state.failed) return ;
+            match(input,84,FOLLOW_84_in_rule__Arglist__Group_1__0__Impl21414); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArglistAccess().getQuotationMarkKeyword_1_0()); 
             }
@@ -30907,12 +30917,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10485:1: ( rule__Arglist__Group_1__1__Impl rule__Arglist__Group_1__2 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10486:2: rule__Arglist__Group_1__1__Impl rule__Arglist__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_1__1__Impl_in_rule__Arglist__Group_1__121446);
+            pushFollow(FOLLOW_rule__Arglist__Group_1__1__Impl_in_rule__Arglist__Group_1__121445);
             rule__Arglist__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Arglist__Group_1__2_in_rule__Arglist__Group_1__121449);
+            pushFollow(FOLLOW_rule__Arglist__Group_1__2_in_rule__Arglist__Group_1__121448);
             rule__Arglist__Group_1__2();
 
             state._fsp--;
@@ -30951,7 +30961,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArglistAccess().getSTRINGTerminalRuleCall_1_1()); 
             }
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Arglist__Group_1__1__Impl21476); if (state.failed) return ;
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Arglist__Group_1__1__Impl21475); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArglistAccess().getSTRINGTerminalRuleCall_1_1()); 
             }
@@ -30986,7 +30996,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10514:1: ( rule__Arglist__Group_1__2__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10515:2: rule__Arglist__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_1__2__Impl_in_rule__Arglist__Group_1__221505);
+            pushFollow(FOLLOW_rule__Arglist__Group_1__2__Impl_in_rule__Arglist__Group_1__221504);
             rule__Arglist__Group_1__2__Impl();
 
             state._fsp--;
@@ -31025,7 +31035,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArglistAccess().getQuotationMarkKeyword_1_2()); 
             }
-            match(input,84,FOLLOW_84_in_rule__Arglist__Group_1__2__Impl21533); if (state.failed) return ;
+            match(input,84,FOLLOW_84_in_rule__Arglist__Group_1__2__Impl21532); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArglistAccess().getQuotationMarkKeyword_1_2()); 
             }
@@ -31060,12 +31070,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10550:1: ( rule__Arglist__Group_2__0__Impl rule__Arglist__Group_2__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10551:2: rule__Arglist__Group_2__0__Impl rule__Arglist__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_2__0__Impl_in_rule__Arglist__Group_2__021570);
+            pushFollow(FOLLOW_rule__Arglist__Group_2__0__Impl_in_rule__Arglist__Group_2__021569);
             rule__Arglist__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Arglist__Group_2__1_in_rule__Arglist__Group_2__021573);
+            pushFollow(FOLLOW_rule__Arglist__Group_2__1_in_rule__Arglist__Group_2__021572);
             rule__Arglist__Group_2__1();
 
             state._fsp--;
@@ -31107,7 +31117,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10565:1: ( rule__Arglist__TipoParametroAssignment_2_0 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10565:2: rule__Arglist__TipoParametroAssignment_2_0
             {
-            pushFollow(FOLLOW_rule__Arglist__TipoParametroAssignment_2_0_in_rule__Arglist__Group_2__0__Impl21600);
+            pushFollow(FOLLOW_rule__Arglist__TipoParametroAssignment_2_0_in_rule__Arglist__Group_2__0__Impl21599);
             rule__Arglist__TipoParametroAssignment_2_0();
 
             state._fsp--;
@@ -31149,12 +31159,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10579:1: ( rule__Arglist__Group_2__1__Impl rule__Arglist__Group_2__2 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10580:2: rule__Arglist__Group_2__1__Impl rule__Arglist__Group_2__2
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_2__1__Impl_in_rule__Arglist__Group_2__121630);
+            pushFollow(FOLLOW_rule__Arglist__Group_2__1__Impl_in_rule__Arglist__Group_2__121629);
             rule__Arglist__Group_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Arglist__Group_2__2_in_rule__Arglist__Group_2__121633);
+            pushFollow(FOLLOW_rule__Arglist__Group_2__2_in_rule__Arglist__Group_2__121632);
             rule__Arglist__Group_2__2();
 
             state._fsp--;
@@ -31196,7 +31206,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10594:1: ( rule__Arglist__NomeParametroAssignment_2_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10594:2: rule__Arglist__NomeParametroAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Arglist__NomeParametroAssignment_2_1_in_rule__Arglist__Group_2__1__Impl21660);
+            pushFollow(FOLLOW_rule__Arglist__NomeParametroAssignment_2_1_in_rule__Arglist__Group_2__1__Impl21659);
             rule__Arglist__NomeParametroAssignment_2_1();
 
             state._fsp--;
@@ -31238,7 +31248,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10608:1: ( rule__Arglist__Group_2__2__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10609:2: rule__Arglist__Group_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_2__2__Impl_in_rule__Arglist__Group_2__221690);
+            pushFollow(FOLLOW_rule__Arglist__Group_2__2__Impl_in_rule__Arglist__Group_2__221689);
             rule__Arglist__Group_2__2__Impl();
 
             state._fsp--;
@@ -31292,7 +31302,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             	case 1 :
             	    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10622:2: rule__Arglist__Group_2_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Arglist__Group_2_2__0_in_rule__Arglist__Group_2__2__Impl21717);
+            	    pushFollow(FOLLOW_rule__Arglist__Group_2_2__0_in_rule__Arglist__Group_2__2__Impl21716);
             	    rule__Arglist__Group_2_2__0();
 
             	    state._fsp--;
@@ -31340,12 +31350,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10642:1: ( rule__Arglist__Group_2_2__0__Impl rule__Arglist__Group_2_2__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10643:2: rule__Arglist__Group_2_2__0__Impl rule__Arglist__Group_2_2__1
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_2_2__0__Impl_in_rule__Arglist__Group_2_2__021754);
+            pushFollow(FOLLOW_rule__Arglist__Group_2_2__0__Impl_in_rule__Arglist__Group_2_2__021753);
             rule__Arglist__Group_2_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Arglist__Group_2_2__1_in_rule__Arglist__Group_2_2__021757);
+            pushFollow(FOLLOW_rule__Arglist__Group_2_2__1_in_rule__Arglist__Group_2_2__021756);
             rule__Arglist__Group_2_2__1();
 
             state._fsp--;
@@ -31384,7 +31394,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArglistAccess().getCommaKeyword_2_2_0()); 
             }
-            match(input,55,FOLLOW_55_in_rule__Arglist__Group_2_2__0__Impl21785); if (state.failed) return ;
+            match(input,55,FOLLOW_55_in_rule__Arglist__Group_2_2__0__Impl21784); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArglistAccess().getCommaKeyword_2_2_0()); 
             }
@@ -31419,12 +31429,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10673:1: ( rule__Arglist__Group_2_2__1__Impl rule__Arglist__Group_2_2__2 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10674:2: rule__Arglist__Group_2_2__1__Impl rule__Arglist__Group_2_2__2
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_2_2__1__Impl_in_rule__Arglist__Group_2_2__121816);
+            pushFollow(FOLLOW_rule__Arglist__Group_2_2__1__Impl_in_rule__Arglist__Group_2_2__121815);
             rule__Arglist__Group_2_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Arglist__Group_2_2__2_in_rule__Arglist__Group_2_2__121819);
+            pushFollow(FOLLOW_rule__Arglist__Group_2_2__2_in_rule__Arglist__Group_2_2__121818);
             rule__Arglist__Group_2_2__2();
 
             state._fsp--;
@@ -31466,7 +31476,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10688:1: ( rule__Arglist__TipoParametroAssignment_2_2_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10688:2: rule__Arglist__TipoParametroAssignment_2_2_1
             {
-            pushFollow(FOLLOW_rule__Arglist__TipoParametroAssignment_2_2_1_in_rule__Arglist__Group_2_2__1__Impl21846);
+            pushFollow(FOLLOW_rule__Arglist__TipoParametroAssignment_2_2_1_in_rule__Arglist__Group_2_2__1__Impl21845);
             rule__Arglist__TipoParametroAssignment_2_2_1();
 
             state._fsp--;
@@ -31508,7 +31518,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10702:1: ( rule__Arglist__Group_2_2__2__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10703:2: rule__Arglist__Group_2_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__Arglist__Group_2_2__2__Impl_in_rule__Arglist__Group_2_2__221876);
+            pushFollow(FOLLOW_rule__Arglist__Group_2_2__2__Impl_in_rule__Arglist__Group_2_2__221875);
             rule__Arglist__Group_2_2__2__Impl();
 
             state._fsp--;
@@ -31550,7 +31560,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10716:1: ( rule__Arglist__NomeParametroAssignment_2_2_2 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10716:2: rule__Arglist__NomeParametroAssignment_2_2_2
             {
-            pushFollow(FOLLOW_rule__Arglist__NomeParametroAssignment_2_2_2_in_rule__Arglist__Group_2_2__2__Impl21903);
+            pushFollow(FOLLOW_rule__Arglist__NomeParametroAssignment_2_2_2_in_rule__Arglist__Group_2_2__2__Impl21902);
             rule__Arglist__NomeParametroAssignment_2_2_2();
 
             state._fsp--;
@@ -31592,12 +31602,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10736:1: ( rule__Name__Group__0__Impl rule__Name__Group__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10737:2: rule__Name__Group__0__Impl rule__Name__Group__1
             {
-            pushFollow(FOLLOW_rule__Name__Group__0__Impl_in_rule__Name__Group__021939);
+            pushFollow(FOLLOW_rule__Name__Group__0__Impl_in_rule__Name__Group__021938);
             rule__Name__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Name__Group__1_in_rule__Name__Group__021942);
+            pushFollow(FOLLOW_rule__Name__Group__1_in_rule__Name__Group__021941);
             rule__Name__Group__1();
 
             state._fsp--;
@@ -31639,7 +31649,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10751:1: ( rule__Name__NomeAssignment_0 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10751:2: rule__Name__NomeAssignment_0
             {
-            pushFollow(FOLLOW_rule__Name__NomeAssignment_0_in_rule__Name__Group__0__Impl21969);
+            pushFollow(FOLLOW_rule__Name__NomeAssignment_0_in_rule__Name__Group__0__Impl21968);
             rule__Name__NomeAssignment_0();
 
             state._fsp--;
@@ -31681,7 +31691,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10765:1: ( rule__Name__Group__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10766:2: rule__Name__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Name__Group__1__Impl_in_rule__Name__Group__121999);
+            pushFollow(FOLLOW_rule__Name__Group__1__Impl_in_rule__Name__Group__121998);
             rule__Name__Group__1__Impl();
 
             state._fsp--;
@@ -31723,7 +31733,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10779:1: ( rule__Name__PacoteAssignment_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10779:2: rule__Name__PacoteAssignment_1
             {
-            pushFollow(FOLLOW_rule__Name__PacoteAssignment_1_in_rule__Name__Group__1__Impl22026);
+            pushFollow(FOLLOW_rule__Name__PacoteAssignment_1_in_rule__Name__Group__1__Impl22025);
             rule__Name__PacoteAssignment_1();
 
             state._fsp--;
@@ -31765,12 +31775,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10797:1: ( rule__Package_name_aux__Group__0__Impl rule__Package_name_aux__Group__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10798:2: rule__Package_name_aux__Group__0__Impl rule__Package_name_aux__Group__1
             {
-            pushFollow(FOLLOW_rule__Package_name_aux__Group__0__Impl_in_rule__Package_name_aux__Group__022060);
+            pushFollow(FOLLOW_rule__Package_name_aux__Group__0__Impl_in_rule__Package_name_aux__Group__022059);
             rule__Package_name_aux__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Package_name_aux__Group__1_in_rule__Package_name_aux__Group__022063);
+            pushFollow(FOLLOW_rule__Package_name_aux__Group__1_in_rule__Package_name_aux__Group__022062);
             rule__Package_name_aux__Group__1();
 
             state._fsp--;
@@ -31809,7 +31819,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPackage_name_auxAccess().getFullStopKeyword_0()); 
             }
-            match(input,81,FOLLOW_81_in_rule__Package_name_aux__Group__0__Impl22091); if (state.failed) return ;
+            match(input,81,FOLLOW_81_in_rule__Package_name_aux__Group__0__Impl22090); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPackage_name_auxAccess().getFullStopKeyword_0()); 
             }
@@ -31844,12 +31854,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10828:1: ( rule__Package_name_aux__Group__1__Impl rule__Package_name_aux__Group__2 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10829:2: rule__Package_name_aux__Group__1__Impl rule__Package_name_aux__Group__2
             {
-            pushFollow(FOLLOW_rule__Package_name_aux__Group__1__Impl_in_rule__Package_name_aux__Group__122122);
+            pushFollow(FOLLOW_rule__Package_name_aux__Group__1__Impl_in_rule__Package_name_aux__Group__122121);
             rule__Package_name_aux__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Package_name_aux__Group__2_in_rule__Package_name_aux__Group__122125);
+            pushFollow(FOLLOW_rule__Package_name_aux__Group__2_in_rule__Package_name_aux__Group__122124);
             rule__Package_name_aux__Group__2();
 
             state._fsp--;
@@ -31891,7 +31901,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10843:1: ( rule__Package_name_aux__NomePacoteAssignment_1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10843:2: rule__Package_name_aux__NomePacoteAssignment_1
             {
-            pushFollow(FOLLOW_rule__Package_name_aux__NomePacoteAssignment_1_in_rule__Package_name_aux__Group__1__Impl22152);
+            pushFollow(FOLLOW_rule__Package_name_aux__NomePacoteAssignment_1_in_rule__Package_name_aux__Group__1__Impl22151);
             rule__Package_name_aux__NomePacoteAssignment_1();
 
             state._fsp--;
@@ -31933,7 +31943,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10857:1: ( rule__Package_name_aux__Group__2__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10858:2: rule__Package_name_aux__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Package_name_aux__Group__2__Impl_in_rule__Package_name_aux__Group__222182);
+            pushFollow(FOLLOW_rule__Package_name_aux__Group__2__Impl_in_rule__Package_name_aux__Group__222181);
             rule__Package_name_aux__Group__2__Impl();
 
             state._fsp--;
@@ -31975,7 +31985,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10871:1: ( rule__Package_name_aux__PacoteAssignment_2 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10871:2: rule__Package_name_aux__PacoteAssignment_2
             {
-            pushFollow(FOLLOW_rule__Package_name_aux__PacoteAssignment_2_in_rule__Package_name_aux__Group__2__Impl22209);
+            pushFollow(FOLLOW_rule__Package_name_aux__PacoteAssignment_2_in_rule__Package_name_aux__Group__2__Impl22208);
             rule__Package_name_aux__PacoteAssignment_2();
 
             state._fsp--;
@@ -32017,12 +32027,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10891:1: ( rule__Type__Group__0__Impl rule__Type__Group__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10892:2: rule__Type__Group__0__Impl rule__Type__Group__1
             {
-            pushFollow(FOLLOW_rule__Type__Group__0__Impl_in_rule__Type__Group__022245);
+            pushFollow(FOLLOW_rule__Type__Group__0__Impl_in_rule__Type__Group__022244);
             rule__Type__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Type__Group__1_in_rule__Type__Group__022248);
+            pushFollow(FOLLOW_rule__Type__Group__1_in_rule__Type__Group__022247);
             rule__Type__Group__1();
 
             state._fsp--;
@@ -32064,7 +32074,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10906:1: ( rule__Type__Alternatives_0 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10906:2: rule__Type__Alternatives_0
             {
-            pushFollow(FOLLOW_rule__Type__Alternatives_0_in_rule__Type__Group__0__Impl22275);
+            pushFollow(FOLLOW_rule__Type__Alternatives_0_in_rule__Type__Group__0__Impl22274);
             rule__Type__Alternatives_0();
 
             state._fsp--;
@@ -32106,7 +32116,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10920:1: ( rule__Type__Group__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10921:2: rule__Type__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Type__Group__1__Impl_in_rule__Type__Group__122305);
+            pushFollow(FOLLOW_rule__Type__Group__1__Impl_in_rule__Type__Group__122304);
             rule__Type__Group__1__Impl();
 
             state._fsp--;
@@ -32160,7 +32170,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             	case 1 :
             	    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10934:2: rule__Type__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Type__Group_1__0_in_rule__Type__Group__1__Impl22332);
+            	    pushFollow(FOLLOW_rule__Type__Group_1__0_in_rule__Type__Group__1__Impl22331);
             	    rule__Type__Group_1__0();
 
             	    state._fsp--;
@@ -32208,12 +32218,12 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10952:1: ( rule__Type__Group_1__0__Impl rule__Type__Group_1__1 )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10953:2: rule__Type__Group_1__0__Impl rule__Type__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Type__Group_1__0__Impl_in_rule__Type__Group_1__022367);
+            pushFollow(FOLLOW_rule__Type__Group_1__0__Impl_in_rule__Type__Group_1__022366);
             rule__Type__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Type__Group_1__1_in_rule__Type__Group_1__022370);
+            pushFollow(FOLLOW_rule__Type__Group_1__1_in_rule__Type__Group_1__022369);
             rule__Type__Group_1__1();
 
             state._fsp--;
@@ -32252,7 +32262,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeAccess().getLeftSquareBracketKeyword_1_0()); 
             }
-            match(input,59,FOLLOW_59_in_rule__Type__Group_1__0__Impl22398); if (state.failed) return ;
+            match(input,59,FOLLOW_59_in_rule__Type__Group_1__0__Impl22397); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTypeAccess().getLeftSquareBracketKeyword_1_0()); 
             }
@@ -32287,7 +32297,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10983:1: ( rule__Type__Group_1__1__Impl )
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10984:2: rule__Type__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Type__Group_1__1__Impl_in_rule__Type__Group_1__122429);
+            pushFollow(FOLLOW_rule__Type__Group_1__1__Impl_in_rule__Type__Group_1__122428);
             rule__Type__Group_1__1__Impl();
 
             state._fsp--;
@@ -32326,7 +32336,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeAccess().getRightSquareBracketKeyword_1_1()); 
             }
-            match(input,60,FOLLOW_60_in_rule__Type__Group_1__1__Impl22457); if (state.failed) return ;
+            match(input,60,FOLLOW_60_in_rule__Type__Group_1__1__Impl22456); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTypeAccess().getRightSquareBracketKeyword_1_1()); 
             }
@@ -32367,7 +32377,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getCompCompilation_unitParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_rulecompilation_unit_in_rule__Model__CompAssignment22497);
+            pushFollow(FOLLOW_rulecompilation_unit_in_rule__Model__CompAssignment22496);
             rulecompilation_unit();
 
             state._fsp--;
@@ -32412,7 +32422,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompilation_unitAccess().getPacotePackage_statementParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_rulepackage_statement_in_rule__Compilation_unit__PacoteAssignment_022528);
+            pushFollow(FOLLOW_rulepackage_statement_in_rule__Compilation_unit__PacoteAssignment_022527);
             rulepackage_statement();
 
             state._fsp--;
@@ -32457,7 +32467,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompilation_unitAccess().getImportesImport_statementParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleimport_statement_in_rule__Compilation_unit__ImportesAssignment_122559);
+            pushFollow(FOLLOW_ruleimport_statement_in_rule__Compilation_unit__ImportesAssignment_122558);
             ruleimport_statement();
 
             state._fsp--;
@@ -32502,7 +32512,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompilation_unitAccess().getDeclaracaoType_declarationParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruletype_declaration_in_rule__Compilation_unit__DeclaracaoAssignment_222590);
+            pushFollow(FOLLOW_ruletype_declaration_in_rule__Compilation_unit__DeclaracaoAssignment_222589);
             ruletype_declaration();
 
             state._fsp--;
@@ -32547,7 +32557,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPackage_statementAccess().getNoomePacoteNameParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_rulename_in_rule__Package_statement__NoomePacoteAssignment_122621);
+            pushFollow(FOLLOW_rulename_in_rule__Package_statement__NoomePacoteAssignment_122620);
             rulename();
 
             state._fsp--;
@@ -32592,7 +32602,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getImport_statementAccess().getNomeImporteNameParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_rulename_in_rule__Import_statement__NomeImporteAssignment_122652);
+            pushFollow(FOLLOW_rulename_in_rule__Import_statement__NomeImporteAssignment_122651);
             rulename();
 
             state._fsp--;
@@ -32637,7 +32647,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_declarationAccess().getDeclaracaoClasseClass_declarationParserRuleCall_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleclass_declaration_in_rule__Type_declaration__DeclaracaoClasseAssignment_1_022683);
+            pushFollow(FOLLOW_ruleclass_declaration_in_rule__Type_declaration__DeclaracaoClasseAssignment_1_022682);
             ruleclass_declaration();
 
             state._fsp--;
@@ -32682,7 +32692,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_declarationAccess().getDeclaracaoInterfaceInterface_declarationParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleinterface_declaration_in_rule__Type_declaration__DeclaracaoInterfaceAssignment_1_122714);
+            pushFollow(FOLLOW_ruleinterface_declaration_in_rule__Type_declaration__DeclaracaoInterfaceAssignment_1_122713);
             ruleinterface_declaration();
 
             state._fsp--;
@@ -32727,7 +32737,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClass_declarationAccess().getModificadoresMODIFIERParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleMODIFIER_in_rule__Class_declaration__ModificadoresAssignment_022745);
+            pushFollow(FOLLOW_ruleMODIFIER_in_rule__Class_declaration__ModificadoresAssignment_022744);
             ruleMODIFIER();
 
             state._fsp--;
@@ -32772,7 +32782,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClass_declarationAccess().getNomeClasseIDENTIFIERTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Class_declaration__NomeClasseAssignment_222776); if (state.failed) return ;
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Class_declaration__NomeClasseAssignment_222775); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getClass_declarationAccess().getNomeClasseIDENTIFIERTerminalRuleCall_2_0()); 
             }
@@ -32813,7 +32823,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClass_declarationAccess().getSuperclasseNameParserRuleCall_3_1_0()); 
             }
-            pushFollow(FOLLOW_rulename_in_rule__Class_declaration__SuperclasseAssignment_3_122807);
+            pushFollow(FOLLOW_rulename_in_rule__Class_declaration__SuperclasseAssignment_3_122806);
             rulename();
 
             state._fsp--;
@@ -32858,7 +32868,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClass_declarationAccess().getImplementosClasseNameParserRuleCall_4_1_0()); 
             }
-            pushFollow(FOLLOW_rulename_in_rule__Class_declaration__ImplementosClasseAssignment_4_122838);
+            pushFollow(FOLLOW_rulename_in_rule__Class_declaration__ImplementosClasseAssignment_4_122837);
             rulename();
 
             state._fsp--;
@@ -32903,7 +32913,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClass_declarationAccess().getImplementosClasseNameParserRuleCall_4_2_1_0()); 
             }
-            pushFollow(FOLLOW_rulename_in_rule__Class_declaration__ImplementosClasseAssignment_4_2_122869);
+            pushFollow(FOLLOW_rulename_in_rule__Class_declaration__ImplementosClasseAssignment_4_2_122868);
             rulename();
 
             state._fsp--;
@@ -32948,7 +32958,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClass_declarationAccess().getCorpoClasseField_declarationParserRuleCall_6_0_0()); 
             }
-            pushFollow(FOLLOW_rulefield_declaration_in_rule__Class_declaration__CorpoClasseAssignment_6_022900);
+            pushFollow(FOLLOW_rulefield_declaration_in_rule__Class_declaration__CorpoClasseAssignment_6_022899);
             rulefield_declaration();
 
             state._fsp--;
@@ -32993,7 +33003,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClass_declarationAccess().getDeclaracaoClasseClass_declarationParserRuleCall_6_1_0()); 
             }
-            pushFollow(FOLLOW_ruleclass_declaration_in_rule__Class_declaration__DeclaracaoClasseAssignment_6_122931);
+            pushFollow(FOLLOW_ruleclass_declaration_in_rule__Class_declaration__DeclaracaoClasseAssignment_6_122930);
             ruleclass_declaration();
 
             state._fsp--;
@@ -33038,7 +33048,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declarationAccess().getModificadoresMODIFIERParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleMODIFIER_in_rule__Interface_declaration__ModificadoresAssignment_022962);
+            pushFollow(FOLLOW_ruleMODIFIER_in_rule__Interface_declaration__ModificadoresAssignment_022961);
             ruleMODIFIER();
 
             state._fsp--;
@@ -33083,7 +33093,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declarationAccess().getNomeInterfaceIDENTIFIERTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Interface_declaration__NomeInterfaceAssignment_222993); if (state.failed) return ;
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Interface_declaration__NomeInterfaceAssignment_222992); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInterface_declarationAccess().getNomeInterfaceIDENTIFIERTerminalRuleCall_2_0()); 
             }
@@ -33124,7 +33134,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declarationAccess().getSuperinterfacesNameParserRuleCall_3_1_0()); 
             }
-            pushFollow(FOLLOW_rulename_in_rule__Interface_declaration__SuperinterfacesAssignment_3_123024);
+            pushFollow(FOLLOW_rulename_in_rule__Interface_declaration__SuperinterfacesAssignment_3_123023);
             rulename();
 
             state._fsp--;
@@ -33169,7 +33179,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declarationAccess().getSuperinterfacesNameParserRuleCall_3_2_1_0()); 
             }
-            pushFollow(FOLLOW_rulename_in_rule__Interface_declaration__SuperinterfacesAssignment_3_2_123055);
+            pushFollow(FOLLOW_rulename_in_rule__Interface_declaration__SuperinterfacesAssignment_3_2_123054);
             rulename();
 
             state._fsp--;
@@ -33214,7 +33224,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declarationAccess().getCorpoInterfaceField_declarationParserRuleCall_5_0()); 
             }
-            pushFollow(FOLLOW_rulefield_declaration_in_rule__Interface_declaration__CorpoInterfaceAssignment_523086);
+            pushFollow(FOLLOW_rulefield_declaration_in_rule__Interface_declaration__CorpoInterfaceAssignment_523085);
             rulefield_declaration();
 
             state._fsp--;
@@ -33259,7 +33269,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getField_declarationAccess().getDeclaracaoMetodoMethod_declarationParserRuleCall_0_1_0_0()); 
             }
-            pushFollow(FOLLOW_rulemethod_declaration_in_rule__Field_declaration__DeclaracaoMetodoAssignment_0_1_023117);
+            pushFollow(FOLLOW_rulemethod_declaration_in_rule__Field_declaration__DeclaracaoMetodoAssignment_0_1_023116);
             rulemethod_declaration();
 
             state._fsp--;
@@ -33304,7 +33314,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getField_declarationAccess().getDeclaracaoConstrutorConstructor_declarationParserRuleCall_0_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleconstructor_declaration_in_rule__Field_declaration__DeclaracaoConstrutorAssignment_0_1_123148);
+            pushFollow(FOLLOW_ruleconstructor_declaration_in_rule__Field_declaration__DeclaracaoConstrutorAssignment_0_1_123147);
             ruleconstructor_declaration();
 
             state._fsp--;
@@ -33349,7 +33359,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getField_declarationAccess().getDeclaracaoVariavelVariable_declarationParserRuleCall_0_1_2_0()); 
             }
-            pushFollow(FOLLOW_rulevariable_declaration_in_rule__Field_declaration__DeclaracaoVariavelAssignment_0_1_223179);
+            pushFollow(FOLLOW_rulevariable_declaration_in_rule__Field_declaration__DeclaracaoVariavelAssignment_0_1_223178);
             rulevariable_declaration();
 
             state._fsp--;
@@ -33394,7 +33404,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getField_declarationAccess().getEstaticoStatic_initializerParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_rulestatic_initializer_in_rule__Field_declaration__EstaticoAssignment_123210);
+            pushFollow(FOLLOW_rulestatic_initializer_in_rule__Field_declaration__EstaticoAssignment_123209);
             rulestatic_initializer();
 
             state._fsp--;
@@ -33439,7 +33449,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethod_declarationAccess().getModificadorMetodoMODIFIERParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleMODIFIER_in_rule__Method_declaration__ModificadorMetodoAssignment_023241);
+            pushFollow(FOLLOW_ruleMODIFIER_in_rule__Method_declaration__ModificadorMetodoAssignment_023240);
             ruleMODIFIER();
 
             state._fsp--;
@@ -33484,7 +33494,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethod_declarationAccess().getTipoRetornoTypeParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruletype_in_rule__Method_declaration__TipoRetornoAssignment_123272);
+            pushFollow(FOLLOW_ruletype_in_rule__Method_declaration__TipoRetornoAssignment_123271);
             ruletype();
 
             state._fsp--;
@@ -33529,7 +33539,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethod_declarationAccess().getNomeMetodoIDENTIFIERTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Method_declaration__NomeMetodoAssignment_223303); if (state.failed) return ;
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Method_declaration__NomeMetodoAssignment_223302); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMethod_declarationAccess().getNomeMetodoIDENTIFIERTerminalRuleCall_2_0()); 
             }
@@ -33570,7 +33580,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethod_declarationAccess().getParametrosMetodoParameter_listParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleparameter_list_in_rule__Method_declaration__ParametrosMetodoAssignment_423334);
+            pushFollow(FOLLOW_ruleparameter_list_in_rule__Method_declaration__ParametrosMetodoAssignment_423333);
             ruleparameter_list();
 
             state._fsp--;
@@ -33615,7 +33625,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethod_declarationAccess().getBlocoMetodoStatement_blockParserRuleCall_7_0_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_block_in_rule__Method_declaration__BlocoMetodoAssignment_7_023365);
+            pushFollow(FOLLOW_rulestatement_block_in_rule__Method_declaration__BlocoMetodoAssignment_7_023364);
             rulestatement_block();
 
             state._fsp--;
@@ -33660,7 +33670,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParameterAccess().getTipoParametroTypeParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruletype_in_rule__Parameter__TipoParametroAssignment_023396);
+            pushFollow(FOLLOW_ruletype_in_rule__Parameter__TipoParametroAssignment_023395);
             ruletype();
 
             state._fsp--;
@@ -33705,7 +33715,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParameterAccess().getNomeParametroIDENTIFIERTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Parameter__NomeParametroAssignment_123427); if (state.failed) return ;
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Parameter__NomeParametroAssignment_123426); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getParameterAccess().getNomeParametroIDENTIFIERTerminalRuleCall_1_0()); 
             }
@@ -33746,7 +33756,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParameter_listAccess().getParametrosParameterParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleparameter_in_rule__Parameter_list__ParametrosAssignment_023458);
+            pushFollow(FOLLOW_ruleparameter_in_rule__Parameter_list__ParametrosAssignment_023457);
             ruleparameter();
 
             state._fsp--;
@@ -33791,7 +33801,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParameter_listAccess().getParametrosParameterParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleparameter_in_rule__Parameter_list__ParametrosAssignment_1_123489);
+            pushFollow(FOLLOW_ruleparameter_in_rule__Parameter_list__ParametrosAssignment_1_123488);
             ruleparameter();
 
             state._fsp--;
@@ -33836,7 +33846,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatement_blockAccess().getCorpoStatementParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_in_rule__Statement_block__CorpoAssignment_123520);
+            pushFollow(FOLLOW_rulestatement_in_rule__Statement_block__CorpoAssignment_123519);
             rulestatement();
 
             state._fsp--;
@@ -33881,7 +33891,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getDeclaracaoVariavelVariable_declarationParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_rulevariable_declaration_in_rule__Statement__DeclaracaoVariavelAssignment_023551);
+            pushFollow(FOLLOW_rulevariable_declaration_in_rule__Statement__DeclaracaoVariavelAssignment_023550);
             rulevariable_declaration();
 
             state._fsp--;
@@ -33926,7 +33936,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getExpressaoExpressionParserRuleCall_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Statement__ExpressaoAssignment_1_023582);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Statement__ExpressaoAssignment_1_023581);
             ruleexpression();
 
             state._fsp--;
@@ -33971,7 +33981,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getBlocoStatement_blockParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_block_in_rule__Statement__BlocoAssignment_223613);
+            pushFollow(FOLLOW_rulestatement_block_in_rule__Statement__BlocoAssignment_223612);
             rulestatement_block();
 
             state._fsp--;
@@ -34016,7 +34026,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getCorpoIfIf_statementParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleif_statement_in_rule__Statement__CorpoIfAssignment_323644);
+            pushFollow(FOLLOW_ruleif_statement_in_rule__Statement__CorpoIfAssignment_323643);
             ruleif_statement();
 
             state._fsp--;
@@ -34061,7 +34071,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getCorpoDoWhileDo_statementParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruledo_statement_in_rule__Statement__CorpoDoWhileAssignment_423675);
+            pushFollow(FOLLOW_ruledo_statement_in_rule__Statement__CorpoDoWhileAssignment_423674);
             ruledo_statement();
 
             state._fsp--;
@@ -34106,7 +34116,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getCorpoWhileWhile_statementParserRuleCall_5_0()); 
             }
-            pushFollow(FOLLOW_rulewhile_statement_in_rule__Statement__CorpoWhileAssignment_523706);
+            pushFollow(FOLLOW_rulewhile_statement_in_rule__Statement__CorpoWhileAssignment_523705);
             rulewhile_statement();
 
             state._fsp--;
@@ -34151,7 +34161,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getCorpoForFor_statementParserRuleCall_6_0()); 
             }
-            pushFollow(FOLLOW_rulefor_statement_in_rule__Statement__CorpoForAssignment_623737);
+            pushFollow(FOLLOW_rulefor_statement_in_rule__Statement__CorpoForAssignment_623736);
             rulefor_statement();
 
             state._fsp--;
@@ -34196,7 +34206,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getCorpoTryCatchTry_statementParserRuleCall_7_0()); 
             }
-            pushFollow(FOLLOW_ruletry_statement_in_rule__Statement__CorpoTryCatchAssignment_723768);
+            pushFollow(FOLLOW_ruletry_statement_in_rule__Statement__CorpoTryCatchAssignment_723767);
             ruletry_statement();
 
             state._fsp--;
@@ -34241,7 +34251,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getCorpoSwitchCaseSwitch_statementParserRuleCall_8_0()); 
             }
-            pushFollow(FOLLOW_ruleswitch_statement_in_rule__Statement__CorpoSwitchCaseAssignment_823799);
+            pushFollow(FOLLOW_ruleswitch_statement_in_rule__Statement__CorpoSwitchCaseAssignment_823798);
             ruleswitch_statement();
 
             state._fsp--;
@@ -34286,7 +34296,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getExpressaoSynchronizedExpressionParserRuleCall_9_2_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Statement__ExpressaoSynchronizedAssignment_9_223830);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Statement__ExpressaoSynchronizedAssignment_9_223829);
             ruleexpression();
 
             state._fsp--;
@@ -34331,7 +34341,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getCorpoSynchronizeStatementParserRuleCall_9_4_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_in_rule__Statement__CorpoSynchronizeAssignment_9_423861);
+            pushFollow(FOLLOW_rulestatement_in_rule__Statement__CorpoSynchronizeAssignment_9_423860);
             rulestatement();
 
             state._fsp--;
@@ -34376,7 +34386,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getReturnExpressionParserRuleCall_10_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Statement__ReturnAssignment_10_123892);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Statement__ReturnAssignment_10_123891);
             ruleexpression();
 
             state._fsp--;
@@ -34421,7 +34431,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getExececaoExpressionParserRuleCall_11_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Statement__ExececaoAssignment_11_123923);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Statement__ExececaoAssignment_11_123922);
             ruleexpression();
 
             state._fsp--;
@@ -34466,7 +34476,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getBreakIDENTIFIERTerminalRuleCall_13_1_0()); 
             }
-            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Statement__BreakAssignment_13_123954); if (state.failed) return ;
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Statement__BreakAssignment_13_123953); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStatementAccess().getBreakIDENTIFIERTerminalRuleCall_13_1_0()); 
             }
@@ -34507,7 +34517,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatementAccess().getContinueIDENTIFIERTerminalRuleCall_14_1_0()); 
             }
-            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Statement__ContinueAssignment_14_123985); if (state.failed) return ;
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Statement__ContinueAssignment_14_123984); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStatementAccess().getContinueIDENTIFIERTerminalRuleCall_14_1_0()); 
             }
@@ -34548,7 +34558,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariable_declarationAccess().getModificadorMODIFIERParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleMODIFIER_in_rule__Variable_declaration__ModificadorAssignment_024016);
+            pushFollow(FOLLOW_ruleMODIFIER_in_rule__Variable_declaration__ModificadorAssignment_024015);
             ruleMODIFIER();
 
             state._fsp--;
@@ -34593,7 +34603,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariable_declarationAccess().getTipoVariavelTypeParserRuleCall_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruletype_in_rule__Variable_declaration__TipoVariavelAssignment_1_024047);
+            pushFollow(FOLLOW_ruletype_in_rule__Variable_declaration__TipoVariavelAssignment_1_024046);
             ruletype();
 
             state._fsp--;
@@ -34638,7 +34648,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariable_declarationAccess().getDeclaracaoVariaveisVariable_declaratorParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_rulevariable_declarator_in_rule__Variable_declaration__DeclaracaoVariaveisAssignment_224078);
+            pushFollow(FOLLOW_rulevariable_declarator_in_rule__Variable_declaration__DeclaracaoVariaveisAssignment_224077);
             rulevariable_declarator();
 
             state._fsp--;
@@ -34683,7 +34693,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariable_declarationAccess().getDeclaracaoVariaveisVariable_declaratorParserRuleCall_3_1_0()); 
             }
-            pushFollow(FOLLOW_rulevariable_declarator_in_rule__Variable_declaration__DeclaracaoVariaveisAssignment_3_124109);
+            pushFollow(FOLLOW_rulevariable_declarator_in_rule__Variable_declaration__DeclaracaoVariaveisAssignment_3_124108);
             rulevariable_declarator();
 
             state._fsp--;
@@ -34728,7 +34738,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariable_declarationAccess().getBlocoVariavelStatement_blockParserRuleCall_4_1_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_block_in_rule__Variable_declaration__BlocoVariavelAssignment_4_124140);
+            pushFollow(FOLLOW_rulestatement_block_in_rule__Variable_declaration__BlocoVariavelAssignment_4_124139);
             rulestatement_block();
 
             state._fsp--;
@@ -34773,7 +34783,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariable_declaratorAccess().getNomeVariavelIDENTIFIERTerminalRuleCall_1_0_0()); 
             }
-            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Variable_declarator__NomeVariavelAssignment_1_024171); if (state.failed) return ;
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Variable_declarator__NomeVariavelAssignment_1_024170); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVariable_declaratorAccess().getNomeVariavelIDENTIFIERTerminalRuleCall_1_0_0()); 
             }
@@ -34814,7 +34824,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariable_declaratorAccess().getValorVariavelVariable_initializerParserRuleCall_1_2_1_0()); 
             }
-            pushFollow(FOLLOW_rulevariable_initializer_in_rule__Variable_declarator__ValorVariavelAssignment_1_2_124202);
+            pushFollow(FOLLOW_rulevariable_initializer_in_rule__Variable_declarator__ValorVariavelAssignment_1_2_124201);
             rulevariable_initializer();
 
             state._fsp--;
@@ -34859,7 +34869,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariable_initializerAccess().getExpressaoVariavelExpressionParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Variable_initializer__ExpressaoVariavelAssignment_024233);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Variable_initializer__ExpressaoVariavelAssignment_024232);
             ruleexpression();
 
             state._fsp--;
@@ -34904,7 +34914,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariable_initializerAccess().getValorVariaveisVariable_initializerParserRuleCall_1_1_0_0()); 
             }
-            pushFollow(FOLLOW_rulevariable_initializer_in_rule__Variable_initializer__ValorVariaveisAssignment_1_1_024264);
+            pushFollow(FOLLOW_rulevariable_initializer_in_rule__Variable_initializer__ValorVariaveisAssignment_1_1_024263);
             rulevariable_initializer();
 
             state._fsp--;
@@ -34949,7 +34959,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariable_initializerAccess().getValorVariaveisVariable_initializerParserRuleCall_1_1_1_1_0()); 
             }
-            pushFollow(FOLLOW_rulevariable_initializer_in_rule__Variable_initializer__ValorVariaveisAssignment_1_1_1_124295);
+            pushFollow(FOLLOW_rulevariable_initializer_in_rule__Variable_initializer__ValorVariaveisAssignment_1_1_1_124294);
             rulevariable_initializer();
 
             state._fsp--;
@@ -34994,7 +35004,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIf_statementAccess().getEspressaoIfExpressionParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__If_statement__EspressaoIfAssignment_224326);
+            pushFollow(FOLLOW_ruleexpression_in_rule__If_statement__EspressaoIfAssignment_224325);
             ruleexpression();
 
             state._fsp--;
@@ -35039,7 +35049,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIf_statementAccess().getBlcoIfStatementParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_in_rule__If_statement__BlcoIfAssignment_424357);
+            pushFollow(FOLLOW_rulestatement_in_rule__If_statement__BlcoIfAssignment_424356);
             rulestatement();
 
             state._fsp--;
@@ -35084,7 +35094,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIf_statementAccess().getBlocoElseStatementParserRuleCall_5_0_1_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_in_rule__If_statement__BlocoElseAssignment_5_0_124388);
+            pushFollow(FOLLOW_rulestatement_in_rule__If_statement__BlocoElseAssignment_5_0_124387);
             rulestatement();
 
             state._fsp--;
@@ -35129,7 +35139,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDo_statementAccess().getBlocoDoStatementParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_in_rule__Do_statement__BlocoDoAssignment_124419);
+            pushFollow(FOLLOW_rulestatement_in_rule__Do_statement__BlocoDoAssignment_124418);
             rulestatement();
 
             state._fsp--;
@@ -35174,7 +35184,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDo_statementAccess().getExpressaoWhileExpressionParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Do_statement__ExpressaoWhileAssignment_424450);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Do_statement__ExpressaoWhileAssignment_424449);
             ruleexpression();
 
             state._fsp--;
@@ -35219,7 +35229,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getWhile_statementAccess().getExpressaoWhileExpressionParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__While_statement__ExpressaoWhileAssignment_224481);
+            pushFollow(FOLLOW_ruleexpression_in_rule__While_statement__ExpressaoWhileAssignment_224480);
             ruleexpression();
 
             state._fsp--;
@@ -35264,7 +35274,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getWhile_statementAccess().getBlocoWhileStatementParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_in_rule__While_statement__BlocoWhileAssignment_424512);
+            pushFollow(FOLLOW_rulestatement_in_rule__While_statement__BlocoWhileAssignment_424511);
             rulestatement();
 
             state._fsp--;
@@ -35309,7 +35319,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFor_statementAccess().getDeclaracaoVariavelVariable_declarationParserRuleCall_2_0_0()); 
             }
-            pushFollow(FOLLOW_rulevariable_declaration_in_rule__For_statement__DeclaracaoVariavelAssignment_2_024543);
+            pushFollow(FOLLOW_rulevariable_declaration_in_rule__For_statement__DeclaracaoVariavelAssignment_2_024542);
             rulevariable_declaration();
 
             state._fsp--;
@@ -35354,7 +35364,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFor_statementAccess().getExpressaoDeclaracaoExpressionParserRuleCall_2_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__For_statement__ExpressaoDeclaracaoAssignment_2_1_024574);
+            pushFollow(FOLLOW_ruleexpression_in_rule__For_statement__ExpressaoDeclaracaoAssignment_2_1_024573);
             ruleexpression();
 
             state._fsp--;
@@ -35399,7 +35409,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFor_statementAccess().getExpressaoForExpressionParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__For_statement__ExpressaoForAssignment_324605);
+            pushFollow(FOLLOW_ruleexpression_in_rule__For_statement__ExpressaoForAssignment_324604);
             ruleexpression();
 
             state._fsp--;
@@ -35444,7 +35454,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFor_statementAccess().getExpressaoIncrementoExpressionParserRuleCall_5_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__For_statement__ExpressaoIncrementoAssignment_524636);
+            pushFollow(FOLLOW_ruleexpression_in_rule__For_statement__ExpressaoIncrementoAssignment_524635);
             ruleexpression();
 
             state._fsp--;
@@ -35489,7 +35499,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFor_statementAccess().getBlocoForStatementParserRuleCall_7_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_in_rule__For_statement__BlocoForAssignment_724667);
+            pushFollow(FOLLOW_rulestatement_in_rule__For_statement__BlocoForAssignment_724666);
             rulestatement();
 
             state._fsp--;
@@ -35534,7 +35544,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTry_statementAccess().getBlocoTryStatement_blockParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_block_in_rule__Try_statement__BlocoTryAssignment_124698);
+            pushFollow(FOLLOW_rulestatement_block_in_rule__Try_statement__BlocoTryAssignment_124697);
             rulestatement_block();
 
             state._fsp--;
@@ -35579,7 +35589,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTry_statementAccess().getParametroCatchParameterParserRuleCall_2_0_2_0()); 
             }
-            pushFollow(FOLLOW_ruleparameter_in_rule__Try_statement__ParametroCatchAssignment_2_0_224729);
+            pushFollow(FOLLOW_ruleparameter_in_rule__Try_statement__ParametroCatchAssignment_2_0_224728);
             ruleparameter();
 
             state._fsp--;
@@ -35624,7 +35634,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTry_statementAccess().getBlocoCatchStatement_blockParserRuleCall_2_0_4_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_block_in_rule__Try_statement__BlocoCatchAssignment_2_0_424760);
+            pushFollow(FOLLOW_rulestatement_block_in_rule__Try_statement__BlocoCatchAssignment_2_0_424759);
             rulestatement_block();
 
             state._fsp--;
@@ -35669,7 +35679,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTry_statementAccess().getBlocoFinallyStatement_blockParserRuleCall_3_0_1_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_block_in_rule__Try_statement__BlocoFinallyAssignment_3_0_124791);
+            pushFollow(FOLLOW_rulestatement_block_in_rule__Try_statement__BlocoFinallyAssignment_3_0_124790);
             rulestatement_block();
 
             state._fsp--;
@@ -35714,7 +35724,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitch_statementAccess().getExpressaoSwitchExpressionParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Switch_statement__ExpressaoSwitchAssignment_224822);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Switch_statement__ExpressaoSwitchAssignment_224821);
             ruleexpression();
 
             state._fsp--;
@@ -35759,7 +35769,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitch_statementAccess().getExpressaoCasesExpressionParserRuleCall_5_0_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Switch_statement__ExpressaoCasesAssignment_5_0_124853);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Switch_statement__ExpressaoCasesAssignment_5_0_124852);
             ruleexpression();
 
             state._fsp--;
@@ -35804,7 +35814,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitch_statementAccess().getBlocoSwitchStatementParserRuleCall_5_2_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_in_rule__Switch_statement__BlocoSwitchAssignment_5_224884);
+            pushFollow(FOLLOW_rulestatement_in_rule__Switch_statement__BlocoSwitchAssignment_5_224883);
             rulestatement();
 
             state._fsp--;
@@ -35849,7 +35859,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstructor_declarationAccess().getModificadorMODIFIERParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleMODIFIER_in_rule__Constructor_declaration__ModificadorAssignment_024915);
+            pushFollow(FOLLOW_ruleMODIFIER_in_rule__Constructor_declaration__ModificadorAssignment_024914);
             ruleMODIFIER();
 
             state._fsp--;
@@ -35894,7 +35904,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstructor_declarationAccess().getTipoTypeParserRuleCall_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruletype_in_rule__Constructor_declaration__TipoAssignment_1_024946);
+            pushFollow(FOLLOW_ruletype_in_rule__Constructor_declaration__TipoAssignment_1_024945);
             ruletype();
 
             state._fsp--;
@@ -35939,7 +35949,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstructor_declarationAccess().getNomeContrutorIDENTIFIERTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Constructor_declaration__NomeContrutorAssignment_224977); if (state.failed) return ;
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Constructor_declaration__NomeContrutorAssignment_224976); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstructor_declarationAccess().getNomeContrutorIDENTIFIERTerminalRuleCall_2_0()); 
             }
@@ -35980,7 +35990,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstructor_declarationAccess().getParametrosContrutorParameter_listParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleparameter_list_in_rule__Constructor_declaration__ParametrosContrutorAssignment_425008);
+            pushFollow(FOLLOW_ruleparameter_list_in_rule__Constructor_declaration__ParametrosContrutorAssignment_425007);
             ruleparameter_list();
 
             state._fsp--;
@@ -36025,7 +36035,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstructor_declarationAccess().getBlocoConstrutorStatement_blockParserRuleCall_6_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_block_in_rule__Constructor_declaration__BlocoConstrutorAssignment_625039);
+            pushFollow(FOLLOW_rulestatement_block_in_rule__Constructor_declaration__BlocoConstrutorAssignment_625038);
             rulestatement_block();
 
             state._fsp--;
@@ -36070,7 +36080,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStatic_initializerAccess().getBlocoEstaticoStatement_blockParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_rulestatement_block_in_rule__Static_initializer__BlocoEstaticoAssignment_125070);
+            pushFollow(FOLLOW_rulestatement_block_in_rule__Static_initializer__BlocoEstaticoAssignment_125069);
             rulestatement_block();
 
             state._fsp--;
@@ -36115,7 +36125,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreating_expressionAccess().getNovoObjetoNameParserRuleCall_1_0_0_0()); 
             }
-            pushFollow(FOLLOW_rulename_in_rule__Creating_expression__NovoObjetoAssignment_1_0_025101);
+            pushFollow(FOLLOW_rulename_in_rule__Creating_expression__NovoObjetoAssignment_1_0_025100);
             rulename();
 
             state._fsp--;
@@ -36160,7 +36170,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreating_expressionAccess().getParametrosCreating_auxParserRuleCall_1_0_1_0()); 
             }
-            pushFollow(FOLLOW_rulecreating_aux_in_rule__Creating_expression__ParametrosAssignment_1_0_125132);
+            pushFollow(FOLLOW_rulecreating_aux_in_rule__Creating_expression__ParametrosAssignment_1_0_125131);
             rulecreating_aux();
 
             state._fsp--;
@@ -36205,7 +36215,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreating_expressionAccess().getTipoObjetoType_specifierParserRuleCall_1_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruletype_specifier_in_rule__Creating_expression__TipoObjetoAssignment_1_1_025163);
+            pushFollow(FOLLOW_ruletype_specifier_in_rule__Creating_expression__TipoObjetoAssignment_1_1_025162);
             ruletype_specifier();
 
             state._fsp--;
@@ -36250,7 +36260,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreating_expressionAccess().getParametrosAuxParserRuleCall_1_1_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleaux_in_rule__Creating_expression__ParametrosAssignment_1_1_1_025194);
+            pushFollow(FOLLOW_ruleaux_in_rule__Creating_expression__ParametrosAssignment_1_1_1_025193);
             ruleaux();
 
             state._fsp--;
@@ -36295,7 +36305,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreating_expressionAccess().getExpressaoNewExpressionParserRuleCall_1_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Creating_expression__ExpressaoNewAssignment_1_2_125225);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Creating_expression__ExpressaoNewAssignment_1_2_125224);
             ruleexpression();
 
             state._fsp--;
@@ -36340,7 +36350,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreating_expressionAccess().getNovoNewParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_rulenew_in_rule__Creating_expression__NovoAssignment_225256);
+            pushFollow(FOLLOW_rulenew_in_rule__Creating_expression__NovoAssignment_225255);
             rulenew();
 
             state._fsp--;
@@ -36385,7 +36395,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExp_auxAccess().getExpressaoExpressionParserRuleCall_0_0_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Exp_aux__ExpressaoAssignment_0_025287);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Exp_aux__ExpressaoAssignment_0_025286);
             ruleexpression();
 
             state._fsp--;
@@ -36430,7 +36440,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExp_auxAccess().getExpressaoExpressionParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Exp_aux__ExpressaoAssignment_1_225318);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Exp_aux__ExpressaoAssignment_1_225317);
             ruleexpression();
 
             state._fsp--;
@@ -36475,7 +36485,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getTipoLogicalLogical_expressionParserRuleCall_0_0_0()); 
             }
-            pushFollow(FOLLOW_rulelogical_expression_in_rule__Expression__TipoLogicalAssignment_0_025349);
+            pushFollow(FOLLOW_rulelogical_expression_in_rule__Expression__TipoLogicalAssignment_0_025348);
             rulelogical_expression();
 
             state._fsp--;
@@ -36520,7 +36530,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getTipoNumericNumeric_expressionParserRuleCall_0_1_0()); 
             }
-            pushFollow(FOLLOW_rulenumeric_expression_in_rule__Expression__TipoNumericAssignment_0_125380);
+            pushFollow(FOLLOW_rulenumeric_expression_in_rule__Expression__TipoNumericAssignment_0_125379);
             rulenumeric_expression();
 
             state._fsp--;
@@ -36565,7 +36575,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getTipoBitBit_expressionParserRuleCall_0_2_0()); 
             }
-            pushFollow(FOLLOW_rulebit_expression_in_rule__Expression__TipoBitAssignment_0_225411);
+            pushFollow(FOLLOW_rulebit_expression_in_rule__Expression__TipoBitAssignment_0_225410);
             rulebit_expression();
 
             state._fsp--;
@@ -36610,7 +36620,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getNewCreating_expressionParserRuleCall_0_3_0()); 
             }
-            pushFollow(FOLLOW_rulecreating_expression_in_rule__Expression__NewAssignment_0_325442);
+            pushFollow(FOLLOW_rulecreating_expression_in_rule__Expression__NewAssignment_0_325441);
             rulecreating_expression();
 
             state._fsp--;
@@ -36655,7 +36665,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getLiteralLiteral_expressionParserRuleCall_0_4_0()); 
             }
-            pushFollow(FOLLOW_ruleliteral_expression_in_rule__Expression__LiteralAssignment_0_425473);
+            pushFollow(FOLLOW_ruleliteral_expression_in_rule__Expression__LiteralAssignment_0_425472);
             ruleliteral_expression();
 
             state._fsp--;
@@ -36684,23 +36694,64 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Expression__LiteralAssignment_0_4"
 
 
+    // $ANTLR start "rule__Expression__IdentificadorAssignment_0_8"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12469:1: rule__Expression__IdentificadorAssignment_0_8 : ( RULE_IDENTIFIER ) ;
+    public final void rule__Expression__IdentificadorAssignment_0_8() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12473:1: ( ( RULE_IDENTIFIER ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12474:1: ( RULE_IDENTIFIER )
+            {
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12474:1: ( RULE_IDENTIFIER )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12475:1: RULE_IDENTIFIER
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpressionAccess().getIdentificadorIDENTIFIERTerminalRuleCall_0_8_0()); 
+            }
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Expression__IdentificadorAssignment_0_825503); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpressionAccess().getIdentificadorIDENTIFIERTerminalRuleCall_0_8_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Expression__IdentificadorAssignment_0_8"
+
+
     // $ANTLR start "rule__Expression__ExpressoesAssignment_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12469:1: rule__Expression__ExpressoesAssignment_1 : ( ruleexpression_aux ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12484:1: rule__Expression__ExpressoesAssignment_1 : ( ruleexpression_aux ) ;
     public final void rule__Expression__ExpressoesAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12473:1: ( ( ruleexpression_aux ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12474:1: ( ruleexpression_aux )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12488:1: ( ( ruleexpression_aux ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12489:1: ( ruleexpression_aux )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12474:1: ( ruleexpression_aux )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12475:1: ruleexpression_aux
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12489:1: ( ruleexpression_aux )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12490:1: ruleexpression_aux
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getExpressoesExpression_auxParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_aux_in_rule__Expression__ExpressoesAssignment_125504);
+            pushFollow(FOLLOW_ruleexpression_aux_in_rule__Expression__ExpressoesAssignment_125534);
             ruleexpression_aux();
 
             state._fsp--;
@@ -36729,23 +36780,68 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Expression__ExpressoesAssignment_1"
 
 
+    // $ANTLR start "rule__Expression_aux__OpAssignment_0_1_0"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12499:1: rule__Expression_aux__OpAssignment_0_1_0 : ( rulemais_aux ) ;
+    public final void rule__Expression_aux__OpAssignment_0_1_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12503:1: ( ( rulemais_aux ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12504:1: ( rulemais_aux )
+            {
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12504:1: ( rulemais_aux )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12505:1: rulemais_aux
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpression_auxAccess().getOpMais_auxParserRuleCall_0_1_0_0()); 
+            }
+            pushFollow(FOLLOW_rulemais_aux_in_rule__Expression_aux__OpAssignment_0_1_025565);
+            rulemais_aux();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpression_auxAccess().getOpMais_auxParserRuleCall_0_1_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Expression_aux__OpAssignment_0_1_0"
+
+
     // $ANTLR start "rule__Expression_aux__ExpAssignment_0_1_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12484:1: rule__Expression_aux__ExpAssignment_0_1_1 : ( ruleexpression ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12514:1: rule__Expression_aux__ExpAssignment_0_1_1 : ( ruleexpression ) ;
     public final void rule__Expression_aux__ExpAssignment_0_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12488:1: ( ( ruleexpression ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12489:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12518:1: ( ( ruleexpression ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12519:1: ( ruleexpression )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12489:1: ( ruleexpression )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12490:1: ruleexpression
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12519:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12520:1: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_1_125535);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_1_125596);
             ruleexpression();
 
             state._fsp--;
@@ -36774,27 +36870,27 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Expression_aux__ExpAssignment_0_1_1"
 
 
-    // $ANTLR start "rule__Expression_aux__OpedadorAssignment_0_2"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12499:1: rule__Expression_aux__OpedadorAssignment_0_2 : ( ( rule__Expression_aux__OpedadorAlternatives_0_2_0 ) ) ;
-    public final void rule__Expression_aux__OpedadorAssignment_0_2() throws RecognitionException {
+    // $ANTLR start "rule__Expression_aux__OperadorAssignment_0_2"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12529:1: rule__Expression_aux__OperadorAssignment_0_2 : ( ( rule__Expression_aux__OperadorAlternatives_0_2_0 ) ) ;
+    public final void rule__Expression_aux__OperadorAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12503:1: ( ( ( rule__Expression_aux__OpedadorAlternatives_0_2_0 ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12504:1: ( ( rule__Expression_aux__OpedadorAlternatives_0_2_0 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12533:1: ( ( ( rule__Expression_aux__OperadorAlternatives_0_2_0 ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12534:1: ( ( rule__Expression_aux__OperadorAlternatives_0_2_0 ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12504:1: ( ( rule__Expression_aux__OpedadorAlternatives_0_2_0 ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12505:1: ( rule__Expression_aux__OpedadorAlternatives_0_2_0 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12534:1: ( ( rule__Expression_aux__OperadorAlternatives_0_2_0 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12535:1: ( rule__Expression_aux__OperadorAlternatives_0_2_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorAlternatives_0_2_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorAlternatives_0_2_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12506:1: ( rule__Expression_aux__OpedadorAlternatives_0_2_0 )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12506:2: rule__Expression_aux__OpedadorAlternatives_0_2_0
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12536:1: ( rule__Expression_aux__OperadorAlternatives_0_2_0 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12536:2: rule__Expression_aux__OperadorAlternatives_0_2_0
             {
-            pushFollow(FOLLOW_rule__Expression_aux__OpedadorAlternatives_0_2_0_in_rule__Expression_aux__OpedadorAssignment_0_225566);
-            rule__Expression_aux__OpedadorAlternatives_0_2_0();
+            pushFollow(FOLLOW_rule__Expression_aux__OperadorAlternatives_0_2_0_in_rule__Expression_aux__OperadorAssignment_0_225627);
+            rule__Expression_aux__OperadorAlternatives_0_2_0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -36802,7 +36898,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorAlternatives_0_2_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorAlternatives_0_2_0()); 
             }
 
             }
@@ -36822,40 +36918,32 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Expression_aux__OpedadorAssignment_0_2"
+    // $ANTLR end "rule__Expression_aux__OperadorAssignment_0_2"
 
 
-    // $ANTLR start "rule__Expression_aux__OpedadorAssignment_0_3_0_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12515:1: rule__Expression_aux__OpedadorAssignment_0_3_0_1 : ( ( '-' ) ) ;
-    public final void rule__Expression_aux__OpedadorAssignment_0_3_0_1() throws RecognitionException {
+    // $ANTLR start "rule__Expression_aux__OpAssignment_0_3_0_0"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12545:1: rule__Expression_aux__OpAssignment_0_3_0_0 : ( rulemais_aux ) ;
+    public final void rule__Expression_aux__OpAssignment_0_3_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12519:1: ( ( ( '-' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12520:1: ( ( '-' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12549:1: ( ( rulemais_aux ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12550:1: ( rulemais_aux )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12520:1: ( ( '-' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12521:1: ( '-' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusKeyword_0_3_0_1_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12522:1: ( '-' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12523:1: '-'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12550:1: ( rulemais_aux )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12551:1: rulemais_aux
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusKeyword_0_3_0_1_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOpMais_auxParserRuleCall_0_3_0_0_0()); 
             }
-            match(input,44,FOLLOW_44_in_rule__Expression_aux__OpedadorAssignment_0_3_0_125604); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusKeyword_0_3_0_1_0()); 
-            }
+            pushFollow(FOLLOW_rulemais_aux_in_rule__Expression_aux__OpAssignment_0_3_0_025660);
+            rulemais_aux();
 
-            }
-
+            state._fsp--;
+            if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusKeyword_0_3_0_1_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOpMais_auxParserRuleCall_0_3_0_0_0()); 
             }
 
             }
@@ -36875,40 +36963,40 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Expression_aux__OpedadorAssignment_0_3_0_1"
+    // $ANTLR end "rule__Expression_aux__OpAssignment_0_3_0_0"
 
 
-    // $ANTLR start "rule__Expression_aux__OpedadorAssignment_0_3_0_2"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12538:1: rule__Expression_aux__OpedadorAssignment_0_3_0_2 : ( ( '-=' ) ) ;
-    public final void rule__Expression_aux__OpedadorAssignment_0_3_0_2() throws RecognitionException {
+    // $ANTLR start "rule__Expression_aux__OperadorAssignment_0_3_0_1"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12560:1: rule__Expression_aux__OperadorAssignment_0_3_0_1 : ( ( '-' ) ) ;
+    public final void rule__Expression_aux__OperadorAssignment_0_3_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12542:1: ( ( ( '-=' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12543:1: ( ( '-=' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12564:1: ( ( ( '-' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12565:1: ( ( '-' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12543:1: ( ( '-=' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12544:1: ( '-=' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12565:1: ( ( '-' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12566:1: ( '-' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusEqualsSignKeyword_0_3_0_2_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorHyphenMinusKeyword_0_3_0_1_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12545:1: ( '-=' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12546:1: '-='
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12567:1: ( '-' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12568:1: '-'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusEqualsSignKeyword_0_3_0_2_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorHyphenMinusKeyword_0_3_0_1_0()); 
             }
-            match(input,85,FOLLOW_85_in_rule__Expression_aux__OpedadorAssignment_0_3_0_225648); if (state.failed) return ;
+            match(input,44,FOLLOW_44_in_rule__Expression_aux__OperadorAssignment_0_3_0_125696); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusEqualsSignKeyword_0_3_0_2_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorHyphenMinusKeyword_0_3_0_1_0()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorHyphenMinusEqualsSignKeyword_0_3_0_2_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorHyphenMinusKeyword_0_3_0_1_0()); 
             }
 
             }
@@ -36928,40 +37016,40 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Expression_aux__OpedadorAssignment_0_3_0_2"
+    // $ANTLR end "rule__Expression_aux__OperadorAssignment_0_3_0_1"
 
 
-    // $ANTLR start "rule__Expression_aux__OpedadorAssignment_0_3_0_3"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12561:1: rule__Expression_aux__OpedadorAssignment_0_3_0_3 : ( ( '*' ) ) ;
-    public final void rule__Expression_aux__OpedadorAssignment_0_3_0_3() throws RecognitionException {
+    // $ANTLR start "rule__Expression_aux__OperadorAssignment_0_3_0_2"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12583:1: rule__Expression_aux__OperadorAssignment_0_3_0_2 : ( ( '-=' ) ) ;
+    public final void rule__Expression_aux__OperadorAssignment_0_3_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12565:1: ( ( ( '*' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12566:1: ( ( '*' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12587:1: ( ( ( '-=' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12588:1: ( ( '-=' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12566:1: ( ( '*' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12567:1: ( '*' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12588:1: ( ( '-=' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12589:1: ( '-=' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorAsteriskKeyword_0_3_0_3_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorHyphenMinusEqualsSignKeyword_0_3_0_2_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12568:1: ( '*' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12569:1: '*'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12590:1: ( '-=' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12591:1: '-='
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorAsteriskKeyword_0_3_0_3_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorHyphenMinusEqualsSignKeyword_0_3_0_2_0()); 
             }
-            match(input,86,FOLLOW_86_in_rule__Expression_aux__OpedadorAssignment_0_3_0_325692); if (state.failed) return ;
+            match(input,85,FOLLOW_85_in_rule__Expression_aux__OperadorAssignment_0_3_0_225740); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorAsteriskKeyword_0_3_0_3_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorHyphenMinusEqualsSignKeyword_0_3_0_2_0()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorAsteriskKeyword_0_3_0_3_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorHyphenMinusEqualsSignKeyword_0_3_0_2_0()); 
             }
 
             }
@@ -36981,40 +37069,40 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Expression_aux__OpedadorAssignment_0_3_0_3"
+    // $ANTLR end "rule__Expression_aux__OperadorAssignment_0_3_0_2"
 
 
-    // $ANTLR start "rule__Expression_aux__OpedadorAssignment_0_3_0_4"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12584:1: rule__Expression_aux__OpedadorAssignment_0_3_0_4 : ( ( '*=' ) ) ;
-    public final void rule__Expression_aux__OpedadorAssignment_0_3_0_4() throws RecognitionException {
+    // $ANTLR start "rule__Expression_aux__OperadorAssignment_0_3_0_3"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12606:1: rule__Expression_aux__OperadorAssignment_0_3_0_3 : ( ( '*' ) ) ;
+    public final void rule__Expression_aux__OperadorAssignment_0_3_0_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12588:1: ( ( ( '*=' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12589:1: ( ( '*=' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12610:1: ( ( ( '*' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12611:1: ( ( '*' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12589:1: ( ( '*=' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12590:1: ( '*=' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12611:1: ( ( '*' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12612:1: ( '*' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorAsteriskEqualsSignKeyword_0_3_0_4_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorAsteriskKeyword_0_3_0_3_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12591:1: ( '*=' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12592:1: '*='
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12613:1: ( '*' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12614:1: '*'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorAsteriskEqualsSignKeyword_0_3_0_4_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorAsteriskKeyword_0_3_0_3_0()); 
             }
-            match(input,87,FOLLOW_87_in_rule__Expression_aux__OpedadorAssignment_0_3_0_425736); if (state.failed) return ;
+            match(input,86,FOLLOW_86_in_rule__Expression_aux__OperadorAssignment_0_3_0_325784); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorAsteriskEqualsSignKeyword_0_3_0_4_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorAsteriskKeyword_0_3_0_3_0()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorAsteriskEqualsSignKeyword_0_3_0_4_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorAsteriskKeyword_0_3_0_3_0()); 
             }
 
             }
@@ -37034,40 +37122,40 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Expression_aux__OpedadorAssignment_0_3_0_4"
+    // $ANTLR end "rule__Expression_aux__OperadorAssignment_0_3_0_3"
 
 
-    // $ANTLR start "rule__Expression_aux__OpedadorAssignment_0_3_0_5"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12607:1: rule__Expression_aux__OpedadorAssignment_0_3_0_5 : ( ( '/' ) ) ;
-    public final void rule__Expression_aux__OpedadorAssignment_0_3_0_5() throws RecognitionException {
+    // $ANTLR start "rule__Expression_aux__OperadorAssignment_0_3_0_4"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12629:1: rule__Expression_aux__OperadorAssignment_0_3_0_4 : ( ( '*=' ) ) ;
+    public final void rule__Expression_aux__OperadorAssignment_0_3_0_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12611:1: ( ( ( '/' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12612:1: ( ( '/' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12633:1: ( ( ( '*=' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12634:1: ( ( '*=' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12612:1: ( ( '/' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12613:1: ( '/' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12634:1: ( ( '*=' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12635:1: ( '*=' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorSolidusKeyword_0_3_0_5_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorAsteriskEqualsSignKeyword_0_3_0_4_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12614:1: ( '/' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12615:1: '/'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12636:1: ( '*=' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12637:1: '*='
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorSolidusKeyword_0_3_0_5_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorAsteriskEqualsSignKeyword_0_3_0_4_0()); 
             }
-            match(input,88,FOLLOW_88_in_rule__Expression_aux__OpedadorAssignment_0_3_0_525780); if (state.failed) return ;
+            match(input,87,FOLLOW_87_in_rule__Expression_aux__OperadorAssignment_0_3_0_425828); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorSolidusKeyword_0_3_0_5_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorAsteriskEqualsSignKeyword_0_3_0_4_0()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorSolidusKeyword_0_3_0_5_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorAsteriskEqualsSignKeyword_0_3_0_4_0()); 
             }
 
             }
@@ -37087,40 +37175,40 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Expression_aux__OpedadorAssignment_0_3_0_5"
+    // $ANTLR end "rule__Expression_aux__OperadorAssignment_0_3_0_4"
 
 
-    // $ANTLR start "rule__Expression_aux__OpedadorAssignment_0_3_0_6"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12630:1: rule__Expression_aux__OpedadorAssignment_0_3_0_6 : ( ( '/=' ) ) ;
-    public final void rule__Expression_aux__OpedadorAssignment_0_3_0_6() throws RecognitionException {
+    // $ANTLR start "rule__Expression_aux__OperadorAssignment_0_3_0_5"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12652:1: rule__Expression_aux__OperadorAssignment_0_3_0_5 : ( ( '/' ) ) ;
+    public final void rule__Expression_aux__OperadorAssignment_0_3_0_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12634:1: ( ( ( '/=' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12635:1: ( ( '/=' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12656:1: ( ( ( '/' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12657:1: ( ( '/' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12635:1: ( ( '/=' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12636:1: ( '/=' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12657:1: ( ( '/' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12658:1: ( '/' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorSolidusEqualsSignKeyword_0_3_0_6_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorSolidusKeyword_0_3_0_5_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12637:1: ( '/=' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12638:1: '/='
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12659:1: ( '/' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12660:1: '/'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorSolidusEqualsSignKeyword_0_3_0_6_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorSolidusKeyword_0_3_0_5_0()); 
             }
-            match(input,89,FOLLOW_89_in_rule__Expression_aux__OpedadorAssignment_0_3_0_625824); if (state.failed) return ;
+            match(input,88,FOLLOW_88_in_rule__Expression_aux__OperadorAssignment_0_3_0_525872); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorSolidusEqualsSignKeyword_0_3_0_6_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorSolidusKeyword_0_3_0_5_0()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorSolidusEqualsSignKeyword_0_3_0_6_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorSolidusKeyword_0_3_0_5_0()); 
             }
 
             }
@@ -37140,40 +37228,40 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Expression_aux__OpedadorAssignment_0_3_0_6"
+    // $ANTLR end "rule__Expression_aux__OperadorAssignment_0_3_0_5"
 
 
-    // $ANTLR start "rule__Expression_aux__OpedadorAssignment_0_3_0_7"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12653:1: rule__Expression_aux__OpedadorAssignment_0_3_0_7 : ( ( '%' ) ) ;
-    public final void rule__Expression_aux__OpedadorAssignment_0_3_0_7() throws RecognitionException {
+    // $ANTLR start "rule__Expression_aux__OperadorAssignment_0_3_0_6"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12675:1: rule__Expression_aux__OperadorAssignment_0_3_0_6 : ( ( '/=' ) ) ;
+    public final void rule__Expression_aux__OperadorAssignment_0_3_0_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12657:1: ( ( ( '%' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12658:1: ( ( '%' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12679:1: ( ( ( '/=' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12680:1: ( ( '/=' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12658:1: ( ( '%' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12659:1: ( '%' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12680:1: ( ( '/=' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12681:1: ( '/=' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorPercentSignKeyword_0_3_0_7_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorSolidusEqualsSignKeyword_0_3_0_6_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12660:1: ( '%' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12661:1: '%'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12682:1: ( '/=' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12683:1: '/='
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorPercentSignKeyword_0_3_0_7_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorSolidusEqualsSignKeyword_0_3_0_6_0()); 
             }
-            match(input,32,FOLLOW_32_in_rule__Expression_aux__OpedadorAssignment_0_3_0_725868); if (state.failed) return ;
+            match(input,89,FOLLOW_89_in_rule__Expression_aux__OperadorAssignment_0_3_0_625916); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorPercentSignKeyword_0_3_0_7_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorSolidusEqualsSignKeyword_0_3_0_6_0()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorPercentSignKeyword_0_3_0_7_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorSolidusEqualsSignKeyword_0_3_0_6_0()); 
             }
 
             }
@@ -37193,40 +37281,40 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Expression_aux__OpedadorAssignment_0_3_0_7"
+    // $ANTLR end "rule__Expression_aux__OperadorAssignment_0_3_0_6"
 
 
-    // $ANTLR start "rule__Expression_aux__OpedadorAssignment_0_3_0_8"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12676:1: rule__Expression_aux__OpedadorAssignment_0_3_0_8 : ( ( '%=' ) ) ;
-    public final void rule__Expression_aux__OpedadorAssignment_0_3_0_8() throws RecognitionException {
+    // $ANTLR start "rule__Expression_aux__OperadorAssignment_0_3_0_7"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12698:1: rule__Expression_aux__OperadorAssignment_0_3_0_7 : ( ( '%' ) ) ;
+    public final void rule__Expression_aux__OperadorAssignment_0_3_0_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12680:1: ( ( ( '%=' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12681:1: ( ( '%=' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12702:1: ( ( ( '%' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12703:1: ( ( '%' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12681:1: ( ( '%=' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12682:1: ( '%=' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12703:1: ( ( '%' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12704:1: ( '%' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorPercentSignEqualsSignKeyword_0_3_0_8_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorPercentSignKeyword_0_3_0_7_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12683:1: ( '%=' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12684:1: '%='
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12705:1: ( '%' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12706:1: '%'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorPercentSignEqualsSignKeyword_0_3_0_8_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorPercentSignKeyword_0_3_0_7_0()); 
             }
-            match(input,33,FOLLOW_33_in_rule__Expression_aux__OpedadorAssignment_0_3_0_825912); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_rule__Expression_aux__OperadorAssignment_0_3_0_725960); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorPercentSignEqualsSignKeyword_0_3_0_8_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorPercentSignKeyword_0_3_0_7_0()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorPercentSignEqualsSignKeyword_0_3_0_8_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorPercentSignKeyword_0_3_0_7_0()); 
             }
 
             }
@@ -37246,26 +37334,79 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Expression_aux__OpedadorAssignment_0_3_0_8"
+    // $ANTLR end "rule__Expression_aux__OperadorAssignment_0_3_0_7"
+
+
+    // $ANTLR start "rule__Expression_aux__OperadorAssignment_0_3_0_8"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12721:1: rule__Expression_aux__OperadorAssignment_0_3_0_8 : ( ( '%=' ) ) ;
+    public final void rule__Expression_aux__OperadorAssignment_0_3_0_8() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12725:1: ( ( ( '%=' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12726:1: ( ( '%=' ) )
+            {
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12726:1: ( ( '%=' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12727:1: ( '%=' )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpression_auxAccess().getOperadorPercentSignEqualsSignKeyword_0_3_0_8_0()); 
+            }
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12728:1: ( '%=' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12729:1: '%='
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpression_auxAccess().getOperadorPercentSignEqualsSignKeyword_0_3_0_8_0()); 
+            }
+            match(input,33,FOLLOW_33_in_rule__Expression_aux__OperadorAssignment_0_3_0_826004); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpression_auxAccess().getOperadorPercentSignEqualsSignKeyword_0_3_0_8_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExpression_auxAccess().getOperadorPercentSignEqualsSignKeyword_0_3_0_8_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Expression_aux__OperadorAssignment_0_3_0_8"
 
 
     // $ANTLR start "rule__Expression_aux__ExpAssignment_0_3_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12699:1: rule__Expression_aux__ExpAssignment_0_3_1 : ( ruleexpression ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12744:1: rule__Expression_aux__ExpAssignment_0_3_1 : ( ruleexpression ) ;
     public final void rule__Expression_aux__ExpAssignment_0_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12703:1: ( ( ruleexpression ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12704:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12748:1: ( ( ruleexpression ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12749:1: ( ruleexpression )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12704:1: ( ruleexpression )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12705:1: ruleexpression
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12749:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12750:1: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_3_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_3_125951);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_3_126043);
             ruleexpression();
 
             state._fsp--;
@@ -37295,22 +37436,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression_aux__ExpressaoAssignment_0_4_1_3"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12714:1: rule__Expression_aux__ExpressaoAssignment_0_4_1_3 : ( ruleexpression ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12759:1: rule__Expression_aux__ExpressaoAssignment_0_4_1_3 : ( ruleexpression ) ;
     public final void rule__Expression_aux__ExpressaoAssignment_0_4_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12718:1: ( ( ruleexpression ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12719:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12763:1: ( ( ruleexpression ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12764:1: ( ruleexpression )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12719:1: ( ruleexpression )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12720:1: ruleexpression
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12764:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12765:1: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getExpressaoExpressionParserRuleCall_0_4_1_3_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__ExpressaoAssignment_0_4_1_325982);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__ExpressaoAssignment_0_4_1_326074);
             ruleexpression();
 
             state._fsp--;
@@ -37339,27 +37480,27 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Expression_aux__ExpressaoAssignment_0_4_1_3"
 
 
-    // $ANTLR start "rule__Expression_aux__OpedadorAssignment_0_4_2_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12729:1: rule__Expression_aux__OpedadorAssignment_0_4_2_0 : ( ( rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0 ) ) ;
-    public final void rule__Expression_aux__OpedadorAssignment_0_4_2_0() throws RecognitionException {
+    // $ANTLR start "rule__Expression_aux__OperadorAssignment_0_4_2_0"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12774:1: rule__Expression_aux__OperadorAssignment_0_4_2_0 : ( ( rule__Expression_aux__OperadorAlternatives_0_4_2_0_0 ) ) ;
+    public final void rule__Expression_aux__OperadorAssignment_0_4_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12733:1: ( ( ( rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0 ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12734:1: ( ( rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12778:1: ( ( ( rule__Expression_aux__OperadorAlternatives_0_4_2_0_0 ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12779:1: ( ( rule__Expression_aux__OperadorAlternatives_0_4_2_0_0 ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12734:1: ( ( rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0 ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12735:1: ( rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12779:1: ( ( rule__Expression_aux__OperadorAlternatives_0_4_2_0_0 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12780:1: ( rule__Expression_aux__OperadorAlternatives_0_4_2_0_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpression_auxAccess().getOpedadorAlternatives_0_4_2_0_0()); 
+               before(grammarAccess.getExpression_auxAccess().getOperadorAlternatives_0_4_2_0_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12736:1: ( rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0 )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12736:2: rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12781:1: ( rule__Expression_aux__OperadorAlternatives_0_4_2_0_0 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12781:2: rule__Expression_aux__OperadorAlternatives_0_4_2_0_0
             {
-            pushFollow(FOLLOW_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0_in_rule__Expression_aux__OpedadorAssignment_0_4_2_026013);
-            rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0();
+            pushFollow(FOLLOW_rule__Expression_aux__OperadorAlternatives_0_4_2_0_0_in_rule__Expression_aux__OperadorAssignment_0_4_2_026105);
+            rule__Expression_aux__OperadorAlternatives_0_4_2_0_0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -37367,7 +37508,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpression_auxAccess().getOpedadorAlternatives_0_4_2_0_0()); 
+               after(grammarAccess.getExpression_auxAccess().getOperadorAlternatives_0_4_2_0_0()); 
             }
 
             }
@@ -37387,26 +37528,26 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Expression_aux__OpedadorAssignment_0_4_2_0"
+    // $ANTLR end "rule__Expression_aux__OperadorAssignment_0_4_2_0"
 
 
     // $ANTLR start "rule__Expression_aux__ExpAssignment_0_4_2_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12745:1: rule__Expression_aux__ExpAssignment_0_4_2_1 : ( ruleexpression ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12790:1: rule__Expression_aux__ExpAssignment_0_4_2_1 : ( ruleexpression ) ;
     public final void rule__Expression_aux__ExpAssignment_0_4_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12749:1: ( ( ruleexpression ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12750:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12794:1: ( ( ruleexpression ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12795:1: ( ruleexpression )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12750:1: ( ruleexpression )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12751:1: ruleexpression
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12795:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12796:1: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_4_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_4_2_126046);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_4_2_126138);
             ruleexpression();
 
             state._fsp--;
@@ -37436,25 +37577,25 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression_aux__OperadorAssignment_0_4_3_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12760:1: rule__Expression_aux__OperadorAssignment_0_4_3_0 : ( ( rule__Expression_aux__OperadorAlternatives_0_4_3_0_0 ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12805:1: rule__Expression_aux__OperadorAssignment_0_4_3_0 : ( ( rule__Expression_aux__OperadorAlternatives_0_4_3_0_0 ) ) ;
     public final void rule__Expression_aux__OperadorAssignment_0_4_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12764:1: ( ( ( rule__Expression_aux__OperadorAlternatives_0_4_3_0_0 ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12765:1: ( ( rule__Expression_aux__OperadorAlternatives_0_4_3_0_0 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12809:1: ( ( ( rule__Expression_aux__OperadorAlternatives_0_4_3_0_0 ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12810:1: ( ( rule__Expression_aux__OperadorAlternatives_0_4_3_0_0 ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12765:1: ( ( rule__Expression_aux__OperadorAlternatives_0_4_3_0_0 ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12766:1: ( rule__Expression_aux__OperadorAlternatives_0_4_3_0_0 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12810:1: ( ( rule__Expression_aux__OperadorAlternatives_0_4_3_0_0 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12811:1: ( rule__Expression_aux__OperadorAlternatives_0_4_3_0_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getOperadorAlternatives_0_4_3_0_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12767:1: ( rule__Expression_aux__OperadorAlternatives_0_4_3_0_0 )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12767:2: rule__Expression_aux__OperadorAlternatives_0_4_3_0_0
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12812:1: ( rule__Expression_aux__OperadorAlternatives_0_4_3_0_0 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12812:2: rule__Expression_aux__OperadorAlternatives_0_4_3_0_0
             {
-            pushFollow(FOLLOW_rule__Expression_aux__OperadorAlternatives_0_4_3_0_0_in_rule__Expression_aux__OperadorAssignment_0_4_3_026077);
+            pushFollow(FOLLOW_rule__Expression_aux__OperadorAlternatives_0_4_3_0_0_in_rule__Expression_aux__OperadorAssignment_0_4_3_026169);
             rule__Expression_aux__OperadorAlternatives_0_4_3_0_0();
 
             state._fsp--;
@@ -37487,22 +37628,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression_aux__ExpAssignment_0_4_3_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12776:1: rule__Expression_aux__ExpAssignment_0_4_3_1 : ( ruleexpression ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12821:1: rule__Expression_aux__ExpAssignment_0_4_3_1 : ( ruleexpression ) ;
     public final void rule__Expression_aux__ExpAssignment_0_4_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12780:1: ( ( ruleexpression ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12781:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12825:1: ( ( ruleexpression ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12826:1: ( ruleexpression )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12781:1: ( ruleexpression )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12782:1: ruleexpression
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12826:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12827:1: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getExpExpressionParserRuleCall_0_4_3_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_4_3_126110);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_4_3_126202);
             ruleexpression();
 
             state._fsp--;
@@ -37532,22 +37673,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression_aux__ExpressoesAssignment_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12791:1: rule__Expression_aux__ExpressoesAssignment_1 : ( ruleexpression_aux ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12836:1: rule__Expression_aux__ExpressoesAssignment_1 : ( ruleexpression_aux ) ;
     public final void rule__Expression_aux__ExpressoesAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12795:1: ( ( ruleexpression_aux ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12796:1: ( ruleexpression_aux )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12840:1: ( ( ruleexpression_aux ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12841:1: ( ruleexpression_aux )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12796:1: ( ruleexpression_aux )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12797:1: ruleexpression_aux
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12841:1: ( ruleexpression_aux )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12842:1: ruleexpression_aux
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_auxAccess().getExpressoesExpression_auxParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_aux_in_rule__Expression_aux__ExpressoesAssignment_126141);
+            pushFollow(FOLLOW_ruleexpression_aux_in_rule__Expression_aux__ExpressoesAssignment_126233);
             ruleexpression_aux();
 
             state._fsp--;
@@ -37576,37 +37717,37 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Expression_aux__ExpressoesAssignment_1"
 
 
-    // $ANTLR start "rule__Mais_aux__OpedadorAssignment_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12806:1: rule__Mais_aux__OpedadorAssignment_0 : ( ( '+' ) ) ;
-    public final void rule__Mais_aux__OpedadorAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Mais_aux__OperadorAssignment_0"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12851:1: rule__Mais_aux__OperadorAssignment_0 : ( ( '+' ) ) ;
+    public final void rule__Mais_aux__OperadorAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12810:1: ( ( ( '+' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12811:1: ( ( '+' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12855:1: ( ( ( '+' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12856:1: ( ( '+' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12811:1: ( ( '+' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12812:1: ( '+' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12856:1: ( ( '+' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12857:1: ( '+' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMais_auxAccess().getOpedadorPlusSignKeyword_0_0()); 
+               before(grammarAccess.getMais_auxAccess().getOperadorPlusSignKeyword_0_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12813:1: ( '+' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12814:1: '+'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12858:1: ( '+' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12859:1: '+'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMais_auxAccess().getOpedadorPlusSignKeyword_0_0()); 
+               before(grammarAccess.getMais_auxAccess().getOperadorPlusSignKeyword_0_0()); 
             }
-            match(input,90,FOLLOW_90_in_rule__Mais_aux__OpedadorAssignment_026177); if (state.failed) return ;
+            match(input,90,FOLLOW_90_in_rule__Mais_aux__OperadorAssignment_026269); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMais_auxAccess().getOpedadorPlusSignKeyword_0_0()); 
+               after(grammarAccess.getMais_auxAccess().getOperadorPlusSignKeyword_0_0()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMais_auxAccess().getOpedadorPlusSignKeyword_0_0()); 
+               after(grammarAccess.getMais_auxAccess().getOperadorPlusSignKeyword_0_0()); 
             }
 
             }
@@ -37626,40 +37767,40 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Mais_aux__OpedadorAssignment_0"
+    // $ANTLR end "rule__Mais_aux__OperadorAssignment_0"
 
 
-    // $ANTLR start "rule__Mais_aux__OpedadorAssignment_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12829:1: rule__Mais_aux__OpedadorAssignment_1 : ( ( '+=' ) ) ;
-    public final void rule__Mais_aux__OpedadorAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Mais_aux__OperadorAssignment_1"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12874:1: rule__Mais_aux__OperadorAssignment_1 : ( ( '+=' ) ) ;
+    public final void rule__Mais_aux__OperadorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12833:1: ( ( ( '+=' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12834:1: ( ( '+=' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12878:1: ( ( ( '+=' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12879:1: ( ( '+=' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12834:1: ( ( '+=' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12835:1: ( '+=' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12879:1: ( ( '+=' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12880:1: ( '+=' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMais_auxAccess().getOpedadorPlusSignEqualsSignKeyword_1_0()); 
+               before(grammarAccess.getMais_auxAccess().getOperadorPlusSignEqualsSignKeyword_1_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12836:1: ( '+=' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12837:1: '+='
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12881:1: ( '+=' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12882:1: '+='
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMais_auxAccess().getOpedadorPlusSignEqualsSignKeyword_1_0()); 
+               before(grammarAccess.getMais_auxAccess().getOperadorPlusSignEqualsSignKeyword_1_0()); 
             }
-            match(input,91,FOLLOW_91_in_rule__Mais_aux__OpedadorAssignment_126221); if (state.failed) return ;
+            match(input,91,FOLLOW_91_in_rule__Mais_aux__OperadorAssignment_126313); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMais_auxAccess().getOpedadorPlusSignEqualsSignKeyword_1_0()); 
+               after(grammarAccess.getMais_auxAccess().getOperadorPlusSignEqualsSignKeyword_1_0()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMais_auxAccess().getOpedadorPlusSignEqualsSignKeyword_1_0()); 
+               after(grammarAccess.getMais_auxAccess().getOperadorPlusSignEqualsSignKeyword_1_0()); 
             }
 
             }
@@ -37679,26 +37820,26 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Mais_aux__OpedadorAssignment_1"
+    // $ANTLR end "rule__Mais_aux__OperadorAssignment_1"
 
 
     // $ANTLR start "rule__Creating_aux__ArgumentosAssignment_0_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12852:1: rule__Creating_aux__ArgumentosAssignment_0_1 : ( rulearglist ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12897:1: rule__Creating_aux__ArgumentosAssignment_0_1 : ( rulearglist ) ;
     public final void rule__Creating_aux__ArgumentosAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12856:1: ( ( rulearglist ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12857:1: ( rulearglist )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12901:1: ( ( rulearglist ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12902:1: ( rulearglist )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12857:1: ( rulearglist )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12858:1: rulearglist
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12902:1: ( rulearglist )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12903:1: rulearglist
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreating_auxAccess().getArgumentosArglistParserRuleCall_0_1_0()); 
             }
-            pushFollow(FOLLOW_rulearglist_in_rule__Creating_aux__ArgumentosAssignment_0_126260);
+            pushFollow(FOLLOW_rulearglist_in_rule__Creating_aux__ArgumentosAssignment_0_126352);
             rulearglist();
 
             state._fsp--;
@@ -37728,22 +37869,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Aux__EspressaoAssignment_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12867:1: rule__Aux__EspressaoAssignment_1 : ( ruleexpression ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12912:1: rule__Aux__EspressaoAssignment_1 : ( ruleexpression ) ;
     public final void rule__Aux__EspressaoAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12871:1: ( ( ruleexpression ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12872:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12916:1: ( ( ruleexpression ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12917:1: ( ruleexpression )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12872:1: ( ruleexpression )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12873:1: ruleexpression
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12917:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12918:1: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAuxAccess().getEspressaoExpressionParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Aux__EspressaoAssignment_126291);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Aux__EspressaoAssignment_126383);
             ruleexpression();
 
             state._fsp--;
@@ -37773,22 +37914,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Literal_expression__DecimalAssignment_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12882:1: rule__Literal_expression__DecimalAssignment_0 : ( RULE_DECIMAL_DIGITS ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12927:1: rule__Literal_expression__DecimalAssignment_0 : ( RULE_DECIMAL_DIGITS ) ;
     public final void rule__Literal_expression__DecimalAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12886:1: ( ( RULE_DECIMAL_DIGITS ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12887:1: ( RULE_DECIMAL_DIGITS )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12931:1: ( ( RULE_DECIMAL_DIGITS ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12932:1: ( RULE_DECIMAL_DIGITS )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12887:1: ( RULE_DECIMAL_DIGITS )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12888:1: RULE_DECIMAL_DIGITS
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12932:1: ( RULE_DECIMAL_DIGITS )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12933:1: RULE_DECIMAL_DIGITS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteral_expressionAccess().getDecimalDECIMAL_DIGITSTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_DECIMAL_DIGITS,FOLLOW_RULE_DECIMAL_DIGITS_in_rule__Literal_expression__DecimalAssignment_026322); if (state.failed) return ;
+            match(input,RULE_DECIMAL_DIGITS,FOLLOW_RULE_DECIMAL_DIGITS_in_rule__Literal_expression__DecimalAssignment_026414); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLiteral_expressionAccess().getDecimalDECIMAL_DIGITSTerminalRuleCall_0_0()); 
             }
@@ -37814,22 +37955,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Literal_expression__InteiroAssignment_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12897:1: rule__Literal_expression__InteiroAssignment_1 : ( RULE_INTEGER_LITERAL ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12942:1: rule__Literal_expression__InteiroAssignment_1 : ( RULE_INTEGER_LITERAL ) ;
     public final void rule__Literal_expression__InteiroAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12901:1: ( ( RULE_INTEGER_LITERAL ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12902:1: ( RULE_INTEGER_LITERAL )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12946:1: ( ( RULE_INTEGER_LITERAL ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12947:1: ( RULE_INTEGER_LITERAL )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12902:1: ( RULE_INTEGER_LITERAL )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12903:1: RULE_INTEGER_LITERAL
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12947:1: ( RULE_INTEGER_LITERAL )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12948:1: RULE_INTEGER_LITERAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteral_expressionAccess().getInteiroINTEGER_LITERALTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_INTEGER_LITERAL,FOLLOW_RULE_INTEGER_LITERAL_in_rule__Literal_expression__InteiroAssignment_126353); if (state.failed) return ;
+            match(input,RULE_INTEGER_LITERAL,FOLLOW_RULE_INTEGER_LITERAL_in_rule__Literal_expression__InteiroAssignment_126445); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLiteral_expressionAccess().getInteiroINTEGER_LITERALTerminalRuleCall_1_0()); 
             }
@@ -37855,22 +37996,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Literal_expression__FloatAssignment_2"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12912:1: rule__Literal_expression__FloatAssignment_2 : ( RULE_FLOAT_LITERAL ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12957:1: rule__Literal_expression__FloatAssignment_2 : ( RULE_FLOAT_LITERAL ) ;
     public final void rule__Literal_expression__FloatAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12916:1: ( ( RULE_FLOAT_LITERAL ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12917:1: ( RULE_FLOAT_LITERAL )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12961:1: ( ( RULE_FLOAT_LITERAL ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12962:1: ( RULE_FLOAT_LITERAL )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12917:1: ( RULE_FLOAT_LITERAL )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12918:1: RULE_FLOAT_LITERAL
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12962:1: ( RULE_FLOAT_LITERAL )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12963:1: RULE_FLOAT_LITERAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteral_expressionAccess().getFloatFLOAT_LITERALTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_FLOAT_LITERAL,FOLLOW_RULE_FLOAT_LITERAL_in_rule__Literal_expression__FloatAssignment_226384); if (state.failed) return ;
+            match(input,RULE_FLOAT_LITERAL,FOLLOW_RULE_FLOAT_LITERAL_in_rule__Literal_expression__FloatAssignment_226476); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLiteral_expressionAccess().getFloatFLOAT_LITERALTerminalRuleCall_2_0()); 
             }
@@ -37896,22 +38037,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Literal_expression__StringAssignment_3"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12927:1: rule__Literal_expression__StringAssignment_3 : ( RULE_STRING ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12972:1: rule__Literal_expression__StringAssignment_3 : ( RULE_STRING ) ;
     public final void rule__Literal_expression__StringAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12931:1: ( ( RULE_STRING ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12932:1: ( RULE_STRING )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12976:1: ( ( RULE_STRING ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12977:1: ( RULE_STRING )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12932:1: ( RULE_STRING )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12933:1: RULE_STRING
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12977:1: ( RULE_STRING )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12978:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteral_expressionAccess().getStringSTRINGTerminalRuleCall_3_0()); 
             }
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Literal_expression__StringAssignment_326415); if (state.failed) return ;
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Literal_expression__StringAssignment_326507); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLiteral_expressionAccess().getStringSTRINGTerminalRuleCall_3_0()); 
             }
@@ -37937,28 +38078,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Logical_expression__OperadorAssignment_0_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12942:1: rule__Logical_expression__OperadorAssignment_0_0 : ( ( '!' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12987:1: rule__Logical_expression__OperadorAssignment_0_0 : ( ( '!' ) ) ;
     public final void rule__Logical_expression__OperadorAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12946:1: ( ( ( '!' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12947:1: ( ( '!' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12991:1: ( ( ( '!' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12992:1: ( ( '!' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12947:1: ( ( '!' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12948:1: ( '!' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getLogical_expressionAccess().getOperadorExclamationMarkKeyword_0_0_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12949:1: ( '!' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12950:1: '!'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12992:1: ( ( '!' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12993:1: ( '!' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_expressionAccess().getOperadorExclamationMarkKeyword_0_0_0()); 
             }
-            match(input,92,FOLLOW_92_in_rule__Logical_expression__OperadorAssignment_0_026451); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12994:1: ( '!' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12995:1: '!'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getLogical_expressionAccess().getOperadorExclamationMarkKeyword_0_0_0()); 
+            }
+            match(input,92,FOLLOW_92_in_rule__Logical_expression__OperadorAssignment_0_026543); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLogical_expressionAccess().getOperadorExclamationMarkKeyword_0_0_0()); 
             }
@@ -37990,22 +38131,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Logical_expression__ExpressaoAssignment_0_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12965:1: rule__Logical_expression__ExpressaoAssignment_0_1 : ( ruleexpression ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13010:1: rule__Logical_expression__ExpressaoAssignment_0_1 : ( ruleexpression ) ;
     public final void rule__Logical_expression__ExpressaoAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12969:1: ( ( ruleexpression ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12970:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13014:1: ( ( ruleexpression ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13015:1: ( ruleexpression )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12970:1: ( ruleexpression )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12971:1: ruleexpression
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13015:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13016:1: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_expressionAccess().getExpressaoExpressionParserRuleCall_0_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Logical_expression__ExpressaoAssignment_0_126490);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Logical_expression__ExpressaoAssignment_0_126582);
             ruleexpression();
 
             state._fsp--;
@@ -38035,28 +38176,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Logical_expression__OperadorAssignment_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12980:1: rule__Logical_expression__OperadorAssignment_1 : ( ( 'true' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13025:1: rule__Logical_expression__OperadorAssignment_1 : ( ( 'true' ) ) ;
     public final void rule__Logical_expression__OperadorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12984:1: ( ( ( 'true' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12985:1: ( ( 'true' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13029:1: ( ( ( 'true' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13030:1: ( ( 'true' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12985:1: ( ( 'true' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12986:1: ( 'true' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getLogical_expressionAccess().getOperadorTrueKeyword_1_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12987:1: ( 'true' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:12988:1: 'true'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13030:1: ( ( 'true' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13031:1: ( 'true' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_expressionAccess().getOperadorTrueKeyword_1_0()); 
             }
-            match(input,93,FOLLOW_93_in_rule__Logical_expression__OperadorAssignment_126526); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13032:1: ( 'true' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13033:1: 'true'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getLogical_expressionAccess().getOperadorTrueKeyword_1_0()); 
+            }
+            match(input,93,FOLLOW_93_in_rule__Logical_expression__OperadorAssignment_126618); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLogical_expressionAccess().getOperadorTrueKeyword_1_0()); 
             }
@@ -38088,28 +38229,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Logical_expression__OperadorAssignment_2"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13003:1: rule__Logical_expression__OperadorAssignment_2 : ( ( 'false' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13048:1: rule__Logical_expression__OperadorAssignment_2 : ( ( 'false' ) ) ;
     public final void rule__Logical_expression__OperadorAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13007:1: ( ( ( 'false' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13008:1: ( ( 'false' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13052:1: ( ( ( 'false' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13053:1: ( ( 'false' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13008:1: ( ( 'false' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13009:1: ( 'false' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getLogical_expressionAccess().getOperadorFalseKeyword_2_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13010:1: ( 'false' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13011:1: 'false'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13053:1: ( ( 'false' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13054:1: ( 'false' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_expressionAccess().getOperadorFalseKeyword_2_0()); 
             }
-            match(input,94,FOLLOW_94_in_rule__Logical_expression__OperadorAssignment_226570); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13055:1: ( 'false' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13056:1: 'false'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getLogical_expressionAccess().getOperadorFalseKeyword_2_0()); 
+            }
+            match(input,94,FOLLOW_94_in_rule__Logical_expression__OperadorAssignment_226662); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLogical_expressionAccess().getOperadorFalseKeyword_2_0()); 
             }
@@ -38141,28 +38282,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Bit_expression__OperadorAssignment_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13026:1: rule__Bit_expression__OperadorAssignment_0 : ( ( '~' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13071:1: rule__Bit_expression__OperadorAssignment_0 : ( ( '~' ) ) ;
     public final void rule__Bit_expression__OperadorAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13030:1: ( ( ( '~' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13031:1: ( ( '~' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13075:1: ( ( ( '~' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13076:1: ( ( '~' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13031:1: ( ( '~' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13032:1: ( '~' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getBit_expressionAccess().getOperadorTildeKeyword_0_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13033:1: ( '~' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13034:1: '~'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13076:1: ( ( '~' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13077:1: ( '~' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBit_expressionAccess().getOperadorTildeKeyword_0_0()); 
             }
-            match(input,95,FOLLOW_95_in_rule__Bit_expression__OperadorAssignment_026614); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13078:1: ( '~' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13079:1: '~'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getBit_expressionAccess().getOperadorTildeKeyword_0_0()); 
+            }
+            match(input,95,FOLLOW_95_in_rule__Bit_expression__OperadorAssignment_026706); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBit_expressionAccess().getOperadorTildeKeyword_0_0()); 
             }
@@ -38194,22 +38335,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Bit_expression__ExpressaoAssignment_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13049:1: rule__Bit_expression__ExpressaoAssignment_1 : ( ruleexpression ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13094:1: rule__Bit_expression__ExpressaoAssignment_1 : ( ruleexpression ) ;
     public final void rule__Bit_expression__ExpressaoAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13053:1: ( ( ruleexpression ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13054:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13098:1: ( ( ruleexpression ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13099:1: ( ruleexpression )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13054:1: ( ruleexpression )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13055:1: ruleexpression
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13099:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13100:1: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBit_expressionAccess().getExpressaoExpressionParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Bit_expression__ExpressaoAssignment_126653);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Bit_expression__ExpressaoAssignment_126745);
             ruleexpression();
 
             state._fsp--;
@@ -38239,25 +38380,25 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Numeric_expression__OperadorAssignment_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13064:1: rule__Numeric_expression__OperadorAssignment_0 : ( ( rule__Numeric_expression__OperadorAlternatives_0_0 ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13109:1: rule__Numeric_expression__OperadorAssignment_0 : ( ( rule__Numeric_expression__OperadorAlternatives_0_0 ) ) ;
     public final void rule__Numeric_expression__OperadorAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13068:1: ( ( ( rule__Numeric_expression__OperadorAlternatives_0_0 ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13069:1: ( ( rule__Numeric_expression__OperadorAlternatives_0_0 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13113:1: ( ( ( rule__Numeric_expression__OperadorAlternatives_0_0 ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13114:1: ( ( rule__Numeric_expression__OperadorAlternatives_0_0 ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13069:1: ( ( rule__Numeric_expression__OperadorAlternatives_0_0 ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13070:1: ( rule__Numeric_expression__OperadorAlternatives_0_0 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13114:1: ( ( rule__Numeric_expression__OperadorAlternatives_0_0 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13115:1: ( rule__Numeric_expression__OperadorAlternatives_0_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_expressionAccess().getOperadorAlternatives_0_0()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13071:1: ( rule__Numeric_expression__OperadorAlternatives_0_0 )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13071:2: rule__Numeric_expression__OperadorAlternatives_0_0
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13116:1: ( rule__Numeric_expression__OperadorAlternatives_0_0 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13116:2: rule__Numeric_expression__OperadorAlternatives_0_0
             {
-            pushFollow(FOLLOW_rule__Numeric_expression__OperadorAlternatives_0_0_in_rule__Numeric_expression__OperadorAssignment_026684);
+            pushFollow(FOLLOW_rule__Numeric_expression__OperadorAlternatives_0_0_in_rule__Numeric_expression__OperadorAssignment_026776);
             rule__Numeric_expression__OperadorAlternatives_0_0();
 
             state._fsp--;
@@ -38290,22 +38431,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Numeric_expression__ExpressaoAssignment_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13080:1: rule__Numeric_expression__ExpressaoAssignment_1 : ( ruleexpression ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13125:1: rule__Numeric_expression__ExpressaoAssignment_1 : ( ruleexpression ) ;
     public final void rule__Numeric_expression__ExpressaoAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13084:1: ( ( ruleexpression ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13085:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13129:1: ( ( ruleexpression ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13130:1: ( ruleexpression )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13085:1: ( ruleexpression )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13086:1: ruleexpression
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13130:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13131:1: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumeric_expressionAccess().getExpressaoExpressionParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Numeric_expression__ExpressaoAssignment_126717);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Numeric_expression__ExpressaoAssignment_126809);
             ruleexpression();
 
             state._fsp--;
@@ -38335,22 +38476,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Arglist__ExpressoesArgumentosAssignment_0_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13095:1: rule__Arglist__ExpressoesArgumentosAssignment_0_0 : ( ruleexpression ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13140:1: rule__Arglist__ExpressoesArgumentosAssignment_0_0 : ( ruleexpression ) ;
     public final void rule__Arglist__ExpressoesArgumentosAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13099:1: ( ( ruleexpression ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13100:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13144:1: ( ( ruleexpression ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13145:1: ( ruleexpression )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13100:1: ( ruleexpression )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13101:1: ruleexpression
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13145:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13146:1: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArglistAccess().getExpressoesArgumentosExpressionParserRuleCall_0_0_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Arglist__ExpressoesArgumentosAssignment_0_026748);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Arglist__ExpressoesArgumentosAssignment_0_026840);
             ruleexpression();
 
             state._fsp--;
@@ -38380,22 +38521,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Arglist__ExpressoesArgumentosAssignment_0_1_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13110:1: rule__Arglist__ExpressoesArgumentosAssignment_0_1_1 : ( ruleexpression ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13155:1: rule__Arglist__ExpressoesArgumentosAssignment_0_1_1 : ( ruleexpression ) ;
     public final void rule__Arglist__ExpressoesArgumentosAssignment_0_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13114:1: ( ( ruleexpression ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13115:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13159:1: ( ( ruleexpression ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13160:1: ( ruleexpression )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13115:1: ( ruleexpression )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13116:1: ruleexpression
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13160:1: ( ruleexpression )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13161:1: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArglistAccess().getExpressoesArgumentosExpressionParserRuleCall_0_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Arglist__ExpressoesArgumentosAssignment_0_1_126779);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Arglist__ExpressoesArgumentosAssignment_0_1_126871);
             ruleexpression();
 
             state._fsp--;
@@ -38425,22 +38566,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Arglist__TipoParametroAssignment_2_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13125:1: rule__Arglist__TipoParametroAssignment_2_0 : ( ruletype ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13170:1: rule__Arglist__TipoParametroAssignment_2_0 : ( ruletype ) ;
     public final void rule__Arglist__TipoParametroAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13129:1: ( ( ruletype ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13130:1: ( ruletype )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13174:1: ( ( ruletype ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13175:1: ( ruletype )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13130:1: ( ruletype )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13131:1: ruletype
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13175:1: ( ruletype )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13176:1: ruletype
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArglistAccess().getTipoParametroTypeParserRuleCall_2_0_0()); 
             }
-            pushFollow(FOLLOW_ruletype_in_rule__Arglist__TipoParametroAssignment_2_026810);
+            pushFollow(FOLLOW_ruletype_in_rule__Arglist__TipoParametroAssignment_2_026902);
             ruletype();
 
             state._fsp--;
@@ -38470,22 +38611,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Arglist__NomeParametroAssignment_2_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13140:1: rule__Arglist__NomeParametroAssignment_2_1 : ( RULE_IDENTIFIER ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13185:1: rule__Arglist__NomeParametroAssignment_2_1 : ( RULE_IDENTIFIER ) ;
     public final void rule__Arglist__NomeParametroAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13144:1: ( ( RULE_IDENTIFIER ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13145:1: ( RULE_IDENTIFIER )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13189:1: ( ( RULE_IDENTIFIER ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13190:1: ( RULE_IDENTIFIER )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13145:1: ( RULE_IDENTIFIER )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13146:1: RULE_IDENTIFIER
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13190:1: ( RULE_IDENTIFIER )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13191:1: RULE_IDENTIFIER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArglistAccess().getNomeParametroIDENTIFIERTerminalRuleCall_2_1_0()); 
             }
-            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Arglist__NomeParametroAssignment_2_126841); if (state.failed) return ;
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Arglist__NomeParametroAssignment_2_126933); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArglistAccess().getNomeParametroIDENTIFIERTerminalRuleCall_2_1_0()); 
             }
@@ -38511,22 +38652,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Arglist__TipoParametroAssignment_2_2_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13155:1: rule__Arglist__TipoParametroAssignment_2_2_1 : ( ruletype ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13200:1: rule__Arglist__TipoParametroAssignment_2_2_1 : ( ruletype ) ;
     public final void rule__Arglist__TipoParametroAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13159:1: ( ( ruletype ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13160:1: ( ruletype )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13204:1: ( ( ruletype ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13205:1: ( ruletype )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13160:1: ( ruletype )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13161:1: ruletype
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13205:1: ( ruletype )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13206:1: ruletype
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArglistAccess().getTipoParametroTypeParserRuleCall_2_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruletype_in_rule__Arglist__TipoParametroAssignment_2_2_126872);
+            pushFollow(FOLLOW_ruletype_in_rule__Arglist__TipoParametroAssignment_2_2_126964);
             ruletype();
 
             state._fsp--;
@@ -38556,22 +38697,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Arglist__NomeParametroAssignment_2_2_2"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13170:1: rule__Arglist__NomeParametroAssignment_2_2_2 : ( RULE_IDENTIFIER ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13215:1: rule__Arglist__NomeParametroAssignment_2_2_2 : ( RULE_IDENTIFIER ) ;
     public final void rule__Arglist__NomeParametroAssignment_2_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13174:1: ( ( RULE_IDENTIFIER ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13175:1: ( RULE_IDENTIFIER )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13219:1: ( ( RULE_IDENTIFIER ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13220:1: ( RULE_IDENTIFIER )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13175:1: ( RULE_IDENTIFIER )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13176:1: RULE_IDENTIFIER
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13220:1: ( RULE_IDENTIFIER )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13221:1: RULE_IDENTIFIER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArglistAccess().getNomeParametroIDENTIFIERTerminalRuleCall_2_2_2_0()); 
             }
-            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Arglist__NomeParametroAssignment_2_2_226903); if (state.failed) return ;
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Arglist__NomeParametroAssignment_2_2_226995); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArglistAccess().getNomeParametroIDENTIFIERTerminalRuleCall_2_2_2_0()); 
             }
@@ -38597,22 +38738,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Name__NomeAssignment_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13185:1: rule__Name__NomeAssignment_0 : ( RULE_IDENTIFIER ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13230:1: rule__Name__NomeAssignment_0 : ( RULE_IDENTIFIER ) ;
     public final void rule__Name__NomeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13189:1: ( ( RULE_IDENTIFIER ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13190:1: ( RULE_IDENTIFIER )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13234:1: ( ( RULE_IDENTIFIER ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13235:1: ( RULE_IDENTIFIER )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13190:1: ( RULE_IDENTIFIER )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13191:1: RULE_IDENTIFIER
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13235:1: ( RULE_IDENTIFIER )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13236:1: RULE_IDENTIFIER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNameAccess().getNomeIDENTIFIERTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Name__NomeAssignment_026934); if (state.failed) return ;
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Name__NomeAssignment_027026); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNameAccess().getNomeIDENTIFIERTerminalRuleCall_0_0()); 
             }
@@ -38638,22 +38779,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Name__PacoteAssignment_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13200:1: rule__Name__PacoteAssignment_1 : ( rulepackage_name_aux ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13245:1: rule__Name__PacoteAssignment_1 : ( rulepackage_name_aux ) ;
     public final void rule__Name__PacoteAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13204:1: ( ( rulepackage_name_aux ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13205:1: ( rulepackage_name_aux )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13249:1: ( ( rulepackage_name_aux ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13250:1: ( rulepackage_name_aux )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13205:1: ( rulepackage_name_aux )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13206:1: rulepackage_name_aux
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13250:1: ( rulepackage_name_aux )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13251:1: rulepackage_name_aux
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNameAccess().getPacotePackage_name_auxParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_rulepackage_name_aux_in_rule__Name__PacoteAssignment_126965);
+            pushFollow(FOLLOW_rulepackage_name_aux_in_rule__Name__PacoteAssignment_127057);
             rulepackage_name_aux();
 
             state._fsp--;
@@ -38683,22 +38824,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Package_name_aux__NomePacoteAssignment_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13215:1: rule__Package_name_aux__NomePacoteAssignment_1 : ( RULE_IDENTIFIER ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13260:1: rule__Package_name_aux__NomePacoteAssignment_1 : ( RULE_IDENTIFIER ) ;
     public final void rule__Package_name_aux__NomePacoteAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13219:1: ( ( RULE_IDENTIFIER ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13220:1: ( RULE_IDENTIFIER )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13264:1: ( ( RULE_IDENTIFIER ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13265:1: ( RULE_IDENTIFIER )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13220:1: ( RULE_IDENTIFIER )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13221:1: RULE_IDENTIFIER
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13265:1: ( RULE_IDENTIFIER )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13266:1: RULE_IDENTIFIER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPackage_name_auxAccess().getNomePacoteIDENTIFIERTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Package_name_aux__NomePacoteAssignment_126996); if (state.failed) return ;
+            match(input,RULE_IDENTIFIER,FOLLOW_RULE_IDENTIFIER_in_rule__Package_name_aux__NomePacoteAssignment_127088); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPackage_name_auxAccess().getNomePacoteIDENTIFIERTerminalRuleCall_1_0()); 
             }
@@ -38724,22 +38865,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Package_name_aux__PacoteAssignment_2"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13230:1: rule__Package_name_aux__PacoteAssignment_2 : ( rulepackage_name_aux ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13275:1: rule__Package_name_aux__PacoteAssignment_2 : ( rulepackage_name_aux ) ;
     public final void rule__Package_name_aux__PacoteAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13234:1: ( ( rulepackage_name_aux ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13235:1: ( rulepackage_name_aux )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13279:1: ( ( rulepackage_name_aux ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13280:1: ( rulepackage_name_aux )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13235:1: ( rulepackage_name_aux )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13236:1: rulepackage_name_aux
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13280:1: ( rulepackage_name_aux )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13281:1: rulepackage_name_aux
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPackage_name_auxAccess().getPacotePackage_name_auxParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_rulepackage_name_aux_in_rule__Package_name_aux__PacoteAssignment_227027);
+            pushFollow(FOLLOW_rulepackage_name_aux_in_rule__Package_name_aux__PacoteAssignment_227119);
             rulepackage_name_aux();
 
             state._fsp--;
@@ -38769,28 +38910,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Type_specifier__NomeAssignment_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13245:1: rule__Type_specifier__NomeAssignment_0 : ( ( 'boolean' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13290:1: rule__Type_specifier__NomeAssignment_0 : ( ( 'boolean' ) ) ;
     public final void rule__Type_specifier__NomeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13249:1: ( ( ( 'boolean' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13250:1: ( ( 'boolean' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13294:1: ( ( ( 'boolean' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13295:1: ( ( 'boolean' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13250:1: ( ( 'boolean' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13251:1: ( 'boolean' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getType_specifierAccess().getNomeBooleanKeyword_0_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13252:1: ( 'boolean' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13253:1: 'boolean'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13295:1: ( ( 'boolean' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13296:1: ( 'boolean' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getNomeBooleanKeyword_0_0()); 
             }
-            match(input,96,FOLLOW_96_in_rule__Type_specifier__NomeAssignment_027063); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13297:1: ( 'boolean' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13298:1: 'boolean'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getType_specifierAccess().getNomeBooleanKeyword_0_0()); 
+            }
+            match(input,96,FOLLOW_96_in_rule__Type_specifier__NomeAssignment_027155); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getNomeBooleanKeyword_0_0()); 
             }
@@ -38822,28 +38963,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Type_specifier__NomeAssignment_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13268:1: rule__Type_specifier__NomeAssignment_1 : ( ( 'byte' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13313:1: rule__Type_specifier__NomeAssignment_1 : ( ( 'byte' ) ) ;
     public final void rule__Type_specifier__NomeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13272:1: ( ( ( 'byte' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13273:1: ( ( 'byte' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13317:1: ( ( ( 'byte' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13318:1: ( ( 'byte' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13273:1: ( ( 'byte' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13274:1: ( 'byte' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getType_specifierAccess().getNomeByteKeyword_1_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13275:1: ( 'byte' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13276:1: 'byte'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13318:1: ( ( 'byte' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13319:1: ( 'byte' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getNomeByteKeyword_1_0()); 
             }
-            match(input,97,FOLLOW_97_in_rule__Type_specifier__NomeAssignment_127107); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13320:1: ( 'byte' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13321:1: 'byte'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getType_specifierAccess().getNomeByteKeyword_1_0()); 
+            }
+            match(input,97,FOLLOW_97_in_rule__Type_specifier__NomeAssignment_127199); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getNomeByteKeyword_1_0()); 
             }
@@ -38875,28 +39016,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Type_specifier__NomeAssignment_2"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13291:1: rule__Type_specifier__NomeAssignment_2 : ( ( 'char' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13336:1: rule__Type_specifier__NomeAssignment_2 : ( ( 'char' ) ) ;
     public final void rule__Type_specifier__NomeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13295:1: ( ( ( 'char' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13296:1: ( ( 'char' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13340:1: ( ( ( 'char' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13341:1: ( ( 'char' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13296:1: ( ( 'char' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13297:1: ( 'char' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getType_specifierAccess().getNomeCharKeyword_2_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13298:1: ( 'char' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13299:1: 'char'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13341:1: ( ( 'char' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13342:1: ( 'char' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getNomeCharKeyword_2_0()); 
             }
-            match(input,98,FOLLOW_98_in_rule__Type_specifier__NomeAssignment_227151); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13343:1: ( 'char' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13344:1: 'char'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getType_specifierAccess().getNomeCharKeyword_2_0()); 
+            }
+            match(input,98,FOLLOW_98_in_rule__Type_specifier__NomeAssignment_227243); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getNomeCharKeyword_2_0()); 
             }
@@ -38928,28 +39069,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Type_specifier__NomeAssignment_3"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13314:1: rule__Type_specifier__NomeAssignment_3 : ( ( 'short' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13359:1: rule__Type_specifier__NomeAssignment_3 : ( ( 'short' ) ) ;
     public final void rule__Type_specifier__NomeAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13318:1: ( ( ( 'short' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13319:1: ( ( 'short' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13363:1: ( ( ( 'short' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13364:1: ( ( 'short' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13319:1: ( ( 'short' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13320:1: ( 'short' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getType_specifierAccess().getNomeShortKeyword_3_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13321:1: ( 'short' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13322:1: 'short'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13364:1: ( ( 'short' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13365:1: ( 'short' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getNomeShortKeyword_3_0()); 
             }
-            match(input,99,FOLLOW_99_in_rule__Type_specifier__NomeAssignment_327195); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13366:1: ( 'short' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13367:1: 'short'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getType_specifierAccess().getNomeShortKeyword_3_0()); 
+            }
+            match(input,99,FOLLOW_99_in_rule__Type_specifier__NomeAssignment_327287); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getNomeShortKeyword_3_0()); 
             }
@@ -38981,28 +39122,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Type_specifier__NomeAssignment_4"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13337:1: rule__Type_specifier__NomeAssignment_4 : ( ( 'int' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13382:1: rule__Type_specifier__NomeAssignment_4 : ( ( 'int' ) ) ;
     public final void rule__Type_specifier__NomeAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13341:1: ( ( ( 'int' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13342:1: ( ( 'int' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13386:1: ( ( ( 'int' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13387:1: ( ( 'int' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13342:1: ( ( 'int' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13343:1: ( 'int' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getType_specifierAccess().getNomeIntKeyword_4_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13344:1: ( 'int' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13345:1: 'int'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13387:1: ( ( 'int' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13388:1: ( 'int' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getNomeIntKeyword_4_0()); 
             }
-            match(input,100,FOLLOW_100_in_rule__Type_specifier__NomeAssignment_427239); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13389:1: ( 'int' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13390:1: 'int'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getType_specifierAccess().getNomeIntKeyword_4_0()); 
+            }
+            match(input,100,FOLLOW_100_in_rule__Type_specifier__NomeAssignment_427331); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getNomeIntKeyword_4_0()); 
             }
@@ -39034,28 +39175,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Type_specifier__NomeAssignment_5"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13360:1: rule__Type_specifier__NomeAssignment_5 : ( ( 'float' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13405:1: rule__Type_specifier__NomeAssignment_5 : ( ( 'float' ) ) ;
     public final void rule__Type_specifier__NomeAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13364:1: ( ( ( 'float' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13365:1: ( ( 'float' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13409:1: ( ( ( 'float' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13410:1: ( ( 'float' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13365:1: ( ( 'float' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13366:1: ( 'float' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getType_specifierAccess().getNomeFloatKeyword_5_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13367:1: ( 'float' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13368:1: 'float'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13410:1: ( ( 'float' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13411:1: ( 'float' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getNomeFloatKeyword_5_0()); 
             }
-            match(input,101,FOLLOW_101_in_rule__Type_specifier__NomeAssignment_527283); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13412:1: ( 'float' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13413:1: 'float'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getType_specifierAccess().getNomeFloatKeyword_5_0()); 
+            }
+            match(input,101,FOLLOW_101_in_rule__Type_specifier__NomeAssignment_527375); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getNomeFloatKeyword_5_0()); 
             }
@@ -39087,28 +39228,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Type_specifier__NomeAssignment_6"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13383:1: rule__Type_specifier__NomeAssignment_6 : ( ( 'long' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13428:1: rule__Type_specifier__NomeAssignment_6 : ( ( 'long' ) ) ;
     public final void rule__Type_specifier__NomeAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13387:1: ( ( ( 'long' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13388:1: ( ( 'long' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13432:1: ( ( ( 'long' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13433:1: ( ( 'long' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13388:1: ( ( 'long' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13389:1: ( 'long' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getType_specifierAccess().getNomeLongKeyword_6_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13390:1: ( 'long' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13391:1: 'long'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13433:1: ( ( 'long' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13434:1: ( 'long' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getNomeLongKeyword_6_0()); 
             }
-            match(input,102,FOLLOW_102_in_rule__Type_specifier__NomeAssignment_627327); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13435:1: ( 'long' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13436:1: 'long'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getType_specifierAccess().getNomeLongKeyword_6_0()); 
+            }
+            match(input,102,FOLLOW_102_in_rule__Type_specifier__NomeAssignment_627419); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getNomeLongKeyword_6_0()); 
             }
@@ -39140,28 +39281,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Type_specifier__NomeAssignment_7"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13406:1: rule__Type_specifier__NomeAssignment_7 : ( ( 'double' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13451:1: rule__Type_specifier__NomeAssignment_7 : ( ( 'double' ) ) ;
     public final void rule__Type_specifier__NomeAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13410:1: ( ( ( 'double' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13411:1: ( ( 'double' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13455:1: ( ( ( 'double' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13456:1: ( ( 'double' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13411:1: ( ( 'double' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13412:1: ( 'double' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getType_specifierAccess().getNomeDoubleKeyword_7_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13413:1: ( 'double' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13414:1: 'double'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13456:1: ( ( 'double' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13457:1: ( 'double' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getNomeDoubleKeyword_7_0()); 
             }
-            match(input,103,FOLLOW_103_in_rule__Type_specifier__NomeAssignment_727371); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13458:1: ( 'double' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13459:1: 'double'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getType_specifierAccess().getNomeDoubleKeyword_7_0()); 
+            }
+            match(input,103,FOLLOW_103_in_rule__Type_specifier__NomeAssignment_727463); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getNomeDoubleKeyword_7_0()); 
             }
@@ -39193,22 +39334,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Type__TipoAssignment_0_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13429:1: rule__Type__TipoAssignment_0_0 : ( ruletype_specifier ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13474:1: rule__Type__TipoAssignment_0_0 : ( ruletype_specifier ) ;
     public final void rule__Type__TipoAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13433:1: ( ( ruletype_specifier ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13434:1: ( ruletype_specifier )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13478:1: ( ( ruletype_specifier ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13479:1: ( ruletype_specifier )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13434:1: ( ruletype_specifier )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13435:1: ruletype_specifier
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13479:1: ( ruletype_specifier )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13480:1: ruletype_specifier
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeAccess().getTipoType_specifierParserRuleCall_0_0_0()); 
             }
-            pushFollow(FOLLOW_ruletype_specifier_in_rule__Type__TipoAssignment_0_027410);
+            pushFollow(FOLLOW_ruletype_specifier_in_rule__Type__TipoAssignment_0_027502);
             ruletype_specifier();
 
             state._fsp--;
@@ -39238,22 +39379,22 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Type__TipoAssignment_0_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13444:1: rule__Type__TipoAssignment_0_1 : ( rulename ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13489:1: rule__Type__TipoAssignment_0_1 : ( rulename ) ;
     public final void rule__Type__TipoAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13448:1: ( ( rulename ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13449:1: ( rulename )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13493:1: ( ( rulename ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13494:1: ( rulename )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13449:1: ( rulename )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13450:1: rulename
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13494:1: ( rulename )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13495:1: rulename
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeAccess().getTipoNameParserRuleCall_0_1_0()); 
             }
-            pushFollow(FOLLOW_rulename_in_rule__Type__TipoAssignment_0_127441);
+            pushFollow(FOLLOW_rulename_in_rule__Type__TipoAssignment_0_127533);
             rulename();
 
             state._fsp--;
@@ -39283,28 +39424,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MODIFIER__ModificadorAssignment_0"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13459:1: rule__MODIFIER__ModificadorAssignment_0 : ( ( 'public' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13504:1: rule__MODIFIER__ModificadorAssignment_0 : ( ( 'public' ) ) ;
     public final void rule__MODIFIER__ModificadorAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13463:1: ( ( ( 'public' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13464:1: ( ( 'public' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13508:1: ( ( ( 'public' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13509:1: ( ( 'public' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13464:1: ( ( 'public' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13465:1: ( 'public' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getMODIFIERAccess().getModificadorPublicKeyword_0_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13466:1: ( 'public' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13467:1: 'public'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13509:1: ( ( 'public' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13510:1: ( 'public' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMODIFIERAccess().getModificadorPublicKeyword_0_0()); 
             }
-            match(input,104,FOLLOW_104_in_rule__MODIFIER__ModificadorAssignment_027477); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13511:1: ( 'public' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13512:1: 'public'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMODIFIERAccess().getModificadorPublicKeyword_0_0()); 
+            }
+            match(input,104,FOLLOW_104_in_rule__MODIFIER__ModificadorAssignment_027569); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMODIFIERAccess().getModificadorPublicKeyword_0_0()); 
             }
@@ -39336,28 +39477,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MODIFIER__ModificadorAssignment_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13482:1: rule__MODIFIER__ModificadorAssignment_1 : ( ( 'private' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13527:1: rule__MODIFIER__ModificadorAssignment_1 : ( ( 'private' ) ) ;
     public final void rule__MODIFIER__ModificadorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13486:1: ( ( ( 'private' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13487:1: ( ( 'private' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13531:1: ( ( ( 'private' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13532:1: ( ( 'private' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13487:1: ( ( 'private' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13488:1: ( 'private' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getMODIFIERAccess().getModificadorPrivateKeyword_1_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13489:1: ( 'private' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13490:1: 'private'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13532:1: ( ( 'private' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13533:1: ( 'private' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMODIFIERAccess().getModificadorPrivateKeyword_1_0()); 
             }
-            match(input,105,FOLLOW_105_in_rule__MODIFIER__ModificadorAssignment_127521); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13534:1: ( 'private' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13535:1: 'private'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMODIFIERAccess().getModificadorPrivateKeyword_1_0()); 
+            }
+            match(input,105,FOLLOW_105_in_rule__MODIFIER__ModificadorAssignment_127613); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMODIFIERAccess().getModificadorPrivateKeyword_1_0()); 
             }
@@ -39389,28 +39530,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MODIFIER__ModificadorAssignment_2"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13505:1: rule__MODIFIER__ModificadorAssignment_2 : ( ( 'protected' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13550:1: rule__MODIFIER__ModificadorAssignment_2 : ( ( 'protected' ) ) ;
     public final void rule__MODIFIER__ModificadorAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13509:1: ( ( ( 'protected' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13510:1: ( ( 'protected' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13554:1: ( ( ( 'protected' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13555:1: ( ( 'protected' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13510:1: ( ( 'protected' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13511:1: ( 'protected' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getMODIFIERAccess().getModificadorProtectedKeyword_2_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13512:1: ( 'protected' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13513:1: 'protected'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13555:1: ( ( 'protected' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13556:1: ( 'protected' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMODIFIERAccess().getModificadorProtectedKeyword_2_0()); 
             }
-            match(input,106,FOLLOW_106_in_rule__MODIFIER__ModificadorAssignment_227565); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13557:1: ( 'protected' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13558:1: 'protected'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMODIFIERAccess().getModificadorProtectedKeyword_2_0()); 
+            }
+            match(input,106,FOLLOW_106_in_rule__MODIFIER__ModificadorAssignment_227657); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMODIFIERAccess().getModificadorProtectedKeyword_2_0()); 
             }
@@ -39442,28 +39583,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MODIFIER__ModificadorAssignment_3"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13528:1: rule__MODIFIER__ModificadorAssignment_3 : ( ( 'static' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13573:1: rule__MODIFIER__ModificadorAssignment_3 : ( ( 'static' ) ) ;
     public final void rule__MODIFIER__ModificadorAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13532:1: ( ( ( 'static' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13533:1: ( ( 'static' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13577:1: ( ( ( 'static' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13578:1: ( ( 'static' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13533:1: ( ( 'static' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13534:1: ( 'static' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getMODIFIERAccess().getModificadorStaticKeyword_3_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13535:1: ( 'static' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13536:1: 'static'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13578:1: ( ( 'static' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13579:1: ( 'static' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMODIFIERAccess().getModificadorStaticKeyword_3_0()); 
             }
-            match(input,79,FOLLOW_79_in_rule__MODIFIER__ModificadorAssignment_327609); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13580:1: ( 'static' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13581:1: 'static'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMODIFIERAccess().getModificadorStaticKeyword_3_0()); 
+            }
+            match(input,79,FOLLOW_79_in_rule__MODIFIER__ModificadorAssignment_327701); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMODIFIERAccess().getModificadorStaticKeyword_3_0()); 
             }
@@ -39495,28 +39636,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MODIFIER__ModificadorAssignment_4"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13551:1: rule__MODIFIER__ModificadorAssignment_4 : ( ( 'final' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13596:1: rule__MODIFIER__ModificadorAssignment_4 : ( ( 'final' ) ) ;
     public final void rule__MODIFIER__ModificadorAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13555:1: ( ( ( 'final' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13556:1: ( ( 'final' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13600:1: ( ( ( 'final' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13601:1: ( ( 'final' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13556:1: ( ( 'final' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13557:1: ( 'final' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getMODIFIERAccess().getModificadorFinalKeyword_4_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13558:1: ( 'final' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13559:1: 'final'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13601:1: ( ( 'final' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13602:1: ( 'final' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMODIFIERAccess().getModificadorFinalKeyword_4_0()); 
             }
-            match(input,107,FOLLOW_107_in_rule__MODIFIER__ModificadorAssignment_427653); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13603:1: ( 'final' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13604:1: 'final'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMODIFIERAccess().getModificadorFinalKeyword_4_0()); 
+            }
+            match(input,107,FOLLOW_107_in_rule__MODIFIER__ModificadorAssignment_427745); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMODIFIERAccess().getModificadorFinalKeyword_4_0()); 
             }
@@ -39548,28 +39689,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MODIFIER__ModificadorAssignment_5"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13574:1: rule__MODIFIER__ModificadorAssignment_5 : ( ( 'native' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13619:1: rule__MODIFIER__ModificadorAssignment_5 : ( ( 'native' ) ) ;
     public final void rule__MODIFIER__ModificadorAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13578:1: ( ( ( 'native' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13579:1: ( ( 'native' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13623:1: ( ( ( 'native' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13624:1: ( ( 'native' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13579:1: ( ( 'native' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13580:1: ( 'native' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getMODIFIERAccess().getModificadorNativeKeyword_5_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13581:1: ( 'native' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13582:1: 'native'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13624:1: ( ( 'native' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13625:1: ( 'native' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMODIFIERAccess().getModificadorNativeKeyword_5_0()); 
             }
-            match(input,108,FOLLOW_108_in_rule__MODIFIER__ModificadorAssignment_527697); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13626:1: ( 'native' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13627:1: 'native'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMODIFIERAccess().getModificadorNativeKeyword_5_0()); 
+            }
+            match(input,108,FOLLOW_108_in_rule__MODIFIER__ModificadorAssignment_527789); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMODIFIERAccess().getModificadorNativeKeyword_5_0()); 
             }
@@ -39601,28 +39742,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MODIFIER__ModificadorAssignment_6"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13597:1: rule__MODIFIER__ModificadorAssignment_6 : ( ( 'synchronized' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13642:1: rule__MODIFIER__ModificadorAssignment_6 : ( ( 'synchronized' ) ) ;
     public final void rule__MODIFIER__ModificadorAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13601:1: ( ( ( 'synchronized' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13602:1: ( ( 'synchronized' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13646:1: ( ( ( 'synchronized' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13647:1: ( ( 'synchronized' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13602:1: ( ( 'synchronized' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13603:1: ( 'synchronized' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getMODIFIERAccess().getModificadorSynchronizedKeyword_6_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13604:1: ( 'synchronized' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13605:1: 'synchronized'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13647:1: ( ( 'synchronized' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13648:1: ( 'synchronized' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMODIFIERAccess().getModificadorSynchronizedKeyword_6_0()); 
             }
-            match(input,61,FOLLOW_61_in_rule__MODIFIER__ModificadorAssignment_627741); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13649:1: ( 'synchronized' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13650:1: 'synchronized'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMODIFIERAccess().getModificadorSynchronizedKeyword_6_0()); 
+            }
+            match(input,61,FOLLOW_61_in_rule__MODIFIER__ModificadorAssignment_627833); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMODIFIERAccess().getModificadorSynchronizedKeyword_6_0()); 
             }
@@ -39654,28 +39795,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MODIFIER__ModificadorAssignment_7"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13620:1: rule__MODIFIER__ModificadorAssignment_7 : ( ( 'abstract' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13665:1: rule__MODIFIER__ModificadorAssignment_7 : ( ( 'abstract' ) ) ;
     public final void rule__MODIFIER__ModificadorAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13624:1: ( ( ( 'abstract' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13625:1: ( ( 'abstract' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13669:1: ( ( ( 'abstract' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13670:1: ( ( 'abstract' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13625:1: ( ( 'abstract' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13626:1: ( 'abstract' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getMODIFIERAccess().getModificadorAbstractKeyword_7_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13627:1: ( 'abstract' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13628:1: 'abstract'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13670:1: ( ( 'abstract' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13671:1: ( 'abstract' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMODIFIERAccess().getModificadorAbstractKeyword_7_0()); 
             }
-            match(input,109,FOLLOW_109_in_rule__MODIFIER__ModificadorAssignment_727785); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13672:1: ( 'abstract' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13673:1: 'abstract'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMODIFIERAccess().getModificadorAbstractKeyword_7_0()); 
+            }
+            match(input,109,FOLLOW_109_in_rule__MODIFIER__ModificadorAssignment_727877); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMODIFIERAccess().getModificadorAbstractKeyword_7_0()); 
             }
@@ -39707,28 +39848,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MODIFIER__ModificadorAssignment_8"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13643:1: rule__MODIFIER__ModificadorAssignment_8 : ( ( 'threadsafe' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13688:1: rule__MODIFIER__ModificadorAssignment_8 : ( ( 'threadsafe' ) ) ;
     public final void rule__MODIFIER__ModificadorAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13647:1: ( ( ( 'threadsafe' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13648:1: ( ( 'threadsafe' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13692:1: ( ( ( 'threadsafe' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13693:1: ( ( 'threadsafe' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13648:1: ( ( 'threadsafe' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13649:1: ( 'threadsafe' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getMODIFIERAccess().getModificadorThreadsafeKeyword_8_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13650:1: ( 'threadsafe' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13651:1: 'threadsafe'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13693:1: ( ( 'threadsafe' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13694:1: ( 'threadsafe' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMODIFIERAccess().getModificadorThreadsafeKeyword_8_0()); 
             }
-            match(input,110,FOLLOW_110_in_rule__MODIFIER__ModificadorAssignment_827829); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13695:1: ( 'threadsafe' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13696:1: 'threadsafe'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMODIFIERAccess().getModificadorThreadsafeKeyword_8_0()); 
+            }
+            match(input,110,FOLLOW_110_in_rule__MODIFIER__ModificadorAssignment_827921); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMODIFIERAccess().getModificadorThreadsafeKeyword_8_0()); 
             }
@@ -39760,28 +39901,28 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MODIFIER__ModificadorAssignment_9"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13666:1: rule__MODIFIER__ModificadorAssignment_9 : ( ( 'transient' ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13711:1: rule__MODIFIER__ModificadorAssignment_9 : ( ( 'transient' ) ) ;
     public final void rule__MODIFIER__ModificadorAssignment_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13670:1: ( ( ( 'transient' ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13671:1: ( ( 'transient' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13715:1: ( ( ( 'transient' ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13716:1: ( ( 'transient' ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13671:1: ( ( 'transient' ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13672:1: ( 'transient' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getMODIFIERAccess().getModificadorTransientKeyword_9_0()); 
-            }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13673:1: ( 'transient' )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13674:1: 'transient'
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13716:1: ( ( 'transient' ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13717:1: ( 'transient' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMODIFIERAccess().getModificadorTransientKeyword_9_0()); 
             }
-            match(input,111,FOLLOW_111_in_rule__MODIFIER__ModificadorAssignment_927873); if (state.failed) return ;
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13718:1: ( 'transient' )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13719:1: 'transient'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getMODIFIERAccess().getModificadorTransientKeyword_9_0()); 
+            }
+            match(input,111,FOLLOW_111_in_rule__MODIFIER__ModificadorAssignment_927965); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMODIFIERAccess().getModificadorTransientKeyword_9_0()); 
             }
@@ -40125,7 +40266,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1838:1: ( rule__Expression_aux__Group_0_1__0 )
         // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1838:2: rule__Expression_aux__Group_0_1__0
         {
-        pushFollow(FOLLOW_rule__Expression_aux__Group_0_1__0_in_synpred48_InternalSimpleJava4052);
+        pushFollow(FOLLOW_rule__Expression_aux__Group_0_1__0_in_synpred48_InternalSimpleJava4053);
         rule__Expression_aux__Group_0_1__0();
 
         state._fsp--;
@@ -40155,7 +40296,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1850:1: ( rule__Expression_aux__Group_0_3__0 )
         // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:1850:2: rule__Expression_aux__Group_0_3__0
         {
-        pushFollow(FOLLOW_rule__Expression_aux__Group_0_3__0_in_synpred50_InternalSimpleJava4088);
+        pushFollow(FOLLOW_rule__Expression_aux__Group_0_3__0_in_synpred50_InternalSimpleJava4089);
         rule__Expression_aux__Group_0_3__0();
 
         state._fsp--;
@@ -40281,7 +40422,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9910:2: ( rule__Creating_aux__Group_1_0__0 )
         // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:9910:2: rule__Creating_aux__Group_1_0__0
         {
-        pushFollow(FOLLOW_rule__Creating_aux__Group_1_0__0_in_synpred158_InternalSimpleJava20313);
+        pushFollow(FOLLOW_rule__Creating_aux__Group_1_0__0_in_synpred158_InternalSimpleJava20312);
         rule__Creating_aux__Group_1_0__0();
 
         state._fsp--;
@@ -42214,7 +42355,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             this.transition = DFA20_transition;
         }
         public String getDescription() {
-            return "1825:1: rule__Expression_aux__Alternatives_0 : ( ( ( rule__Expression_aux__Alternatives_0_0 ) ) | ( ( rule__Expression_aux__Group_0_1__0 ) ) | ( ( rule__Expression_aux__OpedadorAssignment_0_2 ) ) | ( ( rule__Expression_aux__Group_0_3__0 ) ) | ( ( rule__Expression_aux__Alternatives_0_4 ) ) );";
+            return "1825:1: rule__Expression_aux__Alternatives_0 : ( ( ( rule__Expression_aux__Alternatives_0_0 ) ) | ( ( rule__Expression_aux__Group_0_1__0 ) ) | ( ( rule__Expression_aux__OperadorAssignment_0_2 ) ) | ( ( rule__Expression_aux__Group_0_3__0 ) ) | ( ( rule__Expression_aux__Alternatives_0_4 ) ) );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -43165,29 +43306,29 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_20_in_rule__Expression__Alternatives_03925 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_21_in_rule__Expression__Alternatives_03945 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_22_in_rule__Expression__Alternatives_03965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Expression__Alternatives_03984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_0_9__0_in_rule__Expression__Alternatives_04001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Alternatives_0_0_in_rule__Expression_aux__Alternatives_04034 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_1__0_in_rule__Expression_aux__Alternatives_04052 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OpedadorAssignment_0_2_in_rule__Expression_aux__Alternatives_04070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_3__0_in_rule__Expression_aux__Alternatives_04088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Alternatives_0_4_in_rule__Expression_aux__Alternatives_04106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_0_0__0_in_rule__Expression_aux__Alternatives_0_04139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleaux_in_rule__Expression_aux__Alternatives_0_04157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_0_2__0_in_rule__Expression_aux__Alternatives_0_04174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_0_3__0_in_rule__Expression_aux__Alternatives_0_04192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_0_4__0_in_rule__Expression_aux__Alternatives_0_04210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Expression_aux__OpedadorAlternatives_0_2_04244 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Expression_aux__OpedadorAlternatives_0_2_04264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulemais_aux_in_rule__Expression_aux__Alternatives_0_3_04299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_1_in_rule__Expression_aux__Alternatives_0_3_04317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_2_in_rule__Expression_aux__Alternatives_0_3_04335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_3_in_rule__Expression_aux__Alternatives_0_3_04353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_4_in_rule__Expression_aux__Alternatives_0_3_04371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_5_in_rule__Expression_aux__Alternatives_0_3_04389 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_6_in_rule__Expression_aux__Alternatives_0_3_04407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_7_in_rule__Expression_aux__Alternatives_0_3_04425 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OpedadorAssignment_0_3_0_8_in_rule__Expression_aux__Alternatives_0_3_04443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__IdentificadorAssignment_0_8_in_rule__Expression__Alternatives_03984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_0_9__0_in_rule__Expression__Alternatives_04002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Alternatives_0_0_in_rule__Expression_aux__Alternatives_04035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_1__0_in_rule__Expression_aux__Alternatives_04053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAssignment_0_2_in_rule__Expression_aux__Alternatives_04071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_3__0_in_rule__Expression_aux__Alternatives_04089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Alternatives_0_4_in_rule__Expression_aux__Alternatives_04107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_0_0__0_in_rule__Expression_aux__Alternatives_0_04140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleaux_in_rule__Expression_aux__Alternatives_0_04158 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_0_2__0_in_rule__Expression_aux__Alternatives_0_04175 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_0_3__0_in_rule__Expression_aux__Alternatives_0_04193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_0_4__0_in_rule__Expression_aux__Alternatives_0_04211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Expression_aux__OperadorAlternatives_0_2_04245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Expression_aux__OperadorAlternatives_0_2_04265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OpAssignment_0_3_0_0_in_rule__Expression_aux__Alternatives_0_3_04299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_1_in_rule__Expression_aux__Alternatives_0_3_04317 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_2_in_rule__Expression_aux__Alternatives_0_3_04335 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_3_in_rule__Expression_aux__Alternatives_0_3_04353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_4_in_rule__Expression_aux__Alternatives_0_3_04371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_5_in_rule__Expression_aux__Alternatives_0_3_04389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_6_in_rule__Expression_aux__Alternatives_0_3_04407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_7_in_rule__Expression_aux__Alternatives_0_3_04425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAssignment_0_3_0_8_in_rule__Expression_aux__Alternatives_0_3_04443 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0__0_in_rule__Expression_aux__Alternatives_0_44476 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__0_in_rule__Expression_aux__Alternatives_0_44494 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_2__0_in_rule__Expression_aux__Alternatives_0_44512 = new BitSet(new long[]{0x0000000000000002L});
@@ -43202,18 +43343,18 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_31_in_rule__Expression_aux__Alternatives_0_4_0_04702 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_32_in_rule__Expression_aux__Alternatives_0_4_0_04723 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_33_in_rule__Expression_aux__Alternatives_0_4_0_04744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_04779 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_04799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_04819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_04839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_04859 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_04879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Expression_aux__OperadorAlternatives_0_4_2_0_04779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Expression_aux__OperadorAlternatives_0_4_2_0_04799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Expression_aux__OperadorAlternatives_0_4_2_0_04819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Expression_aux__OperadorAlternatives_0_4_2_0_04839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Expression_aux__OperadorAlternatives_0_4_2_0_04859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__Expression_aux__OperadorAlternatives_0_4_2_0_04879 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_40_in_rule__Expression_aux__OperadorAlternatives_0_4_3_0_04914 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_41_in_rule__Expression_aux__OperadorAlternatives_0_4_3_0_04934 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_42_in_rule__Expression_aux__OperadorAlternatives_0_4_3_0_04954 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_43_in_rule__Expression_aux__OperadorAlternatives_0_4_3_0_04974 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mais_aux__OpedadorAssignment_0_in_rule__Mais_aux__Alternatives5008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Mais_aux__OpedadorAssignment_1_in_rule__Mais_aux__Alternatives5026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mais_aux__OperadorAssignment_0_in_rule__Mais_aux__Alternatives5008 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Mais_aux__OperadorAssignment_1_in_rule__Mais_aux__Alternatives5026 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Creating_aux__Group_0__0_in_rule__Creating_aux__Alternatives5059 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Creating_aux__Group_1__0_in_rule__Creating_aux__Alternatives5077 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Literal_expression__DecimalAssignment_0_in_rule__Literal_expression__Alternatives5110 = new BitSet(new long[]{0x0000000000000002L});
@@ -43816,314 +43957,317 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_rulename_in_rule__Expression_aux__Group_0_0_4__1__Impl18895 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression_aux__Group_0_1__0__Impl_in_rule__Expression_aux__Group_0_1__018929 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
     public static final BitSet FOLLOW_rule__Expression_aux__Group_0_1__1_in_rule__Expression_aux__Group_0_1__018932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulemais_aux_in_rule__Expression_aux__Group_0_1__0__Impl18960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_1__1__Impl_in_rule__Expression_aux__Group_0_1__118990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__ExpAssignment_0_1_1_in_rule__Expression_aux__Group_0_1__1__Impl19017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_3__0__Impl_in_rule__Expression_aux__Group_0_3__019051 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_3__1_in_rule__Expression_aux__Group_0_3__019054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Alternatives_0_3_0_in_rule__Expression_aux__Group_0_3__0__Impl19081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_3__1__Impl_in_rule__Expression_aux__Group_0_3__119111 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__ExpAssignment_0_3_1_in_rule__Expression_aux__Group_0_3__1__Impl19138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0__0__Impl_in_rule__Expression_aux__Group_0_4_0__019172 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0__1_in_rule__Expression_aux__Group_0_4_0__019175 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Alternatives_0_4_0_0_in_rule__Expression_aux__Group_0_4_0__0__Impl19202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0__1__Impl_in_rule__Expression_aux__Group_0_4_0__119232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__Group_0_4_0__1__Impl19259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0_0_6__0__Impl_in_rule__Expression_aux__Group_0_4_0_0_6__019292 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0_0_6__1_in_rule__Expression_aux__Group_0_4_0_0_6__019295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Expression_aux__Group_0_4_0_0_6__0__Impl19323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0_0_6__1__Impl_in_rule__Expression_aux__Group_0_4_0_0_6__119354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Expression_aux__Group_0_4_0_0_6__1__Impl19382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__0__Impl_in_rule__Expression_aux__Group_0_4_1__019417 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__1_in_rule__Expression_aux__Group_0_4_1__019420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Expression_aux__Group_0_4_1__0__Impl19448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__1__Impl_in_rule__Expression_aux__Group_0_4_1__119479 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__2_in_rule__Expression_aux__Group_0_4_1__119482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__Group_0_4_1__1__Impl19509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__2__Impl_in_rule__Expression_aux__Group_0_4_1__219538 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__3_in_rule__Expression_aux__Group_0_4_1__219541 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_rule__Expression_aux__Group_0_4_1__2__Impl19569 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__3__Impl_in_rule__Expression_aux__Group_0_4_1__319600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__ExpressaoAssignment_0_4_1_3_in_rule__Expression_aux__Group_0_4_1__3__Impl19627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_2__0__Impl_in_rule__Expression_aux__Group_0_4_2__019665 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_2__1_in_rule__Expression_aux__Group_0_4_2__019668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OpedadorAssignment_0_4_2_0_in_rule__Expression_aux__Group_0_4_2__0__Impl19695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_2__1__Impl_in_rule__Expression_aux__Group_0_4_2__119725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__ExpAssignment_0_4_2_1_in_rule__Expression_aux__Group_0_4_2__1__Impl19752 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_3__0__Impl_in_rule__Expression_aux__Group_0_4_3__019786 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_3__1_in_rule__Expression_aux__Group_0_4_3__019789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAssignment_0_4_3_0_in_rule__Expression_aux__Group_0_4_3__0__Impl19816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_3__1__Impl_in_rule__Expression_aux__Group_0_4_3__119846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__ExpAssignment_0_4_3_1_in_rule__Expression_aux__Group_0_4_3__1__Impl19873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__New__Group__0__Impl_in_rule__New__Group__019907 = new BitSet(new long[]{0x2000000000080010L,0x0000FFFF00008000L});
-    public static final BitSet FOLLOW_rule__New__Group__1_in_rule__New__Group__019910 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_rule__New__Group__0__Impl19938 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__New__Group__1__Impl_in_rule__New__Group__119969 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_rule__New__Group__2_in_rule__New__Group__119972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleconstructor_declaration_in_rule__New__Group__1__Impl19999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__New__Group__2__Impl_in_rule__New__Group__220028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_rule__New__Group__2__Impl20056 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_0__0__Impl_in_rule__Creating_aux__Group_0__020093 = new BitSet(new long[]{0x2600100001F001F0L,0x0000FFFFF0118000L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_0__1_in_rule__Creating_aux__Group_0__020096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_rule__Creating_aux__Group_0__0__Impl20125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_0__1__Impl_in_rule__Creating_aux__Group_0__120157 = new BitSet(new long[]{0x2600100001F001F0L,0x0000FFFFF0118000L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_0__2_in_rule__Creating_aux__Group_0__120160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Creating_aux__ArgumentosAssignment_0_1_in_rule__Creating_aux__Group_0__1__Impl20187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_0__2__Impl_in_rule__Creating_aux__Group_0__220218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rule__Creating_aux__Group_0__2__Impl20246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_1__0__Impl_in_rule__Creating_aux__Group_1__020283 = new BitSet(new long[]{0x0A00000000000000L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_1__1_in_rule__Creating_aux__Group_1__020286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_0__0_in_rule__Creating_aux__Group_1__0__Impl20313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_1__1__Impl_in_rule__Creating_aux__Group_1__120344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_1__0_in_rule__Creating_aux__Group_1__1__Impl20371 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_0__0__Impl_in_rule__Creating_aux__Group_1_0__020406 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleaux_in_rule__Creating_aux__Group_1_0__0__Impl20433 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_1__0__Impl_in_rule__Creating_aux__Group_1_1__020464 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_1__1_in_rule__Creating_aux__Group_1_1__020467 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__Creating_aux__Group_1_1__0__Impl20495 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_1__1__Impl_in_rule__Creating_aux__Group_1_1__120526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_rule__Creating_aux__Group_1_1__1__Impl20554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Aux__Group__0__Impl_in_rule__Aux__Group__020589 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
-    public static final BitSet FOLLOW_rule__Aux__Group__1_in_rule__Aux__Group__020592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__Aux__Group__0__Impl20620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Aux__Group__1__Impl_in_rule__Aux__Group__120651 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_rule__Aux__Group__2_in_rule__Aux__Group__120654 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Aux__EspressaoAssignment_1_in_rule__Aux__Group__1__Impl20681 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Aux__Group__2__Impl_in_rule__Aux__Group__220711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_rule__Aux__Group__2__Impl20739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Logical_expression__Group_0__0__Impl_in_rule__Logical_expression__Group_0__020776 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
-    public static final BitSet FOLLOW_rule__Logical_expression__Group_0__1_in_rule__Logical_expression__Group_0__020779 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Logical_expression__OperadorAssignment_0_0_in_rule__Logical_expression__Group_0__0__Impl20806 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Logical_expression__Group_0__1__Impl_in_rule__Logical_expression__Group_0__120836 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Logical_expression__ExpressaoAssignment_0_1_in_rule__Logical_expression__Group_0__1__Impl20863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bit_expression__Group__0__Impl_in_rule__Bit_expression__Group__020897 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
-    public static final BitSet FOLLOW_rule__Bit_expression__Group__1_in_rule__Bit_expression__Group__020900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bit_expression__OperadorAssignment_0_in_rule__Bit_expression__Group__0__Impl20927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bit_expression__Group__1__Impl_in_rule__Bit_expression__Group__120957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bit_expression__ExpressaoAssignment_1_in_rule__Bit_expression__Group__1__Impl20984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Numeric_expression__Group__0__Impl_in_rule__Numeric_expression__Group__021018 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
-    public static final BitSet FOLLOW_rule__Numeric_expression__Group__1_in_rule__Numeric_expression__Group__021021 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Numeric_expression__OperadorAssignment_0_in_rule__Numeric_expression__Group__0__Impl21048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Numeric_expression__Group__1__Impl_in_rule__Numeric_expression__Group__121078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Numeric_expression__ExpressaoAssignment_1_in_rule__Numeric_expression__Group__1__Impl21105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_0__0__Impl_in_rule__Arglist__Group_0__021139 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_0__1_in_rule__Arglist__Group_0__021142 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__ExpressoesArgumentosAssignment_0_0_in_rule__Arglist__Group_0__0__Impl21169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_0__1__Impl_in_rule__Arglist__Group_0__121199 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_0_1__0_in_rule__Arglist__Group_0__1__Impl21226 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_0_1__0__Impl_in_rule__Arglist__Group_0_1__021261 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_0_1__1_in_rule__Arglist__Group_0_1__021264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_rule__Arglist__Group_0_1__0__Impl21292 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_0_1__1__Impl_in_rule__Arglist__Group_0_1__121323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__ExpressoesArgumentosAssignment_0_1_1_in_rule__Arglist__Group_0_1__1__Impl21350 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_1__0__Impl_in_rule__Arglist__Group_1__021384 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_1__1_in_rule__Arglist__Group_1__021387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_rule__Arglist__Group_1__0__Impl21415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_1__1__Impl_in_rule__Arglist__Group_1__121446 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_1__2_in_rule__Arglist__Group_1__121449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Arglist__Group_1__1__Impl21476 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_1__2__Impl_in_rule__Arglist__Group_1__221505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_rule__Arglist__Group_1__2__Impl21533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_2__0__Impl_in_rule__Arglist__Group_2__021570 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_2__1_in_rule__Arglist__Group_2__021573 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__TipoParametroAssignment_2_0_in_rule__Arglist__Group_2__0__Impl21600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_2__1__Impl_in_rule__Arglist__Group_2__121630 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_2__2_in_rule__Arglist__Group_2__121633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__NomeParametroAssignment_2_1_in_rule__Arglist__Group_2__1__Impl21660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_2__2__Impl_in_rule__Arglist__Group_2__221690 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_2_2__0_in_rule__Arglist__Group_2__2__Impl21717 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_2_2__0__Impl_in_rule__Arglist__Group_2_2__021754 = new BitSet(new long[]{0x2000000000000010L,0x0000FFFF00008000L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_2_2__1_in_rule__Arglist__Group_2_2__021757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_rule__Arglist__Group_2_2__0__Impl21785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_2_2__1__Impl_in_rule__Arglist__Group_2_2__121816 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_2_2__2_in_rule__Arglist__Group_2_2__121819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__TipoParametroAssignment_2_2_1_in_rule__Arglist__Group_2_2__1__Impl21846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__Group_2_2__2__Impl_in_rule__Arglist__Group_2_2__221876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Arglist__NomeParametroAssignment_2_2_2_in_rule__Arglist__Group_2_2__2__Impl21903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Name__Group__0__Impl_in_rule__Name__Group__021939 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Name__Group__1_in_rule__Name__Group__021942 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Name__NomeAssignment_0_in_rule__Name__Group__0__Impl21969 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Name__Group__1__Impl_in_rule__Name__Group__121999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Name__PacoteAssignment_1_in_rule__Name__Group__1__Impl22026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package_name_aux__Group__0__Impl_in_rule__Package_name_aux__Group__022060 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Package_name_aux__Group__1_in_rule__Package_name_aux__Group__022063 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_rule__Package_name_aux__Group__0__Impl22091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package_name_aux__Group__1__Impl_in_rule__Package_name_aux__Group__122122 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Package_name_aux__Group__2_in_rule__Package_name_aux__Group__122125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package_name_aux__NomePacoteAssignment_1_in_rule__Package_name_aux__Group__1__Impl22152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package_name_aux__Group__2__Impl_in_rule__Package_name_aux__Group__222182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Package_name_aux__PacoteAssignment_2_in_rule__Package_name_aux__Group__2__Impl22209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Type__Group__0__Impl_in_rule__Type__Group__022245 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_rule__Type__Group__1_in_rule__Type__Group__022248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Type__Alternatives_0_in_rule__Type__Group__0__Impl22275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Type__Group__1__Impl_in_rule__Type__Group__122305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Type__Group_1__0_in_rule__Type__Group__1__Impl22332 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_rule__Type__Group_1__0__Impl_in_rule__Type__Group_1__022367 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_rule__Type__Group_1__1_in_rule__Type__Group_1__022370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__Type__Group_1__0__Impl22398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Type__Group_1__1__Impl_in_rule__Type__Group_1__122429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_rule__Type__Group_1__1__Impl22457 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulecompilation_unit_in_rule__Model__CompAssignment22497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepackage_statement_in_rule__Compilation_unit__PacoteAssignment_022528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleimport_statement_in_rule__Compilation_unit__ImportesAssignment_122559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletype_declaration_in_rule__Compilation_unit__DeclaracaoAssignment_222590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulename_in_rule__Package_statement__NoomePacoteAssignment_122621 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulename_in_rule__Import_statement__NomeImporteAssignment_122652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleclass_declaration_in_rule__Type_declaration__DeclaracaoClasseAssignment_1_022683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleinterface_declaration_in_rule__Type_declaration__DeclaracaoInterfaceAssignment_1_122714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMODIFIER_in_rule__Class_declaration__ModificadoresAssignment_022745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Class_declaration__NomeClasseAssignment_222776 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulename_in_rule__Class_declaration__SuperclasseAssignment_3_122807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulename_in_rule__Class_declaration__ImplementosClasseAssignment_4_122838 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulename_in_rule__Class_declaration__ImplementosClasseAssignment_4_2_122869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulefield_declaration_in_rule__Class_declaration__CorpoClasseAssignment_6_022900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleclass_declaration_in_rule__Class_declaration__DeclaracaoClasseAssignment_6_122931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMODIFIER_in_rule__Interface_declaration__ModificadoresAssignment_022962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Interface_declaration__NomeInterfaceAssignment_222993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulename_in_rule__Interface_declaration__SuperinterfacesAssignment_3_123024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulename_in_rule__Interface_declaration__SuperinterfacesAssignment_3_2_123055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulefield_declaration_in_rule__Interface_declaration__CorpoInterfaceAssignment_523086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulemethod_declaration_in_rule__Field_declaration__DeclaracaoMetodoAssignment_0_1_023117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleconstructor_declaration_in_rule__Field_declaration__DeclaracaoConstrutorAssignment_0_1_123148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevariable_declaration_in_rule__Field_declaration__DeclaracaoVariavelAssignment_0_1_223179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatic_initializer_in_rule__Field_declaration__EstaticoAssignment_123210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMODIFIER_in_rule__Method_declaration__ModificadorMetodoAssignment_023241 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletype_in_rule__Method_declaration__TipoRetornoAssignment_123272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Method_declaration__NomeMetodoAssignment_223303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleparameter_list_in_rule__Method_declaration__ParametrosMetodoAssignment_423334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_block_in_rule__Method_declaration__BlocoMetodoAssignment_7_023365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletype_in_rule__Parameter__TipoParametroAssignment_023396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Parameter__NomeParametroAssignment_123427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleparameter_in_rule__Parameter_list__ParametrosAssignment_023458 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleparameter_in_rule__Parameter_list__ParametrosAssignment_1_123489 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_in_rule__Statement_block__CorpoAssignment_123520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevariable_declaration_in_rule__Statement__DeclaracaoVariavelAssignment_023551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Statement__ExpressaoAssignment_1_023582 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_block_in_rule__Statement__BlocoAssignment_223613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleif_statement_in_rule__Statement__CorpoIfAssignment_323644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruledo_statement_in_rule__Statement__CorpoDoWhileAssignment_423675 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulewhile_statement_in_rule__Statement__CorpoWhileAssignment_523706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulefor_statement_in_rule__Statement__CorpoForAssignment_623737 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletry_statement_in_rule__Statement__CorpoTryCatchAssignment_723768 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleswitch_statement_in_rule__Statement__CorpoSwitchCaseAssignment_823799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Statement__ExpressaoSynchronizedAssignment_9_223830 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_in_rule__Statement__CorpoSynchronizeAssignment_9_423861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Statement__ReturnAssignment_10_123892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Statement__ExececaoAssignment_11_123923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Statement__BreakAssignment_13_123954 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Statement__ContinueAssignment_14_123985 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMODIFIER_in_rule__Variable_declaration__ModificadorAssignment_024016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletype_in_rule__Variable_declaration__TipoVariavelAssignment_1_024047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevariable_declarator_in_rule__Variable_declaration__DeclaracaoVariaveisAssignment_224078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevariable_declarator_in_rule__Variable_declaration__DeclaracaoVariaveisAssignment_3_124109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_block_in_rule__Variable_declaration__BlocoVariavelAssignment_4_124140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Variable_declarator__NomeVariavelAssignment_1_024171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevariable_initializer_in_rule__Variable_declarator__ValorVariavelAssignment_1_2_124202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Variable_initializer__ExpressaoVariavelAssignment_024233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevariable_initializer_in_rule__Variable_initializer__ValorVariaveisAssignment_1_1_024264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevariable_initializer_in_rule__Variable_initializer__ValorVariaveisAssignment_1_1_1_124295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__If_statement__EspressaoIfAssignment_224326 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_in_rule__If_statement__BlcoIfAssignment_424357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_in_rule__If_statement__BlocoElseAssignment_5_0_124388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_in_rule__Do_statement__BlocoDoAssignment_124419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Do_statement__ExpressaoWhileAssignment_424450 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__While_statement__ExpressaoWhileAssignment_224481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_in_rule__While_statement__BlocoWhileAssignment_424512 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevariable_declaration_in_rule__For_statement__DeclaracaoVariavelAssignment_2_024543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__For_statement__ExpressaoDeclaracaoAssignment_2_1_024574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__For_statement__ExpressaoForAssignment_324605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__For_statement__ExpressaoIncrementoAssignment_524636 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_in_rule__For_statement__BlocoForAssignment_724667 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_block_in_rule__Try_statement__BlocoTryAssignment_124698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleparameter_in_rule__Try_statement__ParametroCatchAssignment_2_0_224729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_block_in_rule__Try_statement__BlocoCatchAssignment_2_0_424760 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_block_in_rule__Try_statement__BlocoFinallyAssignment_3_0_124791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Switch_statement__ExpressaoSwitchAssignment_224822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Switch_statement__ExpressaoCasesAssignment_5_0_124853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_in_rule__Switch_statement__BlocoSwitchAssignment_5_224884 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMODIFIER_in_rule__Constructor_declaration__ModificadorAssignment_024915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletype_in_rule__Constructor_declaration__TipoAssignment_1_024946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Constructor_declaration__NomeContrutorAssignment_224977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleparameter_list_in_rule__Constructor_declaration__ParametrosContrutorAssignment_425008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_block_in_rule__Constructor_declaration__BlocoConstrutorAssignment_625039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestatement_block_in_rule__Static_initializer__BlocoEstaticoAssignment_125070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulename_in_rule__Creating_expression__NovoObjetoAssignment_1_0_025101 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulecreating_aux_in_rule__Creating_expression__ParametrosAssignment_1_0_125132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletype_specifier_in_rule__Creating_expression__TipoObjetoAssignment_1_1_025163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleaux_in_rule__Creating_expression__ParametrosAssignment_1_1_1_025194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Creating_expression__ExpressaoNewAssignment_1_2_125225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenew_in_rule__Creating_expression__NovoAssignment_225256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Exp_aux__ExpressaoAssignment_0_025287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Exp_aux__ExpressaoAssignment_1_225318 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulelogical_expression_in_rule__Expression__TipoLogicalAssignment_0_025349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenumeric_expression_in_rule__Expression__TipoNumericAssignment_0_125380 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulebit_expression_in_rule__Expression__TipoBitAssignment_0_225411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulecreating_expression_in_rule__Expression__NewAssignment_0_325442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleliteral_expression_in_rule__Expression__LiteralAssignment_0_425473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_aux_in_rule__Expression__ExpressoesAssignment_125504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_1_125535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OpedadorAlternatives_0_2_0_in_rule__Expression_aux__OpedadorAssignment_0_225566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__Expression_aux__OpedadorAssignment_0_3_0_125604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_85_in_rule__Expression_aux__OpedadorAssignment_0_3_0_225648 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_86_in_rule__Expression_aux__OpedadorAssignment_0_3_0_325692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_87_in_rule__Expression_aux__OpedadorAssignment_0_3_0_425736 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_88_in_rule__Expression_aux__OpedadorAssignment_0_3_0_525780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_89_in_rule__Expression_aux__OpedadorAssignment_0_3_0_625824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Expression_aux__OpedadorAssignment_0_3_0_725868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Expression_aux__OpedadorAssignment_0_3_0_825912 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_3_125951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__ExpressaoAssignment_0_4_1_325982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OpedadorAlternatives_0_4_2_0_0_in_rule__Expression_aux__OpedadorAssignment_0_4_2_026013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_4_2_126046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAlternatives_0_4_3_0_0_in_rule__Expression_aux__OperadorAssignment_0_4_3_026077 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_4_3_126110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_aux_in_rule__Expression_aux__ExpressoesAssignment_126141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_rule__Mais_aux__OpedadorAssignment_026177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_91_in_rule__Mais_aux__OpedadorAssignment_126221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulearglist_in_rule__Creating_aux__ArgumentosAssignment_0_126260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Aux__EspressaoAssignment_126291 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DECIMAL_DIGITS_in_rule__Literal_expression__DecimalAssignment_026322 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INTEGER_LITERAL_in_rule__Literal_expression__InteiroAssignment_126353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_LITERAL_in_rule__Literal_expression__FloatAssignment_226384 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Literal_expression__StringAssignment_326415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_92_in_rule__Logical_expression__OperadorAssignment_0_026451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Logical_expression__ExpressaoAssignment_0_126490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_93_in_rule__Logical_expression__OperadorAssignment_126526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_94_in_rule__Logical_expression__OperadorAssignment_226570 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_95_in_rule__Bit_expression__OperadorAssignment_026614 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Bit_expression__ExpressaoAssignment_126653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Numeric_expression__OperadorAlternatives_0_0_in_rule__Numeric_expression__OperadorAssignment_026684 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Numeric_expression__ExpressaoAssignment_126717 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Arglist__ExpressoesArgumentosAssignment_0_026748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Arglist__ExpressoesArgumentosAssignment_0_1_126779 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletype_in_rule__Arglist__TipoParametroAssignment_2_026810 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Arglist__NomeParametroAssignment_2_126841 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletype_in_rule__Arglist__TipoParametroAssignment_2_2_126872 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Arglist__NomeParametroAssignment_2_2_226903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Name__NomeAssignment_026934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepackage_name_aux_in_rule__Name__PacoteAssignment_126965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Package_name_aux__NomePacoteAssignment_126996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepackage_name_aux_in_rule__Package_name_aux__PacoteAssignment_227027 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_96_in_rule__Type_specifier__NomeAssignment_027063 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_97_in_rule__Type_specifier__NomeAssignment_127107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_98_in_rule__Type_specifier__NomeAssignment_227151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_99_in_rule__Type_specifier__NomeAssignment_327195 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_100_in_rule__Type_specifier__NomeAssignment_427239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_101_in_rule__Type_specifier__NomeAssignment_527283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_102_in_rule__Type_specifier__NomeAssignment_627327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_103_in_rule__Type_specifier__NomeAssignment_727371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruletype_specifier_in_rule__Type__TipoAssignment_0_027410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulename_in_rule__Type__TipoAssignment_0_127441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_104_in_rule__MODIFIER__ModificadorAssignment_027477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_105_in_rule__MODIFIER__ModificadorAssignment_127521 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_106_in_rule__MODIFIER__ModificadorAssignment_227565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_rule__MODIFIER__ModificadorAssignment_327609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_107_in_rule__MODIFIER__ModificadorAssignment_427653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_108_in_rule__MODIFIER__ModificadorAssignment_527697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_rule__MODIFIER__ModificadorAssignment_627741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_109_in_rule__MODIFIER__ModificadorAssignment_727785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_110_in_rule__MODIFIER__ModificadorAssignment_827829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_111_in_rule__MODIFIER__ModificadorAssignment_927873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OpAssignment_0_1_0_in_rule__Expression_aux__Group_0_1__0__Impl18959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_1__1__Impl_in_rule__Expression_aux__Group_0_1__118989 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__ExpAssignment_0_1_1_in_rule__Expression_aux__Group_0_1__1__Impl19016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_3__0__Impl_in_rule__Expression_aux__Group_0_3__019050 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_3__1_in_rule__Expression_aux__Group_0_3__019053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Alternatives_0_3_0_in_rule__Expression_aux__Group_0_3__0__Impl19080 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_3__1__Impl_in_rule__Expression_aux__Group_0_3__119110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__ExpAssignment_0_3_1_in_rule__Expression_aux__Group_0_3__1__Impl19137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0__0__Impl_in_rule__Expression_aux__Group_0_4_0__019171 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0__1_in_rule__Expression_aux__Group_0_4_0__019174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Alternatives_0_4_0_0_in_rule__Expression_aux__Group_0_4_0__0__Impl19201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0__1__Impl_in_rule__Expression_aux__Group_0_4_0__119231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__Group_0_4_0__1__Impl19258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0_0_6__0__Impl_in_rule__Expression_aux__Group_0_4_0_0_6__019291 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0_0_6__1_in_rule__Expression_aux__Group_0_4_0_0_6__019294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Expression_aux__Group_0_4_0_0_6__0__Impl19322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_0_0_6__1__Impl_in_rule__Expression_aux__Group_0_4_0_0_6__119353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Expression_aux__Group_0_4_0_0_6__1__Impl19381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__0__Impl_in_rule__Expression_aux__Group_0_4_1__019416 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__1_in_rule__Expression_aux__Group_0_4_1__019419 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Expression_aux__Group_0_4_1__0__Impl19447 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__1__Impl_in_rule__Expression_aux__Group_0_4_1__119478 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__2_in_rule__Expression_aux__Group_0_4_1__119481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__Group_0_4_1__1__Impl19508 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__2__Impl_in_rule__Expression_aux__Group_0_4_1__219537 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__3_in_rule__Expression_aux__Group_0_4_1__219540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rule__Expression_aux__Group_0_4_1__2__Impl19568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_1__3__Impl_in_rule__Expression_aux__Group_0_4_1__319599 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__ExpressaoAssignment_0_4_1_3_in_rule__Expression_aux__Group_0_4_1__3__Impl19626 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_2__0__Impl_in_rule__Expression_aux__Group_0_4_2__019664 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_2__1_in_rule__Expression_aux__Group_0_4_2__019667 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAssignment_0_4_2_0_in_rule__Expression_aux__Group_0_4_2__0__Impl19694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_2__1__Impl_in_rule__Expression_aux__Group_0_4_2__119724 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__ExpAssignment_0_4_2_1_in_rule__Expression_aux__Group_0_4_2__1__Impl19751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_3__0__Impl_in_rule__Expression_aux__Group_0_4_3__019785 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_3__1_in_rule__Expression_aux__Group_0_4_3__019788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAssignment_0_4_3_0_in_rule__Expression_aux__Group_0_4_3__0__Impl19815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_4_3__1__Impl_in_rule__Expression_aux__Group_0_4_3__119845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__ExpAssignment_0_4_3_1_in_rule__Expression_aux__Group_0_4_3__1__Impl19872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__New__Group__0__Impl_in_rule__New__Group__019906 = new BitSet(new long[]{0x2000000000080010L,0x0000FFFF00008000L});
+    public static final BitSet FOLLOW_rule__New__Group__1_in_rule__New__Group__019909 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_rule__New__Group__0__Impl19937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__New__Group__1__Impl_in_rule__New__Group__119968 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_rule__New__Group__2_in_rule__New__Group__119971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleconstructor_declaration_in_rule__New__Group__1__Impl19998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__New__Group__2__Impl_in_rule__New__Group__220027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_rule__New__Group__2__Impl20055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_0__0__Impl_in_rule__Creating_aux__Group_0__020092 = new BitSet(new long[]{0x2600100001F001F0L,0x0000FFFFF0118000L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_0__1_in_rule__Creating_aux__Group_0__020095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_rule__Creating_aux__Group_0__0__Impl20124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_0__1__Impl_in_rule__Creating_aux__Group_0__120156 = new BitSet(new long[]{0x2600100001F001F0L,0x0000FFFFF0118000L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_0__2_in_rule__Creating_aux__Group_0__120159 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Creating_aux__ArgumentosAssignment_0_1_in_rule__Creating_aux__Group_0__1__Impl20186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_0__2__Impl_in_rule__Creating_aux__Group_0__220217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__Creating_aux__Group_0__2__Impl20245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_1__0__Impl_in_rule__Creating_aux__Group_1__020282 = new BitSet(new long[]{0x0A00000000000000L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_1__1_in_rule__Creating_aux__Group_1__020285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_0__0_in_rule__Creating_aux__Group_1__0__Impl20312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_1__1__Impl_in_rule__Creating_aux__Group_1__120343 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_1__0_in_rule__Creating_aux__Group_1__1__Impl20370 = new BitSet(new long[]{0x0800000000000002L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_0__0__Impl_in_rule__Creating_aux__Group_1_0__020405 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleaux_in_rule__Creating_aux__Group_1_0__0__Impl20432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_1__0__Impl_in_rule__Creating_aux__Group_1_1__020463 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_1__1_in_rule__Creating_aux__Group_1_1__020466 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_rule__Creating_aux__Group_1_1__0__Impl20494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_1__1__Impl_in_rule__Creating_aux__Group_1_1__120525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rule__Creating_aux__Group_1_1__1__Impl20553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Aux__Group__0__Impl_in_rule__Aux__Group__020588 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
+    public static final BitSet FOLLOW_rule__Aux__Group__1_in_rule__Aux__Group__020591 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_rule__Aux__Group__0__Impl20619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Aux__Group__1__Impl_in_rule__Aux__Group__120650 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_rule__Aux__Group__2_in_rule__Aux__Group__120653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Aux__EspressaoAssignment_1_in_rule__Aux__Group__1__Impl20680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Aux__Group__2__Impl_in_rule__Aux__Group__220710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rule__Aux__Group__2__Impl20738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Logical_expression__Group_0__0__Impl_in_rule__Logical_expression__Group_0__020775 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
+    public static final BitSet FOLLOW_rule__Logical_expression__Group_0__1_in_rule__Logical_expression__Group_0__020778 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Logical_expression__OperadorAssignment_0_0_in_rule__Logical_expression__Group_0__0__Impl20805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Logical_expression__Group_0__1__Impl_in_rule__Logical_expression__Group_0__120835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Logical_expression__ExpressaoAssignment_0_1_in_rule__Logical_expression__Group_0__1__Impl20862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bit_expression__Group__0__Impl_in_rule__Bit_expression__Group__020896 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
+    public static final BitSet FOLLOW_rule__Bit_expression__Group__1_in_rule__Bit_expression__Group__020899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bit_expression__OperadorAssignment_0_in_rule__Bit_expression__Group__0__Impl20926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bit_expression__Group__1__Impl_in_rule__Bit_expression__Group__120956 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bit_expression__ExpressaoAssignment_1_in_rule__Bit_expression__Group__1__Impl20983 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Numeric_expression__Group__0__Impl_in_rule__Numeric_expression__Group__021017 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
+    public static final BitSet FOLLOW_rule__Numeric_expression__Group__1_in_rule__Numeric_expression__Group__021020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Numeric_expression__OperadorAssignment_0_in_rule__Numeric_expression__Group__0__Impl21047 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Numeric_expression__Group__1__Impl_in_rule__Numeric_expression__Group__121077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Numeric_expression__ExpressaoAssignment_1_in_rule__Numeric_expression__Group__1__Impl21104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_0__0__Impl_in_rule__Arglist__Group_0__021138 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_0__1_in_rule__Arglist__Group_0__021141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__ExpressoesArgumentosAssignment_0_0_in_rule__Arglist__Group_0__0__Impl21168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_0__1__Impl_in_rule__Arglist__Group_0__121198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_0_1__0_in_rule__Arglist__Group_0__1__Impl21225 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_0_1__0__Impl_in_rule__Arglist__Group_0_1__021260 = new BitSet(new long[]{0x0200100001F001F0L,0x00000000F0010000L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_0_1__1_in_rule__Arglist__Group_0_1__021263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_rule__Arglist__Group_0_1__0__Impl21291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_0_1__1__Impl_in_rule__Arglist__Group_0_1__121322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__ExpressoesArgumentosAssignment_0_1_1_in_rule__Arglist__Group_0_1__1__Impl21349 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_1__0__Impl_in_rule__Arglist__Group_1__021383 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_1__1_in_rule__Arglist__Group_1__021386 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_rule__Arglist__Group_1__0__Impl21414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_1__1__Impl_in_rule__Arglist__Group_1__121445 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_1__2_in_rule__Arglist__Group_1__121448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Arglist__Group_1__1__Impl21475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_1__2__Impl_in_rule__Arglist__Group_1__221504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_rule__Arglist__Group_1__2__Impl21532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_2__0__Impl_in_rule__Arglist__Group_2__021569 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_2__1_in_rule__Arglist__Group_2__021572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__TipoParametroAssignment_2_0_in_rule__Arglist__Group_2__0__Impl21599 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_2__1__Impl_in_rule__Arglist__Group_2__121629 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_2__2_in_rule__Arglist__Group_2__121632 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__NomeParametroAssignment_2_1_in_rule__Arglist__Group_2__1__Impl21659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_2__2__Impl_in_rule__Arglist__Group_2__221689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_2_2__0_in_rule__Arglist__Group_2__2__Impl21716 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_2_2__0__Impl_in_rule__Arglist__Group_2_2__021753 = new BitSet(new long[]{0x2000000000000010L,0x0000FFFF00008000L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_2_2__1_in_rule__Arglist__Group_2_2__021756 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_rule__Arglist__Group_2_2__0__Impl21784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_2_2__1__Impl_in_rule__Arglist__Group_2_2__121815 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_2_2__2_in_rule__Arglist__Group_2_2__121818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__TipoParametroAssignment_2_2_1_in_rule__Arglist__Group_2_2__1__Impl21845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__Group_2_2__2__Impl_in_rule__Arglist__Group_2_2__221875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Arglist__NomeParametroAssignment_2_2_2_in_rule__Arglist__Group_2_2__2__Impl21902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Name__Group__0__Impl_in_rule__Name__Group__021938 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Name__Group__1_in_rule__Name__Group__021941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Name__NomeAssignment_0_in_rule__Name__Group__0__Impl21968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Name__Group__1__Impl_in_rule__Name__Group__121998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Name__PacoteAssignment_1_in_rule__Name__Group__1__Impl22025 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Package_name_aux__Group__0__Impl_in_rule__Package_name_aux__Group__022059 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Package_name_aux__Group__1_in_rule__Package_name_aux__Group__022062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_rule__Package_name_aux__Group__0__Impl22090 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Package_name_aux__Group__1__Impl_in_rule__Package_name_aux__Group__122121 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Package_name_aux__Group__2_in_rule__Package_name_aux__Group__122124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Package_name_aux__NomePacoteAssignment_1_in_rule__Package_name_aux__Group__1__Impl22151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Package_name_aux__Group__2__Impl_in_rule__Package_name_aux__Group__222181 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Package_name_aux__PacoteAssignment_2_in_rule__Package_name_aux__Group__2__Impl22208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Type__Group__0__Impl_in_rule__Type__Group__022244 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_rule__Type__Group__1_in_rule__Type__Group__022247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Type__Alternatives_0_in_rule__Type__Group__0__Impl22274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Type__Group__1__Impl_in_rule__Type__Group__122304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Type__Group_1__0_in_rule__Type__Group__1__Impl22331 = new BitSet(new long[]{0x0800000000000002L});
+    public static final BitSet FOLLOW_rule__Type__Group_1__0__Impl_in_rule__Type__Group_1__022366 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_rule__Type__Group_1__1_in_rule__Type__Group_1__022369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_rule__Type__Group_1__0__Impl22397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Type__Group_1__1__Impl_in_rule__Type__Group_1__122428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rule__Type__Group_1__1__Impl22456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulecompilation_unit_in_rule__Model__CompAssignment22496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepackage_statement_in_rule__Compilation_unit__PacoteAssignment_022527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleimport_statement_in_rule__Compilation_unit__ImportesAssignment_122558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletype_declaration_in_rule__Compilation_unit__DeclaracaoAssignment_222589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulename_in_rule__Package_statement__NoomePacoteAssignment_122620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulename_in_rule__Import_statement__NomeImporteAssignment_122651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleclass_declaration_in_rule__Type_declaration__DeclaracaoClasseAssignment_1_022682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleinterface_declaration_in_rule__Type_declaration__DeclaracaoInterfaceAssignment_1_122713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMODIFIER_in_rule__Class_declaration__ModificadoresAssignment_022744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Class_declaration__NomeClasseAssignment_222775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulename_in_rule__Class_declaration__SuperclasseAssignment_3_122806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulename_in_rule__Class_declaration__ImplementosClasseAssignment_4_122837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulename_in_rule__Class_declaration__ImplementosClasseAssignment_4_2_122868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulefield_declaration_in_rule__Class_declaration__CorpoClasseAssignment_6_022899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleclass_declaration_in_rule__Class_declaration__DeclaracaoClasseAssignment_6_122930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMODIFIER_in_rule__Interface_declaration__ModificadoresAssignment_022961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Interface_declaration__NomeInterfaceAssignment_222992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulename_in_rule__Interface_declaration__SuperinterfacesAssignment_3_123023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulename_in_rule__Interface_declaration__SuperinterfacesAssignment_3_2_123054 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulefield_declaration_in_rule__Interface_declaration__CorpoInterfaceAssignment_523085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulemethod_declaration_in_rule__Field_declaration__DeclaracaoMetodoAssignment_0_1_023116 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleconstructor_declaration_in_rule__Field_declaration__DeclaracaoConstrutorAssignment_0_1_123147 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevariable_declaration_in_rule__Field_declaration__DeclaracaoVariavelAssignment_0_1_223178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatic_initializer_in_rule__Field_declaration__EstaticoAssignment_123209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMODIFIER_in_rule__Method_declaration__ModificadorMetodoAssignment_023240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletype_in_rule__Method_declaration__TipoRetornoAssignment_123271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Method_declaration__NomeMetodoAssignment_223302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleparameter_list_in_rule__Method_declaration__ParametrosMetodoAssignment_423333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_block_in_rule__Method_declaration__BlocoMetodoAssignment_7_023364 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletype_in_rule__Parameter__TipoParametroAssignment_023395 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Parameter__NomeParametroAssignment_123426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleparameter_in_rule__Parameter_list__ParametrosAssignment_023457 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleparameter_in_rule__Parameter_list__ParametrosAssignment_1_123488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_in_rule__Statement_block__CorpoAssignment_123519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevariable_declaration_in_rule__Statement__DeclaracaoVariavelAssignment_023550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Statement__ExpressaoAssignment_1_023581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_block_in_rule__Statement__BlocoAssignment_223612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleif_statement_in_rule__Statement__CorpoIfAssignment_323643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruledo_statement_in_rule__Statement__CorpoDoWhileAssignment_423674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulewhile_statement_in_rule__Statement__CorpoWhileAssignment_523705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulefor_statement_in_rule__Statement__CorpoForAssignment_623736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletry_statement_in_rule__Statement__CorpoTryCatchAssignment_723767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleswitch_statement_in_rule__Statement__CorpoSwitchCaseAssignment_823798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Statement__ExpressaoSynchronizedAssignment_9_223829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_in_rule__Statement__CorpoSynchronizeAssignment_9_423860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Statement__ReturnAssignment_10_123891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Statement__ExececaoAssignment_11_123922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Statement__BreakAssignment_13_123953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Statement__ContinueAssignment_14_123984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMODIFIER_in_rule__Variable_declaration__ModificadorAssignment_024015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletype_in_rule__Variable_declaration__TipoVariavelAssignment_1_024046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevariable_declarator_in_rule__Variable_declaration__DeclaracaoVariaveisAssignment_224077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevariable_declarator_in_rule__Variable_declaration__DeclaracaoVariaveisAssignment_3_124108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_block_in_rule__Variable_declaration__BlocoVariavelAssignment_4_124139 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Variable_declarator__NomeVariavelAssignment_1_024170 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevariable_initializer_in_rule__Variable_declarator__ValorVariavelAssignment_1_2_124201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Variable_initializer__ExpressaoVariavelAssignment_024232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevariable_initializer_in_rule__Variable_initializer__ValorVariaveisAssignment_1_1_024263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevariable_initializer_in_rule__Variable_initializer__ValorVariaveisAssignment_1_1_1_124294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__If_statement__EspressaoIfAssignment_224325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_in_rule__If_statement__BlcoIfAssignment_424356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_in_rule__If_statement__BlocoElseAssignment_5_0_124387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_in_rule__Do_statement__BlocoDoAssignment_124418 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Do_statement__ExpressaoWhileAssignment_424449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__While_statement__ExpressaoWhileAssignment_224480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_in_rule__While_statement__BlocoWhileAssignment_424511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevariable_declaration_in_rule__For_statement__DeclaracaoVariavelAssignment_2_024542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__For_statement__ExpressaoDeclaracaoAssignment_2_1_024573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__For_statement__ExpressaoForAssignment_324604 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__For_statement__ExpressaoIncrementoAssignment_524635 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_in_rule__For_statement__BlocoForAssignment_724666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_block_in_rule__Try_statement__BlocoTryAssignment_124697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleparameter_in_rule__Try_statement__ParametroCatchAssignment_2_0_224728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_block_in_rule__Try_statement__BlocoCatchAssignment_2_0_424759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_block_in_rule__Try_statement__BlocoFinallyAssignment_3_0_124790 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Switch_statement__ExpressaoSwitchAssignment_224821 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Switch_statement__ExpressaoCasesAssignment_5_0_124852 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_in_rule__Switch_statement__BlocoSwitchAssignment_5_224883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMODIFIER_in_rule__Constructor_declaration__ModificadorAssignment_024914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletype_in_rule__Constructor_declaration__TipoAssignment_1_024945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Constructor_declaration__NomeContrutorAssignment_224976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleparameter_list_in_rule__Constructor_declaration__ParametrosContrutorAssignment_425007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_block_in_rule__Constructor_declaration__BlocoConstrutorAssignment_625038 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestatement_block_in_rule__Static_initializer__BlocoEstaticoAssignment_125069 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulename_in_rule__Creating_expression__NovoObjetoAssignment_1_0_025100 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulecreating_aux_in_rule__Creating_expression__ParametrosAssignment_1_0_125131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletype_specifier_in_rule__Creating_expression__TipoObjetoAssignment_1_1_025162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleaux_in_rule__Creating_expression__ParametrosAssignment_1_1_1_025193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Creating_expression__ExpressaoNewAssignment_1_2_125224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenew_in_rule__Creating_expression__NovoAssignment_225255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Exp_aux__ExpressaoAssignment_0_025286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Exp_aux__ExpressaoAssignment_1_225317 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulelogical_expression_in_rule__Expression__TipoLogicalAssignment_0_025348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenumeric_expression_in_rule__Expression__TipoNumericAssignment_0_125379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulebit_expression_in_rule__Expression__TipoBitAssignment_0_225410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulecreating_expression_in_rule__Expression__NewAssignment_0_325441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleliteral_expression_in_rule__Expression__LiteralAssignment_0_425472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Expression__IdentificadorAssignment_0_825503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_aux_in_rule__Expression__ExpressoesAssignment_125534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulemais_aux_in_rule__Expression_aux__OpAssignment_0_1_025565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_1_125596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAlternatives_0_2_0_in_rule__Expression_aux__OperadorAssignment_0_225627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulemais_aux_in_rule__Expression_aux__OpAssignment_0_3_0_025660 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__Expression_aux__OperadorAssignment_0_3_0_125696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_85_in_rule__Expression_aux__OperadorAssignment_0_3_0_225740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_86_in_rule__Expression_aux__OperadorAssignment_0_3_0_325784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_87_in_rule__Expression_aux__OperadorAssignment_0_3_0_425828 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_88_in_rule__Expression_aux__OperadorAssignment_0_3_0_525872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_89_in_rule__Expression_aux__OperadorAssignment_0_3_0_625916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Expression_aux__OperadorAssignment_0_3_0_725960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Expression_aux__OperadorAssignment_0_3_0_826004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_3_126043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__ExpressaoAssignment_0_4_1_326074 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAlternatives_0_4_2_0_0_in_rule__Expression_aux__OperadorAssignment_0_4_2_026105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_4_2_126138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__OperadorAlternatives_0_4_3_0_0_in_rule__Expression_aux__OperadorAssignment_0_4_3_026169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Expression_aux__ExpAssignment_0_4_3_126202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_aux_in_rule__Expression_aux__ExpressoesAssignment_126233 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_rule__Mais_aux__OperadorAssignment_026269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_91_in_rule__Mais_aux__OperadorAssignment_126313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulearglist_in_rule__Creating_aux__ArgumentosAssignment_0_126352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Aux__EspressaoAssignment_126383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DECIMAL_DIGITS_in_rule__Literal_expression__DecimalAssignment_026414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INTEGER_LITERAL_in_rule__Literal_expression__InteiroAssignment_126445 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_LITERAL_in_rule__Literal_expression__FloatAssignment_226476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Literal_expression__StringAssignment_326507 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_92_in_rule__Logical_expression__OperadorAssignment_0_026543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Logical_expression__ExpressaoAssignment_0_126582 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_93_in_rule__Logical_expression__OperadorAssignment_126618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_rule__Logical_expression__OperadorAssignment_226662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_95_in_rule__Bit_expression__OperadorAssignment_026706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Bit_expression__ExpressaoAssignment_126745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Numeric_expression__OperadorAlternatives_0_0_in_rule__Numeric_expression__OperadorAssignment_026776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Numeric_expression__ExpressaoAssignment_126809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Arglist__ExpressoesArgumentosAssignment_0_026840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Arglist__ExpressoesArgumentosAssignment_0_1_126871 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletype_in_rule__Arglist__TipoParametroAssignment_2_026902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Arglist__NomeParametroAssignment_2_126933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletype_in_rule__Arglist__TipoParametroAssignment_2_2_126964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Arglist__NomeParametroAssignment_2_2_226995 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Name__NomeAssignment_027026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepackage_name_aux_in_rule__Name__PacoteAssignment_127057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENTIFIER_in_rule__Package_name_aux__NomePacoteAssignment_127088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepackage_name_aux_in_rule__Package_name_aux__PacoteAssignment_227119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_96_in_rule__Type_specifier__NomeAssignment_027155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_97_in_rule__Type_specifier__NomeAssignment_127199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_98_in_rule__Type_specifier__NomeAssignment_227243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_99_in_rule__Type_specifier__NomeAssignment_327287 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_100_in_rule__Type_specifier__NomeAssignment_427331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_101_in_rule__Type_specifier__NomeAssignment_527375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_102_in_rule__Type_specifier__NomeAssignment_627419 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_103_in_rule__Type_specifier__NomeAssignment_727463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruletype_specifier_in_rule__Type__TipoAssignment_0_027502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulename_in_rule__Type__TipoAssignment_0_127533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_104_in_rule__MODIFIER__ModificadorAssignment_027569 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_105_in_rule__MODIFIER__ModificadorAssignment_127613 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_106_in_rule__MODIFIER__ModificadorAssignment_227657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_rule__MODIFIER__ModificadorAssignment_327701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_107_in_rule__MODIFIER__ModificadorAssignment_427745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_108_in_rule__MODIFIER__ModificadorAssignment_527789 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rule__MODIFIER__ModificadorAssignment_627833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_109_in_rule__MODIFIER__ModificadorAssignment_727877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_110_in_rule__MODIFIER__ModificadorAssignment_827921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_111_in_rule__MODIFIER__ModificadorAssignment_927965 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression_aux__Group__0_in_synpred1_InternalSimpleJava1780 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Package_name_aux__Group__0_in_synpred2_InternalSimpleJava2441 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Field_declaration__DeclaracaoMetodoAssignment_0_1_0_in_synpred8_InternalSimpleJava2886 = new BitSet(new long[]{0x0000000000000002L});
@@ -44135,13 +44279,13 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_rule__For_statement__DeclaracaoVariavelAssignment_2_0_in_synpred30_InternalSimpleJava3521 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__For_statement__Group_2_1__0_in_synpred31_InternalSimpleJava3539 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Exp_aux__Group_0__0_in_synpred37_InternalSimpleJava3783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_1__0_in_synpred48_InternalSimpleJava4052 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_3__0_in_synpred50_InternalSimpleJava4088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_1__0_in_synpred48_InternalSimpleJava4053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression_aux__Group_0_3__0_in_synpred50_InternalSimpleJava4089 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Creating_aux__Group_0__0_in_synpred85_InternalSimpleJava5059 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Arglist__Group_0__0_in_synpred93_InternalSimpleJava5341 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__If_statement__Group_5__0_in_synpred144_InternalSimpleJava13115 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Creating_expression__NovoAssignment_2_in_synpred153_InternalSimpleJava16987 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Creating_expression__Group_1_1_1__0_in_synpred154_InternalSimpleJava17235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_0__0_in_synpred158_InternalSimpleJava20313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Creating_aux__Group_1_0__0_in_synpred158_InternalSimpleJava20312 = new BitSet(new long[]{0x0000000000000002L});
 
 }

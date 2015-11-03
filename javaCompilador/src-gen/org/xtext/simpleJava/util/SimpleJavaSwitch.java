@@ -276,7 +276,6 @@ public class SimpleJavaSwitch<T> extends Switch<T>
       {
         mais_aux mais_aux = (mais_aux)theEObject;
         T result = casemais_aux(mais_aux);
-        if (result == null) result = caseexpression_aux(mais_aux);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

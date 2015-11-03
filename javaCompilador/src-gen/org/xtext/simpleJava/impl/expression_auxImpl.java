@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.xtext.simpleJava.SimpleJavaPackage;
 import org.xtext.simpleJava.expression;
 import org.xtext.simpleJava.expression_aux;
+import org.xtext.simpleJava.mais_aux;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +23,7 @@ import org.xtext.simpleJava.expression_aux;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.simpleJava.impl.expression_auxImpl#getOpedador <em>Opedador</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.expression_auxImpl#getOp <em>Op</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expression_auxImpl#getExp <em>Exp</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expression_auxImpl#getOperador <em>Operador</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expression_auxImpl#getExpressoes <em>Expressoes</em>}</li>
@@ -34,24 +35,14 @@ import org.xtext.simpleJava.expression_aux;
 public class expression_auxImpl extends MinimalEObjectImpl.Container implements expression_aux
 {
   /**
-   * The default value of the '{@link #getOpedador() <em>Opedador</em>}' attribute.
+   * The cached value of the '{@link #getOp() <em>Op</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOpedador()
+   * @see #getOp()
    * @generated
    * @ordered
    */
-  protected static final String OPEDADOR_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getOpedador() <em>Opedador</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOpedador()
-   * @generated
-   * @ordered
-   */
-  protected String opedador = OPEDADOR_EDEFAULT;
+  protected mais_aux op;
 
   /**
    * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference.
@@ -119,9 +110,9 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getOpedador()
+  public mais_aux getOp()
   {
-    return opedador;
+    return op;
   }
 
   /**
@@ -129,12 +120,37 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOpedador(String newOpedador)
+  public NotificationChain basicSetOp(mais_aux newOp, NotificationChain msgs)
   {
-    String oldOpedador = opedador;
-    opedador = newOpedador;
+    mais_aux oldOp = op;
+    op = newOp;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION_AUX__OPEDADOR, oldOpedador, opedador));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION_AUX__OP, oldOp, newOp);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOp(mais_aux newOp)
+  {
+    if (newOp != op)
+    {
+      NotificationChain msgs = null;
+      if (op != null)
+        msgs = ((InternalEObject)op).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION_AUX__OP, null, msgs);
+      if (newOp != null)
+        msgs = ((InternalEObject)newOp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION_AUX__OP, null, msgs);
+      msgs = basicSetOp(newOp, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION_AUX__OP, newOp, newOp));
   }
 
   /**
@@ -266,6 +282,8 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
+      case SimpleJavaPackage.EXPRESSION_AUX__OP:
+        return basicSetOp(null, msgs);
       case SimpleJavaPackage.EXPRESSION_AUX__EXP:
         return basicSetExp(null, msgs);
       case SimpleJavaPackage.EXPRESSION_AUX__EXPRESSOES:
@@ -284,8 +302,8 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION_AUX__OPEDADOR:
-        return getOpedador();
+      case SimpleJavaPackage.EXPRESSION_AUX__OP:
+        return getOp();
       case SimpleJavaPackage.EXPRESSION_AUX__EXP:
         return getExp();
       case SimpleJavaPackage.EXPRESSION_AUX__OPERADOR:
@@ -306,8 +324,8 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION_AUX__OPEDADOR:
-        setOpedador((String)newValue);
+      case SimpleJavaPackage.EXPRESSION_AUX__OP:
+        setOp((mais_aux)newValue);
         return;
       case SimpleJavaPackage.EXPRESSION_AUX__EXP:
         setExp((expression)newValue);
@@ -332,8 +350,8 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION_AUX__OPEDADOR:
-        setOpedador(OPEDADOR_EDEFAULT);
+      case SimpleJavaPackage.EXPRESSION_AUX__OP:
+        setOp((mais_aux)null);
         return;
       case SimpleJavaPackage.EXPRESSION_AUX__EXP:
         setExp((expression)null);
@@ -358,8 +376,8 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION_AUX__OPEDADOR:
-        return OPEDADOR_EDEFAULT == null ? opedador != null : !OPEDADOR_EDEFAULT.equals(opedador);
+      case SimpleJavaPackage.EXPRESSION_AUX__OP:
+        return op != null;
       case SimpleJavaPackage.EXPRESSION_AUX__EXP:
         return exp != null;
       case SimpleJavaPackage.EXPRESSION_AUX__OPERADOR:
@@ -381,9 +399,7 @@ public class expression_auxImpl extends MinimalEObjectImpl.Container implements 
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (opedador: ");
-    result.append(opedador);
-    result.append(", operador: ");
+    result.append(" (operador: ");
     result.append(operador);
     result.append(')');
     return result.toString();

@@ -30,6 +30,7 @@ import org.xtext.simpleJava.numeric_expression;
  *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getTipoBit <em>Tipo Bit</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getNew <em>New</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getLiteral <em>Literal</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getIdentificador <em>Identificador</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getExpressao <em>Expressao</em>}</li>
  * </ul>
  * </p>
@@ -87,6 +88,26 @@ public class expressionImpl extends expression_auxImpl implements expression
    * @ordered
    */
   protected literal_expression literal;
+
+  /**
+   * The default value of the '{@link #getIdentificador() <em>Identificador</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIdentificador()
+   * @generated
+   * @ordered
+   */
+  protected static final String IDENTIFICADOR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getIdentificador() <em>Identificador</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIdentificador()
+   * @generated
+   * @ordered
+   */
+  protected String identificador = IDENTIFICADOR_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getExpressao() <em>Expressao</em>}' containment reference.
@@ -364,6 +385,29 @@ public class expressionImpl extends expression_auxImpl implements expression
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getIdentificador()
+  {
+    return identificador;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setIdentificador(String newIdentificador)
+  {
+    String oldIdentificador = identificador;
+    identificador = newIdentificador;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__IDENTIFICADOR, oldIdentificador, identificador));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public expression getExpressao()
   {
     return expressao;
@@ -453,6 +497,8 @@ public class expressionImpl extends expression_auxImpl implements expression
         return getNew();
       case SimpleJavaPackage.EXPRESSION__LITERAL:
         return getLiteral();
+      case SimpleJavaPackage.EXPRESSION__IDENTIFICADOR:
+        return getIdentificador();
       case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
         return getExpressao();
     }
@@ -483,6 +529,9 @@ public class expressionImpl extends expression_auxImpl implements expression
         return;
       case SimpleJavaPackage.EXPRESSION__LITERAL:
         setLiteral((literal_expression)newValue);
+        return;
+      case SimpleJavaPackage.EXPRESSION__IDENTIFICADOR:
+        setIdentificador((String)newValue);
         return;
       case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
         setExpressao((expression)newValue);
@@ -516,6 +565,9 @@ public class expressionImpl extends expression_auxImpl implements expression
       case SimpleJavaPackage.EXPRESSION__LITERAL:
         setLiteral((literal_expression)null);
         return;
+      case SimpleJavaPackage.EXPRESSION__IDENTIFICADOR:
+        setIdentificador(IDENTIFICADOR_EDEFAULT);
+        return;
       case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
         setExpressao((expression)null);
         return;
@@ -543,10 +595,29 @@ public class expressionImpl extends expression_auxImpl implements expression
         return new_ != null;
       case SimpleJavaPackage.EXPRESSION__LITERAL:
         return literal != null;
+      case SimpleJavaPackage.EXPRESSION__IDENTIFICADOR:
+        return IDENTIFICADOR_EDEFAULT == null ? identificador != null : !IDENTIFICADOR_EDEFAULT.equals(identificador);
       case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
         return expressao != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (identificador: ");
+    result.append(identificador);
+    result.append(')');
+    return result.toString();
   }
 
 } //expressionImpl

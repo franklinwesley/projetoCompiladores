@@ -1317,13 +1317,13 @@ public interface SimpleJavaPackage extends EPackage
   int EXPRESSION_AUX = 27;
 
   /**
-   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION_AUX__OPEDADOR = 0;
+  int EXPRESSION_AUX__OP = 0;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -1372,13 +1372,13 @@ public interface SimpleJavaPackage extends EPackage
   int EXPRESSION = 26;
 
   /**
-   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION__OPEDADOR = EXPRESSION_AUX__OPEDADOR;
+  int EXPRESSION__OP = EXPRESSION_AUX__OP;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -1453,13 +1453,22 @@ public interface SimpleJavaPackage extends EPackage
   int EXPRESSION__LITERAL = EXPRESSION_AUX_FEATURE_COUNT + 4;
 
   /**
+   * The feature id for the '<em><b>Identificador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__IDENTIFICADOR = EXPRESSION_AUX_FEATURE_COUNT + 5;
+
+  /**
    * The feature id for the '<em><b>Expressao</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION__EXPRESSAO = EXPRESSION_AUX_FEATURE_COUNT + 5;
+  int EXPRESSION__EXPRESSAO = EXPRESSION_AUX_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>expression</em>' class.
@@ -1468,7 +1477,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION_FEATURE_COUNT = EXPRESSION_AUX_FEATURE_COUNT + 6;
+  int EXPRESSION_FEATURE_COUNT = EXPRESSION_AUX_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link org.xtext.simpleJava.impl.exp_auxImpl <em>exp aux</em>}' class.
@@ -1481,13 +1490,13 @@ public interface SimpleJavaPackage extends EPackage
   int EXP_AUX = 25;
 
   /**
-   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP_AUX__OPEDADOR = EXPRESSION__OPEDADOR;
+  int EXP_AUX__OP = EXPRESSION__OP;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -1562,6 +1571,15 @@ public interface SimpleJavaPackage extends EPackage
   int EXP_AUX__LITERAL = EXPRESSION__LITERAL;
 
   /**
+   * The feature id for the '<em><b>Identificador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_AUX__IDENTIFICADOR = EXPRESSION__IDENTIFICADOR;
+
+  /**
    * The feature id for the '<em><b>Expressao</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1590,40 +1608,13 @@ public interface SimpleJavaPackage extends EPackage
   int MAIS_AUX = 28;
 
   /**
-   * The feature id for the '<em><b>Opedador</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MAIS_AUX__OPEDADOR = EXPRESSION_AUX__OPEDADOR;
-
-  /**
-   * The feature id for the '<em><b>Exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MAIS_AUX__EXP = EXPRESSION_AUX__EXP;
-
-  /**
    * The feature id for the '<em><b>Operador</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIS_AUX__OPERADOR = EXPRESSION_AUX__OPERADOR;
-
-  /**
-   * The feature id for the '<em><b>Expressoes</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MAIS_AUX__EXPRESSOES = EXPRESSION_AUX__EXPRESSOES;
+  int MAIS_AUX__OPERADOR = 0;
 
   /**
    * The number of structural features of the '<em>mais aux</em>' class.
@@ -1632,7 +1623,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MAIS_AUX_FEATURE_COUNT = EXPRESSION_AUX_FEATURE_COUNT + 0;
+  int MAIS_AUX_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.simpleJava.impl.creating_auxImpl <em>creating aux</em>}' class.
@@ -1673,13 +1664,13 @@ public interface SimpleJavaPackage extends EPackage
   int AUX = 31;
 
   /**
-   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int AUX__OPEDADOR = EXPRESSION_AUX__OPEDADOR;
+  int AUX__OP = EXPRESSION_AUX__OP;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -1930,13 +1921,13 @@ public interface SimpleJavaPackage extends EPackage
   int ARGLIST__VALOR_VARIAVEL = VARIABLE_DECLARATOR__VALOR_VARIAVEL;
 
   /**
-   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARGLIST__OPEDADOR = VARIABLE_DECLARATOR_FEATURE_COUNT + 0;
+  int ARGLIST__OP = VARIABLE_DECLARATOR_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -2012,13 +2003,13 @@ public interface SimpleJavaPackage extends EPackage
   int NAME = 37;
 
   /**
-   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NAME__OPEDADOR = EXPRESSION_AUX__OPEDADOR;
+  int NAME__OP = EXPRESSION_AUX__OP;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -2150,13 +2141,13 @@ public interface SimpleJavaPackage extends EPackage
   int TYPE = 40;
 
   /**
-   * The feature id for the '<em><b>Opedador</b></em>' attribute.
+   * The feature id for the '<em><b>Op</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TYPE__OPEDADOR = EXP_AUX__OPEDADOR;
+  int TYPE__OP = EXP_AUX__OP;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -2229,6 +2220,15 @@ public interface SimpleJavaPackage extends EPackage
    * @ordered
    */
   int TYPE__LITERAL = EXP_AUX__LITERAL;
+
+  /**
+   * The feature id for the '<em><b>Identificador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE__IDENTIFICADOR = EXP_AUX__IDENTIFICADOR;
 
   /**
    * The feature id for the '<em><b>Expressao</b></em>' containment reference.
@@ -3536,6 +3536,17 @@ public interface SimpleJavaPackage extends EPackage
   EReference getexpression_Literal();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.expression#getIdentificador <em>Identificador</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identificador</em>'.
+   * @see org.xtext.simpleJava.expression#getIdentificador()
+   * @see #getexpression()
+   * @generated
+   */
+  EAttribute getexpression_Identificador();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.expression#getExpressao <em>Expressao</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3557,15 +3568,15 @@ public interface SimpleJavaPackage extends EPackage
   EClass getexpression_aux();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.expression_aux#getOpedador <em>Opedador</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.expression_aux#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Opedador</em>'.
-   * @see org.xtext.simpleJava.expression_aux#getOpedador()
+   * @return the meta object for the containment reference '<em>Op</em>'.
+   * @see org.xtext.simpleJava.expression_aux#getOp()
    * @see #getexpression_aux()
    * @generated
    */
-  EAttribute getexpression_aux_Opedador();
+  EReference getexpression_aux_Op();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.expression_aux#getExp <em>Exp</em>}'.
@@ -3609,6 +3620,17 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    */
   EClass getmais_aux();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.mais_aux#getOperador <em>Operador</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Operador</em>'.
+   * @see org.xtext.simpleJava.mais_aux#getOperador()
+   * @see #getmais_aux()
+   * @generated
+   */
+  EAttribute getmais_aux_Operador();
 
   /**
    * Returns the meta object for class '{@link org.xtext.simpleJava.new <em>new</em>}'.
@@ -4988,6 +5010,14 @@ public interface SimpleJavaPackage extends EPackage
     EReference EXPRESSION__LITERAL = eINSTANCE.getexpression_Literal();
 
     /**
+     * The meta object literal for the '<em><b>Identificador</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXPRESSION__IDENTIFICADOR = eINSTANCE.getexpression_Identificador();
+
+    /**
      * The meta object literal for the '<em><b>Expressao</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5006,12 +5036,12 @@ public interface SimpleJavaPackage extends EPackage
     EClass EXPRESSION_AUX = eINSTANCE.getexpression_aux();
 
     /**
-     * The meta object literal for the '<em><b>Opedador</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Op</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXPRESSION_AUX__OPEDADOR = eINSTANCE.getexpression_aux_Opedador();
+    EReference EXPRESSION_AUX__OP = eINSTANCE.getexpression_aux_Op();
 
     /**
      * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
@@ -5046,6 +5076,14 @@ public interface SimpleJavaPackage extends EPackage
      * @generated
      */
     EClass MAIS_AUX = eINSTANCE.getmais_aux();
+
+    /**
+     * The meta object literal for the '<em><b>Operador</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MAIS_AUX__OPERADOR = eINSTANCE.getmais_aux_Operador();
 
     /**
      * The meta object literal for the '{@link org.xtext.simpleJava.impl.newImpl <em>new</em>}' class.

@@ -12,6 +12,13 @@ import java.util.ArrayList
 import org.xtext.simpleJava.while_statement
 import org.xtext.simpleJava.variable_declaration
 import org.xtext.simpleJava.variable_declarator
+import org.xtext.simpleJava.expression
+import org.xtext.simpleJava.statement
+import java.util.Map
+import java.util.HashMap
+import org.xtext.simpleJava.method_declaration
+import org.xtext.simpleJava.parameter_list
+import org.xtext.simpleJava.parameter
 
 //import org.eclipse.xtext.validation.Check
 
@@ -22,9 +29,9 @@ import org.xtext.simpleJava.variable_declarator
  */
 class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 
-	//TODO ve se eh necessario mesmo um map
 	private final List<Tipo> tipos = new ArrayList<Tipo>();
-	private final List<Variavel> variaveis = new ArrayList<Variavel>();
+	private final Map<String, Variavel> variaveis = new HashMap<String, Variavel>();
+	private final Map<String, Metodo> metodos = new HashMap<String, Metodo>();
 
 //  public static val INVALID_NAME = 'invalidName'
 //
@@ -39,12 +46,120 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 
 	@Check
 	def runChecks (compilation_unit comp) {
-		//ver esse get(0) para ser get(i)
 		checkTypeDeclaration(comp.declaracao);
 		checkVariableDeclaration(comp.declaracao);
+		//incompleto
 		checkVariableInitializer(comp.declaracao);
 		checkInterativeWhile(comp.declaracao);
+		//incompleto
+		checkAritmeticExpression(comp.declaracao);
+		//incompleto
+		checkBooleanExpression(comp.declaracao);
+		//incompleto
+		checkLiterals(comp.declaracao);
+		//incompleto
+		checkVariableUsed(comp.declaracao);
+		checkMetodDeclaration(comp.declaracao);
+		checkMetodoUsed(comp.declaracao);
 //		checkExpression();
+	}
+	
+	def checkMetodoUsed(EList<type_declaration> list) {
+		for (type_declaration td: list) {
+			checkUsoMetodo(td.declaracaoClasse.corpoClasse.declaracaoMetodo);
+		}
+	}
+	
+	def checkUsoMetodo(method_declaration declaration) {
+		//check
+	}
+	
+	def checkMetodDeclaration(EList<type_declaration> list) {
+		for (type_declaration td: list) {
+			checkDeclaracaoMetodo(td.declaracaoClasse.corpoClasse.declaracaoMetodo);
+		}
+	}
+	
+	def checkDeclaracaoMetodo(method_declaration declaration) {
+		var tipo = new Tipo(String.valueOf(declaration.tipoRetorno.tipo));
+		var parametros = getparamtros(declaration.parametrosMetodo);
+		var metodo =new Metodo(declaration.nomeMetodo, tipo, parametros);
+		metodos.put(declaration.nomeMetodo, metodo);
+	}
+	
+	def Map<String,Tipo> getparamtros(parameter_list list) {
+		var p = new HashMap<String,Tipo>();
+		for (parameter parametro: list.parametros) {
+			p.put(parametro.nomeParametro, new Tipo (String.valueOf(parametro.tipoParametro.tipo)));
+		}
+		return p;
+	}
+	
+	def checkVariableUsed(EList<type_declaration> list) {
+		for (type_declaration td: list) {
+			checkUsoVariaveis(td.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo);
+		}
+	}
+	
+	def checkUsoVariaveis(statement statement) {
+		var variavel = statement.expressao.identificador
+		if (!variaveis.containsKey(variavel)) {
+			//erro variavel nao exite
+		} else {
+			//check tipo
+		}
+	}
+	
+	def checkLiterals(EList<type_declaration> list) {
+		for (type_declaration td: list) {
+			checkLiterais(td.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.expressao);
+		}
+	}
+	
+	def checkLiterais(expression expression) {
+		//check literais
+		if (expression.literal != null) {
+			//check
+		}
+	}
+	
+	def checkBooleanExpression(EList<type_declaration> list) {
+		for (type_declaration td: list) {
+			checkBoolean(td.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.expressao);
+		}
+	}
+	
+	def checkBoolean(expression expression) {
+		//checar espressao booleana
+		if (expression.tipoLogical != null) {
+			//check
+		} if (expression.operador == ">" || expression.operador == "<" 
+			|| expression.operador == ">=" || expression.operador == "<=" 
+			|| expression.operador == "==" || expression.operador == "!=" 
+			|| expression.operador == ">>=" || expression.operador == "<<" 
+			|| expression.operador == ">>" || expression.operador == ">>>") {
+			//check
+		} 
+	}
+	
+	def checkAritmeticExpression(EList<type_declaration> list) {
+		for (type_declaration td: list) {
+			checkArimetic(td.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.expressao);
+		}
+	}
+	
+	def checkArimetic(expression expression) {
+		//checar espressao aritimetrica
+		if (expression.tipoNumeric != null) {
+			//check
+		} if (expression.expressoes.op != null || expression.expressoes == "++" 
+			|| expression.expressoes == "--" || expression.expressoes == "-" 
+			|| expression.expressoes == "-=" || expression.expressoes == "*" 
+			|| expression.expressoes == "*=" || expression.expressoes == "/" 
+			|| expression.expressoes == "/=" || expression.expressoes == "%" 
+			|| expression.expressoes == "%=") {
+			//check
+		}
 	}
 	
 	def checkInterativeWhile(EList<type_declaration> list) {
@@ -70,8 +185,8 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			var vars = declaration.declaracaoVariaveis;
 			for (variable_declarator variable: vars) {	
 				var variavel = new Variavel(variable.nomeVariavel, tipo);
-				if (!variaveis.contains(variavel)) {
-					variaveis.add(variavel);
+				if (!variaveis.containsKey(variable.nomeVariavel)) {
+					variaveis.put(variable.nomeVariavel, variavel);
 				} else {
 					//erro variavel ja existe
 				}
@@ -82,10 +197,11 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	
 	def checkWhile(while_statement statement) {
 		var logico = statement.expressaoWhile.tipoLogical;
-		var operador = statement.expressaoWhile.expressoes.opedador
+		var operador = statement.expressaoWhile.expressoes.operador
+		var metodo = metodos.get(statement.expressaoWhile.identificador);
 		if (logico == null && operador != ">" && operador != "<" && operador != ">=" 
 			&& operador != "<=" && operador != "==" && operador != "!=" && operador != ">>=" && operador != "<<" 
-			&& operador != ">>" && operador != ">>>") {
+			&& operador != ">>" && operador != ">>>" && metodo.getTipoRetorno().equals(new Tipo ("boolean"))) {
 			//erro expressao invalida
 		} else {
 			if (statement.blocoWhile.bloco.corpo.corpoWhile != null) {
@@ -107,24 +223,25 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	def checkInicializacaoVariavel(EList<variable_declarator> list, Tipo tipo) {
 		for (variable_declarator vd : list) {
 			var variavel = new Variavel(vd.nomeVariavel, tipo);
-			if (!variaveis.contains(variavel)) {
+			if (!variaveis.containsKey(vd.nomeVariavel)) {
 				//error variavel naum exite
 			} else {
-				variaveis.add(variavel);
+				var v = variaveis.get(vd.nomeVariavel);
 				//TODO checkar o tipo se esta certo
 			}	
 		}
 	}
 	
 	def checkTypeDeclaration(EList<type_declaration> list) {
-		var type_declaration = list.get(0);
-		if (type_declaration.declaracaoClasse != null) {
+		for (type_declaration td: list) {
+			if (td.declaracaoClasse != null) {
 			//salvar o tipo
-			addType(type_declaration.declaracaoClasse.nomeClasse);
+			addType(td.declaracaoClasse.nomeClasse);
 		} else {
 			//salva o tipo
-			addType(type_declaration.declaracaoInterface.nomeInterface);
+			addType(td.declaracaoInterface.nomeInterface);
 		}
+		}		
 	}
 	
 	def addType(String tipo) {

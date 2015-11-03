@@ -132,8 +132,12 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		var tipo = new Tipo(String.valueOf(declaration.tipoRetorno.tipo));
 		var parametros = getparametros(declaration.parametrosMetodo);
 		//TODO verificar se o coropo do metodo tem o tipo q ele diz ter
-		var metodo =new Metodo(declaration.nomeMetodo, tipo, parametros);
-		metodos.put(declaration.nomeMetodo, metodo);
+		if (true) {
+			var metodo =new Metodo(declaration.nomeMetodo, tipo, parametros);
+			metodos.put(declaration.nomeMetodo, metodo);
+		} else {
+			// erro tipo de retorno
+		}
 	}
 	
 	def Map<String,Tipo> getparametros(parameter_list list) {

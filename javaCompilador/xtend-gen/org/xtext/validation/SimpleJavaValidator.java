@@ -204,10 +204,20 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
       Tipo tipo = new Tipo(_valueOf);
       parameter_list _parametrosMetodo = declaration.getParametrosMetodo();
       Map<String, Tipo> parametros = this.getparametros(_parametrosMetodo);
-      String _nomeMetodo = declaration.getNomeMetodo();
-      Metodo metodo = new Metodo(_nomeMetodo, tipo, parametros);
-      String _nomeMetodo_1 = declaration.getNomeMetodo();
-      _xblockexpression = this.metodos.put(_nomeMetodo_1, metodo);
+      Metodo _xifexpression = null;
+      if (true) {
+        Metodo _xblockexpression_1 = null;
+        {
+          String _nomeMetodo = declaration.getNomeMetodo();
+          Metodo metodo = new Metodo(_nomeMetodo, tipo, parametros);
+          String _nomeMetodo_1 = declaration.getNomeMetodo();
+          _xblockexpression_1 = this.metodos.put(_nomeMetodo_1, metodo);
+        }
+        _xifexpression = _xblockexpression_1;
+      } else {
+        _xifexpression = null;
+      }
+      _xblockexpression = _xifexpression;
     }
     return _xblockexpression;
   }

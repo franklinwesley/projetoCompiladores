@@ -42,7 +42,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		//ver esse get(0) para ser get(i)
 		checkTypeDeclaration(comp.declaracao);
 		checkVariableDeclaration(comp.declaracao);
-//		checkVariableInitializer(comp, comp.declaracao);
+		checkVariableInitializer(comp.declaracao);
 		checkInterativeWhile(comp.declaracao);
 //		checkExpression();
 	}
@@ -95,16 +95,26 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	}
 	
 	
-//	def checkVariableInitializer(compilation_unit unit, EList<type_declaration> list) {
-//		var variable_declaration = list.get(0).declaracaoClasse.corpoClasse.declaracaoVariavel.declaracaoVariaveis.get(0);
-//		var variavel = new Variavel(variable_declaration.nomeVariavel, list.get(0).declaracaoClasse.corpoClasse.declaracaoVariavel.tipo);
-//		if (variaveis.containsValue(variavel)) {
-//			//error ja tem a variavel
-//		} else {
-//			variaveis.put(unit,variavel);
-//			//checkar o tipo se esta certo
-//		}
-//	}
+	def checkVariableInitializer(EList<type_declaration> list) {
+		for (type_declaration td: list) {
+			//TODO ver se esse new tipo pega
+			var tipo = new Tipo(String.valueOf(td.declaracaoClasse.corpoClasse.declaracaoVariavel.tipoVariavel.tipo));
+			checkInicializacaoVariavel(td.declaracaoClasse.corpoClasse.declaracaoVariavel.declaracaoVariaveis, tipo);
+			checkInicializacaoVariavel(td.declaracaoInterface.corpoInterface.declaracaoVariavel.declaracaoVariaveis, tipo);
+		}
+	}
+	
+	def checkInicializacaoVariavel(EList<variable_declarator> list, Tipo tipo) {
+		for (variable_declarator vd : list) {
+			var variavel = new Variavel(vd.nomeVariavel, tipo);
+			if (!variaveis.contains(variavel)) {
+				//error variavel naum exite
+			} else {
+				variaveis.add(variavel);
+				//TODO checkar o tipo se esta certo
+			}	
+		}
+	}
 	
 	def checkTypeDeclaration(EList<type_declaration> list) {
 		var type_declaration = list.get(0);

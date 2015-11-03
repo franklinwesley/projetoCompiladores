@@ -46,7 +46,9 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
     EList<type_declaration> _declaracao_1 = comp.getDeclaracao();
     this.checkVariableDeclaration(_declaracao_1);
     EList<type_declaration> _declaracao_2 = comp.getDeclaracao();
-    this.checkInterativeWhile(_declaracao_2);
+    this.checkVariableInitializer(_declaracao_2);
+    EList<type_declaration> _declaracao_3 = comp.getDeclaracao();
+    this.checkInterativeWhile(_declaracao_3);
   }
   
   public void checkInterativeWhile(final EList<type_declaration> list) {
@@ -209,6 +211,45 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
       _xblockexpression = _xifexpression;
     }
     return _xblockexpression;
+  }
+  
+  public void checkVariableInitializer(final EList<type_declaration> list) {
+    for (final type_declaration td : list) {
+      {
+        class_declaration _declaracaoClasse = td.getDeclaracaoClasse();
+        field_declaration _corpoClasse = _declaracaoClasse.getCorpoClasse();
+        variable_declaration _declaracaoVariavel = _corpoClasse.getDeclaracaoVariavel();
+        type _tipoVariavel = _declaracaoVariavel.getTipoVariavel();
+        EObject _tipo = _tipoVariavel.getTipo();
+        String _valueOf = String.valueOf(_tipo);
+        Tipo tipo = new Tipo(_valueOf);
+        class_declaration _declaracaoClasse_1 = td.getDeclaracaoClasse();
+        field_declaration _corpoClasse_1 = _declaracaoClasse_1.getCorpoClasse();
+        variable_declaration _declaracaoVariavel_1 = _corpoClasse_1.getDeclaracaoVariavel();
+        EList<variable_declarator> _declaracaoVariaveis = _declaracaoVariavel_1.getDeclaracaoVariaveis();
+        this.checkInicializacaoVariavel(_declaracaoVariaveis, tipo);
+        interface_declaration _declaracaoInterface = td.getDeclaracaoInterface();
+        field_declaration _corpoInterface = _declaracaoInterface.getCorpoInterface();
+        variable_declaration _declaracaoVariavel_2 = _corpoInterface.getDeclaracaoVariavel();
+        EList<variable_declarator> _declaracaoVariaveis_1 = _declaracaoVariavel_2.getDeclaracaoVariaveis();
+        this.checkInicializacaoVariavel(_declaracaoVariaveis_1, tipo);
+      }
+    }
+  }
+  
+  public void checkInicializacaoVariavel(final EList<variable_declarator> list, final Tipo tipo) {
+    for (final variable_declarator vd : list) {
+      {
+        String _nomeVariavel = vd.getNomeVariavel();
+        Variavel variavel = new Variavel(_nomeVariavel, tipo);
+        boolean _contains = this.variaveis.contains(variavel);
+        boolean _not = (!_contains);
+        if (_not) {
+        } else {
+          this.variaveis.add(variavel);
+        }
+      }
+    }
   }
   
   public boolean checkTypeDeclaration(final EList<type_declaration> list) {

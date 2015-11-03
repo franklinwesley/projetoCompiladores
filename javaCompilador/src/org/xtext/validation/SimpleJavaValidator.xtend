@@ -60,8 +60,11 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		checkLiterals(comp.declaracao);
 		//incompleto
 		checkVariableUsed(comp.declaracao);
+		//incompleto
 		checkMetodDeclaration(comp.declaracao);
+		//incompleto
 		checkMetodoUsed(comp.declaracao);
+		//incompleto
 		checkType(comp.declaracao);
 	}
 	

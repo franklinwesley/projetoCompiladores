@@ -29,6 +29,7 @@ import org.xtext.simpleJava.constructor_declaration;
 import org.xtext.simpleJava.creating_aux;
 import org.xtext.simpleJava.creating_expression;
 import org.xtext.simpleJava.do_statement;
+import org.xtext.simpleJava.doc_comment;
 import org.xtext.simpleJava.exp_aux;
 import org.xtext.simpleJava.expression;
 import org.xtext.simpleJava.expression_aux;
@@ -110,6 +111,16 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case SimpleJavaPackage.DO_STATEMENT:
 				sequence_do_statement(context, (do_statement) semanticObject); 
 				return; 
+			case SimpleJavaPackage.DOC_COMMENT:
+				if(context == grammarAccess.getDoc_commentRule()) {
+					sequence_doc_comment(context, (doc_comment) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getType_declarationRule()) {
+					sequence_doc_comment_type_declaration(context, (doc_comment) semanticObject); 
+					return; 
+				}
+				else break;
 			case SimpleJavaPackage.EXP_AUX:
 				if(context == grammarAccess.getExp_auxRule()) {
 					sequence_exp_aux(context, (exp_aux) semanticObject); 
@@ -366,7 +377,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (((novoObjeto=name parametros=creating_aux) | (tipoObjeto=type_specifier parametros=aux?) | expressaoNew=expression) novo=new*)
+	 *     (((novoObjeto=name parametros=creating_aux) | (tipoObjeto=type_specifier parametros=aux?) | expressaoNew=expression) novo=newBlock*)
 	 */
 	protected void sequence_creating_expression(EObject context, creating_expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -389,6 +400,24 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 		feeder.accept(grammarAccess.getDo_statementAccess().getBlocoDoStatementParserRuleCall_1_0(), semanticObject.getBlocoDo());
 		feeder.accept(grammarAccess.getDo_statementAccess().getExpressaoWhileExpressionParserRuleCall_4_0(), semanticObject.getExpressaoWhile());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     comentario=STRING
+	 */
+	protected void sequence_doc_comment(EObject context, doc_comment semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (comentario=STRING (declaracaoClasse=class_declaration | declaracaoInterface=interface_declaration))
+	 */
+	protected void sequence_doc_comment_type_declaration(EObject context, doc_comment semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -471,6 +500,22 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *             ) | 
 	 *             (
 	 *                 (
+	 *                     operador='ampersand' | 
+	 *                     operador='ampersand=' | 
+	 *                     operador='|' | 
+	 *                     operador='|=' | 
+	 *                     operador='^' | 
+	 *                     operador='^=' | 
+	 *                     operador='ampersand ampersand' | 
+	 *                     operador='||=' | 
+	 *                     operador='%' | 
+	 *                     operador='%='
+	 *                 ) 
+	 *                 exp=expression
+	 *             ) | 
+	 *             (operador='?' exp=expression operador=':' exp=expression) | 
+	 *             (
+	 *                 (
 	 *                     operador='>' | 
 	 *                     operador='<' | 
 	 *                     operador='>=' | 
@@ -503,10 +548,10 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 * Constraint:
 	 *     (
 	 *         (
-	 *             tipoLogical=logical_expression | 
-	 *             tipoNumeric=numeric_expression | 
-	 *             tipoBit=bit_expression | 
-	 *             new=creating_expression | 
+	 *             tipo=logical_expression | 
+	 *             tipo=numeric_expression | 
+	 *             tipo=bit_expression | 
+	 *             novo=creating_expression | 
 	 *             literal=literal_expression | 
 	 *             identificador=IDENTIFIER
 	 *         )? 
@@ -522,10 +567,10 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 * Constraint:
 	 *     (
 	 *         (
-	 *             tipoLogical=logical_expression | 
-	 *             tipoNumeric=numeric_expression | 
-	 *             tipoBit=bit_expression | 
-	 *             new=creating_expression | 
+	 *             tipo=logical_expression | 
+	 *             tipo=numeric_expression | 
+	 *             tipo=bit_expression | 
+	 *             novo=creating_expression | 
 	 *             literal=literal_expression | 
 	 *             identificador=IDENTIFIER
 	 *         )? 
@@ -541,9 +586,10 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * Constraint:
 	 *     (
-	 *         declaracaoMetodo=method_declaration | 
-	 *         declaracaoConstrutor=constructor_declaration | 
-	 *         declaracaoVariavel=variable_declaration | 
+	 *         (
+	 *             comentario=doc_comment* 
+	 *             (declaracaoMetodo=method_declaration | declaracaoConstrutor=constructor_declaration | declaracaoVariavel=variable_declaration)
+	 *         ) | 
 	 *         estatico=static_initializer
 	 *     )?
 	 */

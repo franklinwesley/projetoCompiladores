@@ -34,7 +34,7 @@ import org.xtext.simpleJava.type;
  *
  * @generated
  */
-public class constructor_declarationImpl extends newImpl implements constructor_declaration
+public class constructor_declarationImpl extends newBlockImpl implements constructor_declaration
 {
   /**
    * The cached value of the '{@link #getModificador() <em>Modificador</em>}' containment reference.

@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.simpleJava.SimpleJavaPackage;
 import org.xtext.simpleJava.constructor_declaration;
+import org.xtext.simpleJava.doc_comment;
 import org.xtext.simpleJava.field_declaration;
 import org.xtext.simpleJava.method_declaration;
 import org.xtext.simpleJava.static_initializer;
@@ -25,6 +26,7 @@ import org.xtext.simpleJava.variable_declaration;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.simpleJava.impl.field_declarationImpl#getComentario <em>Comentario</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.field_declarationImpl#getDeclaracaoMetodo <em>Declaracao Metodo</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.field_declarationImpl#getDeclaracaoConstrutor <em>Declaracao Construtor</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.field_declarationImpl#getDeclaracaoVariavel <em>Declaracao Variavel</em>}</li>
@@ -36,6 +38,16 @@ import org.xtext.simpleJava.variable_declaration;
  */
 public class field_declarationImpl extends MinimalEObjectImpl.Container implements field_declaration
 {
+  /**
+   * The cached value of the '{@link #getComentario() <em>Comentario</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getComentario()
+   * @generated
+   * @ordered
+   */
+  protected doc_comment comentario;
+
   /**
    * The cached value of the '{@link #getDeclaracaoMetodo() <em>Declaracao Metodo</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -95,6 +107,54 @@ public class field_declarationImpl extends MinimalEObjectImpl.Container implemen
   protected EClass eStaticClass()
   {
     return SimpleJavaPackage.Literals.FIELD_DECLARATION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public doc_comment getComentario()
+  {
+    return comentario;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetComentario(doc_comment newComentario, NotificationChain msgs)
+  {
+    doc_comment oldComentario = comentario;
+    comentario = newComentario;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.FIELD_DECLARATION__COMENTARIO, oldComentario, newComentario);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setComentario(doc_comment newComentario)
+  {
+    if (newComentario != comentario)
+    {
+      NotificationChain msgs = null;
+      if (comentario != null)
+        msgs = ((InternalEObject)comentario).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.FIELD_DECLARATION__COMENTARIO, null, msgs);
+      if (newComentario != null)
+        msgs = ((InternalEObject)newComentario).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.FIELD_DECLARATION__COMENTARIO, null, msgs);
+      msgs = basicSetComentario(newComentario, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.FIELD_DECLARATION__COMENTARIO, newComentario, newComentario));
   }
 
   /**
@@ -299,6 +359,8 @@ public class field_declarationImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case SimpleJavaPackage.FIELD_DECLARATION__COMENTARIO:
+        return basicSetComentario(null, msgs);
       case SimpleJavaPackage.FIELD_DECLARATION__DECLARACAO_METODO:
         return basicSetDeclaracaoMetodo(null, msgs);
       case SimpleJavaPackage.FIELD_DECLARATION__DECLARACAO_CONSTRUTOR:
@@ -321,6 +383,8 @@ public class field_declarationImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case SimpleJavaPackage.FIELD_DECLARATION__COMENTARIO:
+        return getComentario();
       case SimpleJavaPackage.FIELD_DECLARATION__DECLARACAO_METODO:
         return getDeclaracaoMetodo();
       case SimpleJavaPackage.FIELD_DECLARATION__DECLARACAO_CONSTRUTOR:
@@ -343,6 +407,9 @@ public class field_declarationImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case SimpleJavaPackage.FIELD_DECLARATION__COMENTARIO:
+        setComentario((doc_comment)newValue);
+        return;
       case SimpleJavaPackage.FIELD_DECLARATION__DECLARACAO_METODO:
         setDeclaracaoMetodo((method_declaration)newValue);
         return;
@@ -369,6 +436,9 @@ public class field_declarationImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case SimpleJavaPackage.FIELD_DECLARATION__COMENTARIO:
+        setComentario((doc_comment)null);
+        return;
       case SimpleJavaPackage.FIELD_DECLARATION__DECLARACAO_METODO:
         setDeclaracaoMetodo((method_declaration)null);
         return;
@@ -395,6 +465,8 @@ public class field_declarationImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case SimpleJavaPackage.FIELD_DECLARATION__COMENTARIO:
+        return comentario != null;
       case SimpleJavaPackage.FIELD_DECLARATION__DECLARACAO_METODO:
         return declaracaoMetodo != null;
       case SimpleJavaPackage.FIELD_DECLARATION__DECLARACAO_CONSTRUTOR:

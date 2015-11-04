@@ -27,8 +27,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_creating_aux___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a;
 	protected AbstractElementAlias match_creating_expression___LeftSquareBracketKeyword_1_1_2_0_RightSquareBracketKeyword_1_1_2_1__a;
 	protected AbstractElementAlias match_expression_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7;
-	protected AbstractElementAlias match_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__;
-	protected AbstractElementAlias match_field_declaration_Doc_commentParserRuleCall_0_0_a;
 	protected AbstractElementAlias match_import_statement_FullStopAsteriskSemicolonKeyword_2_0_or_SemicolonKeyword_2_1;
 	protected AbstractElementAlias match_method_declaration___LeftSquareBracketKeyword_6_0_RightSquareBracketKeyword_6_1__a;
 	protected AbstractElementAlias match_parameter___LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_1__a;
@@ -36,7 +34,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_statement___IDENTIFIERTerminalRuleCall_12_0_ColonKeyword_12_1__a;
 	protected AbstractElementAlias match_switch_statement___DefaultKeyword_5_1_0_ColonKeyword_5_1_1__a;
 	protected AbstractElementAlias match_type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__a;
-	protected AbstractElementAlias match_type_declaration_Doc_commentParserRuleCall_0_q;
 	protected AbstractElementAlias match_variable_declaration_VoidKeyword_1_1_q;
 	protected AbstractElementAlias match_variable_declarator___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a;
 	protected AbstractElementAlias match_variable_initializer_CommaKeyword_1_1_2_q;
@@ -49,8 +46,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_creating_aux___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getLeftSquareBracketKeyword_1_1_0()), new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getRightSquareBracketKeyword_1_1_1()));
 		match_creating_expression___LeftSquareBracketKeyword_1_1_2_0_RightSquareBracketKeyword_1_1_2_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getCreating_expressionAccess().getLeftSquareBracketKeyword_1_1_2_0()), new TokenAlias(false, false, grammarAccess.getCreating_expressionAccess().getRightSquareBracketKeyword_1_1_2_1()));
 		match_expression_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getNullKeyword_0_5()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getSuperKeyword_0_6()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getThisKeyword_0_7()));
-		match_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__ = new AlternativeAlias(false, false, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_1()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getCircumflexAccentEqualsSignKeyword_0_4_0_0_5()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getCircumflexAccentKeyword_0_4_0_0_4()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getCommaKeyword_0_0_3_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getPercentSignEqualsSignKeyword_0_4_0_0_9()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getPercentSignKeyword_0_4_0_0_8()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getQuestionMarkKeyword_0_4_1_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getVerticalLineEqualsSignKeyword_0_4_0_0_3()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getVerticalLineKeyword_0_4_0_0_2()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_0()), new TokenAlias(false, false, grammarAccess.getExpression_auxAccess().getAmpersandKeyword_0_4_0_0_6_1())));
-		match_field_declaration_Doc_commentParserRuleCall_0_0_a = new TokenAlias(true, true, grammarAccess.getField_declarationAccess().getDoc_commentParserRuleCall_0_0());
 		match_import_statement_FullStopAsteriskSemicolonKeyword_2_0_or_SemicolonKeyword_2_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getImport_statementAccess().getFullStopAsteriskSemicolonKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getImport_statementAccess().getSemicolonKeyword_2_1()));
 		match_method_declaration___LeftSquareBracketKeyword_6_0_RightSquareBracketKeyword_6_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getMethod_declarationAccess().getLeftSquareBracketKeyword_6_0()), new TokenAlias(false, false, grammarAccess.getMethod_declarationAccess().getRightSquareBracketKeyword_6_1()));
 		match_parameter___LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getParameterAccess().getLeftSquareBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getParameterAccess().getRightSquareBracketKeyword_2_1()));
@@ -58,7 +53,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_statement___IDENTIFIERTerminalRuleCall_12_0_ColonKeyword_12_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getStatementAccess().getIDENTIFIERTerminalRuleCall_12_0()), new TokenAlias(false, false, grammarAccess.getStatementAccess().getColonKeyword_12_1()));
 		match_switch_statement___DefaultKeyword_5_1_0_ColonKeyword_5_1_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSwitch_statementAccess().getDefaultKeyword_5_1_0()), new TokenAlias(false, false, grammarAccess.getSwitch_statementAccess().getColonKeyword_5_1_1()));
 		match_type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getTypeAccess().getLeftSquareBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getTypeAccess().getRightSquareBracketKeyword_1_1()));
-		match_type_declaration_Doc_commentParserRuleCall_0_q = new TokenAlias(false, true, grammarAccess.getType_declarationAccess().getDoc_commentParserRuleCall_0());
 		match_variable_declaration_VoidKeyword_1_1_q = new TokenAlias(false, true, grammarAccess.getVariable_declarationAccess().getVoidKeyword_1_1());
 		match_variable_declarator___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getVariable_declaratorAccess().getLeftSquareBracketKeyword_1_1_0()), new TokenAlias(false, false, grammarAccess.getVariable_declaratorAccess().getRightSquareBracketKeyword_1_1_1()));
 		match_variable_initializer_CommaKeyword_1_1_2_q = new TokenAlias(false, true, grammarAccess.getVariable_initializerAccess().getCommaKeyword_1_1_2());
@@ -70,8 +64,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getIDENTIFIERToken(semanticObject, ruleCall, node);
 		else if(ruleCall.getRule() == grammarAccess.getSTRINGRule())
 			return getSTRINGToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getDoc_commentRule())
-			return getdoc_commentToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -96,15 +88,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 		return "\"\"";
 	}
 	
-	/**
-	 * doc_comment: "/**" "... text ..." "*/";
-	 */
-	protected String getdoc_commentToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "/**... text ...*/";
-	}
-	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		if (transition.getAmbiguousSyntaxes().isEmpty()) return;
@@ -121,10 +104,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_creating_expression___LeftSquareBracketKeyword_1_1_2_0_RightSquareBracketKeyword_1_1_2_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_expression_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7.equals(syntax))
 				emit_expression_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__.equals(syntax))
-				emit_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_field_declaration_Doc_commentParserRuleCall_0_0_a.equals(syntax))
-				emit_field_declaration_Doc_commentParserRuleCall_0_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_import_statement_FullStopAsteriskSemicolonKeyword_2_0_or_SemicolonKeyword_2_1.equals(syntax))
 				emit_import_statement_FullStopAsteriskSemicolonKeyword_2_0_or_SemicolonKeyword_2_1(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_method_declaration___LeftSquareBracketKeyword_6_0_RightSquareBracketKeyword_6_1__a.equals(syntax))
@@ -139,8 +118,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_switch_statement___DefaultKeyword_5_1_0_ColonKeyword_5_1_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__a.equals(syntax))
 				emit_type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_type_declaration_Doc_commentParserRuleCall_0_q.equals(syntax))
-				emit_type_declaration_Doc_commentParserRuleCall_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_variable_declaration_VoidKeyword_1_1_q.equals(syntax))
 				emit_variable_declaration_VoidKeyword_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_variable_declarator___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a.equals(syntax))
@@ -192,9 +169,9 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     parametros=aux (ambiguity) (rule end)
-	 *     parametros=aux (ambiguity) novo=new
+	 *     parametros=aux (ambiguity) novo=newBlock
 	 *     tipoObjeto=type_specifier (ambiguity) (rule end)
-	 *     tipoObjeto=type_specifier (ambiguity) novo=new
+	 *     tipoObjeto=type_specifier (ambiguity) novo=newBlock
 	 */
 	protected void emit_creating_expression___LeftSquareBracketKeyword_1_1_2_0_RightSquareBracketKeyword_1_1_2_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -205,58 +182,10 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     'null' | 'super' | 'this'
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (('ampersand' 'ampersand') | (',' | 'ampersand' | 'ampersand=' | '|' | '|=' | '^' | '^=' | '||=' | '%' | '%=' | '?')) (ambiguity) expressoes=expression_aux
+	 *     (rule start) ',' (ambiguity) expressoes=expression_aux
 	 *     (rule start) (ambiguity) expressoes=expression_aux
 	 */
 	protected void emit_expression_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     (
-	  *         ('ampersand' 'ampersand') | 
-	  *         (
-	  *             ',' | 
-	  *             'ampersand' | 
-	  *             'ampersand=' | 
-	  *             '|' | 
-	  *             '|=' | 
-	  *             '^' | 
-	  *             '^=' | 
-	  *             '||=' | 
-	  *             '%' | 
-	  *             '%=' | 
-	  *             '?'
-	  *         )
-	  *     )
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) '(' expressao=expression
-	 *     (rule start) (ambiguity) '(' tipo=name
-	 *     (rule start) (ambiguity) '(' tipo=type_specifier
-	 *     (rule start) (ambiguity) ('null' | 'super' | 'this') expressoes=expression_aux
-	 *     (rule start) (ambiguity) identificador=IDENTIFIER
-	 *     (rule start) (ambiguity) literal=literal_expression
-	 *     (rule start) (ambiguity) new=creating_expression
-	 *     (rule start) (ambiguity) tipoBit=bit_expression
-	 *     (rule start) (ambiguity) tipoLogical=logical_expression
-	 *     (rule start) (ambiguity) tipoNumeric=numeric_expression
-	 */
-	protected void emit_expression_aux___AmpersandKeyword_0_4_0_0_0_or_AmpersandKeyword_0_4_0_0_1_or_CircumflexAccentEqualsSignKeyword_0_4_0_0_5_or_CircumflexAccentKeyword_0_4_0_0_4_or_CommaKeyword_0_0_3_0_or_PercentSignEqualsSignKeyword_0_4_0_0_9_or_PercentSignKeyword_0_4_0_0_8_or_QuestionMarkKeyword_0_4_1_0_or_VerticalLineEqualsSignKeyword_0_4_0_0_3_or_VerticalLineKeyword_0_4_0_0_2_or_VerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_7___or___AmpersandKeyword_0_4_0_0_6_0_AmpersandKeyword_0_4_0_0_6_1__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     doc_comment*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) declaracaoConstrutor=constructor_declaration
-	 *     (rule start) (ambiguity) declaracaoMetodo=method_declaration
-	 *     (rule start) (ambiguity) declaracaoVariavel=variable_declaration
-	 */
-	protected void emit_field_declaration_Doc_commentParserRuleCall_0_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -362,18 +291,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     tipo=type_specifier (ambiguity) (rule end)
 	 */
 	protected void emit_type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     doc_comment?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) declaracaoClasse=class_declaration
-	 *     (rule start) (ambiguity) declaracaoInterface=interface_declaration
-	 */
-	protected void emit_type_declaration_Doc_commentParserRuleCall_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

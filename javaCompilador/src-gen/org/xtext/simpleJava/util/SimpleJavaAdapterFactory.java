@@ -100,6 +100,11 @@ public class SimpleJavaAdapterFactory extends AdapterFactoryImpl
         return createtype_declarationAdapter();
       }
       @Override
+      public Adapter casedoc_comment(doc_comment object)
+      {
+        return createdoc_commentAdapter();
+      }
+      @Override
       public Adapter caseclass_declaration(class_declaration object)
       {
         return createclass_declarationAdapter();
@@ -220,9 +225,9 @@ public class SimpleJavaAdapterFactory extends AdapterFactoryImpl
         return createmais_auxAdapter();
       }
       @Override
-      public Adapter casenew(new object)
+      public Adapter casenewBlock(newBlock object)
       {
-        return createnewAdapter();
+        return createnewBlockAdapter();
       }
       @Override
       public Adapter casecreating_aux(creating_aux object)
@@ -377,6 +382,21 @@ public class SimpleJavaAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createtype_declarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.simpleJava.doc_comment <em>doc comment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.simpleJava.doc_comment
+   * @generated
+   */
+  public Adapter createdoc_commentAdapter()
   {
     return null;
   }
@@ -742,16 +762,16 @@ public class SimpleJavaAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.simpleJava.new <em>new</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.simpleJava.newBlock <em>new Block</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.simpleJava.new
+   * @see org.xtext.simpleJava.newBlock
    * @generated
    */
-  public Adapter createnewAdapter()
+  public Adapter createnewBlockAdapter()
   {
     return null;
   }

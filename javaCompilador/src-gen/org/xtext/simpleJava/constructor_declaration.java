@@ -23,7 +23,7 @@ package org.xtext.simpleJava;
  * @model
  * @generated
  */
-public interface constructor_declaration extends new
+public interface constructor_declaration extends newBlock
 {
   /**
    * Returns the value of the '<em><b>Modificador</b></em>' containment reference.

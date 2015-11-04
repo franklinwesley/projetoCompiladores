@@ -69,6 +69,7 @@ public class SimpleJavaFactoryImpl extends EFactoryImpl implements SimpleJavaFac
       case SimpleJavaPackage.PACKAGE_STATEMENT: return createpackage_statement();
       case SimpleJavaPackage.IMPORT_STATEMENT: return createimport_statement();
       case SimpleJavaPackage.TYPE_DECLARATION: return createtype_declaration();
+      case SimpleJavaPackage.DOC_COMMENT: return createdoc_comment();
       case SimpleJavaPackage.CLASS_DECLARATION: return createclass_declaration();
       case SimpleJavaPackage.INTERFACE_DECLARATION: return createinterface_declaration();
       case SimpleJavaPackage.FIELD_DECLARATION: return createfield_declaration();
@@ -93,7 +94,7 @@ public class SimpleJavaFactoryImpl extends EFactoryImpl implements SimpleJavaFac
       case SimpleJavaPackage.EXPRESSION: return createexpression();
       case SimpleJavaPackage.EXPRESSION_AUX: return createexpression_aux();
       case SimpleJavaPackage.MAIS_AUX: return createmais_aux();
-      case SimpleJavaPackage.NEW: return createnew();
+      case SimpleJavaPackage.NEW_BLOCK: return createnewBlock();
       case SimpleJavaPackage.CREATING_AUX: return createcreating_aux();
       case SimpleJavaPackage.AUX: return createaux();
       case SimpleJavaPackage.LITERAL_EXPRESSION: return createliteral_expression();
@@ -164,6 +165,17 @@ public class SimpleJavaFactoryImpl extends EFactoryImpl implements SimpleJavaFac
   {
     type_declarationImpl type_declaration = new type_declarationImpl();
     return type_declaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public doc_comment createdoc_comment()
+  {
+    doc_commentImpl doc_comment = new doc_commentImpl();
+    return doc_comment;
   }
 
   /**
@@ -435,10 +447,10 @@ public class SimpleJavaFactoryImpl extends EFactoryImpl implements SimpleJavaFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public new createnew()
+  public newBlock createnewBlock()
   {
-    newImpl new_ = new newImpl();
-    return new_;
+    newBlockImpl newBlock = new newBlockImpl();
+    return newBlock;
   }
 
   /**

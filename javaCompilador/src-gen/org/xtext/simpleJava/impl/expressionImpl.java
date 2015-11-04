@@ -6,17 +6,15 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.simpleJava.SimpleJavaPackage;
-import org.xtext.simpleJava.bit_expression;
 import org.xtext.simpleJava.creating_expression;
 import org.xtext.simpleJava.expression;
 import org.xtext.simpleJava.literal_expression;
-import org.xtext.simpleJava.logical_expression;
-import org.xtext.simpleJava.numeric_expression;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,13 +23,10 @@ import org.xtext.simpleJava.numeric_expression;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getTipoLogical <em>Tipo Logical</em>}</li>
- *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getTipoNumeric <em>Tipo Numeric</em>}</li>
- *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getTipoBit <em>Tipo Bit</em>}</li>
- *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getNew <em>New</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getTipo <em>Tipo</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getNovo <em>Novo</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getLiteral <em>Literal</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getIdentificador <em>Identificador</em>}</li>
- *   <li>{@link org.xtext.simpleJava.impl.expressionImpl#getExpressao <em>Expressao</em>}</li>
  * </ul>
  * </p>
  *
@@ -40,44 +35,24 @@ import org.xtext.simpleJava.numeric_expression;
 public class expressionImpl extends expression_auxImpl implements expression
 {
   /**
-   * The cached value of the '{@link #getTipoLogical() <em>Tipo Logical</em>}' containment reference.
+   * The cached value of the '{@link #getTipo() <em>Tipo</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTipoLogical()
+   * @see #getTipo()
    * @generated
    * @ordered
    */
-  protected logical_expression tipoLogical;
+  protected EObject tipo;
 
   /**
-   * The cached value of the '{@link #getTipoNumeric() <em>Tipo Numeric</em>}' containment reference.
+   * The cached value of the '{@link #getNovo() <em>Novo</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTipoNumeric()
+   * @see #getNovo()
    * @generated
    * @ordered
    */
-  protected numeric_expression tipoNumeric;
-
-  /**
-   * The cached value of the '{@link #getTipoBit() <em>Tipo Bit</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTipoBit()
-   * @generated
-   * @ordered
-   */
-  protected bit_expression tipoBit;
-
-  /**
-   * The cached value of the '{@link #getNew() <em>New</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNew()
-   * @generated
-   * @ordered
-   */
-  protected creating_expression new_;
+  protected creating_expression novo;
 
   /**
    * The cached value of the '{@link #getLiteral() <em>Literal</em>}' containment reference.
@@ -110,16 +85,6 @@ public class expressionImpl extends expression_auxImpl implements expression
   protected String identificador = IDENTIFICADOR_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getExpressao() <em>Expressao</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getExpressao()
-   * @generated
-   * @ordered
-   */
-  protected expression expressao;
-
-  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -145,9 +110,9 @@ public class expressionImpl extends expression_auxImpl implements expression
    * <!-- end-user-doc -->
    * @generated
    */
-  public logical_expression getTipoLogical()
+  public EObject getTipo()
   {
-    return tipoLogical;
+    return tipo;
   }
 
   /**
@@ -155,13 +120,13 @@ public class expressionImpl extends expression_auxImpl implements expression
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTipoLogical(logical_expression newTipoLogical, NotificationChain msgs)
+  public NotificationChain basicSetTipo(EObject newTipo, NotificationChain msgs)
   {
-    logical_expression oldTipoLogical = tipoLogical;
-    tipoLogical = newTipoLogical;
+    EObject oldTipo = tipo;
+    tipo = newTipo;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__TIPO_LOGICAL, oldTipoLogical, newTipoLogical);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__TIPO, oldTipo, newTipo);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -172,20 +137,20 @@ public class expressionImpl extends expression_auxImpl implements expression
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTipoLogical(logical_expression newTipoLogical)
+  public void setTipo(EObject newTipo)
   {
-    if (newTipoLogical != tipoLogical)
+    if (newTipo != tipo)
     {
       NotificationChain msgs = null;
-      if (tipoLogical != null)
-        msgs = ((InternalEObject)tipoLogical).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__TIPO_LOGICAL, null, msgs);
-      if (newTipoLogical != null)
-        msgs = ((InternalEObject)newTipoLogical).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__TIPO_LOGICAL, null, msgs);
-      msgs = basicSetTipoLogical(newTipoLogical, msgs);
+      if (tipo != null)
+        msgs = ((InternalEObject)tipo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__TIPO, null, msgs);
+      if (newTipo != null)
+        msgs = ((InternalEObject)newTipo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__TIPO, null, msgs);
+      msgs = basicSetTipo(newTipo, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__TIPO_LOGICAL, newTipoLogical, newTipoLogical));
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__TIPO, newTipo, newTipo));
   }
 
   /**
@@ -193,9 +158,9 @@ public class expressionImpl extends expression_auxImpl implements expression
    * <!-- end-user-doc -->
    * @generated
    */
-  public numeric_expression getTipoNumeric()
+  public creating_expression getNovo()
   {
-    return tipoNumeric;
+    return novo;
   }
 
   /**
@@ -203,13 +168,13 @@ public class expressionImpl extends expression_auxImpl implements expression
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTipoNumeric(numeric_expression newTipoNumeric, NotificationChain msgs)
+  public NotificationChain basicSetNovo(creating_expression newNovo, NotificationChain msgs)
   {
-    numeric_expression oldTipoNumeric = tipoNumeric;
-    tipoNumeric = newTipoNumeric;
+    creating_expression oldNovo = novo;
+    novo = newNovo;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__TIPO_NUMERIC, oldTipoNumeric, newTipoNumeric);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__NOVO, oldNovo, newNovo);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -220,116 +185,20 @@ public class expressionImpl extends expression_auxImpl implements expression
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTipoNumeric(numeric_expression newTipoNumeric)
+  public void setNovo(creating_expression newNovo)
   {
-    if (newTipoNumeric != tipoNumeric)
+    if (newNovo != novo)
     {
       NotificationChain msgs = null;
-      if (tipoNumeric != null)
-        msgs = ((InternalEObject)tipoNumeric).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__TIPO_NUMERIC, null, msgs);
-      if (newTipoNumeric != null)
-        msgs = ((InternalEObject)newTipoNumeric).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__TIPO_NUMERIC, null, msgs);
-      msgs = basicSetTipoNumeric(newTipoNumeric, msgs);
+      if (novo != null)
+        msgs = ((InternalEObject)novo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__NOVO, null, msgs);
+      if (newNovo != null)
+        msgs = ((InternalEObject)newNovo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__NOVO, null, msgs);
+      msgs = basicSetNovo(newNovo, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__TIPO_NUMERIC, newTipoNumeric, newTipoNumeric));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public bit_expression getTipoBit()
-  {
-    return tipoBit;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetTipoBit(bit_expression newTipoBit, NotificationChain msgs)
-  {
-    bit_expression oldTipoBit = tipoBit;
-    tipoBit = newTipoBit;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__TIPO_BIT, oldTipoBit, newTipoBit);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTipoBit(bit_expression newTipoBit)
-  {
-    if (newTipoBit != tipoBit)
-    {
-      NotificationChain msgs = null;
-      if (tipoBit != null)
-        msgs = ((InternalEObject)tipoBit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__TIPO_BIT, null, msgs);
-      if (newTipoBit != null)
-        msgs = ((InternalEObject)newTipoBit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__TIPO_BIT, null, msgs);
-      msgs = basicSetTipoBit(newTipoBit, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__TIPO_BIT, newTipoBit, newTipoBit));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public creating_expression getNew()
-  {
-    return new_;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetNew(creating_expression newNew, NotificationChain msgs)
-  {
-    creating_expression oldNew = new_;
-    new_ = newNew;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__NEW, oldNew, newNew);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setNew(creating_expression newNew)
-  {
-    if (newNew != new_)
-    {
-      NotificationChain msgs = null;
-      if (new_ != null)
-        msgs = ((InternalEObject)new_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__NEW, null, msgs);
-      if (newNew != null)
-        msgs = ((InternalEObject)newNew).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__NEW, null, msgs);
-      msgs = basicSetNew(newNew, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__NEW, newNew, newNew));
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__NOVO, newNovo, newNovo));
   }
 
   /**
@@ -408,71 +277,17 @@ public class expressionImpl extends expression_auxImpl implements expression
    * <!-- end-user-doc -->
    * @generated
    */
-  public expression getExpressao()
-  {
-    return expressao;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetExpressao(expression newExpressao, NotificationChain msgs)
-  {
-    expression oldExpressao = expressao;
-    expressao = newExpressao;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__EXPRESSAO, oldExpressao, newExpressao);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setExpressao(expression newExpressao)
-  {
-    if (newExpressao != expressao)
-    {
-      NotificationChain msgs = null;
-      if (expressao != null)
-        msgs = ((InternalEObject)expressao).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__EXPRESSAO, null, msgs);
-      if (newExpressao != null)
-        msgs = ((InternalEObject)newExpressao).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.EXPRESSION__EXPRESSAO, null, msgs);
-      msgs = basicSetExpressao(newExpressao, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.EXPRESSION__EXPRESSAO, newExpressao, newExpressao));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION__TIPO_LOGICAL:
-        return basicSetTipoLogical(null, msgs);
-      case SimpleJavaPackage.EXPRESSION__TIPO_NUMERIC:
-        return basicSetTipoNumeric(null, msgs);
-      case SimpleJavaPackage.EXPRESSION__TIPO_BIT:
-        return basicSetTipoBit(null, msgs);
-      case SimpleJavaPackage.EXPRESSION__NEW:
-        return basicSetNew(null, msgs);
+      case SimpleJavaPackage.EXPRESSION__TIPO:
+        return basicSetTipo(null, msgs);
+      case SimpleJavaPackage.EXPRESSION__NOVO:
+        return basicSetNovo(null, msgs);
       case SimpleJavaPackage.EXPRESSION__LITERAL:
         return basicSetLiteral(null, msgs);
-      case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
-        return basicSetExpressao(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -487,20 +302,14 @@ public class expressionImpl extends expression_auxImpl implements expression
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION__TIPO_LOGICAL:
-        return getTipoLogical();
-      case SimpleJavaPackage.EXPRESSION__TIPO_NUMERIC:
-        return getTipoNumeric();
-      case SimpleJavaPackage.EXPRESSION__TIPO_BIT:
-        return getTipoBit();
-      case SimpleJavaPackage.EXPRESSION__NEW:
-        return getNew();
+      case SimpleJavaPackage.EXPRESSION__TIPO:
+        return getTipo();
+      case SimpleJavaPackage.EXPRESSION__NOVO:
+        return getNovo();
       case SimpleJavaPackage.EXPRESSION__LITERAL:
         return getLiteral();
       case SimpleJavaPackage.EXPRESSION__IDENTIFICADOR:
         return getIdentificador();
-      case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
-        return getExpressao();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -515,26 +324,17 @@ public class expressionImpl extends expression_auxImpl implements expression
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION__TIPO_LOGICAL:
-        setTipoLogical((logical_expression)newValue);
+      case SimpleJavaPackage.EXPRESSION__TIPO:
+        setTipo((EObject)newValue);
         return;
-      case SimpleJavaPackage.EXPRESSION__TIPO_NUMERIC:
-        setTipoNumeric((numeric_expression)newValue);
-        return;
-      case SimpleJavaPackage.EXPRESSION__TIPO_BIT:
-        setTipoBit((bit_expression)newValue);
-        return;
-      case SimpleJavaPackage.EXPRESSION__NEW:
-        setNew((creating_expression)newValue);
+      case SimpleJavaPackage.EXPRESSION__NOVO:
+        setNovo((creating_expression)newValue);
         return;
       case SimpleJavaPackage.EXPRESSION__LITERAL:
         setLiteral((literal_expression)newValue);
         return;
       case SimpleJavaPackage.EXPRESSION__IDENTIFICADOR:
         setIdentificador((String)newValue);
-        return;
-      case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
-        setExpressao((expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -550,26 +350,17 @@ public class expressionImpl extends expression_auxImpl implements expression
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION__TIPO_LOGICAL:
-        setTipoLogical((logical_expression)null);
+      case SimpleJavaPackage.EXPRESSION__TIPO:
+        setTipo((EObject)null);
         return;
-      case SimpleJavaPackage.EXPRESSION__TIPO_NUMERIC:
-        setTipoNumeric((numeric_expression)null);
-        return;
-      case SimpleJavaPackage.EXPRESSION__TIPO_BIT:
-        setTipoBit((bit_expression)null);
-        return;
-      case SimpleJavaPackage.EXPRESSION__NEW:
-        setNew((creating_expression)null);
+      case SimpleJavaPackage.EXPRESSION__NOVO:
+        setNovo((creating_expression)null);
         return;
       case SimpleJavaPackage.EXPRESSION__LITERAL:
         setLiteral((literal_expression)null);
         return;
       case SimpleJavaPackage.EXPRESSION__IDENTIFICADOR:
         setIdentificador(IDENTIFICADOR_EDEFAULT);
-        return;
-      case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
-        setExpressao((expression)null);
         return;
     }
     super.eUnset(featureID);
@@ -585,20 +376,14 @@ public class expressionImpl extends expression_auxImpl implements expression
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.EXPRESSION__TIPO_LOGICAL:
-        return tipoLogical != null;
-      case SimpleJavaPackage.EXPRESSION__TIPO_NUMERIC:
-        return tipoNumeric != null;
-      case SimpleJavaPackage.EXPRESSION__TIPO_BIT:
-        return tipoBit != null;
-      case SimpleJavaPackage.EXPRESSION__NEW:
-        return new_ != null;
+      case SimpleJavaPackage.EXPRESSION__TIPO:
+        return tipo != null;
+      case SimpleJavaPackage.EXPRESSION__NOVO:
+        return novo != null;
       case SimpleJavaPackage.EXPRESSION__LITERAL:
         return literal != null;
       case SimpleJavaPackage.EXPRESSION__IDENTIFICADOR:
         return IDENTIFICADOR_EDEFAULT == null ? identificador != null : !IDENTIFICADOR_EDEFAULT.equals(identificador);
-      case SimpleJavaPackage.EXPRESSION__EXPRESSAO:
-        return expressao != null;
     }
     return super.eIsSet(featureID);
   }

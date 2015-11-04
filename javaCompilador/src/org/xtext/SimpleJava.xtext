@@ -9,11 +9,11 @@ compilation_unit: (pacote=package_statement)? (importes+=import_statement)* (dec
 package_statement: "package" noomePacote=name ";";
 import_statement: "import" nomeImporte=name (".*;" | ";");
 type_declaration: (doc_comment)?  ( declaracaoClasse=class_declaration  | declaracaoInterface=interface_declaration );
-doc_comment: "/**" "... text ..." "*/"; //TODO acho q text deve ser um texto mesmo
+doc_comment: "/**" comentario=STRING "*/";
 class_declaration: (modificadores+=MODIFIER)* "class" nomeClasse=IDENTIFIER ("extends" superclasse=name)? ("implements" implementosClasse+=name ("," implementosClasse+=name)*)? "{" (corpoClasse=field_declaration | declaracaoClasse=class_declaration)* "}";
 interface_declaration: (modificadores+=MODIFIER)* "interface" nomeInterface=IDENTIFIER ("extends" superinterfaces+=name ("," superinterfaces+=name)*)? "{" (corpoInterface=field_declaration)* "}";
 field_declaration: 
-      ( (doc_comment)* ( declaracaoMetodo=method_declaration | declaracaoConstrutor=constructor_declaration | declaracaoVariavel=variable_declaration ) ) 
+      ( comentario=(doc_comment)* ( declaracaoMetodo=method_declaration | declaracaoConstrutor=constructor_declaration | declaracaoVariavel=variable_declaration ) ) 
       | estatico=static_initializer 
       | ";" ;
 method_declaration: (modificadorMetodo=MODIFIER)* tipoRetorno=type nomeMetodo=IDENTIFIER "(" (parametrosMetodo=parameter_list)? ")" ("[" "]")* (blocoMetodo=statement_block | ";" );
@@ -55,19 +55,19 @@ constructor_declaration: (modificador=MODIFIER)* (tipo=type | "void")? nomeContr
 static_initializer: "static" blocoEstatico=statement_block;
 
 creating_expression: 
-      "new" ((novoObjeto=name parametros=creating_aux) | (tipoObjeto=type_specifier ->(parametros=aux)? ("[" "]")*) | ("(" expressaoNew=expression ")")) (novo=new)*;
+      "new" ((novoObjeto=name parametros=creating_aux) | (tipoObjeto=type_specifier ->(parametros=aux)? ("[" "]")*) | ("(" expressaoNew=expression ")")) (novo=newBlock)*;
 
 
 exp_aux: ->expressao=expression ")"
 	| type ")" expressao=expression;
 expression: 
-      (tipoLogical=logical_expression
-      | tipoNumeric=numeric_expression 
-      | tipoBit=bit_expression 
-      | new=creating_expression 
+      (tipo=logical_expression
+      | tipo=numeric_expression 
+      | tipo=bit_expression 
+      | novo=creating_expression 
       | literal=literal_expression 
       | "null" 
-      | "super" 
+      | "super"
       | "this" 
       | identificador=IDENTIFIER 
       | "(" exp_aux)  expressoes=expression_aux; 
@@ -75,13 +75,13 @@ expression_aux: (((("(" (parametros=arglist)? ")") | aux | ("." exp=expression) 
 	  | ->op=mais_aux exp=expression
 	  | operador=( "++" | "--")
 	  | ( ->op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*=" | operador="/" | operador="/=" | operador="%" | operador="%=" ) exp=expression
-	  | (("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | ("ampersand" "ampersand") | "||=" | => "%" | "%=" ) expression
-	  	| "?" expression ":" expressao=expression
+	  | (operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | ("ampersand ampersand") | "||=" | "%" | "%=" ) exp=expression
+	  	| operador="?" exp=expression operador=":" exp=expression
 	  	| operador=( ">" | "<" | ">=" | "<=" | "==" | "!=" ) exp=expression
 	  	| operador=( ">>=" | "<<" | ">>" | ">>>" ) exp=expression)
 	  )  expressoes=expression_aux)?;
 mais_aux:  operador="+" |  operador="+=";
-new : "{" constructor_declaration "}";      
+newBlock : "{" constructor_declaration "}";      
 creating_aux: ->"(" (argumentos=arglist)? ")" 
 	  | ->(aux)? ("[" "]")* ;
 aux: ("[" espressao=expression "]");

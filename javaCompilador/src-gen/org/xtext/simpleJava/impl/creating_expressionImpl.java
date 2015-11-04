@@ -16,7 +16,7 @@ import org.xtext.simpleJava.creating_aux;
 import org.xtext.simpleJava.creating_expression;
 import org.xtext.simpleJava.expression;
 import org.xtext.simpleJava.name;
-import org.xtext.simpleJava.new;
+import org.xtext.simpleJava.newBlock;
 import org.xtext.simpleJava.type_specifier;
 
 /**
@@ -86,7 +86,7 @@ public class creating_expressionImpl extends MinimalEObjectImpl.Container implem
    * @generated
    * @ordered
    */
-  protected new novo;
+  protected newBlock novo;
 
   /**
    * <!-- begin-user-doc -->
@@ -306,7 +306,7 @@ public class creating_expressionImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public new getNovo()
+  public newBlock getNovo()
   {
     return novo;
   }
@@ -316,9 +316,9 @@ public class creating_expressionImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetNovo(new newNovo, NotificationChain msgs)
+  public NotificationChain basicSetNovo(newBlock newNovo, NotificationChain msgs)
   {
-    new oldNovo = novo;
+    newBlock oldNovo = novo;
     novo = newNovo;
     if (eNotificationRequired())
     {
@@ -333,7 +333,7 @@ public class creating_expressionImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNovo(new newNovo)
+  public void setNovo(newBlock newNovo)
   {
     if (newNovo != novo)
     {
@@ -420,7 +420,7 @@ public class creating_expressionImpl extends MinimalEObjectImpl.Container implem
         setExpressaoNew((expression)newValue);
         return;
       case SimpleJavaPackage.CREATING_EXPRESSION__NOVO:
-        setNovo((new)newValue);
+        setNovo((newBlock)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -449,7 +449,7 @@ public class creating_expressionImpl extends MinimalEObjectImpl.Container implem
         setExpressaoNew((expression)null);
         return;
       case SimpleJavaPackage.CREATING_EXPRESSION__NOVO:
-        setNovo((new)null);
+        setNovo((newBlock)null);
         return;
     }
     super.eUnset(featureID);

@@ -2,6 +2,7 @@
  */
 package org.xtext.simpleJava;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,13 +12,10 @@ package org.xtext.simpleJava;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.simpleJava.expression#getTipoLogical <em>Tipo Logical</em>}</li>
- *   <li>{@link org.xtext.simpleJava.expression#getTipoNumeric <em>Tipo Numeric</em>}</li>
- *   <li>{@link org.xtext.simpleJava.expression#getTipoBit <em>Tipo Bit</em>}</li>
- *   <li>{@link org.xtext.simpleJava.expression#getNew <em>New</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.expression#getTipo <em>Tipo</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.expression#getNovo <em>Novo</em>}</li>
  *   <li>{@link org.xtext.simpleJava.expression#getLiteral <em>Literal</em>}</li>
  *   <li>{@link org.xtext.simpleJava.expression#getIdentificador <em>Identificador</em>}</li>
- *   <li>{@link org.xtext.simpleJava.expression#getExpressao <em>Expressao</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,108 +26,56 @@ package org.xtext.simpleJava;
 public interface expression extends expression_aux
 {
   /**
-   * Returns the value of the '<em><b>Tipo Logical</b></em>' containment reference.
+   * Returns the value of the '<em><b>Tipo</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Tipo Logical</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Tipo</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Tipo Logical</em>' containment reference.
-   * @see #setTipoLogical(logical_expression)
-   * @see org.xtext.simpleJava.SimpleJavaPackage#getexpression_TipoLogical()
+   * @return the value of the '<em>Tipo</em>' containment reference.
+   * @see #setTipo(EObject)
+   * @see org.xtext.simpleJava.SimpleJavaPackage#getexpression_Tipo()
    * @model containment="true"
    * @generated
    */
-  logical_expression getTipoLogical();
+  EObject getTipo();
 
   /**
-   * Sets the value of the '{@link org.xtext.simpleJava.expression#getTipoLogical <em>Tipo Logical</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.simpleJava.expression#getTipo <em>Tipo</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tipo Logical</em>' containment reference.
-   * @see #getTipoLogical()
+   * @param value the new value of the '<em>Tipo</em>' containment reference.
+   * @see #getTipo()
    * @generated
    */
-  void setTipoLogical(logical_expression value);
+  void setTipo(EObject value);
 
   /**
-   * Returns the value of the '<em><b>Tipo Numeric</b></em>' containment reference.
+   * Returns the value of the '<em><b>Novo</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Tipo Numeric</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Novo</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Tipo Numeric</em>' containment reference.
-   * @see #setTipoNumeric(numeric_expression)
-   * @see org.xtext.simpleJava.SimpleJavaPackage#getexpression_TipoNumeric()
+   * @return the value of the '<em>Novo</em>' containment reference.
+   * @see #setNovo(creating_expression)
+   * @see org.xtext.simpleJava.SimpleJavaPackage#getexpression_Novo()
    * @model containment="true"
    * @generated
    */
-  numeric_expression getTipoNumeric();
+  creating_expression getNovo();
 
   /**
-   * Sets the value of the '{@link org.xtext.simpleJava.expression#getTipoNumeric <em>Tipo Numeric</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.simpleJava.expression#getNovo <em>Novo</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tipo Numeric</em>' containment reference.
-   * @see #getTipoNumeric()
+   * @param value the new value of the '<em>Novo</em>' containment reference.
+   * @see #getNovo()
    * @generated
    */
-  void setTipoNumeric(numeric_expression value);
-
-  /**
-   * Returns the value of the '<em><b>Tipo Bit</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Tipo Bit</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Tipo Bit</em>' containment reference.
-   * @see #setTipoBit(bit_expression)
-   * @see org.xtext.simpleJava.SimpleJavaPackage#getexpression_TipoBit()
-   * @model containment="true"
-   * @generated
-   */
-  bit_expression getTipoBit();
-
-  /**
-   * Sets the value of the '{@link org.xtext.simpleJava.expression#getTipoBit <em>Tipo Bit</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tipo Bit</em>' containment reference.
-   * @see #getTipoBit()
-   * @generated
-   */
-  void setTipoBit(bit_expression value);
-
-  /**
-   * Returns the value of the '<em><b>New</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>New</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>New</em>' containment reference.
-   * @see #setNew(creating_expression)
-   * @see org.xtext.simpleJava.SimpleJavaPackage#getexpression_New()
-   * @model containment="true"
-   * @generated
-   */
-  creating_expression getNew();
-
-  /**
-   * Sets the value of the '{@link org.xtext.simpleJava.expression#getNew <em>New</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>New</em>' containment reference.
-   * @see #getNew()
-   * @generated
-   */
-  void setNew(creating_expression value);
+  void setNovo(creating_expression value);
 
   /**
    * Returns the value of the '<em><b>Literal</b></em>' containment reference.
@@ -182,31 +128,5 @@ public interface expression extends expression_aux
    * @generated
    */
   void setIdentificador(String value);
-
-  /**
-   * Returns the value of the '<em><b>Expressao</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Expressao</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Expressao</em>' containment reference.
-   * @see #setExpressao(expression)
-   * @see org.xtext.simpleJava.SimpleJavaPackage#getexpression_Expressao()
-   * @model containment="true"
-   * @generated
-   */
-  expression getExpressao();
-
-  /**
-   * Sets the value of the '{@link org.xtext.simpleJava.expression#getExpressao <em>Expressao</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Expressao</em>' containment reference.
-   * @see #getExpressao()
-   * @generated
-   */
-  void setExpressao(expression value);
 
 } // expression

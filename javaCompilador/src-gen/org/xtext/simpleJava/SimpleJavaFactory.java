@@ -68,6 +68,15 @@ public interface SimpleJavaFactory extends EFactory
   type_declaration createtype_declaration();
 
   /**
+   * Returns a new object of class '<em>doc comment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>doc comment</em>'.
+   * @generated
+   */
+  doc_comment createdoc_comment();
+
+  /**
    * Returns a new object of class '<em>class declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -284,13 +293,13 @@ public interface SimpleJavaFactory extends EFactory
   mais_aux createmais_aux();
 
   /**
-   * Returns a new object of class '<em>new</em>'.
+   * Returns a new object of class '<em>new Block</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>new</em>'.
+   * @return a new object of class '<em>new Block</em>'.
    * @generated
    */
-  new createnew();
+  newBlock createnewBlock();
 
   /**
    * Returns a new object of class '<em>creating aux</em>'.

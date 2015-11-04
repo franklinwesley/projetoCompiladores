@@ -59,7 +59,7 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpression_auxAccess().getOperadorAlternatives_0_2_0(), "rule__Expression_aux__OperadorAlternatives_0_2_0");
 					put(grammarAccess.getExpression_auxAccess().getAlternatives_0_3_0(), "rule__Expression_aux__Alternatives_0_3_0");
 					put(grammarAccess.getExpression_auxAccess().getAlternatives_0_4(), "rule__Expression_aux__Alternatives_0_4");
-					put(grammarAccess.getExpression_auxAccess().getAlternatives_0_4_0_0(), "rule__Expression_aux__Alternatives_0_4_0_0");
+					put(grammarAccess.getExpression_auxAccess().getOperadorAlternatives_0_4_0_0_0(), "rule__Expression_aux__OperadorAlternatives_0_4_0_0_0");
 					put(grammarAccess.getExpression_auxAccess().getOperadorAlternatives_0_4_2_0_0(), "rule__Expression_aux__OperadorAlternatives_0_4_2_0_0");
 					put(grammarAccess.getExpression_auxAccess().getOperadorAlternatives_0_4_3_0_0(), "rule__Expression_aux__OperadorAlternatives_0_4_3_0_0");
 					put(grammarAccess.getMais_auxAccess().getAlternatives(), "rule__Mais_aux__Alternatives");
@@ -142,11 +142,10 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpression_auxAccess().getGroup_0_1(), "rule__Expression_aux__Group_0_1__0");
 					put(grammarAccess.getExpression_auxAccess().getGroup_0_3(), "rule__Expression_aux__Group_0_3__0");
 					put(grammarAccess.getExpression_auxAccess().getGroup_0_4_0(), "rule__Expression_aux__Group_0_4_0__0");
-					put(grammarAccess.getExpression_auxAccess().getGroup_0_4_0_0_6(), "rule__Expression_aux__Group_0_4_0_0_6__0");
 					put(grammarAccess.getExpression_auxAccess().getGroup_0_4_1(), "rule__Expression_aux__Group_0_4_1__0");
 					put(grammarAccess.getExpression_auxAccess().getGroup_0_4_2(), "rule__Expression_aux__Group_0_4_2__0");
 					put(grammarAccess.getExpression_auxAccess().getGroup_0_4_3(), "rule__Expression_aux__Group_0_4_3__0");
-					put(grammarAccess.getNewAccess().getGroup(), "rule__New__Group__0");
+					put(grammarAccess.getNewBlockAccess().getGroup(), "rule__NewBlock__Group__0");
 					put(grammarAccess.getCreating_auxAccess().getGroup_0(), "rule__Creating_aux__Group_0__0");
 					put(grammarAccess.getCreating_auxAccess().getGroup_1(), "rule__Creating_aux__Group_1__0");
 					put(grammarAccess.getCreating_auxAccess().getGroup_1_0(), "rule__Creating_aux__Group_1_0__0");
@@ -172,6 +171,7 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getImport_statementAccess().getNomeImporteAssignment_1(), "rule__Import_statement__NomeImporteAssignment_1");
 					put(grammarAccess.getType_declarationAccess().getDeclaracaoClasseAssignment_1_0(), "rule__Type_declaration__DeclaracaoClasseAssignment_1_0");
 					put(grammarAccess.getType_declarationAccess().getDeclaracaoInterfaceAssignment_1_1(), "rule__Type_declaration__DeclaracaoInterfaceAssignment_1_1");
+					put(grammarAccess.getDoc_commentAccess().getComentarioAssignment_1(), "rule__Doc_comment__ComentarioAssignment_1");
 					put(grammarAccess.getClass_declarationAccess().getModificadoresAssignment_0(), "rule__Class_declaration__ModificadoresAssignment_0");
 					put(grammarAccess.getClass_declarationAccess().getNomeClasseAssignment_2(), "rule__Class_declaration__NomeClasseAssignment_2");
 					put(grammarAccess.getClass_declarationAccess().getSuperclasseAssignment_3_1(), "rule__Class_declaration__SuperclasseAssignment_3_1");
@@ -184,6 +184,7 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInterface_declarationAccess().getSuperinterfacesAssignment_3_1(), "rule__Interface_declaration__SuperinterfacesAssignment_3_1");
 					put(grammarAccess.getInterface_declarationAccess().getSuperinterfacesAssignment_3_2_1(), "rule__Interface_declaration__SuperinterfacesAssignment_3_2_1");
 					put(grammarAccess.getInterface_declarationAccess().getCorpoInterfaceAssignment_5(), "rule__Interface_declaration__CorpoInterfaceAssignment_5");
+					put(grammarAccess.getField_declarationAccess().getComentarioAssignment_0_0(), "rule__Field_declaration__ComentarioAssignment_0_0");
 					put(grammarAccess.getField_declarationAccess().getDeclaracaoMetodoAssignment_0_1_0(), "rule__Field_declaration__DeclaracaoMetodoAssignment_0_1_0");
 					put(grammarAccess.getField_declarationAccess().getDeclaracaoConstrutorAssignment_0_1_1(), "rule__Field_declaration__DeclaracaoConstrutorAssignment_0_1_1");
 					put(grammarAccess.getField_declarationAccess().getDeclaracaoVariavelAssignment_0_1_2(), "rule__Field_declaration__DeclaracaoVariavelAssignment_0_1_2");
@@ -256,10 +257,10 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCreating_expressionAccess().getNovoAssignment_2(), "rule__Creating_expression__NovoAssignment_2");
 					put(grammarAccess.getExp_auxAccess().getExpressaoAssignment_0_0(), "rule__Exp_aux__ExpressaoAssignment_0_0");
 					put(grammarAccess.getExp_auxAccess().getExpressaoAssignment_1_2(), "rule__Exp_aux__ExpressaoAssignment_1_2");
-					put(grammarAccess.getExpressionAccess().getTipoLogicalAssignment_0_0(), "rule__Expression__TipoLogicalAssignment_0_0");
-					put(grammarAccess.getExpressionAccess().getTipoNumericAssignment_0_1(), "rule__Expression__TipoNumericAssignment_0_1");
-					put(grammarAccess.getExpressionAccess().getTipoBitAssignment_0_2(), "rule__Expression__TipoBitAssignment_0_2");
-					put(grammarAccess.getExpressionAccess().getNewAssignment_0_3(), "rule__Expression__NewAssignment_0_3");
+					put(grammarAccess.getExpressionAccess().getTipoAssignment_0_0(), "rule__Expression__TipoAssignment_0_0");
+					put(grammarAccess.getExpressionAccess().getTipoAssignment_0_1(), "rule__Expression__TipoAssignment_0_1");
+					put(grammarAccess.getExpressionAccess().getTipoAssignment_0_2(), "rule__Expression__TipoAssignment_0_2");
+					put(grammarAccess.getExpressionAccess().getNovoAssignment_0_3(), "rule__Expression__NovoAssignment_0_3");
 					put(grammarAccess.getExpressionAccess().getLiteralAssignment_0_4(), "rule__Expression__LiteralAssignment_0_4");
 					put(grammarAccess.getExpressionAccess().getIdentificadorAssignment_0_8(), "rule__Expression__IdentificadorAssignment_0_8");
 					put(grammarAccess.getExpressionAccess().getExpressoesAssignment_1(), "rule__Expression__ExpressoesAssignment_1");
@@ -278,7 +279,12 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_7(), "rule__Expression_aux__OperadorAssignment_0_3_0_7");
 					put(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_3_0_8(), "rule__Expression_aux__OperadorAssignment_0_3_0_8");
 					put(grammarAccess.getExpression_auxAccess().getExpAssignment_0_3_1(), "rule__Expression_aux__ExpAssignment_0_3_1");
-					put(grammarAccess.getExpression_auxAccess().getExpressaoAssignment_0_4_1_3(), "rule__Expression_aux__ExpressaoAssignment_0_4_1_3");
+					put(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_4_0_0(), "rule__Expression_aux__OperadorAssignment_0_4_0_0");
+					put(grammarAccess.getExpression_auxAccess().getExpAssignment_0_4_0_1(), "rule__Expression_aux__ExpAssignment_0_4_0_1");
+					put(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_4_1_0(), "rule__Expression_aux__OperadorAssignment_0_4_1_0");
+					put(grammarAccess.getExpression_auxAccess().getExpAssignment_0_4_1_1(), "rule__Expression_aux__ExpAssignment_0_4_1_1");
+					put(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_4_1_2(), "rule__Expression_aux__OperadorAssignment_0_4_1_2");
+					put(grammarAccess.getExpression_auxAccess().getExpAssignment_0_4_1_3(), "rule__Expression_aux__ExpAssignment_0_4_1_3");
 					put(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_4_2_0(), "rule__Expression_aux__OperadorAssignment_0_4_2_0");
 					put(grammarAccess.getExpression_auxAccess().getExpAssignment_0_4_2_1(), "rule__Expression_aux__ExpAssignment_0_4_2_1");
 					put(grammarAccess.getExpression_auxAccess().getOperadorAssignment_0_4_3_0(), "rule__Expression_aux__OperadorAssignment_0_4_3_0");

@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.xtext.simpleJava.field_declaration#getComentario <em>Comentario</em>}</li>
  *   <li>{@link org.xtext.simpleJava.field_declaration#getDeclaracaoMetodo <em>Declaracao Metodo</em>}</li>
  *   <li>{@link org.xtext.simpleJava.field_declaration#getDeclaracaoConstrutor <em>Declaracao Construtor</em>}</li>
  *   <li>{@link org.xtext.simpleJava.field_declaration#getDeclaracaoVariavel <em>Declaracao Variavel</em>}</li>
@@ -25,6 +26,32 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface field_declaration extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Comentario</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Comentario</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Comentario</em>' containment reference.
+   * @see #setComentario(doc_comment)
+   * @see org.xtext.simpleJava.SimpleJavaPackage#getfield_declaration_Comentario()
+   * @model containment="true"
+   * @generated
+   */
+  doc_comment getComentario();
+
+  /**
+   * Sets the value of the '{@link org.xtext.simpleJava.field_declaration#getComentario <em>Comentario</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Comentario</em>' containment reference.
+   * @see #getComentario()
+   * @generated
+   */
+  void setComentario(doc_comment value);
+
   /**
    * Returns the value of the '<em><b>Declaracao Metodo</b></em>' containment reference.
    * <!-- begin-user-doc -->

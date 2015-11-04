@@ -21,6 +21,7 @@ import org.xtext.simpleJava.constructor_declaration;
 import org.xtext.simpleJava.creating_aux;
 import org.xtext.simpleJava.creating_expression;
 import org.xtext.simpleJava.do_statement;
+import org.xtext.simpleJava.doc_comment;
 import org.xtext.simpleJava.exp_aux;
 import org.xtext.simpleJava.expression;
 import org.xtext.simpleJava.expression_aux;
@@ -34,7 +35,7 @@ import org.xtext.simpleJava.logical_expression;
 import org.xtext.simpleJava.mais_aux;
 import org.xtext.simpleJava.method_declaration;
 import org.xtext.simpleJava.name;
-import org.xtext.simpleJava.new;
+import org.xtext.simpleJava.newBlock;
 import org.xtext.simpleJava.numeric_expression;
 import org.xtext.simpleJava.package_name_aux;
 import org.xtext.simpleJava.package_statement;
@@ -95,6 +96,13 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * @generated
    */
   private EClass type_declarationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass doc_commentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -269,7 +277,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass newEClass = null;
+  private EClass newBlockEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -553,6 +561,26 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getdoc_comment()
+  {
+    return doc_commentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getdoc_comment_Comentario()
+  {
+    return (EAttribute)doc_commentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getclass_declaration()
   {
     return class_declarationEClass;
@@ -683,7 +711,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getfield_declaration_DeclaracaoMetodo()
+  public EReference getfield_declaration_Comentario()
   {
     return (EReference)field_declarationEClass.getEStructuralFeatures().get(0);
   }
@@ -693,7 +721,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getfield_declaration_DeclaracaoConstrutor()
+  public EReference getfield_declaration_DeclaracaoMetodo()
   {
     return (EReference)field_declarationEClass.getEStructuralFeatures().get(1);
   }
@@ -703,7 +731,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getfield_declaration_DeclaracaoVariavel()
+  public EReference getfield_declaration_DeclaracaoConstrutor()
   {
     return (EReference)field_declarationEClass.getEStructuralFeatures().get(2);
   }
@@ -713,9 +741,19 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getfield_declaration_Estatico()
+  public EReference getfield_declaration_DeclaracaoVariavel()
   {
     return (EReference)field_declarationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getfield_declaration_Estatico()
+  {
+    return (EReference)field_declarationEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1523,6 +1561,16 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getexp_aux_Expressao()
+  {
+    return (EReference)exp_auxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getexpression()
   {
     return expressionEClass;
@@ -1533,7 +1581,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getexpression_TipoLogical()
+  public EReference getexpression_Tipo()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(0);
   }
@@ -1543,7 +1591,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getexpression_TipoNumeric()
+  public EReference getexpression_Novo()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(1);
   }
@@ -1553,7 +1601,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getexpression_TipoBit()
+  public EReference getexpression_Literal()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(2);
   }
@@ -1563,39 +1611,9 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getexpression_New()
-  {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getexpression_Literal()
-  {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getexpression_Identificador()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getexpression_Expressao()
-  {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(6);
+    return (EAttribute)expressionEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1683,9 +1701,9 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getnew()
+  public EClass getnewBlock()
   {
-    return newEClass;
+    return newBlockEClass;
   }
 
   /**
@@ -2003,16 +2021,6 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettype_Tipo()
-  {
-    return (EReference)typeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getMODIFIER()
   {
     return modifierEClass;
@@ -2076,6 +2084,9 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     createEReference(type_declarationEClass, TYPE_DECLARATION__DECLARACAO_CLASSE);
     createEReference(type_declarationEClass, TYPE_DECLARATION__DECLARACAO_INTERFACE);
 
+    doc_commentEClass = createEClass(DOC_COMMENT);
+    createEAttribute(doc_commentEClass, DOC_COMMENT__COMENTARIO);
+
     class_declarationEClass = createEClass(CLASS_DECLARATION);
     createEReference(class_declarationEClass, CLASS_DECLARATION__MODIFICADORES);
     createEAttribute(class_declarationEClass, CLASS_DECLARATION__NOME_CLASSE);
@@ -2091,6 +2102,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     createEReference(interface_declarationEClass, INTERFACE_DECLARATION__CORPO_INTERFACE);
 
     field_declarationEClass = createEClass(FIELD_DECLARATION);
+    createEReference(field_declarationEClass, FIELD_DECLARATION__COMENTARIO);
     createEReference(field_declarationEClass, FIELD_DECLARATION__DECLARACAO_METODO);
     createEReference(field_declarationEClass, FIELD_DECLARATION__DECLARACAO_CONSTRUTOR);
     createEReference(field_declarationEClass, FIELD_DECLARATION__DECLARACAO_VARIAVEL);
@@ -2193,15 +2205,13 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     createEReference(creating_expressionEClass, CREATING_EXPRESSION__NOVO);
 
     exp_auxEClass = createEClass(EXP_AUX);
+    createEReference(exp_auxEClass, EXP_AUX__EXPRESSAO);
 
     expressionEClass = createEClass(EXPRESSION);
-    createEReference(expressionEClass, EXPRESSION__TIPO_LOGICAL);
-    createEReference(expressionEClass, EXPRESSION__TIPO_NUMERIC);
-    createEReference(expressionEClass, EXPRESSION__TIPO_BIT);
-    createEReference(expressionEClass, EXPRESSION__NEW);
+    createEReference(expressionEClass, EXPRESSION__TIPO);
+    createEReference(expressionEClass, EXPRESSION__NOVO);
     createEReference(expressionEClass, EXPRESSION__LITERAL);
     createEAttribute(expressionEClass, EXPRESSION__IDENTIFICADOR);
-    createEReference(expressionEClass, EXPRESSION__EXPRESSAO);
 
     expression_auxEClass = createEClass(EXPRESSION_AUX);
     createEReference(expression_auxEClass, EXPRESSION_AUX__PARAMETROS);
@@ -2213,7 +2223,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     mais_auxEClass = createEClass(MAIS_AUX);
     createEAttribute(mais_auxEClass, MAIS_AUX__OPERADOR);
 
-    newEClass = createEClass(NEW);
+    newBlockEClass = createEClass(NEW_BLOCK);
 
     creating_auxEClass = createEClass(CREATING_AUX);
     createEReference(creating_auxEClass, CREATING_AUX__ARGUMENTOS);
@@ -2256,7 +2266,6 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     createEAttribute(type_specifierEClass, TYPE_SPECIFIER__NOME);
 
     typeEClass = createEClass(TYPE);
-    createEReference(typeEClass, TYPE__TIPO);
 
     modifierEClass = createEClass(MODIFIER);
     createEAttribute(modifierEClass, MODIFIER__MODIFICADOR);
@@ -2291,7 +2300,8 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    constructor_declarationEClass.getESuperTypes().add(this.getnew());
+    doc_commentEClass.getESuperTypes().add(this.gettype_declaration());
+    constructor_declarationEClass.getESuperTypes().add(this.getnewBlock());
     exp_auxEClass.getESuperTypes().add(this.getexpression());
     expressionEClass.getESuperTypes().add(this.getexpression_aux());
     auxEClass.getESuperTypes().add(this.getexpression_aux());
@@ -2319,6 +2329,9 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     initEReference(gettype_declaration_DeclaracaoClasse(), this.getclass_declaration(), null, "declaracaoClasse", null, 0, 1, type_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(gettype_declaration_DeclaracaoInterface(), this.getinterface_declaration(), null, "declaracaoInterface", null, 0, 1, type_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(doc_commentEClass, doc_comment.class, "doc_comment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getdoc_comment_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, doc_comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(class_declarationEClass, class_declaration.class, "class_declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getclass_declaration_Modificadores(), this.getMODIFIER(), null, "modificadores", null, 0, -1, class_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getclass_declaration_NomeClasse(), ecorePackage.getEString(), "nomeClasse", null, 0, 1, class_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2334,6 +2347,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     initEReference(getinterface_declaration_CorpoInterface(), this.getfield_declaration(), null, "corpoInterface", null, 0, 1, interface_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(field_declarationEClass, field_declaration.class, "field_declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getfield_declaration_Comentario(), this.getdoc_comment(), null, "comentario", null, 0, 1, field_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getfield_declaration_DeclaracaoMetodo(), this.getmethod_declaration(), null, "declaracaoMetodo", null, 0, 1, field_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getfield_declaration_DeclaracaoConstrutor(), this.getconstructor_declaration(), null, "declaracaoConstrutor", null, 0, 1, field_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getfield_declaration_DeclaracaoVariavel(), this.getvariable_declaration(), null, "declaracaoVariavel", null, 0, 1, field_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2433,18 +2447,16 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     initEReference(getcreating_expression_Parametros(), this.getcreating_aux(), null, "parametros", null, 0, 1, creating_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getcreating_expression_TipoObjeto(), this.gettype_specifier(), null, "tipoObjeto", null, 0, 1, creating_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getcreating_expression_ExpressaoNew(), this.getexpression(), null, "expressaoNew", null, 0, 1, creating_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getcreating_expression_Novo(), this.getnew(), null, "novo", null, 0, 1, creating_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcreating_expression_Novo(), this.getnewBlock(), null, "novo", null, 0, 1, creating_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(exp_auxEClass, exp_aux.class, "exp_aux", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getexp_aux_Expressao(), this.getexpression(), null, "expressao", null, 0, 1, exp_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionEClass, expression.class, "expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getexpression_TipoLogical(), this.getlogical_expression(), null, "tipoLogical", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getexpression_TipoNumeric(), this.getnumeric_expression(), null, "tipoNumeric", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getexpression_TipoBit(), this.getbit_expression(), null, "tipoBit", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getexpression_New(), this.getcreating_expression(), null, "new", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getexpression_Tipo(), ecorePackage.getEObject(), null, "tipo", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getexpression_Novo(), this.getcreating_expression(), null, "novo", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getexpression_Literal(), this.getliteral_expression(), null, "literal", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getexpression_Identificador(), ecorePackage.getEString(), "identificador", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getexpression_Expressao(), this.getexpression(), null, "expressao", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expression_auxEClass, expression_aux.class, "expression_aux", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getexpression_aux_Parametros(), this.getarglist(), null, "parametros", null, 0, 1, expression_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2456,7 +2468,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     initEClass(mais_auxEClass, mais_aux.class, "mais_aux", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getmais_aux_Operador(), ecorePackage.getEString(), "operador", null, 0, 1, mais_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(newEClass, new.class, "new", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(newBlockEClass, newBlock.class, "newBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(creating_auxEClass, creating_aux.class, "creating_aux", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getcreating_aux_Argumentos(), this.getarglist(), null, "argumentos", null, 0, 1, creating_aux.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2499,7 +2511,6 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     initEAttribute(gettype_specifier_Nome(), ecorePackage.getEString(), "nome", null, 0, 1, type_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(typeEClass, type.class, "type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(gettype_Tipo(), ecorePackage.getEObject(), null, "tipo", null, 0, 1, type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(modifierEClass, org.xtext.simpleJava.MODIFIER.class, "MODIFIER", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMODIFIER_Modificador(), ecorePackage.getEString(), "modificador", null, 0, 1, org.xtext.simpleJava.MODIFIER.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

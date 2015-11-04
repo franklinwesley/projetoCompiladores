@@ -139,12 +139,12 @@ public interface creating_expression extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Novo</em>' containment reference.
-   * @see #setNovo(new)
+   * @see #setNovo(newBlock)
    * @see org.xtext.simpleJava.SimpleJavaPackage#getcreating_expression_Novo()
    * @model containment="true"
    * @generated
    */
-  new getNovo();
+  newBlock getNovo();
 
   /**
    * Sets the value of the '{@link org.xtext.simpleJava.creating_expression#getNovo <em>Novo</em>}' containment reference.
@@ -154,6 +154,6 @@ public interface creating_expression extends EObject
    * @see #getNovo()
    * @generated
    */
-  void setNovo(new value);
+  void setNovo(newBlock value);
 
 } // creating_expression

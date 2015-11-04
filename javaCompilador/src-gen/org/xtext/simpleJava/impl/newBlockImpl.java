@@ -7,25 +7,25 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.simpleJava.SimpleJavaPackage;
-import org.xtext.simpleJava.new;
+import org.xtext.simpleJava.newBlock;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>new</b></em>'.
+ * An implementation of the model object '<em><b>new Block</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class newImpl extends MinimalEObjectImpl.Container implements new
+public class newBlockImpl extends MinimalEObjectImpl.Container implements newBlock
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected newImpl()
+  protected newBlockImpl()
   {
     super();
   }
@@ -38,7 +38,7 @@ public class newImpl extends MinimalEObjectImpl.Container implements new
   @Override
   protected EClass eStaticClass()
   {
-    return SimpleJavaPackage.Literals.NEW;
+    return SimpleJavaPackage.Literals.NEW_BLOCK;
   }
 
-} //newImpl
+} //newBlockImpl

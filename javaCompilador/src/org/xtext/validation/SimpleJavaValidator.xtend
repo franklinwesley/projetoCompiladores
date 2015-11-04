@@ -20,6 +20,8 @@ import org.xtext.simpleJava.method_declaration
 import org.xtext.simpleJava.parameter_list
 import org.xtext.simpleJava.parameter
 import org.xtext.simpleJava.arglist
+import org.xtext.simpleJava.logical_expression
+import org.xtext.simpleJava.numeric_expression
 
 //import org.eclipse.xtext.validation.Check
 
@@ -184,15 +186,15 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	
 	def checkBoolean(expression expression) {
 		//checar espressao booleana
-		if (expression.tipoLogical != null) {
+		if (expression.tipo instanceof logical_expression) {
 			//check
-		} if (expression.operador == ">" || expression.operador == "<" 
-			|| expression.operador == ">=" || expression.operador == "<=" 
-			|| expression.operador == "==" || expression.operador == "!=" 
-			|| expression.operador == ">>=" || expression.operador == "<<" 
-			|| expression.operador == ">>" || expression.operador == ">>>") {
+		} if (expression.operador == "ampersand" || expression.operador == "ampersand=" 
+			|| expression.operador == "|" || expression.operador == "|=" 
+			|| expression.operador == "^" || expression.operador == "^=" 
+			|| expression.operador == "ampersand ampersand" || expression.operador == "||=" 
+			|| expression.operador == "%" || expression.operador == "%=") {
 			//check
-		} 
+		}
 	}
 	
 	def checkAritmeticExpression(EList<type_declaration> list) {
@@ -203,7 +205,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	
 	def checkArimetic(expression expression) {
 		//checar espressao aritimetrica
-		if (expression.tipoNumeric != null) {
+		if (expression.tipo instanceof numeric_expression) {
 			//check
 		} if (expression.expressoes.op != null || expression.expressoes == "++" 
 			|| expression.expressoes == "--" || expression.expressoes == "-" 
@@ -249,12 +251,14 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	
 	
 	def checkWhile(while_statement statement) {
-		var logico = statement.expressaoWhile.tipoLogical;
+		var logico = statement.expressaoWhile.tipo;
 		var operador = statement.expressaoWhile.expressoes.operador
 		var metodo = metodos.get(statement.expressaoWhile.identificador);
-		if (logico == null && operador != ">" && operador != "<" && operador != ">=" 
+		var variavel = variaveis.get(statement.expressaoWhile.identificador);
+		if (!(logico instanceof logical_expression) && operador != ">" && operador != "<" && operador != ">=" 
 			&& operador != "<=" && operador != "==" && operador != "!=" && operador != ">>=" && operador != "<<" 
-			&& operador != ">>" && operador != ">>>" && metodo.getTipoRetorno().equals(new Tipo ("boolean"))) {
+			&& operador != ">>" && operador != ">>>" && !metodo.tipoRetorno.equals(new Tipo ("boolean"))
+			&& !variavel.tipo.equals(new Tipo ("boolean"))) {
 			//erro expressao invalida
 		} else {
 			if (statement.blocoWhile.bloco.corpo.corpoWhile != null) {

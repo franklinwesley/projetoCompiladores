@@ -27,6 +27,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="declaracaoInterface" eType="#//interface_declaration"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="doc_comment" eSuperTypes="#//type_declaration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comentario" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="class_declaration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="modificadores" upperBound="-1"
         eType="#//MODIFIER" containment="true"/>
@@ -50,6 +53,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="field_declaration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comentario" eType="#//doc_comment"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="declaracaoMetodo" eType="#//method_declaration"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="declaracaoConstrutor" eType="#//constructor_declaration"
@@ -184,7 +189,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="blocoSwitch" eType="#//statement"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="constructor_declaration" eSuperTypes="#//new">
+  <eClassifiers xsi:type="ecore:EClass" name="constructor_declaration" eSuperTypes="#//newBlock">
     <eStructuralFeatures xsi:type="ecore:EReference" name="modificador" eType="#//MODIFIER"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipo" eType="#//type" containment="true"/>
@@ -207,23 +212,21 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expressaoNew" eType="#//expression"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="novo" eType="#//new" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="novo" eType="#//newBlock"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="exp_aux" eSuperTypes="#//expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="exp_aux" eSuperTypes="#//expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expressao" eType="#//expression"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="expression" eSuperTypes="#//expression_aux">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tipoLogical" eType="#//logical_expression"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipo" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tipoNumeric" eType="#//numeric_expression"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tipoBit" eType="#//bit_expression"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="new" eType="#//creating_expression"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="novo" eType="#//creating_expression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="literal" eType="#//literal_expression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identificador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expressao" eType="#//expression"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="expression_aux">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" eType="#//arglist"
@@ -239,7 +242,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="mais_aux">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="new"/>
+  <eClassifiers xsi:type="ecore:EClass" name="newBlock"/>
   <eClassifiers xsi:type="ecore:EClass" name="creating_aux">
     <eStructuralFeatures xsi:type="ecore:EReference" name="argumentos" eType="#//arglist"
         containment="true"/>
@@ -290,10 +293,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="type_specifier">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nome" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="type" eSuperTypes="#//exp_aux">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tipo" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
-        containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="type" eSuperTypes="#//exp_aux"/>
   <eClassifiers xsi:type="ecore:EClass" name="MODIFIER">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modificador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

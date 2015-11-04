@@ -107,6 +107,14 @@ public class SimpleJavaSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SimpleJavaPackage.DOC_COMMENT:
+      {
+        doc_comment doc_comment = (doc_comment)theEObject;
+        T result = casedoc_comment(doc_comment);
+        if (result == null) result = casetype_declaration(doc_comment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SimpleJavaPackage.CLASS_DECLARATION:
       {
         class_declaration class_declaration = (class_declaration)theEObject;
@@ -230,7 +238,7 @@ public class SimpleJavaSwitch<T> extends Switch<T>
       {
         constructor_declaration constructor_declaration = (constructor_declaration)theEObject;
         T result = caseconstructor_declaration(constructor_declaration);
-        if (result == null) result = casenew(constructor_declaration);
+        if (result == null) result = casenewBlock(constructor_declaration);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -279,10 +287,10 @@ public class SimpleJavaSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SimpleJavaPackage.NEW:
+      case SimpleJavaPackage.NEW_BLOCK:
       {
-        new new_ = (new)theEObject;
-        T result = casenew(new_);
+        newBlock newBlock = (newBlock)theEObject;
+        T result = casenewBlock(newBlock);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -457,6 +465,22 @@ public class SimpleJavaSwitch<T> extends Switch<T>
    * @generated
    */
   public T casetype_declaration(type_declaration object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>doc comment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>doc comment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedoc_comment(doc_comment object)
   {
     return null;
   }
@@ -846,17 +870,17 @@ public class SimpleJavaSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>new</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>new Block</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>new</em>'.
+   * @return the result of interpreting the object as an instance of '<em>new Block</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casenew(new object)
+  public T casenewBlock(newBlock object)
   {
     return null;
   }

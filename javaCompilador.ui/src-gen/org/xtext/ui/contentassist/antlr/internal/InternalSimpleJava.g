@@ -2278,9 +2278,9 @@ rule__Literal_expression__Alternatives
 )
 
     |(
-{ before(grammarAccess.getLiteral_expressionAccess().getFloatAssignment_2()); }
-(rule__Literal_expression__FloatAssignment_2)
-{ after(grammarAccess.getLiteral_expressionAccess().getFloatAssignment_2()); }
+{ before(grammarAccess.getLiteral_expressionAccess().getL_floatAssignment_2()); }
+(rule__Literal_expression__L_floatAssignment_2)
+{ after(grammarAccess.getLiteral_expressionAccess().getL_floatAssignment_2()); }
 )
 
     |(
@@ -10117,9 +10117,9 @@ rule__Logical_expression__Group_0__1__Impl
     }
 :
 (
-{ before(grammarAccess.getLogical_expressionAccess().getExpressaoAssignment_0_1()); }
-(rule__Logical_expression__ExpressaoAssignment_0_1)
-{ after(grammarAccess.getLogical_expressionAccess().getExpressaoAssignment_0_1()); }
+{ before(grammarAccess.getLogical_expressionAccess().getExpAssignment_0_1()); }
+(rule__Logical_expression__ExpAssignment_0_1)
+{ after(grammarAccess.getLogical_expressionAccess().getExpAssignment_0_1()); }
 )
 
 ;
@@ -13037,14 +13037,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Literal_expression__FloatAssignment_2
+rule__Literal_expression__L_floatAssignment_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getLiteral_expressionAccess().getFloatFLOAT_LITERALTerminalRuleCall_2_0()); }
-	RULE_FLOAT_LITERAL{ after(grammarAccess.getLiteral_expressionAccess().getFloatFLOAT_LITERALTerminalRuleCall_2_0()); }
+{ before(grammarAccess.getLiteral_expressionAccess().getL_floatFLOAT_LITERALTerminalRuleCall_2_0()); }
+	RULE_FLOAT_LITERAL{ after(grammarAccess.getLiteral_expressionAccess().getL_floatFLOAT_LITERALTerminalRuleCall_2_0()); }
 )
 
 ;
@@ -13090,14 +13090,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Logical_expression__ExpressaoAssignment_0_1
+rule__Logical_expression__ExpAssignment_0_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getLogical_expressionAccess().getExpressaoExpressionParserRuleCall_0_1_0()); }
-	ruleexpression{ after(grammarAccess.getLogical_expressionAccess().getExpressaoExpressionParserRuleCall_0_1_0()); }
+{ before(grammarAccess.getLogical_expressionAccess().getExpExpressionParserRuleCall_0_1_0()); }
+	ruleexpression{ after(grammarAccess.getLogical_expressionAccess().getExpExpressionParserRuleCall_0_1_0()); }
 )
 
 ;

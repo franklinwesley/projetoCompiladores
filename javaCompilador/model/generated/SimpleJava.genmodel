@@ -174,12 +174,12 @@
     <genClasses ecoreClass="SimpleJava.ecore#//literal_expression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//literal_expression/decimal"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//literal_expression/inteiro"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//literal_expression/float"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//literal_expression/l_float"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//literal_expression/string"/>
     </genClasses>
     <genClasses ecoreClass="SimpleJava.ecore#//logical_expression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//logical_expression/operador"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//logical_expression/expressao"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//logical_expression/exp"/>
     </genClasses>
     <genClasses ecoreClass="SimpleJava.ecore#//bit_expression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//bit_expression/operador"/>

@@ -23,7 +23,7 @@ import org.xtext.simpleJava.logical_expression;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.simpleJava.impl.logical_expressionImpl#getOperador <em>Operador</em>}</li>
- *   <li>{@link org.xtext.simpleJava.impl.logical_expressionImpl#getExpressao <em>Expressao</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.logical_expressionImpl#getExp <em>Exp</em>}</li>
  * </ul>
  * </p>
  *
@@ -52,14 +52,14 @@ public class logical_expressionImpl extends MinimalEObjectImpl.Container impleme
   protected String operador = OPERADOR_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getExpressao() <em>Expressao</em>}' containment reference.
+   * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExpressao()
+   * @see #getExp()
    * @generated
    * @ordered
    */
-  protected expression expressao;
+  protected expression exp;
 
   /**
    * <!-- begin-user-doc -->
@@ -110,9 +110,9 @@ public class logical_expressionImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public expression getExpressao()
+  public expression getExp()
   {
-    return expressao;
+    return exp;
   }
 
   /**
@@ -120,13 +120,13 @@ public class logical_expressionImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetExpressao(expression newExpressao, NotificationChain msgs)
+  public NotificationChain basicSetExp(expression newExp, NotificationChain msgs)
   {
-    expression oldExpressao = expressao;
-    expressao = newExpressao;
+    expression oldExp = exp;
+    exp = newExp;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.LOGICAL_EXPRESSION__EXPRESSAO, oldExpressao, newExpressao);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.LOGICAL_EXPRESSION__EXP, oldExp, newExp);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -137,20 +137,20 @@ public class logical_expressionImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setExpressao(expression newExpressao)
+  public void setExp(expression newExp)
   {
-    if (newExpressao != expressao)
+    if (newExp != exp)
     {
       NotificationChain msgs = null;
-      if (expressao != null)
-        msgs = ((InternalEObject)expressao).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.LOGICAL_EXPRESSION__EXPRESSAO, null, msgs);
-      if (newExpressao != null)
-        msgs = ((InternalEObject)newExpressao).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.LOGICAL_EXPRESSION__EXPRESSAO, null, msgs);
-      msgs = basicSetExpressao(newExpressao, msgs);
+      if (exp != null)
+        msgs = ((InternalEObject)exp).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.LOGICAL_EXPRESSION__EXP, null, msgs);
+      if (newExp != null)
+        msgs = ((InternalEObject)newExp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.LOGICAL_EXPRESSION__EXP, null, msgs);
+      msgs = basicSetExp(newExp, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.LOGICAL_EXPRESSION__EXPRESSAO, newExpressao, newExpressao));
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.LOGICAL_EXPRESSION__EXP, newExp, newExp));
   }
 
   /**
@@ -163,8 +163,8 @@ public class logical_expressionImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.LOGICAL_EXPRESSION__EXPRESSAO:
-        return basicSetExpressao(null, msgs);
+      case SimpleJavaPackage.LOGICAL_EXPRESSION__EXP:
+        return basicSetExp(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -181,8 +181,8 @@ public class logical_expressionImpl extends MinimalEObjectImpl.Container impleme
     {
       case SimpleJavaPackage.LOGICAL_EXPRESSION__OPERADOR:
         return getOperador();
-      case SimpleJavaPackage.LOGICAL_EXPRESSION__EXPRESSAO:
-        return getExpressao();
+      case SimpleJavaPackage.LOGICAL_EXPRESSION__EXP:
+        return getExp();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -200,8 +200,8 @@ public class logical_expressionImpl extends MinimalEObjectImpl.Container impleme
       case SimpleJavaPackage.LOGICAL_EXPRESSION__OPERADOR:
         setOperador((String)newValue);
         return;
-      case SimpleJavaPackage.LOGICAL_EXPRESSION__EXPRESSAO:
-        setExpressao((expression)newValue);
+      case SimpleJavaPackage.LOGICAL_EXPRESSION__EXP:
+        setExp((expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -220,8 +220,8 @@ public class logical_expressionImpl extends MinimalEObjectImpl.Container impleme
       case SimpleJavaPackage.LOGICAL_EXPRESSION__OPERADOR:
         setOperador(OPERADOR_EDEFAULT);
         return;
-      case SimpleJavaPackage.LOGICAL_EXPRESSION__EXPRESSAO:
-        setExpressao((expression)null);
+      case SimpleJavaPackage.LOGICAL_EXPRESSION__EXP:
+        setExp((expression)null);
         return;
     }
     super.eUnset(featureID);
@@ -239,8 +239,8 @@ public class logical_expressionImpl extends MinimalEObjectImpl.Container impleme
     {
       case SimpleJavaPackage.LOGICAL_EXPRESSION__OPERADOR:
         return OPERADOR_EDEFAULT == null ? operador != null : !OPERADOR_EDEFAULT.equals(operador);
-      case SimpleJavaPackage.LOGICAL_EXPRESSION__EXPRESSAO:
-        return expressao != null;
+      case SimpleJavaPackage.LOGICAL_EXPRESSION__EXP:
+        return exp != null;
     }
     return super.eIsSet(featureID);
   }

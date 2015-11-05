@@ -21,7 +21,7 @@ import org.xtext.simpleJava.literal_expression;
  * <ul>
  *   <li>{@link org.xtext.simpleJava.impl.literal_expressionImpl#getDecimal <em>Decimal</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.literal_expressionImpl#getInteiro <em>Inteiro</em>}</li>
- *   <li>{@link org.xtext.simpleJava.impl.literal_expressionImpl#getFloat <em>Float</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.impl.literal_expressionImpl#getL_float <em>Lfloat</em>}</li>
  *   <li>{@link org.xtext.simpleJava.impl.literal_expressionImpl#getString <em>String</em>}</li>
  * </ul>
  * </p>
@@ -71,24 +71,24 @@ public class literal_expressionImpl extends MinimalEObjectImpl.Container impleme
   protected String inteiro = INTEIRO_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getFloat() <em>Float</em>}' attribute.
+   * The default value of the '{@link #getL_float() <em>Lfloat</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFloat()
+   * @see #getL_float()
    * @generated
    * @ordered
    */
-  protected static final String FLOAT_EDEFAULT = null;
+  protected static final String LFLOAT_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getFloat() <em>Float</em>}' attribute.
+   * The cached value of the '{@link #getL_float() <em>Lfloat</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFloat()
+   * @see #getL_float()
    * @generated
    * @ordered
    */
-  protected String float_ = FLOAT_EDEFAULT;
+  protected String l_float = LFLOAT_EDEFAULT;
 
   /**
    * The default value of the '{@link #getString() <em>String</em>}' attribute.
@@ -182,9 +182,9 @@ public class literal_expressionImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getFloat()
+  public String getL_float()
   {
-    return float_;
+    return l_float;
   }
 
   /**
@@ -192,12 +192,12 @@ public class literal_expressionImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFloat(String newFloat)
+  public void setL_float(String newL_float)
   {
-    String oldFloat = float_;
-    float_ = newFloat;
+    String oldL_float = l_float;
+    l_float = newL_float;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.LITERAL_EXPRESSION__FLOAT, oldFloat, float_));
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.LITERAL_EXPRESSION__LFLOAT, oldL_float, l_float));
   }
 
   /**
@@ -237,8 +237,8 @@ public class literal_expressionImpl extends MinimalEObjectImpl.Container impleme
         return getDecimal();
       case SimpleJavaPackage.LITERAL_EXPRESSION__INTEIRO:
         return getInteiro();
-      case SimpleJavaPackage.LITERAL_EXPRESSION__FLOAT:
-        return getFloat();
+      case SimpleJavaPackage.LITERAL_EXPRESSION__LFLOAT:
+        return getL_float();
       case SimpleJavaPackage.LITERAL_EXPRESSION__STRING:
         return getString();
     }
@@ -261,8 +261,8 @@ public class literal_expressionImpl extends MinimalEObjectImpl.Container impleme
       case SimpleJavaPackage.LITERAL_EXPRESSION__INTEIRO:
         setInteiro((String)newValue);
         return;
-      case SimpleJavaPackage.LITERAL_EXPRESSION__FLOAT:
-        setFloat((String)newValue);
+      case SimpleJavaPackage.LITERAL_EXPRESSION__LFLOAT:
+        setL_float((String)newValue);
         return;
       case SimpleJavaPackage.LITERAL_EXPRESSION__STRING:
         setString((String)newValue);
@@ -287,8 +287,8 @@ public class literal_expressionImpl extends MinimalEObjectImpl.Container impleme
       case SimpleJavaPackage.LITERAL_EXPRESSION__INTEIRO:
         setInteiro(INTEIRO_EDEFAULT);
         return;
-      case SimpleJavaPackage.LITERAL_EXPRESSION__FLOAT:
-        setFloat(FLOAT_EDEFAULT);
+      case SimpleJavaPackage.LITERAL_EXPRESSION__LFLOAT:
+        setL_float(LFLOAT_EDEFAULT);
         return;
       case SimpleJavaPackage.LITERAL_EXPRESSION__STRING:
         setString(STRING_EDEFAULT);
@@ -311,8 +311,8 @@ public class literal_expressionImpl extends MinimalEObjectImpl.Container impleme
         return DECIMAL_EDEFAULT == null ? decimal != null : !DECIMAL_EDEFAULT.equals(decimal);
       case SimpleJavaPackage.LITERAL_EXPRESSION__INTEIRO:
         return INTEIRO_EDEFAULT == null ? inteiro != null : !INTEIRO_EDEFAULT.equals(inteiro);
-      case SimpleJavaPackage.LITERAL_EXPRESSION__FLOAT:
-        return FLOAT_EDEFAULT == null ? float_ != null : !FLOAT_EDEFAULT.equals(float_);
+      case SimpleJavaPackage.LITERAL_EXPRESSION__LFLOAT:
+        return LFLOAT_EDEFAULT == null ? l_float != null : !LFLOAT_EDEFAULT.equals(l_float);
       case SimpleJavaPackage.LITERAL_EXPRESSION__STRING:
         return STRING_EDEFAULT == null ? string != null : !STRING_EDEFAULT.equals(string);
     }
@@ -334,8 +334,8 @@ public class literal_expressionImpl extends MinimalEObjectImpl.Container impleme
     result.append(decimal);
     result.append(", inteiro: ");
     result.append(inteiro);
-    result.append(", float: ");
-    result.append(float_);
+    result.append(", l_float: ");
+    result.append(l_float);
     result.append(", string: ");
     result.append(string);
     result.append(')');

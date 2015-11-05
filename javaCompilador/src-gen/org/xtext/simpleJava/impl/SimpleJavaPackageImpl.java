@@ -1781,7 +1781,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getliteral_expression_Float()
+  public EAttribute getliteral_expression_L_float()
   {
     return (EAttribute)literal_expressionEClass.getEStructuralFeatures().get(2);
   }
@@ -1821,7 +1821,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getlogical_expression_Expressao()
+  public EReference getlogical_expression_Exp()
   {
     return (EReference)logical_expressionEClass.getEStructuralFeatures().get(1);
   }
@@ -2234,12 +2234,12 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     literal_expressionEClass = createEClass(LITERAL_EXPRESSION);
     createEAttribute(literal_expressionEClass, LITERAL_EXPRESSION__DECIMAL);
     createEAttribute(literal_expressionEClass, LITERAL_EXPRESSION__INTEIRO);
-    createEAttribute(literal_expressionEClass, LITERAL_EXPRESSION__FLOAT);
+    createEAttribute(literal_expressionEClass, LITERAL_EXPRESSION__LFLOAT);
     createEAttribute(literal_expressionEClass, LITERAL_EXPRESSION__STRING);
 
     logical_expressionEClass = createEClass(LOGICAL_EXPRESSION);
     createEAttribute(logical_expressionEClass, LOGICAL_EXPRESSION__OPERADOR);
-    createEReference(logical_expressionEClass, LOGICAL_EXPRESSION__EXPRESSAO);
+    createEReference(logical_expressionEClass, LOGICAL_EXPRESSION__EXP);
 
     bit_expressionEClass = createEClass(BIT_EXPRESSION);
     createEAttribute(bit_expressionEClass, BIT_EXPRESSION__OPERADOR);
@@ -2312,7 +2312,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Comp(), this.getcompilation_unit(), null, "comp", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Comp(), this.getcompilation_unit(), null, "comp", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(compilation_unitEClass, compilation_unit.class, "compilation_unit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getcompilation_unit_Pacote(), this.getpackage_statement(), null, "pacote", null, 0, 1, compilation_unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2479,12 +2479,12 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
     initEClass(literal_expressionEClass, literal_expression.class, "literal_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getliteral_expression_Decimal(), ecorePackage.getEString(), "decimal", null, 0, 1, literal_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getliteral_expression_Inteiro(), ecorePackage.getEString(), "inteiro", null, 0, 1, literal_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getliteral_expression_Float(), ecorePackage.getEString(), "float", null, 0, 1, literal_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getliteral_expression_L_float(), ecorePackage.getEString(), "l_float", null, 0, 1, literal_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getliteral_expression_String(), ecorePackage.getEString(), "string", null, 0, 1, literal_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(logical_expressionEClass, logical_expression.class, "logical_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getlogical_expression_Operador(), ecorePackage.getEString(), "operador", null, 0, 1, logical_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getlogical_expression_Expressao(), this.getexpression(), null, "expressao", null, 0, 1, logical_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlogical_expression_Exp(), this.getexpression(), null, "exp", null, 0, 1, logical_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(bit_expressionEClass, bit_expression.class, "bit_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getbit_expression_Operador(), ecorePackage.getEString(), "operador", null, 0, 1, bit_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -67,7 +67,7 @@ public interface SimpleJavaPackage extends EPackage
   int MODEL = 0;
 
   /**
-   * The feature id for the '<em><b>Comp</b></em>' containment reference list.
+   * The feature id for the '<em><b>Comp</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1801,13 +1801,13 @@ public interface SimpleJavaPackage extends EPackage
   int LITERAL_EXPRESSION__INTEIRO = 1;
 
   /**
-   * The feature id for the '<em><b>Float</b></em>' attribute.
+   * The feature id for the '<em><b>Lfloat</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LITERAL_EXPRESSION__FLOAT = 2;
+  int LITERAL_EXPRESSION__LFLOAT = 2;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1847,13 +1847,13 @@ public interface SimpleJavaPackage extends EPackage
   int LOGICAL_EXPRESSION__OPERADOR = 0;
 
   /**
-   * The feature id for the '<em><b>Expressao</b></em>' containment reference.
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LOGICAL_EXPRESSION__EXPRESSAO = 1;
+  int LOGICAL_EXPRESSION__EXP = 1;
 
   /**
    * The number of structural features of the '<em>logical expression</em>' class.
@@ -2298,10 +2298,10 @@ public interface SimpleJavaPackage extends EPackage
   EClass getModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.simpleJava.Model#getComp <em>Comp</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.Model#getComp <em>Comp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Comp</em>'.
+   * @return the meta object for the containment reference '<em>Comp</em>'.
    * @see org.xtext.simpleJava.Model#getComp()
    * @see #getModel()
    * @generated
@@ -3739,15 +3739,15 @@ public interface SimpleJavaPackage extends EPackage
   EAttribute getliteral_expression_Inteiro();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.literal_expression#getFloat <em>Float</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.simpleJava.literal_expression#getL_float <em>Lfloat</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Float</em>'.
-   * @see org.xtext.simpleJava.literal_expression#getFloat()
+   * @return the meta object for the attribute '<em>Lfloat</em>'.
+   * @see org.xtext.simpleJava.literal_expression#getL_float()
    * @see #getliteral_expression()
    * @generated
    */
-  EAttribute getliteral_expression_Float();
+  EAttribute getliteral_expression_L_float();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.simpleJava.literal_expression#getString <em>String</em>}'.
@@ -3782,15 +3782,15 @@ public interface SimpleJavaPackage extends EPackage
   EAttribute getlogical_expression_Operador();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.logical_expression#getExpressao <em>Expressao</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.simpleJava.logical_expression#getExp <em>Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expressao</em>'.
-   * @see org.xtext.simpleJava.logical_expression#getExpressao()
+   * @return the meta object for the containment reference '<em>Exp</em>'.
+   * @see org.xtext.simpleJava.logical_expression#getExp()
    * @see #getlogical_expression()
    * @generated
    */
-  EReference getlogical_expression_Expressao();
+  EReference getlogical_expression_Exp();
 
   /**
    * Returns the meta object for class '{@link org.xtext.simpleJava.bit_expression <em>bit expression</em>}'.
@@ -4049,7 +4049,7 @@ public interface SimpleJavaPackage extends EPackage
     EClass MODEL = eINSTANCE.getModel();
 
     /**
-     * The meta object literal for the '<em><b>Comp</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Comp</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -5187,12 +5187,12 @@ public interface SimpleJavaPackage extends EPackage
     EAttribute LITERAL_EXPRESSION__INTEIRO = eINSTANCE.getliteral_expression_Inteiro();
 
     /**
-     * The meta object literal for the '<em><b>Float</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Lfloat</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute LITERAL_EXPRESSION__FLOAT = eINSTANCE.getliteral_expression_Float();
+    EAttribute LITERAL_EXPRESSION__LFLOAT = eINSTANCE.getliteral_expression_L_float();
 
     /**
      * The meta object literal for the '<em><b>String</b></em>' attribute feature.
@@ -5221,12 +5221,12 @@ public interface SimpleJavaPackage extends EPackage
     EAttribute LOGICAL_EXPRESSION__OPERADOR = eINSTANCE.getlogical_expression_Operador();
 
     /**
-     * The meta object literal for the '<em><b>Expressao</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LOGICAL_EXPRESSION__EXPRESSAO = eINSTANCE.getlogical_expression_Expressao();
+    EReference LOGICAL_EXPRESSION__EXP = eINSTANCE.getlogical_expression_Exp();
 
     /**
      * The meta object literal for the '{@link org.xtext.simpleJava.impl.bit_expressionImpl <em>bit expression</em>}' class.

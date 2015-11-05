@@ -8063,13 +8063,13 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Literal_expression__Alternatives"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2263:1: rule__Literal_expression__Alternatives : ( ( ( rule__Literal_expression__DecimalAssignment_0 ) ) | ( ( rule__Literal_expression__InteiroAssignment_1 ) ) | ( ( rule__Literal_expression__FloatAssignment_2 ) ) | ( ( rule__Literal_expression__StringAssignment_3 ) ) );
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2263:1: rule__Literal_expression__Alternatives : ( ( ( rule__Literal_expression__DecimalAssignment_0 ) ) | ( ( rule__Literal_expression__InteiroAssignment_1 ) ) | ( ( rule__Literal_expression__L_floatAssignment_2 ) ) | ( ( rule__Literal_expression__StringAssignment_3 ) ) );
     public final void rule__Literal_expression__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2267:1: ( ( ( rule__Literal_expression__DecimalAssignment_0 ) ) | ( ( rule__Literal_expression__InteiroAssignment_1 ) ) | ( ( rule__Literal_expression__FloatAssignment_2 ) ) | ( ( rule__Literal_expression__StringAssignment_3 ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2267:1: ( ( ( rule__Literal_expression__DecimalAssignment_0 ) ) | ( ( rule__Literal_expression__InteiroAssignment_1 ) ) | ( ( rule__Literal_expression__L_floatAssignment_2 ) ) | ( ( rule__Literal_expression__StringAssignment_3 ) ) )
             int alt30=4;
             switch ( input.LA(1) ) {
             case RULE_DECIMAL_DIGITS:
@@ -8160,19 +8160,19 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2280:6: ( ( rule__Literal_expression__FloatAssignment_2 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2280:6: ( ( rule__Literal_expression__L_floatAssignment_2 ) )
                     {
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2280:6: ( ( rule__Literal_expression__FloatAssignment_2 ) )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2281:1: ( rule__Literal_expression__FloatAssignment_2 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2280:6: ( ( rule__Literal_expression__L_floatAssignment_2 ) )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2281:1: ( rule__Literal_expression__L_floatAssignment_2 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getLiteral_expressionAccess().getFloatAssignment_2()); 
+                       before(grammarAccess.getLiteral_expressionAccess().getL_floatAssignment_2()); 
                     }
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2282:1: ( rule__Literal_expression__FloatAssignment_2 )
-                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2282:2: rule__Literal_expression__FloatAssignment_2
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2282:1: ( rule__Literal_expression__L_floatAssignment_2 )
+                    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:2282:2: rule__Literal_expression__L_floatAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Literal_expression__FloatAssignment_2_in_rule__Literal_expression__Alternatives5146);
-                    rule__Literal_expression__FloatAssignment_2();
+                    pushFollow(FOLLOW_rule__Literal_expression__L_floatAssignment_2_in_rule__Literal_expression__Alternatives5146);
+                    rule__Literal_expression__L_floatAssignment_2();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -8180,7 +8180,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getLiteral_expressionAccess().getFloatAssignment_2()); 
+                       after(grammarAccess.getLiteral_expressionAccess().getL_floatAssignment_2()); 
                     }
 
                     }
@@ -30016,26 +30016,26 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Logical_expression__Group_0__1__Impl"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10114:1: rule__Logical_expression__Group_0__1__Impl : ( ( rule__Logical_expression__ExpressaoAssignment_0_1 ) ) ;
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10114:1: rule__Logical_expression__Group_0__1__Impl : ( ( rule__Logical_expression__ExpAssignment_0_1 ) ) ;
     public final void rule__Logical_expression__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10118:1: ( ( ( rule__Logical_expression__ExpressaoAssignment_0_1 ) ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10119:1: ( ( rule__Logical_expression__ExpressaoAssignment_0_1 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10118:1: ( ( ( rule__Logical_expression__ExpAssignment_0_1 ) ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10119:1: ( ( rule__Logical_expression__ExpAssignment_0_1 ) )
             {
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10119:1: ( ( rule__Logical_expression__ExpressaoAssignment_0_1 ) )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10120:1: ( rule__Logical_expression__ExpressaoAssignment_0_1 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10119:1: ( ( rule__Logical_expression__ExpAssignment_0_1 ) )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10120:1: ( rule__Logical_expression__ExpAssignment_0_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLogical_expressionAccess().getExpressaoAssignment_0_1()); 
+               before(grammarAccess.getLogical_expressionAccess().getExpAssignment_0_1()); 
             }
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10121:1: ( rule__Logical_expression__ExpressaoAssignment_0_1 )
-            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10121:2: rule__Logical_expression__ExpressaoAssignment_0_1
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10121:1: ( rule__Logical_expression__ExpAssignment_0_1 )
+            // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:10121:2: rule__Logical_expression__ExpAssignment_0_1
             {
-            pushFollow(FOLLOW_rule__Logical_expression__ExpressaoAssignment_0_1_in_rule__Logical_expression__Group_0__1__Impl20732);
-            rule__Logical_expression__ExpressaoAssignment_0_1();
+            pushFollow(FOLLOW_rule__Logical_expression__ExpAssignment_0_1_in_rule__Logical_expression__Group_0__1__Impl20732);
+            rule__Logical_expression__ExpAssignment_0_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -30043,7 +30043,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLogical_expressionAccess().getExpressaoAssignment_0_1()); 
+               after(grammarAccess.getLogical_expressionAccess().getExpAssignment_0_1()); 
             }
 
             }
@@ -38356,9 +38356,9 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Literal_expression__InteiroAssignment_1"
 
 
-    // $ANTLR start "rule__Literal_expression__FloatAssignment_2"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13040:1: rule__Literal_expression__FloatAssignment_2 : ( RULE_FLOAT_LITERAL ) ;
-    public final void rule__Literal_expression__FloatAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Literal_expression__L_floatAssignment_2"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13040:1: rule__Literal_expression__L_floatAssignment_2 : ( RULE_FLOAT_LITERAL ) ;
+    public final void rule__Literal_expression__L_floatAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -38370,11 +38370,11 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13046:1: RULE_FLOAT_LITERAL
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteral_expressionAccess().getFloatFLOAT_LITERALTerminalRuleCall_2_0()); 
+               before(grammarAccess.getLiteral_expressionAccess().getL_floatFLOAT_LITERALTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_FLOAT_LITERAL,FOLLOW_RULE_FLOAT_LITERAL_in_rule__Literal_expression__FloatAssignment_226653); if (state.failed) return ;
+            match(input,RULE_FLOAT_LITERAL,FOLLOW_RULE_FLOAT_LITERAL_in_rule__Literal_expression__L_floatAssignment_226653); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLiteral_expressionAccess().getFloatFLOAT_LITERALTerminalRuleCall_2_0()); 
+               after(grammarAccess.getLiteral_expressionAccess().getL_floatFLOAT_LITERALTerminalRuleCall_2_0()); 
             }
 
             }
@@ -38394,7 +38394,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Literal_expression__FloatAssignment_2"
+    // $ANTLR end "rule__Literal_expression__L_floatAssignment_2"
 
 
     // $ANTLR start "rule__Literal_expression__StringAssignment_3"
@@ -38491,9 +38491,9 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Logical_expression__OperadorAssignment_0_0"
 
 
-    // $ANTLR start "rule__Logical_expression__ExpressaoAssignment_0_1"
-    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13093:1: rule__Logical_expression__ExpressaoAssignment_0_1 : ( ruleexpression ) ;
-    public final void rule__Logical_expression__ExpressaoAssignment_0_1() throws RecognitionException {
+    // $ANTLR start "rule__Logical_expression__ExpAssignment_0_1"
+    // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13093:1: rule__Logical_expression__ExpAssignment_0_1 : ( ruleexpression ) ;
+    public final void rule__Logical_expression__ExpAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -38505,15 +38505,15 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
             // ../javaCompilador.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalSimpleJava.g:13099:1: ruleexpression
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLogical_expressionAccess().getExpressaoExpressionParserRuleCall_0_1_0()); 
+               before(grammarAccess.getLogical_expressionAccess().getExpExpressionParserRuleCall_0_1_0()); 
             }
-            pushFollow(FOLLOW_ruleexpression_in_rule__Logical_expression__ExpressaoAssignment_0_126759);
+            pushFollow(FOLLOW_ruleexpression_in_rule__Logical_expression__ExpAssignment_0_126759);
             ruleexpression();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLogical_expressionAccess().getExpressaoExpressionParserRuleCall_0_1_0()); 
+               after(grammarAccess.getLogical_expressionAccess().getExpExpressionParserRuleCall_0_1_0()); 
             }
 
             }
@@ -38533,7 +38533,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Logical_expression__ExpressaoAssignment_0_1"
+    // $ANTLR end "rule__Logical_expression__ExpAssignment_0_1"
 
 
     // $ANTLR start "rule__Logical_expression__OperadorAssignment_1"
@@ -43680,7 +43680,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_rule__Creating_aux__Group_1__0_in_rule__Creating_aux__Alternatives5077 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Literal_expression__DecimalAssignment_0_in_rule__Literal_expression__Alternatives5110 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Literal_expression__InteiroAssignment_1_in_rule__Literal_expression__Alternatives5128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Literal_expression__FloatAssignment_2_in_rule__Literal_expression__Alternatives5146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Literal_expression__L_floatAssignment_2_in_rule__Literal_expression__Alternatives5146 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Literal_expression__StringAssignment_3_in_rule__Literal_expression__Alternatives5164 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Logical_expression__Group_0__0_in_rule__Logical_expression__Alternatives5197 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Logical_expression__OperadorAssignment_1_in_rule__Logical_expression__Alternatives5215 = new BitSet(new long[]{0x0000000000000002L});
@@ -44352,7 +44352,7 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_rule__Logical_expression__Group_0__1_in_rule__Logical_expression__Group_0__020648 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Logical_expression__OperadorAssignment_0_0_in_rule__Logical_expression__Group_0__0__Impl20675 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Logical_expression__Group_0__1__Impl_in_rule__Logical_expression__Group_0__120705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Logical_expression__ExpressaoAssignment_0_1_in_rule__Logical_expression__Group_0__1__Impl20732 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Logical_expression__ExpAssignment_0_1_in_rule__Logical_expression__Group_0__1__Impl20732 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Bit_expression__Group__0__Impl_in_rule__Bit_expression__Group__020766 = new BitSet(new long[]{0x0200200001F001F0L,0x00000000F0010000L});
     public static final BitSet FOLLOW_rule__Bit_expression__Group__1_in_rule__Bit_expression__Group__020769 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Bit_expression__OperadorAssignment_0_in_rule__Bit_expression__Group__0__Impl20796 = new BitSet(new long[]{0x0000000000000002L});
@@ -44553,10 +44553,10 @@ public class InternalSimpleJavaParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_ruleexpression_in_rule__Aux__EspressaoAssignment_126560 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_DECIMAL_DIGITS_in_rule__Literal_expression__DecimalAssignment_026591 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_INTEGER_LITERAL_in_rule__Literal_expression__InteiroAssignment_126622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_LITERAL_in_rule__Literal_expression__FloatAssignment_226653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_LITERAL_in_rule__Literal_expression__L_floatAssignment_226653 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__Literal_expression__StringAssignment_326684 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_92_in_rule__Logical_expression__OperadorAssignment_0_026720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleexpression_in_rule__Logical_expression__ExpressaoAssignment_0_126759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleexpression_in_rule__Logical_expression__ExpAssignment_0_126759 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_93_in_rule__Logical_expression__OperadorAssignment_126795 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_94_in_rule__Logical_expression__OperadorAssignment_226839 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_95_in_rule__Bit_expression__OperadorAssignment_026883 = new BitSet(new long[]{0x0000000000000002L});

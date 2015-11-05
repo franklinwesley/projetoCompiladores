@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.simpleJava.literal_expression#getDecimal <em>Decimal</em>}</li>
  *   <li>{@link org.xtext.simpleJava.literal_expression#getInteiro <em>Inteiro</em>}</li>
- *   <li>{@link org.xtext.simpleJava.literal_expression#getFloat <em>Float</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.literal_expression#getL_float <em>Lfloat</em>}</li>
  *   <li>{@link org.xtext.simpleJava.literal_expression#getString <em>String</em>}</li>
  * </ul>
  * </p>
@@ -78,30 +78,30 @@ public interface literal_expression extends EObject
   void setInteiro(String value);
 
   /**
-   * Returns the value of the '<em><b>Float</b></em>' attribute.
+   * Returns the value of the '<em><b>Lfloat</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Float</em>' attribute isn't clear,
+   * If the meaning of the '<em>Lfloat</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Float</em>' attribute.
-   * @see #setFloat(String)
-   * @see org.xtext.simpleJava.SimpleJavaPackage#getliteral_expression_Float()
+   * @return the value of the '<em>Lfloat</em>' attribute.
+   * @see #setL_float(String)
+   * @see org.xtext.simpleJava.SimpleJavaPackage#getliteral_expression_L_float()
    * @model
    * @generated
    */
-  String getFloat();
+  String getL_float();
 
   /**
-   * Sets the value of the '{@link org.xtext.simpleJava.literal_expression#getFloat <em>Float</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.simpleJava.literal_expression#getL_float <em>Lfloat</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Float</em>' attribute.
-   * @see #getFloat()
+   * @param value the new value of the '<em>Lfloat</em>' attribute.
+   * @see #getL_float()
    * @generated
    */
-  void setFloat(String value);
+  void setL_float(String value);
 
   /**
    * Returns the value of the '<em><b>String</b></em>' attribute.

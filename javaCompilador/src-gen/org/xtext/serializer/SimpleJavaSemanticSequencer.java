@@ -277,10 +277,17 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     comp+=compilation_unit
+	 *     comp=compilation_unit
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, SimpleJavaPackage.Literals.MODEL__COMP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SimpleJavaPackage.Literals.MODEL__COMP));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getModelAccess().getCompCompilation_unitParserRuleCall_0(), semanticObject.getComp());
+		feeder.finish();
 	}
 	
 	
@@ -648,7 +655,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (decimal=DECIMAL_DIGITS | inteiro=INTEGER_LITERAL | float=FLOAT_LITERAL | string=STRING)
+	 *     (decimal=DECIMAL_DIGITS | inteiro=INTEGER_LITERAL | l_float=FLOAT_LITERAL | string=STRING)
 	 */
 	protected void sequence_literal_expression(EObject context, literal_expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -657,7 +664,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     ((operador='!' expressao=expression) | operador='true' | operador='false')
+	 *     ((operador='!' exp=expression) | operador='true' | operador='false')
 	 */
 	protected void sequence_logical_expression(EObject context, logical_expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

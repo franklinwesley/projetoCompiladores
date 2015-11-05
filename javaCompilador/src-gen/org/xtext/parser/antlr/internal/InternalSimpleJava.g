@@ -92,7 +92,7 @@ ruleModel returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getModelRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"comp",
         		lv_comp_0_0, 
@@ -4069,9 +4069,9 @@ ruleliteral_expression returns [EObject current=null]
 )
     |(
 (
-		lv_float_2_0=RULE_FLOAT_LITERAL
+		lv_l_float_2_0=RULE_FLOAT_LITERAL
 		{
-			newLeafNode(lv_float_2_0, grammarAccess.getLiteral_expressionAccess().getFloatFLOAT_LITERALTerminalRuleCall_2_0()); 
+			newLeafNode(lv_l_float_2_0, grammarAccess.getLiteral_expressionAccess().getL_floatFLOAT_LITERALTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -4079,8 +4079,8 @@ ruleliteral_expression returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"float",
-        		lv_float_2_0, 
+       			"l_float",
+        		lv_l_float_2_0, 
         		"FLOAT_LITERAL");
 	    }
 
@@ -4143,16 +4143,16 @@ rulelogical_expression returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLogical_expressionAccess().getExpressaoExpressionParserRuleCall_0_1_0()); 
+	        newCompositeNode(grammarAccess.getLogical_expressionAccess().getExpExpressionParserRuleCall_0_1_0()); 
 	    }
-		lv_expressao_1_0=ruleexpression		{
+		lv_exp_1_0=ruleexpression		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLogical_expressionRule());
 	        }
        		set(
        			$current, 
-       			"expressao",
-        		lv_expressao_1_0, 
+       			"exp",
+        		lv_exp_1_0, 
         		"expression");
 	        afterParserOrEnumRuleCall();
 	    }

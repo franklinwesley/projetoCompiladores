@@ -3,7 +3,7 @@ grammar org.xtext.SimpleJava with org.eclipse.xtext.common.Terminals
 generate simpleJava "http://www.xtext.org/SimpleJava"
 
 Model:
-	comp+=compilation_unit;
+	comp=compilation_unit;
 
 compilation_unit: (pacote=package_statement)? (importes+=import_statement)* (declaracao+=type_declaration)*;
 package_statement: "package" noomePacote=name ";";
@@ -90,10 +90,10 @@ aux: ("[" espressao=expression "]");
 literal_expression:
 	  ->decimal=DECIMAL_DIGITS 
       | inteiro=INTEGER_LITERAL
-      | float=FLOAT_LITERAL 
+      | l_float=FLOAT_LITERAL 
       | string=STRING;
 logical_expression: 
-      operador="!" expressao=expression 
+      operador="!" exp=expression 
       | operador="true" 
       | operador="false";
 bit_expression: operador="~" expressao=expression;

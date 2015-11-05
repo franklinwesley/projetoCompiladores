@@ -1,17 +1,17 @@
 package org.xtext.validation;
 
 public class Tipo {
-	String nome;
-	boolean primitivo;
+	private String nome;
+	private Tipo herdado;
 	
-	public Tipo(String nome, boolean primitivo) {
+	public Tipo(String nome, Tipo herdado) {
 		this.nome = nome;
-		this.primitivo = primitivo;
+		this.herdado = herdado;
 	}
 	
 	public Tipo(String nome) {
 		this.nome = nome;
-		this.primitivo = false;
+		this.herdado = this;
 	}
 	
 	public String getNome() {
@@ -21,12 +21,12 @@ public class Tipo {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	public boolean isPrimitivo() {
-		return primitivo;
+
+	public Tipo getHerdado() {
+		return herdado;
 	}
-	
-	public void setPrimitivo(boolean primitivo) {
-		this.primitivo = primitivo;
+
+	public void setHerdado(Tipo herdado) {
+		this.herdado = herdado;
 	}
 }

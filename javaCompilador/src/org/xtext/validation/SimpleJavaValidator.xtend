@@ -22,6 +22,7 @@ import org.xtext.simpleJava.parameter
 import org.xtext.simpleJava.arglist
 import org.xtext.simpleJava.logical_expression
 import org.xtext.simpleJava.numeric_expression
+import org.eclipse.emf.ecore.EObject
 
 //import org.eclipse.xtext.validation.Check
 
@@ -49,36 +50,26 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 
 	@Check
 	def runChecks (compilation_unit comp) {
+		//falta testar
 		checkTypeDeclaration(comp.declaracao);
+		//falta testar
 		checkVariableDeclaration(comp.declaracao);
-		//incompleto
+		//falta testar
 		checkVariableInitializer(comp.declaracao);
+		//falta testar
 		checkInterativeWhile(comp.declaracao);
-		//incompleto
+		//falta testar
 		checkAritmeticExpression(comp.declaracao);
-		//incompleto
+		//falta testar
 		checkBooleanExpression(comp.declaracao);
 		//incompleto
 		checkLiterals(comp.declaracao);
-		//incompleto
+		//falta testar
 		checkVariableUsed(comp.declaracao);
-		//incompleto
+		//falta testar
 		checkMetodDeclaration(comp.declaracao);
-		//incompleto
+		//falta testar
 		checkMetodoUsed(comp.declaracao);
-		//incompleto
-		checkType(comp.declaracao);
-	}
-	
-	def checkType(EList<type_declaration> list) {
-		for (type_declaration td: list) {
-			//TODO naum sei se eh um type declaration ou algo abaixo dele
-			checkTipo(td);
-		}
-	}
-	
-	def checkTipo(type_declaration declaration) {
-		//check hierarquia de tipo
 	}
 	
 	def checkMetodoUsed(EList<type_declaration> list) {
@@ -92,12 +83,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			declaration.blocoMetodo.corpo.expressao.expressoes.parametros != null) {
 			if (metodos.containsKey(declaration.blocoMetodo.corpo.expressao.identificador)) {
 				var m = metodos.get(declaration.blocoMetodo.corpo.expressao.identificador);
-				if (verificaParametros(m, declaration.blocoMetodo.corpo.expressao.expressoes.parametros)) {
-					//TODO 	check tipo retorno
-					if (true) {
-						//erro tipo retorno errado
-					}
-				} else {
+				if (!verificaParametros(m, declaration.blocoMetodo.corpo.expressao.expressoes.parametros)) {
 					//erro parametros errados
 				}
 			} else {
@@ -133,12 +119,30 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	def checkDeclaracaoMetodo(method_declaration declaration) {
 		var tipo = new Tipo(String.valueOf(declaration.tipoRetorno.tipo));
 		var parametros = getparametros(declaration.parametrosMetodo);
-		//TODO verificar se o coropo do metodo tem o tipo q ele diz ter
-		if (true) {
+		if (tipo.equals(getTipo(declaration.blocoMetodo.corpo.^return))) {
 			var metodo =new Metodo(declaration.nomeMetodo, tipo, parametros);
 			metodos.put(declaration.nomeMetodo, metodo);
 		} else {
 			// erro tipo de retorno
+		}
+	}
+	
+	def getTipo(expression expression) {
+		if (expression.tipo instanceof logical_expression) {
+			return new Tipo ("boolean");
+		} else if (expression.literal.decimal != null) {
+			return new Tipo ("double");
+		} else if (expression.literal.inteiro != null) {
+			return new Tipo ("int");
+		} else if (expression.literal.l_float != null) {
+			return new Tipo ("float");
+		} else if (expression.literal.string != null) {
+			return new Tipo ("String");
+		}
+		for (Tipo tipo: tipos) {
+			if (tipo.herdado instanceof expression) {
+				return new Tipo ("boolean");
+			}
 		}
 	}
 	
@@ -162,6 +166,9 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			//erro variavel nao exite
 		} else {
 			//check tipo
+			if (!variaveis.get(variavel).equals(getparametros(statement.expressao.expressoes.exp.expressoes.parametros))) {
+				//erro parametros errados
+			}
 		}
 	}
 	
@@ -173,8 +180,12 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	
 	def checkLiterais(expression expression) {
 		//check literais
-		if (expression.literal != null) {
-			//check
+		if (expression.literal.inteiro != null) {
+			//tipo inteiro
+		} else if (expression.literal.string != null) {
+			//tipo string
+		} else if (expression.tipo instanceof logical_expression) {
+			//tipo boolean
 		}
 	}
 	
@@ -187,13 +198,19 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	def checkBoolean(expression expression) {
 		//checar espressao booleana
 		if (expression.tipo instanceof logical_expression) {
-			//check
-		} if (expression.operador == "ampersand" || expression.operador == "ampersand=" 
-			|| expression.operador == "|" || expression.operador == "|=" 
-			|| expression.operador == "^" || expression.operador == "^=" 
-			|| expression.operador == "ampersand ampersand" || expression.operador == "||=" 
-			|| expression.operador == "%" || expression.operador == "%=") {
-			//check
+			if (expression.operador == "ampersand" || expression.operador == "ampersand=" 
+				|| expression.operador == "|" || expression.operador == "|=" 
+				|| expression.operador == "^" || expression.operador == "^=" 
+				|| expression.operador == "ampersand ampersand" || expression.operador == "||=" 
+				|| expression.operador == "%" || expression.operador == "%=") {
+				if (expression.exp instanceof logical_expression) {
+					//error expressao invalida para expressoes aritimetricas
+				}
+			} else {
+				//error operador invalido
+			}
+		} else {
+			//error expressao invalida para expressoes booleanas
 		}
 	}
 	
@@ -205,15 +222,24 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	
 	def checkArimetic(expression expression) {
 		//checar espressao aritimetrica
-		if (expression.tipo instanceof numeric_expression) {
-			//check
-		} if (expression.expressoes.op != null || expression.expressoes == "++" 
-			|| expression.expressoes == "--" || expression.expressoes == "-" 
-			|| expression.expressoes == "-=" || expression.expressoes == "*" 
-			|| expression.expressoes == "*=" || expression.expressoes == "/" 
-			|| expression.expressoes == "/=" || expression.expressoes == "%" 
-			|| expression.expressoes == "%=") {
-			//check
+		if (expression.literal.decimal != null || expression.literal.inteiro != null
+			|| expression.literal.l_float != null) {
+			if (expression.expressoes.op != null || expression.expressoes.operador == "++" 
+				|| expression.expressoes.operador == "--" || expression.expressoes.operador == "-" 
+				|| expression.expressoes.operador == "-=" || expression.expressoes.operador == "*" 
+				|| expression.expressoes.operador == "*=" || expression.expressoes.operador == "/" 
+				|| expression.expressoes.operador == "/=" || expression.expressoes.operador == "%" 
+				|| expression.expressoes.operador == "%=" || expression.tipo instanceof numeric_expression) {
+				if (expression.expressoes.exp.literal.decimal == null 
+					&& expression.expressoes.exp.literal.inteiro == null
+					&& expression.expressoes.exp.literal.l_float == null) {
+					//error expressao invalida para expressoes aritimetricas
+				}
+			} else {
+				//error operador invalido
+			}
+		} else {
+			//error expressao invalida para expressoes aritimetricas
 		}
 	}
 	
@@ -270,21 +296,34 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	
 	def checkVariableInitializer(EList<type_declaration> list) {
 		for (type_declaration td: list) {
-			//TODO ver se esse new tipo pega
-			var tipo = new Tipo(String.valueOf(td.declaracaoClasse.corpoClasse.declaracaoVariavel.tipoVariavel.tipo));
-			checkInicializacaoVariavel(td.declaracaoClasse.corpoClasse.declaracaoVariavel.declaracaoVariaveis, tipo);
-			checkInicializacaoVariavel(td.declaracaoInterface.corpoInterface.declaracaoVariavel.declaracaoVariaveis, tipo);
+			checkInicializacaoVariavel(td.declaracaoClasse.corpoClasse.declaracaoVariavel.declaracaoVariaveis);
+			checkInicializacaoVariavel(td.declaracaoInterface.corpoInterface.declaracaoVariavel.declaracaoVariaveis);
 		}
 	}
 	
-	def checkInicializacaoVariavel(EList<variable_declarator> list, Tipo tipo) {
+	def checkInicializacaoVariavel(EList<variable_declarator> list) {
 		for (variable_declarator vd : list) {
-			var variavel = new Variavel(vd.nomeVariavel, tipo);
 			if (!variaveis.containsKey(vd.nomeVariavel)) {
 				//error variavel naum exite
 			} else {
 				var v = variaveis.get(vd.nomeVariavel);
 				//TODO checkar o tipo se esta certo
+				if (vd.valorVariavel.expressaoVariavel.tipo instanceof logical_expression 
+					&& !v.tipo.equals(new Tipo("boolean"))) {
+					//erro tipo esperado era boolean
+				} else if (vd.valorVariavel.expressaoVariavel.literal.decimal != null  
+					&& !v.tipo.equals(new Tipo("double"))) {
+					//erro tipo esperado era double						
+				} else if (vd.valorVariavel.expressaoVariavel.literal.l_float != null  
+					&& !v.tipo.equals(new Tipo("float"))) {
+					//erro tipo esperado era float								
+				} else if (vd.valorVariavel.expressaoVariavel.literal.inteiro != null  
+					&& !v.tipo.equals(new Tipo("int"))) {
+					//erro tipo esperado era int
+				} else if (vd.valorVariavel.expressaoVariavel.identificador != null  
+					&& !v.tipo.equals(variaveis.get(vd.valorVariavel.expressaoVariavel.identificador).tipo)) {
+					//erro tipo esperado era vd.valorVariavel.expressaoVariavel.identificador
+				}
 			}	
 		}
 	}

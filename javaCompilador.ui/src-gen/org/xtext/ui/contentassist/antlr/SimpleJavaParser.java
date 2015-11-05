@@ -296,10 +296,10 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAuxAccess().getEspressaoAssignment_1(), "rule__Aux__EspressaoAssignment_1");
 					put(grammarAccess.getLiteral_expressionAccess().getDecimalAssignment_0(), "rule__Literal_expression__DecimalAssignment_0");
 					put(grammarAccess.getLiteral_expressionAccess().getInteiroAssignment_1(), "rule__Literal_expression__InteiroAssignment_1");
-					put(grammarAccess.getLiteral_expressionAccess().getFloatAssignment_2(), "rule__Literal_expression__FloatAssignment_2");
+					put(grammarAccess.getLiteral_expressionAccess().getL_floatAssignment_2(), "rule__Literal_expression__L_floatAssignment_2");
 					put(grammarAccess.getLiteral_expressionAccess().getStringAssignment_3(), "rule__Literal_expression__StringAssignment_3");
 					put(grammarAccess.getLogical_expressionAccess().getOperadorAssignment_0_0(), "rule__Logical_expression__OperadorAssignment_0_0");
-					put(grammarAccess.getLogical_expressionAccess().getExpressaoAssignment_0_1(), "rule__Logical_expression__ExpressaoAssignment_0_1");
+					put(grammarAccess.getLogical_expressionAccess().getExpAssignment_0_1(), "rule__Logical_expression__ExpAssignment_0_1");
 					put(grammarAccess.getLogical_expressionAccess().getOperadorAssignment_1(), "rule__Logical_expression__OperadorAssignment_1");
 					put(grammarAccess.getLogical_expressionAccess().getOperadorAssignment_2(), "rule__Logical_expression__OperadorAssignment_2");
 					put(grammarAccess.getBit_expressionAccess().getOperadorAssignment_0(), "rule__Bit_expression__OperadorAssignment_0");

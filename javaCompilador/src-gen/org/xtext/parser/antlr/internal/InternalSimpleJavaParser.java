@@ -252,7 +252,7 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
               	        if (current==null) {
               	            current = createModelElementForParent(grammarAccess.getModelRule());
               	        }
-                     		add(
+                     		set(
                      			current, 
                      			"comp",
                       		lv_comp_0_0, 
@@ -11002,22 +11002,22 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleliteral_expression"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4028:1: ruleliteral_expression returns [EObject current=null] : ( ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) ) | ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) ) | ( (lv_float_2_0= RULE_FLOAT_LITERAL ) ) | ( (lv_string_3_0= RULE_STRING ) ) ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4028:1: ruleliteral_expression returns [EObject current=null] : ( ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) ) | ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) ) | ( (lv_l_float_2_0= RULE_FLOAT_LITERAL ) ) | ( (lv_string_3_0= RULE_STRING ) ) ) ;
     public final EObject ruleliteral_expression() throws RecognitionException {
         EObject current = null;
 
         Token lv_decimal_0_0=null;
         Token lv_inteiro_1_0=null;
-        Token lv_float_2_0=null;
+        Token lv_l_float_2_0=null;
         Token lv_string_3_0=null;
 
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4031:28: ( ( ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) ) | ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) ) | ( (lv_float_2_0= RULE_FLOAT_LITERAL ) ) | ( (lv_string_3_0= RULE_STRING ) ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4032:1: ( ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) ) | ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) ) | ( (lv_float_2_0= RULE_FLOAT_LITERAL ) ) | ( (lv_string_3_0= RULE_STRING ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4031:28: ( ( ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) ) | ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) ) | ( (lv_l_float_2_0= RULE_FLOAT_LITERAL ) ) | ( (lv_string_3_0= RULE_STRING ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4032:1: ( ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) ) | ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) ) | ( (lv_l_float_2_0= RULE_FLOAT_LITERAL ) ) | ( (lv_string_3_0= RULE_STRING ) ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4032:1: ( ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) ) | ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) ) | ( (lv_float_2_0= RULE_FLOAT_LITERAL ) ) | ( (lv_string_3_0= RULE_STRING ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4032:1: ( ( ( RULE_DECIMAL_DIGITS )=> (lv_decimal_0_0= RULE_DECIMAL_DIGITS ) ) | ( (lv_inteiro_1_0= RULE_INTEGER_LITERAL ) ) | ( (lv_l_float_2_0= RULE_FLOAT_LITERAL ) ) | ( (lv_string_3_0= RULE_STRING ) ) )
             int alt73=4;
             switch ( input.LA(1) ) {
             case RULE_DECIMAL_DIGITS:
@@ -11122,18 +11122,18 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4070:6: ( (lv_float_2_0= RULE_FLOAT_LITERAL ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4070:6: ( (lv_l_float_2_0= RULE_FLOAT_LITERAL ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4070:6: ( (lv_float_2_0= RULE_FLOAT_LITERAL ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4071:1: (lv_float_2_0= RULE_FLOAT_LITERAL )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4070:6: ( (lv_l_float_2_0= RULE_FLOAT_LITERAL ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4071:1: (lv_l_float_2_0= RULE_FLOAT_LITERAL )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4071:1: (lv_float_2_0= RULE_FLOAT_LITERAL )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4072:3: lv_float_2_0= RULE_FLOAT_LITERAL
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4071:1: (lv_l_float_2_0= RULE_FLOAT_LITERAL )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4072:3: lv_l_float_2_0= RULE_FLOAT_LITERAL
                     {
-                    lv_float_2_0=(Token)match(input,RULE_FLOAT_LITERAL,FOLLOW_RULE_FLOAT_LITERAL_in_ruleliteral_expression8642); if (state.failed) return current;
+                    lv_l_float_2_0=(Token)match(input,RULE_FLOAT_LITERAL,FOLLOW_RULE_FLOAT_LITERAL_in_ruleliteral_expression8642); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_float_2_0, grammarAccess.getLiteral_expressionAccess().getFloatFLOAT_LITERALTerminalRuleCall_2_0()); 
+                      			newLeafNode(lv_l_float_2_0, grammarAccess.getLiteral_expressionAccess().getL_floatFLOAT_LITERALTerminalRuleCall_2_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -11143,8 +11143,8 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       	        }
                              		setWithLastConsumed(
                              			current, 
-                             			"float",
-                              		lv_float_2_0, 
+                             			"l_float",
+                              		lv_l_float_2_0, 
                               		"FLOAT_LITERAL");
                       	    
                     }
@@ -11256,23 +11256,23 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulelogical_expression"
-    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4124:1: rulelogical_expression returns [EObject current=null] : ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) ) ;
+    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4124:1: rulelogical_expression returns [EObject current=null] : ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_exp_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) ) ;
     public final EObject rulelogical_expression() throws RecognitionException {
         EObject current = null;
 
         Token lv_operador_0_0=null;
         Token lv_operador_2_0=null;
         Token lv_operador_3_0=null;
-        EObject lv_expressao_1_0 = null;
+        EObject lv_exp_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4127:28: ( ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) ) )
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4128:1: ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4127:28: ( ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_exp_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4128:1: ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_exp_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) )
             {
-            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4128:1: ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) )
+            // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4128:1: ( ( ( (lv_operador_0_0= '!' ) ) ( (lv_exp_1_0= ruleexpression ) ) ) | ( (lv_operador_2_0= 'true' ) ) | ( (lv_operador_3_0= 'false' ) ) )
             int alt74=3;
             switch ( input.LA(1) ) {
             case 91:
@@ -11300,10 +11300,10 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
             switch (alt74) {
                 case 1 :
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4128:2: ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4128:2: ( ( (lv_operador_0_0= '!' ) ) ( (lv_exp_1_0= ruleexpression ) ) )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4128:2: ( ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4128:3: ( (lv_operador_0_0= '!' ) ) ( (lv_expressao_1_0= ruleexpression ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4128:2: ( ( (lv_operador_0_0= '!' ) ) ( (lv_exp_1_0= ruleexpression ) ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4128:3: ( (lv_operador_0_0= '!' ) ) ( (lv_exp_1_0= ruleexpression ) )
                     {
                     // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4128:3: ( (lv_operador_0_0= '!' ) )
                     // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4129:1: (lv_operador_0_0= '!' )
@@ -11331,19 +11331,19 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4143:2: ( (lv_expressao_1_0= ruleexpression ) )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4144:1: (lv_expressao_1_0= ruleexpression )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4143:2: ( (lv_exp_1_0= ruleexpression ) )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4144:1: (lv_exp_1_0= ruleexpression )
                     {
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4144:1: (lv_expressao_1_0= ruleexpression )
-                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4145:3: lv_expressao_1_0= ruleexpression
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4144:1: (lv_exp_1_0= ruleexpression )
+                    // ../javaCompilador/src-gen/org/xtext/parser/antlr/internal/InternalSimpleJava.g:4145:3: lv_exp_1_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getLogical_expressionAccess().getExpressaoExpressionParserRuleCall_0_1_0()); 
+                      	        newCompositeNode(grammarAccess.getLogical_expressionAccess().getExpExpressionParserRuleCall_0_1_0()); 
                       	    
                     }
                     pushFollow(FOLLOW_ruleexpression_in_rulelogical_expression8799);
-                    lv_expressao_1_0=ruleexpression();
+                    lv_exp_1_0=ruleexpression();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -11354,8 +11354,8 @@ public class InternalSimpleJavaParser extends AbstractInternalAntlrParser {
                       	        }
                              		set(
                              			current, 
-                             			"expressao",
-                              		lv_expressao_1_0, 
+                             			"exp",
+                              		lv_exp_1_0, 
                               		"expression");
                       	        afterParserOrEnumRuleCall();
                       	    

@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.simpleJava.logical_expression#getOperador <em>Operador</em>}</li>
- *   <li>{@link org.xtext.simpleJava.logical_expression#getExpressao <em>Expressao</em>}</li>
+ *   <li>{@link org.xtext.simpleJava.logical_expression#getExp <em>Exp</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,29 +50,29 @@ public interface logical_expression extends EObject
   void setOperador(String value);
 
   /**
-   * Returns the value of the '<em><b>Expressao</b></em>' containment reference.
+   * Returns the value of the '<em><b>Exp</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Expressao</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Exp</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Expressao</em>' containment reference.
-   * @see #setExpressao(expression)
-   * @see org.xtext.simpleJava.SimpleJavaPackage#getlogical_expression_Expressao()
+   * @return the value of the '<em>Exp</em>' containment reference.
+   * @see #setExp(expression)
+   * @see org.xtext.simpleJava.SimpleJavaPackage#getlogical_expression_Exp()
    * @model containment="true"
    * @generated
    */
-  expression getExpressao();
+  expression getExp();
 
   /**
-   * Sets the value of the '{@link org.xtext.simpleJava.logical_expression#getExpressao <em>Expressao</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.simpleJava.logical_expression#getExp <em>Exp</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Expressao</em>' containment reference.
-   * @see #getExpressao()
+   * @param value the new value of the '<em>Exp</em>' containment reference.
+   * @see #getExp()
    * @generated
    */
-  void setExpressao(expression value);
+  void setExp(expression value);
 
 } // logical_expression

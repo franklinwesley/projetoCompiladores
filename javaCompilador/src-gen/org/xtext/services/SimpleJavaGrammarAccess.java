@@ -24,10 +24,10 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCompCompilation_unitParserRuleCall_0 = (RuleCall)cCompAssignment.eContents().get(0);
 		
 		//Model:
-		//	comp+=compilation_unit;
+		//	comp=compilation_unit;
 		@Override public ParserRule getRule() { return rule; }
 
-		//comp+=compilation_unit
+		//comp=compilation_unit
 		public Assignment getCompAssignment() { return cCompAssignment; }
 
 		//compilation_unit
@@ -2407,16 +2407,16 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDecimalDECIMAL_DIGITSTerminalRuleCall_0_0 = (RuleCall)cDecimalAssignment_0.eContents().get(0);
 		private final Assignment cInteiroAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cInteiroINTEGER_LITERALTerminalRuleCall_1_0 = (RuleCall)cInteiroAssignment_1.eContents().get(0);
-		private final Assignment cFloatAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final RuleCall cFloatFLOAT_LITERALTerminalRuleCall_2_0 = (RuleCall)cFloatAssignment_2.eContents().get(0);
+		private final Assignment cL_floatAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final RuleCall cL_floatFLOAT_LITERALTerminalRuleCall_2_0 = (RuleCall)cL_floatAssignment_2.eContents().get(0);
 		private final Assignment cStringAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
 		private final RuleCall cStringSTRINGTerminalRuleCall_3_0 = (RuleCall)cStringAssignment_3.eContents().get(0);
 		
 		//literal_expression:
-		//	-> decimal=DECIMAL_DIGITS | inteiro=INTEGER_LITERAL | float=FLOAT_LITERAL | string=STRING;
+		//	-> decimal=DECIMAL_DIGITS | inteiro=INTEGER_LITERAL | l_float=FLOAT_LITERAL | string=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//-> decimal=DECIMAL_DIGITS | inteiro=INTEGER_LITERAL | float=FLOAT_LITERAL | string=STRING
+		//-> decimal=DECIMAL_DIGITS | inteiro=INTEGER_LITERAL | l_float=FLOAT_LITERAL | string=STRING
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//-> decimal=DECIMAL_DIGITS
@@ -2431,11 +2431,11 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//INTEGER_LITERAL
 		public RuleCall getInteiroINTEGER_LITERALTerminalRuleCall_1_0() { return cInteiroINTEGER_LITERALTerminalRuleCall_1_0; }
 
-		//float=FLOAT_LITERAL
-		public Assignment getFloatAssignment_2() { return cFloatAssignment_2; }
+		//l_float=FLOAT_LITERAL
+		public Assignment getL_floatAssignment_2() { return cL_floatAssignment_2; }
 
 		//FLOAT_LITERAL
-		public RuleCall getFloatFLOAT_LITERALTerminalRuleCall_2_0() { return cFloatFLOAT_LITERALTerminalRuleCall_2_0; }
+		public RuleCall getL_floatFLOAT_LITERALTerminalRuleCall_2_0() { return cL_floatFLOAT_LITERALTerminalRuleCall_2_0; }
 
 		//string=STRING
 		public Assignment getStringAssignment_3() { return cStringAssignment_3; }
@@ -2450,21 +2450,21 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Assignment cOperadorAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
 		private final Keyword cOperadorExclamationMarkKeyword_0_0_0 = (Keyword)cOperadorAssignment_0_0.eContents().get(0);
-		private final Assignment cExpressaoAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cExpressaoExpressionParserRuleCall_0_1_0 = (RuleCall)cExpressaoAssignment_0_1.eContents().get(0);
+		private final Assignment cExpAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cExpExpressionParserRuleCall_0_1_0 = (RuleCall)cExpAssignment_0_1.eContents().get(0);
 		private final Assignment cOperadorAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final Keyword cOperadorTrueKeyword_1_0 = (Keyword)cOperadorAssignment_1.eContents().get(0);
 		private final Assignment cOperadorAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
 		private final Keyword cOperadorFalseKeyword_2_0 = (Keyword)cOperadorAssignment_2.eContents().get(0);
 		
 		//logical_expression:
-		//	operador="!" expressao=expression | operador="true" | operador="false";
+		//	operador="!" exp=expression | operador="true" | operador="false";
 		@Override public ParserRule getRule() { return rule; }
 
-		//operador="!" expressao=expression | operador="true" | operador="false"
+		//operador="!" exp=expression | operador="true" | operador="false"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//operador="!" expressao=expression
+		//operador="!" exp=expression
 		public Group getGroup_0() { return cGroup_0; }
 
 		//operador="!"
@@ -2473,11 +2473,11 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//"!"
 		public Keyword getOperadorExclamationMarkKeyword_0_0_0() { return cOperadorExclamationMarkKeyword_0_0_0; }
 
-		//expressao=expression
-		public Assignment getExpressaoAssignment_0_1() { return cExpressaoAssignment_0_1; }
+		//exp=expression
+		public Assignment getExpAssignment_0_1() { return cExpAssignment_0_1; }
 
 		//expression
-		public RuleCall getExpressaoExpressionParserRuleCall_0_1_0() { return cExpressaoExpressionParserRuleCall_0_1_0; }
+		public RuleCall getExpExpressionParserRuleCall_0_1_0() { return cExpExpressionParserRuleCall_0_1_0; }
 
 		//operador="true"
 		public Assignment getOperadorAssignment_1() { return cOperadorAssignment_1; }
@@ -3077,7 +3077,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	comp+=compilation_unit;
+	//	comp=compilation_unit;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -3431,7 +3431,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//literal_expression:
-	//	-> decimal=DECIMAL_DIGITS | inteiro=INTEGER_LITERAL | float=FLOAT_LITERAL | string=STRING;
+	//	-> decimal=DECIMAL_DIGITS | inteiro=INTEGER_LITERAL | l_float=FLOAT_LITERAL | string=STRING;
 	public Literal_expressionElements getLiteral_expressionAccess() {
 		return pLiteral_expression;
 	}
@@ -3441,7 +3441,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//logical_expression:
-	//	operador="!" expressao=expression | operador="true" | operador="false";
+	//	operador="!" exp=expression | operador="true" | operador="false";
 	public Logical_expressionElements getLogical_expressionAccess() {
 		return pLogical_expression;
 	}

@@ -23,12 +23,12 @@ import org.xtext.example.simpleJava.type_declaration
 import org.xtext.example.simpleJava.variable_declaration
 import org.xtext.example.simpleJava.variable_declarator
 import org.xtext.example.simpleJava.while_statement
+import org.xtext.example.simpleJava.SimpleJavaPackage
 
 //import org.eclipse.xtext.validation.Check
-
 /**
  * This class contains custom validation rules. 
- *
+ * 
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
 class SimpleJavaValidator extends AbstractSimpleJavaValidator {
@@ -47,61 +47,63 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 //					INVALID_NAME)
 //		}
 //	}
-
-@Check
-	def runChecks (compilation_unit comp) {
-		//falta testar
+	@Check
+	def runChecks(compilation_unit comp) {
+		// falta testar
 		checkTypeDeclaration(comp.declaracao);
-		//falta testar
+		// falta testar
 		checkVariableDeclaration(comp.declaracao);
-		//falta testar
+		// falta testar
 		checkVariableInitializer(comp.declaracao);
-		//falta testar
+		// falta testar
 		checkInterativeWhile(comp.declaracao);
-		//falta testar
+		// falta testar
 		checkAritmeticExpression(comp.declaracao);
-		//falta testar
+		// falta testar
 		checkBooleanExpression(comp.declaracao);
-		//incompleto
+		// incompleto
 		checkLiterals(comp.declaracao);
-		//falta testar
+		// falta testar
 		checkVariableUsed(comp.declaracao);
-		//falta testar
+		// falta testar
 		checkMetodDeclaration(comp.declaracao);
-		//falta testar
+		// falta testar
 		checkMetodoUsed(comp.declaracao);
 	}
-	
+
 	def checkMetodoUsed(EList<type_declaration> list) {
-		for (type_declaration td: list) {
+		salvarArquivo("oi")
+		for (type_declaration td : list) {
 			checkUsoMetodo(td.declaracaoClasse.corpoClasse.declaracaoMetodo);
 		}
 	}
-	
+
 	def checkUsoMetodo(method_declaration declaration) {
 		if (declaration.blocoMetodo.corpo.expressao.identificador != null &&
 			declaration.blocoMetodo.corpo.expressao.expressoes.parametros != null) {
 			if (metodos.containsKey(declaration.blocoMetodo.corpo.expressao.identificador)) {
 				var m = metodos.get(declaration.blocoMetodo.corpo.expressao.identificador);
 				if (!verificaParametros(m, declaration.blocoMetodo.corpo.expressao.expressoes.parametros)) {
-					//erro parametros errados
+					// erro parametros errados
+					error("Invalid parameters", SimpleJavaPackage.Literals.EXPRESSION_AUX__PARAMETROS)
 				}
 			} else {
 				// erro metodo inexistente
+				error("inexistent method", SimpleJavaPackage.Literals.METHOD_DECLARATION__BLOCO_METODO)
 			}
 		}
 	}
-	
-	def Map<String,Tipo> getparametros(arglist list) {
-		var p = new HashMap<String,Tipo>();
+
+	def Map<String, Tipo> getparametros(arglist list) {
+		var p = new HashMap<String, Tipo>();
 		var i = 0
-		while (i < list.tipoParametro.length){
-			p.put(list.nomeParametro.get(i), new Tipo (String.valueOf(list.tipoParametro.get(i))));
+		while (i < list.tipoParametro.length) {
+			p.put(list.nomeParametro.get(i), new Tipo(String.valueOf(list.tipoParametro.get(i))));
 			i++;
 		}
 		return p;
 	}
-	
+
 	def boolean verificaParametros(Metodo metodo, arglist arglist) {
 		if (metodo.parametros.equals(getparametros(arglist))) {
 			return true;
@@ -109,365 +111,502 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			return false;
 		}
 	}
-	
+
 	def checkMetodDeclaration(EList<type_declaration> list) {
-		for (type_declaration td: list) {
+		for (type_declaration td : list) {
 			checkDeclaracaoMetodo(td.declaracaoClasse.corpoClasse.declaracaoMetodo);
 		}
 	}
-	
+
 	def checkDeclaracaoMetodo(method_declaration declaration) {
 		var tipo = new Tipo(String.valueOf(declaration.tipoRetorno.tipo));
 		var parametros = getparametros(declaration.parametrosMetodo);
 		if (tipo.equals(getTipo(declaration.blocoMetodo.corpo.^return))) {
-			var metodo =new Metodo(declaration.nomeMetodo, tipo, parametros);
+			var metodo = new Metodo(declaration.nomeMetodo, tipo, parametros);
 			metodos.put(declaration.nomeMetodo, metodo);
 		} else {
 			// erro tipo de retorno
+			error("Invalid return", SimpleJavaPackage.Literals.STATEMENT__RETURN)
 		}
 	}
-	
+
 	def getTipo(expression expression) {
 		if (expression.logical != null) {
-			return new Tipo ("boolean");
+			return new Tipo("boolean");
 		} else if (expression.literal.decimal != null) {
-			return new Tipo ("double");
+			return new Tipo("double");
 		} else if (expression.literal.inteiro != null) {
-			return new Tipo ("int");
+			return new Tipo("int");
 		} else if (expression.literal.l_float != null) {
-			return new Tipo ("float");
+			return new Tipo("float");
 		} else if (expression.literal.string != null) {
-			return new Tipo ("String");
+			return new Tipo("String");
 		}
-		for (Tipo tipo: tipos) {
+		for (Tipo tipo : tipos) {
 			if (tipo.herdado instanceof expression) {
-				return new Tipo ("boolean");
+				return new Tipo("boolean");
 			}
 		}
 	}
-	
-	def Map<String,Tipo> getparametros(parameter_list list) {
-		var p = new HashMap<String,Tipo>();
-		for (parameter parametro: list.parametros) {
-			p.put(parametro.nomeParametro, new Tipo (String.valueOf(parametro.tipoParametro.tipo)));
+
+	def Map<String, Tipo> getparametros(parameter_list list) {
+		var p = new HashMap<String, Tipo>();
+		for (parameter parametro : list.parametros) {
+			p.put(parametro.nomeParametro, new Tipo(String.valueOf(parametro.tipoParametro.tipo)));
 		}
 		return p;
 	}
-	
+
 	def checkVariableUsed(EList<type_declaration> list) {
-		for (type_declaration td: list) {
+		for (type_declaration td : list) {
 			checkUsoVariaveis(td.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo);
 		}
 	}
-	
+
 	def checkUsoVariaveis(statement statement) {
 		var variavel = statement.expressao.identificador
 		if (!variaveis.containsKey(variavel)) {
-			//erro variavel nao exite
+			// erro variavel nao exite
+			error("Inexistent variable", SimpleJavaPackage.Literals.EXPRESSION__IDENTIFICADOR)
 		} else {
-			//check tipo
-			if (!variaveis.get(variavel).equals(getparametros(statement.expressao.expressoes.exp.expressoes.parametros))) {
-				//erro parametros errados
+			// check tipo
+			if (!variaveis.get(variavel).equals(
+				getparametros(statement.expressao.expressoes.exp.expressoes.parametros))) {
+				// erro parametros errados
+				error("Invalid parameters", SimpleJavaPackage.Literals.EXPRESSION_AUX__PARAMETROS)
 			}
 		}
 	}
-	
+
 	def checkLiterals(EList<type_declaration> list) {
-		for (type_declaration td: list) {
+		for (type_declaration td : list) {
 			checkLiterais(td.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.expressao);
 		}
 	}
-	
+
 	def checkLiterais(expression expression) {
-		//check literais
+		// check literais
 		if (expression.literal.inteiro != null) {
-			//tipo inteiro
+			// tipo inteiro
 		} else if (expression.literal.string != null) {
-			//tipo string
+			// tipo string
 		} else if (expression.logical != null) {
-			//tipo boolean
+			// tipo boolean
 		}
 	}
-	
+
 	def checkBooleanExpression(EList<type_declaration> list) {
-		for (type_declaration td: list) {
+		for (type_declaration td : list) {
 			checkBoolean(td.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.expressao);
 		}
 	}
-	
+
 	def checkBoolean(expression expression) {
-		//checar espressao booleana
+		// checar espressao booleana
 		if (expression.logical != null) {
-			if (expression.operador == "ampersand" || expression.operador == "ampersand=" 
-				|| expression.operador == "|" || expression.operador == "|=" 
-				|| expression.operador == "^" || expression.operador == "^=" 
-				|| expression.operador == "ampersand ampersand" || expression.operador == "||=" 
-				|| expression.operador == "&" || expression.operador == "%=") {
+			if (expression.operador == "ampersand" || expression.operador == "ampersand=" ||
+				expression.operador == "|" || expression.operador == "|=" || expression.operador == "^" ||
+				expression.operador == "^=" || expression.operador == "ampersand ampersand" ||
+				expression.operador == "||=" || expression.operador == "&" || expression.operador == "%=") {
 				if (expression.exp.logical != null) {
-					//error expressao invalida para expressoes aritimetricas
+					// error expressao invalida para expressoes aritimetricas
+					error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION__LOGICAL)
 				}
 			} else {
-				//error operador invalido
+				// error operador invalido
+				error("Invalid operator", SimpleJavaPackage.Literals.EXPRESSION_AUX__OPERADOR)
 			}
 		} else {
-			//error expressao invalida para expressoes booleanas
+			// error expressao invalida para expressoes booleanas
+			error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION__LOGICAL)
 		}
 	}
-	
+
 	def checkAritmeticExpression(EList<type_declaration> list) {
-		for (type_declaration td: list) {
+		for (type_declaration td : list) {
 			checkArimetic(td.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.expressao);
 		}
 	}
-	
+
 	def checkArimetic(expression expression) {
-		//checar espressao aritimetrica
-		if (expression.literal.decimal != null || expression.literal.inteiro != null
-			|| expression.literal.l_float != null) {
-			if (expression.expressoes.op != null || expression.expressoes.operador == "++" 
-				|| expression.expressoes.operador == "--" || expression.expressoes.operador == "-" 
-				|| expression.expressoes.operador == "-=" || expression.expressoes.operador == "*" 
-				|| expression.expressoes.operador == "*=" || expression.expressoes.operador == "/" 
-				|| expression.expressoes.operador == "/=" || expression.expressoes.operador == "%" 
-				|| expression.expressoes.operador == "%=" || expression.numeric != null) {
-				if (expression.expressoes.exp.literal.decimal == null 
-					&& expression.expressoes.exp.literal.inteiro == null
-					&& expression.expressoes.exp.literal.l_float == null) {
-					//error expressao invalida para expressoes aritimetricas
-				}
-			} else {
-				//error operador invalido
-			}
-		} else {
-			//error expressao invalida para expressoes aritimetricas
-		}
-	}
-	
-	def checkInterativeWhile(EList<type_declaration> list) {
-		for (type_declaration declaracoes : list) {
-			checkWhile(declaracoes.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.corpoWhile);	
-		} 
-	}
-	
-	def checkVariableDeclaration(EList<type_declaration> list) {
-		for (type_declaration declaracoes : list) {
-			checkDeclaracaoVariavel(declaracoes.declaracaoClasse.corpoClasse.declaracaoVariavel);
-			checkDeclaracaoVariavel(declaracoes.declaracaoInterface.corpoInterface.declaracaoVariavel);	
-		}
-	}
-	
-	def checkDeclaracaoVariavel(variable_declaration declaration) {
-		//TODO ver se esse new tipo pega
-		var tipo = new Tipo(String.valueOf(declaration.tipoVariavel.tipo));
-		if (!tipos.contains(tipo)) {
-			//error tipo naum existe
-		} else {
-			//add variavel
-			var vars = declaration.declaracaoVariaveis;
-			for (variable_declarator variable: vars) {	
-				var variavel = new Variavel(variable.nomeVariavel, tipo);
-				if (!variaveis.containsKey(variable.nomeVariavel)) {
-					variaveis.put(variable.nomeVariavel, variavel);
+		// checar espressao aritimetrica
+		if (expression.literal.decimal != null || expression.literal.inteiro != null ||
+			expression.literal.l_float != null) {
+			if (expression.expressoes.op != null || expression.expressoes.operador == "++" ||
+				expression.expressoes.operador == "--" || expression.expressoes.operador == "-" ||
+				expression.expressoes.operador == "-=" || expression.expressoes.operador == "*" ||
+				expression.expressoes.operador == "*=" || expression.expressoes.operador == "/" ||
+				expression.expressoes.operador == "/=" || expression.expressoes.operador == "%" ||
+				expression.expressoes.operador == "%=" || expression.numeric != null) {
+				if (expression.expressoes.exp.literal.decimal == null &&
+					expression.expressoes.exp.literal.inteiro == null &&
+					expression.expressoes.exp.literal.l_float == null) {
+						// error expressao invalida para expressoes aritimetricas
+						error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION_AUX__EXPRESSOES)
+					}
 				} else {
-					//erro variavel ja existe
+					// error operador invalido
+					error("Invalid operator", SimpleJavaPackage.Literals.EXPRESSION_AUX__OPERADOR)
 				}
-			}
-		}
-	}
-	
-	
-	def checkWhile(while_statement statement) {
-		var operador = statement.expressaoWhile.expressoes.operador
-		var metodo = metodos.get(statement.expressaoWhile.identificador);
-		var variavel = variaveis.get(statement.expressaoWhile.identificador);
-		if (statement.expressaoWhile.logical == null && operador != ">" && operador != "<" && operador != ">=" 
-			&& operador != "<=" && operador != "==" && operador != "!=" && operador != ">>=" && operador != "<<" 
-			&& operador != ">>" && operador != ">>>" && !metodo.tipoRetorno.nome.equals("boolean")
-			&& !variavel.tipo.nome.equals("boolean")) {
-			//erro expressao invalida
-		} else {
-			if (statement.blocoWhile.bloco.corpo.corpoWhile != null) {
-				checkWhile(statement.blocoWhile.bloco.corpo.corpoWhile);
-			}
-		}
-	}
-	
-	
-	def checkVariableInitializer(EList<type_declaration> list) {
-		for (type_declaration td: list) {
-			checkInicializacaoVariavel(td.declaracaoClasse.corpoClasse.declaracaoVariavel.declaracaoVariaveis);
-			checkInicializacaoVariavel(td.declaracaoInterface.corpoInterface.declaracaoVariavel.declaracaoVariaveis);
-		}
-	}
-	
-	def checkInicializacaoVariavel(EList<variable_declarator> list) {
-		for (variable_declarator vd : list) {
-			if (!variaveis.containsKey(vd.nomeVariavel)) {
-				//error variavel naum exite
 			} else {
-				var v = variaveis.get(vd.nomeVariavel);
-				//TODO checkar o tipo se esta certo
-				if (vd.valorVariavel.expressaoVariavel.logical != null 
-					&& !v.tipo.equals(new Tipo("boolean"))) {
-					//erro tipo esperado era boolean
-				} else if (vd.valorVariavel.expressaoVariavel.literal.decimal != null  
-					&& !v.tipo.equals(new Tipo("double"))) {
-					//erro tipo esperado era double						
-				} else if (vd.valorVariavel.expressaoVariavel.literal.l_float != null  
-					&& !v.tipo.equals(new Tipo("float"))) {
-					//erro tipo esperado era float								
-				} else if (vd.valorVariavel.expressaoVariavel.literal.inteiro != null  
-					&& !v.tipo.equals(new Tipo("int"))) {
-					//erro tipo esperado era int
-				} else if (vd.valorVariavel.expressaoVariavel.identificador != null  
-					&& !v.tipo.equals(variaveis.get(vd.valorVariavel.expressaoVariavel.identificador).tipo)) {
-					//erro tipo esperado era vd.valorVariavel.expressaoVariavel.identificador
+				// error expressao invalida para expressoes aritimetricas
+				error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION_AUX__EXPRESSOES)
+			}
+		}
+
+		def checkInterativeWhile(EList<type_declaration> list) {
+			for (type_declaration declaracoes : list) {
+				checkWhile(declaracoes.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.corpoWhile);
+			}
+		}
+
+		def checkVariableDeclaration(EList<type_declaration> list) {
+			for (type_declaration declaracoes : list) {
+				checkDeclaracaoVariavel(declaracoes.declaracaoClasse.corpoClasse.declaracaoVariavel);
+				checkDeclaracaoVariavel(declaracoes.declaracaoInterface.corpoInterface.declaracaoVariavel);
+			}
+		}
+
+		def checkDeclaracaoVariavel(variable_declaration declaration) {
+			// TODO ver se esse new tipo pega
+			var tipo = new Tipo(String.valueOf(declaration.tipoVariavel.tipo));
+			if (!tipos.contains(tipo)) {
+				// error tipo naum existe
+				error("Inexistent type", SimpleJavaPackage.Literals.VARIABLE_DECLARATION__TIPO_VARIAVEL)
+			} else {
+				// add variavel
+				var vars = declaration.declaracaoVariaveis;
+				for (variable_declarator variable : vars) {
+					var variavel = new Variavel(variable.nomeVariavel, tipo);
+					if (!variaveis.containsKey(variable.nomeVariavel)) {
+						variaveis.put(variable.nomeVariavel, variavel);
+					} else {
+						// erro variavel ja existe
+						error("Variable alredy exist", SimpleJavaPackage.Literals.VARIABLE_DECLARATOR__NOME_VARIAVEL)
+					}
 				}
-			}	
+			}
 		}
-	}
-	
-	def checkTypeDeclaration(EList<type_declaration> list) {
-		for (type_declaration td: list) {
-			if (td.declaracaoClasse != null) {
-			//salvar o tipo
-			addType(td.declaracaoClasse.nomeClasse);
-		} else {
-			//salva o tipo
-			addType(td.declaracaoInterface.nomeInterface);
+
+		def checkWhile(while_statement statement) {
+			var operador = statement.expressaoWhile.expressoes.operador
+			var metodo = metodos.get(statement.expressaoWhile.identificador);
+			var variavel = variaveis.get(statement.expressaoWhile.identificador);
+			if (statement.expressaoWhile.logical == null && operador != ">" && operador != "<" && operador != ">=" &&
+				operador != "<=" && operador != "==" && operador != "!=" && operador != ">>=" && operador != "<<" &&
+				operador != ">>" && operador != ">>>" && !metodo.tipoRetorno.nome.equals("boolean") &&
+				!variavel.tipo.nome.equals("boolean")) {
+				// erro expressao invalida
+				error("Invalid expression", SimpleJavaPackage.Literals.STATEMENT__EXPRESSAO)
+			} else {
+				if (statement.blocoWhile.bloco.corpo.corpoWhile != null) {
+					checkWhile(statement.blocoWhile.bloco.corpo.corpoWhile);
+				}
+			}
 		}
-		}		
-	}
-	
-	def addType(String tipo) {
-		//adicionar na tabela de simbolos caso naum exista
-		var t = new Tipo (tipo);
-		if (!tipos.contains(t)) {
-			tipos.add(t);
+
+		def checkVariableInitializer(EList<type_declaration> list) {
+			for (type_declaration td : list) {
+				checkInicializacaoVariavel(td.declaracaoClasse.corpoClasse.declaracaoVariavel.declaracaoVariaveis);
+				checkInicializacaoVariavel(
+					td.declaracaoInterface.corpoInterface.declaracaoVariavel.declaracaoVariaveis);
+			}
 		}
-	}
-	
-	//Geração de Codigo
-	def boolean isArimeticExp (expression expression) {
-		if (expression.literal.decimal != null || expression.literal.inteiro != null
-			|| expression.literal.l_float != null) {
-			if (expression.expressoes.op != null || expression.expressoes.operador == "++" 
-				|| expression.expressoes.operador == "--" || expression.expressoes.operador == "-" 
-				|| expression.expressoes.operador == "-=" || expression.expressoes.operador == "*" 
-				|| expression.expressoes.operador == "*=" || expression.expressoes.operador == "/" 
-				|| expression.expressoes.operador == "/=" || expression.expressoes.operador == "%" 
-				|| expression.expressoes.operador == "%=" || expression.numeric != null) {
-				if (expression.literal.decimal != null || expression.literal.inteiro != null
-					|| expression.literal.l_float != null) {
+
+		def checkInicializacaoVariavel(EList<variable_declarator> list) {
+			for (variable_declarator vd : list) {
+				if (!variaveis.containsKey(vd.nomeVariavel)) {
+					// error variavel naum exite
+					error("inexistent variable", SimpleJavaPackage.Literals.VARIABLE_DECLARATOR__NOME_VARIAVEL)
+				} else {
+					var v = variaveis.get(vd.nomeVariavel);
+					// TODO checkar o tipo se esta certo
+					if (vd.valorVariavel.expressaoVariavel.logical != null && !v.tipo.equals(new Tipo("boolean"))) {
+						// erro tipo esperado era boolean
+						error("Expeted to boolean", SimpleJavaPackage.Literals.VARIABLE_INITIALIZER__EXPRESSAO_VARIAVEL)
+					} else if (vd.valorVariavel.expressaoVariavel.literal.decimal != null &&
+						!v.tipo.equals(new Tipo("double"))) {
+						// erro tipo esperado era double			
+						error("Expeted to double", SimpleJavaPackage.Literals.VARIABLE_INITIALIZER__EXPRESSAO_VARIAVEL)
+					} else if (vd.valorVariavel.expressaoVariavel.literal.l_float != null &&
+						!v.tipo.equals(new Tipo("float"))) {
+						// erro tipo esperado era float
+						error("Expeted to float", SimpleJavaPackage.Literals.VARIABLE_INITIALIZER__EXPRESSAO_VARIAVEL)
+					} else if (vd.valorVariavel.expressaoVariavel.literal.inteiro != null &&
+						!v.tipo.equals(new Tipo("int"))) {
+						// erro tipo esperado era int
+						error("Expeted to int", SimpleJavaPackage.Literals.VARIABLE_INITIALIZER__EXPRESSAO_VARIAVEL)
+					} else if (vd.valorVariavel.expressaoVariavel.identificador != null &&
+						!v.tipo.equals(variaveis.get(vd.valorVariavel.expressaoVariavel.identificador).tipo)) {
+						// erro tipo esperado era vd.valorVariavel.expressaoVariavel.identificador
+					}
+				}
+			}
+		}
+
+		def checkTypeDeclaration(EList<type_declaration> list) {
+			for (type_declaration td : list) {
+				if (td.declaracaoClasse != null) {
+					// salvar o tipo
+					addType(td.declaracaoClasse.nomeClasse);
+				} else {
+					// salva o tipo
+					addType(td.declaracaoInterface.nomeInterface);
+				}
+			}
+		}
+
+		def addType(String tipo) {
+			// adicionar na tabela de simbolos caso naum exista
+			var t = new Tipo(tipo);
+			if (!tipos.contains(t)) {
+				tipos.add(t);
+			}
+		}
+
+		// Geração de Codigo
+		def boolean isArimeticExp(expression expression) {
+			if (expression.literal.decimal != null || expression.literal.inteiro != null ||
+				expression.literal.l_float != null) {
+				if (expression.expressoes.op != null || expression.expressoes.operador == "++" ||
+					expression.expressoes.operador == "--" || expression.expressoes.operador == "-" ||
+					expression.expressoes.operador == "-=" || expression.expressoes.operador == "*" ||
+					expression.expressoes.operador == "*=" || expression.expressoes.operador == "/" ||
+					expression.expressoes.operador == "/=" || expression.expressoes.operador == "%" ||
+					expression.expressoes.operador == "%=" || expression.numeric != null) {
+					if (expression.literal.decimal != null || expression.literal.inteiro != null ||
+						expression.literal.l_float != null) {
+						return true
+					}
+				}
+			}
+			return false
+		}
+
+		def boolean isBooleanExp(expression expression) {
+			var metodo = metodos.get(expression.identificador);
+			var variavel = variaveis.get(expression.identificador);
+			if (expression.logical.operador != null || (metodo != null && metodo.tipoRetorno.nome.equals("boolean")) ||
+				(variavel != null && variavel.tipo.nome.equals("boolean"))) {
+				if (expression.logical.operador == "!" && isBooleanExp(expression.logical.exp) ||
+					(expression.logical.operador == "true" || expression.logical.operador == "false") &&
+						expression.expressoes.op == null) {
+					return true
+				}
+				if ((metodo != null && metodo.tipoRetorno.nome.equals("boolean")) ||
+					(variavel != null && variavel.tipo.nome.equals("boolean")) && expression.expressoes.op == null) {
+					return true
+				}
+				if (expression.expressoes.operador == "&" || expression.expressoes.operador == "^=" ||
+					expression.expressoes.operador == "&=" || expression.expressoes.operador == "||" ||
+					expression.expressoes.operador == "&&" || expression.expressoes.operador == "|" ||
+					expression.expressoes.operador == "||=" || expression.expressoes.operador == "|=" ||
+					expression.expressoes.operador == "%" || expression.expressoes.operador == "^" ||
+					expression.expressoes.operador == "%=") {
+					if (expression.logical.operador != null ||
+						(metodo != null && metodo.tipoRetorno.nome.equals("boolean")) ||
+						(variavel != null && variavel.tipo.nome.equals("boolean"))) {
+						return true
+					}
+				}
+				if (expression.expressoes.operador == "?" && expression.expressoes.exp.expressoes.operador == ":") {
 					return true
 				}
 			}
+			return false
 		}
-		return false
-	}
 	
-	def boolean isBooleanExp (expression expression) {
-		var metodo = metodos.get(expression.identificador);
-		var variavel = variaveis.get(expression.identificador);
-		if (expression.logical.operador != null || (metodo != null && metodo.tipoRetorno.nome.equals("boolean"))
-			|| (variavel != null && variavel.tipo.nome.equals("boolean"))) {
-			if (expression.logical.operador == "!" && isBooleanExp(expression.logical.exp)
-				|| (expression.logical.operador == "true" || expression.logical.operador == "false") && expression.expressoes.op == null) {
+		def boolean isRelativeExp(expression expression) {
+			//TODO
+			return false
+		}
+
+		def boolean isLiteral(expression expression) {
+			if (expression.literal != null || expression.logical.operador != "!") {
 				return true
 			}
-			if ((metodo != null && metodo.tipoRetorno.nome.equals("boolean"))
-			|| (variavel != null && variavel.tipo.nome.equals("boolean")) && expression.expressoes.op == null) {
+			return false
+		}
+
+		def boolean isAtribuicao(expression expression) {
+			if (expression.novo != null || expression.expressoes.operador == "^=" || expression.expressoes.operador == "*=" ||
+				expression.expressoes.operador == "-=" || expression.expressoes.operador == "||=" ||
+				expression.expressoes.operador == "|=" || expression.expressoes.operador == "/=" ||
+				expression.expressoes.operador == "%=" || expression.expressoes.operador == "&=") {
 				return true
 			}
-			if (expression.expressoes.operador == "ampersand" || expression.expressoes.operador == "^="
-				|| expression.expressoes.operador == "ampersand=" || expression.expressoes.operador == "ampersand ampersand" 
-				|| expression.expressoes.operador == "|" || expression.expressoes.operador == "||="
-				|| expression.expressoes.operador == "|=" || expression.expressoes.operador == "&" 
-				|| expression.expressoes.operador == "^" || expression.expressoes.operador == "&=") {
-				if (expression.logical.operador != null || (metodo != null && metodo.tipoRetorno.nome.equals("boolean"))
-				|| (variavel != null && variavel.tipo.nome.equals("boolean"))) {
-					return true
+			return false
+		}
+
+		def load(String end1, String end2) {
+			salvarArquivo("LD " + end1 + ", " + end2)
+		}
+
+		def load(String end1, String end2, String deslocamento) {
+			salvarArquivo("LD " + end1 + ", " + end2 + "(" + deslocamento + ")")
+		}
+
+		def storeRight(String end1, String end2, String deslocamento) {
+			salvarArquivo("ST " + end1 + ", " + end2 + "(" + deslocamento + ")")
+		}
+
+		def storeLeft(String end1, String end2, String deslocamento) {
+			salvarArquivo("ST " + end1 + "(" + deslocamento + ")" + ", " + end2)
+		}
+
+		def store(String end1, String end2) {
+			salvarArquivo("ST " + end1 + ", " + end2)
+		}
+
+		def DesvioIncod(String label) {
+			salvarArquivo("BR " + label)
+		}
+
+		def DesvioCond(String op, String label) {
+			if (op.equals("maior")) {
+				salvarArquivo("BGTZ " + label)
+			} else if (op.equals("menor")) {
+				salvarArquivo("BLTZ " + label)
+			} else if (op.equals("igual")) {
+				salvarArquivo("BETZ " + label)
+			}
+		}
+
+		def op(String op, String dest, String end1, String end2) {
+			if (op.equals("soma")) {
+				salvarArquivo("ADD " + dest + ", " + end1 + ", " + end2)
+			} else if (op.equals("subtracao")) {
+				salvarArquivo("SUB " + dest + ", " + end1 + ", " + end2)
+			} else if (op.equals("multplicacao")) {
+				salvarArquivo("MULT " + dest + ", " + end1 + ", " + end2)
+			} else if (op.equals("divisao")) {
+				salvarArquivo("DIV " + dest + ", " + end1 + ", " + end2)
+			}
+		}
+
+		def salvarArquivo(String s) {
+			var arquivo = new File("/home/franklin/teste.txt");
+			var fw = new FileWriter(arquivo, true);
+			var bw = new BufferedWriter(fw);
+			bw.write(s);
+			bw.newLine();
+			bw.close();
+			fw.close();
+		}
+
+		def genCodeOP(expression exp, String op) {
+			if (exp.literal.decimal != null) {
+				if (exp.exp.literal.decimal != null) {
+					op(op, "r1", exp.literal.decimal, exp.exp.literal.decimal)
+				} else if (exp.exp.literal.inteiro != null) {
+					op(op, "r1", exp.literal.decimal, exp.exp.literal.inteiro)
+				} else if (exp.exp.literal.l_float != null) {
+					op(op, "r1", exp.literal.decimal, exp.exp.literal.l_float)
+				}
+			} else if (exp.literal.inteiro != null) {
+				if (exp.exp.literal.decimal != null) {
+					op(op, "r1", exp.literal.inteiro, exp.exp.literal.decimal)
+				} else if (exp.exp.literal.inteiro != null) {
+					op(op, "r1", exp.literal.inteiro, exp.exp.literal.inteiro)
+				} else if (exp.exp.literal.l_float != null) {
+					op(op, "r1", exp.literal.inteiro, exp.exp.literal.l_float)
+				}
+			} else if (exp.literal.l_float != null) {
+				if (exp.exp.literal.decimal != null) {
+					op(op, "r1", exp.literal.l_float, exp.exp.literal.decimal)
+				} else if (exp.exp.literal.inteiro != null) {
+					op(op, "r1", exp.literal.l_float, exp.exp.literal.inteiro)
+				} else if (exp.exp.literal.l_float != null) {
+					op(op, "r1", exp.literal.l_float, exp.exp.literal.l_float)
 				}
 			}
-			if (expression.expressoes.operador == "?" && expression.expressoes.exp.expressoes.operador == ":") {
-				return true
+		}
+
+		def genAritmeticExpCode(expression exp) {
+			if (isArimeticExp(exp)) {
+				if (exp.op != null) {
+					if (exp.op.operador.equals("+")) {
+						genCodeOP(exp, "soma")
+					} else {
+						genCodeOP(exp.exp, "soma")
+						store(exp.identificador, "r1")
+					}
+				} else {
+					if (exp.op.operador.equals("-")) {
+						genCodeOP(exp, "subtracao")
+					} else if (exp.op.operador.equals("*")) {
+						genCodeOP(exp, "multplicacao")
+					} else if (exp.op.operador.equals("/")) {
+						genCodeOP(exp, "divisao")
+					} else if (exp.op.operador.equals("-")) {
+						genCodeOP(exp, "subtracao")
+					} else if (exp.op.operador.equals("++")) {
+						if (exp.literal.decimal != null) {
+							op("mais", "r1", exp.literal.decimal, "1")
+						} else if (exp.literal.inteiro != null) {
+							op("mais", "r1", exp.literal.inteiro, "1")
+						} else if (exp.literal.l_float != null) {
+							op("mais", "r1", exp.literal.l_float, "1")
+						}
+					} else if (exp.op.operador.equals("--")) {
+						if (exp.literal.decimal != null) {
+							op("menos", "r1", exp.literal.decimal, "1")
+						} else if (exp.literal.inteiro != null) {
+							op("menos", "r1", exp.literal.inteiro, "1")
+						} else if (exp.literal.l_float != null) {
+							op("menos", "r1", exp.literal.l_float, "1")
+						}
+					} else if (exp.op.operador.equals("-=")) {
+						genCodeOP(exp.exp, "menos")
+						store(exp.identificador, "r1")
+					} else if (exp.op.operador.equals("*=")) {
+						genCodeOP(exp.exp, "multiplicacao")
+						store(exp.identificador, "r1")
+					} else if (exp.op.operador.equals("/=")) {
+						genCodeOP(exp.exp, "divisao")
+						store(exp.identificador, "r1")
+					}
+					//TODO falta % e %=
+				}
 			}
 		}
-		return false
-	}
-	
-	def boolean isLiteral (expression expression) {
-		if (expression.literal != null || expression.logical.operador != "!") {
-			return true
-		}
-		return false
-	}
-	
-	def boolean isAtribuicao (expression expression, variable_declarator vd) {
-		if (expression.novo != null || expression.expressoes.operador == "ampersand" 
-			|| expression.expressoes.operador == "^=" || expression.expressoes.operador == "*=" 
-			|| expression.expressoes.operador == "-=" || expression.expressoes.operador == "||="
-			|| expression.expressoes.operador == "|=" || expression.expressoes.operador == "/=" 
-			|| expression.expressoes.operador == "%=" || expression.expressoes.operador == "&="
-			|| vd.op != null) {
-			return true
-		}
-		return false
-	}
-	
-	def load (String end1, String end2) {
-		salvarArquivo("LD " + end1 + ", " + end2) 
-	}
-	
-	def load (String end1, String end2, String deslocamento) {
-		salvarArquivo("LD " + end1 + ", " + end2 + "(" + deslocamento + ")") 
-	}
-	
-	def storeRight (String end1, String end2, String deslocamento) {
-		salvarArquivo("ST " + end1 + ", " + end2 + "(" + deslocamento + ")")
-	}
-	
-	def storeLeft (String end1, String end2, String deslocamento) {
-		salvarArquivo("ST " + end1 + "(" + deslocamento + ")" + ", " + end2 )
-	}
-	
-	def store (String end1, String end2) {
-		salvarArquivo("ST " + end1 + ", " + end2 )
-	}
-	
-	def DesvioIncod (String label) {
-		salvarArquivo("BR " + label )
-	}
-	
-	def DesvioCond (String op, String label) {
-		if (op.equals("maior")) {
-			salvarArquivo("BGTZ " + label )
-		} else if (op.equals("menor")) {
-			salvarArquivo("BLTZ " + label )
-		} else if (op.equals("igual")) {
-			salvarArquivo("BETZ " + label )
-		}
-	}
-	
-	def op (String op, String dest, String end1, String end2) {
-		if (op.equals("soma")) {
-			salvarArquivo("ADD " + dest + ", " + end1 + ", " + end2)
-		} else if (op.equals("subtracao")) {
-			salvarArquivo("SUB " + dest + ", " + end1 + ", " + end2)
-		} else if (op.equals("multplicacao")) {
-			salvarArquivo("MULT " + dest + ", " + end1 + ", " + end2)
-		} else if (op.equals("divicao")) {
-			salvarArquivo("DIV " + dest + ", " + end1 + ", " + end2)
-		}
-	}
 		
-	def salvarArquivo (String s) {
-		var arquivo = new File( "/home/franklin/teste.txt");
-		var fw = new FileWriter( arquivo, true );
-		var bw = new BufferedWriter( fw );
-		bw.write(s);
-		bw.newLine();
-		bw.close();
-		fw.close();
+		def genBooleanExpCode (expression exp) {
+			//TODO	
+		}
+		
+		def genRelativeExpCode (expression exp) {
+			//TODO
+		}
+		
+		def genExpCode (expression exp) {
+			if (isBooleanExp(exp)) {
+				genBooleanExpCode(exp)
+			} else if (isArimeticExp(exp)) {
+				genAritmeticExpCode(exp)
+			} else if (isRelativeExp(exp)) {
+				genRelativeExpCode(exp)
+			}
+		}
+		
+		def genWhileCode (while_statement loop) {
+			//TODO
+		}
+		
+		def genMethodCode () {
+			//TODO
+		}
+		
+		def genAttCode (variable_declarator variable) {
+			if (variable.op != null && variable.valorVariavel != null) {
+				genExpCode(variable.valorVariavel.expressaoVariavel)
+				store(variable.nomeVariavel, "r1")
+			}
+		}
+		
+		def genAttCode (expression exp) {
+			if (isAtribuicao(exp)) {
+				//TODO
+			}
+		}
 	}
-}

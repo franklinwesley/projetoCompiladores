@@ -75,7 +75,7 @@ expression_aux: (((("(" (parametros=arglist)? ")") | aux | ("." exp=expression) 
 	  | ->op=mais_aux exp=expression
 	  | operador=( "++" | "--")
 	  | ( ->op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*=" | operador="/" | operador="/=" | operador="%" | operador="%=" ) exp=expression
-	  | (operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | ("ampersand ampersand") | "||=" | "&" | "&=" ) exp=expression
+	  | (operador=("&" | "&=" | "|" | "|=" | "^" | "^=" | "&&" | "||" | "||=" | "%" | "%=" ) exp=expression
 	  	| operador="?" exp=expression operador=":" exp=expression
 	  	| operador=( ">" | "<" | ">=" | "<=" | "==" | "!=" ) exp=expression
 	  	| operador=( ">>=" | "<<" | ">>" | ">>>" ) exp=expression)

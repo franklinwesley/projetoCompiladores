@@ -41,7 +41,7 @@ statement:
       | ";";
 variable_declaration: (modificador=MODIFIER)* (tipoVariavel=type | "void")? declaracaoVariaveis+=variable_declarator ("," declaracaoVariaveis+=variable_declarator)* (";"| blocoVariavel=statement_block); 
 variable_declarator: "(" (arglist)? ")" //TODO naum sei o q eh
-	  | nomeVariavel=IDENTIFIER  ("["  "]")*  ( "=" valorVariavel=variable_initializer)?;
+	  | nomeVariavel=IDENTIFIER  ("["  "]")*  ( op="=" valorVariavel=variable_initializer)?;
 variable_initializer:
 	  expressaoVariavel=expression 
       | ( "{" (valorVariaveis+=variable_initializer ("," valorVariaveis+=variable_initializer)* (",")?)? "}" );
@@ -75,7 +75,7 @@ expression_aux: (((("(" (parametros=arglist)? ")") | aux | ("." exp=expression) 
 	  | ->op=mais_aux exp=expression
 	  | operador=( "++" | "--")
 	  | ( ->op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*=" | operador="/" | operador="/=" | operador="%" | operador="%=" ) exp=expression
-	  | (operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | ("ampersand ampersand") | "||=" | "%" | "%=" ) exp=expression
+	  | (operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | ("ampersand ampersand") | "||=" | "&" | "&=" ) exp=expression
 	  	| operador="?" exp=expression operador=":" exp=expression
 	  	| operador=( ">" | "<" | ">=" | "<=" | "==" | "!=" ) exp=expression
 	  	| operador=( ">>=" | "<<" | ">>" | ">>>" ) exp=expression)

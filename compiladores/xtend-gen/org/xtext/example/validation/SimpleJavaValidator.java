@@ -19,6 +19,7 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.xtext.example.simpleJava.arglist;
 import org.xtext.example.simpleJava.class_declaration;
 import org.xtext.example.simpleJava.compilation_unit;
+import org.xtext.example.simpleJava.creating_expression;
 import org.xtext.example.simpleJava.expression;
 import org.xtext.example.simpleJava.expression_aux;
 import org.xtext.example.simpleJava.field_declaration;
@@ -78,15 +79,6 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
     this.checkMetodDeclaration(_declaracao_8);
     EList<type_declaration> _declaracao_9 = comp.getDeclaracao();
     this.checkMetodoUsed(_declaracao_9);
-    EList<type_declaration> _declaracao_10 = comp.getDeclaracao();
-    type_declaration _get = _declaracao_10.get(0);
-    class_declaration _declaracaoClasse = _get.getDeclaracaoClasse();
-    field_declaration _corpoClasse = _declaracaoClasse.getCorpoClasse();
-    method_declaration _declaracaoMetodo = _corpoClasse.getDeclaracaoMetodo();
-    statement_block _blocoMetodo = _declaracaoMetodo.getBlocoMetodo();
-    statement _corpo = _blocoMetodo.getCorpo();
-    expression _expressao = _corpo.getExpressao();
-    this.genArimeticExpCode(_expressao);
   }
   
   public void checkMetodoUsed(final EList<type_declaration> list) {
@@ -445,7 +437,7 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
         _or_1 = true;
       } else {
         String _operador_8 = expression.getOperador();
-        boolean _equals_8 = Objects.equal(_operador_8, "%");
+        boolean _equals_8 = Objects.equal(_operador_8, "&");
         _or_1 = _equals_8;
       }
       if (_or_1) {
@@ -488,31 +480,29 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
   
   public Object checkArimetic(final expression expression) {
     Object _xifexpression = null;
-    boolean _and = false;
-    boolean _and_1 = false;
+    boolean _or = false;
+    boolean _or_1 = false;
     literal_expression _literal = expression.getLiteral();
     String _decimal = _literal.getDecimal();
     boolean _notEquals = (!Objects.equal(_decimal, null));
-    if (!_notEquals) {
-      _and_1 = false;
+    if (_notEquals) {
+      _or_1 = true;
     } else {
       literal_expression _literal_1 = expression.getLiteral();
       String _inteiro = _literal_1.getInteiro();
       boolean _notEquals_1 = (!Objects.equal(_inteiro, null));
-      _and_1 = _notEquals_1;
+      _or_1 = _notEquals_1;
     }
-    if (!_and_1) {
-      _and = false;
+    if (_or_1) {
+      _or = true;
     } else {
       literal_expression _literal_2 = expression.getLiteral();
       String _l_float = _literal_2.getL_float();
       boolean _notEquals_2 = (!Objects.equal(_l_float, null));
-      _and = _notEquals_2;
+      _or = _notEquals_2;
     }
-    if (_and) {
+    if (_or) {
       Object _xifexpression_1 = null;
-      boolean _or = false;
-      boolean _or_1 = false;
       boolean _or_2 = false;
       boolean _or_3 = false;
       boolean _or_4 = false;
@@ -522,126 +512,128 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
       boolean _or_8 = false;
       boolean _or_9 = false;
       boolean _or_10 = false;
+      boolean _or_11 = false;
+      boolean _or_12 = false;
       expression_aux _expressoes = expression.getExpressoes();
       mais_aux _op = _expressoes.getOp();
       boolean _notEquals_3 = (!Objects.equal(_op, null));
       if (_notEquals_3) {
-        _or_10 = true;
+        _or_12 = true;
       } else {
         expression_aux _expressoes_1 = expression.getExpressoes();
         String _operador = _expressoes_1.getOperador();
         boolean _equals = Objects.equal(_operador, "++");
-        _or_10 = _equals;
+        _or_12 = _equals;
       }
-      if (_or_10) {
-        _or_9 = true;
+      if (_or_12) {
+        _or_11 = true;
       } else {
         expression_aux _expressoes_2 = expression.getExpressoes();
         String _operador_1 = _expressoes_2.getOperador();
         boolean _equals_1 = Objects.equal(_operador_1, "--");
-        _or_9 = _equals_1;
+        _or_11 = _equals_1;
       }
-      if (_or_9) {
-        _or_8 = true;
+      if (_or_11) {
+        _or_10 = true;
       } else {
         expression_aux _expressoes_3 = expression.getExpressoes();
         String _operador_2 = _expressoes_3.getOperador();
         boolean _equals_2 = Objects.equal(_operador_2, "-");
-        _or_8 = _equals_2;
+        _or_10 = _equals_2;
       }
-      if (_or_8) {
-        _or_7 = true;
+      if (_or_10) {
+        _or_9 = true;
       } else {
         expression_aux _expressoes_4 = expression.getExpressoes();
         String _operador_3 = _expressoes_4.getOperador();
         boolean _equals_3 = Objects.equal(_operador_3, "-=");
-        _or_7 = _equals_3;
+        _or_9 = _equals_3;
       }
-      if (_or_7) {
-        _or_6 = true;
+      if (_or_9) {
+        _or_8 = true;
       } else {
         expression_aux _expressoes_5 = expression.getExpressoes();
         String _operador_4 = _expressoes_5.getOperador();
         boolean _equals_4 = Objects.equal(_operador_4, "*");
-        _or_6 = _equals_4;
+        _or_8 = _equals_4;
       }
-      if (_or_6) {
-        _or_5 = true;
+      if (_or_8) {
+        _or_7 = true;
       } else {
         expression_aux _expressoes_6 = expression.getExpressoes();
         String _operador_5 = _expressoes_6.getOperador();
         boolean _equals_5 = Objects.equal(_operador_5, "*=");
-        _or_5 = _equals_5;
+        _or_7 = _equals_5;
       }
-      if (_or_5) {
-        _or_4 = true;
+      if (_or_7) {
+        _or_6 = true;
       } else {
         expression_aux _expressoes_7 = expression.getExpressoes();
         String _operador_6 = _expressoes_7.getOperador();
         boolean _equals_6 = Objects.equal(_operador_6, "/");
-        _or_4 = _equals_6;
+        _or_6 = _equals_6;
       }
-      if (_or_4) {
-        _or_3 = true;
+      if (_or_6) {
+        _or_5 = true;
       } else {
         expression_aux _expressoes_8 = expression.getExpressoes();
         String _operador_7 = _expressoes_8.getOperador();
         boolean _equals_7 = Objects.equal(_operador_7, "/=");
-        _or_3 = _equals_7;
+        _or_5 = _equals_7;
       }
-      if (_or_3) {
-        _or_2 = true;
+      if (_or_5) {
+        _or_4 = true;
       } else {
         expression_aux _expressoes_9 = expression.getExpressoes();
         String _operador_8 = _expressoes_9.getOperador();
         boolean _equals_8 = Objects.equal(_operador_8, "%");
-        _or_2 = _equals_8;
+        _or_4 = _equals_8;
       }
-      if (_or_2) {
-        _or_1 = true;
+      if (_or_4) {
+        _or_3 = true;
       } else {
         expression_aux _expressoes_10 = expression.getExpressoes();
         String _operador_9 = _expressoes_10.getOperador();
         boolean _equals_9 = Objects.equal(_operador_9, "%=");
-        _or_1 = _equals_9;
+        _or_3 = _equals_9;
       }
-      if (_or_1) {
-        _or = true;
+      if (_or_3) {
+        _or_2 = true;
       } else {
         numeric_expression _numeric = expression.getNumeric();
         boolean _notEquals_4 = (!Objects.equal(_numeric, null));
-        _or = _notEquals_4;
+        _or_2 = _notEquals_4;
       }
-      if (_or) {
+      if (_or_2) {
         Object _xifexpression_2 = null;
-        boolean _and_2 = false;
-        boolean _and_3 = false;
+        boolean _and = false;
+        boolean _and_1 = false;
         expression_aux _expressoes_11 = expression.getExpressoes();
         org.xtext.example.simpleJava.expression _exp = _expressoes_11.getExp();
         literal_expression _literal_3 = _exp.getLiteral();
         String _decimal_1 = _literal_3.getDecimal();
         boolean _equals_10 = Objects.equal(_decimal_1, null);
         if (!_equals_10) {
-          _and_3 = false;
+          _and_1 = false;
         } else {
           expression_aux _expressoes_12 = expression.getExpressoes();
           org.xtext.example.simpleJava.expression _exp_1 = _expressoes_12.getExp();
           literal_expression _literal_4 = _exp_1.getLiteral();
           String _inteiro_1 = _literal_4.getInteiro();
           boolean _equals_11 = Objects.equal(_inteiro_1, null);
-          _and_3 = _equals_11;
+          _and_1 = _equals_11;
         }
-        if (!_and_3) {
-          _and_2 = false;
+        if (!_and_1) {
+          _and = false;
         } else {
           expression_aux _expressoes_13 = expression.getExpressoes();
           org.xtext.example.simpleJava.expression _exp_2 = _expressoes_13.getExp();
           literal_expression _literal_5 = _exp_2.getLiteral();
           String _l_float_1 = _literal_5.getL_float();
           boolean _equals_12 = Objects.equal(_l_float_1, null);
-          _and_2 = _equals_12;
+          _and = _equals_12;
         }
-        if (_and_2) {
+        if (_and) {
           _xifexpression_2 = null;
         }
         _xifexpression_1 = _xifexpression_2;
@@ -808,17 +800,17 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
         _and_1 = false;
       } else {
         Tipo _tipoRetorno = metodo.getTipoRetorno();
-        Tipo _tipo = new Tipo("boolean");
-        boolean _equals_1 = _tipoRetorno.equals(_tipo);
+        String _nome = _tipoRetorno.getNome();
+        boolean _equals_1 = _nome.equals("boolean");
         boolean _not = (!_equals_1);
         _and_1 = _not;
       }
       if (!_and_1) {
         _and = false;
       } else {
-        Tipo _tipo_1 = variavel.getTipo();
-        Tipo _tipo_2 = new Tipo("boolean");
-        boolean _equals_2 = _tipo_1.equals(_tipo_2);
+        Tipo _tipo = variavel.getTipo();
+        String _nome_1 = _tipo.getNome();
+        boolean _equals_2 = _nome_1.equals("boolean");
         boolean _not_1 = (!_equals_2);
         _and = _not_1;
       }
@@ -997,34 +989,29 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
     return _xblockexpression;
   }
   
-  public void genArimeticExpCode(final expression expression) {
-    boolean _and = false;
-    boolean _and_1 = false;
+  public boolean isArimeticExp(final expression expression) {
+    boolean _or = false;
+    boolean _or_1 = false;
     literal_expression _literal = expression.getLiteral();
     String _decimal = _literal.getDecimal();
     boolean _notEquals = (!Objects.equal(_decimal, null));
-    if (!_notEquals) {
-      _and_1 = false;
+    if (_notEquals) {
+      _or_1 = true;
     } else {
       literal_expression _literal_1 = expression.getLiteral();
       String _inteiro = _literal_1.getInteiro();
       boolean _notEquals_1 = (!Objects.equal(_inteiro, null));
-      _and_1 = _notEquals_1;
+      _or_1 = _notEquals_1;
     }
-    if (!_and_1) {
-      _and = false;
+    if (_or_1) {
+      _or = true;
     } else {
       literal_expression _literal_2 = expression.getLiteral();
       String _l_float = _literal_2.getL_float();
       boolean _notEquals_2 = (!Objects.equal(_l_float, null));
-      _and = _notEquals_2;
+      _or = _notEquals_2;
     }
-    if (_and) {
-      literal_expression _literal_3 = expression.getLiteral();
-      String _string = _literal_3.toString();
-      this.salvarArquivo(_string);
-      boolean _or = false;
-      boolean _or_1 = false;
+    if (_or) {
       boolean _or_2 = false;
       boolean _or_3 = false;
       boolean _or_4 = false;
@@ -1034,143 +1021,568 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
       boolean _or_8 = false;
       boolean _or_9 = false;
       boolean _or_10 = false;
+      boolean _or_11 = false;
+      boolean _or_12 = false;
       expression_aux _expressoes = expression.getExpressoes();
       mais_aux _op = _expressoes.getOp();
       boolean _notEquals_3 = (!Objects.equal(_op, null));
       if (_notEquals_3) {
-        _or_10 = true;
+        _or_12 = true;
       } else {
         expression_aux _expressoes_1 = expression.getExpressoes();
         String _operador = _expressoes_1.getOperador();
         boolean _equals = Objects.equal(_operador, "++");
-        _or_10 = _equals;
+        _or_12 = _equals;
       }
-      if (_or_10) {
-        _or_9 = true;
+      if (_or_12) {
+        _or_11 = true;
       } else {
         expression_aux _expressoes_2 = expression.getExpressoes();
         String _operador_1 = _expressoes_2.getOperador();
         boolean _equals_1 = Objects.equal(_operador_1, "--");
-        _or_9 = _equals_1;
+        _or_11 = _equals_1;
       }
-      if (_or_9) {
-        _or_8 = true;
+      if (_or_11) {
+        _or_10 = true;
       } else {
         expression_aux _expressoes_3 = expression.getExpressoes();
         String _operador_2 = _expressoes_3.getOperador();
         boolean _equals_2 = Objects.equal(_operador_2, "-");
-        _or_8 = _equals_2;
+        _or_10 = _equals_2;
       }
-      if (_or_8) {
-        _or_7 = true;
+      if (_or_10) {
+        _or_9 = true;
       } else {
         expression_aux _expressoes_4 = expression.getExpressoes();
         String _operador_3 = _expressoes_4.getOperador();
         boolean _equals_3 = Objects.equal(_operador_3, "-=");
-        _or_7 = _equals_3;
+        _or_9 = _equals_3;
       }
-      if (_or_7) {
-        _or_6 = true;
+      if (_or_9) {
+        _or_8 = true;
       } else {
         expression_aux _expressoes_5 = expression.getExpressoes();
         String _operador_4 = _expressoes_5.getOperador();
         boolean _equals_4 = Objects.equal(_operador_4, "*");
-        _or_6 = _equals_4;
+        _or_8 = _equals_4;
       }
-      if (_or_6) {
-        _or_5 = true;
+      if (_or_8) {
+        _or_7 = true;
       } else {
         expression_aux _expressoes_6 = expression.getExpressoes();
         String _operador_5 = _expressoes_6.getOperador();
         boolean _equals_5 = Objects.equal(_operador_5, "*=");
-        _or_5 = _equals_5;
+        _or_7 = _equals_5;
       }
-      if (_or_5) {
-        _or_4 = true;
+      if (_or_7) {
+        _or_6 = true;
       } else {
         expression_aux _expressoes_7 = expression.getExpressoes();
         String _operador_6 = _expressoes_7.getOperador();
         boolean _equals_6 = Objects.equal(_operador_6, "/");
-        _or_4 = _equals_6;
+        _or_6 = _equals_6;
       }
-      if (_or_4) {
-        _or_3 = true;
+      if (_or_6) {
+        _or_5 = true;
       } else {
         expression_aux _expressoes_8 = expression.getExpressoes();
         String _operador_7 = _expressoes_8.getOperador();
         boolean _equals_7 = Objects.equal(_operador_7, "/=");
-        _or_3 = _equals_7;
+        _or_5 = _equals_7;
       }
-      if (_or_3) {
-        _or_2 = true;
+      if (_or_5) {
+        _or_4 = true;
       } else {
         expression_aux _expressoes_9 = expression.getExpressoes();
         String _operador_8 = _expressoes_9.getOperador();
         boolean _equals_8 = Objects.equal(_operador_8, "%");
-        _or_2 = _equals_8;
+        _or_4 = _equals_8;
       }
-      if (_or_2) {
-        _or_1 = true;
+      if (_or_4) {
+        _or_3 = true;
       } else {
         expression_aux _expressoes_10 = expression.getExpressoes();
         String _operador_9 = _expressoes_10.getOperador();
         boolean _equals_9 = Objects.equal(_operador_9, "%=");
-        _or_1 = _equals_9;
+        _or_3 = _equals_9;
       }
-      if (_or_1) {
-        _or = true;
+      if (_or_3) {
+        _or_2 = true;
       } else {
         numeric_expression _numeric = expression.getNumeric();
         boolean _notEquals_4 = (!Objects.equal(_numeric, null));
-        _or = _notEquals_4;
+        _or_2 = _notEquals_4;
       }
-      if (_or) {
-        expression_aux _expressoes_11 = expression.getExpressoes();
-        mais_aux _op_1 = _expressoes_11.getOp();
-        boolean _notEquals_5 = (!Objects.equal(_op_1, null));
+      if (_or_2) {
+        boolean _or_13 = false;
+        boolean _or_14 = false;
+        literal_expression _literal_3 = expression.getLiteral();
+        String _decimal_1 = _literal_3.getDecimal();
+        boolean _notEquals_5 = (!Objects.equal(_decimal_1, null));
         if (_notEquals_5) {
-          expression_aux _expressoes_12 = expression.getExpressoes();
-          mais_aux _op_2 = _expressoes_12.getOp();
-          String _operador_10 = _op_2.getOperador();
-          this.salvarArquivo(_operador_10);
+          _or_14 = true;
         } else {
-          numeric_expression _numeric_1 = expression.getNumeric();
-          boolean _notEquals_6 = (!Objects.equal(_numeric_1, null));
-          if (_notEquals_6) {
-            numeric_expression _numeric_2 = expression.getNumeric();
-            String _operador_11 = _numeric_2.getOperador();
-            this.salvarArquivo(_operador_11);
-          } else {
-            expression_aux _expressoes_13 = expression.getExpressoes();
-            String _operador_12 = _expressoes_13.getOperador();
-            this.salvarArquivo(_operador_12);
-          }
+          literal_expression _literal_4 = expression.getLiteral();
+          String _inteiro_1 = _literal_4.getInteiro();
+          boolean _notEquals_6 = (!Objects.equal(_inteiro_1, null));
+          _or_14 = _notEquals_6;
         }
-        boolean _and_2 = false;
-        boolean _and_3 = false;
-        literal_expression _literal_4 = expression.getLiteral();
-        String _decimal_1 = _literal_4.getDecimal();
-        boolean _notEquals_7 = (!Objects.equal(_decimal_1, null));
-        if (!_notEquals_7) {
-          _and_3 = false;
+        if (_or_14) {
+          _or_13 = true;
         } else {
           literal_expression _literal_5 = expression.getLiteral();
-          String _inteiro_1 = _literal_5.getInteiro();
-          boolean _notEquals_8 = (!Objects.equal(_inteiro_1, null));
-          _and_3 = _notEquals_8;
+          String _l_float_1 = _literal_5.getL_float();
+          boolean _notEquals_7 = (!Objects.equal(_l_float_1, null));
+          _or_13 = _notEquals_7;
         }
-        if (!_and_3) {
-          _and_2 = false;
+        if (_or_13) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+  
+  public boolean isBooleanExp(final expression expression) {
+    String _identificador = expression.getIdentificador();
+    Metodo metodo = this.metodos.get(_identificador);
+    String _identificador_1 = expression.getIdentificador();
+    Variavel variavel = this.variaveis.get(_identificador_1);
+    boolean _or = false;
+    boolean _or_1 = false;
+    logical_expression _logical = expression.getLogical();
+    String _operador = _logical.getOperador();
+    boolean _notEquals = (!Objects.equal(_operador, null));
+    if (_notEquals) {
+      _or_1 = true;
+    } else {
+      boolean _and = false;
+      boolean _notEquals_1 = (!Objects.equal(metodo, null));
+      if (!_notEquals_1) {
+        _and = false;
+      } else {
+        Tipo _tipoRetorno = metodo.getTipoRetorno();
+        String _nome = _tipoRetorno.getNome();
+        boolean _equals = _nome.equals("boolean");
+        _and = _equals;
+      }
+      _or_1 = _and;
+    }
+    if (_or_1) {
+      _or = true;
+    } else {
+      boolean _and_1 = false;
+      boolean _notEquals_2 = (!Objects.equal(variavel, null));
+      if (!_notEquals_2) {
+        _and_1 = false;
+      } else {
+        Tipo _tipo = variavel.getTipo();
+        String _nome_1 = _tipo.getNome();
+        boolean _equals_1 = _nome_1.equals("boolean");
+        _and_1 = _equals_1;
+      }
+      _or = _and_1;
+    }
+    if (_or) {
+      boolean _or_2 = false;
+      boolean _and_2 = false;
+      logical_expression _logical_1 = expression.getLogical();
+      String _operador_1 = _logical_1.getOperador();
+      boolean _equals_2 = Objects.equal(_operador_1, "!");
+      if (!_equals_2) {
+        _and_2 = false;
+      } else {
+        logical_expression _logical_2 = expression.getLogical();
+        org.xtext.example.simpleJava.expression _exp = _logical_2.getExp();
+        boolean _isBooleanExp = this.isBooleanExp(_exp);
+        _and_2 = _isBooleanExp;
+      }
+      if (_and_2) {
+        _or_2 = true;
+      } else {
+        boolean _and_3 = false;
+        boolean _or_3 = false;
+        logical_expression _logical_3 = expression.getLogical();
+        String _operador_2 = _logical_3.getOperador();
+        boolean _equals_3 = Objects.equal(_operador_2, "true");
+        if (_equals_3) {
+          _or_3 = true;
         } else {
-          literal_expression _literal_6 = expression.getLiteral();
-          String _l_float_1 = _literal_6.getL_float();
-          boolean _notEquals_9 = (!Objects.equal(_l_float_1, null));
-          _and_2 = _notEquals_9;
+          logical_expression _logical_4 = expression.getLogical();
+          String _operador_3 = _logical_4.getOperador();
+          boolean _equals_4 = Objects.equal(_operador_3, "false");
+          _or_3 = _equals_4;
         }
-        if (_and_2) {
-          literal_expression _literal_7 = expression.getLiteral();
-          String _string_1 = _literal_7.toString();
-          this.salvarArquivo(_string_1);
+        if (!_or_3) {
+          _and_3 = false;
+        } else {
+          expression_aux _expressoes = expression.getExpressoes();
+          mais_aux _op = _expressoes.getOp();
+          boolean _equals_5 = Objects.equal(_op, null);
+          _and_3 = _equals_5;
+        }
+        _or_2 = _and_3;
+      }
+      if (_or_2) {
+        return true;
+      }
+      boolean _or_4 = false;
+      boolean _and_4 = false;
+      boolean _notEquals_3 = (!Objects.equal(metodo, null));
+      if (!_notEquals_3) {
+        _and_4 = false;
+      } else {
+        Tipo _tipoRetorno_1 = metodo.getTipoRetorno();
+        String _nome_2 = _tipoRetorno_1.getNome();
+        boolean _equals_6 = _nome_2.equals("boolean");
+        _and_4 = _equals_6;
+      }
+      if (_and_4) {
+        _or_4 = true;
+      } else {
+        boolean _and_5 = false;
+        boolean _and_6 = false;
+        boolean _notEquals_4 = (!Objects.equal(variavel, null));
+        if (!_notEquals_4) {
+          _and_6 = false;
+        } else {
+          Tipo _tipo_1 = variavel.getTipo();
+          String _nome_3 = _tipo_1.getNome();
+          boolean _equals_7 = _nome_3.equals("boolean");
+          _and_6 = _equals_7;
+        }
+        if (!_and_6) {
+          _and_5 = false;
+        } else {
+          expression_aux _expressoes_1 = expression.getExpressoes();
+          mais_aux _op_1 = _expressoes_1.getOp();
+          boolean _equals_8 = Objects.equal(_op_1, null);
+          _and_5 = _equals_8;
+        }
+        _or_4 = _and_5;
+      }
+      if (_or_4) {
+        return true;
+      }
+      boolean _or_5 = false;
+      boolean _or_6 = false;
+      boolean _or_7 = false;
+      boolean _or_8 = false;
+      boolean _or_9 = false;
+      boolean _or_10 = false;
+      boolean _or_11 = false;
+      boolean _or_12 = false;
+      boolean _or_13 = false;
+      expression_aux _expressoes_2 = expression.getExpressoes();
+      String _operador_4 = _expressoes_2.getOperador();
+      boolean _equals_9 = Objects.equal(_operador_4, "ampersand");
+      if (_equals_9) {
+        _or_13 = true;
+      } else {
+        expression_aux _expressoes_3 = expression.getExpressoes();
+        String _operador_5 = _expressoes_3.getOperador();
+        boolean _equals_10 = Objects.equal(_operador_5, "^=");
+        _or_13 = _equals_10;
+      }
+      if (_or_13) {
+        _or_12 = true;
+      } else {
+        expression_aux _expressoes_4 = expression.getExpressoes();
+        String _operador_6 = _expressoes_4.getOperador();
+        boolean _equals_11 = Objects.equal(_operador_6, "ampersand=");
+        _or_12 = _equals_11;
+      }
+      if (_or_12) {
+        _or_11 = true;
+      } else {
+        expression_aux _expressoes_5 = expression.getExpressoes();
+        String _operador_7 = _expressoes_5.getOperador();
+        boolean _equals_12 = Objects.equal(_operador_7, "ampersand ampersand");
+        _or_11 = _equals_12;
+      }
+      if (_or_11) {
+        _or_10 = true;
+      } else {
+        expression_aux _expressoes_6 = expression.getExpressoes();
+        String _operador_8 = _expressoes_6.getOperador();
+        boolean _equals_13 = Objects.equal(_operador_8, "|");
+        _or_10 = _equals_13;
+      }
+      if (_or_10) {
+        _or_9 = true;
+      } else {
+        expression_aux _expressoes_7 = expression.getExpressoes();
+        String _operador_9 = _expressoes_7.getOperador();
+        boolean _equals_14 = Objects.equal(_operador_9, "||=");
+        _or_9 = _equals_14;
+      }
+      if (_or_9) {
+        _or_8 = true;
+      } else {
+        expression_aux _expressoes_8 = expression.getExpressoes();
+        String _operador_10 = _expressoes_8.getOperador();
+        boolean _equals_15 = Objects.equal(_operador_10, "|=");
+        _or_8 = _equals_15;
+      }
+      if (_or_8) {
+        _or_7 = true;
+      } else {
+        expression_aux _expressoes_9 = expression.getExpressoes();
+        String _operador_11 = _expressoes_9.getOperador();
+        boolean _equals_16 = Objects.equal(_operador_11, "&");
+        _or_7 = _equals_16;
+      }
+      if (_or_7) {
+        _or_6 = true;
+      } else {
+        expression_aux _expressoes_10 = expression.getExpressoes();
+        String _operador_12 = _expressoes_10.getOperador();
+        boolean _equals_17 = Objects.equal(_operador_12, "^");
+        _or_6 = _equals_17;
+      }
+      if (_or_6) {
+        _or_5 = true;
+      } else {
+        expression_aux _expressoes_11 = expression.getExpressoes();
+        String _operador_13 = _expressoes_11.getOperador();
+        boolean _equals_18 = Objects.equal(_operador_13, "&=");
+        _or_5 = _equals_18;
+      }
+      if (_or_5) {
+        boolean _or_14 = false;
+        boolean _or_15 = false;
+        logical_expression _logical_5 = expression.getLogical();
+        String _operador_14 = _logical_5.getOperador();
+        boolean _notEquals_5 = (!Objects.equal(_operador_14, null));
+        if (_notEquals_5) {
+          _or_15 = true;
+        } else {
+          boolean _and_7 = false;
+          boolean _notEquals_6 = (!Objects.equal(metodo, null));
+          if (!_notEquals_6) {
+            _and_7 = false;
+          } else {
+            Tipo _tipoRetorno_2 = metodo.getTipoRetorno();
+            String _nome_4 = _tipoRetorno_2.getNome();
+            boolean _equals_19 = _nome_4.equals("boolean");
+            _and_7 = _equals_19;
+          }
+          _or_15 = _and_7;
+        }
+        if (_or_15) {
+          _or_14 = true;
+        } else {
+          boolean _and_8 = false;
+          boolean _notEquals_7 = (!Objects.equal(variavel, null));
+          if (!_notEquals_7) {
+            _and_8 = false;
+          } else {
+            Tipo _tipo_2 = variavel.getTipo();
+            String _nome_5 = _tipo_2.getNome();
+            boolean _equals_20 = _nome_5.equals("boolean");
+            _and_8 = _equals_20;
+          }
+          _or_14 = _and_8;
+        }
+        if (_or_14) {
+          return true;
+        }
+      }
+      boolean _and_9 = false;
+      expression_aux _expressoes_12 = expression.getExpressoes();
+      String _operador_15 = _expressoes_12.getOperador();
+      boolean _equals_21 = Objects.equal(_operador_15, "?");
+      if (!_equals_21) {
+        _and_9 = false;
+      } else {
+        expression_aux _expressoes_13 = expression.getExpressoes();
+        org.xtext.example.simpleJava.expression _exp_1 = _expressoes_13.getExp();
+        expression_aux _expressoes_14 = _exp_1.getExpressoes();
+        String _operador_16 = _expressoes_14.getOperador();
+        boolean _equals_22 = Objects.equal(_operador_16, ":");
+        _and_9 = _equals_22;
+      }
+      if (_and_9) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  public boolean isLiteral(final expression expression) {
+    boolean _or = false;
+    literal_expression _literal = expression.getLiteral();
+    boolean _notEquals = (!Objects.equal(_literal, null));
+    if (_notEquals) {
+      _or = true;
+    } else {
+      logical_expression _logical = expression.getLogical();
+      String _operador = _logical.getOperador();
+      boolean _notEquals_1 = (!Objects.equal(_operador, "!"));
+      _or = _notEquals_1;
+    }
+    if (_or) {
+      return true;
+    }
+    return false;
+  }
+  
+  public boolean isAtribuicao(final expression expression, final variable_declarator vd) {
+    boolean _or = false;
+    boolean _or_1 = false;
+    boolean _or_2 = false;
+    boolean _or_3 = false;
+    boolean _or_4 = false;
+    boolean _or_5 = false;
+    boolean _or_6 = false;
+    boolean _or_7 = false;
+    boolean _or_8 = false;
+    boolean _or_9 = false;
+    creating_expression _novo = expression.getNovo();
+    boolean _notEquals = (!Objects.equal(_novo, null));
+    if (_notEquals) {
+      _or_9 = true;
+    } else {
+      expression_aux _expressoes = expression.getExpressoes();
+      String _operador = _expressoes.getOperador();
+      boolean _equals = Objects.equal(_operador, "ampersand");
+      _or_9 = _equals;
+    }
+    if (_or_9) {
+      _or_8 = true;
+    } else {
+      expression_aux _expressoes_1 = expression.getExpressoes();
+      String _operador_1 = _expressoes_1.getOperador();
+      boolean _equals_1 = Objects.equal(_operador_1, "^=");
+      _or_8 = _equals_1;
+    }
+    if (_or_8) {
+      _or_7 = true;
+    } else {
+      expression_aux _expressoes_2 = expression.getExpressoes();
+      String _operador_2 = _expressoes_2.getOperador();
+      boolean _equals_2 = Objects.equal(_operador_2, "*=");
+      _or_7 = _equals_2;
+    }
+    if (_or_7) {
+      _or_6 = true;
+    } else {
+      expression_aux _expressoes_3 = expression.getExpressoes();
+      String _operador_3 = _expressoes_3.getOperador();
+      boolean _equals_3 = Objects.equal(_operador_3, "-=");
+      _or_6 = _equals_3;
+    }
+    if (_or_6) {
+      _or_5 = true;
+    } else {
+      expression_aux _expressoes_4 = expression.getExpressoes();
+      String _operador_4 = _expressoes_4.getOperador();
+      boolean _equals_4 = Objects.equal(_operador_4, "||=");
+      _or_5 = _equals_4;
+    }
+    if (_or_5) {
+      _or_4 = true;
+    } else {
+      expression_aux _expressoes_5 = expression.getExpressoes();
+      String _operador_5 = _expressoes_5.getOperador();
+      boolean _equals_5 = Objects.equal(_operador_5, "|=");
+      _or_4 = _equals_5;
+    }
+    if (_or_4) {
+      _or_3 = true;
+    } else {
+      expression_aux _expressoes_6 = expression.getExpressoes();
+      String _operador_6 = _expressoes_6.getOperador();
+      boolean _equals_6 = Objects.equal(_operador_6, "/=");
+      _or_3 = _equals_6;
+    }
+    if (_or_3) {
+      _or_2 = true;
+    } else {
+      expression_aux _expressoes_7 = expression.getExpressoes();
+      String _operador_7 = _expressoes_7.getOperador();
+      boolean _equals_7 = Objects.equal(_operador_7, "%=");
+      _or_2 = _equals_7;
+    }
+    if (_or_2) {
+      _or_1 = true;
+    } else {
+      expression_aux _expressoes_8 = expression.getExpressoes();
+      String _operador_8 = _expressoes_8.getOperador();
+      boolean _equals_8 = Objects.equal(_operador_8, "&=");
+      _or_1 = _equals_8;
+    }
+    if (_or_1) {
+      _or = true;
+    } else {
+      String _op = vd.getOp();
+      boolean _notEquals_1 = (!Objects.equal(_op, null));
+      _or = _notEquals_1;
+    }
+    if (_or) {
+      return true;
+    }
+    return false;
+  }
+  
+  public void load(final String end1, final String end2) {
+    this.salvarArquivo(((("LD " + end1) + ", ") + end2));
+  }
+  
+  public void load(final String end1, final String end2, final String deslocamento) {
+    this.salvarArquivo((((((("LD " + end1) + ", ") + end2) + "(") + deslocamento) + ")"));
+  }
+  
+  public void storeRight(final String end1, final String end2, final String deslocamento) {
+    this.salvarArquivo((((((("ST " + end1) + ", ") + end2) + "(") + deslocamento) + ")"));
+  }
+  
+  public void storeLeft(final String end1, final String end2, final String deslocamento) {
+    this.salvarArquivo((((((("ST " + end1) + "(") + deslocamento) + ")") + ", ") + end2));
+  }
+  
+  public void store(final String end1, final String end2) {
+    this.salvarArquivo(((("ST " + end1) + ", ") + end2));
+  }
+  
+  public void DesvioIncod(final String label) {
+    this.salvarArquivo(("BR " + label));
+  }
+  
+  public void DesvioCond(final String op, final String label) {
+    boolean _equals = op.equals("maior");
+    if (_equals) {
+      this.salvarArquivo(("BGTZ " + label));
+    } else {
+      boolean _equals_1 = op.equals("menor");
+      if (_equals_1) {
+        this.salvarArquivo(("BLTZ " + label));
+      } else {
+        boolean _equals_2 = op.equals("igual");
+        if (_equals_2) {
+          this.salvarArquivo(("BETZ " + label));
+        }
+      }
+    }
+  }
+  
+  public void op(final String op, final String dest, final String end1, final String end2) {
+    boolean _equals = op.equals("soma");
+    if (_equals) {
+      this.salvarArquivo(((((("ADD " + dest) + ", ") + end1) + ", ") + end2));
+    } else {
+      boolean _equals_1 = op.equals("subtracao");
+      if (_equals_1) {
+        this.salvarArquivo(((((("SUB " + dest) + ", ") + end1) + ", ") + end2));
+      } else {
+        boolean _equals_2 = op.equals("multplicacao");
+        if (_equals_2) {
+          this.salvarArquivo(((((("MULT " + dest) + ", ") + end1) + ", ") + end2));
+        } else {
+          boolean _equals_3 = op.equals("divicao");
+          if (_equals_3) {
+            this.salvarArquivo(((((("DIV " + dest) + ", ") + end1) + ", ") + end2));
+          }
         }
       }
     }

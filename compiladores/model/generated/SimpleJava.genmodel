@@ -89,6 +89,7 @@
     </genClasses>
     <genClasses ecoreClass="SimpleJava.ecore#//variable_declarator">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//variable_declarator/nomeVariavel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//variable_declarator/op"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//variable_declarator/valorVariavel"/>
     </genClasses>
     <genClasses ecoreClass="SimpleJava.ecore#//variable_initializer">

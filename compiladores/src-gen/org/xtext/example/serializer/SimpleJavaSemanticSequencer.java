@@ -495,8 +495,8 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *                     operador='^=' | 
 	 *                     operador='ampersand ampersand' | 
 	 *                     operador='||=' | 
-	 *                     operador='%' | 
-	 *                     operador='%='
+	 *                     operador='&' | 
+	 *                     operador='&='
 	 *                 ) 
 	 *                 exp=expression
 	 *             ) | 
@@ -870,7 +870,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (nomeVariavel=IDENTIFIER valorVariavel=variable_initializer?)?
+	 *     (nomeVariavel=IDENTIFIER (op='=' valorVariavel=variable_initializer)?)?
 	 */
 	protected void sequence_variable_declarator(EObject context, variable_declarator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -1111,9 +1111,19 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getvariable_declarator_Op()
+  {
+    return (EAttribute)variable_declaratorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getvariable_declarator_ValorVariavel()
   {
-    return (EReference)variable_declaratorEClass.getEStructuralFeatures().get(1);
+    return (EReference)variable_declaratorEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2169,6 +2179,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
 
     variable_declaratorEClass = createEClass(VARIABLE_DECLARATOR);
     createEAttribute(variable_declaratorEClass, VARIABLE_DECLARATOR__NOME_VARIAVEL);
+    createEAttribute(variable_declaratorEClass, VARIABLE_DECLARATOR__OP);
     createEReference(variable_declaratorEClass, VARIABLE_DECLARATOR__VALOR_VARIAVEL);
 
     variable_initializerEClass = createEClass(VARIABLE_INITIALIZER);
@@ -2417,6 +2428,7 @@ public class SimpleJavaPackageImpl extends EPackageImpl implements SimpleJavaPac
 
     initEClass(variable_declaratorEClass, variable_declarator.class, "variable_declarator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getvariable_declarator_NomeVariavel(), ecorePackage.getEString(), "nomeVariavel", null, 0, 1, variable_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getvariable_declarator_Op(), ecorePackage.getEString(), "op", null, 0, 1, variable_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getvariable_declarator_ValorVariavel(), this.getvariable_initializer(), null, "valorVariavel", null, 0, 1, variable_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(variable_initializerEClass, variable_initializer.class, "variable_initializer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

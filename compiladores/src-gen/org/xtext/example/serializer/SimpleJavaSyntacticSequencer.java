@@ -311,8 +311,8 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('[' ']')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     nomeVariavel=IDENTIFIER (ambiguity) '=' valorVariavel=variable_initializer
 	 *     nomeVariavel=IDENTIFIER (ambiguity) (rule end)
+	 *     nomeVariavel=IDENTIFIER (ambiguity) op='='
 	 */
 	protected void emit_variable_declarator___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

@@ -968,17 +968,18 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftSquareBracketKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_1_1_1 = (Keyword)cGroup_1_1.eContents().get(1);
 		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
-		private final Keyword cEqualsSignKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
+		private final Assignment cOpAssignment_1_2_0 = (Assignment)cGroup_1_2.eContents().get(0);
+		private final Keyword cOpEqualsSignKeyword_1_2_0_0 = (Keyword)cOpAssignment_1_2_0.eContents().get(0);
 		private final Assignment cValorVariavelAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
 		private final RuleCall cValorVariavelVariable_initializerParserRuleCall_1_2_1_0 = (RuleCall)cValorVariavelAssignment_1_2_1.eContents().get(0);
 		
 		//variable_declarator:
 		//	"(" arglist? //TODO naum sei o q eh
-		//	")" | nomeVariavel=IDENTIFIER ("[" "]")* ("=" valorVariavel=variable_initializer)?;
+		//	")" | nomeVariavel=IDENTIFIER ("[" "]")* (op="=" valorVariavel=variable_initializer)?;
 		@Override public ParserRule getRule() { return rule; }
 
 		//"(" arglist? //TODO naum sei o q eh
-		//")" | nomeVariavel=IDENTIFIER ("[" "]")* ("=" valorVariavel=variable_initializer)?
+		//")" | nomeVariavel=IDENTIFIER ("[" "]")* (op="=" valorVariavel=variable_initializer)?
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//"(" arglist? //TODO naum sei o q eh
@@ -995,7 +996,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_0_2() { return cRightParenthesisKeyword_0_2; }
 
-		//nomeVariavel=IDENTIFIER ("[" "]")* ("=" valorVariavel=variable_initializer)?
+		//nomeVariavel=IDENTIFIER ("[" "]")* (op="=" valorVariavel=variable_initializer)?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//nomeVariavel=IDENTIFIER
@@ -1013,11 +1014,14 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//"]"
 		public Keyword getRightSquareBracketKeyword_1_1_1() { return cRightSquareBracketKeyword_1_1_1; }
 
-		//("=" valorVariavel=variable_initializer)?
+		//(op="=" valorVariavel=variable_initializer)?
 		public Group getGroup_1_2() { return cGroup_1_2; }
 
+		//op="="
+		public Assignment getOpAssignment_1_2_0() { return cOpAssignment_1_2_0; }
+
 		//"="
-		public Keyword getEqualsSignKeyword_1_2_0() { return cEqualsSignKeyword_1_2_0; }
+		public Keyword getOpEqualsSignKeyword_1_2_0_0() { return cOpEqualsSignKeyword_1_2_0_0; }
 
 		//valorVariavel=variable_initializer
 		public Assignment getValorVariavelAssignment_1_2_1() { return cValorVariavelAssignment_1_2_1; }
@@ -1908,8 +1912,8 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cOperadorCircumflexAccentEqualsSignKeyword_0_4_0_0_0_5 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(5);
 		private final Keyword cOperadorAmpersandAmpersandKeyword_0_4_0_0_0_6 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(6);
 		private final Keyword cOperadorVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_0_7 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(7);
-		private final Keyword cOperadorPercentSignKeyword_0_4_0_0_0_8 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(8);
-		private final Keyword cOperadorPercentSignEqualsSignKeyword_0_4_0_0_0_9 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(9);
+		private final Keyword cOperadorAmpersandKeyword_0_4_0_0_0_8 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(8);
+		private final Keyword cOperadorAmpersandEqualsSignKeyword_0_4_0_0_0_9 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(9);
 		private final Assignment cExpAssignment_0_4_0_1 = (Assignment)cGroup_0_4_0.eContents().get(1);
 		private final RuleCall cExpExpressionParserRuleCall_0_4_0_1_0 = (RuleCall)cExpAssignment_0_4_0_1.eContents().get(0);
 		private final Group cGroup_0_4_1 = (Group)cAlternatives_0_4.eContents().get(1);
@@ -1948,7 +1952,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//	((("(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name) | -> op=mais_aux
 		//	exp=expression | operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" |
 		//	operador="*=" | operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (operador=("ampersand" |
-		//	"ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "%" | "%=") exp=expression | operador="?"
+		//	"ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=") exp=expression | operador="?"
 		//	exp=expression operador=":" exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression |
 		//	operador=(">>=" | "<<" | ">>" | ">>>") exp=expression)) expressoes=expression_aux)?;
 		@Override public ParserRule getRule() { return rule; }
@@ -1956,7 +1960,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//((("(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name) | -> op=mais_aux
 		//exp=expression | operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*="
 		//| operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (operador=("ampersand" | "ampersand=" |
-		//"|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "%" | "%=") exp=expression | operador="?" exp=expression
+		//"|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=") exp=expression | operador="?" exp=expression
 		//operador=":" exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<"
 		//| ">>" | ">>>") exp=expression)) expressoes=expression_aux)?
 		public Group getGroup() { return cGroup; }
@@ -1964,7 +1968,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//("(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name) | -> op=mais_aux
 		//exp=expression | operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*="
 		//| operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (operador=("ampersand" | "ampersand=" |
-		//"|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "%" | "%=") exp=expression | operador="?" exp=expression
+		//"|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=") exp=expression | operador="?" exp=expression
 		//operador=":" exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<"
 		//| ">>" | ">>>") exp=expression)
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
@@ -2115,19 +2119,19 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//expression
 		public RuleCall getExpExpressionParserRuleCall_0_3_1_0() { return cExpExpressionParserRuleCall_0_3_1_0; }
 
-		//operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "%" | "%=")
+		//operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=")
 		//exp=expression | operador="?" exp=expression operador=":" exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" |
 		//"!=") exp=expression | operador=(">>=" | "<<" | ">>" | ">>>") exp=expression
 		public Alternatives getAlternatives_0_4() { return cAlternatives_0_4; }
 
-		//operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "%" | "%=")
+		//operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=")
 		//exp=expression
 		public Group getGroup_0_4_0() { return cGroup_0_4_0; }
 
-		//operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "%" | "%=")
+		//operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=")
 		public Assignment getOperadorAssignment_0_4_0_0() { return cOperadorAssignment_0_4_0_0; }
 
-		//"ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "%" | "%="
+		//"ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&="
 		public Alternatives getOperadorAlternatives_0_4_0_0_0() { return cOperadorAlternatives_0_4_0_0_0; }
 
 		//"ampersand"
@@ -2154,11 +2158,11 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//"||="
 		public Keyword getOperadorVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_0_7() { return cOperadorVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_0_7; }
 
-		//"%"
-		public Keyword getOperadorPercentSignKeyword_0_4_0_0_0_8() { return cOperadorPercentSignKeyword_0_4_0_0_0_8; }
+		//"&"
+		public Keyword getOperadorAmpersandKeyword_0_4_0_0_0_8() { return cOperadorAmpersandKeyword_0_4_0_0_0_8; }
 
-		//"%="
-		public Keyword getOperadorPercentSignEqualsSignKeyword_0_4_0_0_0_9() { return cOperadorPercentSignEqualsSignKeyword_0_4_0_0_0_9; }
+		//"&="
+		public Keyword getOperadorAmpersandEqualsSignKeyword_0_4_0_0_0_9() { return cOperadorAmpersandEqualsSignKeyword_0_4_0_0_0_9; }
 
 		//exp=expression
 		public Assignment getExpAssignment_0_4_0_1() { return cExpAssignment_0_4_0_1; }
@@ -3234,7 +3238,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 
 	//variable_declarator:
 	//	"(" arglist? //TODO naum sei o q eh
-	//	")" | nomeVariavel=IDENTIFIER ("[" "]")* ("=" valorVariavel=variable_initializer)?;
+	//	")" | nomeVariavel=IDENTIFIER ("[" "]")* (op="=" valorVariavel=variable_initializer)?;
 	public Variable_declaratorElements getVariable_declaratorAccess() {
 		return pVariable_declarator;
 	}
@@ -3375,7 +3379,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//	((("(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name) | -> op=mais_aux
 	//	exp=expression | operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" |
 	//	operador="*=" | operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (operador=("ampersand" |
-	//	"ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "%" | "%=") exp=expression | operador="?"
+	//	"ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=") exp=expression | operador="?"
 	//	exp=expression operador=":" exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression |
 	//	operador=(">>=" | "<<" | ">>" | ">>>") exp=expression)) expressoes=expression_aux)?;
 	public Expression_auxElements getExpression_auxAccess() {

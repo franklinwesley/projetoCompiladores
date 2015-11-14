@@ -2096,19 +2096,19 @@ rule__Expression_aux__OperadorAlternatives_0_4_0_0_0
 )
 
     |(
-{ before(grammarAccess.getExpression_auxAccess().getOperadorPercentSignKeyword_0_4_0_0_0_8()); }
+{ before(grammarAccess.getExpression_auxAccess().getOperadorAmpersandKeyword_0_4_0_0_0_8()); }
 
-	'%' 
+	'&' 
 
-{ after(grammarAccess.getExpression_auxAccess().getOperadorPercentSignKeyword_0_4_0_0_0_8()); }
+{ after(grammarAccess.getExpression_auxAccess().getOperadorAmpersandKeyword_0_4_0_0_0_8()); }
 )
 
     |(
-{ before(grammarAccess.getExpression_auxAccess().getOperadorPercentSignEqualsSignKeyword_0_4_0_0_0_9()); }
+{ before(grammarAccess.getExpression_auxAccess().getOperadorAmpersandEqualsSignKeyword_0_4_0_0_0_9()); }
 
-	'%=' 
+	'&=' 
 
-{ after(grammarAccess.getExpression_auxAccess().getOperadorPercentSignEqualsSignKeyword_0_4_0_0_0_9()); }
+{ after(grammarAccess.getExpression_auxAccess().getOperadorAmpersandEqualsSignKeyword_0_4_0_0_0_9()); }
 )
 
 ;
@@ -5770,11 +5770,9 @@ rule__Variable_declarator__Group_1_2__0__Impl
     }
 :
 (
-{ before(grammarAccess.getVariable_declaratorAccess().getEqualsSignKeyword_1_2_0()); }
-
-	'=' 
-
-{ after(grammarAccess.getVariable_declaratorAccess().getEqualsSignKeyword_1_2_0()); }
+{ before(grammarAccess.getVariable_declaratorAccess().getOpAssignment_1_2_0()); }
+(rule__Variable_declarator__OpAssignment_1_2_0)
+{ after(grammarAccess.getVariable_declaratorAccess().getOpAssignment_1_2_0()); }
 )
 
 ;
@@ -11775,6 +11773,29 @@ rule__Variable_declarator__NomeVariavelAssignment_1_0
 (
 { before(grammarAccess.getVariable_declaratorAccess().getNomeVariavelIDENTIFIERTerminalRuleCall_1_0_0()); }
 	RULE_IDENTIFIER{ after(grammarAccess.getVariable_declaratorAccess().getNomeVariavelIDENTIFIERTerminalRuleCall_1_0_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Variable_declarator__OpAssignment_1_2_0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getVariable_declaratorAccess().getOpEqualsSignKeyword_1_2_0_0()); }
+(
+{ before(grammarAccess.getVariable_declaratorAccess().getOpEqualsSignKeyword_1_2_0_0()); }
+
+	'=' 
+
+{ after(grammarAccess.getVariable_declaratorAccess().getOpEqualsSignKeyword_1_2_0_0()); }
+)
+
+{ after(grammarAccess.getVariable_declaratorAccess().getOpEqualsSignKeyword_1_2_0_0()); }
 )
 
 ;

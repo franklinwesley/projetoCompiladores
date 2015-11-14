@@ -838,13 +838,22 @@ public interface SimpleJavaPackage extends EPackage
   int VARIABLE_DECLARATOR__NOME_VARIAVEL = 0;
 
   /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_DECLARATOR__OP = 1;
+
+  /**
    * The feature id for the '<em><b>Valor Variavel</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VARIABLE_DECLARATOR__VALOR_VARIAVEL = 1;
+  int VARIABLE_DECLARATOR__VALOR_VARIAVEL = 2;
 
   /**
    * The number of structural features of the '<em>variable declarator</em>' class.
@@ -853,7 +862,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VARIABLE_DECLARATOR_FEATURE_COUNT = 2;
+  int VARIABLE_DECLARATOR_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.simpleJava.impl.variable_initializerImpl <em>variable initializer</em>}' class.
@@ -1985,6 +1994,15 @@ public interface SimpleJavaPackage extends EPackage
   int ARGLIST__NOME_VARIAVEL = VARIABLE_DECLARATOR__NOME_VARIAVEL;
 
   /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGLIST__OP = VARIABLE_DECLARATOR__OP;
+
+  /**
    * The feature id for the '<em><b>Valor Variavel</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3072,6 +3090,17 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    */
   EAttribute getvariable_declarator_NomeVariavel();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.simpleJava.variable_declarator#getOp <em>Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Op</em>'.
+   * @see org.xtext.example.simpleJava.variable_declarator#getOp()
+   * @see #getvariable_declarator()
+   * @generated
+   */
+  EAttribute getvariable_declarator_Op();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.simpleJava.variable_declarator#getValorVariavel <em>Valor Variavel</em>}'.
@@ -4689,6 +4718,14 @@ public interface SimpleJavaPackage extends EPackage
      * @generated
      */
     EAttribute VARIABLE_DECLARATOR__NOME_VARIAVEL = eINSTANCE.getvariable_declarator_NomeVariavel();
+
+    /**
+     * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VARIABLE_DECLARATOR__OP = eINSTANCE.getvariable_declarator_Op();
 
     /**
      * The meta object literal for the '<em><b>Valor Variavel</b></em>' containment reference feature.

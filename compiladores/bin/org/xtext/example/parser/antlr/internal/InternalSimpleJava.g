@@ -1706,11 +1706,22 @@ rulevariable_declarator returns [EObject current=null]
     {
     	newLeafNode(otherlv_5, grammarAccess.getVariable_declaratorAccess().getRightSquareBracketKeyword_1_1_1());
     }
-)*(	otherlv_6='=' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getVariable_declaratorAccess().getEqualsSignKeyword_1_2_0());
-    }
+)*((
 (
+		lv_op_6_0=	'=' 
+    {
+        newLeafNode(lv_op_6_0, grammarAccess.getVariable_declaratorAccess().getOpEqualsSignKeyword_1_2_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getVariable_declaratorRule());
+	        }
+       		setWithLastConsumed($current, "op", lv_op_6_0, "=");
+	    }
+
+)
+)(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getVariable_declaratorAccess().getValorVariavelVariable_initializerParserRuleCall_1_2_1_0()); 
@@ -3492,9 +3503,9 @@ ruleexpression_aux returns [EObject current=null]
        		setWithLastConsumed($current, "operador", lv_operador_23_8, null);
 	    }
 
-    |		lv_operador_23_9=	'%' 
+    |		lv_operador_23_9=	'&' 
     {
-        newLeafNode(lv_operador_23_9, grammarAccess.getExpression_auxAccess().getOperadorPercentSignKeyword_0_4_0_0_0_8());
+        newLeafNode(lv_operador_23_9, grammarAccess.getExpression_auxAccess().getOperadorAmpersandKeyword_0_4_0_0_0_8());
     }
  
 	    {
@@ -3504,9 +3515,9 @@ ruleexpression_aux returns [EObject current=null]
        		setWithLastConsumed($current, "operador", lv_operador_23_9, null);
 	    }
 
-    |		lv_operador_23_10=	'%=' 
+    |		lv_operador_23_10=	'&=' 
     {
-        newLeafNode(lv_operador_23_10, grammarAccess.getExpression_auxAccess().getOperadorPercentSignEqualsSignKeyword_0_4_0_0_0_9());
+        newLeafNode(lv_operador_23_10, grammarAccess.getExpression_auxAccess().getOperadorAmpersandEqualsSignKeyword_0_4_0_0_0_9());
     }
  
 	    {

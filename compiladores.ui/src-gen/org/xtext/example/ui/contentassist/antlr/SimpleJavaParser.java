@@ -219,6 +219,7 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVariable_declarationAccess().getDeclaracaoVariaveisAssignment_3_1(), "rule__Variable_declaration__DeclaracaoVariaveisAssignment_3_1");
 					put(grammarAccess.getVariable_declarationAccess().getBlocoVariavelAssignment_4_1(), "rule__Variable_declaration__BlocoVariavelAssignment_4_1");
 					put(grammarAccess.getVariable_declaratorAccess().getNomeVariavelAssignment_1_0(), "rule__Variable_declarator__NomeVariavelAssignment_1_0");
+					put(grammarAccess.getVariable_declaratorAccess().getOpAssignment_1_2_0(), "rule__Variable_declarator__OpAssignment_1_2_0");
 					put(grammarAccess.getVariable_declaratorAccess().getValorVariavelAssignment_1_2_1(), "rule__Variable_declarator__ValorVariavelAssignment_1_2_1");
 					put(grammarAccess.getVariable_initializerAccess().getExpressaoVariavelAssignment_0(), "rule__Variable_initializer__ExpressaoVariavelAssignment_0");
 					put(grammarAccess.getVariable_initializerAccess().getValorVariaveisAssignment_1_1_0(), "rule__Variable_initializer__ValorVariaveisAssignment_1_1_0");

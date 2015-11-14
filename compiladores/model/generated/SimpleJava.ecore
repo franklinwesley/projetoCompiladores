@@ -128,6 +128,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="variable_declarator">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomeVariavel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="valorVariavel" eType="#//variable_initializer"
         containment="true"/>
   </eClassifiers>

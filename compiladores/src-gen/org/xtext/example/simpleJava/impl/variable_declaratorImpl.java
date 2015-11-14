@@ -23,6 +23,7 @@ import org.xtext.example.simpleJava.variable_initializer;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.example.simpleJava.impl.variable_declaratorImpl#getNomeVariavel <em>Nome Variavel</em>}</li>
+ *   <li>{@link org.xtext.example.simpleJava.impl.variable_declaratorImpl#getOp <em>Op</em>}</li>
  *   <li>{@link org.xtext.example.simpleJava.impl.variable_declaratorImpl#getValorVariavel <em>Valor Variavel</em>}</li>
  * </ul>
  * </p>
@@ -50,6 +51,26 @@ public class variable_declaratorImpl extends MinimalEObjectImpl.Container implem
    * @ordered
    */
   protected String nomeVariavel = NOME_VARIAVEL_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOp()
+   * @generated
+   * @ordered
+   */
+  protected static final String OP_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getOp() <em>Op</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOp()
+   * @generated
+   * @ordered
+   */
+  protected String op = OP_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getValorVariavel() <em>Valor Variavel</em>}' containment reference.
@@ -103,6 +124,29 @@ public class variable_declaratorImpl extends MinimalEObjectImpl.Container implem
     nomeVariavel = newNomeVariavel;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.VARIABLE_DECLARATOR__NOME_VARIAVEL, oldNomeVariavel, nomeVariavel));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getOp()
+  {
+    return op;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOp(String newOp)
+  {
+    String oldOp = op;
+    op = newOp;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.VARIABLE_DECLARATOR__OP, oldOp, op));
   }
 
   /**
@@ -181,6 +225,8 @@ public class variable_declaratorImpl extends MinimalEObjectImpl.Container implem
     {
       case SimpleJavaPackage.VARIABLE_DECLARATOR__NOME_VARIAVEL:
         return getNomeVariavel();
+      case SimpleJavaPackage.VARIABLE_DECLARATOR__OP:
+        return getOp();
       case SimpleJavaPackage.VARIABLE_DECLARATOR__VALOR_VARIAVEL:
         return getValorVariavel();
     }
@@ -199,6 +245,9 @@ public class variable_declaratorImpl extends MinimalEObjectImpl.Container implem
     {
       case SimpleJavaPackage.VARIABLE_DECLARATOR__NOME_VARIAVEL:
         setNomeVariavel((String)newValue);
+        return;
+      case SimpleJavaPackage.VARIABLE_DECLARATOR__OP:
+        setOp((String)newValue);
         return;
       case SimpleJavaPackage.VARIABLE_DECLARATOR__VALOR_VARIAVEL:
         setValorVariavel((variable_initializer)newValue);
@@ -220,6 +269,9 @@ public class variable_declaratorImpl extends MinimalEObjectImpl.Container implem
       case SimpleJavaPackage.VARIABLE_DECLARATOR__NOME_VARIAVEL:
         setNomeVariavel(NOME_VARIAVEL_EDEFAULT);
         return;
+      case SimpleJavaPackage.VARIABLE_DECLARATOR__OP:
+        setOp(OP_EDEFAULT);
+        return;
       case SimpleJavaPackage.VARIABLE_DECLARATOR__VALOR_VARIAVEL:
         setValorVariavel((variable_initializer)null);
         return;
@@ -239,6 +291,8 @@ public class variable_declaratorImpl extends MinimalEObjectImpl.Container implem
     {
       case SimpleJavaPackage.VARIABLE_DECLARATOR__NOME_VARIAVEL:
         return NOME_VARIAVEL_EDEFAULT == null ? nomeVariavel != null : !NOME_VARIAVEL_EDEFAULT.equals(nomeVariavel);
+      case SimpleJavaPackage.VARIABLE_DECLARATOR__OP:
+        return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
       case SimpleJavaPackage.VARIABLE_DECLARATOR__VALOR_VARIAVEL:
         return valorVariavel != null;
     }
@@ -258,6 +312,8 @@ public class variable_declaratorImpl extends MinimalEObjectImpl.Container implem
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (nomeVariavel: ");
     result.append(nomeVariavel);
+    result.append(", op: ");
+    result.append(op);
     result.append(')');
     return result.toString();
   }

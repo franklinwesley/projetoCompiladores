@@ -58,6 +58,10 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
   
   private final Map<String, Metodo> metodos = new HashMap<String, Metodo>();
   
+  private final List<Integer> registradores = new ArrayList<Integer>();
+  
+  private final List<Integer> labels = new ArrayList<Integer>();
+  
   @Check
   public void runChecks(final compilation_unit comp) {
     EList<type_declaration> _declaracao = comp.getDeclaracao();
@@ -255,12 +259,22 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
     HashMap<String, Tipo> p = new HashMap<String, Tipo>();
     EList<parameter> _parametros = list.getParametros();
     for (final parameter parametro : _parametros) {
-      String _nomeParametro = parametro.getNomeParametro();
-      type _tipoParametro = parametro.getTipoParametro();
-      EObject _tipo = _tipoParametro.getTipo();
-      String _valueOf = String.valueOf(_tipo);
-      Tipo _tipo_1 = new Tipo(_valueOf);
-      p.put(_nomeParametro, _tipo_1);
+      {
+        String _nomeParametro = parametro.getNomeParametro();
+        type _tipoParametro = parametro.getTipoParametro();
+        EObject _tipo = _tipoParametro.getTipo();
+        String _valueOf = String.valueOf(_tipo);
+        Tipo _tipo_1 = new Tipo(_valueOf);
+        p.put(_nomeParametro, _tipo_1);
+        String _nomeParametro_1 = parametro.getNomeParametro();
+        String _nomeParametro_2 = parametro.getNomeParametro();
+        type _tipoParametro_1 = parametro.getTipoParametro();
+        EObject _tipo_2 = _tipoParametro_1.getTipo();
+        String _valueOf_1 = String.valueOf(_tipo_2);
+        Tipo _tipo_3 = new Tipo(_valueOf_1);
+        Variavel _variavel = new Variavel(_nomeParametro_2, _tipo_3);
+        this.variaveis.put(_nomeParametro_1, _variavel);
+      }
     }
     return p;
   }
@@ -1394,6 +1408,15 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
     return false;
   }
   
+  public boolean isVariable(final expression expression) {
+    String _identificador = expression.getIdentificador();
+    boolean _containsKey = this.variaveis.containsKey(_identificador);
+    if (_containsKey) {
+      return true;
+    }
+    return false;
+  }
+  
   public boolean isLiteral(final expression expression) {
     boolean _or = false;
     literal_expression _literal = expression.getLiteral();
@@ -1517,18 +1540,18 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
     this.salvarArquivo(("BR " + label));
   }
   
-  public void DesvioCond(final String op, final String label) {
+  public void DesvioCond(final String op, final String end, final String label) {
     boolean _equals = op.equals("maior");
     if (_equals) {
-      this.salvarArquivo(("BGTZ " + label));
+      this.salvarArquivo(((("BGTZ " + end) + ", ") + label));
     } else {
       boolean _equals_1 = op.equals("menor");
       if (_equals_1) {
-        this.salvarArquivo(("BLTZ " + label));
+        this.salvarArquivo(((("BLTZ " + end) + ", ") + label));
       } else {
         boolean _equals_2 = op.equals("igual");
         if (_equals_2) {
-          this.salvarArquivo(("BETZ " + label));
+          this.salvarArquivo(((("BETZ " + end) + ", ") + label));
         }
       }
     }
@@ -1610,92 +1633,192 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
             literal_expression _literal_9 = _exp_5.getLiteral();
             String _l_float_1 = _literal_9.getL_float();
             this.op(op, "r1", _decimal_5, _l_float_1);
+          } else {
+            expression _exp_6 = exp.getExp();
+            String _identificador = _exp_6.getIdentificador();
+            boolean _notEquals_4 = (!Objects.equal(_identificador, null));
+            if (_notEquals_4) {
+              expression _exp_7 = exp.getExp();
+              this.genUseVariableCode(_exp_7);
+              literal_expression _literal_10 = exp.getLiteral();
+              String _decimal_6 = _literal_10.getDecimal();
+              int _size = this.registradores.size();
+              int _minus = (_size - 1);
+              Integer _get = this.registradores.get(_minus);
+              String _plus = ("r" + _get);
+              this.op(op, "r1", _decimal_6, _plus);
+            }
           }
         }
       }
     } else {
-      literal_expression _literal_10 = exp.getLiteral();
-      String _inteiro_2 = _literal_10.getInteiro();
-      boolean _notEquals_4 = (!Objects.equal(_inteiro_2, null));
-      if (_notEquals_4) {
-        expression _exp_6 = exp.getExp();
-        literal_expression _literal_11 = _exp_6.getLiteral();
-        String _decimal_6 = _literal_11.getDecimal();
-        boolean _notEquals_5 = (!Objects.equal(_decimal_6, null));
-        if (_notEquals_5) {
-          literal_expression _literal_12 = exp.getLiteral();
-          String _inteiro_3 = _literal_12.getInteiro();
-          expression _exp_7 = exp.getExp();
-          literal_expression _literal_13 = _exp_7.getLiteral();
-          String _decimal_7 = _literal_13.getDecimal();
-          this.op(op, "r1", _inteiro_3, _decimal_7);
+      literal_expression _literal_11 = exp.getLiteral();
+      String _inteiro_2 = _literal_11.getInteiro();
+      boolean _notEquals_5 = (!Objects.equal(_inteiro_2, null));
+      if (_notEquals_5) {
+        expression _exp_8 = exp.getExp();
+        literal_expression _literal_12 = _exp_8.getLiteral();
+        String _decimal_7 = _literal_12.getDecimal();
+        boolean _notEquals_6 = (!Objects.equal(_decimal_7, null));
+        if (_notEquals_6) {
+          literal_expression _literal_13 = exp.getLiteral();
+          String _inteiro_3 = _literal_13.getInteiro();
+          expression _exp_9 = exp.getExp();
+          literal_expression _literal_14 = _exp_9.getLiteral();
+          String _decimal_8 = _literal_14.getDecimal();
+          this.op(op, "r1", _inteiro_3, _decimal_8);
         } else {
-          expression _exp_8 = exp.getExp();
-          literal_expression _literal_14 = _exp_8.getLiteral();
-          String _inteiro_4 = _literal_14.getInteiro();
-          boolean _notEquals_6 = (!Objects.equal(_inteiro_4, null));
-          if (_notEquals_6) {
-            literal_expression _literal_15 = exp.getLiteral();
-            String _inteiro_5 = _literal_15.getInteiro();
-            expression _exp_9 = exp.getExp();
-            literal_expression _literal_16 = _exp_9.getLiteral();
-            String _inteiro_6 = _literal_16.getInteiro();
+          expression _exp_10 = exp.getExp();
+          literal_expression _literal_15 = _exp_10.getLiteral();
+          String _inteiro_4 = _literal_15.getInteiro();
+          boolean _notEquals_7 = (!Objects.equal(_inteiro_4, null));
+          if (_notEquals_7) {
+            literal_expression _literal_16 = exp.getLiteral();
+            String _inteiro_5 = _literal_16.getInteiro();
+            expression _exp_11 = exp.getExp();
+            literal_expression _literal_17 = _exp_11.getLiteral();
+            String _inteiro_6 = _literal_17.getInteiro();
             this.op(op, "r1", _inteiro_5, _inteiro_6);
           } else {
-            expression _exp_10 = exp.getExp();
-            literal_expression _literal_17 = _exp_10.getLiteral();
-            String _l_float_2 = _literal_17.getL_float();
-            boolean _notEquals_7 = (!Objects.equal(_l_float_2, null));
-            if (_notEquals_7) {
-              literal_expression _literal_18 = exp.getLiteral();
-              String _inteiro_7 = _literal_18.getInteiro();
-              expression _exp_11 = exp.getExp();
-              literal_expression _literal_19 = _exp_11.getLiteral();
-              String _l_float_3 = _literal_19.getL_float();
+            expression _exp_12 = exp.getExp();
+            literal_expression _literal_18 = _exp_12.getLiteral();
+            String _l_float_2 = _literal_18.getL_float();
+            boolean _notEquals_8 = (!Objects.equal(_l_float_2, null));
+            if (_notEquals_8) {
+              literal_expression _literal_19 = exp.getLiteral();
+              String _inteiro_7 = _literal_19.getInteiro();
+              expression _exp_13 = exp.getExp();
+              literal_expression _literal_20 = _exp_13.getLiteral();
+              String _l_float_3 = _literal_20.getL_float();
               this.op(op, "r1", _inteiro_7, _l_float_3);
+            } else {
+              expression _exp_14 = exp.getExp();
+              String _identificador_1 = _exp_14.getIdentificador();
+              boolean _notEquals_9 = (!Objects.equal(_identificador_1, null));
+              if (_notEquals_9) {
+                expression _exp_15 = exp.getExp();
+                this.genUseVariableCode(_exp_15);
+                literal_expression _literal_21 = exp.getLiteral();
+                String _decimal_9 = _literal_21.getDecimal();
+                int _size_1 = this.registradores.size();
+                int _minus_1 = (_size_1 - 1);
+                Integer _get_1 = this.registradores.get(_minus_1);
+                String _plus_1 = ("r" + _get_1);
+                this.op(op, "r1", _decimal_9, _plus_1);
+              }
             }
           }
         }
       } else {
-        literal_expression _literal_20 = exp.getLiteral();
-        String _l_float_4 = _literal_20.getL_float();
-        boolean _notEquals_8 = (!Objects.equal(_l_float_4, null));
-        if (_notEquals_8) {
-          expression _exp_12 = exp.getExp();
-          literal_expression _literal_21 = _exp_12.getLiteral();
-          String _decimal_8 = _literal_21.getDecimal();
-          boolean _notEquals_9 = (!Objects.equal(_decimal_8, null));
-          if (_notEquals_9) {
-            literal_expression _literal_22 = exp.getLiteral();
-            String _l_float_5 = _literal_22.getL_float();
-            expression _exp_13 = exp.getExp();
-            literal_expression _literal_23 = _exp_13.getLiteral();
-            String _decimal_9 = _literal_23.getDecimal();
-            this.op(op, "r1", _l_float_5, _decimal_9);
+        literal_expression _literal_22 = exp.getLiteral();
+        String _l_float_4 = _literal_22.getL_float();
+        boolean _notEquals_10 = (!Objects.equal(_l_float_4, null));
+        if (_notEquals_10) {
+          expression _exp_16 = exp.getExp();
+          literal_expression _literal_23 = _exp_16.getLiteral();
+          String _decimal_10 = _literal_23.getDecimal();
+          boolean _notEquals_11 = (!Objects.equal(_decimal_10, null));
+          if (_notEquals_11) {
+            literal_expression _literal_24 = exp.getLiteral();
+            String _l_float_5 = _literal_24.getL_float();
+            expression _exp_17 = exp.getExp();
+            literal_expression _literal_25 = _exp_17.getLiteral();
+            String _decimal_11 = _literal_25.getDecimal();
+            this.op(op, "r1", _l_float_5, _decimal_11);
           } else {
-            expression _exp_14 = exp.getExp();
-            literal_expression _literal_24 = _exp_14.getLiteral();
-            String _inteiro_8 = _literal_24.getInteiro();
-            boolean _notEquals_10 = (!Objects.equal(_inteiro_8, null));
-            if (_notEquals_10) {
-              literal_expression _literal_25 = exp.getLiteral();
-              String _l_float_6 = _literal_25.getL_float();
-              expression _exp_15 = exp.getExp();
-              literal_expression _literal_26 = _exp_15.getLiteral();
-              String _inteiro_9 = _literal_26.getInteiro();
+            expression _exp_18 = exp.getExp();
+            literal_expression _literal_26 = _exp_18.getLiteral();
+            String _inteiro_8 = _literal_26.getInteiro();
+            boolean _notEquals_12 = (!Objects.equal(_inteiro_8, null));
+            if (_notEquals_12) {
+              literal_expression _literal_27 = exp.getLiteral();
+              String _l_float_6 = _literal_27.getL_float();
+              expression _exp_19 = exp.getExp();
+              literal_expression _literal_28 = _exp_19.getLiteral();
+              String _inteiro_9 = _literal_28.getInteiro();
               this.op(op, "r1", _l_float_6, _inteiro_9);
             } else {
-              expression _exp_16 = exp.getExp();
-              literal_expression _literal_27 = _exp_16.getLiteral();
-              String _l_float_7 = _literal_27.getL_float();
-              boolean _notEquals_11 = (!Objects.equal(_l_float_7, null));
-              if (_notEquals_11) {
-                literal_expression _literal_28 = exp.getLiteral();
-                String _l_float_8 = _literal_28.getL_float();
-                expression _exp_17 = exp.getExp();
-                literal_expression _literal_29 = _exp_17.getLiteral();
-                String _l_float_9 = _literal_29.getL_float();
+              expression _exp_20 = exp.getExp();
+              literal_expression _literal_29 = _exp_20.getLiteral();
+              String _l_float_7 = _literal_29.getL_float();
+              boolean _notEquals_13 = (!Objects.equal(_l_float_7, null));
+              if (_notEquals_13) {
+                literal_expression _literal_30 = exp.getLiteral();
+                String _l_float_8 = _literal_30.getL_float();
+                expression _exp_21 = exp.getExp();
+                literal_expression _literal_31 = _exp_21.getLiteral();
+                String _l_float_9 = _literal_31.getL_float();
                 this.op(op, "r1", _l_float_8, _l_float_9);
+              } else {
+                expression _exp_22 = exp.getExp();
+                String _identificador_2 = _exp_22.getIdentificador();
+                boolean _notEquals_14 = (!Objects.equal(_identificador_2, null));
+                if (_notEquals_14) {
+                  expression _exp_23 = exp.getExp();
+                  this.genUseVariableCode(_exp_23);
+                  literal_expression _literal_32 = exp.getLiteral();
+                  String _decimal_12 = _literal_32.getDecimal();
+                  int _size_2 = this.registradores.size();
+                  int _minus_2 = (_size_2 - 1);
+                  Integer _get_2 = this.registradores.get(_minus_2);
+                  String _plus_2 = ("r" + _get_2);
+                  this.op(op, "r1", _decimal_12, _plus_2);
+                }
+              }
+            }
+          }
+        } else {
+          expression _exp_24 = exp.getExp();
+          String _identificador_3 = _exp_24.getIdentificador();
+          boolean _notEquals_15 = (!Objects.equal(_identificador_3, null));
+          if (_notEquals_15) {
+            expression _exp_25 = exp.getExp();
+            literal_expression _literal_33 = _exp_25.getLiteral();
+            String _decimal_13 = _literal_33.getDecimal();
+            boolean _notEquals_16 = (!Objects.equal(_decimal_13, null));
+            if (_notEquals_16) {
+              String _identificador_4 = exp.getIdentificador();
+              expression _exp_26 = exp.getExp();
+              literal_expression _literal_34 = _exp_26.getLiteral();
+              String _decimal_14 = _literal_34.getDecimal();
+              this.op(op, "r1", _identificador_4, _decimal_14);
+            } else {
+              expression _exp_27 = exp.getExp();
+              literal_expression _literal_35 = _exp_27.getLiteral();
+              String _inteiro_10 = _literal_35.getInteiro();
+              boolean _notEquals_17 = (!Objects.equal(_inteiro_10, null));
+              if (_notEquals_17) {
+                String _identificador_5 = exp.getIdentificador();
+                expression _exp_28 = exp.getExp();
+                literal_expression _literal_36 = _exp_28.getLiteral();
+                String _inteiro_11 = _literal_36.getInteiro();
+                this.op(op, "r1", _identificador_5, _inteiro_11);
+              } else {
+                expression _exp_29 = exp.getExp();
+                literal_expression _literal_37 = _exp_29.getLiteral();
+                String _l_float_10 = _literal_37.getL_float();
+                boolean _notEquals_18 = (!Objects.equal(_l_float_10, null));
+                if (_notEquals_18) {
+                  String _identificador_6 = exp.getIdentificador();
+                  expression _exp_30 = exp.getExp();
+                  literal_expression _literal_38 = _exp_30.getLiteral();
+                  String _l_float_11 = _literal_38.getL_float();
+                  this.op(op, "r1", _identificador_6, _l_float_11);
+                } else {
+                  expression _exp_31 = exp.getExp();
+                  String _identificador_7 = _exp_31.getIdentificador();
+                  boolean _notEquals_19 = (!Objects.equal(_identificador_7, null));
+                  if (_notEquals_19) {
+                    expression _exp_32 = exp.getExp();
+                    this.genUseVariableCode(_exp_32);
+                    String _identificador_8 = exp.getIdentificador();
+                    int _size_3 = this.registradores.size();
+                    int _minus_3 = (_size_3 - 1);
+                    Integer _get_3 = this.registradores.get(_minus_3);
+                    String _plus_3 = ("r" + _get_3);
+                    this.op(op, "r1", _identificador_8, _plus_3);
+                  }
+                }
               }
             }
           }
@@ -1851,25 +1974,91 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
     return null;
   }
   
-  public Object genRelativeExpCode(final expression exp) {
-    return null;
-  }
-  
   public Object genExpCode(final expression exp) {
     Object _xifexpression = null;
     boolean _isBooleanExp = this.isBooleanExp(exp);
     if (_isBooleanExp) {
       _xifexpression = this.genBooleanExpCode(exp);
     } else {
-      Object _xifexpression_1 = null;
       boolean _isArimeticExp = this.isArimeticExp(exp);
       if (_isArimeticExp) {
         this.genAritmeticExpCode(exp);
       } else {
+        boolean _isAtribuicao = this.isAtribuicao(exp);
+        if (_isAtribuicao) {
+          String _identificador = exp.getIdentificador();
+          expression _exp = exp.getExp();
+          this.genAttCode(_identificador, _exp);
+        }
+      }
+    }
+    return _xifexpression;
+  }
+  
+  public Object genWhileCode(final while_statement loop) {
+    int _size = this.labels.size();
+    int _minus = (_size - 1);
+    Integer _get = this.labels.get(_minus);
+    int nextLabel = ((_get).intValue() + 1);
+    String label = ("label" + Integer.valueOf(nextLabel));
+    expression _expressaoWhile = loop.getExpressaoWhile();
+    this.genExpCode(_expressaoWhile);
+    this.label(label);
+    int proxLabel = (nextLabel + 1);
+    String label2 = ("label" + Integer.valueOf(proxLabel));
+    this.DesvioCond("BETZ", "r2", label2);
+    statement _blocoWhile = loop.getBlocoWhile();
+    this.genStatementCode(_blocoWhile);
+    this.DesvioIncod(label);
+    this.label(label);
+    return null;
+  }
+  
+  public void genSPIncCode(final String tamanho) {
+    this.salvarArquivo(("ADD SP, SP, " + tamanho));
+  }
+  
+  public void genSPDecCode(final String tamanho) {
+    this.salvarArquivo(("SUB SP, SP, " + tamanho));
+  }
+  
+  public void genUseMethodCode(final String metodo, final String tamanho) {
+    this.genSPIncCode(tamanho);
+    int _size = this.labels.size();
+    int _minus = (_size - 1);
+    Integer _get = this.labels.get(_minus);
+    int nextLabel = ((_get).intValue() + 1);
+    String label = ("label" + Integer.valueOf(nextLabel));
+    this.store("*SP", label);
+    this.DesvioIncod(metodo);
+    this.label(label);
+    this.genSPDecCode(tamanho);
+  }
+  
+  public Object genStatementCode(final statement st) {
+    Object _xifexpression = null;
+    expression _expressao = st.getExpressao();
+    boolean _notEquals = (!Objects.equal(_expressao, null));
+    if (_notEquals) {
+      expression _expressao_1 = st.getExpressao();
+      _xifexpression = this.genExpCode(_expressao_1);
+    } else {
+      Object _xifexpression_1 = null;
+      variable_declaration _declaracaoVariavel = st.getDeclaracaoVariavel();
+      boolean _notEquals_1 = (!Objects.equal(_declaracaoVariavel, null));
+      if (_notEquals_1) {
+        variable_declaration _declaracaoVariavel_1 = st.getDeclaracaoVariavel();
+        EList<variable_declarator> _declaracaoVariaveis = _declaracaoVariavel_1.getDeclaracaoVariaveis();
+        for (final variable_declarator vd : _declaracaoVariaveis) {
+          this.genDeclarationVariableCode(vd);
+        }
+      } else {
         Object _xifexpression_2 = null;
-        boolean _isRelativeExp = this.isRelativeExp(exp);
-        if (_isRelativeExp) {
-          _xifexpression_2 = this.genRelativeExpCode(exp);
+        while_statement _corpoWhile = st.getCorpoWhile();
+        boolean _notEquals_2 = (!Objects.equal(_corpoWhile, null));
+        if (_notEquals_2) {
+          while_statement _corpoWhile_1 = st.getCorpoWhile();
+          _xifexpression_2 = this.genWhileCode(_corpoWhile_1);
         }
         _xifexpression_1 = _xifexpression_2;
       }
@@ -1878,40 +2067,59 @@ public class SimpleJavaValidator extends AbstractSimpleJavaValidator {
     return _xifexpression;
   }
   
-  public Object genWhileCode(final while_statement loop) {
-    return null;
+  public void label(final String name) {
+    this.salvarArquivo((name + ":"));
   }
   
-  public Object genMethodCode() {
-    return null;
+  public void genStart() {
+    this.load("SP", "#600");
   }
   
-  public void genAttCode(final variable_declarator variable) {
-    boolean _and = false;
-    String _op = variable.getOp();
-    boolean _notEquals = (!Objects.equal(_op, null));
-    if (!_notEquals) {
-      _and = false;
-    } else {
-      variable_initializer _valorVariavel = variable.getValorVariavel();
-      boolean _notEquals_1 = (!Objects.equal(_valorVariavel, null));
-      _and = _notEquals_1;
-    }
-    if (_and) {
-      variable_initializer _valorVariavel_1 = variable.getValorVariavel();
-      expression _expressaoVariavel = _valorVariavel_1.getExpressaoVariavel();
-      this.genExpCode(_expressaoVariavel);
-      String _nomeVariavel = variable.getNomeVariavel();
-      this.store(_nomeVariavel, "r1");
-    }
-  }
-  
-  public Object genAttCode(final expression exp) {
-    Object _xifexpression = null;
+  public void genAttCode(final String name, final expression exp) {
     boolean _isAtribuicao = this.isAtribuicao(exp);
     if (_isAtribuicao) {
-      _xifexpression = null;
+      this.genExpCode(exp);
+      this.store(name, "r1");
     }
-    return _xifexpression;
+  }
+  
+  public Boolean genUseVariableCode(final expression exp) {
+    boolean _xifexpression = false;
+    boolean _isVariable = this.isVariable(exp);
+    if (_isVariable) {
+      boolean _xifexpression_1 = false;
+      boolean _isEmpty = this.registradores.isEmpty();
+      if (_isEmpty) {
+        boolean _xblockexpression = false;
+        {
+          String _identificador = exp.getIdentificador();
+          this.load("r10", _identificador);
+          _xblockexpression = this.registradores.add(Integer.valueOf(10));
+        }
+        _xifexpression_1 = _xblockexpression;
+      } else {
+        String _register = this.getRegister();
+        String _identificador = exp.getIdentificador();
+        this.load(_register, _identificador);
+      }
+      _xifexpression = _xifexpression_1;
+    }
+    return Boolean.valueOf(_xifexpression);
+  }
+  
+  public void genDeclarationVariableCode(final variable_declarator vd) {
+    variable_initializer _valorVariavel = vd.getValorVariavel();
+    expression _expressaoVariavel = _valorVariavel.getExpressaoVariavel();
+    this.genExpCode(_expressaoVariavel);
+    String _nomeVariavel = vd.getNomeVariavel();
+    this.store(_nomeVariavel, "r1");
+  }
+  
+  public String getRegister() {
+    int _size = this.registradores.size();
+    int _minus = (_size - 1);
+    Integer ultimo = this.registradores.get(_minus);
+    int registrador = ((ultimo).intValue() + 1);
+    return ("r" + Integer.valueOf(registrador));
   }
 }

@@ -37,6 +37,9 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	private final Map<String, Variavel> variaveis = new HashMap<String, Variavel>();
 	private final Map<String, Metodo> metodos = new HashMap<String, Metodo>();
 
+	private final List<Integer> registradores = new ArrayList<Integer>(); 
+	private final List<Integer> labels = new ArrayList<Integer>();
+
 //  public static val INVALID_NAME = 'invalidName'
 //
 //	@Check
@@ -153,6 +156,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		var p = new HashMap<String, Tipo>();
 		for (parameter parametro : list.parametros) {
 			p.put(parametro.nomeParametro, new Tipo(String.valueOf(parametro.tipoParametro.tipo)));
+			variaveis.put(parametro.nomeParametro, new Variavel (parametro.nomeParametro, new Tipo(String.valueOf(parametro.tipoParametro.tipo))))
 		}
 		return p;
 	}
@@ -420,6 +424,13 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			//TODO
 			return false
 		}
+		
+		def boolean isVariable(expression expression) {
+			if (variaveis.containsKey(expression.identificador)) {
+				return true;
+			}
+			return false
+		}
 
 		def boolean isLiteral(expression expression) {
 			if (expression.literal != null || expression.logical.operador != "!") {
@@ -462,13 +473,13 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			salvarArquivo("BR " + label)
 		}
 
-		def DesvioCond(String op, String label) {
+		def DesvioCond(String op, String end, String label) {
 			if (op.equals("maior")) {
-				salvarArquivo("BGTZ " + label)
+				salvarArquivo("BGTZ " + end + ", " + label)
 			} else if (op.equals("menor")) {
-				salvarArquivo("BLTZ " + label)
+				salvarArquivo("BLTZ " + end + ", " + label)
 			} else if (op.equals("igual")) {
-				salvarArquivo("BETZ " + label)
+				salvarArquivo("BETZ " + end + ", " + label)
 			}
 		}
 
@@ -502,6 +513,9 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 					op(op, "r1", exp.literal.decimal, exp.exp.literal.inteiro)
 				} else if (exp.exp.literal.l_float != null) {
 					op(op, "r1", exp.literal.decimal, exp.exp.literal.l_float)
+				} else if (exp.exp.identificador != null) {
+					genUseVariableCode(exp.exp)
+					op(op, "r1", exp.literal.decimal, "r" + registradores.get(registradores.size - 1))
 				}
 			} else if (exp.literal.inteiro != null) {
 				if (exp.exp.literal.decimal != null) {
@@ -510,6 +524,9 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 					op(op, "r1", exp.literal.inteiro, exp.exp.literal.inteiro)
 				} else if (exp.exp.literal.l_float != null) {
 					op(op, "r1", exp.literal.inteiro, exp.exp.literal.l_float)
+				} else if (exp.exp.identificador != null) {
+					genUseVariableCode(exp.exp)
+					op(op, "r1", exp.literal.decimal, "r" + registradores.get(registradores.size - 1))
 				}
 			} else if (exp.literal.l_float != null) {
 				if (exp.exp.literal.decimal != null) {
@@ -518,6 +535,20 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 					op(op, "r1", exp.literal.l_float, exp.exp.literal.inteiro)
 				} else if (exp.exp.literal.l_float != null) {
 					op(op, "r1", exp.literal.l_float, exp.exp.literal.l_float)
+				} else if (exp.exp.identificador != null) {
+					genUseVariableCode(exp.exp)
+					op(op, "r1", exp.literal.decimal, "r" + registradores.get(registradores.size - 1))
+				}
+			} else if (exp.exp.identificador != null) {
+				if (exp.exp.literal.decimal != null) {
+					op(op, "r1", exp.identificador, exp.exp.literal.decimal)
+				} else if (exp.exp.literal.inteiro != null) {
+					op(op, "r1", exp.identificador, exp.exp.literal.inteiro)
+				} else if (exp.exp.literal.l_float != null) {
+					op(op, "r1", exp.identificador, exp.exp.literal.l_float)
+				} else if (exp.exp.identificador != null) {
+					genUseVariableCode(exp.exp)
+					op(op, "r1", exp.identificador, "r" + registradores.get(registradores.size - 1))
 				}
 			}
 		}
@@ -575,38 +606,93 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			//TODO	
 		}
 		
-		def genRelativeExpCode (expression exp) {
-			//TODO
-		}
-		
 		def genExpCode (expression exp) {
 			if (isBooleanExp(exp)) {
 				genBooleanExpCode(exp)
 			} else if (isArimeticExp(exp)) {
 				genAritmeticExpCode(exp)
-			} else if (isRelativeExp(exp)) {
-				genRelativeExpCode(exp)
+			} else if (isAtribuicao(exp)) {
+				genAttCode(exp.identificador, exp.exp)
 			}
 		}
 		
 		def genWhileCode (while_statement loop) {
-			//TODO
+			var nextLabel = labels.get(labels.size - 1) + 1
+			var label = "label" + nextLabel
+			genExpCode(loop.expressaoWhile)
+			label(label)
+			var proxLabel = nextLabel+ 1
+			var label2 = "label" + proxLabel
+			DesvioCond("BETZ", "r2", label2)
+			genStatementCode(loop.blocoWhile)
+			DesvioIncod(label)
+			label(label)
 		}
 		
-		def genMethodCode () {
-			//TODO
+		def genSPIncCode (String tamanho) {
+			salvarArquivo("ADD SP, SP, " + tamanho)
 		}
 		
-		def genAttCode (variable_declarator variable) {
-			if (variable.op != null && variable.valorVariavel != null) {
-				genExpCode(variable.valorVariavel.expressaoVariavel)
-				store(variable.nomeVariavel, "r1")
+		def genSPDecCode (String tamanho) {
+			salvarArquivo("SUB SP, SP, " + tamanho)
+		}
+		
+		def genUseMethodCode (String metodo, String tamanho) {
+			genSPIncCode(tamanho)
+			var nextLabel = labels.get(labels.size - 1) + 1
+			var label = "label" + nextLabel
+			store("*SP", label)
+			DesvioIncod(metodo)
+			label(label)
+			genSPDecCode(tamanho)	
+		}
+		
+		def genStatementCode (statement st) {
+			if (st.expressao != null) {
+				genExpCode(st.expressao)
+			} else if (st.declaracaoVariavel != null) {
+				for (variable_declarator vd : st.declaracaoVariavel.declaracaoVariaveis) {
+					genDeclarationVariableCode(vd)
+				}
+			} else if (st.corpoWhile != null) {
+				genWhileCode(st.corpoWhile)
 			}
 		}
 		
-		def genAttCode (expression exp) {
+		def label(String name) {
+			salvarArquivo(name + ":")
+		}
+		
+		def genStart () {
+			load("SP", "#600")
+		}
+		
+		def genAttCode (String name, expression exp) {
 			if (isAtribuicao(exp)) {
-				//TODO
+				genExpCode(exp)
+				store(name, "r1")
 			}
+		}
+		
+		def genUseVariableCode (expression exp) {
+			if (isVariable(exp)) {
+				if (registradores.isEmpty) {
+					load("r10", exp.identificador)
+					registradores.add(10)
+				} else {
+					load(getRegister(), exp.identificador)
+				}
+			}
+		}
+		
+		def genDeclarationVariableCode (variable_declarator vd) {
+			genExpCode(vd.valorVariavel.expressaoVariavel)
+			store(vd.nomeVariavel, "r1")
+		}
+		
+		def String getRegister() {
+			var ultimo = registradores.get(registradores.size - 1)
+			var registrador = ultimo + 1
+			return "r" + registrador
 		}
 	}

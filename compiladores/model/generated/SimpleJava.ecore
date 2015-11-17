@@ -36,10 +36,10 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="implementosClasse" upperBound="-1"
         eType="#//name" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="corpoClasse" eType="#//field_declaration"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="declaracaoClasse" eType="#//class_declaration"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="corpoClasse" upperBound="-1"
+        eType="#//field_declaration" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="declaracaoClasse" upperBound="-1"
+        eType="#//class_declaration" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="interface_declaration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="modificadores" upperBound="-1"
@@ -47,8 +47,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomeInterface" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="superinterfaces" upperBound="-1"
         eType="#//name" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="corpoInterface" eType="#//field_declaration"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="corpoInterface" upperBound="-1"
+        eType="#//field_declaration" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="field_declaration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="comentario" eType="#//doc_comment"
@@ -83,15 +83,15 @@
         eType="#//parameter" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="statement_block">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="corpo" eType="#//statement"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="corpo" upperBound="-1"
+        eType="#//statement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="statement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="declaracaoVariavel" eType="#//variable_declaration"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expressao" eType="#//expression"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bloco" eType="#//statement_block"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="newbloco" eType="#//statement_block"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="corpoIf" eType="#//if_statement"
         containment="true"/>
@@ -191,7 +191,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="constructor_declaration" eSuperTypes="#//newBlock">
     <eStructuralFeatures xsi:type="ecore:EReference" name="modificador" eType="#//MODIFIER"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tipo" eType="#//type" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomeContrutor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametrosContrutor" eType="#//parameter_list"
         containment="true"/>
@@ -297,7 +296,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nome" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="type" eSuperTypes="#//exp_aux">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tipo" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="primitivo" eType="#//type_specifier"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objeto" eType="#//name"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MODIFIER">

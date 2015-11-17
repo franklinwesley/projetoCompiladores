@@ -67,7 +67,7 @@
     <genClasses ecoreClass="SimpleJava.ecore#//statement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//statement/declaracaoVariavel"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//statement/expressao"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//statement/bloco"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//statement/newbloco"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//statement/corpoIf"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//statement/corpoDoWhile"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//statement/corpoWhile"/>
@@ -129,7 +129,6 @@
     </genClasses>
     <genClasses ecoreClass="SimpleJava.ecore#//constructor_declaration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//constructor_declaration/modificador"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//constructor_declaration/tipo"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//constructor_declaration/nomeContrutor"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//constructor_declaration/parametrosContrutor"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//constructor_declaration/blocoConstrutor"/>
@@ -207,7 +206,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//type_specifier/nome"/>
     </genClasses>
     <genClasses ecoreClass="SimpleJava.ecore#//type">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//type/tipo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//type/primitivo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleJava.ecore#//type/objeto"/>
     </genClasses>
     <genClasses ecoreClass="SimpleJava.ecore#//MODIFIER">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleJava.ecore#//MODIFIER/modificador"/>

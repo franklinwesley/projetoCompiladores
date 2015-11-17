@@ -12,7 +12,6 @@ package org.xtext.example.simpleJava;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.example.simpleJava.constructor_declaration#getModificador <em>Modificador</em>}</li>
- *   <li>{@link org.xtext.example.simpleJava.constructor_declaration#getTipo <em>Tipo</em>}</li>
  *   <li>{@link org.xtext.example.simpleJava.constructor_declaration#getNomeContrutor <em>Nome Contrutor</em>}</li>
  *   <li>{@link org.xtext.example.simpleJava.constructor_declaration#getParametrosContrutor <em>Parametros Contrutor</em>}</li>
  *   <li>{@link org.xtext.example.simpleJava.constructor_declaration#getBlocoConstrutor <em>Bloco Construtor</em>}</li>
@@ -50,32 +49,6 @@ public interface constructor_declaration extends newBlock
    * @generated
    */
   void setModificador(MODIFIER value);
-
-  /**
-   * Returns the value of the '<em><b>Tipo</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Tipo</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Tipo</em>' containment reference.
-   * @see #setTipo(type)
-   * @see org.xtext.example.simpleJava.SimpleJavaPackage#getconstructor_declaration_Tipo()
-   * @model containment="true"
-   * @generated
-   */
-  type getTipo();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.simpleJava.constructor_declaration#getTipo <em>Tipo</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tipo</em>' containment reference.
-   * @see #getTipo()
-   * @generated
-   */
-  void setTipo(type value);
 
   /**
    * Returns the value of the '<em><b>Nome Contrutor</b></em>' attribute.

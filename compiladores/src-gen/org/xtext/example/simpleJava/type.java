@@ -2,7 +2,6 @@
  */
 package org.xtext.example.simpleJava;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,7 +11,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.example.simpleJava.type#getTipo <em>Tipo</em>}</li>
+ *   <li>{@link org.xtext.example.simpleJava.type#getPrimitivo <em>Primitivo</em>}</li>
+ *   <li>{@link org.xtext.example.simpleJava.type#getObjeto <em>Objeto</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,29 +23,55 @@ import org.eclipse.emf.ecore.EObject;
 public interface type extends exp_aux
 {
   /**
-   * Returns the value of the '<em><b>Tipo</b></em>' containment reference.
+   * Returns the value of the '<em><b>Primitivo</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Tipo</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Primitivo</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Tipo</em>' containment reference.
-   * @see #setTipo(EObject)
-   * @see org.xtext.example.simpleJava.SimpleJavaPackage#gettype_Tipo()
+   * @return the value of the '<em>Primitivo</em>' containment reference.
+   * @see #setPrimitivo(type_specifier)
+   * @see org.xtext.example.simpleJava.SimpleJavaPackage#gettype_Primitivo()
    * @model containment="true"
    * @generated
    */
-  EObject getTipo();
+  type_specifier getPrimitivo();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.simpleJava.type#getTipo <em>Tipo</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.simpleJava.type#getPrimitivo <em>Primitivo</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tipo</em>' containment reference.
-   * @see #getTipo()
+   * @param value the new value of the '<em>Primitivo</em>' containment reference.
+   * @see #getPrimitivo()
    * @generated
    */
-  void setTipo(EObject value);
+  void setPrimitivo(type_specifier value);
+
+  /**
+   * Returns the value of the '<em><b>Objeto</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Objeto</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Objeto</em>' containment reference.
+   * @see #setObjeto(name)
+   * @see org.xtext.example.simpleJava.SimpleJavaPackage#gettype_Objeto()
+   * @model containment="true"
+   * @generated
+   */
+  name getObjeto();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.simpleJava.type#getObjeto <em>Objeto</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Objeto</em>' containment reference.
+   * @see #getObjeto()
+   * @generated
+   */
+  void setObjeto(name value);
 
 } // type

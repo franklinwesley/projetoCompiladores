@@ -2,6 +2,8 @@
  */
 package org.xtext.example.simpleJava;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -23,29 +25,19 @@ import org.eclipse.emf.ecore.EObject;
 public interface statement_block extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Corpo</b></em>' containment reference.
+   * Returns the value of the '<em><b>Corpo</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.simpleJava.statement}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Corpo</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Corpo</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Corpo</em>' containment reference.
-   * @see #setCorpo(statement)
+   * @return the value of the '<em>Corpo</em>' containment reference list.
    * @see org.xtext.example.simpleJava.SimpleJavaPackage#getstatement_block_Corpo()
    * @model containment="true"
    * @generated
    */
-  statement getCorpo();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.simpleJava.statement_block#getCorpo <em>Corpo</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Corpo</em>' containment reference.
-   * @see #getCorpo()
-   * @generated
-   */
-  void setCorpo(statement value);
+  EList<statement> getCorpo();
 
 } // statement_block

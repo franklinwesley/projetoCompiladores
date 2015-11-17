@@ -6,13 +6,14 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.example.simpleJava.SimpleJavaPackage;
+import org.xtext.example.simpleJava.name;
 import org.xtext.example.simpleJava.type;
+import org.xtext.example.simpleJava.type_specifier;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +22,8 @@ import org.xtext.example.simpleJava.type;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.example.simpleJava.impl.typeImpl#getTipo <em>Tipo</em>}</li>
+ *   <li>{@link org.xtext.example.simpleJava.impl.typeImpl#getPrimitivo <em>Primitivo</em>}</li>
+ *   <li>{@link org.xtext.example.simpleJava.impl.typeImpl#getObjeto <em>Objeto</em>}</li>
  * </ul>
  * </p>
  *
@@ -30,14 +32,24 @@ import org.xtext.example.simpleJava.type;
 public class typeImpl extends exp_auxImpl implements type
 {
   /**
-   * The cached value of the '{@link #getTipo() <em>Tipo</em>}' containment reference.
+   * The cached value of the '{@link #getPrimitivo() <em>Primitivo</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTipo()
+   * @see #getPrimitivo()
    * @generated
    * @ordered
    */
-  protected EObject tipo;
+  protected type_specifier primitivo;
+
+  /**
+   * The cached value of the '{@link #getObjeto() <em>Objeto</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getObjeto()
+   * @generated
+   * @ordered
+   */
+  protected name objeto;
 
   /**
    * <!-- begin-user-doc -->
@@ -65,9 +77,9 @@ public class typeImpl extends exp_auxImpl implements type
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getTipo()
+  public type_specifier getPrimitivo()
   {
-    return tipo;
+    return primitivo;
   }
 
   /**
@@ -75,13 +87,13 @@ public class typeImpl extends exp_auxImpl implements type
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTipo(EObject newTipo, NotificationChain msgs)
+  public NotificationChain basicSetPrimitivo(type_specifier newPrimitivo, NotificationChain msgs)
   {
-    EObject oldTipo = tipo;
-    tipo = newTipo;
+    type_specifier oldPrimitivo = primitivo;
+    primitivo = newPrimitivo;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.TYPE__TIPO, oldTipo, newTipo);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.TYPE__PRIMITIVO, oldPrimitivo, newPrimitivo);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -92,20 +104,68 @@ public class typeImpl extends exp_auxImpl implements type
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTipo(EObject newTipo)
+  public void setPrimitivo(type_specifier newPrimitivo)
   {
-    if (newTipo != tipo)
+    if (newPrimitivo != primitivo)
     {
       NotificationChain msgs = null;
-      if (tipo != null)
-        msgs = ((InternalEObject)tipo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.TYPE__TIPO, null, msgs);
-      if (newTipo != null)
-        msgs = ((InternalEObject)newTipo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.TYPE__TIPO, null, msgs);
-      msgs = basicSetTipo(newTipo, msgs);
+      if (primitivo != null)
+        msgs = ((InternalEObject)primitivo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.TYPE__PRIMITIVO, null, msgs);
+      if (newPrimitivo != null)
+        msgs = ((InternalEObject)newPrimitivo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.TYPE__PRIMITIVO, null, msgs);
+      msgs = basicSetPrimitivo(newPrimitivo, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.TYPE__TIPO, newTipo, newTipo));
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.TYPE__PRIMITIVO, newPrimitivo, newPrimitivo));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public name getObjeto()
+  {
+    return objeto;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetObjeto(name newObjeto, NotificationChain msgs)
+  {
+    name oldObjeto = objeto;
+    objeto = newObjeto;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.TYPE__OBJETO, oldObjeto, newObjeto);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setObjeto(name newObjeto)
+  {
+    if (newObjeto != objeto)
+    {
+      NotificationChain msgs = null;
+      if (objeto != null)
+        msgs = ((InternalEObject)objeto).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.TYPE__OBJETO, null, msgs);
+      if (newObjeto != null)
+        msgs = ((InternalEObject)newObjeto).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.TYPE__OBJETO, null, msgs);
+      msgs = basicSetObjeto(newObjeto, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.TYPE__OBJETO, newObjeto, newObjeto));
   }
 
   /**
@@ -118,8 +178,10 @@ public class typeImpl extends exp_auxImpl implements type
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.TYPE__TIPO:
-        return basicSetTipo(null, msgs);
+      case SimpleJavaPackage.TYPE__PRIMITIVO:
+        return basicSetPrimitivo(null, msgs);
+      case SimpleJavaPackage.TYPE__OBJETO:
+        return basicSetObjeto(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -134,8 +196,10 @@ public class typeImpl extends exp_auxImpl implements type
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.TYPE__TIPO:
-        return getTipo();
+      case SimpleJavaPackage.TYPE__PRIMITIVO:
+        return getPrimitivo();
+      case SimpleJavaPackage.TYPE__OBJETO:
+        return getObjeto();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -150,8 +214,11 @@ public class typeImpl extends exp_auxImpl implements type
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.TYPE__TIPO:
-        setTipo((EObject)newValue);
+      case SimpleJavaPackage.TYPE__PRIMITIVO:
+        setPrimitivo((type_specifier)newValue);
+        return;
+      case SimpleJavaPackage.TYPE__OBJETO:
+        setObjeto((name)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -167,8 +234,11 @@ public class typeImpl extends exp_auxImpl implements type
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.TYPE__TIPO:
-        setTipo((EObject)null);
+      case SimpleJavaPackage.TYPE__PRIMITIVO:
+        setPrimitivo((type_specifier)null);
+        return;
+      case SimpleJavaPackage.TYPE__OBJETO:
+        setObjeto((name)null);
         return;
     }
     super.eUnset(featureID);
@@ -184,8 +254,10 @@ public class typeImpl extends exp_auxImpl implements type
   {
     switch (featureID)
     {
-      case SimpleJavaPackage.TYPE__TIPO:
-        return tipo != null;
+      case SimpleJavaPackage.TYPE__PRIMITIVO:
+        return primitivo != null;
+      case SimpleJavaPackage.TYPE__OBJETO:
+        return objeto != null;
     }
     return super.eIsSet(featureID);
   }

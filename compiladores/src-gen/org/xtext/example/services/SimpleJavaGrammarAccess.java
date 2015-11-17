@@ -224,13 +224,13 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//class_declaration:
 		//	modificadores+=MODIFIER* "class" nomeClasse=IDENTIFIER ("extends" superclasse=name)? ("implements"
-		//	implementosClasse+=name ("," implementosClasse+=name)*)? "{" (corpoClasse=field_declaration |
-		//	declaracaoClasse=class_declaration)* "}";
+		//	implementosClasse+=name ("," implementosClasse+=name)*)? "{" (corpoClasse+=field_declaration |
+		//	declaracaoClasse+=class_declaration)* "}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//modificadores+=MODIFIER* "class" nomeClasse=IDENTIFIER ("extends" superclasse=name)? ("implements"
-		//implementosClasse+=name ("," implementosClasse+=name)*)? "{" (corpoClasse=field_declaration |
-		//declaracaoClasse=class_declaration)* "}"
+		//implementosClasse+=name ("," implementosClasse+=name)*)? "{" (corpoClasse+=field_declaration |
+		//declaracaoClasse+=class_declaration)* "}"
 		public Group getGroup() { return cGroup; }
 
 		//modificadores+=MODIFIER*
@@ -287,16 +287,16 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
 
-		//(corpoClasse=field_declaration | declaracaoClasse=class_declaration)*
+		//(corpoClasse+=field_declaration | declaracaoClasse+=class_declaration)*
 		public Alternatives getAlternatives_6() { return cAlternatives_6; }
 
-		//corpoClasse=field_declaration
+		//corpoClasse+=field_declaration
 		public Assignment getCorpoClasseAssignment_6_0() { return cCorpoClasseAssignment_6_0; }
 
 		//field_declaration
 		public RuleCall getCorpoClasseField_declarationParserRuleCall_6_0_0() { return cCorpoClasseField_declarationParserRuleCall_6_0_0; }
 
-		//declaracaoClasse=class_declaration
+		//declaracaoClasse+=class_declaration
 		public Assignment getDeclaracaoClasseAssignment_6_1() { return cDeclaracaoClasseAssignment_6_1; }
 
 		//class_declaration
@@ -329,11 +329,11 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//interface_declaration:
 		//	modificadores+=MODIFIER* "interface" nomeInterface=IDENTIFIER ("extends" superinterfaces+=name (","
-		//	superinterfaces+=name)*)? "{" corpoInterface=field_declaration* "}";
+		//	superinterfaces+=name)*)? "{" corpoInterface+=field_declaration* "}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//modificadores+=MODIFIER* "interface" nomeInterface=IDENTIFIER ("extends" superinterfaces+=name (","
-		//superinterfaces+=name)*)? "{" corpoInterface=field_declaration* "}"
+		//superinterfaces+=name)*)? "{" corpoInterface+=field_declaration* "}"
 		public Group getGroup() { return cGroup; }
 
 		//modificadores+=MODIFIER*
@@ -378,7 +378,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
-		//corpoInterface=field_declaration*
+		//corpoInterface+=field_declaration*
 		public Assignment getCorpoInterfaceAssignment_5() { return cCorpoInterfaceAssignment_5; }
 
 		//field_declaration
@@ -623,16 +623,16 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//statement_block:
-		//	"{" corpo=statement* "}";
+		//	"{" corpo+=statement* "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"{" corpo=statement* "}"
+		//"{" corpo+=statement* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
 
-		//corpo=statement*
+		//corpo+=statement*
 		public Assignment getCorpoAssignment_1() { return cCorpoAssignment_1; }
 
 		//statement
@@ -651,8 +651,8 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cExpressaoAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
 		private final RuleCall cExpressaoExpressionParserRuleCall_1_0_0 = (RuleCall)cExpressaoAssignment_1_0.eContents().get(0);
 		private final Keyword cSemicolonKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Assignment cBlocoAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final RuleCall cBlocoStatement_blockParserRuleCall_2_0 = (RuleCall)cBlocoAssignment_2.eContents().get(0);
+		private final Assignment cNewblocoAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final RuleCall cNewblocoStatement_blockParserRuleCall_2_0 = (RuleCall)cNewblocoAssignment_2.eContents().get(0);
 		private final Assignment cCorpoIfAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
 		private final RuleCall cCorpoIfIf_statementParserRuleCall_3_0 = (RuleCall)cCorpoIfAssignment_3.eContents().get(0);
 		private final Assignment cCorpoDoWhileAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
@@ -700,17 +700,17 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_15 = (Keyword)cAlternatives.eContents().get(15);
 		
 		//statement:
-		//	-> declaracaoVariavel=variable_declaration | -> expressao=expression ";" | bloco=statement_block |
+		//	-> declaracaoVariavel=variable_declaration | -> expressao=expression ";" | newbloco=statement_block |
 		//	corpoIf=if_statement | corpoDoWhile=do_statement | corpoWhile=while_statement | corpoFor=for_statement |
 		//	corpoTryCatch=try_statement | corpoSwitchCase=switch_statement | "synchronized" "(" expressaoSynchronized=expression
 		//	")" corpoSynchronize=statement | "return" return=expression? ";" | "throw" exececao=expression ";" | IDENTIFIER ":" //TODO naum sei o q eh
 		//	statement | "break" break=IDENTIFIER? ";" | "continue" continue=IDENTIFIER? ";" | ";";
 		@Override public ParserRule getRule() { return rule; }
 
-		//-> declaracaoVariavel=variable_declaration | -> expressao=expression ";" | bloco=statement_block | corpoIf=if_statement
-		//| corpoDoWhile=do_statement | corpoWhile=while_statement | corpoFor=for_statement | corpoTryCatch=try_statement |
-		//corpoSwitchCase=switch_statement | "synchronized" "(" expressaoSynchronized=expression ")" corpoSynchronize=statement |
-		//"return" return=expression? ";" | "throw" exececao=expression ";" | IDENTIFIER ":" //TODO naum sei o q eh
+		//-> declaracaoVariavel=variable_declaration | -> expressao=expression ";" | newbloco=statement_block |
+		//corpoIf=if_statement | corpoDoWhile=do_statement | corpoWhile=while_statement | corpoFor=for_statement |
+		//corpoTryCatch=try_statement | corpoSwitchCase=switch_statement | "synchronized" "(" expressaoSynchronized=expression
+		//")" corpoSynchronize=statement | "return" return=expression? ";" | "throw" exececao=expression ";" | IDENTIFIER ":" //TODO naum sei o q eh
 		//statement | "break" break=IDENTIFIER? ";" | "continue" continue=IDENTIFIER? ";" | ";"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
@@ -732,11 +732,11 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_1_1() { return cSemicolonKeyword_1_1; }
 
-		//bloco=statement_block
-		public Assignment getBlocoAssignment_2() { return cBlocoAssignment_2; }
+		//newbloco=statement_block
+		public Assignment getNewblocoAssignment_2() { return cNewblocoAssignment_2; }
 
 		//statement_block
-		public RuleCall getBlocoStatement_blockParserRuleCall_2_0() { return cBlocoStatement_blockParserRuleCall_2_0; }
+		public RuleCall getNewblocoStatement_blockParserRuleCall_2_0() { return cNewblocoStatement_blockParserRuleCall_2_0; }
 
 		//corpoIf=if_statement
 		public Assignment getCorpoIfAssignment_3() { return cCorpoIfAssignment_3; }
@@ -1503,25 +1503,21 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cModificadorAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cModificadorMODIFIERParserRuleCall_0_0 = (RuleCall)cModificadorAssignment_0.eContents().get(0);
-		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final Assignment cTipoAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
-		private final RuleCall cTipoTypeParserRuleCall_1_0_0 = (RuleCall)cTipoAssignment_1_0.eContents().get(0);
-		private final Keyword cVoidKeyword_1_1 = (Keyword)cAlternatives_1.eContents().get(1);
-		private final Assignment cNomeContrutorAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNomeContrutorIDENTIFIERTerminalRuleCall_2_0 = (RuleCall)cNomeContrutorAssignment_2.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cParametrosContrutorAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cParametrosContrutorParameter_listParserRuleCall_4_0 = (RuleCall)cParametrosContrutorAssignment_4.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cBlocoConstrutorAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cBlocoConstrutorStatement_blockParserRuleCall_6_0 = (RuleCall)cBlocoConstrutorAssignment_6.eContents().get(0);
+		private final Assignment cNomeContrutorAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNomeContrutorIDENTIFIERTerminalRuleCall_1_0 = (RuleCall)cNomeContrutorAssignment_1.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cParametrosContrutorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cParametrosContrutorParameter_listParserRuleCall_3_0 = (RuleCall)cParametrosContrutorAssignment_3.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cBlocoConstrutorAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cBlocoConstrutorStatement_blockParserRuleCall_5_0 = (RuleCall)cBlocoConstrutorAssignment_5.eContents().get(0);
 		
 		//constructor_declaration:
-		//	modificador=MODIFIER* (tipo=type | "void")? nomeContrutor=IDENTIFIER "(" parametrosContrutor=parameter_list? ")"
+		//	modificador=MODIFIER* nomeContrutor=IDENTIFIER "(" parametrosContrutor=parameter_list? ")"
 		//	blocoConstrutor=statement_block;
 		@Override public ParserRule getRule() { return rule; }
 
-		//modificador=MODIFIER* (tipo=type | "void")? nomeContrutor=IDENTIFIER "(" parametrosContrutor=parameter_list? ")"
+		//modificador=MODIFIER* nomeContrutor=IDENTIFIER "(" parametrosContrutor=parameter_list? ")"
 		//blocoConstrutor=statement_block
 		public Group getGroup() { return cGroup; }
 
@@ -1531,41 +1527,29 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//MODIFIER
 		public RuleCall getModificadorMODIFIERParserRuleCall_0_0() { return cModificadorMODIFIERParserRuleCall_0_0; }
 
-		//(tipo=type | "void")?
-		public Alternatives getAlternatives_1() { return cAlternatives_1; }
-
-		//tipo=type
-		public Assignment getTipoAssignment_1_0() { return cTipoAssignment_1_0; }
-
-		//type
-		public RuleCall getTipoTypeParserRuleCall_1_0_0() { return cTipoTypeParserRuleCall_1_0_0; }
-
-		//"void"
-		public Keyword getVoidKeyword_1_1() { return cVoidKeyword_1_1; }
-
 		//nomeContrutor=IDENTIFIER
-		public Assignment getNomeContrutorAssignment_2() { return cNomeContrutorAssignment_2; }
+		public Assignment getNomeContrutorAssignment_1() { return cNomeContrutorAssignment_1; }
 
 		//IDENTIFIER
-		public RuleCall getNomeContrutorIDENTIFIERTerminalRuleCall_2_0() { return cNomeContrutorIDENTIFIERTerminalRuleCall_2_0; }
+		public RuleCall getNomeContrutorIDENTIFIERTerminalRuleCall_1_0() { return cNomeContrutorIDENTIFIERTerminalRuleCall_1_0; }
 
 		//"("
-		public Keyword getLeftParenthesisKeyword_3() { return cLeftParenthesisKeyword_3; }
+		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
 
 		//parametrosContrutor=parameter_list?
-		public Assignment getParametrosContrutorAssignment_4() { return cParametrosContrutorAssignment_4; }
+		public Assignment getParametrosContrutorAssignment_3() { return cParametrosContrutorAssignment_3; }
 
 		//parameter_list
-		public RuleCall getParametrosContrutorParameter_listParserRuleCall_4_0() { return cParametrosContrutorParameter_listParserRuleCall_4_0; }
+		public RuleCall getParametrosContrutorParameter_listParserRuleCall_3_0() { return cParametrosContrutorParameter_listParserRuleCall_3_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 
 		//blocoConstrutor=statement_block
-		public Assignment getBlocoConstrutorAssignment_6() { return cBlocoConstrutorAssignment_6; }
+		public Assignment getBlocoConstrutorAssignment_5() { return cBlocoConstrutorAssignment_5; }
 
 		//statement_block
-		public RuleCall getBlocoConstrutorStatement_blockParserRuleCall_6_0() { return cBlocoConstrutorStatement_blockParserRuleCall_6_0; }
+		public RuleCall getBlocoConstrutorStatement_blockParserRuleCall_5_0() { return cBlocoConstrutorStatement_blockParserRuleCall_5_0; }
 	}
 
 	public class Static_initializerElements extends AbstractParserRuleElementFinder {
@@ -1905,15 +1889,16 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cOperadorAssignment_0_4_0_0 = (Assignment)cGroup_0_4_0.eContents().get(0);
 		private final Alternatives cOperadorAlternatives_0_4_0_0_0 = (Alternatives)cOperadorAssignment_0_4_0_0.eContents().get(0);
 		private final Keyword cOperadorAmpersandKeyword_0_4_0_0_0_0 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(0);
-		private final Keyword cOperadorAmpersandKeyword_0_4_0_0_0_1 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(1);
+		private final Keyword cOperadorAmpersandEqualsSignKeyword_0_4_0_0_0_1 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(1);
 		private final Keyword cOperadorVerticalLineKeyword_0_4_0_0_0_2 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(2);
 		private final Keyword cOperadorVerticalLineEqualsSignKeyword_0_4_0_0_0_3 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(3);
 		private final Keyword cOperadorCircumflexAccentKeyword_0_4_0_0_0_4 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(4);
 		private final Keyword cOperadorCircumflexAccentEqualsSignKeyword_0_4_0_0_0_5 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(5);
 		private final Keyword cOperadorAmpersandAmpersandKeyword_0_4_0_0_0_6 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(6);
-		private final Keyword cOperadorVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_0_7 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(7);
-		private final Keyword cOperadorAmpersandKeyword_0_4_0_0_0_8 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(8);
-		private final Keyword cOperadorAmpersandEqualsSignKeyword_0_4_0_0_0_9 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(9);
+		private final Keyword cOperadorVerticalLineVerticalLineKeyword_0_4_0_0_0_7 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(7);
+		private final Keyword cOperadorVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_0_8 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(8);
+		private final Keyword cOperadorPercentSignKeyword_0_4_0_0_0_9 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(9);
+		private final Keyword cOperadorPercentSignEqualsSignKeyword_0_4_0_0_0_10 = (Keyword)cOperadorAlternatives_0_4_0_0_0.eContents().get(10);
 		private final Assignment cExpAssignment_0_4_0_1 = (Assignment)cGroup_0_4_0.eContents().get(1);
 		private final RuleCall cExpExpressionParserRuleCall_0_4_0_1_0 = (RuleCall)cExpAssignment_0_4_0_1.eContents().get(0);
 		private final Group cGroup_0_4_1 = (Group)cAlternatives_0_4.eContents().get(1);
@@ -1951,26 +1936,26 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//expression_aux:
 		//	((("(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name) | -> op=mais_aux
 		//	exp=expression | operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" |
-		//	operador="*=" | operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (operador=("ampersand" |
-		//	"ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=") exp=expression | operador="?"
-		//	exp=expression operador=":" exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression |
-		//	operador=(">>=" | "<<" | ">>" | ">>>") exp=expression)) expressoes=expression_aux)?;
+		//	operador="*=" | operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (operador=("&" | "&=" |
+		//	"|" | "|=" | "^" | "^=" | "&&" | "||" | "||=" | "%" | "%=") exp=expression | operador="?" exp=expression operador=":"
+		//	exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>" |
+		//	">>>") exp=expression)) expressoes=expression_aux)?;
 		@Override public ParserRule getRule() { return rule; }
 
 		//((("(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name) | -> op=mais_aux
 		//exp=expression | operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*="
-		//| operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (operador=("ampersand" | "ampersand=" |
-		//"|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=") exp=expression | operador="?" exp=expression
-		//operador=":" exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<"
-		//| ">>" | ">>>") exp=expression)) expressoes=expression_aux)?
+		//| operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (operador=("&" | "&=" | "|" | "|=" |
+		//"^" | "^=" | "&&" | "||" | "||=" | "%" | "%=") exp=expression | operador="?" exp=expression operador=":" exp=expression
+		//| operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>" | ">>>")
+		//exp=expression)) expressoes=expression_aux)?
 		public Group getGroup() { return cGroup; }
 
 		//("(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name) | -> op=mais_aux
 		//exp=expression | operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" | operador="*="
-		//| operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (operador=("ampersand" | "ampersand=" |
-		//"|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=") exp=expression | operador="?" exp=expression
-		//operador=":" exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<"
-		//| ">>" | ">>>") exp=expression)
+		//| operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (operador=("&" | "&=" | "|" | "|=" |
+		//"^" | "^=" | "&&" | "||" | "||=" | "%" | "%=") exp=expression | operador="?" exp=expression operador=":" exp=expression
+		//| operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>" | ">>>")
+		//exp=expression)
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//"(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name
@@ -2119,26 +2104,25 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//expression
 		public RuleCall getExpExpressionParserRuleCall_0_3_1_0() { return cExpExpressionParserRuleCall_0_3_1_0; }
 
-		//operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=")
-		//exp=expression | operador="?" exp=expression operador=":" exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" |
-		//"!=") exp=expression | operador=(">>=" | "<<" | ">>" | ">>>") exp=expression
+		//operador=("&" | "&=" | "|" | "|=" | "^" | "^=" | "&&" | "||" | "||=" | "%" | "%=") exp=expression | operador="?"
+		//exp=expression operador=":" exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression |
+		//operador=(">>=" | "<<" | ">>" | ">>>") exp=expression
 		public Alternatives getAlternatives_0_4() { return cAlternatives_0_4; }
 
-		//operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=")
-		//exp=expression
+		//operador=("&" | "&=" | "|" | "|=" | "^" | "^=" | "&&" | "||" | "||=" | "%" | "%=") exp=expression
 		public Group getGroup_0_4_0() { return cGroup_0_4_0; }
 
-		//operador=("ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=")
+		//operador=("&" | "&=" | "|" | "|=" | "^" | "^=" | "&&" | "||" | "||=" | "%" | "%=")
 		public Assignment getOperadorAssignment_0_4_0_0() { return cOperadorAssignment_0_4_0_0; }
 
-		//"ampersand" | "ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&="
+		//"&" | "&=" | "|" | "|=" | "^" | "^=" | "&&" | "||" | "||=" | "%" | "%="
 		public Alternatives getOperadorAlternatives_0_4_0_0_0() { return cOperadorAlternatives_0_4_0_0_0; }
 
-		//"ampersand"
+		//"&"
 		public Keyword getOperadorAmpersandKeyword_0_4_0_0_0_0() { return cOperadorAmpersandKeyword_0_4_0_0_0_0; }
 
-		//"ampersand="
-		public Keyword getOperadorAmpersandKeyword_0_4_0_0_0_1() { return cOperadorAmpersandKeyword_0_4_0_0_0_1; }
+		//"&="
+		public Keyword getOperadorAmpersandEqualsSignKeyword_0_4_0_0_0_1() { return cOperadorAmpersandEqualsSignKeyword_0_4_0_0_0_1; }
 
 		//"|"
 		public Keyword getOperadorVerticalLineKeyword_0_4_0_0_0_2() { return cOperadorVerticalLineKeyword_0_4_0_0_0_2; }
@@ -2152,17 +2136,20 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//"^="
 		public Keyword getOperadorCircumflexAccentEqualsSignKeyword_0_4_0_0_0_5() { return cOperadorCircumflexAccentEqualsSignKeyword_0_4_0_0_0_5; }
 
-		//"ampersand ampersand"
+		//"&&"
 		public Keyword getOperadorAmpersandAmpersandKeyword_0_4_0_0_0_6() { return cOperadorAmpersandAmpersandKeyword_0_4_0_0_0_6; }
 
+		//"||"
+		public Keyword getOperadorVerticalLineVerticalLineKeyword_0_4_0_0_0_7() { return cOperadorVerticalLineVerticalLineKeyword_0_4_0_0_0_7; }
+
 		//"||="
-		public Keyword getOperadorVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_0_7() { return cOperadorVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_0_7; }
+		public Keyword getOperadorVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_0_8() { return cOperadorVerticalLineVerticalLineEqualsSignKeyword_0_4_0_0_0_8; }
 
-		//"&"
-		public Keyword getOperadorAmpersandKeyword_0_4_0_0_0_8() { return cOperadorAmpersandKeyword_0_4_0_0_0_8; }
+		//"%"
+		public Keyword getOperadorPercentSignKeyword_0_4_0_0_0_9() { return cOperadorPercentSignKeyword_0_4_0_0_0_9; }
 
-		//"&="
-		public Keyword getOperadorAmpersandEqualsSignKeyword_0_4_0_0_0_9() { return cOperadorAmpersandEqualsSignKeyword_0_4_0_0_0_9; }
+		//"%="
+		public Keyword getOperadorPercentSignEqualsSignKeyword_0_4_0_0_0_10() { return cOperadorPercentSignEqualsSignKeyword_0_4_0_0_0_10; }
 
 		//exp=expression
 		public Assignment getExpAssignment_0_4_0_1() { return cExpAssignment_0_4_0_1; }
@@ -2802,35 +2789,35 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "type");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final Assignment cTipoAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
-		private final RuleCall cTipoType_specifierParserRuleCall_0_0_0 = (RuleCall)cTipoAssignment_0_0.eContents().get(0);
-		private final Assignment cTipoAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
-		private final RuleCall cTipoNameParserRuleCall_0_1_0 = (RuleCall)cTipoAssignment_0_1.eContents().get(0);
+		private final Assignment cPrimitivoAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
+		private final RuleCall cPrimitivoType_specifierParserRuleCall_0_0_0 = (RuleCall)cPrimitivoAssignment_0_0.eContents().get(0);
+		private final Assignment cObjetoAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
+		private final RuleCall cObjetoNameParserRuleCall_0_1_0 = (RuleCall)cObjetoAssignment_0_1.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cLeftSquareBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		
 		//type:
-		//	(tipo=type_specifier | tipo=name) ("[" "]")*;
+		//	(primitivo=type_specifier | objeto=name) ("[" "]")*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//(tipo=type_specifier | tipo=name) ("[" "]")*
+		//(primitivo=type_specifier | objeto=name) ("[" "]")*
 		public Group getGroup() { return cGroup; }
 
-		//tipo=type_specifier | tipo=name
+		//primitivo=type_specifier | objeto=name
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
-		//tipo=type_specifier
-		public Assignment getTipoAssignment_0_0() { return cTipoAssignment_0_0; }
+		//primitivo=type_specifier
+		public Assignment getPrimitivoAssignment_0_0() { return cPrimitivoAssignment_0_0; }
 
 		//type_specifier
-		public RuleCall getTipoType_specifierParserRuleCall_0_0_0() { return cTipoType_specifierParserRuleCall_0_0_0; }
+		public RuleCall getPrimitivoType_specifierParserRuleCall_0_0_0() { return cPrimitivoType_specifierParserRuleCall_0_0_0; }
 
-		//tipo=name
-		public Assignment getTipoAssignment_0_1() { return cTipoAssignment_0_1; }
+		//objeto=name
+		public Assignment getObjetoAssignment_0_1() { return cObjetoAssignment_0_1; }
 
 		//name
-		public RuleCall getTipoNameParserRuleCall_0_1_0() { return cTipoNameParserRuleCall_0_1_0; }
+		public RuleCall getObjetoNameParserRuleCall_0_1_0() { return cObjetoNameParserRuleCall_0_1_0; }
 
 		//("[" "]")*
 		public Group getGroup_1() { return cGroup_1; }
@@ -3138,8 +3125,8 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 
 	//class_declaration:
 	//	modificadores+=MODIFIER* "class" nomeClasse=IDENTIFIER ("extends" superclasse=name)? ("implements"
-	//	implementosClasse+=name ("," implementosClasse+=name)*)? "{" (corpoClasse=field_declaration |
-	//	declaracaoClasse=class_declaration)* "}";
+	//	implementosClasse+=name ("," implementosClasse+=name)*)? "{" (corpoClasse+=field_declaration |
+	//	declaracaoClasse+=class_declaration)* "}";
 	public Class_declarationElements getClass_declarationAccess() {
 		return pClass_declaration;
 	}
@@ -3150,7 +3137,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 
 	//interface_declaration:
 	//	modificadores+=MODIFIER* "interface" nomeInterface=IDENTIFIER ("extends" superinterfaces+=name (","
-	//	superinterfaces+=name)*)? "{" corpoInterface=field_declaration* "}";
+	//	superinterfaces+=name)*)? "{" corpoInterface+=field_declaration* "}";
 	public Interface_declarationElements getInterface_declarationAccess() {
 		return pInterface_declaration;
 	}
@@ -3202,7 +3189,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//statement_block:
-	//	"{" corpo=statement* "}";
+	//	"{" corpo+=statement* "}";
 	public Statement_blockElements getStatement_blockAccess() {
 		return pStatement_block;
 	}
@@ -3212,7 +3199,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//statement:
-	//	-> declaracaoVariavel=variable_declaration | -> expressao=expression ";" | bloco=statement_block |
+	//	-> declaracaoVariavel=variable_declaration | -> expressao=expression ";" | newbloco=statement_block |
 	//	corpoIf=if_statement | corpoDoWhile=do_statement | corpoWhile=while_statement | corpoFor=for_statement |
 	//	corpoTryCatch=try_statement | corpoSwitchCase=switch_statement | "synchronized" "(" expressaoSynchronized=expression
 	//	")" corpoSynchronize=statement | "return" return=expression? ";" | "throw" exececao=expression ";" | IDENTIFIER ":" //TODO naum sei o q eh
@@ -3322,7 +3309,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//constructor_declaration:
-	//	modificador=MODIFIER* (tipo=type | "void")? nomeContrutor=IDENTIFIER "(" parametrosContrutor=parameter_list? ")"
+	//	modificador=MODIFIER* nomeContrutor=IDENTIFIER "(" parametrosContrutor=parameter_list? ")"
 	//	blocoConstrutor=statement_block;
 	public Constructor_declarationElements getConstructor_declarationAccess() {
 		return pConstructor_declaration;
@@ -3378,10 +3365,10 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//expression_aux:
 	//	((("(" parametros=arglist? ")" | aux | "." exp=expression | "," expression | "instanceof" -> name) | -> op=mais_aux
 	//	exp=expression | operador=("++" | "--") | (-> op=mais_aux | operador="-" | operador="-=" | operador="*" |
-	//	operador="*=" | operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (operador=("ampersand" |
-	//	"ampersand=" | "|" | "|=" | "^" | "^=" | "ampersand ampersand" | "||=" | "&" | "&=") exp=expression | operador="?"
-	//	exp=expression operador=":" exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression |
-	//	operador=(">>=" | "<<" | ">>" | ">>>") exp=expression)) expressoes=expression_aux)?;
+	//	operador="*=" | operador="/" | operador="/=" | operador="%" | operador="%=") exp=expression | (operador=("&" | "&=" |
+	//	"|" | "|=" | "^" | "^=" | "&&" | "||" | "||=" | "%" | "%=") exp=expression | operador="?" exp=expression operador=":"
+	//	exp=expression | operador=(">" | "<" | ">=" | "<=" | "==" | "!=") exp=expression | operador=(">>=" | "<<" | ">>" |
+	//	">>>") exp=expression)) expressoes=expression_aux)?;
 	public Expression_auxElements getExpression_auxAccess() {
 		return pExpression_aux;
 	}
@@ -3512,7 +3499,7 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//type:
-	//	(tipo=type_specifier | tipo=name) ("[" "]")*;
+	//	(primitivo=type_specifier | objeto=name) ("[" "]")*;
 	public TypeElements getTypeAccess() {
 		return pType;
 	}

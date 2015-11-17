@@ -327,7 +327,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *         nomeClasse=IDENTIFIER 
 	 *         superclasse=name? 
 	 *         (implementosClasse+=name implementosClasse+=name*)? 
-	 *         (corpoClasse=field_declaration | declaracaoClasse=class_declaration)*
+	 *         (corpoClasse+=field_declaration | declaracaoClasse+=class_declaration)*
 	 *     )
 	 */
 	protected void sequence_class_declaration(EObject context, class_declaration semanticObject) {
@@ -346,7 +346,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (modificador=MODIFIER* tipo=type? nomeContrutor=IDENTIFIER parametrosContrutor=parameter_list? blocoConstrutor=statement_block)
+	 *     (modificador=MODIFIER* nomeContrutor=IDENTIFIER parametrosContrutor=parameter_list? blocoConstrutor=statement_block)
 	 */
 	protected void sequence_constructor_declaration(EObject context, constructor_declaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -437,7 +437,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     ((tipo=type_specifier | tipo=name) expressao=expression expressoes=expression_aux expressoes=expression_aux)
+	 *     ((primitivo=type_specifier | objeto=name) expressao=expression expressoes=expression_aux expressoes=expression_aux)
 	 */
 	protected void sequence_exp_aux_expression_expression_aux_type(EObject context, type semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -446,7 +446,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     ((tipo=type_specifier | tipo=name) expressao=expression expressoes=expression_aux)
+	 *     ((primitivo=type_specifier | objeto=name) expressao=expression expressoes=expression_aux)
 	 */
 	protected void sequence_exp_aux_expression_type(EObject context, type semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -455,7 +455,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     ((tipo=type_specifier | tipo=name) expressao=expression)
+	 *     ((primitivo=type_specifier | objeto=name) expressao=expression)
 	 */
 	protected void sequence_exp_aux_type(EObject context, type semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -487,16 +487,17 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *             ) | 
 	 *             (
 	 *                 (
-	 *                     operador='ampersand' | 
-	 *                     operador='ampersand=' | 
+	 *                     operador='&' | 
+	 *                     operador='&=' | 
 	 *                     operador='|' | 
 	 *                     operador='|=' | 
 	 *                     operador='^' | 
 	 *                     operador='^=' | 
-	 *                     operador='ampersand ampersand' | 
+	 *                     operador='&&' | 
+	 *                     operador='||' | 
 	 *                     operador='||=' | 
-	 *                     operador='&' | 
-	 *                     operador='&='
+	 *                     operador='%' | 
+	 *                     operador='%='
 	 *                 ) 
 	 *                 exp=expression
 	 *             ) | 
@@ -626,7 +627,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (modificadores+=MODIFIER* nomeInterface=IDENTIFIER (superinterfaces+=name superinterfaces+=name*)? corpoInterface=field_declaration*)
+	 *     (modificadores+=MODIFIER* nomeInterface=IDENTIFIER (superinterfaces+=name superinterfaces+=name*)? corpoInterface+=field_declaration*)
 	 */
 	protected void sequence_interface_declaration(EObject context, interface_declaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -752,7 +753,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     corpo=statement*
+	 *     corpo+=statement*
 	 */
 	protected void sequence_statement_block(EObject context, statement_block semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -764,7 +765,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     (
 	 *         declaracaoVariavel=variable_declaration | 
 	 *         expressao=expression | 
-	 *         bloco=statement_block | 
+	 *         newbloco=statement_block | 
 	 *         corpoIf=if_statement | 
 	 *         corpoDoWhile=do_statement | 
 	 *         corpoWhile=while_statement | 
@@ -846,7 +847,7 @@ public class SimpleJavaSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (tipo=type_specifier | tipo=name)
+	 *     (primitivo=type_specifier | objeto=name)
 	 */
 	protected void sequence_type(EObject context, type semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

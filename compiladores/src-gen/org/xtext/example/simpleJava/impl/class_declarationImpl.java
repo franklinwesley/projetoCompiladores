@@ -95,24 +95,24 @@ public class class_declarationImpl extends MinimalEObjectImpl.Container implemen
   protected EList<name> implementosClasse;
 
   /**
-   * The cached value of the '{@link #getCorpoClasse() <em>Corpo Classe</em>}' containment reference.
+   * The cached value of the '{@link #getCorpoClasse() <em>Corpo Classe</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getCorpoClasse()
    * @generated
    * @ordered
    */
-  protected field_declaration corpoClasse;
+  protected EList<field_declaration> corpoClasse;
 
   /**
-   * The cached value of the '{@link #getDeclaracaoClasse() <em>Declaracao Classe</em>}' containment reference.
+   * The cached value of the '{@link #getDeclaracaoClasse() <em>Declaracao Classe</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getDeclaracaoClasse()
    * @generated
    * @ordered
    */
-  protected class_declaration declaracaoClasse;
+  protected EList<class_declaration> declaracaoClasse;
 
   /**
    * <!-- begin-user-doc -->
@@ -239,8 +239,12 @@ public class class_declarationImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public field_declaration getCorpoClasse()
+  public EList<field_declaration> getCorpoClasse()
   {
+    if (corpoClasse == null)
+    {
+      corpoClasse = new EObjectContainmentEList<field_declaration>(field_declaration.class, this, SimpleJavaPackage.CLASS_DECLARATION__CORPO_CLASSE);
+    }
     return corpoClasse;
   }
 
@@ -249,85 +253,13 @@ public class class_declarationImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetCorpoClasse(field_declaration newCorpoClasse, NotificationChain msgs)
+  public EList<class_declaration> getDeclaracaoClasse()
   {
-    field_declaration oldCorpoClasse = corpoClasse;
-    corpoClasse = newCorpoClasse;
-    if (eNotificationRequired())
+    if (declaracaoClasse == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.CLASS_DECLARATION__CORPO_CLASSE, oldCorpoClasse, newCorpoClasse);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      declaracaoClasse = new EObjectContainmentEList<class_declaration>(class_declaration.class, this, SimpleJavaPackage.CLASS_DECLARATION__DECLARACAO_CLASSE);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setCorpoClasse(field_declaration newCorpoClasse)
-  {
-    if (newCorpoClasse != corpoClasse)
-    {
-      NotificationChain msgs = null;
-      if (corpoClasse != null)
-        msgs = ((InternalEObject)corpoClasse).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.CLASS_DECLARATION__CORPO_CLASSE, null, msgs);
-      if (newCorpoClasse != null)
-        msgs = ((InternalEObject)newCorpoClasse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.CLASS_DECLARATION__CORPO_CLASSE, null, msgs);
-      msgs = basicSetCorpoClasse(newCorpoClasse, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.CLASS_DECLARATION__CORPO_CLASSE, newCorpoClasse, newCorpoClasse));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public class_declaration getDeclaracaoClasse()
-  {
     return declaracaoClasse;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetDeclaracaoClasse(class_declaration newDeclaracaoClasse, NotificationChain msgs)
-  {
-    class_declaration oldDeclaracaoClasse = declaracaoClasse;
-    declaracaoClasse = newDeclaracaoClasse;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.CLASS_DECLARATION__DECLARACAO_CLASSE, oldDeclaracaoClasse, newDeclaracaoClasse);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDeclaracaoClasse(class_declaration newDeclaracaoClasse)
-  {
-    if (newDeclaracaoClasse != declaracaoClasse)
-    {
-      NotificationChain msgs = null;
-      if (declaracaoClasse != null)
-        msgs = ((InternalEObject)declaracaoClasse).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.CLASS_DECLARATION__DECLARACAO_CLASSE, null, msgs);
-      if (newDeclaracaoClasse != null)
-        msgs = ((InternalEObject)newDeclaracaoClasse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.CLASS_DECLARATION__DECLARACAO_CLASSE, null, msgs);
-      msgs = basicSetDeclaracaoClasse(newDeclaracaoClasse, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.CLASS_DECLARATION__DECLARACAO_CLASSE, newDeclaracaoClasse, newDeclaracaoClasse));
   }
 
   /**
@@ -347,9 +279,9 @@ public class class_declarationImpl extends MinimalEObjectImpl.Container implemen
       case SimpleJavaPackage.CLASS_DECLARATION__IMPLEMENTOS_CLASSE:
         return ((InternalEList<?>)getImplementosClasse()).basicRemove(otherEnd, msgs);
       case SimpleJavaPackage.CLASS_DECLARATION__CORPO_CLASSE:
-        return basicSetCorpoClasse(null, msgs);
+        return ((InternalEList<?>)getCorpoClasse()).basicRemove(otherEnd, msgs);
       case SimpleJavaPackage.CLASS_DECLARATION__DECLARACAO_CLASSE:
-        return basicSetDeclaracaoClasse(null, msgs);
+        return ((InternalEList<?>)getDeclaracaoClasse()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -406,10 +338,12 @@ public class class_declarationImpl extends MinimalEObjectImpl.Container implemen
         getImplementosClasse().addAll((Collection<? extends name>)newValue);
         return;
       case SimpleJavaPackage.CLASS_DECLARATION__CORPO_CLASSE:
-        setCorpoClasse((field_declaration)newValue);
+        getCorpoClasse().clear();
+        getCorpoClasse().addAll((Collection<? extends field_declaration>)newValue);
         return;
       case SimpleJavaPackage.CLASS_DECLARATION__DECLARACAO_CLASSE:
-        setDeclaracaoClasse((class_declaration)newValue);
+        getDeclaracaoClasse().clear();
+        getDeclaracaoClasse().addAll((Collection<? extends class_declaration>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -438,10 +372,10 @@ public class class_declarationImpl extends MinimalEObjectImpl.Container implemen
         getImplementosClasse().clear();
         return;
       case SimpleJavaPackage.CLASS_DECLARATION__CORPO_CLASSE:
-        setCorpoClasse((field_declaration)null);
+        getCorpoClasse().clear();
         return;
       case SimpleJavaPackage.CLASS_DECLARATION__DECLARACAO_CLASSE:
-        setDeclaracaoClasse((class_declaration)null);
+        getDeclaracaoClasse().clear();
         return;
     }
     super.eUnset(featureID);
@@ -466,9 +400,9 @@ public class class_declarationImpl extends MinimalEObjectImpl.Container implemen
       case SimpleJavaPackage.CLASS_DECLARATION__IMPLEMENTOS_CLASSE:
         return implementosClasse != null && !implementosClasse.isEmpty();
       case SimpleJavaPackage.CLASS_DECLARATION__CORPO_CLASSE:
-        return corpoClasse != null;
+        return corpoClasse != null && !corpoClasse.isEmpty();
       case SimpleJavaPackage.CLASS_DECLARATION__DECLARACAO_CLASSE:
-        return declaracaoClasse != null;
+        return declaracaoClasse != null && !declaracaoClasse.isEmpty();
     }
     return super.eIsSet(featureID);
   }

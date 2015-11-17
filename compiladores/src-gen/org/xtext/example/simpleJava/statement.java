@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.example.simpleJava.statement#getDeclaracaoVariavel <em>Declaracao Variavel</em>}</li>
  *   <li>{@link org.xtext.example.simpleJava.statement#getExpressao <em>Expressao</em>}</li>
- *   <li>{@link org.xtext.example.simpleJava.statement#getBloco <em>Bloco</em>}</li>
+ *   <li>{@link org.xtext.example.simpleJava.statement#getNewbloco <em>Newbloco</em>}</li>
  *   <li>{@link org.xtext.example.simpleJava.statement#getCorpoIf <em>Corpo If</em>}</li>
  *   <li>{@link org.xtext.example.simpleJava.statement#getCorpoDoWhile <em>Corpo Do While</em>}</li>
  *   <li>{@link org.xtext.example.simpleJava.statement#getCorpoWhile <em>Corpo While</em>}</li>
@@ -89,30 +89,30 @@ public interface statement extends EObject
   void setExpressao(expression value);
 
   /**
-   * Returns the value of the '<em><b>Bloco</b></em>' containment reference.
+   * Returns the value of the '<em><b>Newbloco</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Bloco</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Newbloco</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Bloco</em>' containment reference.
-   * @see #setBloco(statement_block)
-   * @see org.xtext.example.simpleJava.SimpleJavaPackage#getstatement_Bloco()
+   * @return the value of the '<em>Newbloco</em>' containment reference.
+   * @see #setNewbloco(statement_block)
+   * @see org.xtext.example.simpleJava.SimpleJavaPackage#getstatement_Newbloco()
    * @model containment="true"
    * @generated
    */
-  statement_block getBloco();
+  statement_block getNewbloco();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.simpleJava.statement#getBloco <em>Bloco</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.simpleJava.statement#getNewbloco <em>Newbloco</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Bloco</em>' containment reference.
-   * @see #getBloco()
+   * @param value the new value of the '<em>Newbloco</em>' containment reference.
+   * @see #getNewbloco()
    * @generated
    */
-  void setBloco(statement_block value);
+  void setNewbloco(statement_block value);
 
   /**
    * Returns the value of the '<em><b>Corpo If</b></em>' containment reference.

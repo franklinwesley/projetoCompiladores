@@ -29,4 +29,15 @@ public class Tipo {
 	public void setHerdado(Tipo herdado) {
 		this.herdado = herdado;
 	}
+	 @Override
+	public boolean equals(Object obj) {
+		 if (!(obj instanceof Tipo)) {
+			 return false;
+		 }
+		 Tipo t = (Tipo) obj;
+		 if (t.getNome().equals(this.nome)) {
+			 return true;
+		 }
+		 return false;
+	 }
 }

@@ -114,55 +114,35 @@ public interface class_declaration extends EObject
   EList<name> getImplementosClasse();
 
   /**
-   * Returns the value of the '<em><b>Corpo Classe</b></em>' containment reference.
+   * Returns the value of the '<em><b>Corpo Classe</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.simpleJava.field_declaration}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Corpo Classe</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Corpo Classe</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Corpo Classe</em>' containment reference.
-   * @see #setCorpoClasse(field_declaration)
+   * @return the value of the '<em>Corpo Classe</em>' containment reference list.
    * @see org.xtext.example.simpleJava.SimpleJavaPackage#getclass_declaration_CorpoClasse()
    * @model containment="true"
    * @generated
    */
-  field_declaration getCorpoClasse();
+  EList<field_declaration> getCorpoClasse();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.simpleJava.class_declaration#getCorpoClasse <em>Corpo Classe</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Corpo Classe</em>' containment reference.
-   * @see #getCorpoClasse()
-   * @generated
-   */
-  void setCorpoClasse(field_declaration value);
-
-  /**
-   * Returns the value of the '<em><b>Declaracao Classe</b></em>' containment reference.
+   * Returns the value of the '<em><b>Declaracao Classe</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.simpleJava.class_declaration}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Declaracao Classe</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Declaracao Classe</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Declaracao Classe</em>' containment reference.
-   * @see #setDeclaracaoClasse(class_declaration)
+   * @return the value of the '<em>Declaracao Classe</em>' containment reference list.
    * @see org.xtext.example.simpleJava.SimpleJavaPackage#getclass_declaration_DeclaracaoClasse()
    * @model containment="true"
    * @generated
    */
-  class_declaration getDeclaracaoClasse();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.simpleJava.class_declaration#getDeclaracaoClasse <em>Declaracao Classe</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Declaracao Classe</em>' containment reference.
-   * @see #getDeclaracaoClasse()
-   * @generated
-   */
-  void setDeclaracaoClasse(class_declaration value);
+  EList<class_declaration> getDeclaracaoClasse();
 
 } // class_declaration

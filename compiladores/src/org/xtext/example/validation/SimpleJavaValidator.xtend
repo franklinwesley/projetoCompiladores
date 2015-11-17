@@ -24,6 +24,13 @@ import org.xtext.example.simpleJava.variable_declaration
 import org.xtext.example.simpleJava.variable_declarator
 import org.xtext.example.simpleJava.while_statement
 import org.xtext.example.simpleJava.SimpleJavaPackage
+import org.xtext.example.simpleJava.interface_declaration
+import org.xtext.example.simpleJava.field_declaration
+import org.xtext.example.simpleJava.class_declaration
+import org.xtext.example.simpleJava.constructor_declaration
+import org.xtext.example.simpleJava.variable_initializer
+import org.xtext.example.simpleJava.statement_block
+import org.xtext.example.simpleJava.expression_aux
 
 //import org.eclipse.xtext.validation.Check
 /**
@@ -37,7 +44,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 	private final Map<String, Variavel> variaveis = new HashMap<String, Variavel>();
 	private final Map<String, Metodo> metodos = new HashMap<String, Metodo>();
 
-	private final List<Integer> registradores = new ArrayList<Integer>(); 
+	private final List<Integer> registradores = new ArrayList<Integer>();
 	private final List<Integer> labels = new ArrayList<Integer>();
 
 //  public static val INVALID_NAME = 'invalidName'
@@ -52,51 +59,296 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 //	}
 	@Check
 	def runChecks(compilation_unit comp) {
-		// falta testar
-		checkTypeDeclaration(comp.declaracao);
-		// falta testar
-		checkVariableDeclaration(comp.declaracao);
-		// falta testar
-		checkVariableInitializer(comp.declaracao);
-		// falta testar
-		checkInterativeWhile(comp.declaracao);
-		// falta testar
-		checkAritmeticExpression(comp.declaracao);
-		// falta testar
-		checkBooleanExpression(comp.declaracao);
-		// incompleto
-		checkLiterals(comp.declaracao);
-		// falta testar
-		checkVariableUsed(comp.declaracao);
-		// falta testar
-		checkMetodDeclaration(comp.declaracao);
-		// falta testar
-		checkMetodoUsed(comp.declaracao);
+		checkType_Declaration(comp.declaracao)
 	}
 
-	def checkMetodoUsed(EList<type_declaration> list) {
-		salvarArquivo("oi")
+	def checkType_Declaration(EList<type_declaration> list) {
 		for (type_declaration td : list) {
-			checkUsoMetodo(td.declaracaoClasse.corpoClasse.declaracaoMetodo);
+			checkInterfaceDeclaration(td.declaracaoInterface)
+			checkClassDeclaration(td.declaracaoClasse)
 		}
 	}
 
-	def checkUsoMetodo(method_declaration declaration) {
-		if (declaration.blocoMetodo.corpo.expressao.identificador != null &&
-			declaration.blocoMetodo.corpo.expressao.expressoes.parametros != null) {
-			if (metodos.containsKey(declaration.blocoMetodo.corpo.expressao.identificador)) {
-				var m = metodos.get(declaration.blocoMetodo.corpo.expressao.identificador);
-				if (!verificaParametros(m, declaration.blocoMetodo.corpo.expressao.expressoes.parametros)) {
-					// erro parametros errados
-					error("Invalid parameters", SimpleJavaPackage.Literals.EXPRESSION_AUX__PARAMETROS)
+	def checkInterfaceDeclaration(interface_declaration id) {
+		tipos.add(new Tipo(id.nomeInterface))
+		for (field_declaration fd : id.corpoInterface) {
+			checkVariableDeclaration(fd.declaracaoVariavel)
+		}
+	}
+
+	def checkVariableDeclaration(variable_declaration vd) {
+		var tipoPrimitivo = new Tipo(vd.tipoVariavel.primitivo.nome);
+		var tipoObjeto = new Tipo(vd.tipoVariavel.objeto.nome);
+		if (!tipos.contains(tipoPrimitivo) && !tipos.contains(tipoObjeto)) {
+			// error tipo naum existe
+			error("Inexistent type", SimpleJavaPackage.Literals.VARIABLE_DECLARATION__TIPO_VARIAVEL)
+		} else {
+			// add variavel
+			var vars = vd.declaracaoVariaveis;
+			for (variable_declarator variable : vars) {
+				if (!variaveis.containsKey(variable.nomeVariavel)) {
+					if (tipoPrimitivo != null) {
+						var variavel = new Variavel(variable.nomeVariavel, tipoPrimitivo);
+						variaveis.put(variable.nomeVariavel, variavel);
+					} else {
+						var variavel = new Variavel(variable.nomeVariavel, tipoObjeto);
+						variaveis.put(variable.nomeVariavel, variavel);
+					}
+					if (variable.op != null) {
+						checkVariableInitializer(variable.valorVariavel)
+					}
+				} else {
+					// erro variavel ja existe
+					error("Variable alredy exist", SimpleJavaPackage.Literals.VARIABLE_DECLARATOR__NOME_VARIAVEL)
 				}
-			} else {
-				// erro metodo inexistente
-				error("inexistent method", SimpleJavaPackage.Literals.METHOD_DECLARATION__BLOCO_METODO)
 			}
 		}
 	}
 
+	def checkVariableInitializer(variable_initializer vi) {
+		var vars = vi.valorVariaveis
+		if (vars != null) {
+			for (variable_initializer newvi : vars) {
+				checkVariableInitializer(newvi)
+			}
+		} else {
+			checkExp(vi.expressaoVariavel)
+		}
+	}
+
+	def checkExp(expression exp) {
+		if (isBooleanExp(exp)) {
+			checkBoolean(exp)
+		} else if (isLiteral(exp)) {
+			checkLiterals(exp)
+		} else if (isArimeticExp(exp)) {
+			checkAritmetic(exp)
+		} else if (isVariable(exp)) {
+			checkVariableUsed(exp)
+		} else if (isMethod(exp)) {
+			checkMethodUsed(exp)
+		} else if (isAtribuicao(exp)) {
+			checkAttribution(exp)
+		}
+	}
+
+	def checkClassDeclaration(class_declaration cd) {
+		var tipo = new Tipo(cd.nomeClasse)
+		tipos.add(tipo)
+		for (class_declaration newcd : cd.declaracaoClasse) {
+			checkClassDeclaration(newcd)
+		}
+		for (field_declaration fd : cd.corpoClasse) {
+			checkVariableDeclaration(fd.declaracaoVariavel)
+			checkMethodDeclaration(fd.declaracaoMetodo)
+			checkConstructorDeclaration(cd.nomeClasse, fd.declaracaoConstrutor)
+		}
+	}
+
+	def checkConstructorDeclaration(String nameClass, constructor_declaration cd) {
+		var tipo = new Tipo(nameClass)
+		if (nameClass.equals(cd.nomeContrutor)) {
+			metodos.put(cd.nomeContrutor, new Metodo(cd.nomeContrutor, tipo, getparametros(cd.parametrosContrutor)));
+		} else {
+			error("Invalid constructor name", SimpleJavaPackage.Literals.CONSTRUCTOR_DECLARATION__NOME_CONTRUTOR)
+		}
+	}
+
+	def checkMethodDeclaration(method_declaration md) {
+		var tipoPrimitivo = new Tipo(md.tipoRetorno.primitivo.nome);
+		var tipoObjeto = new Tipo(md.tipoRetorno.objeto.nome);
+		if (!tipos.contains(tipoPrimitivo) && !tipos.contains(tipoObjeto)) {
+			// error tipo naum existe
+			error("Inexistent type", SimpleJavaPackage.Literals.METHOD_DECLARATION__TIPO_RETORNO)
+		} else {
+			if (!metodos.containsKey(md.nomeMetodo)) {
+				if (tipoPrimitivo != null) {
+					var metodo = new Metodo(md.nomeMetodo, tipoPrimitivo, getparametros(md.parametrosMetodo))
+					metodos.put(md.nomeMetodo, metodo)
+				} else {
+					var metodo = new Metodo(md.nomeMetodo, tipoPrimitivo, getparametros(md.parametrosMetodo))
+					metodos.put(md.nomeMetodo, metodo)
+				}
+				if (md.blocoMetodo != null) {
+					checkStatementBlock(md.blocoMetodo)
+				}
+			} else {
+				error("Method already exists", SimpleJavaPackage.Literals.METHOD_DECLARATION__NOME_METODO)
+			}
+		}
+	}
+
+	def checkStatementBlock(statement_block sb) {
+		for (statement s : sb.corpo) {
+			checkStatement(s)
+		}
+	}
+
+	def checkStatement(statement s) {
+		if (s.corpoWhile != null) {
+			checkWhile(s.corpoWhile)
+		} else if (s.declaracaoVariavel != null) {
+			checkDeclaracaoVariavel(s.declaracaoVariavel)
+		} else if (s.expressao != null) {
+			checkExp(s.expressao)
+		}
+	}
+
+	def checkWhile(while_statement statement) {
+		if (!isBooleanExp(statement.expressaoWhile)) {
+			// erro expressao invalida
+			error("Invalid expression", SimpleJavaPackage.Literals.WHILE_STATEMENT__EXPRESSAO_WHILE)
+		} else {
+			checkStatement(statement.blocoWhile)
+		}
+	}
+
+	def checkBoolean(expression expression) {
+		// checar espressao booleana
+		var metodo = metodos.get(expression.identificador);
+		var variavel = variaveis.get(expression.identificador);
+		if (expression.logical.operador != null || (metodo != null && metodo.tipoRetorno.nome.equals("boolean")) ||
+			(variavel != null && variavel.tipo.nome.equals("boolean"))) {
+			if ((expression.logical.operador != "!" || !isBooleanExp(expression.logical.exp)) &&
+				(expression.logical.operador != "true" && expression.logical.operador != "false")) {
+				error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION__LOGICAL)
+			}
+			if ((metodo == null || !metodo.tipoRetorno.nome.equals("boolean")) ||
+				(variavel == null && !variavel.tipo.nome.equals("boolean"))) {
+				error("Invalid type", SimpleJavaPackage.Literals.EXPRESSION__IDENTIFICADOR)
+			}
+			checkBooleanExpAux(expression.expressoes)
+		}
+		return false
+	}
+
+	def checkBooleanExpAux(expression_aux exp) {
+		if (exp.operador != "&" && exp.operador != "^=" && exp.operador != "&=" && exp.operador != "||" &&
+			exp.operador != "&&" && exp.operador != "|" && exp.operador != "||=" && exp.operador != "|=" &&
+			exp.operador != "%" && exp.operador != "^" && exp.operador != "%=") {
+			error("Invalid operator", SimpleJavaPackage.Literals.EXPRESSION_AUX__OPERADOR)
+		} else {
+			checkBooleanAux(exp.exp)
+		}
+	}
+
+	def checkBooleanAux (expression exp) {
+		var metodo = metodos.get(exp.identificador);
+		var variavel = variaveis.get(exp.identificador);
+		if ((metodo == null || !metodo.tipoRetorno.nome.equals("boolean")) ||
+			(variavel == null || !variavel.tipo.nome.equals("boolean"))) {
+			if (exp.logical.operador == null) {
+				error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION__LOGICAL)
+			} else {
+				error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION__IDENTIFICADOR)
+			}
+		}
+	}
+
+	def checkLiterals(expression expression) {
+		// check literais
+		if (expression.literal.inteiro == null && expression.literal.string == null) {
+			if (expression.logical == null) {
+				error("Invalid literal", SimpleJavaPackage.Literals.EXPRESSION__LOGICAL)
+			} else {
+				error("Invalid literal", SimpleJavaPackage.Literals.EXPRESSION__LITERAL)
+			}
+		}
+	}
+
+	def checkVariableUsed(expression exp) {
+		if (!variaveis.containsKey(exp.identificador)) {
+			// erro variavel nao exite
+			error("Inexistent variable", SimpleJavaPackage.Literals.EXPRESSION__IDENTIFICADOR)
+		}
+	}
+
+	def checkMethodUsed(expression exp) {
+		if (metodos.containsKey(exp.identificador)) {
+			var m = metodos.get(exp.identificador);
+			if (exp.expressoes.parametros == null || !verificaParametros(m, exp.expressoes.parametros)) {
+				// erro parametros errados
+				error("Invalid parameters", SimpleJavaPackage.Literals.EXPRESSION_AUX__PARAMETROS)
+			}
+		} else {
+			// erro metodo inexistente
+			error("inexistent method", SimpleJavaPackage.Literals.EXPRESSION__IDENTIFICADOR)
+		}
+	}
+
+	def checkAttribution(expression exp) {
+		if (!variaveis.containsKey(exp.identificador)) {
+			error("inexistent variable", SimpleJavaPackage.Literals.EXPRESSION__IDENTIFICADOR)
+		} else if (exp.exp.novo == null) {
+			error("inexistent command", SimpleJavaPackage.Literals.EXPRESSION__NOVO)
+		} else {
+			checkAttributionExpAux(exp.expressoes)
+		}
+	}
+
+	def checkAttributionExpAux(expression_aux exp) {
+		if (exp.operador != "^=" && exp.operador != "*=" && exp.operador != "-=" && exp.operador != "||=" &&
+			exp.operador != "|=" && exp.operador != "/=" && exp.operador != "%=" && exp.operador != "&=") {
+			error("inexistent operator", SimpleJavaPackage.Literals.EXPRESSION_AUX__OPERADOR)
+		}
+	}
+
+	def checkAritmetic(expression expression) {
+		// checar espressao aritimetrica
+		var metodo = metodos.get(expression.identificador);
+		var variavel = variaveis.get(expression.identificador);
+		if (expression.literal.decimal == null && expression.literal.inteiro == null &&
+			expression.literal.l_float == null) {
+			error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION__LITERAL)
+		} else if ((metodo == null || !metodo.tipoRetorno.nome.equals("int")) &&
+			(variavel == null || !variavel.tipo.nome.equals("int")) &&
+			(metodo == null || !metodo.tipoRetorno.nome.equals("float")) &&
+			(variavel == null || !variavel.tipo.nome.equals("float")) &&
+			(metodo == null || !metodo.tipoRetorno.nome.equals("long")) &&
+			(variavel == null || !variavel.tipo.nome.equals("long")) &&
+			(metodo == null || !metodo.tipoRetorno.nome.equals("double")) &&
+			(variavel == null || !variavel.tipo.nome.equals("double"))) {
+			error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION__IDENTIFICADOR)
+		} else {
+			checkAritmeticExpAux(expression.expressoes)
+		}
+	}
+
+	def checkAritmeticExpAux(expression_aux exp) {
+		if (exp.op == null && exp.operador != "++" && exp.operador != "--" && exp.operador != "-" &&
+			exp.operador != "-=" && exp.operador != "*" && exp.operador != "*=" && exp.operador != "/" &&
+			exp.operador != "/=" && exp.operador != "%" && exp.operador != "%=") {
+			error("Invalid operator", SimpleJavaPackage.Literals.EXPRESSION_AUX__OPERADOR)
+		} else {
+			checkAritmeticAux(exp.exp)
+		}
+	}
+
+	def checkAritmeticAux(expression exp) {
+		var m = metodos.get(exp.identificador);
+		var v = variaveis.get(exp.identificador);
+		if ((m != null && m.tipoRetorno.nome.equals("int")) ||
+			(v != null && v.tipo.nome.equals("int")) || (m != null && m.tipoRetorno.nome.equals("float")) ||
+			(v != null && v.tipo.nome.equals("float")) || (m != null && m.tipoRetorno.nome.equals("long")) ||
+			(v != null && v.tipo.nome.equals("long")) || (m != null && m.tipoRetorno.nome.equals("double")) ||
+			(v != null && v.tipo.nome.equals("double"))) {
+			if (exp.literal.decimal == null && exp.literal.inteiro == null &&
+				exp.literal.l_float == null) {
+				error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION__LITERAL)
+			} else {
+				error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION__IDENTIFICADOR)
+			}
+		}
+	}
+
+	def boolean isMethod(expression exp) {
+		if (metodos.containsKey(exp.identificador)) {
+			return true;
+		}
+		return false
+	}
+
+	// TODO antigo
 	def Map<String, Tipo> getparametros(arglist list) {
 		var p = new HashMap<String, Tipo>();
 		var i = 0
@@ -115,24 +367,6 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
-	def checkMetodDeclaration(EList<type_declaration> list) {
-		for (type_declaration td : list) {
-			checkDeclaracaoMetodo(td.declaracaoClasse.corpoClasse.declaracaoMetodo);
-		}
-	}
-
-	def checkDeclaracaoMetodo(method_declaration declaration) {
-		var tipo = new Tipo(String.valueOf(declaration.tipoRetorno.tipo));
-		var parametros = getparametros(declaration.parametrosMetodo);
-		if (tipo.equals(getTipo(declaration.blocoMetodo.corpo.^return))) {
-			var metodo = new Metodo(declaration.nomeMetodo, tipo, parametros);
-			metodos.put(declaration.nomeMetodo, metodo);
-		} else {
-			// erro tipo de retorno
-			error("Invalid return", SimpleJavaPackage.Literals.STATEMENT__RETURN)
-		}
-	}
-
 	def getTipo(expression expression) {
 		if (expression.logical != null) {
 			return new Tipo("boolean");
@@ -144,10 +378,11 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			return new Tipo("float");
 		} else if (expression.literal.string != null) {
 			return new Tipo("String");
-		}
-		for (Tipo tipo : tipos) {
-			if (tipo.herdado instanceof expression) {
-				return new Tipo("boolean");
+		} else if (expression.identificador != null) {
+			if (variaveis.containsKey(expression.identificador)) {
+				return variaveis.get(expression.identificador).tipo
+			} else {
+				return metodos.get(expression.identificador).tipoRetorno
 			}
 		}
 	}
@@ -156,543 +391,382 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		var p = new HashMap<String, Tipo>();
 		for (parameter parametro : list.parametros) {
 			p.put(parametro.nomeParametro, new Tipo(String.valueOf(parametro.tipoParametro.tipo)));
-			variaveis.put(parametro.nomeParametro, new Variavel (parametro.nomeParametro, new Tipo(String.valueOf(parametro.tipoParametro.tipo))))
+			variaveis.put(parametro.nomeParametro,
+				new Variavel(parametro.nomeParametro, new Tipo(String.valueOf(parametro.tipoParametro.tipo))))
 		}
 		return p;
 	}
-
-	def checkVariableUsed(EList<type_declaration> list) {
-		for (type_declaration td : list) {
-			checkUsoVariaveis(td.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo);
-		}
-	}
-
-	def checkUsoVariaveis(statement statement) {
-		var variavel = statement.expressao.identificador
-		if (!variaveis.containsKey(variavel)) {
-			// erro variavel nao exite
-			error("Inexistent variable", SimpleJavaPackage.Literals.EXPRESSION__IDENTIFICADOR)
+	
+	def checkDeclaracaoVariavel(variable_declaration declaration) {
+		// TODO ver se esse new tipo pega
+		var tipoPrimitivo = new Tipo(declaration.tipoVariavel.primitivo.nome);
+		var tipoObjeto = new Tipo(declaration.tipoVariavel.objeto.nome);
+		if (!tipos.contains(tipoPrimitivo) || !tipos.contains(tipoObjeto)) {
+			// error tipo naum existe
+			error("Inexistent type", SimpleJavaPackage.Literals.VARIABLE_DECLARATION__TIPO_VARIAVEL)
 		} else {
-			// check tipo
-			if (!variaveis.get(variavel).equals(
-				getparametros(statement.expressao.expressoes.exp.expressoes.parametros))) {
-				// erro parametros errados
-				error("Invalid parameters", SimpleJavaPackage.Literals.EXPRESSION_AUX__PARAMETROS)
-			}
-		}
-	}
-
-	def checkLiterals(EList<type_declaration> list) {
-		for (type_declaration td : list) {
-			checkLiterais(td.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.expressao);
-		}
-	}
-
-	def checkLiterais(expression expression) {
-		// check literais
-		if (expression.literal.inteiro != null) {
-			// tipo inteiro
-		} else if (expression.literal.string != null) {
-			// tipo string
-		} else if (expression.logical != null) {
-			// tipo boolean
-		}
-	}
-
-	def checkBooleanExpression(EList<type_declaration> list) {
-		for (type_declaration td : list) {
-			checkBoolean(td.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.expressao);
-		}
-	}
-
-	def checkBoolean(expression expression) {
-		// checar espressao booleana
-		if (expression.logical != null) {
-			if (expression.operador == "ampersand" || expression.operador == "ampersand=" ||
-				expression.operador == "|" || expression.operador == "|=" || expression.operador == "^" ||
-				expression.operador == "^=" || expression.operador == "ampersand ampersand" ||
-				expression.operador == "||=" || expression.operador == "&" || expression.operador == "%=") {
-				if (expression.exp.logical != null) {
-					// error expressao invalida para expressoes aritimetricas
-					error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION__LOGICAL)
+			// add variavel
+			var vars = declaration.declaracaoVariaveis;
+			for (variable_declarator variable : vars) {
+				if (tipoPrimitivo != null) {
+					checkVariableDeclarator(variable, tipoPrimitivo)
+				} else if (tipoObjeto != null) {
+					checkVariableDeclarator(variable, tipoObjeto)
 				}
-			} else {
-				// error operador invalido
-				error("Invalid operator", SimpleJavaPackage.Literals.EXPRESSION_AUX__OPERADOR)
 			}
+		}
+	}
+	
+	def checkVariableDeclarator (variable_declarator vd, Tipo tipo) {
+		var variavel = new Variavel(vd.nomeVariavel, tipo);
+		if (!variaveis.containsKey(vd.nomeVariavel)) {
+			variaveis.put(vd.nomeVariavel, variavel);
 		} else {
-			// error expressao invalida para expressoes booleanas
-			error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION__LOGICAL)
+			// erro variavel ja existe
+			error("Variable alredy exist", SimpleJavaPackage.Literals.VARIABLE_DECLARATOR__NOME_VARIAVEL)
 		}
 	}
 
-	def checkAritmeticExpression(EList<type_declaration> list) {
-		for (type_declaration td : list) {
-			checkArimetic(td.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.expressao);
-		}
-	}
-
-	def checkArimetic(expression expression) {
-		// checar espressao aritimetrica
+	// Auxiliares
+	def boolean isArimeticExp(expression expression) {
+		var metodo = metodos.get(expression.identificador);
+		var variavel = variaveis.get(expression.identificador);
 		if (expression.literal.decimal != null || expression.literal.inteiro != null ||
-			expression.literal.l_float != null) {
+			expression.literal.l_float != null || (metodo != null && metodo.tipoRetorno.nome.equals("int")) ||
+			(variavel != null && variavel.tipo.nome.equals("int")) ||
+			(metodo != null && metodo.tipoRetorno.nome.equals("float")) ||
+			(variavel != null && variavel.tipo.nome.equals("float")) ||
+			(metodo != null && metodo.tipoRetorno.nome.equals("long")) ||
+			(variavel != null && variavel.tipo.nome.equals("long")) ||
+			(metodo != null && metodo.tipoRetorno.nome.equals("double")) ||
+			(variavel != null && variavel.tipo.nome.equals("double"))) {
 			if (expression.expressoes.op != null || expression.expressoes.operador == "++" ||
 				expression.expressoes.operador == "--" || expression.expressoes.operador == "-" ||
 				expression.expressoes.operador == "-=" || expression.expressoes.operador == "*" ||
 				expression.expressoes.operador == "*=" || expression.expressoes.operador == "/" ||
 				expression.expressoes.operador == "/=" || expression.expressoes.operador == "%" ||
 				expression.expressoes.operador == "%=" || expression.numeric != null) {
-				if (expression.expressoes.exp.literal.decimal == null &&
-					expression.expressoes.exp.literal.inteiro == null &&
-					expression.expressoes.exp.literal.l_float == null) {
-						// error expressao invalida para expressoes aritimetricas
-						error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION_AUX__EXPRESSOES)
-					}
-				} else {
-					// error operador invalido
-					error("Invalid operator", SimpleJavaPackage.Literals.EXPRESSION_AUX__OPERADOR)
-				}
-			} else {
-				// error expressao invalida para expressoes aritimetricas
-				error("Invalid expression", SimpleJavaPackage.Literals.EXPRESSION_AUX__EXPRESSOES)
-			}
-		}
-
-		def checkInterativeWhile(EList<type_declaration> list) {
-			for (type_declaration declaracoes : list) {
-				checkWhile(declaracoes.declaracaoClasse.corpoClasse.declaracaoMetodo.blocoMetodo.corpo.corpoWhile);
-			}
-		}
-
-		def checkVariableDeclaration(EList<type_declaration> list) {
-			for (type_declaration declaracoes : list) {
-				checkDeclaracaoVariavel(declaracoes.declaracaoClasse.corpoClasse.declaracaoVariavel);
-				checkDeclaracaoVariavel(declaracoes.declaracaoInterface.corpoInterface.declaracaoVariavel);
-			}
-		}
-
-		def checkDeclaracaoVariavel(variable_declaration declaration) {
-			// TODO ver se esse new tipo pega
-			var tipo = new Tipo(String.valueOf(declaration.tipoVariavel.tipo));
-			if (!tipos.contains(tipo)) {
-				// error tipo naum existe
-				error("Inexistent type", SimpleJavaPackage.Literals.VARIABLE_DECLARATION__TIPO_VARIAVEL)
-			} else {
-				// add variavel
-				var vars = declaration.declaracaoVariaveis;
-				for (variable_declarator variable : vars) {
-					var variavel = new Variavel(variable.nomeVariavel, tipo);
-					if (!variaveis.containsKey(variable.nomeVariavel)) {
-						variaveis.put(variable.nomeVariavel, variavel);
-					} else {
-						// erro variavel ja existe
-						error("Variable alredy exist", SimpleJavaPackage.Literals.VARIABLE_DECLARATOR__NOME_VARIAVEL)
-					}
-				}
-			}
-		}
-
-		def checkWhile(while_statement statement) {
-			var operador = statement.expressaoWhile.expressoes.operador
-			var metodo = metodos.get(statement.expressaoWhile.identificador);
-			var variavel = variaveis.get(statement.expressaoWhile.identificador);
-			if (statement.expressaoWhile.logical == null && operador != ">" && operador != "<" && operador != ">=" &&
-				operador != "<=" && operador != "==" && operador != "!=" && operador != ">>=" && operador != "<<" &&
-				operador != ">>" && operador != ">>>" && !metodo.tipoRetorno.nome.equals("boolean") &&
-				!variavel.tipo.nome.equals("boolean")) {
-				// erro expressao invalida
-				error("Invalid expression", SimpleJavaPackage.Literals.STATEMENT__EXPRESSAO)
-			} else {
-				if (statement.blocoWhile.bloco.corpo.corpoWhile != null) {
-					checkWhile(statement.blocoWhile.bloco.corpo.corpoWhile);
-				}
-			}
-		}
-
-		def checkVariableInitializer(EList<type_declaration> list) {
-			for (type_declaration td : list) {
-				checkInicializacaoVariavel(td.declaracaoClasse.corpoClasse.declaracaoVariavel.declaracaoVariaveis);
-				checkInicializacaoVariavel(
-					td.declaracaoInterface.corpoInterface.declaracaoVariavel.declaracaoVariaveis);
-			}
-		}
-
-		def checkInicializacaoVariavel(EList<variable_declarator> list) {
-			for (variable_declarator vd : list) {
-				if (!variaveis.containsKey(vd.nomeVariavel)) {
-					// error variavel naum exite
-					error("inexistent variable", SimpleJavaPackage.Literals.VARIABLE_DECLARATOR__NOME_VARIAVEL)
-				} else {
-					var v = variaveis.get(vd.nomeVariavel);
-					// TODO checkar o tipo se esta certo
-					if (vd.valorVariavel.expressaoVariavel.logical != null && !v.tipo.equals(new Tipo("boolean"))) {
-						// erro tipo esperado era boolean
-						error("Expeted to boolean", SimpleJavaPackage.Literals.VARIABLE_INITIALIZER__EXPRESSAO_VARIAVEL)
-					} else if (vd.valorVariavel.expressaoVariavel.literal.decimal != null &&
-						!v.tipo.equals(new Tipo("double"))) {
-						// erro tipo esperado era double			
-						error("Expeted to double", SimpleJavaPackage.Literals.VARIABLE_INITIALIZER__EXPRESSAO_VARIAVEL)
-					} else if (vd.valorVariavel.expressaoVariavel.literal.l_float != null &&
-						!v.tipo.equals(new Tipo("float"))) {
-						// erro tipo esperado era float
-						error("Expeted to float", SimpleJavaPackage.Literals.VARIABLE_INITIALIZER__EXPRESSAO_VARIAVEL)
-					} else if (vd.valorVariavel.expressaoVariavel.literal.inteiro != null &&
-						!v.tipo.equals(new Tipo("int"))) {
-						// erro tipo esperado era int
-						error("Expeted to int", SimpleJavaPackage.Literals.VARIABLE_INITIALIZER__EXPRESSAO_VARIAVEL)
-					} else if (vd.valorVariavel.expressaoVariavel.identificador != null &&
-						!v.tipo.equals(variaveis.get(vd.valorVariavel.expressaoVariavel.identificador).tipo)) {
-						// erro tipo esperado era vd.valorVariavel.expressaoVariavel.identificador
-					}
-				}
-			}
-		}
-
-		def checkTypeDeclaration(EList<type_declaration> list) {
-			for (type_declaration td : list) {
-				if (td.declaracaoClasse != null) {
-					// salvar o tipo
-					addType(td.declaracaoClasse.nomeClasse);
-				} else {
-					// salva o tipo
-					addType(td.declaracaoInterface.nomeInterface);
-				}
-			}
-		}
-
-		def addType(String tipo) {
-			// adicionar na tabela de simbolos caso naum exista
-			var t = new Tipo(tipo);
-			if (!tipos.contains(t)) {
-				tipos.add(t);
-			}
-		}
-
-		// Geração de Codigo
-		def boolean isArimeticExp(expression expression) {
-			if (expression.literal.decimal != null || expression.literal.inteiro != null ||
-				expression.literal.l_float != null) {
-				if (expression.expressoes.op != null || expression.expressoes.operador == "++" ||
-					expression.expressoes.operador == "--" || expression.expressoes.operador == "-" ||
-					expression.expressoes.operador == "-=" || expression.expressoes.operador == "*" ||
-					expression.expressoes.operador == "*=" || expression.expressoes.operador == "/" ||
-					expression.expressoes.operador == "/=" || expression.expressoes.operador == "%" ||
-					expression.expressoes.operador == "%=" || expression.numeric != null) {
-					if (expression.literal.decimal != null || expression.literal.inteiro != null ||
-						expression.literal.l_float != null) {
-						return true
-					}
-				}
-			}
-			return false
-		}
-
-		def boolean isBooleanExp(expression expression) {
-			var metodo = metodos.get(expression.identificador);
-			var variavel = variaveis.get(expression.identificador);
-			if (expression.logical.operador != null || (metodo != null && metodo.tipoRetorno.nome.equals("boolean")) ||
-				(variavel != null && variavel.tipo.nome.equals("boolean"))) {
-				if (expression.logical.operador == "!" && isBooleanExp(expression.logical.exp) ||
-					(expression.logical.operador == "true" || expression.logical.operador == "false") &&
-						expression.expressoes.op == null) {
-					return true
-				}
-				if ((metodo != null && metodo.tipoRetorno.nome.equals("boolean")) ||
-					(variavel != null && variavel.tipo.nome.equals("boolean")) && expression.expressoes.op == null) {
-					return true
-				}
-				if (expression.expressoes.operador == "&" || expression.expressoes.operador == "^=" ||
-					expression.expressoes.operador == "&=" || expression.expressoes.operador == "||" ||
-					expression.expressoes.operador == "&&" || expression.expressoes.operador == "|" ||
-					expression.expressoes.operador == "||=" || expression.expressoes.operador == "|=" ||
-					expression.expressoes.operador == "%" || expression.expressoes.operador == "^" ||
-					expression.expressoes.operador == "%=") {
-					if (expression.logical.operador != null ||
-						(metodo != null && metodo.tipoRetorno.nome.equals("boolean")) ||
-						(variavel != null && variavel.tipo.nome.equals("boolean"))) {
-						return true
-					}
-				}
-				if (expression.expressoes.operador == "?" && expression.expressoes.exp.expressoes.operador == ":") {
+				var m = metodos.get(expression.exp.identificador);
+				var v = variaveis.get(expression.exp.identificador);
+				if (expression.exp.literal.decimal != null || expression.exp.literal.inteiro != null ||
+					expression.exp.literal.l_float != null || (m != null && m.tipoRetorno.nome.equals("int")) ||
+					(v != null && v.tipo.nome.equals("int")) || (m != null && m.tipoRetorno.nome.equals("float")) ||
+					(v != null && v.tipo.nome.equals("float")) || (m != null && m.tipoRetorno.nome.equals("long")) ||
+					(v != null && v.tipo.nome.equals("long")) || (m != null && m.tipoRetorno.nome.equals("double")) ||
+					(v != null && v.tipo.nome.equals("double"))) {
 					return true
 				}
 			}
-			return false
 		}
-	
-		def boolean isRelativeExp(expression expression) {
-			//TODO
-			return false
-		}
-		
-		def boolean isVariable(expression expression) {
-			if (variaveis.containsKey(expression.identificador)) {
-				return true;
-			}
-			return false
-		}
+		return false
+	}
 
-		def boolean isLiteral(expression expression) {
-			if (expression.literal != null || expression.logical.operador != "!") {
+	def boolean isBooleanExp(expression expression) {
+		var metodo = metodos.get(expression.identificador);
+		var variavel = variaveis.get(expression.identificador);
+		if (expression.logical.operador != null || (metodo != null && metodo.tipoRetorno.nome.equals("boolean")) ||
+			(variavel != null && variavel.tipo.nome.equals("boolean"))) {
+			if ((expression.logical.operador == "!" && isBooleanExp(expression.logical.exp)) ||
+				(expression.logical.operador == "true" || expression.logical.operador == "false")) {
 				return true
 			}
-			return false
+			if ((metodo != null && metodo.tipoRetorno.nome.equals("boolean")) ||
+				(variavel != null && variavel.tipo.nome.equals("boolean"))) {
+				return true
+			}
+			if (expression.expressoes.operador == "&" || expression.expressoes.operador == "^=" ||
+				expression.expressoes.operador == "&=" || expression.expressoes.operador == "||" ||
+				expression.expressoes.operador == "&&" || expression.expressoes.operador == "|" ||
+				expression.expressoes.operador == "||=" || expression.expressoes.operador == "|=" ||
+				expression.expressoes.operador == "%" || expression.expressoes.operador == "^" ||
+				expression.expressoes.operador == "%=") {
+				var m = metodos.get(expression.exp.identificador);
+				var v = variaveis.get(expression.exp.identificador);
+				if (expression.exp.logical.operador != null || (m != null && m.tipoRetorno.nome.equals("boolean")) ||
+					(v != null && v.tipo.nome.equals("boolean"))) {
+					return true
+				}
+			}
+			if (expression.expressoes.operador == "?" && expression.expressoes.exp.expressoes.operador == ":") {
+				return true
+			}
 		}
+		return false
+	}
 
-		def boolean isAtribuicao(expression expression) {
-			if (expression.novo != null || expression.expressoes.operador == "^=" || expression.expressoes.operador == "*=" ||
+	def boolean isVariable(expression expression) {
+		if (variaveis.containsKey(expression.identificador)) {
+			return true;
+		}
+		return false
+	}
+
+	def boolean isLiteral(expression expression) {
+		if (expression.literal != null || expression.logical.operador != "!") {
+			return true
+		}
+		return false
+	}
+
+	def boolean isAtribuicao(expression expression) {
+		if (variaveis.containsKey(expression.identificador)) {
+			if (expression.expressoes.operador == "^=" || expression.expressoes.operador == "*=" ||
 				expression.expressoes.operador == "-=" || expression.expressoes.operador == "||=" ||
 				expression.expressoes.operador == "|=" || expression.expressoes.operador == "/=" ||
 				expression.expressoes.operador == "%=" || expression.expressoes.operador == "&=") {
 				return true
 			}
-			return false
+		} else if (expression.exp.novo != null) {
+			return true
 		}
+		return false
+	}
 
-		def load(String end1, String end2) {
-			salvarArquivo("LD " + end1 + ", " + end2)
-		}
+	//Geração de codigo
+	def load(String end1, String end2) {
+		salvarArquivo("LD " + end1 + ", " + end2)
+	}
 
-		def load(String end1, String end2, String deslocamento) {
-			salvarArquivo("LD " + end1 + ", " + end2 + "(" + deslocamento + ")")
-		}
+	def load(String end1, String end2, String deslocamento) {
+		salvarArquivo("LD " + end1 + ", " + end2 + "(" + deslocamento + ")")
+	}
 
-		def storeRight(String end1, String end2, String deslocamento) {
-			salvarArquivo("ST " + end1 + ", " + end2 + "(" + deslocamento + ")")
-		}
+	def storeRight(String end1, String end2, String deslocamento) {
+		salvarArquivo("ST " + end1 + ", " + end2 + "(" + deslocamento + ")")
+	}
 
-		def storeLeft(String end1, String end2, String deslocamento) {
-			salvarArquivo("ST " + end1 + "(" + deslocamento + ")" + ", " + end2)
-		}
+	def storeLeft(String end1, String end2, String deslocamento) {
+		salvarArquivo("ST " + end1 + "(" + deslocamento + ")" + ", " + end2)
+	}
 
-		def store(String end1, String end2) {
-			salvarArquivo("ST " + end1 + ", " + end2)
-		}
+	def store(String end1, String end2) {
+		salvarArquivo("ST " + end1 + ", " + end2)
+	}
 
-		def DesvioIncod(String label) {
-			salvarArquivo("BR " + label)
-		}
+	def DesvioIncod(String label) {
+		salvarArquivo("BR " + label)
+	}
 
-		def DesvioCond(String op, String end, String label) {
-			if (op.equals("maior")) {
-				salvarArquivo("BGTZ " + end + ", " + label)
-			} else if (op.equals("menor")) {
-				salvarArquivo("BLTZ " + end + ", " + label)
-			} else if (op.equals("igual")) {
-				salvarArquivo("BETZ " + end + ", " + label)
-			}
-		}
-
-		def op(String op, String dest, String end1, String end2) {
-			if (op.equals("soma")) {
-				salvarArquivo("ADD " + dest + ", " + end1 + ", " + end2)
-			} else if (op.equals("subtracao")) {
-				salvarArquivo("SUB " + dest + ", " + end1 + ", " + end2)
-			} else if (op.equals("multplicacao")) {
-				salvarArquivo("MULT " + dest + ", " + end1 + ", " + end2)
-			} else if (op.equals("divisao")) {
-				salvarArquivo("DIV " + dest + ", " + end1 + ", " + end2)
-			}
-		}
-
-		def salvarArquivo(String s) {
-			var arquivo = new File("/home/franklin/teste.txt");
-			var fw = new FileWriter(arquivo, true);
-			var bw = new BufferedWriter(fw);
-			bw.write(s);
-			bw.newLine();
-			bw.close();
-			fw.close();
-		}
-
-		def genCodeOP(expression exp, String op) {
-			if (exp.literal.decimal != null) {
-				if (exp.exp.literal.decimal != null) {
-					op(op, "r1", exp.literal.decimal, exp.exp.literal.decimal)
-				} else if (exp.exp.literal.inteiro != null) {
-					op(op, "r1", exp.literal.decimal, exp.exp.literal.inteiro)
-				} else if (exp.exp.literal.l_float != null) {
-					op(op, "r1", exp.literal.decimal, exp.exp.literal.l_float)
-				} else if (exp.exp.identificador != null) {
-					genUseVariableCode(exp.exp)
-					op(op, "r1", exp.literal.decimal, "r" + registradores.get(registradores.size - 1))
-				}
-			} else if (exp.literal.inteiro != null) {
-				if (exp.exp.literal.decimal != null) {
-					op(op, "r1", exp.literal.inteiro, exp.exp.literal.decimal)
-				} else if (exp.exp.literal.inteiro != null) {
-					op(op, "r1", exp.literal.inteiro, exp.exp.literal.inteiro)
-				} else if (exp.exp.literal.l_float != null) {
-					op(op, "r1", exp.literal.inteiro, exp.exp.literal.l_float)
-				} else if (exp.exp.identificador != null) {
-					genUseVariableCode(exp.exp)
-					op(op, "r1", exp.literal.decimal, "r" + registradores.get(registradores.size - 1))
-				}
-			} else if (exp.literal.l_float != null) {
-				if (exp.exp.literal.decimal != null) {
-					op(op, "r1", exp.literal.l_float, exp.exp.literal.decimal)
-				} else if (exp.exp.literal.inteiro != null) {
-					op(op, "r1", exp.literal.l_float, exp.exp.literal.inteiro)
-				} else if (exp.exp.literal.l_float != null) {
-					op(op, "r1", exp.literal.l_float, exp.exp.literal.l_float)
-				} else if (exp.exp.identificador != null) {
-					genUseVariableCode(exp.exp)
-					op(op, "r1", exp.literal.decimal, "r" + registradores.get(registradores.size - 1))
-				}
-			} else if (exp.exp.identificador != null) {
-				if (exp.exp.literal.decimal != null) {
-					op(op, "r1", exp.identificador, exp.exp.literal.decimal)
-				} else if (exp.exp.literal.inteiro != null) {
-					op(op, "r1", exp.identificador, exp.exp.literal.inteiro)
-				} else if (exp.exp.literal.l_float != null) {
-					op(op, "r1", exp.identificador, exp.exp.literal.l_float)
-				} else if (exp.exp.identificador != null) {
-					genUseVariableCode(exp.exp)
-					op(op, "r1", exp.identificador, "r" + registradores.get(registradores.size - 1))
-				}
-			}
-		}
-
-		def genAritmeticExpCode(expression exp) {
-			if (isArimeticExp(exp)) {
-				if (exp.op != null) {
-					if (exp.op.operador.equals("+")) {
-						genCodeOP(exp, "soma")
-					} else {
-						genCodeOP(exp.exp, "soma")
-						store(exp.identificador, "r1")
-					}
-				} else {
-					if (exp.op.operador.equals("-")) {
-						genCodeOP(exp, "subtracao")
-					} else if (exp.op.operador.equals("*")) {
-						genCodeOP(exp, "multplicacao")
-					} else if (exp.op.operador.equals("/")) {
-						genCodeOP(exp, "divisao")
-					} else if (exp.op.operador.equals("-")) {
-						genCodeOP(exp, "subtracao")
-					} else if (exp.op.operador.equals("++")) {
-						if (exp.literal.decimal != null) {
-							op("mais", "r1", exp.literal.decimal, "1")
-						} else if (exp.literal.inteiro != null) {
-							op("mais", "r1", exp.literal.inteiro, "1")
-						} else if (exp.literal.l_float != null) {
-							op("mais", "r1", exp.literal.l_float, "1")
-						}
-					} else if (exp.op.operador.equals("--")) {
-						if (exp.literal.decimal != null) {
-							op("menos", "r1", exp.literal.decimal, "1")
-						} else if (exp.literal.inteiro != null) {
-							op("menos", "r1", exp.literal.inteiro, "1")
-						} else if (exp.literal.l_float != null) {
-							op("menos", "r1", exp.literal.l_float, "1")
-						}
-					} else if (exp.op.operador.equals("-=")) {
-						genCodeOP(exp.exp, "menos")
-						store(exp.identificador, "r1")
-					} else if (exp.op.operador.equals("*=")) {
-						genCodeOP(exp.exp, "multiplicacao")
-						store(exp.identificador, "r1")
-					} else if (exp.op.operador.equals("/=")) {
-						genCodeOP(exp.exp, "divisao")
-						store(exp.identificador, "r1")
-					}
-					//TODO falta % e %=
-				}
-			}
-		}
-		
-		def genBooleanExpCode (expression exp) {
-			//TODO	
-		}
-		
-		def genExpCode (expression exp) {
-			if (isBooleanExp(exp)) {
-				genBooleanExpCode(exp)
-			} else if (isArimeticExp(exp)) {
-				genAritmeticExpCode(exp)
-			} else if (isAtribuicao(exp)) {
-				genAttCode(exp.identificador, exp.exp)
-			}
-		}
-		
-		def genWhileCode (while_statement loop) {
-			var nextLabel = labels.get(labels.size - 1) + 1
-			var label = "label" + nextLabel
-			genExpCode(loop.expressaoWhile)
-			label(label)
-			var proxLabel = nextLabel+ 1
-			var label2 = "label" + proxLabel
-			DesvioCond("BETZ", "r2", label2)
-			genStatementCode(loop.blocoWhile)
-			DesvioIncod(label)
-			label(label)
-		}
-		
-		def genSPIncCode (String tamanho) {
-			salvarArquivo("ADD SP, SP, " + tamanho)
-		}
-		
-		def genSPDecCode (String tamanho) {
-			salvarArquivo("SUB SP, SP, " + tamanho)
-		}
-		
-		def genUseMethodCode (String metodo, String tamanho) {
-			genSPIncCode(tamanho)
-			var nextLabel = labels.get(labels.size - 1) + 1
-			var label = "label" + nextLabel
-			store("*SP", label)
-			DesvioIncod(metodo)
-			label(label)
-			genSPDecCode(tamanho)	
-		}
-		
-		def genStatementCode (statement st) {
-			if (st.expressao != null) {
-				genExpCode(st.expressao)
-			} else if (st.declaracaoVariavel != null) {
-				for (variable_declarator vd : st.declaracaoVariavel.declaracaoVariaveis) {
-					genDeclarationVariableCode(vd)
-				}
-			} else if (st.corpoWhile != null) {
-				genWhileCode(st.corpoWhile)
-			}
-		}
-		
-		def label(String name) {
-			salvarArquivo(name + ":")
-		}
-		
-		def genStart () {
-			load("SP", "#600")
-		}
-		
-		def genAttCode (String name, expression exp) {
-			if (isAtribuicao(exp)) {
-				genExpCode(exp)
-				store(name, "r1")
-			}
-		}
-		
-		def genUseVariableCode (expression exp) {
-			if (isVariable(exp)) {
-				if (registradores.isEmpty) {
-					load("r10", exp.identificador)
-					registradores.add(10)
-				} else {
-					load(getRegister(), exp.identificador)
-				}
-			}
-		}
-		
-		def genDeclarationVariableCode (variable_declarator vd) {
-			genExpCode(vd.valorVariavel.expressaoVariavel)
-			store(vd.nomeVariavel, "r1")
-		}
-		
-		def String getRegister() {
-			var ultimo = registradores.get(registradores.size - 1)
-			var registrador = ultimo + 1
-			return "r" + registrador
+	def DesvioCond(String op, String end, String label) {
+		if (op.equals("maior")) {
+			salvarArquivo("BGTZ " + end + ", " + label)
+		} else if (op.equals("menor")) {
+			salvarArquivo("BLTZ " + end + ", " + label)
+		} else if (op.equals("igual")) {
+			salvarArquivo("BETZ " + end + ", " + label)
 		}
 	}
+
+	def op(String op, String dest, String end1, String end2) {
+		if (op.equals("soma")) {
+			salvarArquivo("ADD " + dest + ", " + end1 + ", " + end2)
+		} else if (op.equals("subtracao")) {
+			salvarArquivo("SUB " + dest + ", " + end1 + ", " + end2)
+		} else if (op.equals("multplicacao")) {
+			salvarArquivo("MULT " + dest + ", " + end1 + ", " + end2)
+		} else if (op.equals("divisao")) {
+			salvarArquivo("DIV " + dest + ", " + end1 + ", " + end2)
+		}
+	}
+
+	def salvarArquivo(String s) {
+		var arquivo = new File("/home/franklin/teste.txt");
+		var fw = new FileWriter(arquivo, true);
+		var bw = new BufferedWriter(fw);
+		bw.write(s);
+		bw.newLine();
+		bw.close();
+		fw.close();
+	}
+
+	def genCodeOP(expression exp, String op) {
+		if (exp.literal.decimal != null) {
+			if (exp.exp.literal.decimal != null) {
+				op(op, "r1", exp.literal.decimal, exp.exp.literal.decimal)
+			} else if (exp.exp.literal.inteiro != null) {
+				op(op, "r1", exp.literal.decimal, exp.exp.literal.inteiro)
+			} else if (exp.exp.literal.l_float != null) {
+				op(op, "r1", exp.literal.decimal, exp.exp.literal.l_float)
+			} else if (exp.exp.identificador != null) {
+				genUseVariableCode(exp.exp)
+				op(op, "r1", exp.literal.decimal, "r" + registradores.get(registradores.size - 1))
+			}
+		} else if (exp.literal.inteiro != null) {
+			if (exp.exp.literal.decimal != null) {
+				op(op, "r1", exp.literal.inteiro, exp.exp.literal.decimal)
+			} else if (exp.exp.literal.inteiro != null) {
+				op(op, "r1", exp.literal.inteiro, exp.exp.literal.inteiro)
+			} else if (exp.exp.literal.l_float != null) {
+				op(op, "r1", exp.literal.inteiro, exp.exp.literal.l_float)
+			} else if (exp.exp.identificador != null) {
+				genUseVariableCode(exp.exp)
+				op(op, "r1", exp.literal.decimal, "r" + registradores.get(registradores.size - 1))
+			}
+		} else if (exp.literal.l_float != null) {
+			if (exp.exp.literal.decimal != null) {
+				op(op, "r1", exp.literal.l_float, exp.exp.literal.decimal)
+			} else if (exp.exp.literal.inteiro != null) {
+				op(op, "r1", exp.literal.l_float, exp.exp.literal.inteiro)
+			} else if (exp.exp.literal.l_float != null) {
+				op(op, "r1", exp.literal.l_float, exp.exp.literal.l_float)
+			} else if (exp.exp.identificador != null) {
+				genUseVariableCode(exp.exp)
+				op(op, "r1", exp.literal.decimal, "r" + registradores.get(registradores.size - 1))
+			}
+		} else if (exp.exp.identificador != null) {
+			if (exp.exp.literal.decimal != null) {
+				op(op, "r1", exp.identificador, exp.exp.literal.decimal)
+			} else if (exp.exp.literal.inteiro != null) {
+				op(op, "r1", exp.identificador, exp.exp.literal.inteiro)
+			} else if (exp.exp.literal.l_float != null) {
+				op(op, "r1", exp.identificador, exp.exp.literal.l_float)
+			} else if (exp.exp.identificador != null) {
+				genUseVariableCode(exp.exp)
+				op(op, "r1", exp.identificador, "r" + registradores.get(registradores.size - 1))
+			}
+		}
+	}
+
+	def genAritmeticExpCode(expression exp) {
+		if (isArimeticExp(exp)) {
+			if (exp.op != null) {
+				if (exp.op.operador.equals("+")) {
+					genCodeOP(exp, "soma")
+				} else {
+					genCodeOP(exp.exp, "soma")
+					store(exp.identificador, "r1")
+				}
+			} else {
+				if (exp.op.operador.equals("-")) {
+					genCodeOP(exp, "subtracao")
+				} else if (exp.op.operador.equals("*")) {
+					genCodeOP(exp, "multplicacao")
+				} else if (exp.op.operador.equals("/")) {
+					genCodeOP(exp, "divisao")
+				} else if (exp.op.operador.equals("-")) {
+					genCodeOP(exp, "subtracao")
+				} else if (exp.op.operador.equals("++")) {
+					if (exp.literal.decimal != null) {
+						op("mais", "r1", exp.literal.decimal, "1")
+					} else if (exp.literal.inteiro != null) {
+						op("mais", "r1", exp.literal.inteiro, "1")
+					} else if (exp.literal.l_float != null) {
+						op("mais", "r1", exp.literal.l_float, "1")
+					}
+				} else if (exp.op.operador.equals("--")) {
+					if (exp.literal.decimal != null) {
+						op("menos", "r1", exp.literal.decimal, "1")
+					} else if (exp.literal.inteiro != null) {
+						op("menos", "r1", exp.literal.inteiro, "1")
+					} else if (exp.literal.l_float != null) {
+						op("menos", "r1", exp.literal.l_float, "1")
+					}
+				} else if (exp.op.operador.equals("-=")) {
+					genCodeOP(exp.exp, "menos")
+					store(exp.identificador, "r1")
+				} else if (exp.op.operador.equals("*=")) {
+					genCodeOP(exp.exp, "multiplicacao")
+					store(exp.identificador, "r1")
+				} else if (exp.op.operador.equals("/=")) {
+					genCodeOP(exp.exp, "divisao")
+					store(exp.identificador, "r1")
+				}
+			// TODO falta % e %=
+			}
+		}
+	}
+
+	def genBooleanExpCode(expression exp) {
+		// TODO	
+	}
+
+	def genExpCode(expression exp) {
+		if (isBooleanExp(exp)) {
+			genBooleanExpCode(exp)
+		} else if (isArimeticExp(exp)) {
+			genAritmeticExpCode(exp)
+		} else if (isAtribuicao(exp)) {
+			genAttCode(exp.identificador, exp.exp)
+		}
+	}
+
+	def genWhileCode(while_statement loop) {
+		var nextLabel = labels.get(labels.size - 1) + 1
+		var label = "label" + nextLabel
+		genExpCode(loop.expressaoWhile)
+		label(label)
+		var proxLabel = nextLabel + 1
+		var label2 = "label" + proxLabel
+		DesvioCond("BETZ", "r2", label2)
+		genStatementCode(loop.blocoWhile)
+		DesvioIncod(label)
+		label(label)
+	}
+
+	def genSPIncCode(String tamanho) {
+		salvarArquivo("ADD SP, SP, " + tamanho)
+	}
+
+	def genSPDecCode(String tamanho) {
+		salvarArquivo("SUB SP, SP, " + tamanho)
+	}
+
+	def genUseMethodCode(String metodo, String tamanho) {
+		genSPIncCode(tamanho)
+		var nextLabel = labels.get(labels.size - 1) + 1
+		var label = "label" + nextLabel
+		store("*SP", label)
+		DesvioIncod(metodo)
+		label(label)
+		genSPDecCode(tamanho)
+	}
+
+	def genStatementCode(statement st) {
+		if (st.expressao != null) {
+			genExpCode(st.expressao)
+		} else if (st.declaracaoVariavel != null) {
+			for (variable_declarator vd : st.declaracaoVariavel.declaracaoVariaveis) {
+				genDeclarationVariableCode(vd)
+			}
+		} else if (st.corpoWhile != null) {
+			genWhileCode(st.corpoWhile)
+		}
+	}
+
+	def label(String name) {
+		salvarArquivo(name + ":")
+	}
+
+	def genStart() {
+		load("SP", "#600")
+	}
+
+	def genAttCode(String name, expression exp) {
+		if (isAtribuicao(exp)) {
+			genExpCode(exp)
+			store(name, "r1")
+		}
+	}
+
+	def genUseVariableCode(expression exp) {
+		if (isVariable(exp)) {
+			if (registradores.isEmpty) {
+				load("r10", exp.identificador)
+				registradores.add(10)
+			} else {
+				load(getRegister(), exp.identificador)
+			}
+		}
+	}
+
+	def genDeclarationVariableCode(variable_declarator vd) {
+		genExpCode(vd.valorVariavel.expressaoVariavel)
+		store(vd.nomeVariavel, "r1")
+	}
+
+	def String getRegister() {
+		var ultimo = registradores.get(registradores.size - 1)
+		var registrador = ultimo + 1
+		return "r" + registrador
+	}
+}

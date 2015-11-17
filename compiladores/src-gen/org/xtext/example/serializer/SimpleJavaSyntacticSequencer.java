@@ -22,7 +22,6 @@ import org.xtext.example.services.SimpleJavaGrammarAccess;
 public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected SimpleJavaGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_constructor_declaration_VoidKeyword_1_1_q;
 	protected AbstractElementAlias match_creating_aux___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q_or___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a;
 	protected AbstractElementAlias match_creating_aux___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a;
 	protected AbstractElementAlias match_creating_expression___LeftSquareBracketKeyword_1_1_2_0_RightSquareBracketKeyword_1_1_2_1__a;
@@ -41,7 +40,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (SimpleJavaGrammarAccess) access;
-		match_constructor_declaration_VoidKeyword_1_1_q = new TokenAlias(false, true, grammarAccess.getConstructor_declarationAccess().getVoidKeyword_1_1());
 		match_creating_aux___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q_or___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a = new AlternativeAlias(false, false, new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getLeftParenthesisKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getRightParenthesisKeyword_0_2())), new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getLeftSquareBracketKeyword_1_1_0()), new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getRightSquareBracketKeyword_1_1_1())));
 		match_creating_aux___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getLeftSquareBracketKeyword_1_1_0()), new TokenAlias(false, false, grammarAccess.getCreating_auxAccess().getRightSquareBracketKeyword_1_1_1()));
 		match_creating_expression___LeftSquareBracketKeyword_1_1_2_0_RightSquareBracketKeyword_1_1_2_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getCreating_expressionAccess().getLeftSquareBracketKeyword_1_1_2_0()), new TokenAlias(false, false, grammarAccess.getCreating_expressionAccess().getRightSquareBracketKeyword_1_1_2_1()));
@@ -94,9 +92,7 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_constructor_declaration_VoidKeyword_1_1_q.equals(syntax))
-				emit_constructor_declaration_VoidKeyword_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_creating_aux___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q_or___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a.equals(syntax))
+			if(match_creating_aux___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q_or___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a.equals(syntax))
 				emit_creating_aux___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q_or___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_creating_aux___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a.equals(syntax))
 				emit_creating_aux___LeftSquareBracketKeyword_1_1_0_RightSquareBracketKeyword_1_1_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -128,19 +124,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     'void'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) '{' (ambiguity) nomeContrutor=IDENTIFIER
-	 *     (rule start) (ambiguity) nomeContrutor=IDENTIFIER
-	 *     modificador=MODIFIER (ambiguity) nomeContrutor=IDENTIFIER
-	 */
-	protected void emit_constructor_declaration_VoidKeyword_1_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * Ambiguous syntax:
 	 *     ('(' ')')? | ('[' ']')*
@@ -247,7 +230,6 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) 'synchronized' '(' expressaoSynchronized=expression
 	 *     (rule start) (ambiguity) 'throw' exececao=expression
 	 *     (rule start) (ambiguity) (';' | ('return' ';') | ('break' ';') | ('continue' ';')) (rule start)
-	 *     (rule start) (ambiguity) bloco=statement_block
 	 *     (rule start) (ambiguity) corpoDoWhile=do_statement
 	 *     (rule start) (ambiguity) corpoFor=for_statement
 	 *     (rule start) (ambiguity) corpoIf=if_statement
@@ -256,6 +238,7 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) corpoWhile=while_statement
 	 *     (rule start) (ambiguity) declaracaoVariavel=variable_declaration
 	 *     (rule start) (ambiguity) expressao=expression
+	 *     (rule start) (ambiguity) newbloco=statement_block
 	 */
 	protected void emit_statement___IDENTIFIERTerminalRuleCall_12_0_ColonKeyword_12_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -285,10 +268,10 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('[' ']')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     tipo=name (ambiguity) ')' expressao=expression
-	 *     tipo=name (ambiguity) (rule end)
-	 *     tipo=type_specifier (ambiguity) ')' expressao=expression
-	 *     tipo=type_specifier (ambiguity) (rule end)
+	 *     objeto=name (ambiguity) ')' expressao=expression
+	 *     objeto=name (ambiguity) (rule end)
+	 *     primitivo=type_specifier (ambiguity) ')' expressao=expression
+	 *     primitivo=type_specifier (ambiguity) (rule end)
 	 */
 	protected void emit_type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

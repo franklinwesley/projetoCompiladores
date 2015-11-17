@@ -50,7 +50,6 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVariable_initializerAccess().getAlternatives(), "rule__Variable_initializer__Alternatives");
 					put(grammarAccess.getFor_statementAccess().getAlternatives_2(), "rule__For_statement__Alternatives_2");
 					put(grammarAccess.getSwitch_statementAccess().getAlternatives_5(), "rule__Switch_statement__Alternatives_5");
-					put(grammarAccess.getConstructor_declarationAccess().getAlternatives_1(), "rule__Constructor_declaration__Alternatives_1");
 					put(grammarAccess.getCreating_expressionAccess().getAlternatives_1(), "rule__Creating_expression__Alternatives_1");
 					put(grammarAccess.getExp_auxAccess().getAlternatives(), "rule__Exp_aux__Alternatives");
 					put(grammarAccess.getExpressionAccess().getAlternatives_0(), "rule__Expression__Alternatives_0");
@@ -200,7 +199,7 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatement_blockAccess().getCorpoAssignment_1(), "rule__Statement_block__CorpoAssignment_1");
 					put(grammarAccess.getStatementAccess().getDeclaracaoVariavelAssignment_0(), "rule__Statement__DeclaracaoVariavelAssignment_0");
 					put(grammarAccess.getStatementAccess().getExpressaoAssignment_1_0(), "rule__Statement__ExpressaoAssignment_1_0");
-					put(grammarAccess.getStatementAccess().getBlocoAssignment_2(), "rule__Statement__BlocoAssignment_2");
+					put(grammarAccess.getStatementAccess().getNewblocoAssignment_2(), "rule__Statement__NewblocoAssignment_2");
 					put(grammarAccess.getStatementAccess().getCorpoIfAssignment_3(), "rule__Statement__CorpoIfAssignment_3");
 					put(grammarAccess.getStatementAccess().getCorpoDoWhileAssignment_4(), "rule__Statement__CorpoDoWhileAssignment_4");
 					put(grammarAccess.getStatementAccess().getCorpoWhileAssignment_5(), "rule__Statement__CorpoWhileAssignment_5");
@@ -244,10 +243,9 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSwitch_statementAccess().getExpressaoCasesAssignment_5_0_1(), "rule__Switch_statement__ExpressaoCasesAssignment_5_0_1");
 					put(grammarAccess.getSwitch_statementAccess().getBlocoSwitchAssignment_5_2(), "rule__Switch_statement__BlocoSwitchAssignment_5_2");
 					put(grammarAccess.getConstructor_declarationAccess().getModificadorAssignment_0(), "rule__Constructor_declaration__ModificadorAssignment_0");
-					put(grammarAccess.getConstructor_declarationAccess().getTipoAssignment_1_0(), "rule__Constructor_declaration__TipoAssignment_1_0");
-					put(grammarAccess.getConstructor_declarationAccess().getNomeContrutorAssignment_2(), "rule__Constructor_declaration__NomeContrutorAssignment_2");
-					put(grammarAccess.getConstructor_declarationAccess().getParametrosContrutorAssignment_4(), "rule__Constructor_declaration__ParametrosContrutorAssignment_4");
-					put(grammarAccess.getConstructor_declarationAccess().getBlocoConstrutorAssignment_6(), "rule__Constructor_declaration__BlocoConstrutorAssignment_6");
+					put(grammarAccess.getConstructor_declarationAccess().getNomeContrutorAssignment_1(), "rule__Constructor_declaration__NomeContrutorAssignment_1");
+					put(grammarAccess.getConstructor_declarationAccess().getParametrosContrutorAssignment_3(), "rule__Constructor_declaration__ParametrosContrutorAssignment_3");
+					put(grammarAccess.getConstructor_declarationAccess().getBlocoConstrutorAssignment_5(), "rule__Constructor_declaration__BlocoConstrutorAssignment_5");
 					put(grammarAccess.getStatic_initializerAccess().getBlocoEstaticoAssignment_1(), "rule__Static_initializer__BlocoEstaticoAssignment_1");
 					put(grammarAccess.getCreating_expressionAccess().getNovoObjetoAssignment_1_0_0(), "rule__Creating_expression__NovoObjetoAssignment_1_0_0");
 					put(grammarAccess.getCreating_expressionAccess().getParametrosAssignment_1_0_1(), "rule__Creating_expression__ParametrosAssignment_1_0_1");
@@ -324,8 +322,8 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getType_specifierAccess().getNomeAssignment_5(), "rule__Type_specifier__NomeAssignment_5");
 					put(grammarAccess.getType_specifierAccess().getNomeAssignment_6(), "rule__Type_specifier__NomeAssignment_6");
 					put(grammarAccess.getType_specifierAccess().getNomeAssignment_7(), "rule__Type_specifier__NomeAssignment_7");
-					put(grammarAccess.getTypeAccess().getTipoAssignment_0_0(), "rule__Type__TipoAssignment_0_0");
-					put(grammarAccess.getTypeAccess().getTipoAssignment_0_1(), "rule__Type__TipoAssignment_0_1");
+					put(grammarAccess.getTypeAccess().getPrimitivoAssignment_0_0(), "rule__Type__PrimitivoAssignment_0_0");
+					put(grammarAccess.getTypeAccess().getObjetoAssignment_0_1(), "rule__Type__ObjetoAssignment_0_1");
 					put(grammarAccess.getMODIFIERAccess().getModificadorAssignment_0(), "rule__MODIFIER__ModificadorAssignment_0");
 					put(grammarAccess.getMODIFIERAccess().getModificadorAssignment_1(), "rule__MODIFIER__ModificadorAssignment_1");
 					put(grammarAccess.getMODIFIERAccess().getModificadorAssignment_2(), "rule__MODIFIER__ModificadorAssignment_2");

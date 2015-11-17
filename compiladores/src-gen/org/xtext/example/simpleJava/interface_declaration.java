@@ -86,29 +86,19 @@ public interface interface_declaration extends EObject
   EList<name> getSuperinterfaces();
 
   /**
-   * Returns the value of the '<em><b>Corpo Interface</b></em>' containment reference.
+   * Returns the value of the '<em><b>Corpo Interface</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.simpleJava.field_declaration}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Corpo Interface</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Corpo Interface</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Corpo Interface</em>' containment reference.
-   * @see #setCorpoInterface(field_declaration)
+   * @return the value of the '<em>Corpo Interface</em>' containment reference list.
    * @see org.xtext.example.simpleJava.SimpleJavaPackage#getinterface_declaration_CorpoInterface()
    * @model containment="true"
    * @generated
    */
-  field_declaration getCorpoInterface();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.simpleJava.interface_declaration#getCorpoInterface <em>Corpo Interface</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Corpo Interface</em>' containment reference.
-   * @see #getCorpoInterface()
-   * @generated
-   */
-  void setCorpoInterface(field_declaration value);
+  EList<field_declaration> getCorpoInterface();
 
 } // interface_declaration

@@ -2,14 +2,19 @@
  */
 package org.xtext.example.simpleJava.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.simpleJava.SimpleJavaPackage;
 import org.xtext.example.simpleJava.statement;
@@ -31,14 +36,14 @@ import org.xtext.example.simpleJava.statement_block;
 public class statement_blockImpl extends MinimalEObjectImpl.Container implements statement_block
 {
   /**
-   * The cached value of the '{@link #getCorpo() <em>Corpo</em>}' containment reference.
+   * The cached value of the '{@link #getCorpo() <em>Corpo</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getCorpo()
    * @generated
    * @ordered
    */
-  protected statement corpo;
+  protected EList<statement> corpo;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,47 +71,13 @@ public class statement_blockImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public statement getCorpo()
+  public EList<statement> getCorpo()
   {
+    if (corpo == null)
+    {
+      corpo = new EObjectContainmentEList<statement>(statement.class, this, SimpleJavaPackage.STATEMENT_BLOCK__CORPO);
+    }
     return corpo;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetCorpo(statement newCorpo, NotificationChain msgs)
-  {
-    statement oldCorpo = corpo;
-    corpo = newCorpo;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.STATEMENT_BLOCK__CORPO, oldCorpo, newCorpo);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setCorpo(statement newCorpo)
-  {
-    if (newCorpo != corpo)
-    {
-      NotificationChain msgs = null;
-      if (corpo != null)
-        msgs = ((InternalEObject)corpo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.STATEMENT_BLOCK__CORPO, null, msgs);
-      if (newCorpo != null)
-        msgs = ((InternalEObject)newCorpo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.STATEMENT_BLOCK__CORPO, null, msgs);
-      msgs = basicSetCorpo(newCorpo, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.STATEMENT_BLOCK__CORPO, newCorpo, newCorpo));
   }
 
   /**
@@ -120,7 +91,7 @@ public class statement_blockImpl extends MinimalEObjectImpl.Container implements
     switch (featureID)
     {
       case SimpleJavaPackage.STATEMENT_BLOCK__CORPO:
-        return basicSetCorpo(null, msgs);
+        return ((InternalEList<?>)getCorpo()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -146,13 +117,15 @@ public class statement_blockImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case SimpleJavaPackage.STATEMENT_BLOCK__CORPO:
-        setCorpo((statement)newValue);
+        getCorpo().clear();
+        getCorpo().addAll((Collection<? extends statement>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -169,7 +142,7 @@ public class statement_blockImpl extends MinimalEObjectImpl.Container implements
     switch (featureID)
     {
       case SimpleJavaPackage.STATEMENT_BLOCK__CORPO:
-        setCorpo((statement)null);
+        getCorpo().clear();
         return;
     }
     super.eUnset(featureID);
@@ -186,7 +159,7 @@ public class statement_blockImpl extends MinimalEObjectImpl.Container implements
     switch (featureID)
     {
       case SimpleJavaPackage.STATEMENT_BLOCK__CORPO:
-        return corpo != null;
+        return corpo != null && !corpo.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -83,14 +83,14 @@ public class interface_declarationImpl extends MinimalEObjectImpl.Container impl
   protected EList<name> superinterfaces;
 
   /**
-   * The cached value of the '{@link #getCorpoInterface() <em>Corpo Interface</em>}' containment reference.
+   * The cached value of the '{@link #getCorpoInterface() <em>Corpo Interface</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getCorpoInterface()
    * @generated
    * @ordered
    */
-  protected field_declaration corpoInterface;
+  protected EList<field_declaration> corpoInterface;
 
   /**
    * <!-- begin-user-doc -->
@@ -169,47 +169,13 @@ public class interface_declarationImpl extends MinimalEObjectImpl.Container impl
    * <!-- end-user-doc -->
    * @generated
    */
-  public field_declaration getCorpoInterface()
+  public EList<field_declaration> getCorpoInterface()
   {
+    if (corpoInterface == null)
+    {
+      corpoInterface = new EObjectContainmentEList<field_declaration>(field_declaration.class, this, SimpleJavaPackage.INTERFACE_DECLARATION__CORPO_INTERFACE);
+    }
     return corpoInterface;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetCorpoInterface(field_declaration newCorpoInterface, NotificationChain msgs)
-  {
-    field_declaration oldCorpoInterface = corpoInterface;
-    corpoInterface = newCorpoInterface;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.INTERFACE_DECLARATION__CORPO_INTERFACE, oldCorpoInterface, newCorpoInterface);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setCorpoInterface(field_declaration newCorpoInterface)
-  {
-    if (newCorpoInterface != corpoInterface)
-    {
-      NotificationChain msgs = null;
-      if (corpoInterface != null)
-        msgs = ((InternalEObject)corpoInterface).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.INTERFACE_DECLARATION__CORPO_INTERFACE, null, msgs);
-      if (newCorpoInterface != null)
-        msgs = ((InternalEObject)newCorpoInterface).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.INTERFACE_DECLARATION__CORPO_INTERFACE, null, msgs);
-      msgs = basicSetCorpoInterface(newCorpoInterface, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.INTERFACE_DECLARATION__CORPO_INTERFACE, newCorpoInterface, newCorpoInterface));
   }
 
   /**
@@ -227,7 +193,7 @@ public class interface_declarationImpl extends MinimalEObjectImpl.Container impl
       case SimpleJavaPackage.INTERFACE_DECLARATION__SUPERINTERFACES:
         return ((InternalEList<?>)getSuperinterfaces()).basicRemove(otherEnd, msgs);
       case SimpleJavaPackage.INTERFACE_DECLARATION__CORPO_INTERFACE:
-        return basicSetCorpoInterface(null, msgs);
+        return ((InternalEList<?>)getCorpoInterface()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -277,7 +243,8 @@ public class interface_declarationImpl extends MinimalEObjectImpl.Container impl
         getSuperinterfaces().addAll((Collection<? extends name>)newValue);
         return;
       case SimpleJavaPackage.INTERFACE_DECLARATION__CORPO_INTERFACE:
-        setCorpoInterface((field_declaration)newValue);
+        getCorpoInterface().clear();
+        getCorpoInterface().addAll((Collection<? extends field_declaration>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -303,7 +270,7 @@ public class interface_declarationImpl extends MinimalEObjectImpl.Container impl
         getSuperinterfaces().clear();
         return;
       case SimpleJavaPackage.INTERFACE_DECLARATION__CORPO_INTERFACE:
-        setCorpoInterface((field_declaration)null);
+        getCorpoInterface().clear();
         return;
     }
     super.eUnset(featureID);
@@ -326,7 +293,7 @@ public class interface_declarationImpl extends MinimalEObjectImpl.Container impl
       case SimpleJavaPackage.INTERFACE_DECLARATION__SUPERINTERFACES:
         return superinterfaces != null && !superinterfaces.isEmpty();
       case SimpleJavaPackage.INTERFACE_DECLARATION__CORPO_INTERFACE:
-        return corpoInterface != null;
+        return corpoInterface != null && !corpoInterface.isEmpty();
     }
     return super.eIsSet(featureID);
   }

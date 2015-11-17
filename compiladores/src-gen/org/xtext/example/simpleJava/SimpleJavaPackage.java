@@ -307,7 +307,7 @@ public interface SimpleJavaPackage extends EPackage
   int CLASS_DECLARATION__IMPLEMENTOS_CLASSE = 3;
 
   /**
-   * The feature id for the '<em><b>Corpo Classe</b></em>' containment reference.
+   * The feature id for the '<em><b>Corpo Classe</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -316,7 +316,7 @@ public interface SimpleJavaPackage extends EPackage
   int CLASS_DECLARATION__CORPO_CLASSE = 4;
 
   /**
-   * The feature id for the '<em><b>Declaracao Classe</b></em>' containment reference.
+   * The feature id for the '<em><b>Declaracao Classe</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -371,7 +371,7 @@ public interface SimpleJavaPackage extends EPackage
   int INTERFACE_DECLARATION__SUPERINTERFACES = 2;
 
   /**
-   * The feature id for the '<em><b>Corpo Interface</b></em>' containment reference.
+   * The feature id for the '<em><b>Corpo Interface</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -592,7 +592,7 @@ public interface SimpleJavaPackage extends EPackage
   int STATEMENT_BLOCK = 12;
 
   /**
-   * The feature id for the '<em><b>Corpo</b></em>' containment reference.
+   * The feature id for the '<em><b>Corpo</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -638,13 +638,13 @@ public interface SimpleJavaPackage extends EPackage
   int STATEMENT__EXPRESSAO = 1;
 
   /**
-   * The feature id for the '<em><b>Bloco</b></em>' containment reference.
+   * The feature id for the '<em><b>Newbloco</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATEMENT__BLOCO = 2;
+  int STATEMENT__NEWBLOCO = 2;
 
   /**
    * The feature id for the '<em><b>Corpo If</b></em>' containment reference.
@@ -1225,22 +1225,13 @@ public interface SimpleJavaPackage extends EPackage
   int CONSTRUCTOR_DECLARATION__MODIFICADOR = NEW_BLOCK_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Tipo</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONSTRUCTOR_DECLARATION__TIPO = NEW_BLOCK_FEATURE_COUNT + 1;
-
-  /**
    * The feature id for the '<em><b>Nome Contrutor</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONSTRUCTOR_DECLARATION__NOME_CONTRUTOR = NEW_BLOCK_FEATURE_COUNT + 2;
+  int CONSTRUCTOR_DECLARATION__NOME_CONTRUTOR = NEW_BLOCK_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Parametros Contrutor</b></em>' containment reference.
@@ -1249,7 +1240,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONSTRUCTOR_DECLARATION__PARAMETROS_CONTRUTOR = NEW_BLOCK_FEATURE_COUNT + 3;
+  int CONSTRUCTOR_DECLARATION__PARAMETROS_CONTRUTOR = NEW_BLOCK_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Bloco Construtor</b></em>' containment reference.
@@ -1258,7 +1249,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONSTRUCTOR_DECLARATION__BLOCO_CONSTRUTOR = NEW_BLOCK_FEATURE_COUNT + 4;
+  int CONSTRUCTOR_DECLARATION__BLOCO_CONSTRUTOR = NEW_BLOCK_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>constructor declaration</em>' class.
@@ -1267,7 +1258,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONSTRUCTOR_DECLARATION_FEATURE_COUNT = NEW_BLOCK_FEATURE_COUNT + 5;
+  int CONSTRUCTOR_DECLARATION_FEATURE_COUNT = NEW_BLOCK_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.simpleJava.impl.static_initializerImpl <em>static initializer</em>}' class.
@@ -2313,13 +2304,22 @@ public interface SimpleJavaPackage extends EPackage
   int TYPE__EXPRESSAO = EXP_AUX__EXPRESSAO;
 
   /**
-   * The feature id for the '<em><b>Tipo</b></em>' containment reference.
+   * The feature id for the '<em><b>Primitivo</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TYPE__TIPO = EXP_AUX_FEATURE_COUNT + 0;
+  int TYPE__PRIMITIVO = EXP_AUX_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Objeto</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE__OBJETO = EXP_AUX_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>type</em>' class.
@@ -2328,7 +2328,7 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TYPE_FEATURE_COUNT = EXP_AUX_FEATURE_COUNT + 1;
+  int TYPE_FEATURE_COUNT = EXP_AUX_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.simpleJava.impl.MODIFIERImpl <em>MODIFIER</em>}' class.
@@ -2562,10 +2562,10 @@ public interface SimpleJavaPackage extends EPackage
   EReference getclass_declaration_ImplementosClasse();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.simpleJava.class_declaration#getCorpoClasse <em>Corpo Classe</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.simpleJava.class_declaration#getCorpoClasse <em>Corpo Classe</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Corpo Classe</em>'.
+   * @return the meta object for the containment reference list '<em>Corpo Classe</em>'.
    * @see org.xtext.example.simpleJava.class_declaration#getCorpoClasse()
    * @see #getclass_declaration()
    * @generated
@@ -2573,10 +2573,10 @@ public interface SimpleJavaPackage extends EPackage
   EReference getclass_declaration_CorpoClasse();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.simpleJava.class_declaration#getDeclaracaoClasse <em>Declaracao Classe</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.simpleJava.class_declaration#getDeclaracaoClasse <em>Declaracao Classe</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Declaracao Classe</em>'.
+   * @return the meta object for the containment reference list '<em>Declaracao Classe</em>'.
    * @see org.xtext.example.simpleJava.class_declaration#getDeclaracaoClasse()
    * @see #getclass_declaration()
    * @generated
@@ -2627,10 +2627,10 @@ public interface SimpleJavaPackage extends EPackage
   EReference getinterface_declaration_Superinterfaces();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.simpleJava.interface_declaration#getCorpoInterface <em>Corpo Interface</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.simpleJava.interface_declaration#getCorpoInterface <em>Corpo Interface</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Corpo Interface</em>'.
+   * @return the meta object for the containment reference list '<em>Corpo Interface</em>'.
    * @see org.xtext.example.simpleJava.interface_declaration#getCorpoInterface()
    * @see #getinterface_declaration()
    * @generated
@@ -2831,10 +2831,10 @@ public interface SimpleJavaPackage extends EPackage
   EClass getstatement_block();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.simpleJava.statement_block#getCorpo <em>Corpo</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.simpleJava.statement_block#getCorpo <em>Corpo</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Corpo</em>'.
+   * @return the meta object for the containment reference list '<em>Corpo</em>'.
    * @see org.xtext.example.simpleJava.statement_block#getCorpo()
    * @see #getstatement_block()
    * @generated
@@ -2874,15 +2874,15 @@ public interface SimpleJavaPackage extends EPackage
   EReference getstatement_Expressao();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.simpleJava.statement#getBloco <em>Bloco</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.simpleJava.statement#getNewbloco <em>Newbloco</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Bloco</em>'.
-   * @see org.xtext.example.simpleJava.statement#getBloco()
+   * @return the meta object for the containment reference '<em>Newbloco</em>'.
+   * @see org.xtext.example.simpleJava.statement#getNewbloco()
    * @see #getstatement()
    * @generated
    */
-  EReference getstatement_Bloco();
+  EReference getstatement_Newbloco();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.simpleJava.statement#getCorpoIf <em>Corpo If</em>}'.
@@ -3434,17 +3434,6 @@ public interface SimpleJavaPackage extends EPackage
    * @generated
    */
   EReference getconstructor_declaration_Modificador();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.simpleJava.constructor_declaration#getTipo <em>Tipo</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tipo</em>'.
-   * @see org.xtext.example.simpleJava.constructor_declaration#getTipo()
-   * @see #getconstructor_declaration()
-   * @generated
-   */
-  EReference getconstructor_declaration_Tipo();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.example.simpleJava.constructor_declaration#getNomeContrutor <em>Nome Contrutor</em>}'.
@@ -4089,15 +4078,26 @@ public interface SimpleJavaPackage extends EPackage
   EClass gettype();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.simpleJava.type#getTipo <em>Tipo</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.simpleJava.type#getPrimitivo <em>Primitivo</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tipo</em>'.
-   * @see org.xtext.example.simpleJava.type#getTipo()
+   * @return the meta object for the containment reference '<em>Primitivo</em>'.
+   * @see org.xtext.example.simpleJava.type#getPrimitivo()
    * @see #gettype()
    * @generated
    */
-  EReference gettype_Tipo();
+  EReference gettype_Primitivo();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.simpleJava.type#getObjeto <em>Objeto</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Objeto</em>'.
+   * @see org.xtext.example.simpleJava.type#getObjeto()
+   * @see #gettype()
+   * @generated
+   */
+  EReference gettype_Objeto();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.simpleJava.MODIFIER <em>MODIFIER</em>}'.
@@ -4310,7 +4310,7 @@ public interface SimpleJavaPackage extends EPackage
     EReference CLASS_DECLARATION__IMPLEMENTOS_CLASSE = eINSTANCE.getclass_declaration_ImplementosClasse();
 
     /**
-     * The meta object literal for the '<em><b>Corpo Classe</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Corpo Classe</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -4318,7 +4318,7 @@ public interface SimpleJavaPackage extends EPackage
     EReference CLASS_DECLARATION__CORPO_CLASSE = eINSTANCE.getclass_declaration_CorpoClasse();
 
     /**
-     * The meta object literal for the '<em><b>Declaracao Classe</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Declaracao Classe</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -4360,7 +4360,7 @@ public interface SimpleJavaPackage extends EPackage
     EReference INTERFACE_DECLARATION__SUPERINTERFACES = eINSTANCE.getinterface_declaration_Superinterfaces();
 
     /**
-     * The meta object literal for the '<em><b>Corpo Interface</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Corpo Interface</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -4522,7 +4522,7 @@ public interface SimpleJavaPackage extends EPackage
     EClass STATEMENT_BLOCK = eINSTANCE.getstatement_block();
 
     /**
-     * The meta object literal for the '<em><b>Corpo</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Corpo</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -4556,12 +4556,12 @@ public interface SimpleJavaPackage extends EPackage
     EReference STATEMENT__EXPRESSAO = eINSTANCE.getstatement_Expressao();
 
     /**
-     * The meta object literal for the '<em><b>Bloco</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Newbloco</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference STATEMENT__BLOCO = eINSTANCE.getstatement_Bloco();
+    EReference STATEMENT__NEWBLOCO = eINSTANCE.getstatement_Newbloco();
 
     /**
      * The meta object literal for the '<em><b>Corpo If</b></em>' containment reference feature.
@@ -4990,14 +4990,6 @@ public interface SimpleJavaPackage extends EPackage
      * @generated
      */
     EReference CONSTRUCTOR_DECLARATION__MODIFICADOR = eINSTANCE.getconstructor_declaration_Modificador();
-
-    /**
-     * The meta object literal for the '<em><b>Tipo</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CONSTRUCTOR_DECLARATION__TIPO = eINSTANCE.getconstructor_declaration_Tipo();
 
     /**
      * The meta object literal for the '<em><b>Nome Contrutor</b></em>' attribute feature.
@@ -5516,12 +5508,20 @@ public interface SimpleJavaPackage extends EPackage
     EClass TYPE = eINSTANCE.gettype();
 
     /**
-     * The meta object literal for the '<em><b>Tipo</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Primitivo</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TYPE__TIPO = eINSTANCE.gettype_Tipo();
+    EReference TYPE__PRIMITIVO = eINSTANCE.gettype_Primitivo();
+
+    /**
+     * The meta object literal for the '<em><b>Objeto</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TYPE__OBJETO = eINSTANCE.gettype_Objeto();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.simpleJava.impl.MODIFIERImpl <em>MODIFIER</em>}' class.

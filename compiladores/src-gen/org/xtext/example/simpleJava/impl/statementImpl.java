@@ -32,7 +32,7 @@ import org.xtext.example.simpleJava.while_statement;
  * <ul>
  *   <li>{@link org.xtext.example.simpleJava.impl.statementImpl#getDeclaracaoVariavel <em>Declaracao Variavel</em>}</li>
  *   <li>{@link org.xtext.example.simpleJava.impl.statementImpl#getExpressao <em>Expressao</em>}</li>
- *   <li>{@link org.xtext.example.simpleJava.impl.statementImpl#getBloco <em>Bloco</em>}</li>
+ *   <li>{@link org.xtext.example.simpleJava.impl.statementImpl#getNewbloco <em>Newbloco</em>}</li>
  *   <li>{@link org.xtext.example.simpleJava.impl.statementImpl#getCorpoIf <em>Corpo If</em>}</li>
  *   <li>{@link org.xtext.example.simpleJava.impl.statementImpl#getCorpoDoWhile <em>Corpo Do While</em>}</li>
  *   <li>{@link org.xtext.example.simpleJava.impl.statementImpl#getCorpoWhile <em>Corpo While</em>}</li>
@@ -73,14 +73,14 @@ public class statementImpl extends MinimalEObjectImpl.Container implements state
   protected expression expressao;
 
   /**
-   * The cached value of the '{@link #getBloco() <em>Bloco</em>}' containment reference.
+   * The cached value of the '{@link #getNewbloco() <em>Newbloco</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBloco()
+   * @see #getNewbloco()
    * @generated
    * @ordered
    */
-  protected statement_block bloco;
+  protected statement_block newbloco;
 
   /**
    * The cached value of the '{@link #getCorpoIf() <em>Corpo If</em>}' containment reference.
@@ -344,9 +344,9 @@ public class statementImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
-  public statement_block getBloco()
+  public statement_block getNewbloco()
   {
-    return bloco;
+    return newbloco;
   }
 
   /**
@@ -354,13 +354,13 @@ public class statementImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBloco(statement_block newBloco, NotificationChain msgs)
+  public NotificationChain basicSetNewbloco(statement_block newNewbloco, NotificationChain msgs)
   {
-    statement_block oldBloco = bloco;
-    bloco = newBloco;
+    statement_block oldNewbloco = newbloco;
+    newbloco = newNewbloco;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.STATEMENT__BLOCO, oldBloco, newBloco);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.STATEMENT__NEWBLOCO, oldNewbloco, newNewbloco);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -371,20 +371,20 @@ public class statementImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBloco(statement_block newBloco)
+  public void setNewbloco(statement_block newNewbloco)
   {
-    if (newBloco != bloco)
+    if (newNewbloco != newbloco)
     {
       NotificationChain msgs = null;
-      if (bloco != null)
-        msgs = ((InternalEObject)bloco).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.STATEMENT__BLOCO, null, msgs);
-      if (newBloco != null)
-        msgs = ((InternalEObject)newBloco).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.STATEMENT__BLOCO, null, msgs);
-      msgs = basicSetBloco(newBloco, msgs);
+      if (newbloco != null)
+        msgs = ((InternalEObject)newbloco).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.STATEMENT__NEWBLOCO, null, msgs);
+      if (newNewbloco != null)
+        msgs = ((InternalEObject)newNewbloco).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimpleJavaPackage.STATEMENT__NEWBLOCO, null, msgs);
+      msgs = basicSetNewbloco(newNewbloco, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.STATEMENT__BLOCO, newBloco, newBloco));
+      eNotify(new ENotificationImpl(this, Notification.SET, SimpleJavaPackage.STATEMENT__NEWBLOCO, newNewbloco, newNewbloco));
   }
 
   /**
@@ -927,8 +927,8 @@ public class statementImpl extends MinimalEObjectImpl.Container implements state
         return basicSetDeclaracaoVariavel(null, msgs);
       case SimpleJavaPackage.STATEMENT__EXPRESSAO:
         return basicSetExpressao(null, msgs);
-      case SimpleJavaPackage.STATEMENT__BLOCO:
-        return basicSetBloco(null, msgs);
+      case SimpleJavaPackage.STATEMENT__NEWBLOCO:
+        return basicSetNewbloco(null, msgs);
       case SimpleJavaPackage.STATEMENT__CORPO_IF:
         return basicSetCorpoIf(null, msgs);
       case SimpleJavaPackage.STATEMENT__CORPO_DO_WHILE:
@@ -967,8 +967,8 @@ public class statementImpl extends MinimalEObjectImpl.Container implements state
         return getDeclaracaoVariavel();
       case SimpleJavaPackage.STATEMENT__EXPRESSAO:
         return getExpressao();
-      case SimpleJavaPackage.STATEMENT__BLOCO:
-        return getBloco();
+      case SimpleJavaPackage.STATEMENT__NEWBLOCO:
+        return getNewbloco();
       case SimpleJavaPackage.STATEMENT__CORPO_IF:
         return getCorpoIf();
       case SimpleJavaPackage.STATEMENT__CORPO_DO_WHILE:
@@ -1013,8 +1013,8 @@ public class statementImpl extends MinimalEObjectImpl.Container implements state
       case SimpleJavaPackage.STATEMENT__EXPRESSAO:
         setExpressao((expression)newValue);
         return;
-      case SimpleJavaPackage.STATEMENT__BLOCO:
-        setBloco((statement_block)newValue);
+      case SimpleJavaPackage.STATEMENT__NEWBLOCO:
+        setNewbloco((statement_block)newValue);
         return;
       case SimpleJavaPackage.STATEMENT__CORPO_IF:
         setCorpoIf((if_statement)newValue);
@@ -1072,8 +1072,8 @@ public class statementImpl extends MinimalEObjectImpl.Container implements state
       case SimpleJavaPackage.STATEMENT__EXPRESSAO:
         setExpressao((expression)null);
         return;
-      case SimpleJavaPackage.STATEMENT__BLOCO:
-        setBloco((statement_block)null);
+      case SimpleJavaPackage.STATEMENT__NEWBLOCO:
+        setNewbloco((statement_block)null);
         return;
       case SimpleJavaPackage.STATEMENT__CORPO_IF:
         setCorpoIf((if_statement)null);
@@ -1129,8 +1129,8 @@ public class statementImpl extends MinimalEObjectImpl.Container implements state
         return declaracaoVariavel != null;
       case SimpleJavaPackage.STATEMENT__EXPRESSAO:
         return expressao != null;
-      case SimpleJavaPackage.STATEMENT__BLOCO:
-        return bloco != null;
+      case SimpleJavaPackage.STATEMENT__NEWBLOCO:
+        return newbloco != null;
       case SimpleJavaPackage.STATEMENT__CORPO_IF:
         return corpoIf != null;
       case SimpleJavaPackage.STATEMENT__CORPO_DO_WHILE:

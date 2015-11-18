@@ -461,29 +461,30 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cModificadorMetodoAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cModificadorMetodoMODIFIERParserRuleCall_0_0 = (RuleCall)cModificadorMetodoAssignment_0.eContents().get(0);
-		private final Assignment cTipoRetornoAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTipoRetornoTypeParserRuleCall_1_0 = (RuleCall)cTipoRetornoAssignment_1.eContents().get(0);
-		private final Assignment cNomeMetodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNomeMetodoIDENTIFIERTerminalRuleCall_2_0 = (RuleCall)cNomeMetodoAssignment_2.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cParametrosMetodoAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cParametrosMetodoParameter_listParserRuleCall_4_0 = (RuleCall)cParametrosMetodoAssignment_4.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cLeftSquareBracketKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
-		private final Alternatives cAlternatives_7 = (Alternatives)cGroup.eContents().get(7);
-		private final Assignment cBlocoMetodoAssignment_7_0 = (Assignment)cAlternatives_7.eContents().get(0);
-		private final RuleCall cBlocoMetodoStatement_blockParserRuleCall_7_0_0 = (RuleCall)cBlocoMetodoAssignment_7_0.eContents().get(0);
-		private final Keyword cSemicolonKeyword_7_1 = (Keyword)cAlternatives_7.eContents().get(1);
+		private final Keyword cStaticKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTipoRetornoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTipoRetornoTypeParserRuleCall_2_0 = (RuleCall)cTipoRetornoAssignment_2.eContents().get(0);
+		private final Assignment cNomeMetodoAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNomeMetodoIDENTIFIERTerminalRuleCall_3_0 = (RuleCall)cNomeMetodoAssignment_3.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cParametrosMetodoAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cParametrosMetodoParameter_listParserRuleCall_5_0 = (RuleCall)cParametrosMetodoAssignment_5.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cLeftSquareBracketKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
+		private final Alternatives cAlternatives_8 = (Alternatives)cGroup.eContents().get(8);
+		private final Assignment cBlocoMetodoAssignment_8_0 = (Assignment)cAlternatives_8.eContents().get(0);
+		private final RuleCall cBlocoMetodoStatement_blockParserRuleCall_8_0_0 = (RuleCall)cBlocoMetodoAssignment_8_0.eContents().get(0);
+		private final Keyword cSemicolonKeyword_8_1 = (Keyword)cAlternatives_8.eContents().get(1);
 		
 		//method_declaration:
-		//	modificadorMetodo=MODIFIER* tipoRetorno=type nomeMetodo=IDENTIFIER "(" parametrosMetodo=parameter_list? ")" ("[" "]")*
-		//	(blocoMetodo=statement_block | ";");
+		//	modificadorMetodo=MODIFIER* "static"? tipoRetorno=type nomeMetodo=IDENTIFIER "(" parametrosMetodo=parameter_list? ")"
+		//	("[" "]")* (blocoMetodo=statement_block | ";");
 		@Override public ParserRule getRule() { return rule; }
 
-		//modificadorMetodo=MODIFIER* tipoRetorno=type nomeMetodo=IDENTIFIER "(" parametrosMetodo=parameter_list? ")" ("[" "]")*
-		//(blocoMetodo=statement_block | ";")
+		//modificadorMetodo=MODIFIER* "static"? tipoRetorno=type nomeMetodo=IDENTIFIER "(" parametrosMetodo=parameter_list? ")"
+		//("[" "]")* (blocoMetodo=statement_block | ";")
 		public Group getGroup() { return cGroup; }
 
 		//modificadorMetodo=MODIFIER*
@@ -492,50 +493,53 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 		//MODIFIER
 		public RuleCall getModificadorMetodoMODIFIERParserRuleCall_0_0() { return cModificadorMetodoMODIFIERParserRuleCall_0_0; }
 
+		//"static"?
+		public Keyword getStaticKeyword_1() { return cStaticKeyword_1; }
+
 		//tipoRetorno=type
-		public Assignment getTipoRetornoAssignment_1() { return cTipoRetornoAssignment_1; }
+		public Assignment getTipoRetornoAssignment_2() { return cTipoRetornoAssignment_2; }
 
 		//type
-		public RuleCall getTipoRetornoTypeParserRuleCall_1_0() { return cTipoRetornoTypeParserRuleCall_1_0; }
+		public RuleCall getTipoRetornoTypeParserRuleCall_2_0() { return cTipoRetornoTypeParserRuleCall_2_0; }
 
 		//nomeMetodo=IDENTIFIER
-		public Assignment getNomeMetodoAssignment_2() { return cNomeMetodoAssignment_2; }
+		public Assignment getNomeMetodoAssignment_3() { return cNomeMetodoAssignment_3; }
 
 		//IDENTIFIER
-		public RuleCall getNomeMetodoIDENTIFIERTerminalRuleCall_2_0() { return cNomeMetodoIDENTIFIERTerminalRuleCall_2_0; }
+		public RuleCall getNomeMetodoIDENTIFIERTerminalRuleCall_3_0() { return cNomeMetodoIDENTIFIERTerminalRuleCall_3_0; }
 
 		//"("
-		public Keyword getLeftParenthesisKeyword_3() { return cLeftParenthesisKeyword_3; }
+		public Keyword getLeftParenthesisKeyword_4() { return cLeftParenthesisKeyword_4; }
 
 		//parametrosMetodo=parameter_list?
-		public Assignment getParametrosMetodoAssignment_4() { return cParametrosMetodoAssignment_4; }
+		public Assignment getParametrosMetodoAssignment_5() { return cParametrosMetodoAssignment_5; }
 
 		//parameter_list
-		public RuleCall getParametrosMetodoParameter_listParserRuleCall_4_0() { return cParametrosMetodoParameter_listParserRuleCall_4_0; }
+		public RuleCall getParametrosMetodoParameter_listParserRuleCall_5_0() { return cParametrosMetodoParameter_listParserRuleCall_5_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
+		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
 
 		//("[" "]")*
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_7() { return cGroup_7; }
 
 		//"["
-		public Keyword getLeftSquareBracketKeyword_6_0() { return cLeftSquareBracketKeyword_6_0; }
+		public Keyword getLeftSquareBracketKeyword_7_0() { return cLeftSquareBracketKeyword_7_0; }
 
 		//"]"
-		public Keyword getRightSquareBracketKeyword_6_1() { return cRightSquareBracketKeyword_6_1; }
+		public Keyword getRightSquareBracketKeyword_7_1() { return cRightSquareBracketKeyword_7_1; }
 
 		//blocoMetodo=statement_block | ";"
-		public Alternatives getAlternatives_7() { return cAlternatives_7; }
+		public Alternatives getAlternatives_8() { return cAlternatives_8; }
 
 		//blocoMetodo=statement_block
-		public Assignment getBlocoMetodoAssignment_7_0() { return cBlocoMetodoAssignment_7_0; }
+		public Assignment getBlocoMetodoAssignment_8_0() { return cBlocoMetodoAssignment_8_0; }
 
 		//statement_block
-		public RuleCall getBlocoMetodoStatement_blockParserRuleCall_7_0_0() { return cBlocoMetodoStatement_blockParserRuleCall_7_0_0; }
+		public RuleCall getBlocoMetodoStatement_blockParserRuleCall_8_0_0() { return cBlocoMetodoStatement_blockParserRuleCall_8_0_0; }
 
 		//";"
-		public Keyword getSemicolonKeyword_7_1() { return cSemicolonKeyword_7_1; }
+		public Keyword getSemicolonKeyword_8_1() { return cSemicolonKeyword_8_1; }
 	}
 
 	public class ParameterElements extends AbstractParserRuleElementFinder {
@@ -3158,8 +3162,8 @@ public class SimpleJavaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//method_declaration:
-	//	modificadorMetodo=MODIFIER* tipoRetorno=type nomeMetodo=IDENTIFIER "(" parametrosMetodo=parameter_list? ")" ("[" "]")*
-	//	(blocoMetodo=statement_block | ";");
+	//	modificadorMetodo=MODIFIER* "static"? tipoRetorno=type nomeMetodo=IDENTIFIER "(" parametrosMetodo=parameter_list? ")"
+	//	("[" "]")* (blocoMetodo=statement_block | ";");
 	public Method_declarationElements getMethod_declarationAccess() {
 		return pMethod_declaration;
 	}

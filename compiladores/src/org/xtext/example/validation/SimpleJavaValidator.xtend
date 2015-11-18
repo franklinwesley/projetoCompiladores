@@ -57,18 +57,22 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 //					INVALID_NAME)
 //		}
 //	}
+
 	@Check
 	def runChecks(compilation_unit comp) {
+		genStart
 		checkType_Declaration(comp.declaracao)
 	}
-
+	
+	@Check
 	def checkType_Declaration(EList<type_declaration> list) {
 		for (type_declaration td : list) {
 			checkInterfaceDeclaration(td.declaracaoInterface)
 			checkClassDeclaration(td.declaracaoClasse)
 		}
 	}
-
+	
+	@Check
 	def checkInterfaceDeclaration(interface_declaration id) {
 		tipos.add(new Tipo(id.nomeInterface))
 		for (field_declaration fd : id.corpoInterface) {
@@ -76,6 +80,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkVariableDeclaration(variable_declaration vd) {
 		var tipoPrimitivo = new Tipo(vd.tipoVariavel.primitivo.nome);
 		var tipoObjeto = new Tipo(vd.tipoVariavel.objeto.nome);
@@ -96,6 +101,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 					}
 					if (variable.op != null) {
 						checkVariableInitializer(variable.valorVariavel)
+						genDeclarationVariableCode(variable)
 					}
 				} else {
 					// erro variavel ja existe
@@ -105,6 +111,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkVariableInitializer(variable_initializer vi) {
 		var vars = vi.valorVariaveis
 		if (vars != null) {
@@ -116,22 +123,29 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkExp(expression exp) {
 		if (isBooleanExp(exp)) {
 			checkBoolean(exp)
+			genExpCode(exp)
 		} else if (isLiteral(exp)) {
 			checkLiterals(exp)
 		} else if (isArimeticExp(exp)) {
 			checkAritmetic(exp)
+			genExpCode(exp)
 		} else if (isVariable(exp)) {
 			checkVariableUsed(exp)
+			genUseVariableCode(exp)
 		} else if (isMethod(exp)) {
 			checkMethodUsed(exp)
+			genUseMethodCode(exp.identificador, "#16")
 		} else if (isAtribuicao(exp)) {
 			checkAttribution(exp)
+			genExpCode(exp)
 		}
 	}
-
+	
+	@Check
 	def checkClassDeclaration(class_declaration cd) {
 		var tipo = new Tipo(cd.nomeClasse)
 		tipos.add(tipo)
@@ -144,7 +158,8 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			checkConstructorDeclaration(cd.nomeClasse, fd.declaracaoConstrutor)
 		}
 	}
-
+	
+	@Check
 	def checkConstructorDeclaration(String nameClass, constructor_declaration cd) {
 		var tipo = new Tipo(nameClass)
 		if (nameClass.equals(cd.nomeContrutor)) {
@@ -154,6 +169,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkMethodDeclaration(method_declaration md) {
 		var tipoPrimitivo = new Tipo(md.tipoRetorno.primitivo.nome);
 		var tipoObjeto = new Tipo(md.tipoRetorno.objeto.nome);
@@ -178,12 +194,14 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkStatementBlock(statement_block sb) {
 		for (statement s : sb.corpo) {
 			checkStatement(s)
 		}
 	}
 
+	@Check
 	def checkStatement(statement s) {
 		if (s.corpoWhile != null) {
 			checkWhile(s.corpoWhile)
@@ -193,16 +211,19 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			checkExp(s.expressao)
 		}
 	}
-
+	
+	@Check
 	def checkWhile(while_statement statement) {
 		if (!isBooleanExp(statement.expressaoWhile)) {
 			// erro expressao invalida
 			error("Invalid expression", SimpleJavaPackage.Literals.WHILE_STATEMENT__EXPRESSAO_WHILE)
 		} else {
 			checkStatement(statement.blocoWhile)
+			genWhileCode(statement)
 		}
 	}
-
+	
+	@Check
 	def checkBoolean(expression expression) {
 		// checar espressao booleana
 		var metodo = metodos.get(expression.identificador);
@@ -222,6 +243,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		return false
 	}
 
+	@Check
 	def checkBooleanExpAux(expression_aux exp) {
 		if (exp.operador != "&" && exp.operador != "^=" && exp.operador != "&=" && exp.operador != "||" &&
 			exp.operador != "&&" && exp.operador != "|" && exp.operador != "||=" && exp.operador != "|=" &&
@@ -232,6 +254,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkBooleanAux (expression exp) {
 		var metodo = metodos.get(exp.identificador);
 		var variavel = variaveis.get(exp.identificador);
@@ -245,6 +268,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkLiterals(expression expression) {
 		// check literais
 		if (expression.literal.inteiro == null && expression.literal.string == null) {
@@ -256,6 +280,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkVariableUsed(expression exp) {
 		if (!variaveis.containsKey(exp.identificador)) {
 			// erro variavel nao exite
@@ -263,6 +288,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkMethodUsed(expression exp) {
 		if (metodos.containsKey(exp.identificador)) {
 			var m = metodos.get(exp.identificador);
@@ -276,6 +302,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkAttribution(expression exp) {
 		if (!variaveis.containsKey(exp.identificador)) {
 			error("inexistent variable", SimpleJavaPackage.Literals.EXPRESSION__IDENTIFICADOR)
@@ -286,6 +313,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkAttributionExpAux(expression_aux exp) {
 		if (exp.operador != "^=" && exp.operador != "*=" && exp.operador != "-=" && exp.operador != "||=" &&
 			exp.operador != "|=" && exp.operador != "/=" && exp.operador != "%=" && exp.operador != "&=") {
@@ -293,6 +321,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkAritmetic(expression expression) {
 		// checar espressao aritimetrica
 		var metodo = metodos.get(expression.identificador);
@@ -314,6 +343,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkAritmeticExpAux(expression_aux exp) {
 		if (exp.op == null && exp.operador != "++" && exp.operador != "--" && exp.operador != "-" &&
 			exp.operador != "-=" && exp.operador != "*" && exp.operador != "*=" && exp.operador != "/" &&
@@ -324,6 +354,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	@Check
 	def checkAritmeticAux(expression exp) {
 		var m = metodos.get(exp.identificador);
 		var v = variaveis.get(exp.identificador);
@@ -348,7 +379,6 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		return false
 	}
 
-	// TODO antigo
 	def Map<String, Tipo> getparametros(arglist list) {
 		var p = new HashMap<String, Tipo>();
 		var i = 0
@@ -397,8 +427,8 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		return p;
 	}
 	
+	@Check
 	def checkDeclaracaoVariavel(variable_declaration declaration) {
-		// TODO ver se esse new tipo pega
 		var tipoPrimitivo = new Tipo(declaration.tipoVariavel.primitivo.nome);
 		var tipoObjeto = new Tipo(declaration.tipoVariavel.objeto.nome);
 		if (!tipos.contains(tipoPrimitivo) || !tipos.contains(tipoObjeto)) {
@@ -412,15 +442,18 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 					checkVariableDeclarator(variable, tipoPrimitivo)
 				} else if (tipoObjeto != null) {
 					checkVariableDeclarator(variable, tipoObjeto)
+					
 				}
 			}
 		}
 	}
 	
+	@Check
 	def checkVariableDeclarator (variable_declarator vd, Tipo tipo) {
 		var variavel = new Variavel(vd.nomeVariavel, tipo);
 		if (!variaveis.containsKey(vd.nomeVariavel)) {
 			variaveis.put(vd.nomeVariavel, variavel);
+			genDeclarationVariableCode(vd)
 		} else {
 			// erro variavel ja existe
 			error("Variable alredy exist", SimpleJavaPackage.Literals.VARIABLE_DECLARATOR__NOME_VARIAVEL)
@@ -627,25 +660,73 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	def genCodeOP(expression exp, String op, String r) {
+		if (exp.literal.decimal != null) {
+			if (exp.exp.literal.decimal != null) {
+				op(op, r, exp.literal.decimal, exp.exp.literal.decimal)
+			} else if (exp.exp.literal.inteiro != null) {
+				op(op, r, exp.literal.decimal, exp.exp.literal.inteiro)
+			} else if (exp.exp.literal.l_float != null) {
+				op(op, r, exp.literal.decimal, exp.exp.literal.l_float)
+			} else if (exp.exp.identificador != null) {
+				genUseVariableCode(exp.exp, r)
+				op(op, r, exp.literal.decimal, "r" + registradores.get(registradores.size - 1))
+			}
+		} else if (exp.literal.inteiro != null) {
+			if (exp.exp.literal.decimal != null) {
+				op(op, r, exp.literal.inteiro, exp.exp.literal.decimal)
+			} else if (exp.exp.literal.inteiro != null) {
+				op(op, r, exp.literal.inteiro, exp.exp.literal.inteiro)
+			} else if (exp.exp.literal.l_float != null) {
+				op(op, r, exp.literal.inteiro, exp.exp.literal.l_float)
+			} else if (exp.exp.identificador != null) {
+				genUseVariableCode(exp.exp, r)
+				op(op, r, exp.literal.decimal, "r" + registradores.get(registradores.size - 1))
+			}
+		} else if (exp.literal.l_float != null) {
+			if (exp.exp.literal.decimal != null) {
+				op(op, r, exp.literal.l_float, exp.exp.literal.decimal)
+			} else if (exp.exp.literal.inteiro != null) {
+				op(op, r, exp.literal.l_float, exp.exp.literal.inteiro)
+			} else if (exp.exp.literal.l_float != null) {
+				op(op, r, exp.literal.l_float, exp.exp.literal.l_float)
+			} else if (exp.exp.identificador != null) {
+				genUseVariableCode(exp.exp, r)
+				op(op, r, exp.literal.decimal, "r" + registradores.get(registradores.size - 1))
+			}
+		} else if (exp.exp.identificador != null) {
+			if (exp.exp.literal.decimal != null) {
+				op(op, r, exp.identificador, exp.exp.literal.decimal)
+			} else if (exp.exp.literal.inteiro != null) {
+				op(op, r, exp.identificador, exp.exp.literal.inteiro)
+			} else if (exp.exp.literal.l_float != null) {
+				op(op, r, exp.identificador, exp.exp.literal.l_float)
+			} else if (exp.exp.identificador != null) {
+				genUseVariableCode(exp.exp, r)
+				op(op, r, exp.identificador, "r" + registradores.get(registradores.size - 1))
+			}
+		}
+	}
+
 	def genAritmeticExpCode(expression exp) {
 		if (isArimeticExp(exp)) {
-			if (exp.op != null) {
-				if (exp.op.operador.equals("+")) {
+			if (exp.operador != null) {
+				if (exp.operador.equals("+")) {
 					genCodeOP(exp, "soma")
 				} else {
 					genCodeOP(exp.exp, "soma")
 					store(exp.identificador, "r1")
 				}
 			} else {
-				if (exp.op.operador.equals("-")) {
+				if (exp.operador.equals("-")) {
 					genCodeOP(exp, "subtracao")
-				} else if (exp.op.operador.equals("*")) {
+				} else if (exp.operador.equals("*")) {
 					genCodeOP(exp, "multplicacao")
-				} else if (exp.op.operador.equals("/")) {
+				} else if (exp.operador.equals("/")) {
 					genCodeOP(exp, "divisao")
-				} else if (exp.op.operador.equals("-")) {
+				} else if (exp.operador.equals("-")) {
 					genCodeOP(exp, "subtracao")
-				} else if (exp.op.operador.equals("++")) {
+				} else if (exp.operador.equals("++")) {
 					if (exp.literal.decimal != null) {
 						op("mais", "r1", exp.literal.decimal, "1")
 					} else if (exp.literal.inteiro != null) {
@@ -653,7 +734,7 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 					} else if (exp.literal.l_float != null) {
 						op("mais", "r1", exp.literal.l_float, "1")
 					}
-				} else if (exp.op.operador.equals("--")) {
+				} else if (exp.operador.equals("--")) {
 					if (exp.literal.decimal != null) {
 						op("menos", "r1", exp.literal.decimal, "1")
 					} else if (exp.literal.inteiro != null) {
@@ -661,13 +742,13 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 					} else if (exp.literal.l_float != null) {
 						op("menos", "r1", exp.literal.l_float, "1")
 					}
-				} else if (exp.op.operador.equals("-=")) {
+				} else if (exp.operador.equals("-=")) {
 					genCodeOP(exp.exp, "menos")
 					store(exp.identificador, "r1")
-				} else if (exp.op.operador.equals("*=")) {
+				} else if (exp.operador.equals("*=")) {
 					genCodeOP(exp.exp, "multiplicacao")
 					store(exp.identificador, "r1")
-				} else if (exp.op.operador.equals("/=")) {
+				} else if (exp.operador.equals("/=")) {
 					genCodeOP(exp.exp, "divisao")
 					store(exp.identificador, "r1")
 				}
@@ -675,9 +756,122 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			}
 		}
 	}
-
+	
+	def genAritmeticExpCode(expression exp, String r) {
+		if (isArimeticExp(exp)) {
+			if (exp.operador != null) {
+				if (exp.operador.equals("+")) {
+					genCodeOP(exp, "soma", r)
+				} else {
+					genCodeOP(exp.exp, "soma", r)
+					store(exp.identificador, r)
+				}
+			} else {
+				if (exp.operador.equals("-")) {
+					genCodeOP(exp, "subtracao", r)
+				} else if (exp.operador.equals("*")) {
+					genCodeOP(exp, "multplicacao", r)
+				} else if (exp.operador.equals("/")) {
+					genCodeOP(exp, "divisao", r)
+				} else if (exp.operador.equals("-")) {
+					genCodeOP(exp, "subtracao", r)
+				} else if (exp.operador.equals("++")) {
+					if (exp.literal.decimal != null) {
+						op("mais", r, exp.literal.decimal, "1")
+					} else if (exp.literal.inteiro != null) {
+						op("mais", r, exp.literal.inteiro, "1")
+					} else if (exp.literal.l_float != null) {
+						op("mais", r, exp.literal.l_float, "1")
+					}
+				} else if (exp.operador.equals("--")) {
+					if (exp.literal.decimal != null) {
+						op("menos", r, exp.literal.decimal, "1")
+					} else if (exp.literal.inteiro != null) {
+						op("menos", r, exp.literal.inteiro, "1")
+					} else if (exp.literal.l_float != null) {
+						op("menos", r, exp.literal.l_float, "1")
+					}
+				} else if (exp.operador.equals("-=")) {
+					genCodeOP(exp.exp, "menos", r)
+					store(exp.identificador, r)
+				} else if (exp.operador.equals("*=")) {
+					genCodeOP(exp.exp, "multiplicacao", r)
+					store(exp.identificador, r)
+				} else if (exp.operador.equals("/=")) {
+					genCodeOP(exp.exp, "divisao", r)
+					store(exp.identificador, r)
+				}
+			// TODO falta % e %=
+			}
+		}
+	}
+	
 	def genBooleanExpCode(expression exp) {
-		// TODO	
+		if (isBooleanExp(exp)) {
+			if (exp.logical.operador.equals("!")) {
+				
+			} else if (exp.logical.operador.equals("true")) {
+				
+			} else if (exp.logical.operador.equals("false")) {
+				
+			} else if (exp.operador.equals("&") || exp.operador.equals("&&")) {
+				var r1 = register
+				var r2 = register
+				genExpCode(exp, r1)
+				genExpCode(exp.exp, r2)
+				salvarArquivo("AND " + r1 + r2)
+			} else if (exp.operador.equals("&=")) {
+				
+			} else if (exp.operador.equals("|") || exp.operador.equals("||")) {
+				
+			} else if (exp.operador.equals("|=") || exp.operador.equals("||=")) {
+				
+			} else if (exp.operador.equals("^")) {
+				
+			} else if (exp.operador.equals("^=")) {
+				
+			} 
+			// TODO falta % e %=
+		}
+	}
+
+	def genBooleanExpCode(expression exp, String r) {
+		if (isBooleanExp(exp)) {
+			if (exp.logical.operador.equals("!")) {
+				
+			} else if (exp.logical.operador.equals("true")) {
+				
+			} else if (exp.logical.operador.equals("false")) {
+				
+			} else if (exp.operador.equals("&") || exp.operador.equals("&&")) {
+				var r1 = register
+				var r2 = register
+				genExpCode(exp, r1)
+				genExpCode(exp.exp, r2)
+				salvarArquivo("AND " + r1 + r2)
+			} else if (exp.operador.equals("&=")) {
+				
+			} else if (exp.operador.equals("|") || exp.operador.equals("||")) {
+				
+			} else if (exp.operador.equals("|=") || exp.operador.equals("||=")) {
+				
+			} else if (exp.operador.equals("^")) {
+				
+			} else if (exp.operador.equals("^=")) {
+				
+			} 
+			// TODO falta % e %=
+		}
+	}
+
+	def genExpCode(expression exp, String r) {
+		if (isBooleanExp(exp)) {
+			genBooleanExpCode(exp, r)
+		} else if (isArimeticExp(exp)) {
+			genAritmeticExpCode(exp, r)
+		} else if (isAtribuicao(exp)) {
+			genAttCode(exp.identificador, exp.exp, r)
+		}
 	}
 
 	def genExpCode(expression exp) {
@@ -728,9 +922,10 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			for (variable_declarator vd : st.declaracaoVariavel.declaracaoVariaveis) {
 				genDeclarationVariableCode(vd)
 			}
-		} else if (st.corpoWhile != null) {
-			genWhileCode(st.corpoWhile)
 		}
+//		} else if (st.corpoWhile != null) {
+//			genWhileCode(st.corpoWhile)
+//		}
 	}
 
 	def label(String name) {
@@ -748,6 +943,13 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 		}
 	}
 
+	def genAttCode(String name, expression exp, String r) {
+		if (isAtribuicao(exp)) {
+			genExpCode(exp, r)
+			store(name, "r1")
+		}
+	}
+
 	def genUseVariableCode(expression exp) {
 		if (isVariable(exp)) {
 			if (registradores.isEmpty) {
@@ -756,6 +958,12 @@ class SimpleJavaValidator extends AbstractSimpleJavaValidator {
 			} else {
 				load(getRegister(), exp.identificador)
 			}
+		}
+	}
+	
+	def genUseVariableCode(expression exp, String r) {
+		if (isVariable(exp)) {
+			load(r, exp.identificador)
 		}
 	}
 

@@ -847,19 +847,23 @@ rulemethod_declaration returns [EObject current=null]
 	    }
 
 )
-)*(
+)*(	otherlv_1='static' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getMethod_declarationAccess().getStaticKeyword_1());
+    }
+)?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMethod_declarationAccess().getTipoRetornoTypeParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getMethod_declarationAccess().getTipoRetornoTypeParserRuleCall_2_0()); 
 	    }
-		lv_tipoRetorno_1_0=ruletype		{
+		lv_tipoRetorno_2_0=ruletype		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMethod_declarationRule());
 	        }
        		set(
        			$current, 
        			"tipoRetorno",
-        		lv_tipoRetorno_1_0, 
+        		lv_tipoRetorno_2_0, 
         		"type");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -867,9 +871,9 @@ rulemethod_declaration returns [EObject current=null]
 )
 )(
 (
-		lv_nomeMetodo_2_0=RULE_IDENTIFIER
+		lv_nomeMetodo_3_0=RULE_IDENTIFIER
 		{
-			newLeafNode(lv_nomeMetodo_2_0, grammarAccess.getMethod_declarationAccess().getNomeMetodoIDENTIFIERTerminalRuleCall_2_0()); 
+			newLeafNode(lv_nomeMetodo_3_0, grammarAccess.getMethod_declarationAccess().getNomeMetodoIDENTIFIERTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -878,67 +882,67 @@ rulemethod_declaration returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"nomeMetodo",
-        		lv_nomeMetodo_2_0, 
+        		lv_nomeMetodo_3_0, 
         		"IDENTIFIER");
 	    }
 
 )
-)	otherlv_3='(' 
+)	otherlv_4='(' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getMethod_declarationAccess().getLeftParenthesisKeyword_3());
+    	newLeafNode(otherlv_4, grammarAccess.getMethod_declarationAccess().getLeftParenthesisKeyword_4());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMethod_declarationAccess().getParametrosMetodoParameter_listParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getMethod_declarationAccess().getParametrosMetodoParameter_listParserRuleCall_5_0()); 
 	    }
-		lv_parametrosMetodo_4_0=ruleparameter_list		{
+		lv_parametrosMetodo_5_0=ruleparameter_list		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMethod_declarationRule());
 	        }
        		set(
        			$current, 
        			"parametrosMetodo",
-        		lv_parametrosMetodo_4_0, 
+        		lv_parametrosMetodo_5_0, 
         		"parameter_list");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)?	otherlv_5=')' 
+)?	otherlv_6=')' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getMethod_declarationAccess().getRightParenthesisKeyword_5());
+    	newLeafNode(otherlv_6, grammarAccess.getMethod_declarationAccess().getRightParenthesisKeyword_6());
     }
-(	otherlv_6='[' 
+(	otherlv_7='[' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getMethod_declarationAccess().getLeftSquareBracketKeyword_6_0());
+    	newLeafNode(otherlv_7, grammarAccess.getMethod_declarationAccess().getLeftSquareBracketKeyword_7_0());
     }
-	otherlv_7=']' 
+	otherlv_8=']' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getMethod_declarationAccess().getRightSquareBracketKeyword_6_1());
+    	newLeafNode(otherlv_8, grammarAccess.getMethod_declarationAccess().getRightSquareBracketKeyword_7_1());
     }
 )*((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMethod_declarationAccess().getBlocoMetodoStatement_blockParserRuleCall_7_0_0()); 
+	        newCompositeNode(grammarAccess.getMethod_declarationAccess().getBlocoMetodoStatement_blockParserRuleCall_8_0_0()); 
 	    }
-		lv_blocoMetodo_8_0=rulestatement_block		{
+		lv_blocoMetodo_9_0=rulestatement_block		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMethod_declarationRule());
 	        }
        		set(
        			$current, 
        			"blocoMetodo",
-        		lv_blocoMetodo_8_0, 
+        		lv_blocoMetodo_9_0, 
         		"statement_block");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
 )
-    |	otherlv_9=';' 
+    |	otherlv_10=';' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getMethod_declarationAccess().getSemicolonKeyword_7_1());
+    	newLeafNode(otherlv_10, grammarAccess.getMethod_declarationAccess().getSemicolonKeyword_8_1());
     }
 ))
 ;

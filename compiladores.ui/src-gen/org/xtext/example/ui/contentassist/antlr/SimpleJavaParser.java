@@ -42,7 +42,7 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClass_declarationAccess().getAlternatives_6(), "rule__Class_declaration__Alternatives_6");
 					put(grammarAccess.getField_declarationAccess().getAlternatives(), "rule__Field_declaration__Alternatives");
 					put(grammarAccess.getField_declarationAccess().getAlternatives_0_1(), "rule__Field_declaration__Alternatives_0_1");
-					put(grammarAccess.getMethod_declarationAccess().getAlternatives_7(), "rule__Method_declaration__Alternatives_7");
+					put(grammarAccess.getMethod_declarationAccess().getAlternatives_8(), "rule__Method_declaration__Alternatives_8");
 					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
 					put(grammarAccess.getVariable_declarationAccess().getAlternatives_1(), "rule__Variable_declaration__Alternatives_1");
 					put(grammarAccess.getVariable_declarationAccess().getAlternatives_4(), "rule__Variable_declaration__Alternatives_4");
@@ -84,7 +84,7 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInterface_declarationAccess().getGroup_3_2(), "rule__Interface_declaration__Group_3_2__0");
 					put(grammarAccess.getField_declarationAccess().getGroup_0(), "rule__Field_declaration__Group_0__0");
 					put(grammarAccess.getMethod_declarationAccess().getGroup(), "rule__Method_declaration__Group__0");
-					put(grammarAccess.getMethod_declarationAccess().getGroup_6(), "rule__Method_declaration__Group_6__0");
+					put(grammarAccess.getMethod_declarationAccess().getGroup_7(), "rule__Method_declaration__Group_7__0");
 					put(grammarAccess.getParameterAccess().getGroup(), "rule__Parameter__Group__0");
 					put(grammarAccess.getParameterAccess().getGroup_2(), "rule__Parameter__Group_2__0");
 					put(grammarAccess.getParameter_listAccess().getGroup(), "rule__Parameter_list__Group__0");
@@ -188,10 +188,10 @@ public class SimpleJavaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getField_declarationAccess().getDeclaracaoVariavelAssignment_0_1_2(), "rule__Field_declaration__DeclaracaoVariavelAssignment_0_1_2");
 					put(grammarAccess.getField_declarationAccess().getEstaticoAssignment_1(), "rule__Field_declaration__EstaticoAssignment_1");
 					put(grammarAccess.getMethod_declarationAccess().getModificadorMetodoAssignment_0(), "rule__Method_declaration__ModificadorMetodoAssignment_0");
-					put(grammarAccess.getMethod_declarationAccess().getTipoRetornoAssignment_1(), "rule__Method_declaration__TipoRetornoAssignment_1");
-					put(grammarAccess.getMethod_declarationAccess().getNomeMetodoAssignment_2(), "rule__Method_declaration__NomeMetodoAssignment_2");
-					put(grammarAccess.getMethod_declarationAccess().getParametrosMetodoAssignment_4(), "rule__Method_declaration__ParametrosMetodoAssignment_4");
-					put(grammarAccess.getMethod_declarationAccess().getBlocoMetodoAssignment_7_0(), "rule__Method_declaration__BlocoMetodoAssignment_7_0");
+					put(grammarAccess.getMethod_declarationAccess().getTipoRetornoAssignment_2(), "rule__Method_declaration__TipoRetornoAssignment_2");
+					put(grammarAccess.getMethod_declarationAccess().getNomeMetodoAssignment_3(), "rule__Method_declaration__NomeMetodoAssignment_3");
+					put(grammarAccess.getMethod_declarationAccess().getParametrosMetodoAssignment_5(), "rule__Method_declaration__ParametrosMetodoAssignment_5");
+					put(grammarAccess.getMethod_declarationAccess().getBlocoMetodoAssignment_8_0(), "rule__Method_declaration__BlocoMetodoAssignment_8_0");
 					put(grammarAccess.getParameterAccess().getTipoParametroAssignment_0(), "rule__Parameter__TipoParametroAssignment_0");
 					put(grammarAccess.getParameterAccess().getNomeParametroAssignment_1(), "rule__Parameter__NomeParametroAssignment_1");
 					put(grammarAccess.getParameter_listAccess().getParametrosAssignment_0(), "rule__Parameter_list__ParametrosAssignment_0");

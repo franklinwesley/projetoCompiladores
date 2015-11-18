@@ -27,7 +27,8 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_creating_expression___LeftSquareBracketKeyword_1_1_2_0_RightSquareBracketKeyword_1_1_2_1__a;
 	protected AbstractElementAlias match_expression_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7;
 	protected AbstractElementAlias match_import_statement_FullStopAsteriskSemicolonKeyword_2_0_or_SemicolonKeyword_2_1;
-	protected AbstractElementAlias match_method_declaration___LeftSquareBracketKeyword_6_0_RightSquareBracketKeyword_6_1__a;
+	protected AbstractElementAlias match_method_declaration_StaticKeyword_1_q;
+	protected AbstractElementAlias match_method_declaration___LeftSquareBracketKeyword_7_0_RightSquareBracketKeyword_7_1__a;
 	protected AbstractElementAlias match_parameter___LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_1__a;
 	protected AbstractElementAlias match_statement_SemicolonKeyword_15_or___BreakKeyword_13_0_SemicolonKeyword_13_2___or___ContinueKeyword_14_0_SemicolonKeyword_14_2___or___ReturnKeyword_10_0_SemicolonKeyword_10_2__;
 	protected AbstractElementAlias match_statement___IDENTIFIERTerminalRuleCall_12_0_ColonKeyword_12_1__a;
@@ -45,7 +46,8 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_creating_expression___LeftSquareBracketKeyword_1_1_2_0_RightSquareBracketKeyword_1_1_2_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getCreating_expressionAccess().getLeftSquareBracketKeyword_1_1_2_0()), new TokenAlias(false, false, grammarAccess.getCreating_expressionAccess().getRightSquareBracketKeyword_1_1_2_1()));
 		match_expression_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getNullKeyword_0_5()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getSuperKeyword_0_6()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getThisKeyword_0_7()));
 		match_import_statement_FullStopAsteriskSemicolonKeyword_2_0_or_SemicolonKeyword_2_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getImport_statementAccess().getFullStopAsteriskSemicolonKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getImport_statementAccess().getSemicolonKeyword_2_1()));
-		match_method_declaration___LeftSquareBracketKeyword_6_0_RightSquareBracketKeyword_6_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getMethod_declarationAccess().getLeftSquareBracketKeyword_6_0()), new TokenAlias(false, false, grammarAccess.getMethod_declarationAccess().getRightSquareBracketKeyword_6_1()));
+		match_method_declaration_StaticKeyword_1_q = new TokenAlias(false, true, grammarAccess.getMethod_declarationAccess().getStaticKeyword_1());
+		match_method_declaration___LeftSquareBracketKeyword_7_0_RightSquareBracketKeyword_7_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getMethod_declarationAccess().getLeftSquareBracketKeyword_7_0()), new TokenAlias(false, false, grammarAccess.getMethod_declarationAccess().getRightSquareBracketKeyword_7_1()));
 		match_parameter___LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getParameterAccess().getLeftSquareBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getParameterAccess().getRightSquareBracketKeyword_2_1()));
 		match_statement_SemicolonKeyword_15_or___BreakKeyword_13_0_SemicolonKeyword_13_2___or___ContinueKeyword_14_0_SemicolonKeyword_14_2___or___ReturnKeyword_10_0_SemicolonKeyword_10_2__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getStatementAccess().getBreakKeyword_13_0()), new TokenAlias(false, false, grammarAccess.getStatementAccess().getSemicolonKeyword_13_2())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getStatementAccess().getContinueKeyword_14_0()), new TokenAlias(false, false, grammarAccess.getStatementAccess().getSemicolonKeyword_14_2())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getStatementAccess().getReturnKeyword_10_0()), new TokenAlias(false, false, grammarAccess.getStatementAccess().getSemicolonKeyword_10_2())), new TokenAlias(false, false, grammarAccess.getStatementAccess().getSemicolonKeyword_15()));
 		match_statement___IDENTIFIERTerminalRuleCall_12_0_ColonKeyword_12_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getStatementAccess().getIDENTIFIERTerminalRuleCall_12_0()), new TokenAlias(false, false, grammarAccess.getStatementAccess().getColonKeyword_12_1()));
@@ -102,8 +104,10 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_expression_NullKeyword_0_5_or_SuperKeyword_0_6_or_ThisKeyword_0_7(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_import_statement_FullStopAsteriskSemicolonKeyword_2_0_or_SemicolonKeyword_2_1.equals(syntax))
 				emit_import_statement_FullStopAsteriskSemicolonKeyword_2_0_or_SemicolonKeyword_2_1(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_method_declaration___LeftSquareBracketKeyword_6_0_RightSquareBracketKeyword_6_1__a.equals(syntax))
-				emit_method_declaration___LeftSquareBracketKeyword_6_0_RightSquareBracketKeyword_6_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_method_declaration_StaticKeyword_1_q.equals(syntax))
+				emit_method_declaration_StaticKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_method_declaration___LeftSquareBracketKeyword_7_0_RightSquareBracketKeyword_7_1__a.equals(syntax))
+				emit_method_declaration___LeftSquareBracketKeyword_7_0_RightSquareBracketKeyword_7_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_parameter___LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_1__a.equals(syntax))
 				emit_parameter___LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_statement_SemicolonKeyword_15_or___BreakKeyword_13_0_SemicolonKeyword_13_2___or___ContinueKeyword_14_0_SemicolonKeyword_14_2___or___ReturnKeyword_10_0_SemicolonKeyword_10_2__.equals(syntax))
@@ -185,6 +189,18 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
+	 *     'static'?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) tipoRetorno=type
+	 *     modificadorMetodo=MODIFIER (ambiguity) tipoRetorno=type
+	 */
+	protected void emit_method_declaration_StaticKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
 	 *     ('[' ']')*
 	 *
 	 * This ambiguous syntax occurs at:
@@ -193,7 +209,7 @@ public class SimpleJavaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     parametrosMetodo=parameter_list ')' (ambiguity) ';' (rule end)
 	 *     parametrosMetodo=parameter_list ')' (ambiguity) blocoMetodo=statement_block
 	 */
-	protected void emit_method_declaration___LeftSquareBracketKeyword_6_0_RightSquareBracketKeyword_6_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_method_declaration___LeftSquareBracketKeyword_7_0_RightSquareBracketKeyword_7_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

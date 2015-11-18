@@ -16,7 +16,7 @@ field_declaration:
       ( comentario=(doc_comment)* ( declaracaoMetodo=method_declaration | declaracaoConstrutor=constructor_declaration | declaracaoVariavel=variable_declaration ) ) 
       | estatico=static_initializer 
       | ";" ;
-method_declaration: (modificadorMetodo=MODIFIER)* tipoRetorno=type nomeMetodo=IDENTIFIER "(" (parametrosMetodo=parameter_list)? ")" ("[" "]")* (blocoMetodo=statement_block | ";" );
+method_declaration: (modificadorMetodo=MODIFIER)* ("static")? tipoRetorno=type nomeMetodo=IDENTIFIER "(" (parametrosMetodo=parameter_list)? ")" ("[" "]")* (blocoMetodo=statement_block | ";" );
 parameter: 
       tipoParametro=type nomeParametro=IDENTIFIER ("[" "]")*; 
 parameter_list:

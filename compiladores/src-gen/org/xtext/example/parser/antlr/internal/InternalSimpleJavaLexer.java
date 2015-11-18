@@ -410,10 +410,11 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:24:7: ( '(' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:24:9: '('
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:24:7: ( 'static' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:24:9: 'static'
             {
-            match('('); 
+            match("static"); 
+
 
             }
 
@@ -430,10 +431,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:25:7: ( ')' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:25:9: ')'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:25:7: ( '(' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:25:9: '('
             {
-            match(')'); 
+            match('('); 
 
             }
 
@@ -450,10 +451,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:26:7: ( '[' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:26:9: '['
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:26:7: ( ')' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:26:9: ')'
             {
-            match('['); 
+            match(')'); 
 
             }
 
@@ -470,10 +471,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:27:7: ( ']' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:27:9: ']'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:27:7: ( '[' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:27:9: '['
             {
-            match(']'); 
+            match('['); 
 
             }
 
@@ -490,11 +491,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:28:7: ( 'synchronized' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:28:9: 'synchronized'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:28:7: ( ']' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:28:9: ']'
             {
-            match("synchronized"); 
-
+            match(']'); 
 
             }
 
@@ -511,10 +511,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:29:7: ( 'return' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:29:9: 'return'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:29:7: ( 'synchronized' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:29:9: 'synchronized'
             {
-            match("return"); 
+            match("synchronized"); 
 
 
             }
@@ -532,10 +532,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:30:7: ( 'throw' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:30:9: 'throw'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:30:7: ( 'return' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:30:9: 'return'
             {
-            match("throw"); 
+            match("return"); 
 
 
             }
@@ -553,10 +553,11 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:31:7: ( ':' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:31:9: ':'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:31:7: ( 'throw' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:31:9: 'throw'
             {
-            match(':'); 
+            match("throw"); 
+
 
             }
 
@@ -573,11 +574,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:32:7: ( 'break' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:32:9: 'break'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:32:7: ( ':' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:32:9: ':'
             {
-            match("break"); 
-
+            match(':'); 
 
             }
 
@@ -594,10 +594,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:33:7: ( 'continue' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:33:9: 'continue'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:33:7: ( 'break' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:33:9: 'break'
             {
-            match("continue"); 
+            match("break"); 
 
 
             }
@@ -615,10 +615,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:34:7: ( 'void' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:34:9: 'void'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:34:7: ( 'continue' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:34:9: 'continue'
             {
-            match("void"); 
+            match("continue"); 
 
 
             }
@@ -636,10 +636,11 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:35:7: ( '=' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:35:9: '='
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:35:7: ( 'void' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:35:9: 'void'
             {
-            match('='); 
+            match("void"); 
+
 
             }
 
@@ -656,11 +657,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:36:7: ( 'if' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:36:9: 'if'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:36:7: ( '=' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:36:9: '='
             {
-            match("if"); 
-
+            match('='); 
 
             }
 
@@ -677,10 +677,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:37:7: ( 'else' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:37:9: 'else'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:37:7: ( 'if' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:37:9: 'if'
             {
-            match("else"); 
+            match("if"); 
 
 
             }
@@ -698,10 +698,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:38:7: ( 'do' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:38:9: 'do'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:38:7: ( 'else' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:38:9: 'else'
             {
-            match("do"); 
+            match("else"); 
 
 
             }
@@ -719,10 +719,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:39:7: ( 'while' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:39:9: 'while'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:39:7: ( 'do' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:39:9: 'do'
             {
-            match("while"); 
+            match("do"); 
 
 
             }
@@ -740,10 +740,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:40:7: ( 'for' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:40:9: 'for'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:40:7: ( 'while' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:40:9: 'while'
             {
-            match("for"); 
+            match("while"); 
 
 
             }
@@ -761,10 +761,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:41:7: ( 'try' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:41:9: 'try'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:41:7: ( 'for' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:41:9: 'for'
             {
-            match("try"); 
+            match("for"); 
 
 
             }
@@ -782,10 +782,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:42:7: ( 'catch' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:42:9: 'catch'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:42:7: ( 'try' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:42:9: 'try'
             {
-            match("catch"); 
+            match("try"); 
 
 
             }
@@ -803,10 +803,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:43:7: ( 'finally' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:43:9: 'finally'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:43:7: ( 'catch' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:43:9: 'catch'
             {
-            match("finally"); 
+            match("catch"); 
 
 
             }
@@ -824,10 +824,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:44:7: ( 'switch' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:44:9: 'switch'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:44:7: ( 'finally' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:44:9: 'finally'
             {
-            match("switch"); 
+            match("finally"); 
 
 
             }
@@ -845,10 +845,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:45:7: ( 'case' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:45:9: 'case'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:45:7: ( 'switch' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:45:9: 'switch'
             {
-            match("case"); 
+            match("switch"); 
 
 
             }
@@ -866,10 +866,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:46:7: ( 'default' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:46:9: 'default'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:46:7: ( 'case' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:46:9: 'case'
             {
-            match("default"); 
+            match("case"); 
 
 
             }
@@ -887,10 +887,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:47:7: ( 'static' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:47:9: 'static'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:47:7: ( 'default' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:47:9: 'default'
             {
-            match("static"); 
+            match("default"); 
 
 
             }
@@ -2132,10 +2132,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_FLOAT_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4992:20: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )? )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4992:22: ( '0' .. '9' )+ '.' ( '0' .. '9' )+ ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )?
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:20: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )? )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:22: ( '0' .. '9' )+ '.' ( '0' .. '9' )+ ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )?
             {
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4992:22: ( '0' .. '9' )+
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:22: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -2149,7 +2149,7 @@ public class InternalSimpleJavaLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4992:23: '0' .. '9'
+            	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:23: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2166,7 +2166,7 @@ public class InternalSimpleJavaLexer extends Lexer {
             } while (true);
 
             match('.'); 
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4992:38: ( '0' .. '9' )+
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:38: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -2180,7 +2180,7 @@ public class InternalSimpleJavaLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4992:39: '0' .. '9'
+            	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:39: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2196,7 +2196,7 @@ public class InternalSimpleJavaLexer extends Lexer {
                 cnt2++;
             } while (true);
 
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4992:50: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )?
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:50: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -2205,7 +2205,7 @@ public class InternalSimpleJavaLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4992:51: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:51: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
                     {
                     if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                         input.consume();
@@ -2216,7 +2216,7 @@ public class InternalSimpleJavaLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4992:61: ( '+' | '-' )?
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:61: ( '+' | '-' )?
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -2242,7 +2242,7 @@ public class InternalSimpleJavaLexer extends Lexer {
 
                     }
 
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4992:72: ( '0' .. '9' )+
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:72: ( '0' .. '9' )+
                     int cnt4=0;
                     loop4:
                     do {
@@ -2256,7 +2256,7 @@ public class InternalSimpleJavaLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4992:73: '0' .. '9'
+                    	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:73: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -2294,11 +2294,11 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_EXPONENT_PART;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4994:20: ( 'e' ( '+' | '-' )? RULE_DECIMAL_DIGITS )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4994:22: 'e' ( '+' | '-' )? RULE_DECIMAL_DIGITS
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4998:20: ( 'e' ( '+' | '-' )? RULE_DECIMAL_DIGITS )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4998:22: 'e' ( '+' | '-' )? RULE_DECIMAL_DIGITS
             {
             match('e'); 
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4994:26: ( '+' | '-' )?
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4998:26: ( '+' | '-' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -2341,8 +2341,8 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_FLOAT_TYPE_SUFFIX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:24: ( ( 'f' | 'd' ) )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4996:26: ( 'f' | 'd' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5000:24: ( ( 'f' | 'd' ) )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5000:26: ( 'f' | 'd' )
             {
             if ( input.LA(1)=='d'||input.LA(1)=='f' ) {
                 input.consume();
@@ -2369,8 +2369,8 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_DECIMAL_DIGITS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4998:21: ( RULE_INT )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:4998:23: RULE_INT
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5002:21: ( RULE_INT )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5002:23: RULE_INT
             {
             mRULE_INT(); 
 
@@ -2389,10 +2389,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_INTEGER_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5000:22: ( ( RULE_DECIMAL_DIGITS ( 'l' )? | '0x' ( '0' .. '9' | 'a' .. 'f' )+ ( 'l' )? ) )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5000:24: ( RULE_DECIMAL_DIGITS ( 'l' )? | '0x' ( '0' .. '9' | 'a' .. 'f' )+ ( 'l' )? )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:22: ( ( RULE_DECIMAL_DIGITS ( 'l' )? | '0x' ( '0' .. '9' | 'a' .. 'f' )+ ( 'l' )? ) )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:24: ( RULE_DECIMAL_DIGITS ( 'l' )? | '0x' ( '0' .. '9' | 'a' .. 'f' )+ ( 'l' )? )
             {
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5000:24: ( RULE_DECIMAL_DIGITS ( 'l' )? | '0x' ( '0' .. '9' | 'a' .. 'f' )+ ( 'l' )? )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:24: ( RULE_DECIMAL_DIGITS ( 'l' )? | '0x' ( '0' .. '9' | 'a' .. 'f' )+ ( 'l' )? )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -2416,10 +2416,10 @@ public class InternalSimpleJavaLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5000:25: RULE_DECIMAL_DIGITS ( 'l' )?
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:25: RULE_DECIMAL_DIGITS ( 'l' )?
                     {
                     mRULE_DECIMAL_DIGITS(); 
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5000:45: ( 'l' )?
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:45: ( 'l' )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -2428,7 +2428,7 @@ public class InternalSimpleJavaLexer extends Lexer {
                     }
                     switch (alt7) {
                         case 1 :
-                            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5000:45: 'l'
+                            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:45: 'l'
                             {
                             match('l'); 
 
@@ -2441,11 +2441,11 @@ public class InternalSimpleJavaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5000:50: '0x' ( '0' .. '9' | 'a' .. 'f' )+ ( 'l' )?
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:50: '0x' ( '0' .. '9' | 'a' .. 'f' )+ ( 'l' )?
                     {
                     match("0x"); 
 
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5000:55: ( '0' .. '9' | 'a' .. 'f' )+
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:55: ( '0' .. '9' | 'a' .. 'f' )+
                     int cnt8=0;
                     loop8:
                     do {
@@ -2483,7 +2483,7 @@ public class InternalSimpleJavaLexer extends Lexer {
                         cnt8++;
                     } while (true);
 
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5000:76: ( 'l' )?
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:76: ( 'l' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -2492,7 +2492,7 @@ public class InternalSimpleJavaLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5000:76: 'l'
+                            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:76: 'l'
                             {
                             match('l'); 
 
@@ -2523,8 +2523,8 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_IDENTIFIER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5002:17: ( RULE_ID )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5002:19: RULE_ID
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5006:17: ( RULE_ID )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5006:19: RULE_ID
             {
             mRULE_ID(); 
 
@@ -2543,10 +2543,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:11: ( '^' )?
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:11: ( '^' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -2555,7 +2555,7 @@ public class InternalSimpleJavaLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:11: '^'
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:11: '^'
                     {
                     match('^'); 
 
@@ -2573,7 +2573,7 @@ public class InternalSimpleJavaLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5004:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop12:
             do {
                 int alt12=2;
@@ -2622,10 +2622,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5006:10: ( ( '0' .. '9' )+ )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5006:12: ( '0' .. '9' )+
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5010:10: ( ( '0' .. '9' )+ )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5010:12: ( '0' .. '9' )+
             {
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5006:12: ( '0' .. '9' )+
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5010:12: ( '0' .. '9' )+
             int cnt13=0;
             loop13:
             do {
@@ -2639,7 +2639,7 @@ public class InternalSimpleJavaLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5006:13: '0' .. '9'
+            	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5010:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2671,10 +2671,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -2692,10 +2692,10 @@ public class InternalSimpleJavaLexer extends Lexer {
             }
             switch (alt16) {
                 case 1 :
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop14:
                     do {
                         int alt14=3;
@@ -2711,7 +2711,7 @@ public class InternalSimpleJavaLexer extends Lexer {
 
                         switch (alt14) {
                     	case 1 :
-                    	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:21: '\\\\' .
+                    	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -2719,7 +2719,7 @@ public class InternalSimpleJavaLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2744,10 +2744,10 @@ public class InternalSimpleJavaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop15:
                     do {
                         int alt15=3;
@@ -2763,7 +2763,7 @@ public class InternalSimpleJavaLexer extends Lexer {
 
                         switch (alt15) {
                     	case 1 :
-                    	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:54: '\\\\' .
+                    	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -2771,7 +2771,7 @@ public class InternalSimpleJavaLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5008:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2814,12 +2814,12 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5010:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5010:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5014:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5014:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5010:24: ( options {greedy=false; } : . )*
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5014:24: ( options {greedy=false; } : . )*
             loop17:
             do {
                 int alt17=2;
@@ -2844,7 +2844,7 @@ public class InternalSimpleJavaLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5010:52: .
+            	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5014:52: .
             	    {
             	    matchAny(); 
 
@@ -2874,12 +2874,12 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5016:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5016:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5016:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop18:
             do {
                 int alt18=2;
@@ -2892,7 +2892,7 @@ public class InternalSimpleJavaLexer extends Lexer {
 
                 switch (alt18) {
             	case 1 :
-            	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5016:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2912,7 +2912,7 @@ public class InternalSimpleJavaLexer extends Lexer {
                 }
             } while (true);
 
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:40: ( ( '\\r' )? '\\n' )?
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5016:40: ( ( '\\r' )? '\\n' )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -2921,9 +2921,9 @@ public class InternalSimpleJavaLexer extends Lexer {
             }
             switch (alt20) {
                 case 1 :
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:41: ( '\\r' )? '\\n'
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5016:41: ( '\\r' )? '\\n'
                     {
-                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:41: ( '\\r' )?
+                    // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5016:41: ( '\\r' )?
                     int alt19=2;
                     int LA19_0 = input.LA(1);
 
@@ -2932,7 +2932,7 @@ public class InternalSimpleJavaLexer extends Lexer {
                     }
                     switch (alt19) {
                         case 1 :
-                            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5012:41: '\\r'
+                            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5016:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2964,10 +2964,10 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5014:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5014:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5018:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5018:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5014:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5018:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt21=0;
             loop21:
             do {
@@ -3021,8 +3021,8 @@ public class InternalSimpleJavaLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5016:16: ( . )
-            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5016:18: .
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5020:16: ( . )
+            // ../compiladores/src-gen/org/xtext/example/parser/antlr/internal/InternalSimpleJava.g:5020:18: .
             {
             matchAny(); 
 
@@ -3812,19 +3812,19 @@ public class InternalSimpleJavaLexer extends Lexer {
 
     protected DFA22 dfa22 = new DFA22(this);
     static final String DFA22_eotS =
-        "\1\uffff\1\63\1\uffff\1\63\1\71\1\75\1\100\2\63\7\uffff\3\63\1\uffff\2\63\1\136\1\141\1\63\1\141\1\63\1\154\1\157\1\161\1\164\1\167\1\172\1\uffff\1\176\1\u0081\1\u0083\1\uffff\1\u0085\2\63\2\u008a\1\63\1\56\2\uffff\4\63\2\uffff\2\63\1\u0095\11\uffff\6\63\1\110\10\uffff\10\63\1\uffff\4\63\2\uffff\1\u00af\1\63\1\uffff\10\63\14\uffff\1\u00ba\2\uffff\1\63\3\uffff\1\u00bd\11\uffff\2\63\2\uffff\1\u008a\2\uffff\5\63\1\u00c7\1\63\1\uffff\1\u00c9\1\uffff\17\63\1\u00da\7\63\1\uffff\2\63\1\u00e4\3\63\1\u00e8\2\63\5\uffff\11\63\1\uffff\1\63\1\uffff\3\63\1\u00f8\1\u00f9\1\63\1\u00fb\10\63\1\u0104\1\uffff\1\u0105\3\63\1\u0109\1\u010a\3\63\1\uffff\3\63\1\uffff\1\u0111\1\63\1\u0113\11\63\1\u011d\1\63\1\u011f\2\uffff\1\63\1\uffff\3\63\1\u0124\1\u0125\1\63\1\u0127\1\63\2\uffff\1\63\1\u012a\1\63\2\uffff\2\63\1\u012e\1\u0130\1\u0131\1\u0132\1\uffff\1\63\1\uffff\2\63\1\u0136\2\63\1\u0139\3\63\1\uffff\1\63\1\uffff\2\63\1\u0140\1\u0141\2\uffff\1\u0142\1\uffff\2\63\1\uffff\1\63\1\u0146\1\63\1\uffff\1\63\3\uffff\1\u0149\1\63\1\u014b\1\uffff\1\u014c\1\63\1\uffff\4\63\1\u0152\1\63\3\uffff\2\63\1\u0156\1\uffff\1\u0157\1\u0158\1\uffff\1\63\2\uffff\4\63\1\u015e\1\uffff\3\63\3\uffff\1\u0162\1\u0163\1\63\1\u0165\1\63\1\uffff\2\63\1\u0169\2\uffff\1\u016a\1\uffff\1\u016b\1\63\1\u016d\3\uffff\1\63\1\uffff\1\u016f\1\uffff";
+        "\1\uffff\1\63\1\uffff\1\63\1\71\1\75\1\100\2\63\3\uffff\1\63\4\uffff\2\63\1\uffff\2\63\1\136\1\141\1\63\1\141\1\63\1\154\1\157\1\161\1\164\1\167\1\172\1\uffff\1\176\1\u0081\1\u0083\1\uffff\1\u0085\2\63\2\u008a\1\63\1\56\2\uffff\4\63\2\uffff\2\63\1\u0095\11\uffff\6\63\1\110\4\uffff\5\63\4\uffff\3\63\1\uffff\4\63\2\uffff\1\u00af\1\63\1\uffff\10\63\14\uffff\1\u00ba\2\uffff\1\63\3\uffff\1\u00bd\11\uffff\2\63\2\uffff\1\u008a\2\uffff\5\63\1\u00c7\1\63\1\uffff\1\u00c9\1\uffff\17\63\1\u00da\7\63\1\uffff\2\63\1\u00e4\3\63\1\u00e8\2\63\5\uffff\11\63\1\uffff\1\63\1\uffff\3\63\1\u00f8\1\u00f9\1\63\1\u00fb\10\63\1\u0104\1\uffff\1\u0105\3\63\1\u0109\1\u010a\3\63\1\uffff\3\63\1\uffff\1\u0111\1\63\1\u0113\11\63\1\u011d\1\63\1\u011f\2\uffff\1\63\1\uffff\3\63\1\u0124\1\u0125\1\63\1\u0127\1\63\2\uffff\1\63\1\u012a\1\63\2\uffff\2\63\1\u012e\1\u0130\1\u0131\1\u0132\1\uffff\1\63\1\uffff\2\63\1\u0136\2\63\1\u0139\3\63\1\uffff\1\63\1\uffff\1\63\1\u013f\1\63\1\u0141\2\uffff\1\u0142\1\uffff\2\63\1\uffff\1\63\1\u0146\1\63\1\uffff\1\63\3\uffff\1\u0149\1\63\1\u014b\1\uffff\1\u014c\1\63\1\uffff\4\63\1\u0152\1\uffff\1\63\2\uffff\2\63\1\u0156\1\uffff\1\u0157\1\u0158\1\uffff\1\63\2\uffff\4\63\1\u015e\1\uffff\3\63\3\uffff\1\u0162\1\u0163\1\63\1\u0165\1\63\1\uffff\2\63\1\u0169\2\uffff\1\u016a\1\uffff\1\u016b\1\63\1\u016d\3\uffff\1\63\1\uffff\1\u016f\1\uffff";
     static final String DFA22_eofS =
         "\u0170\uffff";
     static final String DFA22_minS =
-        "\1\0\1\60\1\uffff\1\60\2\52\1\57\1\60\1\53\7\uffff\3\60\1\uffff\2\60\1\75\4\60\1\53\1\55\1\75\1\46\2\75\1\uffff\1\75\1\74\1\75\1\uffff\1\0\2\60\2\56\1\60\1\0\2\uffff\4\60\2\uffff\3\60\2\uffff\1\0\6\uffff\7\60\10\uffff\10\60\1\uffff\4\60\2\uffff\2\60\1\uffff\10\60\14\uffff\1\75\2\uffff\1\60\3\uffff\1\75\11\uffff\2\60\2\uffff\1\56\2\uffff\7\60\1\uffff\1\0\1\uffff\27\60\1\uffff\11\60\5\uffff\11\60\1\uffff\1\60\1\uffff\20\60\1\uffff\11\60\1\uffff\3\60\1\uffff\17\60\2\uffff\1\60\1\uffff\10\60\2\uffff\3\60\2\uffff\6\60\1\uffff\1\60\1\uffff\11\60\1\uffff\1\60\1\uffff\4\60\2\uffff\1\60\1\uffff\2\60\1\uffff\3\60\1\uffff\1\60\3\uffff\3\60\1\uffff\2\60\1\uffff\6\60\3\uffff\3\60\1\uffff\2\60\1\uffff\1\60\2\uffff\5\60\1\uffff\3\60\3\uffff\5\60\1\uffff\3\60\2\uffff\1\60\1\uffff\3\60\3\uffff\1\60\1\uffff\1\60\1\uffff";
+        "\1\0\1\60\1\uffff\1\60\2\52\1\57\1\60\1\53\3\uffff\1\60\4\uffff\2\60\1\uffff\2\60\1\75\4\60\1\53\1\55\1\75\1\46\2\75\1\uffff\1\75\1\74\1\75\1\uffff\1\0\2\60\2\56\1\60\1\0\2\uffff\4\60\2\uffff\3\60\2\uffff\1\0\6\uffff\7\60\4\uffff\5\60\4\uffff\3\60\1\uffff\4\60\2\uffff\2\60\1\uffff\10\60\14\uffff\1\75\2\uffff\1\60\3\uffff\1\75\11\uffff\2\60\2\uffff\1\56\2\uffff\7\60\1\uffff\1\0\1\uffff\27\60\1\uffff\11\60\5\uffff\11\60\1\uffff\1\60\1\uffff\20\60\1\uffff\11\60\1\uffff\3\60\1\uffff\17\60\2\uffff\1\60\1\uffff\10\60\2\uffff\3\60\2\uffff\6\60\1\uffff\1\60\1\uffff\11\60\1\uffff\1\60\1\uffff\4\60\2\uffff\1\60\1\uffff\2\60\1\uffff\3\60\1\uffff\1\60\3\uffff\3\60\1\uffff\2\60\1\uffff\5\60\1\uffff\1\60\2\uffff\3\60\1\uffff\2\60\1\uffff\1\60\2\uffff\5\60\1\uffff\3\60\3\uffff\5\60\1\uffff\3\60\2\uffff\1\60\1\uffff\3\60\3\uffff\1\60\1\uffff\1\60\1\uffff";
     static final String DFA22_maxS =
-        "\1\uffff\1\172\1\uffff\1\172\1\52\2\75\2\172\7\uffff\3\172\1\uffff\2\172\1\75\4\172\4\75\1\174\1\172\1\uffff\1\76\2\75\1\uffff\1\uffff\2\172\1\170\1\154\1\172\1\uffff\2\uffff\4\172\2\uffff\3\172\2\uffff\1\uffff\6\uffff\7\172\10\uffff\10\172\1\uffff\4\172\2\uffff\2\172\1\uffff\10\172\14\uffff\1\75\2\uffff\1\172\3\uffff\1\76\11\uffff\2\172\2\uffff\1\154\2\uffff\7\172\1\uffff\1\uffff\1\uffff\27\172\1\uffff\11\172\5\uffff\11\172\1\uffff\1\172\1\uffff\20\172\1\uffff\11\172\1\uffff\3\172\1\uffff\17\172\2\uffff\1\172\1\uffff\10\172\2\uffff\3\172\2\uffff\6\172\1\uffff\1\172\1\uffff\11\172\1\uffff\1\172\1\uffff\4\172\2\uffff\1\172\1\uffff\2\172\1\uffff\3\172\1\uffff\1\172\3\uffff\3\172\1\uffff\2\172\1\uffff\6\172\3\uffff\3\172\1\uffff\2\172\1\uffff\1\172\2\uffff\5\172\1\uffff\3\172\3\uffff\5\172\1\uffff\3\172\2\uffff\1\172\1\uffff\3\172\3\uffff\1\172\1\uffff\1\172\1\uffff";
+        "\1\uffff\1\172\1\uffff\1\172\1\52\2\75\2\172\3\uffff\1\172\4\uffff\2\172\1\uffff\2\172\1\75\4\172\4\75\1\174\1\172\1\uffff\1\76\2\75\1\uffff\1\uffff\2\172\1\170\1\154\1\172\1\uffff\2\uffff\4\172\2\uffff\3\172\2\uffff\1\uffff\6\uffff\7\172\4\uffff\5\172\4\uffff\3\172\1\uffff\4\172\2\uffff\2\172\1\uffff\10\172\14\uffff\1\75\2\uffff\1\172\3\uffff\1\76\11\uffff\2\172\2\uffff\1\154\2\uffff\7\172\1\uffff\1\uffff\1\uffff\27\172\1\uffff\11\172\5\uffff\11\172\1\uffff\1\172\1\uffff\20\172\1\uffff\11\172\1\uffff\3\172\1\uffff\17\172\2\uffff\1\172\1\uffff\10\172\2\uffff\3\172\2\uffff\6\172\1\uffff\1\172\1\uffff\11\172\1\uffff\1\172\1\uffff\4\172\2\uffff\1\172\1\uffff\2\172\1\uffff\3\172\1\uffff\1\172\3\uffff\3\172\1\uffff\2\172\1\uffff\5\172\1\uffff\1\172\2\uffff\3\172\1\uffff\2\172\1\uffff\1\172\2\uffff\5\172\1\uffff\3\172\3\uffff\5\172\1\uffff\3\172\2\uffff\1\172\1\uffff\3\172\3\uffff\1\172\1\uffff\1\172\1\uffff";
     static final String DFA22_acceptS =
-        "\2\uffff\1\2\6\uffff\1\12\1\13\1\14\1\16\1\17\1\20\1\21\3\uffff\1\25\15\uffff\1\77\3\uffff\1\117\7\uffff\1\154\1\155\4\uffff\1\146\1\2\3\uffff\1\4\1\52\1\uffff\1\63\1\153\1\62\1\6\1\61\1\60\7\uffff\1\142\1\12\1\13\1\14\1\16\1\17\1\20\1\21\10\uffff\1\25\4\uffff\1\104\1\31\2\uffff\1\143\10\uffff\1\54\1\113\1\112\1\55\1\57\1\56\1\65\1\64\1\67\1\74\1\66\1\71\1\uffff\1\70\1\73\1\uffff\1\72\1\77\1\102\1\uffff\1\100\1\103\1\107\1\101\1\105\1\114\1\117\1\120\1\151\2\uffff\1\145\1\144\1\uffff\1\141\1\154\7\uffff\1\32\1\uffff\1\152\27\uffff\1\34\11\uffff\1\76\1\75\1\106\1\111\1\110\11\uffff\1\125\1\uffff\1\5\20\uffff\1\37\11\uffff\1\36\3\uffff\1\46\17\uffff\1\43\1\123\1\uffff\1\33\10\uffff\1\51\1\115\3\uffff\1\122\1\30\6\uffff\1\47\1\uffff\1\127\11\uffff\1\7\1\uffff\1\40\4\uffff\1\50\1\124\1\uffff\1\24\2\uffff\1\26\3\uffff\1\35\1\uffff\1\134\1\116\1\126\3\uffff\1\131\2\uffff\1\3\6\uffff\1\42\1\45\1\23\3\uffff\1\130\2\uffff\1\135\1\uffff\1\1\1\132\5\uffff\1\10\3\uffff\1\121\1\44\1\41\5\uffff\1\27\3\uffff\1\136\1\133\1\uffff\1\15\3\uffff\1\140\1\11\1\53\1\uffff\1\137\1\uffff\1\22";
+        "\2\uffff\1\2\6\uffff\1\12\1\13\1\14\1\uffff\1\17\1\20\1\21\1\22\2\uffff\1\26\15\uffff\1\77\3\uffff\1\117\7\uffff\1\154\1\155\4\uffff\1\146\1\2\3\uffff\1\4\1\52\1\uffff\1\63\1\153\1\62\1\6\1\61\1\60\7\uffff\1\142\1\12\1\13\1\14\5\uffff\1\17\1\20\1\21\1\22\3\uffff\1\26\4\uffff\1\104\1\32\2\uffff\1\143\10\uffff\1\54\1\113\1\112\1\55\1\57\1\56\1\65\1\64\1\67\1\74\1\66\1\71\1\uffff\1\70\1\73\1\uffff\1\72\1\77\1\102\1\uffff\1\100\1\103\1\107\1\101\1\105\1\114\1\117\1\120\1\151\2\uffff\1\145\1\144\1\uffff\1\141\1\154\7\uffff\1\33\1\uffff\1\152\27\uffff\1\35\11\uffff\1\76\1\75\1\106\1\111\1\110\11\uffff\1\125\1\uffff\1\5\20\uffff\1\40\11\uffff\1\37\3\uffff\1\46\17\uffff\1\44\1\123\1\uffff\1\34\10\uffff\1\51\1\115\3\uffff\1\122\1\31\6\uffff\1\47\1\uffff\1\127\11\uffff\1\7\1\uffff\1\41\4\uffff\1\50\1\124\1\uffff\1\25\2\uffff\1\27\3\uffff\1\36\1\uffff\1\134\1\116\1\126\3\uffff\1\131\2\uffff\1\3\5\uffff\1\16\1\uffff\1\43\1\24\3\uffff\1\130\2\uffff\1\135\1\uffff\1\1\1\132\5\uffff\1\10\3\uffff\1\121\1\45\1\42\5\uffff\1\30\3\uffff\1\136\1\133\1\uffff\1\15\3\uffff\1\140\1\11\1\53\1\uffff\1\137\1\uffff\1\23";
     static final String DFA22_specialS =
-        "\1\3\45\uffff\1\1\5\uffff\1\2\15\uffff\1\0\133\uffff\1\4\u00d9\uffff}>";
+        "\1\4\45\uffff\1\1\5\uffff\1\2\15\uffff\1\0\133\uffff\1\3\u00d9\uffff}>";
     static final String[] DFA22_transitionS = {
-            "\11\56\2\55\2\56\1\55\22\56\1\55\1\44\1\46\2\56\1\35\1\36\1\54\1\14\1\15\1\6\1\33\1\11\1\34\1\4\1\5\1\51\11\52\1\23\1\2\1\43\1\26\1\42\1\41\1\56\32\53\1\16\1\56\1\17\1\40\1\53\1\56\1\50\1\24\1\7\1\27\1\10\1\31\2\53\1\3\2\53\1\47\1\53\1\32\1\53\1\1\1\53\1\21\1\20\1\22\1\53\1\25\1\30\3\53\1\12\1\37\1\13\1\45\uff81\56",
+            "\11\56\2\55\2\56\1\55\22\56\1\55\1\44\1\46\2\56\1\35\1\36\1\54\1\15\1\16\1\6\1\33\1\11\1\34\1\4\1\5\1\51\11\52\1\23\1\2\1\43\1\26\1\42\1\41\1\56\32\53\1\17\1\56\1\20\1\40\1\53\1\56\1\50\1\24\1\7\1\27\1\10\1\31\2\53\1\3\2\53\1\47\1\53\1\32\1\53\1\1\1\53\1\21\1\14\1\22\1\53\1\25\1\30\3\53\1\12\1\37\1\13\1\45\uff81\56",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\1\57\20\62\1\61\2\62\1\60\5\62",
             "",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\5\62\1\67\6\62\1\65\1\66\14\62",
@@ -3836,11 +3836,11 @@ public class InternalSimpleJavaLexer extends Lexer {
             "",
             "",
             "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\7\62\1\120\13\62\1\114\1\117\1\62\1\116\1\62\1\115\1\62",
             "",
             "",
             "",
             "",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\7\62\1\124\13\62\1\122\1\123\1\62\1\121\1\62\1\120\1\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\4\62\1\125\25\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\7\62\1\126\11\62\1\127\10\62",
             "",
@@ -3900,15 +3900,15 @@ public class InternalSimpleJavaLexer extends Lexer {
             "",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\15\62\1\u009f\14\62",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\10\62\1\u00a0\21\62",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\1\u00a1\31\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\1\u009f\31\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\15\62\1\u00a0\14\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\10\62\1\u00a1\21\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\17\62\1\u00a2\12\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\16\62\1\u00a3\13\62",
+            "",
+            "",
+            "",
+            "",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\23\62\1\u00a4\6\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\10\62\1\u00a6\10\62\1\u00a5\10\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\1\u00a9\23\62\1\u00a8\3\62\1\u00a7\1\62",
@@ -3983,8 +3983,8 @@ public class InternalSimpleJavaLexer extends Lexer {
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\21\62\1\u00ce\10\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\4\62\1\u00cf\25\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\4\62\1\u00d0\25\62",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\2\62\1\u00d1\27\62",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\23\62\1\u00d2\6\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\23\62\1\u00d1\6\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\2\62\1\u00d2\27\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\23\62\1\u00d3\6\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\4\62\1\u00d4\25\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\21\62\1\u00d5\10\62",
@@ -4033,9 +4033,9 @@ public class InternalSimpleJavaLexer extends Lexer {
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\15\62\1\u00fa\14\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\7\62\1\u00fc\22\62",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\2\62\1\u00fd\27\62",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\10\62\1\u00fe\21\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\10\62\1\u00fc\21\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\7\62\1\u00fd\22\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\2\62\1\u00fe\27\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\21\62\1\u00ff\10\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\23\62\1\u0100\6\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\21\62\1\u0101\10\62",
@@ -4076,9 +4076,9 @@ public class InternalSimpleJavaLexer extends Lexer {
             "",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\3\62\1\u0120\26\62",
             "",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\21\62\1\u0121\10\62",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\7\62\1\u0122\22\62",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\2\62\1\u0123\27\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\2\62\1\u0121\27\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\21\62\1\u0122\10\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\7\62\1\u0123\22\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\15\62\1\u0126\14\62",
@@ -4113,8 +4113,8 @@ public class InternalSimpleJavaLexer extends Lexer {
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\24\62\1\u013d\5\62",
             "",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\22\62\1\u013e\7\62",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\16\62\1\u013f\13\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\16\62\1\u0140\13\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
             "",
@@ -4143,8 +4143,8 @@ public class InternalSimpleJavaLexer extends Lexer {
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\4\62\1\u0150\25\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\4\62\1\u0151\25\62",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
-            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\15\62\1\u0153\14\62",
             "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\15\62\1\u0153\14\62",
             "",
             "",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\1\u0154\31\62",
@@ -4261,6 +4261,16 @@ public class InternalSimpleJavaLexer extends Lexer {
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
+                        int LA22_150 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA22_150>='\u0000' && LA22_150<='\uFFFF')) ) {s = 151;}
+
+                        else s = 201;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
                         int LA22_0 = input.LA(1);
 
                         s = -1;
@@ -4286,15 +4296,15 @@ public class InternalSimpleJavaLexer extends Lexer {
 
                         else if ( (LA22_0=='}') ) {s = 11;}
 
-                        else if ( (LA22_0=='(') ) {s = 12;}
+                        else if ( (LA22_0=='s') ) {s = 12;}
 
-                        else if ( (LA22_0==')') ) {s = 13;}
+                        else if ( (LA22_0=='(') ) {s = 13;}
 
-                        else if ( (LA22_0=='[') ) {s = 14;}
+                        else if ( (LA22_0==')') ) {s = 14;}
 
-                        else if ( (LA22_0==']') ) {s = 15;}
+                        else if ( (LA22_0=='[') ) {s = 15;}
 
-                        else if ( (LA22_0=='s') ) {s = 16;}
+                        else if ( (LA22_0==']') ) {s = 16;}
 
                         else if ( (LA22_0=='r') ) {s = 17;}
 
@@ -4355,16 +4365,6 @@ public class InternalSimpleJavaLexer extends Lexer {
                         else if ( ((LA22_0>='\t' && LA22_0<='\n')||LA22_0=='\r'||LA22_0==' ') ) {s = 45;}
 
                         else if ( ((LA22_0>='\u0000' && LA22_0<='\b')||(LA22_0>='\u000B' && LA22_0<='\f')||(LA22_0>='\u000E' && LA22_0<='\u001F')||(LA22_0>='#' && LA22_0<='$')||LA22_0=='@'||LA22_0=='\\'||LA22_0=='`'||(LA22_0>='\u007F' && LA22_0<='\uFFFF')) ) {s = 46;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA22_150 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA22_150>='\u0000' && LA22_150<='\uFFFF')) ) {s = 151;}
-
-                        else s = 201;
 
                         if ( s>=0 ) return s;
                         break;
